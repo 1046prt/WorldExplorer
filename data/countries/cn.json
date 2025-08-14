@@ -1,0 +1,184 @@
+{
+  "iso2": "CN",
+  "iso3": "CHN",
+  "name": "China",
+  "region": "Asia",
+  "capital": "Beijing",
+  "population": 1412000000,
+  "currency": {
+    "code": "CNY",
+    "name": "Chinese Yuan",
+    "symbol": "¥",
+    "image": "/images/currencies/cny.png"
+  },
+  "languages": ["Mandarin Chinese"],
+  "timezones": ["UTC+08:00"],
+  "history": [
+    {
+      "year": 221,
+      "description": "Qin Shi Huang unifies China and becomes the first emperor"
+    },
+    {
+      "year": 1368,
+      "description": "Ming Dynasty established, beginning of Chinese cultural renaissance"
+    },
+    {
+      "year": 1949,
+      "description": "People's Republic of China founded under Mao Zedong"
+    },
+    {
+      "year": 1978,
+      "description": "Economic reforms begin under Deng Xiaoping"
+    },
+    {
+      "year": 2008,
+      "description": "Beijing hosts the Summer Olympics, showcasing modern China"
+    }
+  ],
+  "states": [
+    {
+      "name": "Beijing",
+      "capital": "Beijing",
+      "slug": "beijing"
+    },
+    {
+      "name": "Shanghai",
+      "capital": "Shanghai",
+      "slug": "shanghai"
+    },
+    {
+      "name": "Guangdong",
+      "capital": "Guangzhou",
+      "slug": "guangdong"
+    },
+    {
+      "name": "Sichuan",
+      "capital": "Chengdu",
+      "slug": "sichuan"
+    },
+    {
+      "name": "Jiangsu",
+      "capital": "Nanjing",
+      "slug": "jiangsu"
+    }
+  ],
+  "famousCities": [
+    {
+      "name": "Beijing",
+      "whyFamous": "Capital city, home to the Forbidden City and center of Chinese politics",
+      "slug": "beijing"
+    },
+    {
+      "name": "Shanghai",
+      "whyFamous": "Global financial center and most populous city, modern skyline",
+      "slug": "shanghai"
+    },
+    {
+      "name": "Hong Kong",
+      "whyFamous": "International financial hub and former British colony",
+      "slug": "hong-kong"
+    },
+    {
+      "name": "Xi'an",
+      "whyFamous": "Ancient capital, home to the Terracotta Army",
+      "slug": "xian"
+    },
+    {
+      "name": "Shenzhen",
+      "whyFamous": "Technology hub and special economic zone",
+      "slug": "shenzhen"
+    }
+  ],
+  "landmarks": [
+    {
+      "slug": "great-wall-of-china",
+      "name": "Great Wall of China",
+      "city": "Beijing",
+      "coordinates": {
+        "lat": 40.4319,
+        "lng": 116.5704
+      },
+      "whyFamous": "Ancient fortification system, one of the New Seven Wonders of the World",
+      "imagePath": "/images/landmarks/great-wall-china.png"
+    },
+    {
+      "slug": "forbidden-city",
+      "name": "Forbidden City",
+      "city": "Beijing",
+      "coordinates": {
+        "lat": 39.9163,
+        "lng": 116.3972
+      },
+      "whyFamous": "Imperial palace complex, largest collection of preserved ancient wooden structures",
+      "imagePath": "/images/landmarks/forbidden-city.png"
+    },
+    {
+      "slug": "terracotta-army",
+      "name": "Terracotta Army",
+      "city": "Xi'an",
+      "coordinates": {
+        "lat": 34.3848,
+        "lng": 109.2734
+      },
+      "whyFamous": "Collection of terracotta sculptures depicting armies of Qin Shi Huang",
+      "imagePath": "/images/landmarks/terracotta-army.png"
+    },
+    {
+      "slug": "temple-of-heaven",
+      "name": "Temple of Heaven",
+      "city": "Beijing",
+      "coordinates": {
+        "lat": 39.8822,
+        "lng": 116.4066
+      },
+      "whyFamous": "Imperial complex of religious buildings, masterpiece of architecture",
+      "imagePath": "/images/landmarks/temple-of-heaven.png"
+    }
+  ],
+  "rivers": [
+    {
+      "slug": "yangtze-river",
+      "name": "Yangtze River",
+      "length": 6300,
+      "countries": ["China"],
+      "source": "Tibetan Plateau",
+      "mouth": "East China Sea",
+      "pathCoordinates": [{ "lat": 33.2551, "lng": 90.9059 }, { "lat": 31.2304, "lng": 121.4737 }]
+    },
+    {
+      "slug": "yellow-river",
+      "name": "Yellow River",
+      "length": 5464,
+      "countries": ["China"],
+      "source": "Bayan Har Mountains",
+      "mouth": "Bohai Sea",
+      "pathCoordinates": [{ "lat": 35.227, "lng": 95.9956 }, { "lat": 37.75, "lng": 119.1667 }]
+    }
+  ],
+  "institutions": [
+    {
+      "slug": "tsinghua-university",
+      "name": "Tsinghua University",
+      "city": "Beijing",
+      "founded": 1911,
+      "globalRank": 17,
+      "type": "Public Research University"
+    },
+    {
+      "slug": "peking-university",
+      "name": "Peking University",
+      "city": "Beijing",
+      "founded": 1898,
+      "globalRank": 18,
+      "type": "Public Research University"
+    },
+    {
+      "slug": "fudan-university",
+      "name": "Fudan University",
+      "city": "Shanghai",
+      "founded": 1905,
+      "globalRank": 34,
+      "type": "Public Research University"
+    }
+  ]
+}
