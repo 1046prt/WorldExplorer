@@ -35,21 +35,27 @@ Features a clickable world map, famous buildings & structures, currency images, 
 ## 📂 Project Structure
 
 ```bash
-project-root/
-│
-├── public/
-│   ├── flags/               # Country flags
-│   ├── currency/            # Currency images
-│   ├── landmarks/           # Famous buildings & structures
-│   ├── map-assets/          # World map images & tiles
-│
-├── src/
-│   ├── components/          # UI components (map, cards, search bar)
-│   ├── data/                # JSON files with country & landmark info
-│   ├── pages/               # Country detail pages
-│   ├── styles/              # CSS & theme files
-│
-└── README.md
+├── 📁 app/
+│   ├── 📁 country/
+│   ├── 📁 search/
+├── 📁 components/
+│   ├── 📁 ui/
+├── 📁 data/
+├── 📁 hooks/
+├── 📁 lib/
+├── 📁 public/
+│   ├── 📁 images/
+├── 📁 styles/
+├── 🚫 .gitignore
+├── 📜 LICENSE
+├── 📖 README.md
+├── 📄 components.json
+├── 📄 next.config.mjs
+├── 📄 package-lock.json
+├── 📄 package.json
+├── ⚙️ pnpm-lock.yaml
+├── 📄 postcss.config.mjs
+└── 📄 tsconfig.json
 ```
 
 ---
