@@ -170,32 +170,24 @@ export function WeatherWidget() {
   };
 
   return (
-    <div className="card p-6 backdrop-blur">
-      <div className="flex items-center gap-3 mb-6">
-        <Cloud className="w-6 h-6" style={{ color: "var(--color-primary)" }} />
+    <div className="card weather-widget">
+      <div className="weather-widget-header">
+        <Cloud className="weather-widget-icon" />
         <div>
-          <h3
-            className="text-xl font-bold"
-            style={{ color: "var(--color-foreground)" }}
-          >
-            Weather Information
-          </h3>
-          <p
-            className="text-sm"
-            style={{ color: "var(--color-muted-foreground)" }}
-          >
+          <h3 className="weather-widget-title">Weather Information</h3>
+          <p className="weather-widget-subtitle">
             Current conditions and forecast
           </p>
         </div>
       </div>
 
-      <form onSubmit={handleSearch} className="flex gap-2 mb-6">
+      <form onSubmit={handleSearch} className="weather-search-form">
         <input
           type="text"
           value={city}
           onChange={(e) => setCity(e.target.value)}
           placeholder="Enter city name..."
-          className="input flex-1"
+          className="input weather-search-input"
         />
         <button type="submit" className="btn btn-primary" disabled={loading}>
           {loading ? "Loading..." : "Search"}
@@ -205,71 +197,38 @@ export function WeatherWidget() {
       {weather && (
         <div className="space-y-6">
           {/* Current Weather */}
-          <div
-            className="p-6 rounded-lg"
-            style={{
-              background:
-                "linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(99, 102, 241, 0.1) 100%)",
-            }}
-          >
-            <div className="flex items-center justify-between mb-4">
-              <div>
-                <h4
-                  className="text-2xl font-bold"
-                  style={{ color: "var(--color-foreground)" }}
-                >
-                  {weather.city}
-                </h4>
-                <p style={{ color: "var(--color-muted-foreground)" }}>
-                  {weather.country}
-                </p>
+          <div className="weather-current">
+            <div className="weather-current-header">
+              <div className="weather-current-location">
+                <h4>{weather.city}</h4>
+                <p>{weather.country}</p>
               </div>
-              {getWeatherIcon(weather.icon)}
-            </div>
-
-            <div className="flex items-center gap-4 mb-4">
-              <div
-                className="text-4xl font-bold"
-                style={{ color: "var(--color-foreground)" }}
-              >
-                {weather.temperature}°C
-              </div>
-              <div
-                className="text-lg"
-                style={{ color: "var(--color-muted-foreground)" }}
-              >
-                {weather.condition}
+              <div className="weather-current-icon">
+                {getWeatherIcon(weather.icon)}
               </div>
             </div>
 
-            <div className="grid grid-cols-3 gap-4">
-              <div className="flex items-center gap-2">
-                <Droplets className="w-4 h-4" style={{ color: "#3b82f6" }} />
-                <span
-                  className="text-sm"
-                  style={{ color: "var(--color-muted-foreground)" }}
-                >
+            <div className="weather-current-temp">
+              <div className="weather-temp-value">{weather.temperature}°C</div>
+              <div className="weather-temp-condition">{weather.condition}</div>
+            </div>
+
+            <div className="weather-details">
+              <div className="weather-detail">
+                <Droplets className="weather-detail-icon humidity" />
+                <span className="weather-detail-text">
                   {weather.humidity}% Humidity
                 </span>
               </div>
-              <div className="flex items-center gap-2">
-                <Wind
-                  className="w-4 h-4"
-                  style={{ color: "var(--color-muted-foreground)" }}
-                />
-                <span
-                  className="text-sm"
-                  style={{ color: "var(--color-muted-foreground)" }}
-                >
+              <div className="weather-detail">
+                <Wind className="weather-detail-icon wind" />
+                <span className="weather-detail-text">
                   {weather.windSpeed} km/h Wind
                 </span>
               </div>
-              <div className="flex items-center gap-2">
-                <Eye className="w-4 h-4" style={{ color: "#10b981" }} />
-                <span
-                  className="text-sm"
-                  style={{ color: "var(--color-muted-foreground)" }}
-                >
+              <div className="weather-detail">
+                <Eye className="weather-detail-icon visibility" />
+                <span className="weather-detail-text">
                   {weather.visibility} km Visibility
                 </span>
               </div>
@@ -277,41 +236,17 @@ export function WeatherWidget() {
           </div>
 
           {/* 5-Day Forecast */}
-          <div>
-            <h5
-              className="text-lg font-semibold mb-3"
-              style={{ color: "var(--color-foreground)" }}
-            >
-              5-Day Forecast
-            </h5>
-            <div className="grid grid-cols-5 gap-2">
+          <div className="weather-forecast">
+            <h5 className="weather-forecast-title">5-Day Forecast</h5>
+            <div className="weather-forecast-grid">
               {weather.forecast.map((day, index) => (
-                <div
-                  key={index}
-                  className="p-3 rounded-lg text-center"
-                  style={{ backgroundColor: "var(--color-muted)" }}
-                >
-                  <div
-                    className="text-xs font-medium mb-2"
-                    style={{ color: "var(--color-muted-foreground)" }}
-                  >
-                    {day.day}
-                  </div>
-                  <div className="flex justify-center mb-2">
+                <div key={index} className="weather-forecast-day">
+                  <div className="weather-forecast-day-name">{day.day}</div>
+                  <div className="weather-forecast-icon">
                     {getSmallWeatherIcon(day.icon)}
                   </div>
-                  <div
-                    className="text-sm font-semibold"
-                    style={{ color: "var(--color-foreground)" }}
-                  >
-                    {day.high}°
-                  </div>
-                  <div
-                    className="text-xs"
-                    style={{ color: "var(--color-muted-foreground)" }}
-                  >
-                    {day.low}°
-                  </div>
+                  <div className="weather-forecast-high">{day.high}°</div>
+                  <div className="weather-forecast-low">{day.low}°</div>
                 </div>
               ))}
             </div>
@@ -320,10 +255,7 @@ export function WeatherWidget() {
       )}
 
       {!weather && !loading && (
-        <div
-          className="text-center py-8"
-          style={{ color: "var(--color-muted-foreground)" }}
-        >
+        <div className="weather-empty-state">
           Enter a city name to get weather information
         </div>
       )}

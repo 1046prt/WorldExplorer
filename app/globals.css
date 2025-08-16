@@ -1,5 +1,18 @@
-@import 'tailwindcss';
-@import 'tw-animate-css';
+/* Import all CSS files */
+@import "../styles/globals.css";
+@import "../styles/layout.css";
+@import "../styles/components.css";
+@import "../styles/weather-widget.css";
+@import "../styles/search-bar.css";
+@import "../styles/theme-toggle.css";
+@import "../styles/world-map.css";
+@import "../styles/stats-overview.css";
+@import "../styles/quick-navigation.css";
+@import "../styles/country-header.css";
+@import "../styles/navigation-breadcrumb.css";
+@import "../styles/currency-converter.css";
+@import "../styles/responsive.css";
+@import "../styles/utilities.css";
 
 @custom-variant dark (&:is(.dark *));
 
