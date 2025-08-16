@@ -1,24 +1,37 @@
-"use client"
+"use client";
 
-import type React from "react"
-
-import { useState } from "react"
-import { Card } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Globe, MapPin, GraduationCap, Building2, Waves, TrendingUp } from "lucide-react"
-import Link from "next/link"
+import React, { useState } from "react";
+import {
+  Globe,
+  MapPin,
+  GraduationCap,
+  Building2,
+  Waves,
+  TrendingUp,
+} from "lucide-react";
+import Link from "next/link";
 
 interface QuickNavItem {
-  icon: React.ReactNode
-  label: string
-  count: string
-  href: string
-  color: string
+  icon: React.ReactNode;
+  label: string;
+  count: string;
+  href: string;
+  color: string;
+}
+
+function getCategoryColor(colorClass: string): string {
+  const colorMap: Record<string, string> = {
+    "text-blue-600": "#2563eb",
+    "text-red-600": "#dc2626",
+    "text-green-600": "#16a34a",
+    "text-purple-600": "#9333ea",
+    "text-cyan-600": "#0891b2",
+  };
+  return colorMap[colorClass] || "#6b7280";
 }
 
 export function QuickNavigation() {
-  const [activeCategory, setActiveCategory] = useState<string | null>(null)
+  const [activeCategory, setActiveCategory] = useState<string | null>(null);
 
   const categories: QuickNavItem[] = [
     {
@@ -56,7 +69,7 @@ export function QuickNavigation() {
       href: "/browse/rivers",
       color: "text-cyan-600",
     },
-  ]
+  ];
 
   const popularSearches = [
     "United States",
@@ -67,47 +80,64 @@ export function QuickNavigation() {
     "Great Wall of China",
     "Amazon River",
     "London",
-  ]
+  ];
 
   return (
-    <Card className="p-6 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm">
+    <div className="card p-6 backdrop-blur">
       <div className="flex items-center gap-2 mb-6">
-        <TrendingUp className="w-5 h-5 text-orange-600" />
-        <h2 className="text-xl font-bold text-gray-900 dark:text-white">Quick Navigation</h2>
+        <TrendingUp className="w-5 h-5" style={{ color: "#ea580c" }} />
+        <h2
+          className="text-xl font-bold"
+          style={{ color: "var(--color-foreground)" }}
+        >
+          Quick Navigation
+        </h2>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-6">
+      <div className="grid-layout md:grid-cols-5 gap-4 mb-6">
         {categories.map((category, index) => (
           <Link key={index} href={category.href}>
-            <Card
-              className="p-4 hover:shadow-md transition-all duration-200 cursor-pointer hover:scale-105"
+            <div
+              className="card p-4 card-hover cursor-pointer text-center"
               onMouseEnter={() => setActiveCategory(category.label)}
               onMouseLeave={() => setActiveCategory(null)}
             >
-              <div className="text-center">
-                <div className={`${category.color} mb-2 flex justify-center`}>{category.icon}</div>
-                <h3 className="font-semibold text-gray-900 dark:text-white text-sm mb-1">{category.label}</h3>
-                <Badge variant="secondary" className="text-xs">
-                  {category.count}
-                </Badge>
+              <div className="mb-2 flex justify-center">
+                {React.cloneElement(category.icon as React.ReactElement, {
+                  style: { color: getCategoryColor(category.color) },
+                })}
               </div>
-            </Card>
+              <h3
+                className="font-semibold text-sm mb-1"
+                style={{ color: "var(--color-foreground)" }}
+              >
+                {category.label}
+              </h3>
+              <span className="badge badge-secondary text-xs">
+                {category.count}
+              </span>
+            </div>
           </Link>
         ))}
       </div>
 
       <div>
-        <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Popular Searches</h3>
+        <h3
+          className="font-semibold mb-3"
+          style={{ color: "var(--color-foreground)" }}
+        >
+          Popular Searches
+        </h3>
         <div className="flex flex-wrap gap-2">
           {popularSearches.map((search, index) => (
             <Link key={index} href={`/search?q=${encodeURIComponent(search)}`}>
-              <Button variant="outline" size="sm" className="text-xs bg-transparent">
+              <button className="btn btn-outline btn-sm text-xs">
                 {search}
-              </Button>
+              </button>
             </Link>
           ))}
         </div>
       </div>
-    </Card>
-  )
+    </div>
+  );
 }

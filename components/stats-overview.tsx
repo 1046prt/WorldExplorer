@@ -1,5 +1,4 @@
-import { Card } from "@/components/ui/card"
-import { Globe, MapPin, Building, GraduationCap } from "lucide-react"
+import { Globe, MapPin, Building, GraduationCap } from "lucide-react";
 
 export function StatsOverview() {
   const stats = [
@@ -27,27 +26,47 @@ export function StatsOverview() {
       value: "300+",
       description: "Top institutions",
     },
-  ]
+  ];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+    <div className="grid-layout grid-4 gap-4">
       {stats.map((stat, index) => (
-        <Card
-          key={index}
-          className="p-6 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm hover:shadow-lg transition-shadow"
-        >
-          <div className="flex items-center space-x-3">
-            <div className="p-2 bg-blue-100 dark:bg-blue-900/30 rounded-lg">
-              <stat.icon className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+        <div key={index} className="card p-6 backdrop-blur card-hover">
+          <div className="flex items-center gap-3">
+            <div
+              className="p-2 rounded-lg"
+              style={{
+                backgroundColor: "rgba(59, 130, 246, 0.1)",
+              }}
+            >
+              <stat.icon
+                className="w-6 h-6"
+                style={{ color: "var(--color-primary)" }}
+              />
             </div>
             <div>
-              <p className="text-2xl font-bold text-gray-900 dark:text-white">{stat.value}</p>
-              <p className="text-sm font-medium text-gray-700 dark:text-gray-300">{stat.label}</p>
-              <p className="text-xs text-gray-500 dark:text-gray-400">{stat.description}</p>
+              <p
+                className="text-2xl font-bold"
+                style={{ color: "var(--color-foreground)" }}
+              >
+                {stat.value}
+              </p>
+              <p
+                className="text-sm font-medium"
+                style={{ color: "var(--color-foreground)" }}
+              >
+                {stat.label}
+              </p>
+              <p
+                className="text-xs"
+                style={{ color: "var(--color-muted-foreground)" }}
+              >
+                {stat.description}
+              </p>
             </div>
           </div>
-        </Card>
+        </div>
       ))}
     </div>
-  )
+  );
 }
