@@ -1,0 +1,230 @@
+/* Search Bar Styles */
+
+.search-container {
+  position: relative;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.search-input-wrapper {
+  position: relative;
+}
+
+.search-input-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1rem;
+  color: var(--color-muted-foreground);
+}
+
+.search-input {
+  padding-left: 2.5rem;
+  width: 16rem;
+  transition: all var(--transition-fast);
+}
+
+.search-input.has-clear {
+  padding-right: 2.5rem;
+}
+
+.search-clear-button {
+  position: absolute;
+  right: 0.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-muted-foreground);
+  transition: all var(--transition-fast);
+}
+
+.search-clear-button:hover {
+  background-color: var(--color-accent);
+  color: var(--color-accent-foreground);
+}
+
+.search-clear-button svg {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 0.5rem;
+  max-height: 24rem;
+  overflow-y: auto;
+  z-index: 50;
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+}
+
+.search-loading {
+  padding: 1rem;
+  text-align: center;
+  color: var(--color-muted-foreground);
+}
+
+.search-loading .spinner {
+  margin: 0 auto 0.5rem;
+}
+
+.search-results-list {
+  padding: 0.5rem 0;
+}
+
+.search-result-item {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.search-result-item:last-child {
+  border-bottom: none;
+}
+
+.search-result-item:hover,
+.search-result-item:focus {
+  background-color: var(--color-accent);
+  outline: none;
+}
+
+.search-result-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.search-result-icon {
+  font-size: 1.125rem;
+  flex-shrink: 0;
+}
+
+.search-result-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.search-result-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.search-result-title {
+  font-weight: 500;
+  color: var(--color-foreground);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+
+.search-result-badge {
+  font-size: 0.75rem;
+  padding: 0.125rem 0.375rem;
+  background-color: var(--color-muted);
+  color: var(--color-muted-foreground);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+
+.search-result-subtitle {
+  font-size: 0.875rem;
+  color: var(--color-muted-foreground);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+
+.search-results-footer {
+  padding: 0.5rem 1rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.search-see-all-button {
+  width: 100%;
+  justify-content: flex-start;
+  color: var(--color-primary);
+  gap: 0.5rem;
+}
+
+.search-see-all-button svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.search-no-results {
+  padding: 1rem;
+  text-align: center;
+  color: var(--color-muted-foreground);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .search-input {
+    width: 14rem;
+  }
+
+  .search-form {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .search-results {
+    left: -1rem;
+    right: -1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-input {
+    width: 100%;
+  }
+
+  .search-result-content {
+    gap: 0.5rem;
+  }
+
+  .search-result-item {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .search-result-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .search-result-badge {
+    align-self: flex-start;
+  }
+}
