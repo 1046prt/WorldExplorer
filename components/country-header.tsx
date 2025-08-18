@@ -5,7 +5,6 @@ import { formatPopulation } from "@/lib/data-utils";
 import type { Country } from "@/lib/types";
 import Link from "next/link";
 
-// Function to get country flag emoji from ISO2 code
 function getCountryFlag(countryCode: string): string {
   const flagMap: Record<string, string> = {
     US: "🇺🇸",
