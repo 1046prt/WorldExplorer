@@ -13,6 +13,7 @@
 @import "../styles/currency-converter.css";
 @import "../styles/responsive.css";
 @import "../styles/utilities.css";
+@import "../styles/footer.css";
 
 @custom-variant dark (&:is(.dark *));
 

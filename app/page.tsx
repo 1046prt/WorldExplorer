@@ -14,6 +14,7 @@ import { CultureLifestyle } from "@/components/culture-lifestyle";
 import { HistoricalMapSlider } from "@/components/historical-map-slider";
 import { NatureExplorer } from "@/components/nature-explorer";
 import { UserEngagement } from "@/components/user-engagement";
+import Footer from "@/components/footer";
 
 export default function HomePage() {
   return (
@@ -89,13 +90,6 @@ export default function HomePage() {
           </div>
 
           <div className="section">
-            <div className="grid-layout grid-2">
-              <InteractiveGames />
-              <EnvironmentDashboard />
-            </div>
-          </div>
-
-          <div className="section">
             <LanguageExplorer />
           </div>
 
@@ -109,8 +103,19 @@ export default function HomePage() {
           <div className="section">
             <WeatherWidget />
           </div>
+
+          <div className="section">
+            <div className="grid-layout grid-2">
+              <InteractiveGames />
+              <EnvironmentDashboard />
+            </div>
+          </div>
         </div>
       </main>
+
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 }
