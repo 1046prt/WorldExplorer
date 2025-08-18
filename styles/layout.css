@@ -743,3 +743,66 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* Alignment Utilities */
+.align-stretch {
+  align-items: stretch;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+/* Prevent Overlapping */
+.no-overlap {
+  position: relative;
+  z-index: 1;
+  isolation: isolate;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.equal-height {
+  display: flex;
+  align-items: stretch;
+}
+
+.equal-height > * {
+  flex: 1;
+}

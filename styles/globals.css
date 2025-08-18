@@ -483,6 +483,14 @@ body {
     padding-left: var(--spacing-lg);
     padding-right: var(--spacing-lg);
   }
+
+  .sm\:flex-row {
+    flex-direction: row;
+  }
+
+  .sm\:items-center {
+    align-items: center;
+  }
 }
 
 @media (min-width: 768px) {
@@ -492,6 +500,14 @@ body {
 
   .md\:text-base {
     font-size: var(--font-size-base);
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
+  }
+
+  .md\:items-center {
+    align-items: center;
   }
 }
 
@@ -503,5 +519,13 @@ body {
   .lg\:px-8 {
     padding-left: var(--spacing-xl);
     padding-right: var(--spacing-xl);
+  }
+
+  .lg\:flex-row {
+    flex-direction: row;
+  }
+
+  .lg\:items-center {
+    align-items: center;
   }
 }
