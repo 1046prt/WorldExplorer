@@ -422,6 +422,7 @@
 }
 .font-medium {
   font-weight: 500;
+  margin: 5px 5px;
 }
 .font-semibold {
   font-weight: 600;
@@ -550,8 +551,21 @@
   border-width: 0;
 }
 .border {
-  border-width: 1px;
+  border: 1px solid var(--color-primary);
+  margin: 1px;
+  background-color: transparent;
+  padding: 2px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
 }
+
+.border:hover,
+.border:active {
+  color: white;
+  background-color: var(--color-primary);
+}
+
+
 .border-2 {
   border-width: 2px;
 }

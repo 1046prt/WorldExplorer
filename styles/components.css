@@ -33,6 +33,7 @@
 /* Button Variants */
 .btn-primary {
   background-color: var(--color-primary);
+  padding: 8px 10px;
   color: var(--color-primary-foreground);
   box-shadow: var(--shadow-sm);
 }
@@ -57,6 +58,7 @@
   background-color: var(--color-background);
   color: var(--color-foreground);
   box-shadow: var(--shadow-sm);
+  margin-bottom: 15px;
 }
 
 .btn-outline:hover:not(:disabled) {
@@ -89,6 +91,12 @@
   height: 2rem;
   padding: 0 var(--spacing-md);
   font-size: var(--font-size-xs);
+  border: 1px solid var(--color-primary);
+  margin: 10px 10px;
+}
+
+.btn-sm:hover{
+    background-color: var(--color-primary);
 }
 
 .btn-md {
@@ -164,6 +172,8 @@
   position: relative;
   overflow: hidden;
   height: fit-content;
+  margin-bottom: 20px;
+  padding: 5px 5px;
 }
 
 .card-header {
@@ -215,7 +225,6 @@
 }
 
 .badge-secondary {
-  background-color: var(--color-secondary);
   color: var(--color-secondary-foreground);
 }
 
