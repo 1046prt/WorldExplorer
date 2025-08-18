@@ -280,26 +280,6 @@ export function WorldMap() {
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
               Interactive World Explorer
             </h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              {countryInfo ? (
-                <span className="flex items-center gap-2 mt-1">
-                  <Badge
-                    variant="secondary"
-                    className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200"
-                  >
-                    {currentCountry}
-                  </Badge>
-                  <span className="font-medium">{countryInfo.name}</span>
-                  {selectedCountry && (
-                    <span className="text-blue-600 dark:text-blue-400 font-medium animate-pulse">
-                      (Click again to explore details)
-                    </span>
-                  )}
-                </span>
-              ) : (
-                "Hover over countries for quick facts • Click to select • Double-click to explore"
-              )}
-            </p>
           </div>
         </div>
 
