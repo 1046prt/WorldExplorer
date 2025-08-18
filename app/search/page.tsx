@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import Footer from "@/components/footer";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Search, Filter, MapPin, GraduationCap, Building2, Waves, Globe } from "lucide-react"
 import Link from "next/link"
@@ -286,6 +287,9 @@ function SearchContent() {
           </div>
         )}
       </main>
+      <div>
+        <Footer />
+      </div>
     </div>
   )
 }

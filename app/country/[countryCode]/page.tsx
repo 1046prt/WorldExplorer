@@ -10,6 +10,7 @@ import { CountryInstitutions } from "@/components/country-institutions";
 import { CountryMap } from "@/components/country-map";
 import { NavigationBreadcrumb } from "@/components/navigation-breadcrumb";
 import { ComprehensiveCountryData } from "@/components/comprehensive-country-data";
+import Footer from "@/components/footer";
 
 interface CountryPageProps {
   params: Promise<{
@@ -55,6 +56,9 @@ export default async function CountryPage({ params }: CountryPageProps) {
 
         <CountryInstitutions country={country} />
       </main>
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 }
