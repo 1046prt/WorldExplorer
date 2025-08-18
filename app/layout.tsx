@@ -7,9 +7,8 @@ import "../styles/layout.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
-  title: "v0 App",
-  description: "Created with v0",
-  generator: "v0.app",
+  title: "WorldExplorer",
+  description: " Discover the world's knowledge",
 };
 
 export default function RootLayout({
