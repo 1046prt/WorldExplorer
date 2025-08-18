@@ -1,15 +1,12 @@
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
-import "../styles/globals.css";
-import "../styles/components.css";
-import "../styles/layout.css";
+import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
-  title: "v0 App",
-  description: "Created with v0",
-  generator: "v0.app",
+  title: "WorldExplorer",
+  description: " Discover the world's knowledge",
 };
 
 export default function RootLayout({

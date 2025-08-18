@@ -74,6 +74,23 @@
   display: flex;
   align-items: center;
   gap: var(--spacing-md);
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .header-actions {
+    gap: var(--spacing-sm);
+  }
+
+  .header-content {
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+  }
+
+  .header-brand {
+    flex: 1;
+    min-width: 0;
+  }
 }
 
 /* Main Content */
@@ -119,8 +136,16 @@
 }
 
 /* Content Sections */
+.sections-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2xl);
+}
+
 .section {
-  margin-bottom: var(--spacing-xl);
+  margin-bottom: 0;
+  position: relative;
+  z-index: 1;
 }
 
 .section-title {
@@ -140,6 +165,7 @@
 .grid-layout {
   display: grid;
   gap: var(--spacing-xl);
+  align-items: start;
 }
 
 .grid-1 {
@@ -162,6 +188,10 @@
   .grid-4 {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 767px) {
@@ -169,6 +199,11 @@
   .grid-3,
   .grid-4 {
     grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .sections-container {
+    gap: var(--spacing-xl);
   }
 }
 
@@ -455,6 +490,7 @@
 
 .h-6 {
   height: 1.5rem;
+  margin-top: 0px;
 }
 
 .h-8 {
@@ -707,4 +743,67 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+/* Alignment Utilities */
+.align-stretch {
+  align-items: stretch;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+/* Prevent Overlapping */
+.no-overlap {
+  position: relative;
+  z-index: 1;
+  isolation: isolate;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.equal-height {
+  display: flex;
+  align-items: stretch;
+}
+
+.equal-height > * {
+  flex: 1;
 }

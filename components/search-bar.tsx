@@ -209,46 +209,25 @@ export function SearchBar() {
   };
 
   return (
-    <div ref={searchRef} className="relative">
-      <form onSubmit={handleSearch} className="flex items-center gap-2">
-        <div className="relative">
-          <Search
-            className="w-4 h-4 absolute"
-            style={{
-              left: "0.75rem",
-              top: "50%",
-              transform: "translateY(-50%)",
-              color: "var(--color-muted-foreground)",
-            }}
-          />
+    <div ref={searchRef} className="search-container">
+      <form onSubmit={handleSearch} className="search-form">
+        <div className="search-input-wrapper">
+          <Search className="search-input-icon" />
           <input
             type="text"
             placeholder="Search countries, cities, landmarks..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onFocus={() => results.length > 0 && setIsOpen(true)}
-            className="input"
-            style={{
-              paddingLeft: "2.5rem",
-              paddingRight: query ? "2.5rem" : "0.75rem",
-              width: "16rem",
-            }}
+            className={`input search-input ${query ? "has-clear" : ""}`}
           />
           {query && (
             <button
               type="button"
               onClick={clearSearch}
-              className="btn btn-ghost absolute"
-              style={{
-                right: "0.25rem",
-                top: "50%",
-                transform: "translateY(-50%)",
-                width: "1.5rem",
-                height: "1.5rem",
-                padding: "0",
-              }}
+              className="search-clear-button"
             >
-              <X className="w-3 h-3" />
+              <X />
             </button>
           )}
         </div>
@@ -262,106 +241,56 @@ export function SearchBar() {
       </form>
 
       {isOpen && (
-        <div
-          className="card absolute z-50"
-          style={{
-            top: "100%",
-            left: "0",
-            right: "0",
-            marginTop: "0.5rem",
-            maxHeight: "24rem",
-            overflowY: "auto",
-          }}
-        >
+        <div className="card search-results">
           {isLoading ? (
-            <div
-              className="p-4 text-center"
-              style={{ color: "var(--color-muted-foreground)" }}
-            >
-              <div className="spinner mx-auto mb-2"></div>
+            <div className="search-loading">
+              <div className="spinner"></div>
               Searching...
             </div>
           ) : results.length > 0 ? (
-            <div style={{ padding: "0.5rem 0" }}>
+            <div className="search-results-list">
               {results.map((result, index) => (
                 <button
                   key={index}
                   onClick={() => handleResultClick(result.url)}
-                  className="w-full px-4 py-3 text-left transition"
-                  style={{
-                    border: "none",
-                    background: "transparent",
-                    borderBottom:
-                      index < results.length - 1
-                        ? "1px solid var(--color-border)"
-                        : "none",
-                    cursor: "pointer",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.backgroundColor =
-                      "var(--color-accent)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.backgroundColor = "transparent";
-                  }}
+                  className="search-result-item"
                 >
-                  <div className="flex items-center gap-3">
-                    <span className="text-lg">
+                  <div className="search-result-content">
+                    <span className="search-result-icon">
                       {getResultIcon(result.type)}
                     </span>
-                    <div className="flex-1" style={{ minWidth: "0" }}>
-                      <div className="flex items-center gap-2 mb-1">
-                        <h4
-                          className="font-medium truncate"
-                          style={{ color: "var(--color-foreground)" }}
-                        >
-                          {result.title}
-                        </h4>
+                    <div className="search-result-text">
+                      <div className="search-result-header">
+                        <h4 className="search-result-title">{result.title}</h4>
                         {result.badge && (
-                          <span className="badge badge-outline text-xs">
+                          <span className="search-result-badge">
                             {result.badge}
                           </span>
                         )}
                       </div>
-                      <p
-                        className="text-sm truncate"
-                        style={{ color: "var(--color-muted-foreground)" }}
-                      >
+                      <p className="search-result-subtitle">
                         {result.subtitle}
                       </p>
                     </div>
                   </div>
                 </button>
               ))}
-              <div
-                className="px-4 py-2"
-                style={{ borderTop: "1px solid var(--color-border)" }}
-              >
+              <div className="search-results-footer">
                 <button
                   onClick={() =>
                     handleSearch({
                       preventDefault: () => {},
                     } as React.FormEvent)
                   }
-                  className="btn btn-ghost w-full"
-                  style={{
-                    justifyContent: "flex-start",
-                    color: "var(--color-primary)",
-                  }}
+                  className="btn btn-ghost search-see-all-button"
                 >
-                  <Search
-                    className="w-4 h-4"
-                    style={{ marginRight: "0.5rem" }}
-                  />
+                  <Search />
                   See all results for "{query}"
                 </button>
               </div>
             </div>
           ) : query.length >= 2 ? (
-            <div
-              className="p-4 text-center"
-              style={{ color: "var(--color-muted-foreground)" }}
-            >
+            <div className="search-no-results">
               No results found for "{query}"
             </div>
           ) : null}

@@ -1,21 +1,21 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Trophy, Building, Mountain, Users, DollarSign } from "lucide-react"
+import { useState } from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Trophy, Building, Mountain, Users, DollarSign } from "lucide-react";
 
 const rankingCategories = {
   tallestBuildings: {
     title: "Tallest Buildings",
     icon: Building,
     data: [
-      { name: "Burj Khalifa", country: "UAE", value: "828m", flag: "🇦🇪" },
-      { name: "Merdeka 118", country: "Malaysia", value: "679m", flag: "🇲🇾" },
-      { name: "Shanghai Tower", country: "China", value: "632m", flag: "🇨🇳" },
-      { name: "Abraj Al-Bait", country: "Saudi Arabia", value: "601m", flag: "🇸🇦" },
-      { name: "Ping An Finance", country: "China", value: "599m", flag: "🇨🇳" },
+      { name: "Burj Khalifa", country: "UAE", value: "828m" },
+      { name: "Merdeka 118", country: "Malaysia", value: "679m" },
+      { name: "Shanghai Tower", country: "China", value: "632m" },
+      { name: "Abraj Al-Bait", country: "Saudi Arabia", value: "601m" },
+      { name: "Ping An Finance", country: "China", value: "599m" },
     ],
   },
   longestRivers: {
@@ -51,12 +51,13 @@ const rankingCategories = {
       { name: "India", country: "India", value: "$3.7T", flag: "🇮🇳" },
     ],
   },
-}
+};
 
 export function GlobalRankings() {
-  const [activeCategory, setActiveCategory] = useState("tallestBuildings")
-  const currentData = rankingCategories[activeCategory as keyof typeof rankingCategories]
-  const IconComponent = currentData.icon
+  const [activeCategory, setActiveCategory] = useState("tallestBuildings");
+  const currentData =
+    rankingCategories[activeCategory as keyof typeof rankingCategories];
+  const IconComponent = currentData.icon;
 
   return (
     <Card className="w-full">
@@ -89,7 +90,10 @@ export function GlobalRankings() {
           </h3>
 
           {currentData.data.map((item, index) => (
-            <div key={index} className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
+            <div
+              key={index}
+              className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded-lg"
+            >
               <div className="flex items-center gap-3">
                 <Badge
                   variant={index === 0 ? "default" : "secondary"}
@@ -97,17 +101,20 @@ export function GlobalRankings() {
                 >
                   {index + 1}
                 </Badge>
-                <span className="text-2xl">{item.flag}</span>
                 <div>
                   <div className="font-medium">{item.name}</div>
-                  <div className="text-sm text-gray-600 dark:text-gray-400">{item.country}</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-400">
+                    {item.country}
+                  </div>
                 </div>
               </div>
-              <div className="text-lg font-bold text-blue-600 dark:text-blue-400">{item.value}</div>
+              <div className="text-lg font-bold text-blue-600 dark:text-blue-400">
+                {item.value}
+              </div>
             </div>
           ))}
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

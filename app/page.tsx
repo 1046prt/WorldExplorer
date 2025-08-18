@@ -14,6 +14,7 @@ import { CultureLifestyle } from "@/components/culture-lifestyle";
 import { HistoricalMapSlider } from "@/components/historical-map-slider";
 import { NatureExplorer } from "@/components/nature-explorer";
 import { UserEngagement } from "@/components/user-engagement";
+import Footer from "@/components/footer";
 
 export default function HomePage() {
   return (
@@ -67,34 +68,54 @@ export default function HomePage() {
           <WorldMap />
         </div>
 
-        <div className="section space-y-8">
-          <HistoricalMapSlider />
-
-          <CultureLifestyle />
-
-          <NatureExplorer />
-
-          <UserEngagement />
-
-          <GlobalRankings />
-
-          <div className="grid-layout grid-2">
-            <InteractiveGames />
-            <EnvironmentDashboard />
+        <div className="sections-container">
+          <div className="section">
+            <HistoricalMapSlider />
           </div>
 
-          <LanguageExplorer />
-
-          <div className="grid-layout grid-2">
-            <QuizSystem />
-            <CurrencyConverter />
+          <div className="section">
+            <CultureLifestyle />
           </div>
 
-          <div className="grid-layout grid-1">
+          <div className="section">
+            <NatureExplorer />
+          </div>
+
+          <div className="section">
+            <UserEngagement />
+          </div>
+
+          <div className="section">
+            <GlobalRankings />
+          </div>
+
+          <div className="section">
+            <LanguageExplorer />
+          </div>
+
+          <div className="section">
+            <div className="grid-layout grid-2">
+              <QuizSystem />
+              <CurrencyConverter />
+            </div>
+          </div>
+
+          <div className="section">
             <WeatherWidget />
+          </div>
+
+          <div className="section">
+            <div className="grid-layout grid-2">
+              <InteractiveGames />
+              <EnvironmentDashboard />
+            </div>
           </div>
         </div>
       </main>
+
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 }

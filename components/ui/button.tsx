@@ -14,6 +14,32 @@ export interface ButtonProps
   asChild?: boolean;
 }
 
+const buttonVariants = (props?: {
+  variant?: ButtonProps["variant"];
+  size?: ButtonProps["size"];
+}) => {
+  const variant = props?.variant || "default";
+  const size = props?.size || "default";
+
+  const variantClasses = {
+    default: "btn-primary",
+    destructive: "btn-destructive",
+    outline: "btn-outline",
+    secondary: "btn-secondary",
+    ghost: "btn-ghost",
+    link: "btn-ghost",
+  };
+
+  const sizeClasses = {
+    default: "btn-md",
+    sm: "btn-sm",
+    lg: "btn-lg",
+    icon: "btn-icon",
+  };
+
+  return `btn ${variantClasses[variant]} ${sizeClasses[size]}`;
+};
+
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
@@ -25,28 +51,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     },
     ref
   ) => {
-    const baseClasses = "btn";
-    const variantClasses = {
-      default: "btn-primary",
-      destructive: "btn-destructive",
-      outline: "btn-outline",
-      secondary: "btn-secondary",
-      ghost: "btn-ghost",
-      link: "btn-ghost",
-    };
-    const sizeClasses = {
-      default: "btn-md",
-      sm: "btn-sm",
-      lg: "btn-lg",
-      icon: "btn-icon",
-    };
-
-    const classes = cn(
-      baseClasses,
-      variantClasses[variant],
-      sizeClasses[size],
-      className
-    );
+    const classes = cn(buttonVariants({ variant, size }), className);
 
     if (asChild) {
       return <span className={classes} {...props} />;
@@ -57,4 +62,4 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 );
 Button.displayName = "Button";
 
-export { Button };
+export { Button, buttonVariants };

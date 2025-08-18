@@ -83,57 +83,38 @@ export function QuickNavigation() {
   ];
 
   return (
-    <div className="card p-6 backdrop-blur">
-      <div className="flex items-center gap-2 mb-6">
-        <TrendingUp className="w-5 h-5" style={{ color: "#ea580c" }} />
-        <h2
-          className="text-xl font-bold"
-          style={{ color: "var(--color-foreground)" }}
-        >
-          Quick Navigation
-        </h2>
+    <div className="card quick-navigation">
+      <div className="quick-navigation-header">
+        <TrendingUp className="quick-navigation-icon" />
+        <h2 className="quick-navigation-title">Quick Navigation</h2>
       </div>
 
-      <div className="grid-layout md:grid-cols-5 gap-4 mb-6">
+      <div className="navigation-categories">
         {categories.map((category, index) => (
-          <Link key={index} href={category.href}>
-            <div
-              className="card p-4 card-hover cursor-pointer text-center"
-              onMouseEnter={() => setActiveCategory(category.label)}
-              onMouseLeave={() => setActiveCategory(null)}
-            >
-              <div className="mb-2 flex justify-center">
-                {React.cloneElement(category.icon as React.ReactElement, {
-                  style: { color: getCategoryColor(category.color) },
-                })}
-              </div>
-              <h3
-                className="font-semibold text-sm mb-1"
-                style={{ color: "var(--color-foreground)" }}
-              >
-                {category.label}
-              </h3>
+          <div key={index} className="navigation-category">
+            <Link href={category.href} className="navigation-category-button">
+              <span className="navigation-category-icon">
+                {React.cloneElement(category.icon as React.ReactElement)}
+              </span>
+              <h3 className="navigation-category-title">{category.label}</h3>
               <span className="badge badge-secondary text-xs">
                 {category.count}
               </span>
-            </div>
-          </Link>
+            </Link>
+          </div>
         ))}
       </div>
 
-      <div>
-        <h3
-          className="font-semibold mb-3"
-          style={{ color: "var(--color-foreground)" }}
-        >
-          Popular Searches
-        </h3>
-        <div className="flex flex-wrap gap-2">
+      <div className="popular-searches">
+        <h3 className="popular-searches-title">Popular Searches</h3>
+        <div className="popular-searches-list">
           {popularSearches.map((search, index) => (
-            <Link key={index} href={`/search?q=${encodeURIComponent(search)}`}>
-              <button className="btn btn-outline btn-sm text-xs">
-                {search}
-              </button>
+            <Link
+              key={index}
+              href={`/search?q=${encodeURIComponent(search)}`}
+              className="popular-search-tag"
+            >
+              {search}
             </Link>
           ))}
         </div>

@@ -1,30 +1,35 @@
-import { notFound } from "next/navigation"
-import { getCountryData } from "@/lib/data-utils"
-import { CountryHeader } from "@/components/country-header"
-import { CountryOverview } from "@/components/country-overview"
-import { CountryHistory } from "@/components/country-history"
-import { CountryLandmarks } from "@/components/country-landmarks"
-import { CountryCities } from "@/components/country-cities"
-import { CountryRivers } from "@/components/country-rivers"
-import { CountryInstitutions } from "@/components/country-institutions"
-import { CountryMap } from "@/components/country-map"
-import { NavigationBreadcrumb } from "@/components/navigation-breadcrumb"
-import { ComprehensiveCountryData } from "@/components/comprehensive-country-data"
+import { notFound } from "next/navigation";
+import { getCountryData } from "@/lib/data-utils";
+import { CountryHeader } from "@/components/country-header";
+import { CountryOverview } from "@/components/country-overview";
+import { CountryHistory } from "@/components/country-history";
+import { CountryLandmarks } from "@/components/country-landmarks";
+import { CountryCities } from "@/components/country-cities";
+import { CountryRivers } from "@/components/country-rivers";
+import { CountryInstitutions } from "@/components/country-institutions";
+import { CountryMap } from "@/components/country-map";
+import { NavigationBreadcrumb } from "@/components/navigation-breadcrumb";
+import { ComprehensiveCountryData } from "@/components/comprehensive-country-data";
+import Footer from "@/components/footer";
 
 interface CountryPageProps {
-  params: {
-    countryCode: string
-  }
+  params: Promise<{
+    countryCode: string;
+  }>;
 }
 
 export default async function CountryPage({ params }: CountryPageProps) {
-  const country = await getCountryData(params.countryCode)
+  const { countryCode } = await params;
+  const country = await getCountryData(countryCode);
 
   if (!country) {
-    notFound()
+    notFound();
   }
 
-  const breadcrumbItems = [{ label: "Countries", href: "/browse/countries" }, { label: country.name }]
+  const breadcrumbItems = [
+    { label: "Countries", href: "/browse/countries" },
+    { label: country.name },
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
@@ -51,21 +56,27 @@ export default async function CountryPage({ params }: CountryPageProps) {
 
         <CountryInstitutions country={country} />
       </main>
+      <div>
+        <Footer />
+      </div>
     </div>
-  )
+  );
 }
 
 export async function generateMetadata({ params }: CountryPageProps) {
-  const country = await getCountryData(params.countryCode)
+  const { countryCode } = await params;
+  const country = await getCountryData(countryCode);
 
   if (!country) {
     return {
       title: "Country Not Found",
-    }
+    };
   }
 
   return {
     title: `${country.name} - WorldExplorer`,
-    description: `Discover ${country.name}: capital ${country.capital}, population ${country.population.toLocaleString()}, famous landmarks, history, and more.`,
-  }
+    description: `Discover ${country.name}: capital ${
+      country.capital
+    }, population ${country.population.toLocaleString()}, famous landmarks, history, and more.`,
+  };
 }

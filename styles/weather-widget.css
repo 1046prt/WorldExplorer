@@ -1,0 +1,243 @@
+/* Weather Widget Styles */
+
+.weather-widget {
+  padding: 1.5rem;
+  backdrop-filter: blur(8px);
+}
+
+.weather-widget-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.weather-widget-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--color-primary);
+}
+
+.weather-widget-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-foreground);
+  margin: 0;
+}
+
+.weather-widget-subtitle {
+  font-size: 0.875rem;
+  color: var(--color-muted-foreground);
+  margin: 0;
+}
+
+.weather-search-form {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
+
+.weather-search-input {
+  flex: 1;
+}
+
+.weather-current {
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.1) 0%,
+    rgba(99, 102, 241, 0.1) 100%
+  );
+  margin-bottom: 1.5rem;
+}
+
+.weather-current-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.weather-current-location h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-foreground);
+  margin: 0;
+}
+
+.weather-current-location p {
+  color: var(--color-muted-foreground);
+  margin: 0;
+}
+
+.weather-current-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.weather-current-temp {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.weather-temp-value {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--color-foreground);
+}
+
+.weather-temp-condition {
+  font-size: 1.125rem;
+  color: var(--color-muted-foreground);
+}
+
+.weather-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.weather-detail {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.weather-detail-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.weather-detail-icon.humidity {
+  color: #3b82f6;
+}
+
+.weather-detail-icon.wind {
+  color: var(--color-muted-foreground);
+}
+
+.weather-detail-icon.visibility {
+  color: #10b981;
+}
+
+.weather-detail-text {
+  font-size: 0.875rem;
+  color: var(--color-muted-foreground);
+}
+
+.weather-forecast {
+  margin-top: 1.5rem;
+}
+
+.weather-forecast-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-foreground);
+  margin-bottom: 0.75rem;
+}
+
+.weather-forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.5rem;
+}
+
+.weather-forecast-day {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  background-color: var(--color-muted);
+}
+
+.weather-forecast-day-name {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-muted-foreground);
+  margin-bottom: 0.5rem;
+}
+
+.weather-forecast-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.weather-forecast-icon svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.weather-forecast-high {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-foreground);
+}
+
+.weather-forecast-low {
+  font-size: 0.75rem;
+  color: var(--color-muted-foreground);
+}
+
+.weather-empty-state {
+  text-align: center;
+  padding: 2rem 0;
+  color: var(--color-muted-foreground);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .weather-search-form {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .weather-details {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .weather-forecast-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+  }
+
+  .weather-current {
+    padding: 1rem;
+  }
+
+  .weather-widget {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .weather-search-form {
+    align-items: stretch;
+  }
+
+  .weather-search-input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .weather-forecast-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .weather-current-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .weather-current-temp {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}

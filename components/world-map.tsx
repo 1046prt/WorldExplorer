@@ -1,24 +1,24 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState, useCallback } from "react"
-import { Card } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { ZoomIn, ZoomOut, RotateCcw, Globe, Info } from "lucide-react"
-import { useRouter } from "next/navigation"
-import Image from "next/image"
+import { useState, useCallback } from "react";
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { ZoomIn, ZoomOut, RotateCcw, Globe, Info } from "lucide-react";
+import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 interface CountryInfo {
-  name: string
-  capital: string
-  population: string
-  region: string
-  area: string
-  currency: string
-  languages: string[]
-  timezone: string
+  name: string;
+  capital: string;
+  population: string;
+  region: string;
+  area: string;
+  currency: string;
+  languages: string[];
+  timezone: string;
 }
 
 const countryData: Record<string, CountryInfo> = {
@@ -202,9 +202,12 @@ const countryData: Record<string, CountryInfo> = {
     languages: ["English"],
     timezone: "UTC+1",
   },
-}
+};
 
-const countryCoordinates: Record<string, { x: number; y: number; width: number; height: number }> = {
+const countryCoordinates: Record<
+  string,
+  { x: number; y: number; width: number; height: number }
+> = {
   US: { x: 15, y: 35, width: 25, height: 15 },
   CA: { x: 15, y: 20, width: 30, height: 15 },
   MX: { x: 15, y: 50, width: 15, height: 10 },
@@ -223,47 +226,50 @@ const countryCoordinates: Record<string, { x: number; y: number; width: number; 
   ZA: { x: 52, y: 80, width: 6, height: 6 },
   EG: { x: 52, y: 52, width: 4, height: 6 },
   NG: { x: 48, y: 62, width: 4, height: 4 },
-}
+};
 
 export function WorldMap() {
-  const [selectedCountry, setSelectedCountry] = useState<string | null>(null)
-  const [hoveredCountry, setHoveredCountry] = useState<string | null>(null)
-  const [zoom, setZoom] = useState(1)
-  const [showTooltip, setShowTooltip] = useState(false)
-  const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 })
-  const router = useRouter()
+  const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
+  const [hoveredCountry, setHoveredCountry] = useState<string | null>(null);
+  const [zoom, setZoom] = useState(1);
+  const [showTooltip, setShowTooltip] = useState(false);
+  const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
+  const router = useRouter();
 
   const handleCountryClick = useCallback(
     (countryCode: string) => {
       if (countryCode === selectedCountry) {
         // Navigate to country detail page
-        router.push(`/country/${countryCode.toLowerCase()}`)
+        router.push(`/country/${countryCode.toLowerCase()}`);
       } else {
-        setSelectedCountry(countryCode)
+        setSelectedCountry(countryCode);
       }
     },
-    [selectedCountry, router],
-  )
+    [selectedCountry, router]
+  );
 
-  const handleCountryHover = useCallback((countryCode: string | null, event?: React.MouseEvent) => {
-    setHoveredCountry(countryCode)
-    if (countryCode && event) {
-      setTooltipPosition({ x: event.clientX, y: event.clientY })
-      setShowTooltip(true)
-    } else {
-      setShowTooltip(false)
-    }
-  }, [])
+  const handleCountryHover = useCallback(
+    (countryCode: string | null, event?: React.MouseEvent) => {
+      setHoveredCountry(countryCode);
+      if (countryCode && event) {
+        setTooltipPosition({ x: event.clientX, y: event.clientY });
+        setShowTooltip(true);
+      } else {
+        setShowTooltip(false);
+      }
+    },
+    []
+  );
 
   const resetView = () => {
-    setZoom(1)
-    setSelectedCountry(null)
-    setHoveredCountry(null)
-    setShowTooltip(false)
-  }
+    setZoom(1);
+    setSelectedCountry(null);
+    setHoveredCountry(null);
+    setShowTooltip(false);
+  };
 
-  const currentCountry = hoveredCountry || selectedCountry
-  const countryInfo = currentCountry ? countryData[currentCountry] : null
+  const currentCountry = hoveredCountry || selectedCountry;
+  const countryInfo = currentCountry ? countryData[currentCountry] : null;
 
   return (
     <Card className="p-6 bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm border-2 border-blue-100 dark:border-blue-800">
@@ -271,24 +277,9 @@ export function WorldMap() {
         <div className="flex items-center gap-3">
           <Globe className="w-6 h-6 text-blue-600 dark:text-blue-400" />
           <div>
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Interactive World Explorer</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              {countryInfo ? (
-                <span className="flex items-center gap-2 mt-1">
-                  <Badge variant="secondary" className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
-                    {currentCountry}
-                  </Badge>
-                  <span className="font-medium">{countryInfo.name}</span>
-                  {selectedCountry && (
-                    <span className="text-blue-600 dark:text-blue-400 font-medium animate-pulse">
-                      (Click again to explore details)
-                    </span>
-                  )}
-                </span>
-              ) : (
-                "Hover over countries for quick facts • Click to select • Double-click to explore"
-              )}
-            </p>
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+              Interactive World Explorer
+            </h3>
           </div>
         </div>
 
@@ -324,20 +315,22 @@ export function WorldMap() {
 
       <div className="relative w-full h-[500px] bg-gradient-to-b from-sky-50 to-blue-100 dark:from-sky-900 dark:to-blue-800 rounded-xl overflow-hidden border-2 border-blue-200 dark:border-blue-700 shadow-inner">
         <div
-          className="relative w-full h-full cursor-pointer transition-transform duration-300 ease-out"
+          className="world-map-wrapper"
           style={{ transform: `scale(${zoom})` }}
         >
-          <Image src="/images/maps/world-map.png" alt="Interactive World Map" fill className="object-cover" priority />
+          <Image
+            src="/images/maps/world-map.png"
+            alt="Interactive World Map"
+            fill
+            className="world-map-image"
+            priority
+          />
 
           {Object.entries(countryCoordinates).map(([countryCode, coords]) => (
             <div
               key={countryCode}
-              className={`absolute cursor-pointer transition-all duration-200 ${
-                selectedCountry === countryCode
-                  ? "bg-blue-500/40 border-2 border-blue-600 shadow-lg"
-                  : hoveredCountry === countryCode
-                    ? "bg-blue-400/30 border border-blue-500"
-                    : "hover:bg-blue-300/20 hover:border hover:border-blue-400"
+              className={`country-marker ${
+                selectedCountry === countryCode ? "selected" : "default"
               }`}
               style={{
                 left: `${coords.x}%`,
@@ -355,7 +348,7 @@ export function WorldMap() {
 
         {showTooltip && hoveredCountry && countryData[hoveredCountry] && (
           <div
-            className="fixed z-50 bg-white dark:bg-gray-800 p-3 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 pointer-events-none"
+            className="map-tooltip"
             style={{
               left: tooltipPosition.x + 10,
               top: tooltipPosition.y - 10,
@@ -365,7 +358,9 @@ export function WorldMap() {
               <Badge variant="outline" className="text-xs">
                 {hoveredCountry}
               </Badge>
-              <span className="font-semibold text-sm">{countryData[hoveredCountry].name}</span>
+              <span className="font-semibold text-sm">
+                {countryData[hoveredCountry].name}
+              </span>
             </div>
             <div className="text-xs text-gray-600 dark:text-gray-400 space-y-1">
               <div>Capital: {countryData[hoveredCountry].capital}</div>
@@ -385,8 +380,12 @@ export function WorldMap() {
                   <span className="text-xs font-bold">{currentCountry}</span>
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-blue-900 dark:text-blue-100">{countryInfo.name}</h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">{countryInfo.region}</p>
+                  <h4 className="text-xl font-bold text-blue-900 dark:text-blue-100">
+                    {countryInfo.name}
+                  </h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    {countryInfo.region}
+                  </p>
                 </div>
               </div>
 
@@ -395,25 +394,33 @@ export function WorldMap() {
                   <span className="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide">
                     Capital
                   </span>
-                  <p className="text-sm font-semibold text-gray-900 dark:text-gray-100">{countryInfo.capital}</p>
+                  <p className="text-sm font-semibold text-gray-900 dark:text-gray-100">
+                    {countryInfo.capital}
+                  </p>
                 </div>
                 <div className="bg-white/60 dark:bg-gray-800/60 p-3 rounded-lg">
                   <span className="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide">
                     Population
                   </span>
-                  <p className="text-sm font-semibold text-gray-900 dark:text-gray-100">{countryInfo.population}</p>
+                  <p className="text-sm font-semibold text-gray-900 dark:text-gray-100">
+                    {countryInfo.population}
+                  </p>
                 </div>
                 <div className="bg-white/60 dark:bg-gray-800/60 p-3 rounded-lg">
                   <span className="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide">
                     Area
                   </span>
-                  <p className="text-sm font-semibold text-gray-900 dark:text-gray-100">{countryInfo.area}</p>
+                  <p className="text-sm font-semibold text-gray-900 dark:text-gray-100">
+                    {countryInfo.area}
+                  </p>
                 </div>
                 <div className="bg-white/60 dark:bg-gray-800/60 p-3 rounded-lg">
                   <span className="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide">
                     Currency
                   </span>
-                  <p className="text-sm font-semibold text-gray-900 dark:text-gray-100">{countryInfo.currency}</p>
+                  <p className="text-sm font-semibold text-gray-900 dark:text-gray-100">
+                    {countryInfo.currency}
+                  </p>
                 </div>
               </div>
 
@@ -430,7 +437,9 @@ export function WorldMap() {
                   <span className="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide">
                     Timezone
                   </span>
-                  <p className="text-sm font-semibold text-gray-900 dark:text-gray-100">{countryInfo.timezone}</p>
+                  <p className="text-sm font-semibold text-gray-900 dark:text-gray-100">
+                    {countryInfo.timezone}
+                  </p>
                 </div>
               </div>
             </div>
@@ -439,7 +448,9 @@ export function WorldMap() {
               <Button
                 variant="default"
                 size="sm"
-                onClick={() => router.push(`/country/${currentCountry?.toLowerCase()}`)}
+                onClick={() =>
+                  router.push(`/country/${currentCountry?.toLowerCase()}`)
+                }
                 className="bg-blue-600 hover:bg-blue-700 text-white"
               >
                 <Info className="w-4 h-4 mr-2" />
@@ -450,5 +461,5 @@ export function WorldMap() {
         </div>
       )}
     </Card>
-  )
+  );
 }

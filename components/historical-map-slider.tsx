@@ -26,7 +26,7 @@ const historicalData = [
     description: "Soviet Union dissolution",
     mapUrl: "/images/maps/world-1991.png",
   },
-  { year: 2024, title: "Modern Day", description: "Current world borders", mapUrl: "/images/maps/world-2024.png" },
+  { year: 2025, title: "Modern Day", description: "Current world borders", mapUrl: "/images/maps/world-2024.png" },
 ]
 
 export function HistoricalMapSlider() {
@@ -81,12 +81,12 @@ export function HistoricalMapSlider() {
               <Slider
                 value={currentYear}
                 onValueChange={setCurrentYear}
-                max={2024}
+                max={2025}
                 min={1900}
                 step={1}
                 className="flex-1"
               />
-              <span className="text-sm font-medium">2024</span>
+              <span className="text-sm font-medium">2025</span>
             </div>
 
             <div className="flex justify-center gap-2">
