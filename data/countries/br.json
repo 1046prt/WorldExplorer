@@ -1,0 +1,334 @@
+{
+  "iso2": "BR",
+  "iso3": "BRA",
+  "name": "Brazil",
+  "region": "South America",
+  "capital": "Brasília",
+  "population": 215300000,
+  "currency": {
+    "code": "BRL",
+    "name": "Brazilian Real",
+    "symbol": "R$",
+    "image": "/images/currencies/brl.png"
+  },
+  "languages": ["Portuguese"],
+  "timezones": ["UTC-5:00", "UTC-4:00", "UTC-3:00", "UTC-2:00"],
+  "geography": {
+    "climateZones": ["Tropical", "Subtropical", "Temperate"],
+    "geologicalFormations": [
+      {
+        "name": "Amazon Basin",
+        "type": "Basin",
+        "description": "World's largest river basin"
+      },
+      {
+        "name": "Brazilian Highlands",
+        "type": "Plateau",
+        "description": "Large plateau covering central Brazil"
+      }
+    ],
+    "naturalDisasters": [
+      {
+        "type": "Drought",
+        "name": "Northeast Drought",
+        "year": 2012,
+        "impact": "Severe drought affecting northeastern Brazil"
+      }
+    ],
+    "majorWaterBodies": [
+      {
+        "name": "Atlantic Ocean",
+        "type": "Ocean",
+        "coastline": "East Coast"
+      },
+      {
+        "name": "Amazon River",
+        "type": "River",
+        "description": "World's largest river by volume"
+      }
+    ]
+  },
+  "heritage": {
+    "independenceDate": "September 7, 1822",
+    "foundingEvent": "Independence from Portugal",
+    "majorHistoricalFigures": [
+      {
+        "name": "Dom Pedro I",
+        "role": "First Emperor",
+        "period": "1822-1831",
+        "achievement": "Declared Brazilian independence"
+      }
+    ],
+    "colonialHistory": [
+      {
+        "period": "1500-1822",
+        "description": "Portuguese colonial period"
+      }
+    ],
+    "unescoSites": [
+      {
+        "name": "Historic Centre of Salvador de Bahia",
+        "year": 1985,
+        "type": "Cultural"
+      },
+      {
+        "name": "Iguaçu National Park",
+        "year": 1986,
+        "type": "Natural"
+      }
+    ]
+  },
+  "politics": {
+    "currentLeaders": [
+      {
+        "position": "President",
+        "name": "Luiz Inácio Lula da Silva",
+        "party": "Workers' Party",
+        "termStart": "January 1, 2023",
+        "termEnd": "January 1, 2027"
+      }
+    ],
+    "governmentType": "Federal Presidential Constitutional Republic",
+    "internationalMemberships": [
+      "United Nations (UN)",
+      "BRICS",
+      "Mercosur",
+      "Organization of American States (OAS)"
+    ]
+  },
+  "economy": {
+    "gdp": 2055506000000,
+    "gdpPerCapita": 9673,
+    "majorIndustries": ["Agriculture", "Mining", "Manufacturing", "Services"],
+    "topExports": [
+      {
+        "product": "Soybeans",
+        "value": 33700000000
+      },
+      {
+        "product": "Iron Ore",
+        "value": 28100000000
+      }
+    ],
+    "topImports": [
+      {
+        "product": "Refined Petroleum",
+        "value": 8900000000
+      },
+      {
+        "product": "Vehicle Parts",
+        "value": 6200000000
+      }
+    ],
+    "employmentRate": 93.2,
+    "employmentSectors": {
+      "services": 73.2,
+      "industry": 20.7,
+      "agriculture": 6.1
+    }
+  },
+  "culture": {
+    "officialLanguages": ["Portuguese"],
+    "regionalLanguages": ["Spanish", "English", "French"],
+    "religionDemographics": {
+      "Christianity": 86.8,
+      "Unaffiliated": 8.0,
+      "Spiritism": 2.0,
+      "Other": 3.2
+    },
+    "nationalFestivals": [
+      {
+        "name": "Carnival",
+        "date": "February/March",
+        "description": "World's largest carnival celebration"
+      },
+      {
+        "name": "Independence Day",
+        "date": "September 7",
+        "description": "Celebrates independence from Portugal"
+      }
+    ],
+    "traditionalFoods": [
+      {
+        "name": "Feijoada",
+        "description": "Traditional black bean stew with pork"
+      },
+      {
+        "name": "Açaí",
+        "description": "Purple berry superfood from Amazon"
+      }
+    ],
+    "nationalSymbols": {
+      "flag": "Green field with yellow rhombus",
+      "emblem": "Coat of Arms of Brazil",
+      "anthem": "Hino Nacional Brasileiro",
+      "flower": "Ipê",
+      "bird": "Sabiá-laranjeira",
+      "animal": "Jaguar"
+    }
+  },
+  "education": {
+    "literacyRate": 93.2,
+    "educationSystem": "Free public education system",
+    "famousScientists": [
+      {
+        "name": "Carlos Chagas",
+        "field": "Medicine",
+        "achievement": "Discovered Chagas disease"
+      }
+    ],
+    "nobelPrizeWinners": 1
+  },
+  "tourism": {
+    "mostVisitedCities": [
+      {
+        "name": "Rio de Janeiro",
+        "visitors": 6500000,
+        "attractions": [
+          "Christ the Redeemer",
+          "Copacabana Beach",
+          "Sugarloaf Mountain"
+        ]
+      },
+      {
+        "name": "São Paulo",
+        "visitors": 15600000,
+        "attractions": ["Museums", "Nightlife", "Business District"]
+      }
+    ],
+    "adventureActivities": [
+      "Amazon Rainforest Tours",
+      "Iguazu Falls Visits",
+      "Beach Activities",
+      "Pantanal Wildlife Watching"
+    ],
+    "transportation": {
+      "airports": "Major airports in São Paulo, Rio de Janeiro, Brasília",
+      "railways": "Limited passenger rail service",
+      "highways": "Extensive highway network"
+    },
+    "visaRequirements": "Visa required for most visitors"
+  },
+  "demographics": {
+    "populationGrowth": [
+      { "year": 2020, "population": 212559417 },
+      { "year": 2021, "population": 213993437 },
+      { "year": 2022, "population": 215313498 },
+      { "year": 2023, "population": 216422446 }
+    ],
+    "urbanRural": {
+      "urban": 87.1,
+      "rural": 12.9
+    },
+    "lifeExpectancy": {
+      "total": 76.6,
+      "male": 73.1,
+      "female": 80.2
+    },
+    "ageDistribution": {
+      "youth": 21.1,
+      "workingAge": 69.6,
+      "elderly": 9.3
+    }
+  },
+  "history": [
+    {
+      "year": 1500,
+      "description": "Portuguese explorer Pedro Álvares Cabral claims Brazil for Portugal"
+    },
+    {
+      "year": 1822,
+      "description": "Brazil declares independence from Portugal"
+    },
+    {
+      "year": 1888,
+      "description": "Abolition of slavery in Brazil"
+    },
+    {
+      "year": 1960,
+      "description": "Capital moved from Rio de Janeiro to Brasília"
+    }
+  ],
+  "states": [
+    {
+      "name": "São Paulo",
+      "capital": "São Paulo",
+      "slug": "sao-paulo"
+    },
+    {
+      "name": "Rio de Janeiro",
+      "capital": "Rio de Janeiro",
+      "slug": "rio-de-janeiro"
+    },
+    {
+      "name": "Minas Gerais",
+      "capital": "Belo Horizonte",
+      "slug": "minas-gerais"
+    }
+  ],
+  "famousCities": [
+    {
+      "name": "Rio de Janeiro",
+      "whyFamous": "Famous for Christ the Redeemer statue, Carnival, and beautiful beaches",
+      "slug": "rio-de-janeiro"
+    },
+    {
+      "name": "São Paulo",
+      "whyFamous": "Largest city in South America and major economic center",
+      "slug": "sao-paulo"
+    },
+    {
+      "name": "Salvador",
+      "whyFamous": "Historic colonial city and cultural center of Afro-Brazilian culture",
+      "slug": "salvador"
+    }
+  ],
+  "landmarks": [
+    {
+      "slug": "christ-the-redeemer",
+      "name": "Christ the Redeemer",
+      "city": "Rio de Janeiro",
+      "coordinates": {
+        "lat": -22.9519,
+        "lng": -43.2105
+      },
+      "whyFamous": "Iconic Art Deco statue of Jesus Christ overlooking Rio de Janeiro",
+      "imagePath": "/images/landmarks/christ-the-redeemer.png"
+    },
+    {
+      "slug": "iguazu-falls",
+      "name": "Iguazu Falls",
+      "city": "Foz do Iguaçu",
+      "coordinates": {
+        "lat": -25.6953,
+        "lng": -54.4367
+      },
+      "whyFamous": "One of the world's most spectacular waterfalls",
+      "imagePath": "/images/landmarks/iguazu-falls.png"
+    }
+  ],
+  "rivers": [
+    {
+      "slug": "amazon-river",
+      "name": "Amazon River",
+      "length": 6400,
+      "countries": ["Brazil", "Peru", "Colombia"],
+      "source": "Peruvian Andes",
+      "mouth": "Atlantic Ocean",
+      "pathCoordinates": [
+        { "lat": -3.4653, "lng": -62.2159 },
+        { "lat": 0.1807, "lng": -51.7792 }
+      ]
+    }
+  ],
+  "institutions": [
+    {
+      "slug": "university-of-sao-paulo",
+      "name": "University of São Paulo",
+      "city": "São Paulo",
+      "founded": 1934,
+      "globalRank": 115,
+      "type": "Public Research University"
+    }
+  ]
+}
