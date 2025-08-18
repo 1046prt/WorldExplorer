@@ -1,11 +1,17 @@
 /* Global Styles - Native CSS Only */
 
-/* CSS Custom Properties for Theme Variables */
+
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+/* CSS Custom Properties for Modern Theme */
 :root {
-  /* Colors */
-  --color-primary: #2563eb;
-  --color-primary-hover: #1d4ed8;
+  /* Enhanced Color Palette */
+  --color-primary: #6366f1;
+  --color-primary-hover: #4f46e5;
   --color-primary-foreground: #ffffff;
+  --color-primary-light: #a5b4fc;
+  --color-primary-dark: #3730a3;
 
   --color-secondary: #f1f5f9;
   --color-secondary-hover: #e2e8f0;
@@ -16,6 +22,7 @@
 
   --color-card: #ffffff;
   --color-card-foreground: #0f172a;
+  --color-card-border: #e2e8f0;
 
   --color-muted: #f8fafc;
   --color-muted-foreground: #64748b;
@@ -24,44 +31,60 @@
   --color-accent-foreground: #0f172a;
 
   --color-border: #e2e8f0;
-  --color-input: #e2e8f0;
-  --color-ring: #2563eb;
+  --color-input: #f8fafc;
+  --color-ring: #6366f1;
 
-  --color-destructive: #dc2626;
+  --color-destructive: #ef4444;
   --color-destructive-foreground: #ffffff;
 
-  --color-success: #16a34a;
-  --color-warning: #d97706;
-  --color-info: #0ea5e9;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-info: #3b82f6;
 
-  /* Gradients */
-  --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-  --gradient-background: linear-gradient(135deg, #f0f9ff 0%, #e0e7ff 100%);
+  /* Modern Gradients */
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --gradient-accent: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --gradient-warm: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+  --gradient-cool: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  --gradient-background: linear-gradient(
+    135deg,
+    #f0f9ff 0%,
+    #e0e7ff 50%,
+    #fef3c7 100%
+  );
 
-  /* Spacing */
+  /* Enhanced Spacing */
   --spacing-xs: 0.25rem;
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
   --spacing-lg: 1.5rem;
   --spacing-xl: 2rem;
   --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
 
-  /* Border Radius */
-  --radius-sm: 0.25rem;
-  --radius-md: 0.375rem;
-  --radius-lg: 0.5rem;
-  --radius-xl: 0.75rem;
+  /* Modern Border Radius */
+  --radius-xs: 0.125rem;
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
 
-  /* Shadows */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  /* Enhanced Shadows */
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    0 2px 4px -2px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    0 4px 6px -4px rgba(0, 0, 0, 0.1);
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
 
-  /* Typography */
+  /* Typography Scale */
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
   --font-size-base: 1rem;
@@ -70,47 +93,80 @@
   --font-size-2xl: 1.5rem;
   --font-size-3xl: 1.875rem;
   --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  --font-size-6xl: 3.75rem;
 
   --line-height-tight: 1.25;
+  --line-height-snug: 1.375;
   --line-height-normal: 1.5;
-  --line-height-relaxed: 1.75;
+  --line-height-relaxed: 1.625;
+  --line-height-loose: 2;
 
-  /* Transitions */
-  --transition-fast: 150ms ease-in-out;
-  --transition-normal: 250ms ease-in-out;
-  --transition-slow: 350ms ease-in-out;
+  /* Enhanced Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Blur Effects */
+  --blur-sm: blur(4px);
+  --blur-md: blur(8px);
+  --blur-lg: blur(16px);
+  --blur-xl: blur(24px);
 }
 
-/* Dark Theme */
+/* Enhanced Dark Theme */
 .dark {
-  --color-primary: #3b82f6;
-  --color-primary-hover: #2563eb;
+  --color-primary: #8b5cf6;
+  --color-primary-hover: #7c3aed;
   --color-primary-foreground: #ffffff;
+  --color-primary-light: #c4b5fd;
+  --color-primary-dark: #5b21b6;
 
   --color-secondary: #374151;
   --color-secondary-hover: #4b5563;
   --color-secondary-foreground: #f9fafb;
 
-  --color-background: #111827;
-  --color-foreground: #f9fafb;
+  --color-background: #0f172a;
+  --color-foreground: #f8fafc;
 
-  --color-card: #1f2937;
-  --color-card-foreground: #f9fafb;
+  --color-card: #1e293b;
+  --color-card-foreground: #f8fafc;
+  --color-card-border: #334155;
 
-  --color-muted: #374151;
-  --color-muted-foreground: #9ca3af;
+  --color-muted: #334155;
+  --color-muted-foreground: #94a3b8;
 
-  --color-accent: #374151;
-  --color-accent-foreground: #f9fafb;
+  --color-accent: #334155;
+  --color-accent-foreground: #f8fafc;
 
-  --color-border: #374151;
-  --color-input: #374151;
-  --color-ring: #3b82f6;
+  --color-border: #334155;
+  --color-input: #1e293b;
+  --color-ring: #8b5cf6;
 
-  --color-destructive: #ef4444;
+  --color-destructive: #f87171;
   --color-destructive-foreground: #ffffff;
 
-  --gradient-background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+  --color-success: #34d399;
+  --color-warning: #fbbf24;
+  --color-info: #60a5fa;
+
+  --gradient-background: linear-gradient(
+    135deg,
+    #0f172a 0%,
+    #1e293b 50%,
+    #374151 100%
+  );
+
+  /* Enhanced Dark Shadows */
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.4), 0 1px 2px -1px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4),
+    0 2px 4px -2px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4),
+    0 4px 6px -4px rgba(0, 0, 0, 0.4);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.4),
+    0 8px 10px -6px rgba(0, 0, 0, 0.4);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
 }
 
 /* Base Styles */
