@@ -37,6 +37,7 @@ Features a clickable world map, famous buildings & structures, currency images, 
 ```bash
 ├── 📁 app/
 │   ├── 📁 country/
+|   ├── 📁 browse/
 │   ├── 📁 search/
 ├── 📁 components/
 │   ├── 📁 ui/
@@ -65,8 +66,8 @@ Features a clickable world map, famous buildings & structures, currency images, 
 ### 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/your-username/WorldExplorer.git
-cd world-knowledge-explorer
+git clone https://github.com/1046prt/WorldExplorer.git
+cd WorldExplorer
 ```
 
 ### 2️⃣ Install Dependencies
