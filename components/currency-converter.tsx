@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import "/app/globals.css";
 import {
   Select,
   SelectContent,
@@ -21,16 +22,16 @@ interface Currency {
 }
 
 const currencies: Currency[] = [
-  { code: "USD", name: "US Dollar", symbol: "$", flag: "🇺🇸" },
+  { code: "USD", name: "US Dollar", symbol: "$", flag: "" },
   { code: "EUR", name: "Euro", symbol: "€", flag: "🇪🇺" },
-  { code: "GBP", name: "British Pound", symbol: "£", flag: "🇬🇧" },
-  { code: "JPY", name: "Japanese Yen", symbol: "¥", flag: "🇯🇵" },
-  { code: "CNY", name: "Chinese Yuan", symbol: "¥", flag: "🇨🇳" },
-  { code: "CAD", name: "Canadian Dollar", symbol: "C$", flag: "🇨🇦" },
-  { code: "AUD", name: "Australian Dollar", symbol: "A$", flag: "🇦🇺" },
-  { code: "CHF", name: "Swiss Franc", symbol: "Fr", flag: "🇨🇭" },
-  { code: "INR", name: "Indian Rupee", symbol: "₹", flag: "🇮🇳" },
-  { code: "BRL", name: "Brazilian Real", symbol: "R$", flag: "🇧🇷" },
+  { code: "GBP", name: "British Pound", symbol: "£", flag: "" },
+  { code: "JPY", name: "Japanese Yen", symbol: "¥", flag: "" },
+  { code: "CNY", name: "Chinese Yuan", symbol: "¥", flag: "" },
+  { code: "CAD", name: "Canadian Dollar", symbol: "C$", flag: "" },
+  { code: "AUD", name: "Australian Dollar", symbol: "A$", flag: "" },
+  { code: "CHF", name: "Swiss Franc", symbol: "Fr", flag: "" },
+  { code: "INR", name: "Indian Rupee", symbol: "₹", flag: "" },
+  { code: "BRL", name: "Brazilian Real", symbol: "R$", flag: "" },
 ];
 
 // Mock exchange rates (in real app, fetch from API)
