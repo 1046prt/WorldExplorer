@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Languages, Volume2, BookOpen, GitBranch } from "lucide-react"
+import { useState } from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Languages, Volume2, BookOpen, GitBranch } from "lucide-react";
 
 const languageData = {
   phrases: {
@@ -52,38 +52,83 @@ const languageData = {
     title: "Writing Systems",
     icon: BookOpen,
     data: [
-      { name: "Latin", example: "Hello World", countries: "Europe, Americas", type: "Alphabet" },
-      { name: "Arabic", example: "مرحبا بالعالم", countries: "Middle East, North Africa", type: "Abjad" },
-      { name: "Chinese", example: "你好世界", countries: "China, Taiwan", type: "Logographic" },
-      { name: "Devanagari", example: "नमस्ते संसार", countries: "India, Nepal", type: "Abugida" },
-      { name: "Cyrillic", example: "Привет мир", countries: "Russia, Eastern Europe", type: "Alphabet" },
+      {
+        name: "Latin",
+        example: "Hello World",
+        countries: "Europe, Americas",
+        type: "Alphabet",
+      },
+      {
+        name: "Arabic",
+        example: "مرحبا بالعالم",
+        countries: "Middle East, North Africa",
+        type: "Abjad",
+      },
+      {
+        name: "Chinese",
+        example: "你好世界",
+        countries: "China, Taiwan",
+        type: "Logographic",
+      },
+      {
+        name: "Devanagari",
+        example: "नमस्ते संसार",
+        countries: "India, Nepal",
+        type: "Abugida",
+      },
+      {
+        name: "Cyrillic",
+        example: "Привет мир",
+        countries: "Russia, Eastern Europe",
+        type: "Alphabet",
+      },
     ],
   },
   families: {
     title: "Language Families",
     icon: GitBranch,
     data: [
-      { family: "Indo-European", languages: ["English", "Spanish", "Hindi", "Russian"], speakers: "3.2B" },
-      { family: "Sino-Tibetan", languages: ["Mandarin", "Cantonese", "Tibetan"], speakers: "1.4B" },
-      { family: "Niger-Congo", languages: ["Swahili", "Yoruba", "Igbo"], speakers: "700M" },
-      { family: "Afroasiatic", languages: ["Arabic", "Hebrew", "Amharic"], speakers: "400M" },
-      { family: "Trans-New Guinea", languages: ["Enga", "Melpa", "Huli"], speakers: "300M" },
+      {
+        family: "Indo-European",
+        languages: ["English", "Spanish", "Hindi", "Russian"],
+        speakers: "3.2B",
+      },
+      {
+        family: "Sino-Tibetan",
+        languages: ["Mandarin", "Cantonese", "Tibetan"],
+        speakers: "1.4B",
+      },
+      {
+        family: "Niger-Congo",
+        languages: ["Swahili", "Yoruba", "Igbo"],
+        speakers: "700M",
+      },
+      {
+        family: "Afroasiatic",
+        languages: ["Arabic", "Hebrew", "Amharic"],
+        speakers: "400M",
+      },
+      {
+        family: "Trans-New Guinea",
+        languages: ["Enga", "Melpa", "Huli"],
+        speakers: "300M",
+      },
     ],
   },
-}
+};
 
 export function LanguageExplorer() {
-  const [activeSection, setActiveSection] = useState("phrases")
-  const [playingAudio, setPlayingAudio] = useState<string | null>(null)
+  const [activeSection, setActiveSection] = useState("phrases");
+  const [playingAudio, setPlayingAudio] = useState<string | null>(null);
 
-  const currentData = languageData[activeSection as keyof typeof languageData]
-  const IconComponent = currentData.icon
+  const currentData = languageData[activeSection as keyof typeof languageData];
+  const IconComponent = currentData.icon;
 
   const playPhrase = (phrase: string) => {
-    setPlayingAudio(phrase)
+    setPlayingAudio(phrase);
     // Simulate audio playback
-    setTimeout(() => setPlayingAudio(null), 2000)
-  }
+    setTimeout(() => setPlayingAudio(null), 2000);
+  };
 
   const renderPhrases = () => (
     <div className="space-y-4">
@@ -98,7 +143,9 @@ export function LanguageExplorer() {
                 <span className="text-2xl">{item.flag}</span>
                 <div>
                   <div className="font-semibold">{item.language}</div>
-                  <div className="text-sm text-gray-600 dark:text-gray-400">{item.country}</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-400">
+                    {item.country}
+                  </div>
                 </div>
               </div>
               <Button
@@ -114,13 +161,15 @@ export function LanguageExplorer() {
             </div>
             <div className="mt-3 space-y-2">
               <div className="text-lg font-medium">{item.phrase}</div>
-              <div className="text-gray-600 dark:text-gray-400 italic">{item.translation}</div>
+              <div className="text-gray-600 dark:text-gray-400 italic">
+                {item.translation}
+              </div>
             </div>
           </CardContent>
         </Card>
       ))}
     </div>
-  )
+  );
 
   const renderScripts = () => (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -135,13 +184,15 @@ export function LanguageExplorer() {
               <div className="text-2xl font-bold text-center py-4 bg-gray-50 dark:bg-gray-800 rounded">
                 {script.example}
               </div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">Used in: {script.countries}</div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">
+                Used in: {script.countries}
+              </div>
             </div>
           </CardContent>
         </Card>
       ))}
     </div>
-  )
+  );
 
   const renderFamilies = () => (
     <div className="space-y-4">
@@ -163,7 +214,7 @@ export function LanguageExplorer() {
         </Card>
       ))}
     </div>
-  )
+  );
 
   return (
     <Card className="w-full">
@@ -201,5 +252,5 @@ export function LanguageExplorer() {
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

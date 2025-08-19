@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Slider } from "@/components/ui/slider"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Clock, Play, Pause } from "lucide-react"
+import { useState } from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Slider } from "@/components/ui/slider";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Clock, Play, Pause } from "lucide-react";
 
 const historicalData = [
   {
@@ -26,21 +26,26 @@ const historicalData = [
     description: "Soviet Union dissolution",
     mapUrl: "/images/maps/world-1991.png",
   },
-  { year: 2025, title: "Modern Day", description: "Current world borders", mapUrl: "/images/maps/world-2024.png" },
-]
+  {
+    year: 2025,
+    title: "Modern Day",
+    description: "Current world borders",
+    mapUrl: "/images/maps/world-2024.png",
+  },
+];
 
 export function HistoricalMapSlider() {
-  const [currentYear, setCurrentYear] = useState([2024])
-  const [isPlaying, setIsPlaying] = useState(false)
+  const [currentYear, setCurrentYear] = useState([2024]);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   const getCurrentData = () => {
-    const year = currentYear[0]
+    const year = currentYear[0];
     return historicalData.reduce((prev, curr) =>
-      Math.abs(curr.year - year) < Math.abs(prev.year - year) ? curr : prev,
-    )
-  }
+      Math.abs(curr.year - year) < Math.abs(prev.year - year) ? curr : prev
+    );
+  };
 
-  const currentData = getCurrentData()
+  const currentData = getCurrentData();
 
   return (
     <Card className="w-full">
@@ -58,7 +63,8 @@ export function HistoricalMapSlider() {
               alt={`World map ${currentData.year}`}
               className="w-full h-full object-cover"
               onError={(e) => {
-                e.currentTarget.src = "/historical-world-map.png" + currentData.year
+                e.currentTarget.src =
+                  "/historical-world-map.png" + currentData.year;
               }}
             />
           </div>
@@ -72,7 +78,9 @@ export function HistoricalMapSlider() {
         <div className="space-y-4">
           <div className="text-center">
             <h3 className="text-xl font-semibold">{currentData.title}</h3>
-            <p className="text-gray-600 dark:text-gray-400">{currentData.description}</p>
+            <p className="text-gray-600 dark:text-gray-400">
+              {currentData.description}
+            </p>
           </div>
 
           <div className="space-y-4">
@@ -90,8 +98,16 @@ export function HistoricalMapSlider() {
             </div>
 
             <div className="flex justify-center gap-2">
-              <Button variant="outline" size="sm" onClick={() => setIsPlaying(!isPlaying)}>
-                {isPlaying ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4" />}
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => setIsPlaying(!isPlaying)}
+              >
+                {isPlaying ? (
+                  <Pause className="h-4 w-4" />
+                ) : (
+                  <Play className="h-4 w-4" />
+                )}
                 {isPlaying ? "Pause" : "Play"} Timeline
               </Button>
             </div>
@@ -112,5 +128,5 @@ export function HistoricalMapSlider() {
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

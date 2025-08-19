@@ -95,8 +95,8 @@
   margin: 10px 10px;
 }
 
-.btn-sm:hover{
-    background-color: var(--color-primary);
+.btn-sm:hover {
+  background-color: var(--color-primary);
 }
 
 .btn-md {

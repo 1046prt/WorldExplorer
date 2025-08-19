@@ -1,17 +1,23 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { Card } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { ArrowRightLeft, DollarSign } from "lucide-react"
+import { useState, useEffect } from "react";
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { ArrowRightLeft, DollarSign } from "lucide-react";
 
 interface Currency {
-  code: string
-  name: string
-  symbol: string
-  flag: string
+  code: string;
+  name: string;
+  symbol: string;
+  flag: string;
 }
 
 const currencies: Currency[] = [
@@ -25,65 +31,101 @@ const currencies: Currency[] = [
   { code: "CHF", name: "Swiss Franc", symbol: "Fr", flag: "🇨🇭" },
   { code: "INR", name: "Indian Rupee", symbol: "₹", flag: "🇮🇳" },
   { code: "BRL", name: "Brazilian Real", symbol: "R$", flag: "🇧🇷" },
-]
+];
 
 // Mock exchange rates (in real app, fetch from API)
 const exchangeRates: Record<string, Record<string, number>> = {
-  USD: { EUR: 0.85, GBP: 0.73, JPY: 110, CNY: 6.45, CAD: 1.25, AUD: 1.35, CHF: 0.92, INR: 74.5, BRL: 5.2 },
-  EUR: { USD: 1.18, GBP: 0.86, JPY: 129, CNY: 7.6, CAD: 1.47, AUD: 1.59, CHF: 1.08, INR: 87.8, BRL: 6.1 },
-  GBP: { USD: 1.37, EUR: 1.16, JPY: 150, CNY: 8.8, CAD: 1.71, AUD: 1.85, CHF: 1.26, INR: 102, BRL: 7.1 },
-}
+  USD: {
+    EUR: 0.85,
+    GBP: 0.73,
+    JPY: 110,
+    CNY: 6.45,
+    CAD: 1.25,
+    AUD: 1.35,
+    CHF: 0.92,
+    INR: 74.5,
+    BRL: 5.2,
+  },
+  EUR: {
+    USD: 1.18,
+    GBP: 0.86,
+    JPY: 129,
+    CNY: 7.6,
+    CAD: 1.47,
+    AUD: 1.59,
+    CHF: 1.08,
+    INR: 87.8,
+    BRL: 6.1,
+  },
+  GBP: {
+    USD: 1.37,
+    EUR: 1.16,
+    JPY: 150,
+    CNY: 8.8,
+    CAD: 1.71,
+    AUD: 1.85,
+    CHF: 1.26,
+    INR: 102,
+    BRL: 7.1,
+  },
+};
 
 export function CurrencyConverter() {
-  const [amount, setAmount] = useState("100")
-  const [fromCurrency, setFromCurrency] = useState("USD")
-  const [toCurrency, setToCurrency] = useState("EUR")
-  const [result, setResult] = useState<number | null>(null)
-  const [loading, setLoading] = useState(false)
+  const [amount, setAmount] = useState("100");
+  const [fromCurrency, setFromCurrency] = useState("USD");
+  const [toCurrency, setToCurrency] = useState("EUR");
+  const [result, setResult] = useState<number | null>(null);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    convertCurrency()
-  }, [amount, fromCurrency, toCurrency])
+    convertCurrency();
+  }, [amount, fromCurrency, toCurrency]);
 
   const convertCurrency = async () => {
     if (!amount || isNaN(Number(amount))) {
-      setResult(null)
-      return
+      setResult(null);
+      return;
     }
 
-    setLoading(true)
+    setLoading(true);
 
     // Simulate API delay
     setTimeout(() => {
-      const rate = exchangeRates[fromCurrency]?.[toCurrency] || 1
-      const convertedAmount = Number(amount) * rate
-      setResult(convertedAmount)
-      setLoading(false)
-    }, 300)
-  }
+      const rate = exchangeRates[fromCurrency]?.[toCurrency] || 1;
+      const convertedAmount = Number(amount) * rate;
+      setResult(convertedAmount);
+      setLoading(false);
+    }, 300);
+  };
 
   const swapCurrencies = () => {
-    setFromCurrency(toCurrency)
-    setToCurrency(fromCurrency)
-  }
+    setFromCurrency(toCurrency);
+    setToCurrency(fromCurrency);
+  };
 
-  const fromCurrencyData = currencies.find((c) => c.code === fromCurrency)
-  const toCurrencyData = currencies.find((c) => c.code === toCurrency)
+  const fromCurrencyData = currencies.find((c) => c.code === fromCurrency);
+  const toCurrencyData = currencies.find((c) => c.code === toCurrency);
 
   return (
     <Card className="p-6 bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm">
       <div className="flex items-center gap-3 mb-6">
         <DollarSign className="w-6 h-6 text-green-600" />
         <div>
-          <h3 className="text-xl font-bold text-gray-900 dark:text-white">Currency Converter</h3>
-          <p className="text-sm text-gray-600 dark:text-gray-400">Live exchange rates</p>
+          <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+            Currency Converter
+          </h3>
+          <p className="text-sm text-gray-600 dark:text-gray-400">
+            Live exchange rates
+          </p>
         </div>
       </div>
 
       <div className="space-y-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-end">
           <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Amount</label>
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              Amount
+            </label>
             <Input
               type="number"
               value={amount}
@@ -94,7 +136,9 @@ export function CurrencyConverter() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">From</label>
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              From
+            </label>
             <Select value={fromCurrency} onValueChange={setFromCurrency}>
               <SelectTrigger>
                 <SelectValue />
@@ -114,7 +158,9 @@ export function CurrencyConverter() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">To</label>
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              To
+            </label>
             <Select value={toCurrency} onValueChange={setToCurrency}>
               <SelectTrigger>
                 <SelectValue />
@@ -160,7 +206,9 @@ export function CurrencyConverter() {
                 {toCurrency}
               </div>
               <div className="text-xs text-gray-500 dark:text-gray-400">
-                1 {fromCurrency} = {(exchangeRates[fromCurrency]?.[toCurrency] || 1).toFixed(4)} {toCurrency}
+                1 {fromCurrency} ={" "}
+                {(exchangeRates[fromCurrency]?.[toCurrency] || 1).toFixed(4)}{" "}
+                {toCurrency}
               </div>
             </div>
           </div>
@@ -186,5 +234,5 @@ export function CurrencyConverter() {
         </div>
       </div>
     </Card>
-  )
+  );
 }

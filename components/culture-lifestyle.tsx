@@ -1,28 +1,52 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Music, Book, Users } from "lucide-react"
+import { useState } from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Music, Book, Users } from "lucide-react";
 
 const cultureData = {
   etiquette: [
     {
       country: "Japan",
-      dos: ["Bow when greeting", "Remove shoes indoors", "Use both hands for business cards"],
-      donts: ["Point with one finger", "Blow your nose in public", "Tip at restaurants"],
+      dos: [
+        "Bow when greeting",
+        "Remove shoes indoors",
+        "Use both hands for business cards",
+      ],
+      donts: [
+        "Point with one finger",
+        "Blow your nose in public",
+        "Tip at restaurants",
+      ],
     },
     {
       country: "France",
-      dos: ['Greet with "Bonjour"', "Dress elegantly", "Keep hands visible at dinner"],
-      donts: ["Speak loudly in public", "Rush through meals", "Ask personal questions immediately"],
+      dos: [
+        'Greet with "Bonjour"',
+        "Dress elegantly",
+        "Keep hands visible at dinner",
+      ],
+      donts: [
+        "Speak loudly in public",
+        "Rush through meals",
+        "Ask personal questions immediately",
+      ],
     },
     {
       country: "India",
-      dos: ["Use right hand for eating", "Remove shoes in temples", "Dress modestly"],
-      donts: ["Use left hand for greeting", "Show soles of feet", "Touch someone's head"],
+      dos: [
+        "Use right hand for eating",
+        "Remove shoes in temples",
+        "Dress modestly",
+      ],
+      donts: [
+        "Use left hand for greeting",
+        "Show soles of feet",
+        "Touch someone's head",
+      ],
     },
   ],
   music: [
@@ -32,8 +56,18 @@ const cultureData = {
       artists: ["João Gilberto", "Antonio Carlos Jobim"],
       sample: "Girl from Ipanema",
     },
-    { country: "Ireland", genre: "Celtic Folk", artists: ["The Chieftains", "Clannad"], sample: "Danny Boy" },
-    { country: "Mali", genre: "Afrobeat", artists: ["Ali Farka Touré", "Salif Keita"], sample: "Madan" },
+    {
+      country: "Ireland",
+      genre: "Celtic Folk",
+      artists: ["The Chieftains", "Clannad"],
+      sample: "Danny Boy",
+    },
+    {
+      country: "Mali",
+      genre: "Afrobeat",
+      artists: ["Ali Farka Touré", "Salif Keita"],
+      sample: "Madan",
+    },
   ],
   literature: [
     {
@@ -52,10 +86,10 @@ const cultureData = {
       books: ["Things Fall Apart", "The Lion and the Jewel"],
     },
   ],
-}
+};
 
 export function CultureLifestyle() {
-  const [selectedCountry, setSelectedCountry] = useState("Japan")
+  const [selectedCountry, setSelectedCountry] = useState("Japan");
 
   return (
     <Card className="w-full">
@@ -78,7 +112,9 @@ export function CultureLifestyle() {
               {cultureData.etiquette.map((item) => (
                 <Button
                   key={item.country}
-                  variant={selectedCountry === item.country ? "default" : "outline"}
+                  variant={
+                    selectedCountry === item.country ? "default" : "outline"
+                  }
                   size="sm"
                   onClick={() => setSelectedCountry(item.country)}
                 >
@@ -86,11 +122,15 @@ export function CultureLifestyle() {
                 </Button>
               ))}
             </div>
-            {cultureData.etiquette.find((item) => item.country === selectedCountry) && (
+            {cultureData.etiquette.find(
+              (item) => item.country === selectedCountry
+            ) && (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <Card className="border-green-200 bg-green-50 dark:bg-green-950">
                   <CardHeader className="pb-3">
-                    <CardTitle className="text-green-800 dark:text-green-200 text-lg">Do's</CardTitle>
+                    <CardTitle className="text-green-800 dark:text-green-200 text-lg">
+                      Do's
+                    </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-2">
@@ -99,7 +139,9 @@ export function CultureLifestyle() {
                         ?.dos.map((item, index) => (
                           <li key={index} className="flex items-start gap-2">
                             <span className="text-green-600 mt-1">✓</span>
-                            <span className="text-green-800 dark:text-green-200">{item}</span>
+                            <span className="text-green-800 dark:text-green-200">
+                              {item}
+                            </span>
                           </li>
                         ))}
                     </ul>
@@ -107,7 +149,9 @@ export function CultureLifestyle() {
                 </Card>
                 <Card className="border-red-200 bg-red-50 dark:bg-red-950">
                   <CardHeader className="pb-3">
-                    <CardTitle className="text-red-800 dark:text-red-200 text-lg">Don'ts</CardTitle>
+                    <CardTitle className="text-red-800 dark:text-red-200 text-lg">
+                      Don'ts
+                    </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-2">
@@ -116,7 +160,9 @@ export function CultureLifestyle() {
                         ?.donts.map((item, index) => (
                           <li key={index} className="flex items-start gap-2">
                             <span className="text-red-600 mt-1">✗</span>
-                            <span className="text-red-800 dark:text-red-200">{item}</span>
+                            <span className="text-red-800 dark:text-red-200">
+                              {item}
+                            </span>
                           </li>
                         ))}
                     </ul>
@@ -151,7 +197,9 @@ export function CultureLifestyle() {
                       </div>
                       <div>
                         <h4 className="font-medium mb-2">Sample Track:</h4>
-                        <p className="text-sm text-gray-600 dark:text-gray-400">{item.sample}</p>
+                        <p className="text-sm text-gray-600 dark:text-gray-400">
+                          {item.sample}
+                        </p>
                       </div>
                       <Button size="sm" className="w-full">
                         🎵 Listen on Spotify
@@ -179,7 +227,10 @@ export function CultureLifestyle() {
                         <h4 className="font-medium mb-2">Famous Authors:</h4>
                         <div className="space-y-1">
                           {item.authors.map((author, i) => (
-                            <p key={i} className="text-sm text-gray-600 dark:text-gray-400">
+                            <p
+                              key={i}
+                              className="text-sm text-gray-600 dark:text-gray-400"
+                            >
                               {author}
                             </p>
                           ))}
@@ -189,7 +240,11 @@ export function CultureLifestyle() {
                         <h4 className="font-medium mb-2">Notable Works:</h4>
                         <div className="space-y-1">
                           {item.books.map((book, i) => (
-                            <Badge key={i} variant="outline" className="mr-1 mb-1">
+                            <Badge
+                              key={i}
+                              variant="outline"
+                              className="mr-1 mb-1"
+                            >
                               {book}
                             </Badge>
                           ))}
@@ -204,5 +259,5 @@ export function CultureLifestyle() {
         </Tabs>
       </CardContent>
     </Card>
-  )
+  );
 }
