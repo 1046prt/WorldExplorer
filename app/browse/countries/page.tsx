@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import "/styles/globals.css"
 import { Search, Filter, Globe, Users, MapPin } from "lucide-react";
 
 interface Country {

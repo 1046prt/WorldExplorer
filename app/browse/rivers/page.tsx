@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { Search, Filter, Waves, MapPin, Ruler, Globe } from "lucide-react";
-
+import "/styles/globals.css"
 interface River {
   id: string;
   name: string;

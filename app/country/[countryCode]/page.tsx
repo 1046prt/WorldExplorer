@@ -10,6 +10,7 @@ import { CountryInstitutions } from "@/components/country-institutions";
 import { CountryMap } from "@/components/country-map";
 import { NavigationBreadcrumb } from "@/components/navigation-breadcrumb";
 import { ComprehensiveCountryData } from "@/components/comprehensive-country-data";
+import "/styles/globals.css"
 import Footer from "@/components/footer";
 
 interface CountryPageProps {
