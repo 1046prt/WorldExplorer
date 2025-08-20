@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Slider } from "@/components/ui/slider";
 import { Button } from "@/components/ui/button";
@@ -35,8 +35,26 @@ const historicalData = [
 ];
 
 export function HistoricalMapSlider() {
-  const [currentYear, setCurrentYear] = useState([2024]);
+  const [currentYear, setCurrentYear] = useState([1900]);
   const [isPlaying, setIsPlaying] = useState(false);
+
+  // autoplay effect
+  useEffect(() => {
+    if (!isPlaying) return;
+
+    const interval = setInterval(() => {
+      setCurrentYear((prev) => {
+        const next = prev[0] + 1;
+        if (next > 2025) {
+          clearInterval(interval);
+          return [2025];
+        }
+        return [next];
+      });
+    }, 1000); // 1 sec per year (tune this)
+
+    return () => clearInterval(interval);
+  }, [isPlaying]);
 
   const getCurrentData = () => {
     const year = currentYear[0];
@@ -101,7 +119,7 @@ export function HistoricalMapSlider() {
               <Button
                 variant="outline"
                 size="sm"
-                onClick={() => setIsPlaying(!isPlaying)}
+                onClick={() => setIsPlaying((p) => !p)}
               >
                 {isPlaying ? (
                   <Pause className="h-4 w-4" />

@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import "/styles/globals.css"
 import { Search, Filter, Globe, Users, MapPin } from "lucide-react";
 
 interface Country {
@@ -21,7 +20,7 @@ const countries: Country[] = [
     capital: "Washington D.C.",
     population: "331M",
     region: "North America",
-    flag: "🇺🇸",
+    flag: "",
   },
   {
     code: "CN",
@@ -29,7 +28,7 @@ const countries: Country[] = [
     capital: "Beijing",
     population: "1.4B",
     region: "Asia",
-    flag: "🇨🇳",
+    flag: "",
   },
   {
     code: "IN",
@@ -37,7 +36,7 @@ const countries: Country[] = [
     capital: "New Delhi",
     population: "1.4B",
     region: "Asia",
-    flag: "🇮🇳",
+    flag: "",
   },
   {
     code: "BR",
@@ -45,7 +44,7 @@ const countries: Country[] = [
     capital: "Brasília",
     population: "215M",
     region: "South America",
-    flag: "🇧🇷",
+    flag: "",
   },
   {
     code: "RU",
@@ -53,7 +52,7 @@ const countries: Country[] = [
     capital: "Moscow",
     population: "146M",
     region: "Europe",
-    flag: "🇷🇺",
+    flag: "",
   },
   {
     code: "JP",
@@ -61,7 +60,7 @@ const countries: Country[] = [
     capital: "Tokyo",
     population: "125M",
     region: "Asia",
-    flag: "🇯🇵",
+    flag: "",
   },
   {
     code: "DE",
@@ -69,7 +68,7 @@ const countries: Country[] = [
     capital: "Berlin",
     population: "83M",
     region: "Europe",
-    flag: "🇩🇪",
+    flag: "",
   },
   {
     code: "GB",
@@ -77,7 +76,7 @@ const countries: Country[] = [
     capital: "London",
     population: "67M",
     region: "Europe",
-    flag: "🇬🇧",
+    flag: "",
   },
   {
     code: "FR",
@@ -85,7 +84,7 @@ const countries: Country[] = [
     capital: "Paris",
     population: "68M",
     region: "Europe",
-    flag: "🇫🇷",
+    flag: "",
   },
   {
     code: "IT",
@@ -93,7 +92,7 @@ const countries: Country[] = [
     capital: "Rome",
     population: "59M",
     region: "Europe",
-    flag: "🇮🇹",
+    flag: "",
   },
   {
     code: "CA",
@@ -101,7 +100,7 @@ const countries: Country[] = [
     capital: "Ottawa",
     population: "38M",
     region: "North America",
-    flag: "🇨🇦",
+    flag: "",
   },
   {
     code: "AU",
@@ -109,7 +108,7 @@ const countries: Country[] = [
     capital: "Canberra",
     population: "26M",
     region: "Oceania",
-    flag: "🇦🇺",
+    flag: "",
   },
   {
     code: "MX",
@@ -117,7 +116,7 @@ const countries: Country[] = [
     capital: "Mexico City",
     population: "128M",
     region: "North America",
-    flag: "🇲🇽",
+    flag: "",
   },
   {
     code: "KR",
@@ -125,7 +124,7 @@ const countries: Country[] = [
     capital: "Seoul",
     population: "52M",
     region: "Asia",
-    flag: "🇰🇷",
+    flag: "",
   },
   {
     code: "ES",
@@ -133,7 +132,7 @@ const countries: Country[] = [
     capital: "Madrid",
     population: "47M",
     region: "Europe",
-    flag: "🇪🇸",
+    flag: "",
   },
   {
     code: "AR",
@@ -141,7 +140,7 @@ const countries: Country[] = [
     capital: "Buenos Aires",
     population: "45M",
     region: "South America",
-    flag: "🇦🇷",
+    flag: "",
   },
   {
     code: "EG",
@@ -149,7 +148,7 @@ const countries: Country[] = [
     capital: "Cairo",
     population: "104M",
     region: "Africa",
-    flag: "🇪🇬",
+    flag: "",
   },
   {
     code: "ZA",
@@ -157,7 +156,7 @@ const countries: Country[] = [
     capital: "Cape Town",
     population: "60M",
     region: "Africa",
-    flag: "🇿🇦",
+    flag: "",
   },
   {
     code: "NG",
@@ -165,7 +164,7 @@ const countries: Country[] = [
     capital: "Abuja",
     population: "218M",
     region: "Africa",
-    flag: "🇳🇬",
+    flag: "",
   },
   {
     code: "TH",
@@ -173,7 +172,7 @@ const countries: Country[] = [
     capital: "Bangkok",
     population: "70M",
     region: "Asia",
-    flag: "🇹🇭",
+    flag: "",
   },
 ];
 
