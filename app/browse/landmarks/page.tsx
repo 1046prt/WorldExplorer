@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { Search, Filter, MapPin, Calendar, Globe, Star } from "lucide-react";
-import "/styles/globals.css"
+import "/app/globals.css";
 interface Landmark {
   id: string;
   name: string;
