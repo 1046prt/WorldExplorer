@@ -1,4 +1,4 @@
-/* Import all CSS files */
+/* All CSS files */
 @import "../styles/globals.css";
 @import "../styles/layout.css";
 @import "../styles/components.css";
@@ -14,6 +14,9 @@
 @import "../styles/responsive.css";
 @import "../styles/utilities.css";
 @import "../styles/footer.css";
+@import "../styles/cultural-lifestyle.css";
+@import "../styles/global-ranking.css";
+@import "../styles/not-found.css";
 
 @custom-variant dark (&:is(.dark *));
 
