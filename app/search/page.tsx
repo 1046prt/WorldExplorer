@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Footer from "@/components/footer";
-import "/styles/globals.css"
+import "/app/globals.css";
 import {
   Select,
   SelectContent,

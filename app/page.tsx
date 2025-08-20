@@ -1,4 +1,3 @@
-import { WorldMap } from "@/components/world-map";
 import { SearchBar } from "@/components/search-bar";
 import { StatsOverview } from "@/components/stats-overview";
 import { QuickNavigation } from "@/components/quick-navigation";
@@ -10,10 +9,9 @@ import GlobalRankings from "@/components/global-rankings";
 import { InteractiveGames } from "@/components/interactive-games";
 import { EnvironmentDashboard } from "@/components/environment-dashboard";
 import { LanguageExplorer } from "@/components/language-explorer";
-import { CultureLifestyle } from "@/components/culture-lifestyle";
+import CultureLifestyle from "@/components/culture-lifestyle";
 import { HistoricalMapSlider } from "@/components/historical-map-slider";
 import { NatureExplorer } from "@/components/nature-explorer";
-import { UserEngagement } from "@/components/user-engagement";
 import Footer from "@/components/footer";
 
 export default function HomePage() {
@@ -64,10 +62,6 @@ export default function HomePage() {
           <QuickNavigation />
         </div>
 
-        <div className="section">
-          <WorldMap />
-        </div>
-
         <div className="sections-container">
           <div className="section">
             <HistoricalMapSlider />
@@ -79,10 +73,6 @@ export default function HomePage() {
 
           <div className="section">
             <NatureExplorer />
-          </div>
-
-          <div className="section">
-            <UserEngagement />
           </div>
 
           <div className="section">
