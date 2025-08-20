@@ -6,7 +6,7 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { QuizSystem } from "@/components/quiz-system";
 import { CurrencyConverter } from "@/components/currency-converter";
 import { WeatherWidget } from "@/components/weather-widget";
-import { GlobalRankings } from "@/components/global-rankings";
+import GlobalRankings from "@/components/global-rankings";
 import { InteractiveGames } from "@/components/interactive-games";
 import { EnvironmentDashboard } from "@/components/environment-dashboard";
 import { LanguageExplorer } from "@/components/language-explorer";
