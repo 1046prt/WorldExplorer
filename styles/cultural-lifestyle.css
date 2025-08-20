@@ -1,0 +1,65 @@
+.cultural-lifestyle {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-card);
+  color: var(--color-foreground);
+  padding: var(--spacing-xl);
+  border-radius: 12px;
+  border: 2px solid transparent;
+}
+
+.categ {
+    padding: 6px 0px;
+    margin-left: 0;
+}
+
+.country-chips,
+.category-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.chip {
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-card-border);
+  background-color: var(--color-secondary);
+  color: var(--color-secondary-foreground);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.chip:hover {
+  background-color: var(--color-secondary-hover);
+}
+
+.chip.active {
+  background-color: var(--color-primary);
+  color: var(--color-primary-foreground);
+  border-color: var(--color-primary-dark);
+}
+
+.category-content {
+  margin-top: var(--spacing-lg);
+  margin-left: 20px;
+}
+
+.category-section {
+  margin-bottom: var(--spacing-md);
+}
+
+.category-section h4 {
+  font-size: var(--font-size-xl);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.category-section ul {
+  padding-left: var(--spacing-md);
+  list-style-type: disc;
+}
+
+.category-section li {
+  margin-bottom: var(--spacing-xs);
+}
