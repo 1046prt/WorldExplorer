@@ -6,33 +6,65 @@ import { Clock, Play, Pause } from "lucide-react";
 
 const historicalData = [
   {
+    year: 1800,
+    title: "Regency Era",
+    description:
+      "Britain marked by elegance, social change, and cultural growth",
+    mapUrl: "/images/maps/world-1800.png",
+  },
+  {
     year: 1900,
     title: "Colonial Era",
     description: "European colonial empires at their peak",
     mapUrl: "/images/maps/world-1900.png",
   },
   {
+    year: 1930,
+    title: "Great Depression Era",
+    description: "Worldwide economic crisis with mass unemployment and poverty",
+    mapUrl: "/images/maps/world-1930.png",
+  },
+  {
     year: 1945,
     title: "Post-WWII",
-    description: "New borders after World War II",
+    description: "Global borders redrawn after World War II",
     mapUrl: "/images/maps/world-1945.png",
+  },
+  {
+    year: 1965,
+    title: "Cold War Tensions",
+    description: "US–Soviet rivalry shaping global politics and conflicts",
+    mapUrl: "/images/maps/world-1965.png",
   },
   {
     year: 1991,
     title: "End of Cold War",
-    description: "Soviet Union dissolution",
+    description: "Dissolution of the Soviet Union and rise of new nations",
     mapUrl: "/images/maps/world-1991.png",
+  },
+  {
+    year: 2001,
+    title: "Globalization Era",
+    description:
+      "Increased global interconnectedness and post-9/11 geopolitics",
+    mapUrl: "/images/maps/world-2001.png",
+  },
+  {
+    year: 2015,
+    title: "Digital Age",
+    description: "Rapid technological advances and global connectivity",
+    mapUrl: "/images/maps/world-2015.png",
   },
   {
     year: 2025,
     title: "Modern Day",
-    description: "Current world borders",
-    mapUrl: "/images/maps/world-2024.png",
+    description: "Current world borders and contemporary challenges",
+    mapUrl: "/images/maps/world-2025.png",
   },
 ];
 
 export function HistoricalMapSlider() {
-  const [currentYear, setCurrentYear] = useState([1900]);
+  const [currentYear, setCurrentYear] = useState([1800]);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -81,7 +113,7 @@ export function HistoricalMapSlider() {
           <span>1900</span>
           <input
             type="range"
-            min="1900"
+            min="1800"
             max="2025"
             step="1"
             value={currentYear[0]}
