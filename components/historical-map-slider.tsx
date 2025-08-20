@@ -1,10 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Slider } from "@/components/ui/slider";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+import "/styles/historical-map-slider.css";
 import { Clock, Play, Pause } from "lucide-react";
 
 const historicalData = [
@@ -37,114 +34,94 @@ const historicalData = [
 export function HistoricalMapSlider() {
   const [currentYear, setCurrentYear] = useState([1900]);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  // autoplay effect
   useEffect(() => {
     if (!isPlaying) return;
 
     const interval = setInterval(() => {
-      setCurrentYear((prev) => {
-        const next = prev[0] + 1;
-        if (next > 2025) {
-          clearInterval(interval);
-          return [2025];
-        }
-        return [next];
+      setCurrentIndex((prevIndex) => {
+        const nextIndex = (prevIndex + 1) % historicalData.length;
+        setCurrentYear([historicalData[nextIndex].year]);
+        return nextIndex;
       });
-    }, 1000); // 1 sec per year (tune this)
+    }, 2000);
 
     return () => clearInterval(interval);
   }, [isPlaying]);
 
-  const getCurrentData = () => {
-    const year = currentYear[0];
-    return historicalData.reduce((prev, curr) =>
-      Math.abs(curr.year - year) < Math.abs(prev.year - year) ? curr : prev
-    );
-  };
-
-  const currentData = getCurrentData();
+  const currentData = historicalData[currentIndex];
 
   return (
-    <Card className="w-full">
-      <CardHeader>
-        <CardTitle className="flex items-center gap-2">
+    <div className="card">
+      <div className="card-header">
+        <div className="card-title">
           <Clock className="h-6 w-6" />
           Historical Map Timeline
-        </CardTitle>
-      </CardHeader>
-      <CardContent className="space-y-6">
-        <div className="relative">
-          <div className="aspect-video bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden">
+        </div>
+      </div>
+      <div className="card-content">
+        <div className="map-container">
+          <div className="map-wrapper">
             <img
-              src={currentData.mapUrl || "/placeholder.svg"}
+              src={currentData.mapUrl}
               alt={`World map ${currentData.year}`}
-              className="w-full h-full object-cover"
-              onError={(e) => {
-                e.currentTarget.src =
-                  "/historical-world-map.png" + currentData.year;
-              }}
+              className="map-image"
             />
           </div>
-          <div className="absolute top-4 left-4">
-            <Badge variant="secondary" className="text-lg px-3 py-1">
-              {currentData.year}
-            </Badge>
-          </div>
+          <div className="badge">{currentData.year}</div>
         </div>
 
-        <div className="space-y-4">
-          <div className="text-center">
-            <h3 className="text-xl font-semibold">{currentData.title}</h3>
-            <p className="text-gray-600 dark:text-gray-400">
-              {currentData.description}
-            </p>
-          </div>
-
-          <div className="space-y-4">
-            <div className="flex items-center gap-4">
-              <span className="text-sm font-medium">1900</span>
-              <Slider
-                value={currentYear}
-                onValueChange={setCurrentYear}
-                max={2025}
-                min={1900}
-                step={1}
-                className="flex-1"
-              />
-              <span className="text-sm font-medium">2025</span>
-            </div>
-
-            <div className="flex justify-center gap-2">
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={() => setIsPlaying((p) => !p)}
-              >
-                {isPlaying ? (
-                  <Pause className="h-4 w-4" />
-                ) : (
-                  <Play className="h-4 w-4" />
-                )}
-                {isPlaying ? "Pause" : "Play"} Timeline
-              </Button>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-            {historicalData.map((period) => (
-              <Button
-                key={period.year}
-                variant={currentYear[0] === period.year ? "default" : "outline"}
-                size="sm"
-                onClick={() => setCurrentYear([period.year])}
-              >
-                {period.year}
-              </Button>
-            ))}
-          </div>
+        <div className="text-center">
+          <h3 className="title">{currentData.title}</h3>
+          <p className="description">{currentData.description}</p>
         </div>
-      </CardContent>
-    </Card>
+
+        <div className="flex-row" style={{ marginTop: "1rem" }}>
+          <span>1900</span>
+          <input
+            type="range"
+            min="1900"
+            max="2025"
+            step="1"
+            value={currentYear[0]}
+            onChange={(e) => {
+              const val = Number(e.target.value);
+              setCurrentYear([val]);
+              const idx = historicalData.findIndex((item) => item.year === val);
+              if (idx !== -1) setCurrentIndex(idx);
+            }}
+            style={{ flex: 1 }}
+          />
+          <span>2025</span>
+        </div>
+
+        <div className="flex-center" style={{ margin: "1rem 0" }}>
+          <button onClick={() => setIsPlaying((p) => !p)}>
+            {isPlaying ? (
+              <Pause className="h-4 w-4" />
+            ) : (
+              <Play className="h-4 w-4" />
+            )}
+            {isPlaying ? " Pause" : " Play"} Timeline
+          </button>
+        </div>
+
+        <div className="grid-buttons">
+          {historicalData.map((period, idx) => (
+            <button
+              key={period.year}
+              className={currentYear[0] === period.year ? "active" : ""}
+              onClick={() => {
+                setCurrentYear([period.year]);
+                setCurrentIndex(idx);
+              }}
+            >
+              {period.year}
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 }
