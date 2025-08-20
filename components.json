@@ -4,7 +4,7 @@
   "rsc": true,
   "tsx": true,
   "tailwind": {
-    "config": "",
+    "config": "tailwind.config.js",
     "css": "app/globals.css",
     "baseColor": "neutral",
     "cssVariables": true,
@@ -15,7 +15,13 @@
     "utils": "@/lib/utils",
     "ui": "@/components/ui",
     "lib": "@/lib",
-    "hooks": "@/hooks"
+    "hooks": "@/hooks",
+    "styles": "@/styles",
+    "types": "@/types"
   },
-  "iconLibrary": "lucide"
+  "iconLibrary": "lucide",
+  "features": {
+    "darkMode": true,
+    "animations": true
+  }
 }
