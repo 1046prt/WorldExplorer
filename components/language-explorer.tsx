@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Languages, Volume2 } from "lucide-react";
-import "/styles/language-explorer.css";
+import "@/styles/language-explorer.css";
 
 const languageData = {
   phrases: {

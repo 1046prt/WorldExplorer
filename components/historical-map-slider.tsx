@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import "/styles/historical-map-slider.css";
+import "@/styles/historical-map-slider.css";
 import { Clock, Play, Pause } from "lucide-react";
 
 const historicalData = [

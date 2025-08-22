@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { formatPopulation } from "@/lib/data-utils";
 import type { Country } from "@/lib/types";
 import Link from "next/link";
-import "/styles/global.css"; // 👈 single CSS file
+import "@/styles/global.css"; // 👈 single CSS file
 
 function getCountryFlag(countryCode: string): string {
   const flagMap: Record<string, string> = {

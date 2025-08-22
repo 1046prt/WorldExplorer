@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import "/styles/global-ranking.css";
+import "@/styles/global-ranking.css";
 import {
   Trophy,
   Building,

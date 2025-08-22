@@ -6,7 +6,7 @@ import { useState, useEffect, useRef } from "react";
 import { Search, X } from "lucide-react";
 import { useRouter } from "next/navigation";
 import type { Country } from "@/lib/types";
-
+import "@/styles/search-bar.css"
 interface SearchResult {
   type: "country" | "landmark" | "institution" | "river" | "city";
   title: string;

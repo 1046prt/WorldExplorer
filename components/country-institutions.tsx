@@ -1,6 +1,6 @@
 import { GraduationCap, Trophy } from "lucide-react";
 import type { Country } from "@/lib/types";
-import "/styles/country-institutions.css";
+import "@/styles/country-institutions.css";
 interface CountryInstitutionsProps {
   country: Country;
 }

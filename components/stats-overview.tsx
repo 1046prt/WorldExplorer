@@ -1,5 +1,5 @@
 import { Globe, MapPin, Building, GraduationCap } from "lucide-react";
-
+import "@/styles/stats-overview.css";
 export function StatsOverview() {
   const stats = [
     {

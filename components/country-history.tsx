@@ -2,7 +2,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar } from "lucide-react";
 import type { Country } from "@/lib/types";
-import "/styles/country-history.css";
+import "@/styles/country-history.css";
 
 interface CountryHistoryProps {
   country: Country;

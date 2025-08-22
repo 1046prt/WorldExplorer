@@ -1,7 +1,7 @@
 "use client";
 
 import type React from "react";
-import "/styles/weather-widget.css";
+import "@/styles/weather-widget.css";
 import { useState, useEffect } from "react";
 import {
   Cloud,

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Mountain, Waves, TreePine } from "lucide-react";
-import "/styles/nature-explorer.css";
+import "@/styles/nature-explorer.css";
 const natureData = {
   wonders: [
     {

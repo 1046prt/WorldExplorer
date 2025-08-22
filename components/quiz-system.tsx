@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { Trophy, RefreshCw, Flag, MapPin, Clock } from "lucide-react";
 import Image from "next/image";
-import "/styles/quiz-system.css";
+import "@/styles/quiz-system.css";
 interface QuizQuestion {
   id: string;
   type: "flag" | "capital" | "landmark";

@@ -4,7 +4,7 @@ import { Clock, DollarSign, Globe, Users } from "lucide-react";
 import { formatPopulation } from "@/lib/data-utils";
 import type { Country } from "@/lib/types";
 import Image from "next/image";
-import "/styles/country-overview.css";
+import "@/styles/country-overview.css";
 
 interface CountryOverviewProps {
   country: Country;

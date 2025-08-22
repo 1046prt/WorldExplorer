@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Users } from "lucide-react";
 import { CardTitle } from "@/components/ui/card";
-import "/styles/cultural-lifestyle.css";
+import "@/styles/cultural-lifestyle.css";
 
 const culturalData = [
   {

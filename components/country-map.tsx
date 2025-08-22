@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Map } from "lucide-react";
 import type { Country } from "@/lib/types";
-import "/styles/country-map.css";
+import "@/styles/country-map.css";
 
 interface CountryMapProps {
   country: Country;

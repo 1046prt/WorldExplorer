@@ -5,7 +5,7 @@ import { MapPin, ExternalLink } from "lucide-react";
 import { LandmarkModal } from "@/components/landmark-modal";
 import type { Country } from "@/lib/types";
 import Image from "next/image";
-import "/styles/country-landmarks.css";
+import "@/styles/country-landmarks.css";
 
 interface CountryLandmarksProps {
   country: Country;

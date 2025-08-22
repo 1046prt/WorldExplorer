@@ -1,6 +1,6 @@
 import { ChevronRight, Home } from "lucide-react";
 import Link from "next/link";
-import "/styles/navigation-breadcrumb.css"; 
+import "@/styles/navigation-breadcrumb.css"; 
 
 interface BreadcrumbItem {
   label: string;

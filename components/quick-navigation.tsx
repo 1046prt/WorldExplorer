@@ -10,7 +10,7 @@ import {
   TrendingUp,
 } from "lucide-react";
 import Link from "next/link";
-
+import "@/styles/quick-navigation.css";
 interface QuickNavItem {
   icon: React.ReactNode;
   label: string;

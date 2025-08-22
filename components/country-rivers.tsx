@@ -1,6 +1,6 @@
 import { Waves } from "lucide-react";
 import type { Country } from "@/lib/types";
-import "/styles/country-river.css";
+import "@/styles/country-river.css";
 interface CountryRiversProps {
   country: Country;
 }

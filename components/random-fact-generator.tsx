@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Lightbulb, RefreshCw } from "lucide-react";
-import "/styles/random-fact-generator.css";
+import "@/styles/random-fact-generator.css";
 
 interface RandomFact {
   fact: string;
