@@ -1,0 +1,80 @@
+/* RandomFactGenerator styles */
+.rf-card {
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: var(--spacing-md);
+}
+
+.rf-title {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: var(--font-lg);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.rf-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--color-accent-yellow);
+}
+
+.rf-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.rf-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-lg);
+}
+
+.rf-fact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.rf-fact-text {
+  font-size: var(--font-md);
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.rf-badges {
+  display: flex;
+  gap: var(--spacing-sm);
+  align-items: center;
+}
+
+.rf-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rf-refresh {
+  width: 16px;
+  height: 16px;
+  margin-right: var(--spacing-xs);
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Lightbulb, RefreshCw } from "lucide-react";
+import "/styles/random-fact-generator.css";
 
 interface RandomFact {
   fact: string;
@@ -73,22 +74,22 @@ export function RandomFactGenerator() {
   }, []);
 
   return (
-    <Card className="card-hover">
+    <Card className="rf-card">
       <CardHeader>
-        <CardTitle className="flex items-center gap-2">
-          <Lightbulb className="h-5 w-5 text-yellow-500" />
+        <CardTitle className="rf-title">
+          <Lightbulb className="rf-icon" />
           Random World Fact
         </CardTitle>
       </CardHeader>
-      <CardContent className="space-y-4">
+      <CardContent className="rf-content">
         {isLoading ? (
-          <div className="flex items-center justify-center py-8">
+          <div className="rf-loading">
             <div className="spinner spinner-lg"></div>
           </div>
         ) : currentFact ? (
-          <div className="space-y-3">
-            <p className="text-base leading-relaxed">{currentFact.fact}</p>
-            <div className="flex items-center gap-2">
+          <div className="rf-fact">
+            <p className="rf-fact-text">{currentFact.fact}</p>
+            <div className="rf-badges">
               <Badge variant="secondary">{currentFact.category}</Badge>
               {currentFact.country && (
                 <Badge variant="outline">{currentFact.country}</Badge>
@@ -100,12 +101,10 @@ export function RandomFactGenerator() {
         <Button
           onClick={generateRandomFact}
           disabled={isLoading}
-          className="w-full"
+          className="rf-button"
           variant="outline"
         >
-          <RefreshCw
-            className={`h-4 w-4 mr-2 ${isLoading ? "animate-spin" : ""}`}
-          />
+          <RefreshCw className={`rf-refresh ${isLoading ? "spin" : ""}`} />
           {isLoading ? "Loading..." : "New Fact"}
         </Button>
       </CardContent>
