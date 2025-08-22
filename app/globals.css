@@ -27,6 +27,7 @@
 @import "../styles/country-cities.css";
 @import "../styles/language-explorer.css";
 @import "../styles/random-fact-generator.css";
+@import "../styles/navigation-breadcrumb.css";
 
 /* Root Variable*/
 :root {

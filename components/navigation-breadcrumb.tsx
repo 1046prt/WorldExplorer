@@ -1,5 +1,6 @@
 import { ChevronRight, Home } from "lucide-react";
 import Link from "next/link";
+import "/styles/navigation-breadcrumb.css"; 
 
 interface BreadcrumbItem {
   label: string;
@@ -12,28 +13,20 @@ interface NavigationBreadcrumbProps {
 
 export function NavigationBreadcrumb({ items }: NavigationBreadcrumbProps) {
   return (
-    <nav className="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400 mb-6">
-      <Link
-        href="/"
-        className="flex items-center hover:text-gray-900 dark:hover:text-white transition-colors"
-      >
-        <Home className="w-4 h-4" />
+    <nav className="nb-container">
+      <Link href="/" className="nb-home">
+        <Home className="nb-icon" />
       </Link>
 
       {items.map((item, index) => (
-        <div key={index} className="flex items-center space-x-2">
-          <ChevronRight className="w-4 h-4" />
+        <div key={index} className="nb-item">
+          <ChevronRight className="nb-icon" />
           {item.href ? (
-            <Link
-              href={item.href}
-              className="hover:text-gray-900 dark:hover:text-white transition-colors"
-            >
+            <Link href={item.href} className="nb-link">
               {item.label}
             </Link>
           ) : (
-            <span className="text-gray-900 dark:text-white font-medium">
-              {item.label}
-            </span>
+            <span className="nb-current">{item.label}</span>
           )}
         </div>
       ))}
