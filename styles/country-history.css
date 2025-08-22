@@ -1,0 +1,50 @@
+.country-history {
+  padding: var(--spacing-lg);
+  background-color: var(--card-bg);
+  backdrop-filter: var(--backdrop-blur);
+}
+
+.history-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-lg);
+}
+
+.history-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--amber);
+}
+
+.history-title {
+  font-size: var(--font-2xl);
+  font-weight: bold;
+  color: var(--text-primary);
+}
+
+.history-events {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.history-event {
+  display: flex;
+  gap: var(--spacing-md);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.history-event:last-child {
+  border-bottom: none;
+}
+
+.year-badge {
+  font-family: monospace;
+}
+
+.history-description p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
