@@ -1,18 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import "/app/globals.css";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { ArrowRightLeft, DollarSign } from "lucide-react";
+import "./CurrencyConverter.css"; // <-- We'll define custom styles here
 
 interface Currency {
   code: string;
@@ -22,19 +12,19 @@ interface Currency {
 }
 
 const currencies: Currency[] = [
-  { code: "USD", name: "US Dollar", symbol: "$", flag: "" },
+  { code: "USD", name: "US Dollar", symbol: "$", flag: "🇺🇸" },
   { code: "EUR", name: "Euro", symbol: "€", flag: "🇪🇺" },
-  { code: "GBP", name: "British Pound", symbol: "£", flag: "" },
-  { code: "JPY", name: "Japanese Yen", symbol: "¥", flag: "" },
-  { code: "CNY", name: "Chinese Yuan", symbol: "¥", flag: "" },
-  { code: "CAD", name: "Canadian Dollar", symbol: "C$", flag: "" },
-  { code: "AUD", name: "Australian Dollar", symbol: "A$", flag: "" },
-  { code: "CHF", name: "Swiss Franc", symbol: "Fr", flag: "" },
-  { code: "INR", name: "Indian Rupee", symbol: "₹", flag: "" },
-  { code: "BRL", name: "Brazilian Real", symbol: "R$", flag: "" },
+  { code: "GBP", name: "British Pound", symbol: "£", flag: "🇬🇧" },
+  { code: "JPY", name: "Japanese Yen", symbol: "¥", flag: "🇯🇵" },
+  { code: "CNY", name: "Chinese Yuan", symbol: "¥", flag: "🇨🇳" },
+  { code: "CAD", name: "Canadian Dollar", symbol: "C$", flag: "🇨🇦" },
+  { code: "AUD", name: "Australian Dollar", symbol: "A$", flag: "🇦🇺" },
+  { code: "CHF", name: "Swiss Franc", symbol: "Fr", flag: "🇨🇭" },
+  { code: "INR", name: "Indian Rupee", symbol: "₹", flag: "🇮🇳" },
+  { code: "BRL", name: "Brazilian Real", symbol: "R$", flag: "🇧🇷" },
 ];
 
-// Mock exchange rates (in real app, fetch from API)
+// Mock exchange rates
 const exchangeRates: Record<string, Record<string, number>> = {
   USD: {
     EUR: 0.85,
@@ -82,15 +72,13 @@ export function CurrencyConverter() {
     convertCurrency();
   }, [amount, fromCurrency, toCurrency]);
 
-  const convertCurrency = async () => {
+  const convertCurrency = () => {
     if (!amount || isNaN(Number(amount))) {
       setResult(null);
       return;
     }
 
     setLoading(true);
-
-    // Simulate API delay
     setTimeout(() => {
       const rate = exchangeRates[fromCurrency]?.[toCurrency] || 1;
       const convertedAmount = Number(amount) * rate;
@@ -108,132 +96,93 @@ export function CurrencyConverter() {
   const toCurrencyData = currencies.find((c) => c.code === toCurrency);
 
   return (
-    <Card className="p-6 bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm">
-      <div className="flex items-center gap-3 mb-6">
-        <DollarSign className="w-6 h-6 text-green-600" />
+    <div className="card">
+      <div className="header">
+        <DollarSign className="icon" />
         <div>
-          <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-            Currency Converter
-          </h3>
-          <p className="text-sm text-gray-600 dark:text-gray-400">
-            Live exchange rates
-          </p>
+          <h3 className="title">Currency Converter</h3>
+          <p className="subtitle">Live exchange rates</p>
         </div>
       </div>
 
-      <div className="space-y-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-end">
-          <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-              Amount
-            </label>
-            <Input
+      <div className="form">
+        <div className="form-grid">
+          <div className="form-group">
+            <label className="label">Amount</label>
+            <input
               type="number"
               value={amount}
               onChange={(e) => setAmount(e.target.value)}
               placeholder="Enter amount"
-              className="text-lg"
+              className="input"
             />
           </div>
 
-          <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-              From
-            </label>
-            <Select value={fromCurrency} onValueChange={setFromCurrency}>
-              <SelectTrigger>
-                <SelectValue />
-              </SelectTrigger>
-              <SelectContent>
-                {currencies.map((currency) => (
-                  <SelectItem key={currency.code} value={currency.code}>
-                    <div className="flex items-center gap-2">
-                      <span>{currency.flag}</span>
-                      <span>{currency.code}</span>
-                      <span className="text-gray-500">- {currency.name}</span>
-                    </div>
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
+          <div className="form-group">
+            <label className="label">From</label>
+            <select
+              value={fromCurrency}
+              onChange={(e) => setFromCurrency(e.target.value)}
+              className="select"
+            >
+              {currencies.map((currency) => (
+                <option key={currency.code} value={currency.code}>
+                  {currency.flag} {currency.code} - {currency.name}
+                </option>
+              ))}
+            </select>
           </div>
 
-          <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-              To
-            </label>
-            <Select value={toCurrency} onValueChange={setToCurrency}>
-              <SelectTrigger>
-                <SelectValue />
-              </SelectTrigger>
-              <SelectContent>
-                {currencies.map((currency) => (
-                  <SelectItem key={currency.code} value={currency.code}>
-                    <div className="flex items-center gap-2">
-                      <span>{currency.flag}</span>
-                      <span>{currency.code}</span>
-                      <span className="text-gray-500">- {currency.name}</span>
-                    </div>
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
+          <div className="form-group">
+            <label className="label">To</label>
+            <select
+              value={toCurrency}
+              onChange={(e) => setToCurrency(e.target.value)}
+              className="select"
+            >
+              {currencies.map((currency) => (
+                <option key={currency.code} value={currency.code}>
+                  {currency.flag} {currency.code} - {currency.name}
+                </option>
+              ))}
+            </select>
           </div>
         </div>
 
-        <div className="flex justify-center">
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={swapCurrencies}
-            className="rounded-full w-10 h-10 p-0 bg-transparent"
-          >
-            <ArrowRightLeft className="w-4 h-4" />
-          </Button>
+        <div className="swap">
+          <button className="swap-btn" onClick={swapCurrencies}>
+            <ArrowRightLeft className="swap-icon" />
+          </button>
         </div>
 
         {result !== null && (
-          <div className="bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 p-6 rounded-lg">
-            <div className="text-center">
-              <div className="text-sm text-gray-600 dark:text-gray-400 mb-2">
-                {fromCurrencyData?.flag} {amount} {fromCurrency} equals
-              </div>
-              <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-                {toCurrencyData?.flag}{" "}
-                {result.toLocaleString(undefined, {
-                  minimumFractionDigits: 2,
-                  maximumFractionDigits: 2,
-                })}{" "}
-                {toCurrency}
-              </div>
-              <div className="text-xs text-gray-500 dark:text-gray-400">
-                1 {fromCurrency} ={" "}
-                {(exchangeRates[fromCurrency]?.[toCurrency] || 1).toFixed(4)}{" "}
-                {toCurrency}
-              </div>
+          <div className="result">
+            <div className="result-text">
+              {fromCurrencyData?.flag} {amount} {fromCurrency} equals
+            </div>
+            <div className="result-value">
+              {toCurrencyData?.flag}{" "}
+              {result.toLocaleString(undefined, {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2,
+              })}{" "}
+              {toCurrency}
+            </div>
+            <div className="rate">
+              1 {fromCurrency} ={" "}
+              {(exchangeRates[fromCurrency]?.[toCurrency] || 1).toFixed(4)}{" "}
+              {toCurrency}
             </div>
           </div>
         )}
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-xs">
-          <div className="bg-gray-50 dark:bg-gray-700 p-2 rounded text-center">
-            <div className="font-medium">🇺🇸 USD</div>
-            <div className="text-gray-600 dark:text-gray-400">$1.00</div>
-          </div>
-          <div className="bg-gray-50 dark:bg-gray-700 p-2 rounded text-center">
-            <div className="font-medium">🇪🇺 EUR</div>
-            <div className="text-gray-600 dark:text-gray-400">€0.85</div>
-          </div>
-          <div className="bg-gray-50 dark:bg-gray-700 p-2 rounded text-center">
-            <div className="font-medium">🇬🇧 GBP</div>
-            <div className="text-gray-600 dark:text-gray-400">£0.73</div>
-          </div>
-          <div className="bg-gray-50 dark:bg-gray-700 p-2 rounded text-center">
-            <div className="font-medium">🇯🇵 JPY</div>
-            <div className="text-gray-600 dark:text-gray-400">¥110</div>
-          </div>
+        <div className="quick-rates">
+          <div className="rate-card">🇺🇸 USD → $1.00</div>
+          <div className="rate-card">🇪🇺 EUR → €0.85</div>
+          <div className="rate-card">🇬🇧 GBP → £0.73</div>
+          <div className="rate-card">🇯🇵 JPY → ¥110</div>
         </div>
       </div>
-    </Card>
+    </div>
   );
 }
