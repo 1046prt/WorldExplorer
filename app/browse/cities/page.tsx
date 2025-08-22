@@ -3,9 +3,10 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { GlobalNavigation } from "@/components/global-navigation";
+import { BrowseFilters } from "@/components/browse-filters";
 import Footer from "@/components/footer";
 import "@/styles/cities-page.css";
-import { Search, Filter, Building2, Users, Globe } from "lucide-react";
+import { Building2, Users, Globe } from "lucide-react";
 
 interface City {
   id: string;
@@ -246,34 +247,15 @@ export default function CitiesPage() {
               </div>
             </section>
 
-            <section className="section">
-              <div className="countries-filters">
-                <div className="filter-input-wrapper">
-                  <Search className="filter-input-icon" />
-                  <input
-                    type="text"
-                    placeholder="Search cities or countries..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    className="input filter-input"
-                  />
-                </div>
-                <div className="filter-select-wrapper">
-                  <Filter className="filter-select-icon" />
-                  <select
-                    value={selectedRegion}
-                    onChange={(e) => setSelectedRegion(e.target.value)}
-                    className="input filter-select"
-                  >
-                    {regions.map((region) => (
-                      <option key={region} value={region}>
-                        {region}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-            </section>
+            <BrowseFilters
+              searchTerm={searchTerm}
+              onSearchChange={setSearchTerm}
+              searchPlaceholder="Search cities or countries..."
+              filterValue={selectedRegion}
+              onFilterChange={setSelectedRegion}
+              filterOptions={regions}
+              filterLabel="Filter by region"
+            />
 
             <section className="section">
               <div className="cities-grid">
