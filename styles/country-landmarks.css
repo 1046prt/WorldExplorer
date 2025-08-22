@@ -1,0 +1,107 @@
+.country-landmarks {
+  padding: var(--spacing-lg);
+  background-color: var(--card-bg);
+  backdrop-filter: var(--backdrop-blur);
+}
+
+.landmarks-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-lg);
+}
+
+.landmarks-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--red);
+}
+
+.landmarks-title {
+  font-size: var(--font-2xl);
+  font-weight: bold;
+  color: var(--text-primary);
+}
+
+.landmarks-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+  .landmarks-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .landmarks-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.landmark-card {
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.landmark-card:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-lg);
+}
+
+.landmark-image {
+  position: relative;
+  aspect-ratio: 16 / 9;
+}
+
+.landmark-image img {
+  object-fit: cover;
+}
+
+.landmark-content {
+  padding: var(--spacing-md);
+}
+
+.landmark-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-sm);
+}
+
+.landmark-header h3 {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.city-badge {
+  font-size: var(--font-xs);
+}
+
+.landmark-description {
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-md);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.landmark-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.landmark-coordinates {
+  font-size: var(--font-xs);
+  color: var(--text-muted);
+}
+
+.external-icon {
+  width: 12px;
+  height: 12px;
+}
