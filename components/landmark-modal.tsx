@@ -2,6 +2,7 @@
 
 import type React from "react";
 import { useState } from "react";
+import "/styles/landmark-modal.css";
 import {
   Dialog,
   DialogContent,

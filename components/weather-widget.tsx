@@ -1,7 +1,7 @@
 "use client";
 
 import type React from "react";
-
+import "/styles/weather-widget.css";
 import { useState, useEffect } from "react";
 import {
   Cloud,
@@ -121,8 +121,6 @@ export function WeatherWidget() {
 
   const fetchWeather = async (cityName: string) => {
     setLoading(true);
-
-    // Simulate API delay
     setTimeout(() => {
       const weatherData = mockWeatherData[cityName.toLowerCase()];
       setWeather(weatherData || null);
@@ -138,115 +136,103 @@ export function WeatherWidget() {
   const getWeatherIcon = (condition: string) => {
     switch (condition) {
       case "sunny":
-        return <Sun className="w-8 h-8 text-yellow-500" />;
+        return <Sun className="icon-large sunny" />;
       case "partly-cloudy":
-        return <Cloud className="w-8 h-8 text-gray-500" />;
+        return <Cloud className="icon-large partly" />;
       case "cloudy":
-        return <Cloud className="w-8 h-8 text-gray-600" />;
+        return <Cloud className="icon-large cloudy" />;
       case "rainy":
-        return <CloudRain className="w-8 h-8 text-blue-500" />;
+        return <CloudRain className="icon-large rainy" />;
       case "snowy":
-        return <Snow className="w-8 h-8 text-blue-300" />;
+        return <Snow className="icon-large snowy" />;
       default:
-        return <Sun className="w-8 h-8 text-yellow-500" />;
+        return <Sun className="icon-large sunny" />;
     }
   };
 
   const getSmallWeatherIcon = (condition: string) => {
     switch (condition) {
       case "sunny":
-        return <Sun className="w-4 h-4 text-yellow-500" />;
+        return <Sun className="icon-small sunny" />;
       case "partly-cloudy":
-        return <Cloud className="w-4 h-4 text-gray-500" />;
+        return <Cloud className="icon-small partly" />;
       case "cloudy":
-        return <Cloud className="w-4 h-4 text-gray-600" />;
+        return <Cloud className="icon-small cloudy" />;
       case "rainy":
-        return <CloudRain className="w-4 h-4 text-blue-500" />;
+        return <CloudRain className="icon-small rainy" />;
       case "snowy":
-        return <Snow className="w-4 h-4 text-blue-300" />;
+        return <Snow className="icon-small snowy" />;
       default:
-        return <Sun className="w-4 h-4 text-yellow-500" />;
+        return <Sun className="icon-small sunny" />;
     }
   };
 
   return (
-    <div className="card weather-widget">
-      <div className="weather-widget-header">
-        <Cloud className="weather-widget-icon" />
+    <div className="weather-card">
+      <div className="weather-header">
+        <Cloud className="weather-main-icon" />
         <div>
-          <h3 className="weather-widget-title">Weather Information</h3>
-          <p className="weather-widget-subtitle">
-            Current conditions and forecast
-          </p>
+          <h3 className="weather-title">Weather Information</h3>
+          <p className="weather-subtitle">Current conditions and forecast</p>
         </div>
       </div>
 
-      <form onSubmit={handleSearch} className="weather-search-form">
+      <form onSubmit={handleSearch} className="weather-form">
         <input
           type="text"
           value={city}
           onChange={(e) => setCity(e.target.value)}
           placeholder="Enter city name..."
-          className="input weather-search-input"
+          className="weather-input"
         />
-        <button type="submit" className="btn btn-primary" disabled={loading}>
+        <button type="submit" className="weather-button" disabled={loading}>
           {loading ? "Loading..." : "Search"}
         </button>
       </form>
 
       {weather && (
-        <div className="space-y-6">
+        <div className="weather-body">
           {/* Current Weather */}
           <div className="weather-current">
             <div className="weather-current-header">
-              <div className="weather-current-location">
+              <div>
                 <h4>{weather.city}</h4>
                 <p>{weather.country}</p>
               </div>
-              <div className="weather-current-icon">
-                {getWeatherIcon(weather.icon)}
-              </div>
+              {getWeatherIcon(weather.icon)}
             </div>
 
-            <div className="weather-current-temp">
-              <div className="weather-temp-value">{weather.temperature}°C</div>
-              <div className="weather-temp-condition">{weather.condition}</div>
+            <div className="weather-temp">
+              <div className="temp-value">{weather.temperature}°C</div>
+              <div className="temp-condition">{weather.condition}</div>
             </div>
 
             <div className="weather-details">
-              <div className="weather-detail">
-                <Droplets className="weather-detail-icon humidity" />
-                <span className="weather-detail-text">
-                  {weather.humidity}% Humidity
-                </span>
+              <div className="detail">
+                <Droplets className="detail-icon humidity" />
+                <span>{weather.humidity}% Humidity</span>
               </div>
-              <div className="weather-detail">
-                <Wind className="weather-detail-icon wind" />
-                <span className="weather-detail-text">
-                  {weather.windSpeed} km/h Wind
-                </span>
+              <div className="detail">
+                <Wind className="detail-icon wind" />
+                <span>{weather.windSpeed} km/h Wind</span>
               </div>
-              <div className="weather-detail">
-                <Eye className="weather-detail-icon visibility" />
-                <span className="weather-detail-text">
-                  {weather.visibility} km Visibility
-                </span>
+              <div className="detail">
+                <Eye className="detail-icon visibility" />
+                <span>{weather.visibility} km Visibility</span>
               </div>
             </div>
           </div>
 
-          {/* 5-Day Forecast */}
+          {/* Forecast */}
           <div className="weather-forecast">
-            <h5 className="weather-forecast-title">5-Day Forecast</h5>
-            <div className="weather-forecast-grid">
+            <h5>5-Day Forecast</h5>
+            <div className="forecast-grid">
               {weather.forecast.map((day, index) => (
-                <div key={index} className="weather-forecast-day">
-                  <div className="weather-forecast-day-name">{day.day}</div>
-                  <div className="weather-forecast-icon">
-                    {getSmallWeatherIcon(day.icon)}
-                  </div>
-                  <div className="weather-forecast-high">{day.high}°</div>
-                  <div className="weather-forecast-low">{day.low}°</div>
+                <div key={index} className="forecast-day">
+                  <div>{day.day}</div>
+                  {getSmallWeatherIcon(day.icon)}
+                  <div className="high">{day.high}°</div>
+                  <div className="low">{day.low}°</div>
                 </div>
               ))}
             </div>
@@ -255,7 +241,7 @@ export function WeatherWidget() {
       )}
 
       {!weather && !loading && (
-        <div className="weather-empty-state">
+        <div className="weather-empty">
           Enter a city name to get weather information
         </div>
       )}

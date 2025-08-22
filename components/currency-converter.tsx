@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { ArrowRightLeft, DollarSign } from "lucide-react";
-import "./CurrencyConverter.css"; // <-- We'll define custom styles here
+import "/styles/currency-converter.css"; 
 
 interface Currency {
   code: string;
