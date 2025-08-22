@@ -1,0 +1,125 @@
+/* Cities Page Styles */
+
+.cities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-xl);
+  width: 100%;
+}
+
+.city-card {
+  background-color: var(--color-card);
+  color: var(--color-card-foreground);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xl);
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  width: 100%;
+  height: 100%;
+}
+
+.city-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary);
+}
+
+.city-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.city-country {
+  font-size: var(--font-size-sm);
+  color: var(--color-muted-foreground);
+}
+
+.city-code {
+  font-size: var(--font-size-sm);
+  color: var(--color-muted-foreground);
+  font-family: "Courier New", monospace;
+  font-weight: 600;
+  background-color: var(--color-muted);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+}
+
+.city-name {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--color-foreground);
+  margin: 0;
+  line-height: var(--line-height-tight);
+}
+
+.city-description {
+  font-size: var(--font-size-sm);
+  color: var(--color-muted-foreground);
+  line-height: var(--line-height-normal);
+  margin: 0;
+}
+
+.city-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  flex: 1;
+}
+
+.city-detail-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.city-detail-icon {
+  width: 1rem;
+  height: 1rem;
+  color: var(--color-muted-foreground);
+  flex-shrink: 0;
+}
+
+.city-detail-text {
+  font-size: var(--font-size-sm);
+  color: var(--color-foreground);
+  line-height: var(--line-height-normal);
+}
+
+.city-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-primary);
+  font-weight: 500;
+  font-size: var(--font-size-sm);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  margin-top: var(--spacing-sm);
+}
+
+.city-link:hover {
+  color: var(--color-primary-hover);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cities-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .city-card {
+    padding: var(--spacing-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .city-card {
+    padding: var(--spacing-md);
+    gap: var(--spacing-sm);
+  }
+}
