@@ -5,6 +5,8 @@
   "region": "Asia",
   "capital": "Tokyo",
   "population": 125800000,
+  "image": "/images/countries/jp.jpg",
+  "flag": "/images/flags/japan.png",
   "currency": {
     "code": "JPY",
     "name": "Japanese Yen",
@@ -66,27 +68,32 @@
     {
       "name": "Tokyo",
       "whyFamous": "Capital and largest city, global center of technology and pop culture",
-      "slug": "tokyo"
+      "slug": "tokyo",
+      "image": "/images/cities/tokyo.jpg"
     },
     {
       "name": "Kyoto",
       "whyFamous": "Former imperial capital, thousands of temples and traditional culture",
-      "slug": "kyoto"
+      "slug": "kyoto",
+      "image": "/images/cities/kyoto.jpg"
     },
     {
       "name": "Osaka",
       "whyFamous": "Kitchen of Japan, famous for food culture and commerce",
-      "slug": "osaka"
+      "slug": "osaka",
+      "image": "/images/cities/osaka.jpg"
     },
     {
       "name": "Hiroshima",
       "whyFamous": "Peace memorial city, site of atomic bombing in WWII",
-      "slug": "hiroshima"
+      "slug": "hiroshima",
+      "image": "/images/cities/hiroshima.jpg"
     },
     {
       "name": "Nara",
       "whyFamous": "Ancient capital, famous for deer park and Buddhist temples",
-      "slug": "nara"
+      "slug": "nara",
+      "image": "/images/cities/nara.jpg"
     }
   ],
   "landmarks": [
@@ -143,7 +150,10 @@
       "countries": ["Japan"],
       "source": "Mount Kobushi",
       "mouth": "Sea of Japan",
-      "pathCoordinates": [{ "lat": 35.95, "lng": 138.7167 }, { "lat": 37.9167, "lng": 139.0333 }]
+      "pathCoordinates": [
+        { "lat": 35.95, "lng": 138.7167 },
+        { "lat": 37.9167, "lng": 139.0333 }
+      ]
     },
     {
       "slug": "tone-river",
@@ -152,7 +162,10 @@
       "countries": ["Japan"],
       "source": "Mount Ominakami",
       "mouth": "Pacific Ocean",
-      "pathCoordinates": [{ "lat": 36.95, "lng": 139.2167 }, { "lat": 35.7667, "lng": 140.8333 }]
+      "pathCoordinates": [
+        { "lat": 36.95, "lng": 139.2167 },
+        { "lat": 35.7667, "lng": 140.8333 }
+      ]
     }
   ],
   "institutions": [

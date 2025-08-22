@@ -4,294 +4,37 @@
   "name": "India",
   "region": "Asia",
   "capital": "New Delhi",
-  "population": 1380004385,
+  "population": 1380000000,
+  "image": "/images/countries/in.jpg",
+  "flag": "/images/flags/in.png",
   "currency": {
     "code": "INR",
     "name": "Indian Rupee",
     "symbol": "₹",
-    "image": "/images/currencies/inr.png"
+    "image": "/images/currencies/in.jpg"
   },
   "languages": ["Hindi", "English"],
   "timezones": ["UTC+05:30"],
-  "geography": {
-    "climateZones": ["Tropical", "Subtropical", "Temperate", "Alpine"],
-    "geologicalFormations": [
-      {
-        "name": "Himalayas",
-        "type": "Mountain Range",
-        "description": "World's highest mountain range"
-      },
-      {
-        "name": "Deccan Plateau",
-        "type": "Plateau",
-        "description": "Large plateau in southern India"
-      }
-    ],
-    "naturalDisasters": [
-      {
-        "type": "Cyclone",
-        "name": "Cyclone Amphan",
-        "year": 2020,
-        "impact": "Super cyclone affecting eastern India"
-      }
-    ],
-    "majorWaterBodies": [
-      {
-        "name": "Indian Ocean",
-        "type": "Ocean",
-        "coastline": "South Coast"
-      },
-      {
-        "name": "Arabian Sea",
-        "type": "Sea",
-        "coastline": "West Coast"
-      },
-      {
-        "name": "Bay of Bengal",
-        "type": "Bay",
-        "coastline": "East Coast"
-      }
-    ]
-  },
-  "heritage": {
-    "independenceDate": "August 15, 1947",
-    "foundingEvent": "Independence from British rule",
-    "majorHistoricalFigures": [
-      {
-        "name": "Mahatma Gandhi",
-        "role": "Independence Leader",
-        "period": "1869-1948",
-        "achievement": "Led non-violent independence movement"
-      },
-      {
-        "name": "Jawaharlal Nehru",
-        "role": "First Prime Minister",
-        "period": "1947-1964",
-        "achievement": "First Prime Minister of independent India"
-      }
-    ],
-    "colonialHistory": [
-      {
-        "period": "1858-1947",
-        "description": "British colonial rule (British Raj)"
-      }
-    ],
-    "unescoSites": [
-      {
-        "name": "Taj Mahal",
-        "year": 1983,
-        "type": "Cultural"
-      },
-      {
-        "name": "Red Fort Complex",
-        "year": 2007,
-        "type": "Cultural"
-      }
-    ]
-  },
-  "politics": {
-    "currentLeaders": [
-      {
-        "position": "Prime Minister",
-        "name": "Narendra Modi",
-        "party": "Bharatiya Janata Party",
-        "termStart": "May 26, 2014",
-        "termEnd": "2024"
-      }
-    ],
-    "governmentType": "Federal Parliamentary Democratic Republic",
-    "internationalMemberships": [
-      "United Nations (UN)",
-      "BRICS",
-      "G20",
-      "Commonwealth of Nations"
-    ]
-  },
-  "economy": {
-    "gdp": 3385090000000,
-    "gdpPerCapita": 2277,
-    "majorIndustries": [
-      "Information Technology",
-      "Textiles",
-      "Pharmaceuticals",
-      "Agriculture"
-    ],
-    "topExports": [
-      {
-        "product": "Refined Petroleum",
-        "value": 34200000000
-      },
-      {
-        "product": "Diamonds",
-        "value": 26800000000
-      }
-    ],
-    "topImports": [
-      {
-        "product": "Crude Petroleum",
-        "value": 101400000000
-      },
-      {
-        "product": "Gold",
-        "value": 31500000000
-      }
-    ],
-    "employmentRate": 94.8,
-    "employmentSectors": {
-      "services": 31.0,
-      "industry": 25.0,
-      "agriculture": 44.0
-    }
-  },
-  "culture": {
-    "officialLanguages": ["Hindi", "English"],
-    "regionalLanguages": [
-      "Bengali",
-      "Telugu",
-      "Marathi",
-      "Tamil",
-      "Gujarati",
-      "Urdu",
-      "Kannada",
-      "Odia",
-      "Malayalam",
-      "Punjabi"
-    ],
-    "religionDemographics": {
-      "Hinduism": 79.8,
-      "Islam": 14.2,
-      "Christianity": 2.3,
-      "Sikhism": 1.7,
-      "Buddhism": 0.7,
-      "Jainism": 0.4,
-      "Other": 0.9
-    },
-    "nationalFestivals": [
-      {
-        "name": "Diwali",
-        "date": "October/November",
-        "description": "Festival of lights"
-      },
-      {
-        "name": "Holi",
-        "date": "March",
-        "description": "Festival of colors"
-      },
-      {
-        "name": "Independence Day",
-        "date": "August 15",
-        "description": "Celebrates independence from Britain"
-      }
-    ],
-    "traditionalFoods": [
-      {
-        "name": "Curry",
-        "description": "Spiced dish with various ingredients"
-      },
-      {
-        "name": "Biryani",
-        "description": "Fragrant rice dish with meat or vegetables"
-      },
-      {
-        "name": "Naan",
-        "description": "Traditional flatbread"
-      }
-    ],
-    "nationalSymbols": {
-      "flag": "Tricolor with Ashoka Chakra",
-      "emblem": "Lion Capital of Ashoka",
-      "anthem": "Jana Gana Mana",
-      "flower": "Lotus",
-      "bird": "Indian Peacock",
-      "animal": "Bengal Tiger"
-    }
-  },
-  "education": {
-    "literacyRate": 77.7,
-    "educationSystem": "Free and compulsory education for children aged 6-14",
-    "famousScientists": [
-      {
-        "name": "A.P.J. Abdul Kalam",
-        "field": "Aerospace Engineering",
-        "achievement": "Missile Man of India, former President"
-      },
-      {
-        "name": "C.V. Raman",
-        "field": "Physics",
-        "achievement": "Nobel Prize winner for Raman Effect"
-      }
-    ],
-    "nobelPrizeWinners": 9
-  },
-  "tourism": {
-    "mostVisitedCities": [
-      {
-        "name": "Delhi",
-        "visitors": 28500000,
-        "attractions": ["Red Fort", "India Gate", "Lotus Temple"]
-      },
-      {
-        "name": "Mumbai",
-        "visitors": 20400000,
-        "attractions": ["Gateway of India", "Bollywood", "Marine Drive"]
-      },
-      {
-        "name": "Agra",
-        "visitors": 6500000,
-        "attractions": ["Taj Mahal", "Agra Fort", "Fatehpur Sikri"]
-      }
-    ],
-    "adventureActivities": [
-      "Himalayan Trekking",
-      "Kerala Backwaters",
-      "Rajasthan Desert Safari",
-      "Goa Beach Activities"
-    ],
-    "transportation": {
-      "airports": "Major airports in Delhi, Mumbai, Bangalore, Chennai",
-      "railways": "Extensive railway network",
-      "highways": "National highway system"
-    },
-    "visaRequirements": "e-Visa or regular visa required for most visitors"
-  },
-  "demographics": {
-    "populationGrowth": [
-      { "year": 2020, "population": 1380004385 },
-      { "year": 2021, "population": 1393409038 },
-      { "year": 2022, "population": 1406631776 },
-      { "year": 2023, "population": 1428627663 }
-    ],
-    "urbanRural": {
-      "urban": 35.0,
-      "rural": 65.0
-    },
-    "lifeExpectancy": {
-      "total": 69.7,
-      "male": 68.2,
-      "female": 71.2
-    },
-    "ageDistribution": {
-      "youth": 26.2,
-      "workingAge": 67.3,
-      "elderly": 6.5
-    }
-  },
   "history": [
     {
       "year": 2600,
-      "description": "Indus Valley Civilization flourishes"
+      "description": "Indus Valley Civilization flourishes in northwestern India"
+    },
+    {
+      "year": 1526,
+      "description": "Mughal Empire established, creating architectural wonders like Taj Mahal"
+    },
+    {
+      "year": 1858,
+      "description": "British Crown rule begins in India"
     },
     {
       "year": 1947,
       "description": "India gains independence from British rule"
     },
     {
-      "year": 1950,
-      "description": "Constitution of India comes into effect"
-    },
-    {
       "year": 1991,
-      "description": "Economic liberalization begins"
+      "description": "Economic liberalization begins, leading to rapid growth"
     }
   ],
   "states": [
@@ -306,31 +49,51 @@
       "slug": "uttar-pradesh"
     },
     {
+      "name": "Tamil Nadu",
+      "capital": "Chennai",
+      "slug": "tamil-nadu"
+    },
+    {
       "name": "Karnataka",
       "capital": "Bangalore",
       "slug": "karnataka"
+    },
+    {
+      "name": "West Bengal",
+      "capital": "Kolkata",
+      "slug": "west-bengal"
     }
   ],
   "famousCities": [
     {
       "name": "Mumbai",
-      "whyFamous": "Financial capital and Bollywood center",
-      "slug": "mumbai"
+      "whyFamous": "Financial capital, Bollywood film industry, and commercial hub",
+      "slug": "mumbai",
+      "image": "/images/cities/mumbai.jpg"
     },
     {
       "name": "Delhi",
-      "whyFamous": "Capital city with rich historical heritage",
-      "slug": "delhi"
+      "whyFamous": "Capital territory, rich history, and political center",
+      "slug": "delhi",
+      "image": "/images/cities/delhi.jpg"
     },
     {
       "name": "Bangalore",
-      "whyFamous": "Silicon Valley of India, IT hub",
-      "slug": "bangalore"
+      "whyFamous": "Silicon Valley of India, IT hub, and innovation center",
+      "slug": "bangalore",
+      "image": "/images/cities/bangalore.jpg"
     },
     {
       "name": "Kolkata",
-      "whyFamous": "Cultural capital of India",
-      "slug": "kolkata"
+      "whyFamous": "Cultural capital, literature, and intellectual heritage",
+      "slug": "kolkata",
+      "image": "/images/cities/kolkata.jpg"
+    },
+    {
+      "name": "Chennai",
+      "whyFamous": "Detroit of India, automobile industry, and South Indian culture",
+      "slug": "chennai",
+      "image": "/images/cities/chennai.jpg"
     }
   ],
   "landmarks": [
@@ -342,7 +105,7 @@
         "lat": 27.1751,
         "lng": 78.0421
       },
-      "whyFamous": "Ivory-white marble mausoleum, symbol of love",
+      "whyFamous": "Ivory-white marble mausoleum, UNESCO World Heritage site, and symbol of love",
       "imagePath": "/images/landmarks/taj-mahal.png"
     },
     {
@@ -353,8 +116,19 @@
         "lat": 28.6562,
         "lng": 77.241
       },
-      "whyFamous": "Historic fortified palace of Mughal emperors",
-      "imagePath": "/images/landmarks/red-fort.png"
+      "whyFamous": "Historic fortified palace, symbol of Mughal power and Indian independence",
+      "imagePath": "/images/landmarks/red-fort.jpg"
+    },
+    {
+      "slug": "golden-temple",
+      "name": "Golden Temple",
+      "city": "Amritsar",
+      "coordinates": {
+        "lat": 31.62,
+        "lng": 74.8765
+      },
+      "whyFamous": "Holiest gurdwara of Sikhism, covered in gold, and spiritual center",
+      "imagePath": "/images/landmarks/golden-temple.jpg"
     },
     {
       "slug": "gateway-of-india",
@@ -364,8 +138,8 @@
         "lat": 18.922,
         "lng": 72.8347
       },
-      "whyFamous": "Iconic arch monument overlooking Arabian Sea",
-      "imagePath": "/images/landmarks/gateway-of-india.png"
+      "whyFamous": "Triumphal arch built during British rule, iconic Mumbai landmark",
+      "imagePath": "/images/landmarks/gateway-of-india.jpg"
     }
   ],
   "rivers": [
@@ -377,39 +151,47 @@
       "source": "Gangotri Glacier",
       "mouth": "Bay of Bengal",
       "pathCoordinates": [
-        { "lat": 30.0668, "lng": 79.0193 },
-        { "lat": 21.8, "lng": 88.1 }
+        { "lat": 30.9989, "lng": 78.934 },
+        { "lat": 21.8, "lng": 89.5 }
       ]
     },
     {
-      "slug": "brahmaputra-river",
-      "name": "Brahmaputra River",
-      "length": 3848,
-      "countries": ["China", "India", "Bangladesh"],
+      "slug": "indus-river",
+      "name": "Indus River",
+      "length": 3180,
+      "countries": ["India", "Pakistan", "China"],
       "source": "Tibetan Plateau",
-      "mouth": "Bay of Bengal",
+      "mouth": "Arabian Sea",
       "pathCoordinates": [
-        { "lat": 30.7333, "lng": 81.3833 },
-        { "lat": 25.2, "lng": 89.7 }
+        { "lat": 32.2, "lng": 81.0 },
+        { "lat": 24.3, "lng": 67.5 }
       ]
     }
   ],
   "institutions": [
     {
-      "slug": "indian-institute-of-technology-bombay",
-      "name": "Indian Institute of Technology Bombay",
-      "city": "Mumbai",
-      "founded": 1958,
-      "globalRank": 172,
-      "type": "Public Technical University"
-    },
-    {
       "slug": "indian-institute-of-science",
       "name": "Indian Institute of Science",
       "city": "Bangalore",
       "founded": 1909,
-      "globalRank": 185,
+      "globalRank": 43,
       "type": "Public Research University"
+    },
+    {
+      "slug": "iit-bombay",
+      "name": "Indian Institute of Technology Bombay",
+      "city": "Mumbai",
+      "founded": 1958,
+      "globalRank": 152,
+      "type": "Public Technical University"
+    },
+    {
+      "slug": "iit-delhi",
+      "name": "Indian Institute of Technology Delhi",
+      "city": "New Delhi",
+      "founded": 1961,
+      "globalRank": 185,
+      "type": "Public Technical University"
     }
   ]
 }

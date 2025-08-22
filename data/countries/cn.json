@@ -5,6 +5,8 @@
   "region": "Asia",
   "capital": "Beijing",
   "population": 1412000000,
+  "image": "/images/countries/cn.jpg",
+  "flag": "/images/flags/cn.png",
   "currency": {
     "code": "CNY",
     "name": "Chinese Yuan",
@@ -16,7 +18,7 @@
   "history": [
     {
       "year": 221,
-      "description": "Qin Shi Huang unifies China and becomes the first emperor"
+      "description": "Qin Dynasty unifies China under Emperor Qin Shi Huang"
     },
     {
       "year": 1368,
@@ -32,32 +34,32 @@
     },
     {
       "year": 2008,
-      "description": "Beijing hosts the Summer Olympics, showcasing modern China"
+      "description": "Beijing hosts Summer Olympics, showcasing modern China"
     }
   ],
   "states": [
     {
-      "name": "Beijing",
+      "name": "Beijing Municipality",
       "capital": "Beijing",
       "slug": "beijing"
     },
     {
-      "name": "Shanghai",
+      "name": "Shanghai Municipality",
       "capital": "Shanghai",
       "slug": "shanghai"
     },
     {
-      "name": "Guangdong",
+      "name": "Guangdong Province",
       "capital": "Guangzhou",
       "slug": "guangdong"
     },
     {
-      "name": "Sichuan",
+      "name": "Sichuan Province",
       "capital": "Chengdu",
       "slug": "sichuan"
     },
     {
-      "name": "Jiangsu",
+      "name": "Jiangsu Province",
       "capital": "Nanjing",
       "slug": "jiangsu"
     }
@@ -65,40 +67,45 @@
   "famousCities": [
     {
       "name": "Beijing",
-      "whyFamous": "Capital city, home to the Forbidden City and center of Chinese politics",
-      "slug": "beijing"
+      "whyFamous": "Capital city, home to Forbidden City, Tiananmen Square, and political center",
+      "slug": "beijing",
+      "image": "/images/cities/beijing.jpg"
     },
     {
       "name": "Shanghai",
-      "whyFamous": "Global financial center and most populous city, modern skyline",
-      "slug": "shanghai"
+      "whyFamous": "Economic powerhouse, modern skyline, and major financial center",
+      "slug": "shanghai",
+      "image": "/images/cities/shanghai.jpg"
     },
     {
       "name": "Hong Kong",
-      "whyFamous": "International financial hub and former British colony",
-      "slug": "hong-kong"
+      "whyFamous": "International financial hub, unique culture, and vibrant nightlife",
+      "slug": "hong-kong",
+      "image": "/images/cities/hong-kong.jpg"
     },
     {
       "name": "Xi'an",
-      "whyFamous": "Ancient capital, home to the Terracotta Army",
-      "slug": "xian"
+      "whyFamous": "Ancient capital, home to Terracotta Army and Silk Road starting point",
+      "slug": "xian",
+      "image": "/images/cities/xian.jpg"
     },
     {
       "name": "Shenzhen",
-      "whyFamous": "Technology hub and special economic zone",
-      "slug": "shenzhen"
+      "whyFamous": "Technology hub, rapid development, and innovation center",
+      "slug": "shenzhen",
+      "image": "/images/cities/shenzhen.jpg"
     }
   ],
   "landmarks": [
     {
       "slug": "great-wall-of-china",
       "name": "Great Wall of China",
-      "city": "Beijing",
+      "city": "Beijing Area",
       "coordinates": {
         "lat": 40.4319,
         "lng": 116.5704
       },
-      "whyFamous": "Ancient fortification system, one of the New Seven Wonders of the World",
+      "whyFamous": "Ancient fortification system, UNESCO World Heritage site, and symbol of China",
       "imagePath": "/images/landmarks/great-wall-china.png"
     },
     {
@@ -109,8 +116,8 @@
         "lat": 39.9163,
         "lng": 116.3972
       },
-      "whyFamous": "Imperial palace complex, largest collection of preserved ancient wooden structures",
-      "imagePath": "/images/landmarks/forbidden-city.png"
+      "whyFamous": "Imperial palace complex, served as home to emperors for nearly 500 years",
+      "imagePath": "/images/landmarks/forbidden-city.jpg"
     },
     {
       "slug": "terracotta-army",
@@ -120,8 +127,8 @@
         "lat": 34.3848,
         "lng": 109.2734
       },
-      "whyFamous": "Collection of terracotta sculptures depicting armies of Qin Shi Huang",
-      "imagePath": "/images/landmarks/terracotta-army.png"
+      "whyFamous": "Thousands of life-sized terracotta soldiers guarding Emperor Qin's tomb",
+      "imagePath": "/images/landmarks/terracotta-army.jpg"
     },
     {
       "slug": "temple-of-heaven",
@@ -129,10 +136,10 @@
       "city": "Beijing",
       "coordinates": {
         "lat": 39.8822,
-        "lng": 116.4066
+        "lng": 116.4067
       },
-      "whyFamous": "Imperial complex of religious buildings, masterpiece of architecture",
-      "imagePath": "/images/landmarks/temple-of-heaven.png"
+      "whyFamous": "Religious complex where emperors prayed for good harvests",
+      "imagePath": "/images/landmarks/temple-of-heaven.jpg"
     }
   ],
   "rivers": [
@@ -143,7 +150,10 @@
       "countries": ["China"],
       "source": "Tibetan Plateau",
       "mouth": "East China Sea",
-      "pathCoordinates": [{ "lat": 33.2551, "lng": 90.9059 }, { "lat": 31.2304, "lng": 121.4737 }]
+      "pathCoordinates": [
+        { "lat": 33.25, "lng": 90.9 },
+        { "lat": 31.23, "lng": 121.5 }
+      ]
     },
     {
       "slug": "yellow-river",
@@ -152,7 +162,10 @@
       "countries": ["China"],
       "source": "Bayan Har Mountains",
       "mouth": "Bohai Sea",
-      "pathCoordinates": [{ "lat": 35.227, "lng": 95.9956 }, { "lat": 37.75, "lng": 119.1667 }]
+      "pathCoordinates": [
+        { "lat": 35.5, "lng": 96.2 },
+        { "lat": 37.75, "lng": 119.1 }
+      ]
     }
   ],
   "institutions": [

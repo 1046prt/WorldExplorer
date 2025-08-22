@@ -5,6 +5,8 @@
   "region": "Europe",
   "capital": "Paris",
   "population": 67700000,
+  "image": "/images/countries/fr.jpg",
+  "flag": "/images/flags/france.png",
   "currency": {
     "code": "EUR",
     "name": "Euro",
@@ -66,27 +68,32 @@
     {
       "name": "Paris",
       "whyFamous": "City of Light, global center of art, fashion, gastronomy, and culture",
-      "slug": "paris"
+      "slug": "paris",
+      "image": "/images/cities/paris.jpg"
     },
     {
       "name": "Lyon",
       "whyFamous": "Gastronomic capital of France, UNESCO World Heritage site",
-      "slug": "lyon"
+      "slug": "lyon",
+      "image": "/images/cities/lyon.jpg"
     },
     {
       "name": "Marseille",
       "whyFamous": "Oldest city in France, major Mediterranean port",
-      "slug": "marseille"
+      "slug": "marseille",
+      "image": "/images/cities/marseille.jpg"
     },
     {
       "name": "Nice",
       "whyFamous": "Glamorous resort city on the French Riviera",
-      "slug": "nice"
+      "slug": "nice",
+      "image": "/images/cities/nice.jpg"
     },
     {
       "name": "Cannes",
       "whyFamous": "Host of the prestigious Cannes Film Festival",
-      "slug": "cannes"
+      "slug": "cannes",
+      "image": "/images/cities/cannes.jpg"
     }
   ],
   "landmarks": [
@@ -154,7 +161,10 @@
       "countries": ["France"],
       "source": "Burgundy",
       "mouth": "English Channel",
-      "pathCoordinates": [{ "lat": 47.2883, "lng": 4.7094 }, { "lat": 49.4344, "lng": 0.1079 }]
+      "pathCoordinates": [
+        { "lat": 47.2883, "lng": 4.7094 },
+        { "lat": 49.4344, "lng": 0.1079 }
+      ]
     },
     {
       "slug": "loire-river",
@@ -163,7 +173,10 @@
       "countries": ["France"],
       "source": "Cévennes Mountains",
       "mouth": "Atlantic Ocean",
-      "pathCoordinates": [{ "lat": 44.8419, "lng": 4.1389 }, { "lat": 47.2692, "lng": -2.1667 }]
+      "pathCoordinates": [
+        { "lat": 44.8419, "lng": 4.1389 },
+        { "lat": 47.2692, "lng": -2.1667 }
+      ]
     },
     {
       "slug": "rhone-river",
@@ -172,7 +185,10 @@
       "countries": ["Switzerland", "France"],
       "source": "Rhône Glacier, Switzerland",
       "mouth": "Mediterranean Sea",
-      "pathCoordinates": [{ "lat": 46.6197, "lng": 8.3744 }, { "lat": 43.325, "lng": 4.8333 }]
+      "pathCoordinates": [
+        { "lat": 46.6197, "lng": 8.3744 },
+        { "lat": 43.325, "lng": 4.8333 }
+      ]
     }
   ],
   "institutions": [
