@@ -1,6 +1,6 @@
 import { Building2 } from "lucide-react";
 import type { Country } from "@/lib/types";
-import "/styles/country-cities.css"
+import "/styles/country-cities.css";
 interface CountryCitiesProps {
   country: Country;
 }

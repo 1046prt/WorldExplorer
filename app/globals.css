@@ -25,6 +25,7 @@
 @import "../styles/interactive-filters.css";
 @import "../styles/nature-explorer.css";
 @import "../styles/country-cities.css";
+@import "../styles/language-explorer.css";
 
 /* Root Variable*/
 :root {

@@ -161,6 +161,7 @@
 /* Card Component */
 .card {
   background-color: var(--color-card);
+  max-width: 100% !important;
   color: var(--color-card-foreground);
   border-radius: var(--radius-xl);
   border: 1px solid var(--color-border);
