@@ -1,0 +1,647 @@
+{
+  "iso2": "US",
+  "iso3": "USA",
+  "name": "United States",
+  "region": "North America",
+  "capital": "Washington, D.C.",
+  "population": 331900000,
+  "image": "/images/countries/us.jpg",
+  "flag": "/images/flags/us.png",
+  "currency": {
+    "code": "USD",
+    "name": "US Dollar",
+    "symbol": "$",
+    "image": "/images/currencies/usd.png"
+  },
+  "languages": ["English"],
+  "timezones": [
+    "UTC-12:00",
+    "UTC-11:00",
+    "UTC-10:00",
+    "UTC-09:00",
+    "UTC-08:00",
+    "UTC-07:00",
+    "UTC-06:00",
+    "UTC-05:00",
+    "UTC-04:00"
+  ],
+  "geography": {
+    "climateZones": ["Tropical", "Arid", "Temperate", "Continental", "Polar"],
+    "geologicalFormations": [
+      {
+        "name": "Rocky Mountains",
+        "type": "Mountain Range",
+        "description": "Major mountain range extending from Canada to New Mexico"
+      },
+      {
+        "name": "Great Plains",
+        "type": "Plains",
+        "description": "Vast grassland region in central North America"
+      },
+      {
+        "name": "Appalachian Mountains",
+        "type": "Mountain Range",
+        "description": "Ancient mountain system in eastern North America"
+      }
+    ],
+    "naturalDisasters": [
+      {
+        "type": "Hurricane",
+        "name": "Hurricane Katrina",
+        "year": 2005,
+        "impact": "Devastating hurricane that affected New Orleans and Gulf Coast"
+      },
+      {
+        "type": "Earthquake",
+        "name": "San Francisco Earthquake",
+        "year": 1906,
+        "impact": "Major earthquake and fire that destroyed much of San Francisco"
+      }
+    ],
+    "majorWaterBodies": [
+      {
+        "name": "Atlantic Ocean",
+        "type": "Ocean",
+        "coastline": "East Coast"
+      },
+      {
+        "name": "Pacific Ocean",
+        "type": "Ocean",
+        "coastline": "West Coast"
+      },
+      {
+        "name": "Gulf of Mexico",
+        "type": "Gulf",
+        "coastline": "South Coast"
+      },
+      {
+        "name": "Great Lakes",
+        "type": "Lakes",
+        "description": "Five large freshwater lakes"
+      }
+    ]
+  },
+  "heritage": {
+    "independenceDate": "July 4, 1776",
+    "foundingEvent": "Declaration of Independence",
+    "majorHistoricalFigures": [
+      {
+        "name": "George Washington",
+        "role": "First President",
+        "period": "1789-1797",
+        "achievement": "Led the Continental Army and established presidential precedents"
+      },
+      {
+        "name": "Abraham Lincoln",
+        "role": "16th President",
+        "period": "1861-1865",
+        "achievement": "Preserved the Union and abolished slavery"
+      },
+      {
+        "name": "Benjamin Franklin",
+        "role": "Founding Father, Scientist",
+        "period": "1706-1790",
+        "achievement": "Key diplomat and inventor, helped draft the Constitution"
+      }
+    ],
+    "colonialHistory": [
+      {
+        "period": "1607-1776",
+        "description": "British colonial period with 13 original colonies"
+      },
+      {
+        "period": "1776-1783",
+        "description": "Revolutionary War and fight for independence"
+      }
+    ],
+    "unescoSites": [
+      {
+        "name": "Statue of Liberty",
+        "year": 1984,
+        "type": "Cultural"
+      },
+      {
+        "name": "Independence Hall",
+        "year": 1979,
+        "type": "Cultural"
+      },
+      {
+        "name": "Grand Canyon National Park",
+        "year": 1979,
+        "type": "Natural"
+      },
+      {
+        "name": "Yellowstone National Park",
+        "year": 1978,
+        "type": "Natural"
+      }
+    ]
+  },
+  "politics": {
+    "currentLeaders": [
+      {
+        "position": "President",
+        "name": "Joe Biden",
+        "party": "Democratic",
+        "termStart": "January 20, 2021",
+        "termEnd": "January 20, 2025"
+      },
+      {
+        "position": "Vice President",
+        "name": "Kamala Harris",
+        "party": "Democratic",
+        "termStart": "January 20, 2021"
+      }
+    ],
+    "governmentType": "Federal Presidential Constitutional Republic",
+    "internationalMemberships": [
+      "United Nations (UN)",
+      "North Atlantic Treaty Organization (NATO)",
+      "Group of Seven (G7)",
+      "Group of Twenty (G20)",
+      "World Trade Organization (WTO)",
+      "International Monetary Fund (IMF)"
+    ]
+  },
+  "economy": {
+    "gdp": 26854599000000,
+    "gdpPerCapita": 80412,
+    "majorIndustries": [
+      "Technology",
+      "Finance",
+      "Healthcare",
+      "Entertainment",
+      "Agriculture",
+      "Manufacturing",
+      "Energy"
+    ],
+    "topExports": [
+      {
+        "product": "Refined Petroleum",
+        "value": 84300000000
+      },
+      {
+        "product": "Crude Petroleum",
+        "value": 61900000000
+      },
+      {
+        "product": "Cars",
+        "value": 56800000000
+      },
+      {
+        "product": "Integrated Circuits",
+        "value": 48500000000
+      }
+    ],
+    "topImports": [
+      {
+        "product": "Cars",
+        "value": 179800000000
+      },
+      {
+        "product": "Crude Petroleum",
+        "value": 162200000000
+      },
+      {
+        "product": "Computers",
+        "value": 128900000000
+      },
+      {
+        "product": "Broadcasting Equipment",
+        "value": 101600000000
+      }
+    ],
+    "employmentRate": 96.1,
+    "employmentSectors": {
+      "services": 80.2,
+      "industry": 19.1,
+      "agriculture": 0.7
+    }
+  },
+  "culture": {
+    "officialLanguages": ["English (de facto)"],
+    "regionalLanguages": ["Spanish", "Chinese", "French", "German", "Arabic"],
+    "religionDemographics": {
+      "Christianity": 65.0,
+      "Unaffiliated": 23.0,
+      "Judaism": 2.0,
+      "Islam": 1.1,
+      "Buddhism": 0.7,
+      "Hinduism": 0.7,
+      "Other": 7.5
+    },
+    "nationalFestivals": [
+      {
+        "name": "Independence Day",
+        "date": "July 4",
+        "description": "Celebrates the adoption of the Declaration of Independence"
+      },
+      {
+        "name": "Thanksgiving",
+        "date": "Fourth Thursday in November",
+        "description": "Traditional harvest festival"
+      },
+      {
+        "name": "Memorial Day",
+        "date": "Last Monday in May",
+        "description": "Honors military personnel who died in service"
+      }
+    ],
+    "traditionalFoods": [
+      {
+        "name": "Hamburger",
+        "description": "Iconic American sandwich with beef patty"
+      },
+      {
+        "name": "Apple Pie",
+        "description": "Traditional dessert, symbol of American culture"
+      },
+      {
+        "name": "BBQ Ribs",
+        "description": "Slow-cooked pork ribs with barbecue sauce"
+      },
+      {
+        "name": "Mac and Cheese",
+        "description": "Comfort food with macaroni pasta and cheese sauce"
+      }
+    ],
+    "nationalSymbols": {
+      "flag": "Stars and Stripes",
+      "emblem": "Great Seal of the United States",
+      "anthem": "The Star-Spangled Banner",
+      "flower": "Rose",
+      "bird": "Bald Eagle",
+      "animal": "American Bison"
+    }
+  },
+  "education": {
+    "literacyRate": 99.0,
+    "educationSystem": "K-12 public education, extensive higher education system",
+    "famousScientists": [
+      {
+        "name": "Albert Einstein",
+        "field": "Physics",
+        "achievement": "Theory of Relativity"
+      },
+      {
+        "name": "Thomas Edison",
+        "field": "Invention",
+        "achievement": "Electric light bulb, phonograph"
+      },
+      {
+        "name": "Neil Armstrong",
+        "field": "Aerospace",
+        "achievement": "First person to walk on the moon"
+      }
+    ],
+    "nobelPrizeWinners": 400
+  },
+  "tourism": {
+    "mostVisitedCities": [
+      {
+        "name": "New York City",
+        "visitors": 65200000,
+        "attractions": ["Times Square", "Central Park", "Statue of Liberty"]
+      },
+      {
+        "name": "Los Angeles",
+        "visitors": 50000000,
+        "attractions": ["Hollywood", "Beverly Hills", "Santa Monica"]
+      },
+      {
+        "name": "Las Vegas",
+        "visitors": 42500000,
+        "attractions": ["The Strip", "Casinos", "Shows"]
+      }
+    ],
+    "adventureActivities": [
+      "Grand Canyon Hiking",
+      "Yellowstone Wildlife Watching",
+      "Colorado Skiing",
+      "Florida Diving",
+      "Alaska Glacier Tours"
+    ],
+    "transportation": {
+      "airports": "Major international airports in all major cities",
+      "railways": "Amtrak passenger rail service",
+      "highways": "Interstate Highway System"
+    },
+    "visaRequirements": "ESTA or visa required for most visitors"
+  },
+  "demographics": {
+    "populationGrowth": [
+      { "year": 2020, "population": 331449281 },
+      { "year": 2021, "population": 331893745 },
+      { "year": 2022, "population": 332403650 },
+      { "year": 2023, "population": 334914895 }
+    ],
+    "urbanRural": {
+      "urban": 82.7,
+      "rural": 17.3
+    },
+    "lifeExpectancy": {
+      "total": 78.9,
+      "male": 76.3,
+      "female": 81.4
+    },
+    "ageDistribution": {
+      "youth": 18.5,
+      "workingAge": 65.2,
+      "elderly": 16.3
+    }
+  },
+  "scienceTechnology": {
+    "spaceMissions": [
+      {
+        "name": "Apollo 11",
+        "year": 1969,
+        "achievement": "First moon landing"
+      },
+      {
+        "name": "Mars Rover Missions",
+        "year": "1997-present",
+        "achievement": "Exploration of Mars surface"
+      },
+      {
+        "name": "Hubble Space Telescope",
+        "year": 1990,
+        "achievement": "Deep space observation"
+      }
+    ],
+    "techStartups": [
+      "Apple",
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Facebook",
+      "Tesla"
+    ],
+    "patents": 354430,
+    "breakthroughs": [
+      {
+        "year": 1876,
+        "invention": "Telephone",
+        "inventor": "Alexander Graham Bell"
+      },
+      {
+        "year": 1903,
+        "invention": "Airplane",
+        "inventor": "Wright Brothers"
+      },
+      {
+        "year": 1969,
+        "invention": "Internet (ARPANET)",
+        "inventor": "DARPA"
+      }
+    ]
+  },
+  "sportsEntertainment": {
+    "nationalSports": ["American Football", "Baseball", "Basketball"],
+    "olympicPerformance": {
+      "totalMedals": 2629,
+      "goldMedals": 1061,
+      "silverMedals": 836,
+      "bronzeMedals": 732
+    },
+    "popularMovies": [
+      "Hollywood blockbusters",
+      "Marvel Cinematic Universe",
+      "Disney animations"
+    ],
+    "musicArtists": [
+      "Elvis Presley",
+      "Michael Jackson",
+      "Madonna",
+      "Beyoncé",
+      "Taylor Swift"
+    ],
+    "worldRecords": [
+      {
+        "record": "Most Olympic medals won by a country",
+        "value": "2629 medals"
+      },
+      {
+        "record": "Largest economy by GDP",
+        "value": "$26.85 trillion"
+      }
+    ]
+  },
+  "history": [
+    {
+      "year": 1776,
+      "description": "Declaration of Independence signed, establishing the United States as an independent nation"
+    },
+    {
+      "year": 1787,
+      "description": "Constitution ratified, creating the federal government structure"
+    },
+    {
+      "year": 1861,
+      "description": "Civil War begins over slavery and states' rights"
+    },
+    {
+      "year": 1969,
+      "description": "First moon landing achieved by Apollo 11 mission"
+    },
+    {
+      "year": 2001,
+      "description": "September 11 attacks reshape national security and foreign policy"
+    }
+  ],
+  "states": [
+    {
+      "name": "California",
+      "capital": "Sacramento",
+      "slug": "california"
+    },
+    {
+      "name": "Texas",
+      "capital": "Austin",
+      "slug": "texas"
+    },
+    {
+      "name": "New York",
+      "capital": "Albany",
+      "slug": "new-york"
+    },
+    {
+      "name": "Florida",
+      "capital": "Tallahassee",
+      "slug": "florida"
+    },
+    {
+      "name": "Illinois",
+      "capital": "Springfield",
+      "slug": "illinois"
+    }
+  ],
+  "famousCities": [
+    {
+      "name": "New York City",
+      "whyFamous": "Global financial center, home to Wall Street, Broadway, and iconic landmarks like the Statue of Liberty",
+      "slug": "new-york-city",
+      "image": "/images/cities/new-york-city.jpg"
+    },
+    {
+      "name": "Los Angeles",
+      "whyFamous": "Entertainment capital of the world, home to Hollywood and the film industry",
+      "slug": "los-angeles",
+      "image": "/images/cities/los-angeles.jpg"
+    },
+    {
+      "name": "Las Vegas",
+      "whyFamous": "Entertainment and gambling destination known as 'Sin City'",
+      "slug": "las-vegas",
+      "image": "/images/cities/las-vegas.jpg"
+    },
+    {
+      "name": "San Francisco",
+      "whyFamous": "Tech hub of Silicon Valley, famous for Golden Gate Bridge and steep hills",
+      "slug": "san-francisco",
+      "image": "/images/cities/san-francisco.jpg"
+    },
+    {
+      "name": "Chicago",
+      "whyFamous": "Architectural marvel known for skyscrapers and deep-dish pizza",
+      "slug": "chicago",
+      "image": "/images/cities/chicago.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "slug": "statue-of-liberty",
+      "name": "Statue of Liberty",
+      "city": "New York City",
+      "coordinates": {
+        "lat": 40.6892,
+        "lng": -74.0445
+      },
+      "whyFamous": "Symbol of freedom and democracy, gift from France in 1886",
+      "imagePath": "/images/landmarks/statue-of-liberty.png"
+    },
+    {
+      "slug": "grand-canyon",
+      "name": "Grand Canyon",
+      "city": "Arizona",
+      "coordinates": {
+        "lat": 36.1069,
+        "lng": -112.1129
+      },
+      "whyFamous": "One of the world's most spectacular natural wonders, carved by the Colorado River",
+      "imagePath": "/images/landmarks/grand-canyon.png"
+    },
+    {
+      "slug": "golden-gate-bridge",
+      "name": "Golden Gate Bridge",
+      "city": "San Francisco",
+      "coordinates": {
+        "lat": 37.8199,
+        "lng": -122.4783
+      },
+      "whyFamous": "Iconic suspension bridge and symbol of San Francisco",
+      "imagePath": "/images/landmarks/golden-gate-bridge.jpg"
+    },
+    {
+      "slug": "mount-rushmore",
+      "name": "Mount Rushmore",
+      "city": "South Dakota",
+      "coordinates": {
+        "lat": 43.8791,
+        "lng": -103.4591
+      },
+      "whyFamous": "Massive sculpture carved into granite featuring four US presidents",
+      "imagePath": "/images/landmarks/mount-rushmore.jpg"
+    },
+    {
+      "slug": "empire-state-building",
+      "name": "Empire State Building",
+      "city": "New York City",
+      "coordinates": {
+        "lat": 40.7484,
+        "lng": -73.9857
+      },
+      "whyFamous": "Art Deco skyscraper and iconic symbol of New York City",
+      "imagePath": "/images/landmarks/empire-state-building.jpg"
+    }
+  ],
+  "rivers": [
+    {
+      "slug": "mississippi-river",
+      "name": "Mississippi River",
+      "length": 3734,
+      "countries": ["United States"],
+      "source": "Lake Itasca, Minnesota",
+      "mouth": "Gulf of Mexico",
+      "pathCoordinates": [
+        { "lat": 47.2396, "lng": -95.2138 },
+        { "lat": 29.0955, "lng": -89.2531 }
+      ]
+    },
+    {
+      "slug": "colorado-river",
+      "name": "Colorado River",
+      "length": 2334,
+      "countries": ["United States", "Mexico"],
+      "source": "Rocky Mountain National Park, Colorado",
+      "mouth": "Gulf of California",
+      "pathCoordinates": [
+        { "lat": 40.4708, "lng": -105.8286 },
+        { "lat": 31.7811, "lng": -114.7724 }
+      ]
+    },
+    {
+      "slug": "missouri-river",
+      "name": "Missouri River",
+      "length": 4087,
+      "countries": ["United States"],
+      "source": "Three Forks, Montana",
+      "mouth": "Mississippi River",
+      "pathCoordinates": [
+        { "lat": 45.9239, "lng": -111.4983 },
+        { "lat": 38.8146, "lng": -90.1218 }
+      ]
+    }
+  ],
+  "institutions": [
+    {
+      "slug": "harvard-university",
+      "name": "Harvard University",
+      "city": "Cambridge, Massachusetts",
+      "founded": 1636,
+      "globalRank": 1,
+      "type": "Private Research University"
+    },
+    {
+      "slug": "mit",
+      "name": "Massachusetts Institute of Technology",
+      "city": "Cambridge, Massachusetts",
+      "founded": 1861,
+      "globalRank": 2,
+      "type": "Private Research University"
+    },
+    {
+      "slug": "stanford-university",
+      "name": "Stanford University",
+      "city": "Stanford, California",
+      "founded": 1885,
+      "globalRank": 3,
+      "type": "Private Research University"
+    },
+    {
+      "slug": "california-institute-of-technology",
+      "name": "California Institute of Technology",
+      "city": "Pasadena, California",
+      "founded": 1891,
+      "globalRank": 4,
+      "type": "Private Research University"
+    },
+    {
+      "slug": "university-of-chicago",
+      "name": "University of Chicago",
+      "city": "Chicago, Illinois",
+      "founded": 1890,
+      "globalRank": 10,
+      "type": "Private Research University"
+    }
+  ]
+}

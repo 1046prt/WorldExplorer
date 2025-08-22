@@ -1,0 +1,220 @@
+{
+  "iso2": "BR",
+  "iso3": "BRA",
+  "name": "Brazil",
+  "region": "South America",
+  "capital": "Brasília",
+  "population": 215300000,
+  "image": "/images/countries/br.jpg",
+  "flag": "/images/flags/br.png",
+  "currency": {
+    "code": "BRL",
+    "name": "Brazilian Real",
+    "symbol": "R$",
+    "image": "/images/currencies/brl.png"
+  },
+  "languages": ["Portuguese"],
+  "timezones": ["UTC-05:00", "UTC-04:00", "UTC-03:00", "UTC-02:00"],
+  "history": [
+    {
+      "year": 1500,
+      "description": "Portuguese explorer Pedro Álvares Cabral claims Brazil for Portugal"
+    },
+    {
+      "year": 1822,
+      "description": "Brazil declares independence from Portugal under Emperor Dom Pedro I"
+    },
+    {
+      "year": 1889,
+      "description": "Republic of Brazil established, ending the monarchy"
+    },
+    {
+      "year": 1960,
+      "description": "Capital moved from Rio de Janeiro to newly built Brasília"
+    },
+    {
+      "year": 1985,
+      "description": "End of military dictatorship, return to democratic government"
+    }
+  ],
+  "states": [
+    {
+      "name": "São Paulo",
+      "capital": "São Paulo",
+      "slug": "sao-paulo"
+    },
+    {
+      "name": "Rio de Janeiro",
+      "capital": "Rio de Janeiro",
+      "slug": "rio-de-janeiro"
+    },
+    {
+      "name": "Minas Gerais",
+      "capital": "Belo Horizonte",
+      "slug": "minas-gerais"
+    },
+    {
+      "name": "Bahia",
+      "capital": "Salvador",
+      "slug": "bahia"
+    },
+    {
+      "name": "Paraná",
+      "capital": "Curitiba",
+      "slug": "parana"
+    }
+  ],
+  "famousCities": [
+    {
+      "name": "Rio de Janeiro",
+      "whyFamous": "Marvelous City known for Christ the Redeemer, Copacabana Beach, and Carnival",
+      "slug": "rio-de-janeiro",
+      "image": "/images/cities/rio-de-janeiro.jpg"
+    },
+    {
+      "name": "São Paulo",
+      "whyFamous": "Largest city in South America, economic powerhouse and cultural center",
+      "slug": "sao-paulo",
+      "image": "/images/cities/sao-paulo.jpg"
+    },
+    {
+      "name": "Salvador",
+      "whyFamous": "First capital of Brazil, rich Afro-Brazilian culture and colonial architecture",
+      "slug": "salvador",
+      "image": "/images/cities/salvador.jpg"
+    },
+    {
+      "name": "Brasília",
+      "whyFamous": "Planned capital city, UNESCO World Heritage site for modernist architecture",
+      "slug": "brasilia",
+      "image": "/images/cities/brasilia.jpg"
+    },
+    {
+      "name": "Manaus",
+      "whyFamous": "Gateway to the Amazon rainforest, meeting of waters phenomenon",
+      "slug": "manaus",
+      "image": "/images/cities/manaus.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "slug": "christ-the-redeemer",
+      "name": "Christ the Redeemer",
+      "city": "Rio de Janeiro",
+      "coordinates": {
+        "lat": -22.9519,
+        "lng": -43.2105
+      },
+      "whyFamous": "Iconic Art Deco statue overlooking Rio de Janeiro, one of the New Seven Wonders of the World",
+      "imagePath": "/images/landmarks/christ-the-redeemer.png"
+    },
+    {
+      "slug": "sugarloaf-mountain",
+      "name": "Sugarloaf Mountain",
+      "city": "Rio de Janeiro",
+      "coordinates": {
+        "lat": -22.9486,
+        "lng": -43.1565
+      },
+      "whyFamous": "Granite peak offering panoramic views of Rio de Janeiro and Guanabara Bay",
+      "imagePath": "/images/landmarks/sugarloaf-mountain.jpg"
+    },
+    {
+      "slug": "iguazu-falls",
+      "name": "Iguazu Falls",
+      "city": "Foz do Iguaçu",
+      "coordinates": {
+        "lat": -25.6953,
+        "lng": -54.4367
+      },
+      "whyFamous": "Spectacular waterfalls on the border with Argentina, UNESCO World Heritage site",
+      "imagePath": "/images/landmarks/iguazu-falls.jpg"
+    },
+    {
+      "slug": "amazon-rainforest",
+      "name": "Amazon Rainforest",
+      "city": "Amazon Basin",
+      "coordinates": {
+        "lat": -3.4653,
+        "lng": -62.2159
+      },
+      "whyFamous": "World's largest tropical rainforest, lungs of the Earth with incredible biodiversity",
+      "imagePath": "/images/landmarks/amazon-rainforest.jpg"
+    },
+    {
+      "slug": "copacabana-beach",
+      "name": "Copacabana Beach",
+      "city": "Rio de Janeiro",
+      "coordinates": {
+        "lat": -22.9711,
+        "lng": -43.1822
+      },
+      "whyFamous": "World-famous beach known for its vibrant atmosphere and New Year's Eve celebrations",
+      "imagePath": "/images/landmarks/copacabana-beach.jpg"
+    }
+  ],
+  "rivers": [
+    {
+      "slug": "amazon-river",
+      "name": "Amazon River",
+      "length": 6400,
+      "countries": ["Brazil", "Peru", "Colombia"],
+      "source": "Peruvian Andes",
+      "mouth": "Atlantic Ocean",
+      "pathCoordinates": [
+        { "lat": -15.5, "lng": -71.9 },
+        { "lat": 0.1667, "lng": -50.0333 }
+      ]
+    },
+    {
+      "slug": "parana-river",
+      "name": "Paraná River",
+      "length": 4880,
+      "countries": ["Brazil", "Paraguay", "Argentina"],
+      "source": "Brazilian Highlands",
+      "mouth": "Río de la Plata",
+      "pathCoordinates": [
+        { "lat": -20.0833, "lng": -51.3833 },
+        { "lat": -34.0, "lng": -58.5 }
+      ]
+    },
+    {
+      "slug": "sao-francisco-river",
+      "name": "São Francisco River",
+      "length": 2914,
+      "countries": ["Brazil"],
+      "source": "Serra da Canastra",
+      "mouth": "Atlantic Ocean",
+      "pathCoordinates": [
+        { "lat": -20.25, "lng": -46.5167 },
+        { "lat": -10.4833, "lng": -36.4167 }
+      ]
+    }
+  ],
+  "institutions": [
+    {
+      "slug": "university-of-sao-paulo",
+      "name": "University of São Paulo",
+      "city": "São Paulo",
+      "founded": 1934,
+      "globalRank": 115,
+      "type": "Public Research University"
+    },
+    {
+      "slug": "university-of-campinas",
+      "name": "University of Campinas",
+      "city": "Campinas",
+      "founded": 1966,
+      "globalRank": 233,
+      "type": "Public Research University"
+    },
+    {
+      "slug": "federal-university-of-rio-de-janeiro",
+      "name": "Federal University of Rio de Janeiro",
+      "city": "Rio de Janeiro",
+      "founded": 1920,
+      "globalRank": 251,
+      "type": "Public Research University"
+    }
+  ]
+}

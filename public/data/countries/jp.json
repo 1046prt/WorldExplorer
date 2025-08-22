@@ -1,0 +1,197 @@
+{
+  "iso2": "JP",
+  "iso3": "JPN",
+  "name": "Japan",
+  "region": "Asia",
+  "capital": "Tokyo",
+  "population": 125800000,
+  "image": "/images/countries/jp.jpg",
+  "flag": "/images/flags/japan.png",
+  "currency": {
+    "code": "JPY",
+    "name": "Japanese Yen",
+    "symbol": "¥",
+    "image": "/images/currencies/jpy.png"
+  },
+  "languages": ["Japanese"],
+  "timezones": ["UTC+09:00"],
+  "history": [
+    {
+      "year": 1603,
+      "description": "Tokugawa shogunate established, beginning of Edo period"
+    },
+    {
+      "year": 1868,
+      "description": "Meiji Restoration begins modernization of Japan"
+    },
+    {
+      "year": 1945,
+      "description": "End of World War II, beginning of post-war reconstruction"
+    },
+    {
+      "year": 1964,
+      "description": "Tokyo Olympics showcase Japan's post-war recovery"
+    },
+    {
+      "year": 1989,
+      "description": "Beginning of Heisei era, economic bubble period"
+    }
+  ],
+  "states": [
+    {
+      "name": "Tokyo",
+      "capital": "Tokyo",
+      "slug": "tokyo"
+    },
+    {
+      "name": "Osaka",
+      "capital": "Osaka",
+      "slug": "osaka"
+    },
+    {
+      "name": "Kyoto",
+      "capital": "Kyoto",
+      "slug": "kyoto"
+    },
+    {
+      "name": "Hokkaido",
+      "capital": "Sapporo",
+      "slug": "hokkaido"
+    },
+    {
+      "name": "Okinawa",
+      "capital": "Naha",
+      "slug": "okinawa"
+    }
+  ],
+  "famousCities": [
+    {
+      "name": "Tokyo",
+      "whyFamous": "Capital and largest city, global center of technology and pop culture",
+      "slug": "tokyo",
+      "image": "/images/cities/tokyo.jpg"
+    },
+    {
+      "name": "Kyoto",
+      "whyFamous": "Former imperial capital, thousands of temples and traditional culture",
+      "slug": "kyoto",
+      "image": "/images/cities/kyoto.jpg"
+    },
+    {
+      "name": "Osaka",
+      "whyFamous": "Kitchen of Japan, famous for food culture and commerce",
+      "slug": "osaka",
+      "image": "/images/cities/osaka.jpg"
+    },
+    {
+      "name": "Hiroshima",
+      "whyFamous": "Peace memorial city, site of atomic bombing in WWII",
+      "slug": "hiroshima",
+      "image": "/images/cities/hiroshima.jpg"
+    },
+    {
+      "name": "Nara",
+      "whyFamous": "Ancient capital, famous for deer park and Buddhist temples",
+      "slug": "nara",
+      "image": "/images/cities/nara.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "slug": "mount-fuji",
+      "name": "Mount Fuji",
+      "city": "Honshu",
+      "coordinates": {
+        "lat": 35.3606,
+        "lng": 138.7274
+      },
+      "whyFamous": "Sacred mountain and symbol of Japan, UNESCO World Heritage site",
+      "imagePath": "/images/landmarks/mount-fuji.png"
+    },
+    {
+      "slug": "tokyo-tower",
+      "name": "Tokyo Tower",
+      "city": "Tokyo",
+      "coordinates": {
+        "lat": 35.6586,
+        "lng": 139.7454
+      },
+      "whyFamous": "Communications tower inspired by Eiffel Tower, symbol of post-war recovery",
+      "imagePath": "/images/landmarks/tokyo-tower.png"
+    },
+    {
+      "slug": "fushimi-inari-shrine",
+      "name": "Fushimi Inari Shrine",
+      "city": "Kyoto",
+      "coordinates": {
+        "lat": 34.9671,
+        "lng": 135.7727
+      },
+      "whyFamous": "Thousands of vermillion torii gates creating tunnels up the mountain",
+      "imagePath": "/images/landmarks/fushimi-inari-shrine.png"
+    },
+    {
+      "slug": "golden-pavilion",
+      "name": "Golden Pavilion (Kinkaku-ji)",
+      "city": "Kyoto",
+      "coordinates": {
+        "lat": 35.0394,
+        "lng": 135.7292
+      },
+      "whyFamous": "Gold-covered Buddhist temple, one of Japan's most photographed buildings",
+      "imagePath": "/images/landmarks/golden-pavilion.png"
+    }
+  ],
+  "rivers": [
+    {
+      "slug": "shinano-river",
+      "name": "Shinano River",
+      "length": 367,
+      "countries": ["Japan"],
+      "source": "Mount Kobushi",
+      "mouth": "Sea of Japan",
+      "pathCoordinates": [
+        { "lat": 35.95, "lng": 138.7167 },
+        { "lat": 37.9167, "lng": 139.0333 }
+      ]
+    },
+    {
+      "slug": "tone-river",
+      "name": "Tone River",
+      "length": 322,
+      "countries": ["Japan"],
+      "source": "Mount Ominakami",
+      "mouth": "Pacific Ocean",
+      "pathCoordinates": [
+        { "lat": 36.95, "lng": 139.2167 },
+        { "lat": 35.7667, "lng": 140.8333 }
+      ]
+    }
+  ],
+  "institutions": [
+    {
+      "slug": "university-of-tokyo",
+      "name": "University of Tokyo",
+      "city": "Tokyo",
+      "founded": 1877,
+      "globalRank": 23,
+      "type": "Public Research University"
+    },
+    {
+      "slug": "kyoto-university",
+      "name": "Kyoto University",
+      "city": "Kyoto",
+      "founded": 1897,
+      "globalRank": 36,
+      "type": "Public Research University"
+    },
+    {
+      "slug": "osaka-university",
+      "name": "Osaka University",
+      "city": "Osaka",
+      "founded": 1931,
+      "globalRank": 68,
+      "type": "Public Research University"
+    }
+  ]
+}

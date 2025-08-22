@@ -1,0 +1,185 @@
+{
+  "iso2": "GB",
+  "iso3": "GBR",
+  "name": "United Kingdom",
+  "region": "Europe",
+  "capital": "London",
+  "population": 67330000,
+  "currency": {
+    "code": "GBP",
+    "name": "British Pound Sterling",
+    "symbol": "£",
+    "image": "/images/currencies/gbp.png"
+  },
+  "languages": ["English"],
+  "timezones": ["UTC+00:00"],
+  "history": [
+    {
+      "year": 1066,
+      "description": "Norman Conquest of England, beginning of Norman rule"
+    },
+    {
+      "year": 1707,
+      "description": "Act of Union creates the Kingdom of Great Britain"
+    },
+    {
+      "year": 1801,
+      "description": "Act of Union creates the United Kingdom of Great Britain and Ireland"
+    },
+    {
+      "year": 1945,
+      "description": "End of World War II, beginning of decolonization"
+    },
+    {
+      "year": 2020,
+      "description": "Brexit: UK leaves the European Union"
+    }
+  ],
+  "states": [
+    {
+      "name": "England",
+      "capital": "London",
+      "slug": "england"
+    },
+    {
+      "name": "Scotland",
+      "capital": "Edinburgh",
+      "slug": "scotland"
+    },
+    {
+      "name": "Wales",
+      "capital": "Cardiff",
+      "slug": "wales"
+    },
+    {
+      "name": "Northern Ireland",
+      "capital": "Belfast",
+      "slug": "northern-ireland"
+    }
+  ],
+  "famousCities": [
+    {
+      "name": "London",
+      "whyFamous": "Global financial center, rich history, home to Big Ben and Buckingham Palace",
+      "slug": "london"
+    },
+    {
+      "name": "Edinburgh",
+      "whyFamous": "Scottish capital, famous for its castle and annual festival",
+      "slug": "edinburgh"
+    },
+    {
+      "name": "Oxford",
+      "whyFamous": "Home to the oldest university in the English-speaking world",
+      "slug": "oxford"
+    },
+    {
+      "name": "Cambridge",
+      "whyFamous": "University city, center of learning and research",
+      "slug": "cambridge"
+    },
+    {
+      "name": "Bath",
+      "whyFamous": "Roman-built baths and Georgian architecture",
+      "slug": "bath"
+    }
+  ],
+  "landmarks": [
+    {
+      "slug": "big-ben",
+      "name": "Big Ben",
+      "city": "London",
+      "coordinates": {
+        "lat": 51.4994,
+        "lng": -0.1245
+      },
+      "whyFamous": "Iconic clock tower and symbol of London and the UK",
+      "imagePath": "/images/landmarks/big-ben.png"
+    },
+    {
+      "slug": "tower-bridge",
+      "name": "Tower Bridge",
+      "city": "London",
+      "coordinates": {
+        "lat": 51.5055,
+        "lng": -0.0754
+      },
+      "whyFamous": "Victorian Gothic bascule bridge, iconic London landmark",
+      "imagePath": "/images/landmarks/tower-bridge.png"
+    },
+    {
+      "slug": "stonehenge",
+      "name": "Stonehenge",
+      "city": "Wiltshire",
+      "coordinates": {
+        "lat": 51.1789,
+        "lng": -1.8262
+      },
+      "whyFamous": "Prehistoric monument, mysterious stone circle",
+      "imagePath": "/images/landmarks/stonehenge.png"
+    },
+    {
+      "slug": "buckingham-palace",
+      "name": "Buckingham Palace",
+      "city": "London",
+      "coordinates": {
+        "lat": 51.5014,
+        "lng": -0.1419
+      },
+      "whyFamous": "Official residence of the British monarch",
+      "imagePath": "/images/landmarks/buckingham-palace.png"
+    }
+  ],
+  "rivers": [
+    {
+      "slug": "river-thames",
+      "name": "River Thames",
+      "length": 346,
+      "countries": ["United Kingdom"],
+      "source": "Thames Head, Gloucestershire",
+      "mouth": "Thames Estuary",
+      "pathCoordinates": [
+        { "lat": 51.6844, "lng": -1.4544 },
+        { "lat": 51.45, "lng": 0.6 }
+      ]
+    },
+    {
+      "slug": "river-severn",
+      "name": "River Severn",
+      "length": 354,
+      "countries": ["United Kingdom"],
+      "source": "Plynlimon, Wales",
+      "mouth": "Bristol Channel",
+      "pathCoordinates": [
+        { "lat": 52.4833, "lng": -3.7333 },
+        { "lat": 51.6167, "lng": -2.6667 }
+      ]
+    }
+  ],
+  "institutions": [
+    {
+      "slug": "university-of-oxford",
+      "name": "University of Oxford",
+      "city": "Oxford",
+      "founded": 1096,
+      "globalRank": 5,
+      "type": "Public Research University"
+    },
+    {
+      "slug": "university-of-cambridge",
+      "name": "University of Cambridge",
+      "city": "Cambridge",
+      "founded": 1209,
+      "globalRank": 7,
+      "type": "Public Research University"
+    },
+    {
+      "slug": "imperial-college-london",
+      "name": "Imperial College London",
+      "city": "London",
+      "founded": 1907,
+      "globalRank": 8,
+      "type": "Public Research University"
+    }
+  ]
+}
