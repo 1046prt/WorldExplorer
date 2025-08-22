@@ -277,11 +277,6 @@ export default function RiversPage() {
                               {flag}
                             </span>
                           ))}
-                          {river.flags.length > 3 && (
-                            <span className="text-sm text-gray-500 dark:text-gray-400">
-                              +{river.flags.length - 3}
-                            </span>
-                          )}
                         </div>
                         <span className="text-xs text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded">
                           {river.continent}
@@ -324,11 +319,6 @@ export default function RiversPage() {
                             {country}
                           </Link>
                         ))}
-                        {river.countries.length > 2 && (
-                          <span className="text-xs text-gray-500 dark:text-gray-400 px-2 py-1">
-                            +{river.countries.length - 2} more
-                          </span>
-                        )}
                       </div>
                     </div>
                   </div>

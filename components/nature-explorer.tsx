@@ -315,7 +315,19 @@ export function NatureExplorer() {
                       <p className="text-sm">
                         <strong>Coordinates:</strong> {wonder.coordinates}
                       </p>
-                      <button className="btn mt-sm">📍 View on Map</button>
+                      <button
+                        className="btn mt-sm"
+                        onClick={() =>
+                          window.open(
+                            `https://www.google.com/maps/search/${encodeURIComponent(
+                              wonder.coordinates
+                            )}`,
+                            "_blank"
+                          )
+                        }
+                      >
+                        📍 View on Map
+                      </button>
                     </div>
                   </div>
                 )
