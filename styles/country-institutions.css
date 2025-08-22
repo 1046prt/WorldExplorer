@@ -1,0 +1,111 @@
+.card {
+  background-color: var(--color-card);
+  color: var(--color-card-foreground);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-normal);
+}
+
+.institutions-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: var(--blur-sm);
+}
+
+.institutions-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-lg);
+}
+
+.institutions-title {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--color-foreground);
+}
+
+.institutions-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-md);
+}
+
+@media (min-width: 768px) {
+  .institutions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.institution-card {
+  padding: var(--spacing-md);
+  transition: box-shadow var(--transition-normal);
+}
+
+.institution-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.institution-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-sm);
+}
+
+.institution-rank {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.institution-name {
+  font-weight: 600;
+  color: var(--color-foreground);
+  margin-bottom: var(--spacing-xs);
+}
+
+.institution-city {
+  font-size: var(--font-size-sm);
+  color: var(--color-muted-foreground);
+  margin-bottom: var(--spacing-xs);
+}
+
+.institution-type {
+  font-size: var(--font-size-xs);
+  color: var(--color-muted-foreground);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  color: var(--color-primary);
+}
+
+.trophy {
+  color: var(--color-warning);
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+}
+
+.badge.secondary {
+  background-color: var(--color-secondary-hover);
+  color: var(--color-secondary-foreground);
+}
+
+.badge.outline {
+  border: 1px solid var(--color-border);
+  background-color: transparent;
+  color: var(--color-foreground);
+}
+
+.badge.small {
+  font-size: var(--font-size-xs);
+}
