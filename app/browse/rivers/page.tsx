@@ -3,9 +3,10 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { GlobalNavigation } from "@/components/global-navigation";
+import { BrowseFilters } from "@/components/browse-filters";
 import Footer from "@/components/footer";
-import { Search, Filter, Waves, MapPin, Ruler, Globe } from "lucide-react";
-import "/app/globals.css";
+import { Waves, MapPin, Ruler, Globe } from "lucide-react";
+import "@/styles/rivers-page.css";
 interface River {
   id: string;
   name: string;
@@ -222,104 +223,78 @@ export default function RiversPage() {
         <main className="main">
           <div className="sections-container">
             <section className="section">
-              <div className="text-center mb-8">
-                <h1 className="text-4xl font-bold mb-4 flex items-center justify-center gap-3">
-                  <Waves className="w-8 h-8 text-cyan-600" />
+              <div className="page-header">
+                <h1 className="page-title">
+                  <Waves className="page-title-icon" />
                   Major Rivers of the World
                 </h1>
-                <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                <p className="page-description">
                   Explore the world's most important river systems and waterways
                 </p>
               </div>
             </section>
 
-            <section className="section">
-              <div className="flex flex-col sm:flex-row gap-4 max-w-4xl mx-auto">
-                <div className="relative flex-1">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-                  <input
-                    type="text"
-                    placeholder="Search rivers or countries..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  />
-                </div>
-                <div className="relative">
-                  <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-                  <select
-                    value={selectedContinent}
-                    onChange={(e) => setSelectedContinent(e.target.value)}
-                    className="pl-10 pr-8 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent min-w-[160px]"
-                  >
-                    {continents.map((continent) => (
-                      <option key={continent} value={continent}>
-                        {continent}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-            </section>
+            <BrowseFilters
+              searchTerm={searchTerm}
+              onSearchChange={setSearchTerm}
+              searchPlaceholder="Search rivers or countries..."
+              filterValue={selectedContinent}
+              onFilterChange={setSelectedContinent}
+              filterOptions={continents}
+              filterLabel="Filter by continent"
+            />
 
             <section className="section">
-              <div className="grid-layout grid-3">
+              <div className="rivers-grid">
                 {filteredRivers.map((river) => (
-                  <div
-                    key={river.id}
-                    className="card hover:shadow-lg transition-all duration-200 hover:scale-105"
-                  >
-                    <div className="p-6">
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="flex items-center gap-1">
-                          {river.flags.slice(0, 3).map((flag, index) => (
-                            <span key={index} className="text-xl">
-                              {flag}
-                            </span>
-                          ))}
-                        </div>
-                        <span className="text-xs text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded">
-                          {river.continent}
-                        </span>
-                      </div>
-
-                      <h3 className="text-xl font-semibold mb-2">
-                        {river.name}
-                      </h3>
-                      <p className="text-sm text-gray-600 dark:text-gray-300 mb-3">
-                        {river.description}
-                      </p>
-
-                      <div className="space-y-2 text-sm text-gray-600 dark:text-gray-300 mb-4">
-                        <div className="flex items-center gap-2">
-                          <Ruler className="w-4 h-4" />
-                          <span>{river.length}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <MapPin className="w-4 h-4" />
-                          <span>
-                            {river.source} → {river.mouth}
+                  <div key={river.id} className="river-card">
+                    <div className="river-card-header">
+                      <div className="river-flags">
+                        {river.flags.slice(0, 3).map((flag, index) => (
+                          <span key={index} className="river-flag">
+                            {flag}
                           </span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <Globe className="w-4 h-4" />
-                          <span className="truncate">
-                            {river.countries.join(", ")}
-                          </span>
-                        </div>
-                      </div>
-
-                      <div className="flex flex-wrap gap-1">
-                        {river.countries.slice(0, 2).map((country, index) => (
-                          <Link
-                            key={index}
-                            href={`/search?q=${encodeURIComponent(country)}`}
-                            className="text-xs text-cyan-600 dark:text-cyan-400 hover:underline bg-cyan-50 dark:bg-cyan-900/20 px-2 py-1 rounded transition-colors"
-                          >
-                            {country}
-                          </Link>
                         ))}
                       </div>
+                      <span className="river-continent-badge">
+                        {river.continent}
+                      </span>
+                    </div>
+
+                    <h3 className="river-name">{river.name}</h3>
+                    <p className="river-description">{river.description}</p>
+
+                    <div className="river-details">
+                      <div className="river-detail-item">
+                        <Ruler className="river-detail-icon" />
+                        <span className="river-detail-text">
+                          {river.length}
+                        </span>
+                      </div>
+                      <div className="river-detail-item">
+                        <MapPin className="river-detail-icon" />
+                        <span className="river-detail-text">
+                          {river.source} → {river.mouth}
+                        </span>
+                      </div>
+                      <div className="river-detail-item">
+                        <Globe className="river-detail-icon" />
+                        <span className="river-detail-text river-countries">
+                          {river.countries.join(", ")}
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="river-country-links">
+                      {river.countries.slice(0, 2).map((country, index) => (
+                        <Link
+                          key={index}
+                          href={`/search?q=${encodeURIComponent(country)}`}
+                          className="river-country-link"
+                        >
+                          {country}
+                        </Link>
+                      ))}
                     </div>
                   </div>
                 ))}
@@ -328,12 +303,10 @@ export default function RiversPage() {
 
             {filteredRivers.length === 0 && (
               <section className="section">
-                <div className="text-center py-12">
-                  <Waves className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-gray-600 dark:text-gray-300 mb-2">
-                    No rivers found
-                  </h3>
-                  <p className="text-gray-500 dark:text-gray-400">
+                <div className="empty-state">
+                  <Waves className="empty-state-icon" />
+                  <h3 className="empty-state-title">No rivers found</h3>
+                  <p className="empty-state-description">
                     Try adjusting your search or filter criteria
                   </p>
                 </div>
