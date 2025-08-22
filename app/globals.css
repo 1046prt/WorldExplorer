@@ -17,6 +17,7 @@
 @import "../styles/cultural-lifestyle.css";
 @import "../styles/global-ranking.css";
 @import "../styles/not-found.css";
+@import "../styles/citiespage.css";
 
 @custom-variant dark (&:is(.dark *));
 

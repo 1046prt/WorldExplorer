@@ -4,6 +4,7 @@ import { QuickNavigation } from "@/components/quick-navigation";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { QuizSystem } from "@/components/quiz-system";
 import { CurrencyConverter } from "@/components/currency-converter";
+import { RandomFactGenerator } from "@/components/random-fact-generator";
 import { WeatherWidget } from "@/components/weather-widget";
 import GlobalRankings from "@/components/global-rankings";
 import { InteractiveGames } from "@/components/interactive-games";
@@ -65,6 +66,10 @@ export default function HomePage() {
         <div className="sections-container">
           <div className="section">
             <HistoricalMapSlider />
+          </div>
+
+          <div className="section">
+            <RandomFactGenerator />
           </div>
 
           <div className="section">
