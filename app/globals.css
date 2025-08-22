@@ -6,28 +6,7 @@
 @import "../styles/weather-widget.css";
 @import "../styles/search-bar.css";
 @import "../styles/theme-toggle.css";
-@import "../styles/world-map.css";
-@import "../styles/stats-overview.css";
-@import "../styles/quick-navigation.css";
-@import "../styles/country-header.css";
-@import "../styles/navigation-breadcrumb.css";
-@import "../styles/currency-converter.css";
-@import "../styles/responsive.css";
-@import "../styles/utilities.css";
-@import "../styles/footer.css";
-@import "../styles/cultural-lifestyle.css";
-@import "../styles/global-ranking.css";
-@import "../styles/not-found.css";
-@import "../styles/citiespage.css";
-@import "../styles/country-river.css";
-@import "../styles/landmark-modal.css";
-@import "../styles/country-institutions.css";
-@import "../styles/interactive-filters.css";
-@import "../styles/nature-explorer.css";
-@import "../styles/country-cities.css";
-@import "../styles/language-explorer.css";
-@import "../styles/random-fact-generator.css";
-@import "../styles/navigation-breadcrumb.css";
+
 
 /* Root Variable*/
 :root {
