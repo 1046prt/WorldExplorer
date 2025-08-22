@@ -56,10 +56,35 @@
   padding: var(--spacing-md);
   background: var(--color-muted);
   border-radius: var(--radius-lg);
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: flex-start;
+  transition: all 0.2s ease;
+}
+
+.city-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .dark .city-item {
   background: rgba(55, 65, 81, 0.5); /* gray-700/50 */
+}
+
+.city-image-container {
+  flex-shrink: 0;
+}
+
+.city-image {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.city-content {
+  flex: 1;
+  min-width: 0;
 }
 
 .city-name {
