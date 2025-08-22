@@ -3,9 +3,10 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { GlobalNavigation } from "@/components/global-navigation";
+import { BrowseFilters } from "@/components/browse-filters";
 import Footer from "@/components/footer";
-import { Search, Filter, MapPin, Calendar, Globe, Star } from "lucide-react";
-import "/app/globals.css";
+import { MapPin, Calendar, Globe, Star } from "lucide-react";
+import "@/styles/landmarks-page.css";
 interface Landmark {
   id: string;
   name: string;
@@ -261,96 +262,76 @@ export default function LandmarksPage() {
         <main className="main">
           <div className="sections-container">
             <section className="section">
-              <div className="text-center mb-8">
-                <h1 className="text-4xl font-bold mb-4 flex items-center justify-center gap-3">
-                  <MapPin className="w-8 h-8 text-red-600" />
+              <div className="page-header">
+                <h1 className="page-title">
+                  <MapPin className="page-title-icon" />
                   World Famous Landmarks
                 </h1>
-                <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                <p className="page-description">
                   Discover iconic landmarks and monuments from around the globe
                 </p>
               </div>
             </section>
 
-            <section className="section">
-              <div className="flex flex-col sm:flex-row gap-4 max-w-4xl mx-auto">
-                <div className="relative flex-1">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-                  <input
-                    type="text"
-                    placeholder="Search landmarks, cities, or countries..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                  />
-                </div>
-                <div className="relative">
-                  <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-                  <select
-                    value={selectedType}
-                    onChange={(e) => setSelectedType(e.target.value)}
-                    className="pl-10 pr-8 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-red-500 focus:border-transparent min-w-[160px]"
-                  >
-                    {types.map((type) => (
-                      <option key={type} value={type}>
-                        {type}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-            </section>
+            <BrowseFilters
+              searchTerm={searchTerm}
+              onSearchChange={setSearchTerm}
+              searchPlaceholder="Search landmarks, cities, or countries..."
+              filterValue={selectedType}
+              onFilterChange={setSelectedType}
+              filterOptions={types}
+              filterLabel="Filter by type"
+            />
 
             <section className="section">
-              <div className="grid-layout grid-3">
+              <div className="landmarks-grid">
                 {filteredLandmarks.map((landmark) => (
-                  <div
-                    key={landmark.id}
-                    className="card hover:shadow-lg transition-all duration-200 hover:scale-105"
-                  >
-                    <div className="p-6">
-                      <div className="flex items-center justify-between mb-4">
-                        <span className="text-3xl">{landmark.flag}</span>
-                        <span className="px-2 py-1 bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200 rounded-full text-xs font-medium">
-                          {landmark.type}
+                  <div key={landmark.id} className="landmark-card">
+                    <div className="landmark-card-header">
+                      <span className="landmark-flag">{landmark.flag}</span>
+                      <span className="landmark-type-badge">
+                        {landmark.type}
+                      </span>
+                    </div>
+
+                    <h3 className="landmark-name">{landmark.name}</h3>
+                    <p className="landmark-description">
+                      {landmark.description}
+                    </p>
+
+                    <div className="landmark-details">
+                      <div className="landmark-detail-item">
+                        <MapPin className="landmark-detail-icon" />
+                        <span className="landmark-detail-text">
+                          {landmark.city}, {landmark.country}
                         </span>
                       </div>
-
-                      <h3 className="text-xl font-semibold mb-2">
-                        {landmark.name}
-                      </h3>
-                      <p className="text-sm text-gray-600 dark:text-gray-300 mb-3">
-                        {landmark.description}
-                      </p>
-
-                      <div className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
-                        <div className="flex items-center gap-2">
-                          <MapPin className="w-4 h-4" />
-                          <span>
-                            {landmark.city}, {landmark.country}
-                          </span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <Calendar className="w-4 h-4" />
-                          <span>Built: {landmark.built}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <Star className="w-4 h-4" />
-                          <span>{landmark.significance}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <Globe className="w-4 h-4" />
-                          <span>{landmark.visitors}</span>
-                        </div>
+                      <div className="landmark-detail-item">
+                        <Calendar className="landmark-detail-icon" />
+                        <span className="landmark-detail-text">
+                          Built: {landmark.built}
+                        </span>
                       </div>
-
-                      <Link
-                        href={`/country/${landmark.countryCode.toLowerCase()}`}
-                        className="inline-flex items-center text-red-600 hover:text-red-700 font-medium text-sm transition-colors mt-4"
-                      >
-                        View Country →
-                      </Link>
+                      <div className="landmark-detail-item">
+                        <Star className="landmark-detail-icon" />
+                        <span className="landmark-detail-text">
+                          {landmark.significance}
+                        </span>
+                      </div>
+                      <div className="landmark-detail-item">
+                        <Globe className="landmark-detail-icon" />
+                        <span className="landmark-detail-text">
+                          {landmark.visitors}
+                        </span>
+                      </div>
                     </div>
+
+                    <Link
+                      href={`/country/${landmark.countryCode.toLowerCase()}`}
+                      className="landmark-link"
+                    >
+                      View Country →
+                    </Link>
                   </div>
                 ))}
               </div>
@@ -358,12 +339,10 @@ export default function LandmarksPage() {
 
             {filteredLandmarks.length === 0 && (
               <section className="section">
-                <div className="text-center py-12">
-                  <MapPin className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-gray-600 dark:text-gray-300 mb-2">
-                    No landmarks found
-                  </h3>
-                  <p className="text-gray-500 dark:text-gray-400">
+                <div className="empty-state">
+                  <MapPin className="empty-state-icon" />
+                  <h3 className="empty-state-title">No landmarks found</h3>
+                  <p className="empty-state-description">
                     Try adjusting your search or filter criteria
                   </p>
                 </div>
