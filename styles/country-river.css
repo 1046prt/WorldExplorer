@@ -50,11 +50,11 @@
 .rivers-list {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-md);
+  gap: var(--spacing-sm);
 }
 
 .river-item {
-  padding: var(--spacing-md);
+  padding: var(--spacing-sm);
   background: linear-gradient(
     90deg,
     var(--color-accent) 0%,

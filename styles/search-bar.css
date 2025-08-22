@@ -7,7 +7,7 @@
 .search-form {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.25rem;
 }
 
 .search-input-wrapper {
@@ -94,13 +94,14 @@
 
 .search-result-item {
   width: 100%;
-  padding: 0.75rem 1rem;
+  padding: 0.5rem 0.75rem;
   text-align: left;
   border: none;
   background: transparent;
   cursor: pointer;
   transition: all var(--transition-fast);
   border-bottom: 1px solid var(--color-border);
+  text-decoration: none;
 }
 
 .search-result-item:last-child {
@@ -143,6 +144,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   margin: 0;
+  text-decoration: none;
 }
 
 .search-result-badge {
@@ -162,6 +164,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   margin: 0;
+  text-decoration: none;
 }
 
 .search-results-footer {
@@ -203,7 +206,7 @@
   .search-form {
     flex-direction: row;
     align-items: center;
-    gap: var(--spacing-sm);
+    gap: var(--spacing-xs);
   }
 
   .search-input {
