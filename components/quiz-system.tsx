@@ -1,9 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { Trophy, RefreshCw, Flag, MapPin, Clock } from "lucide-react";
 import Image from "next/image";
 
@@ -84,7 +81,7 @@ export function QuizSystem() {
         setTimeLeft((timeLeft) => timeLeft - 1);
       }, 1000);
     } else if (timeLeft === 0 && !showResult) {
-      handleAnswer(-1); // Auto-submit when time runs out
+      handleAnswer(-1);
     }
     return () => {
       if (interval) clearInterval(interval);
@@ -131,142 +128,128 @@ export function QuizSystem() {
   const getQuizIcon = (type: string) => {
     switch (type) {
       case "flag":
-        return <Flag className="w-5 h-5" />;
+        return <Flag className="icon" />;
       case "capital":
-        return <MapPin className="w-5 h-5" />;
+        return <MapPin className="icon" />;
       case "landmark":
-        return <Trophy className="w-5 h-5" />;
+        return <Trophy className="icon" />;
       default:
-        return <Trophy className="w-5 h-5" />;
+        return <Trophy className="icon" />;
     }
   };
 
   if (quizComplete) {
     return (
-      <Card className="p-6 bg-gradient-to-br from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20">
-        <div className="text-center">
-          <Trophy className="w-16 h-16 text-yellow-500 mx-auto mb-4" />
-          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-            Quiz Complete!
-          </h3>
-          <p className="text-lg text-gray-600 dark:text-gray-400 mb-4">
+      <div className="card quiz-card gradient-success">
+        <div className="quiz-center">
+          <Trophy className="quiz-trophy" />
+          <h3 className="quiz-title">Quiz Complete!</h3>
+          <p className="quiz-subtitle">
             You scored {score} out of {quizQuestions.length}
           </p>
-          <div className="mb-6">
-            <Badge
-              variant={
+          <div className="quiz-badge">
+            <span
+              className={`badge ${
                 score >= 4
-                  ? "default"
+                  ? "badge-success"
                   : score >= 2
-                  ? "secondary"
-                  : "destructive"
-              }
-              className="text-lg px-4 py-2"
+                  ? "badge-neutral"
+                  : "badge-danger"
+              }`}
             >
               {score >= 4
                 ? "Excellent!"
                 : score >= 2
                 ? "Good Job!"
                 : "Keep Learning!"}
-            </Badge>
+            </span>
           </div>
-          <Button onClick={resetQuiz} className="bg-blue-600 hover:bg-blue-700">
-            <RefreshCw className="w-4 h-4 mr-2" />
-            Try Again
-          </Button>
+          <button onClick={resetQuiz} className="btn btn-primary">
+            <RefreshCw className="icon-sm" /> Try Again
+          </button>
         </div>
-      </Card>
+      </div>
     );
   }
 
   const question = quizQuestions[currentQuestion];
 
   return (
-    <Card className="p-6 bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm">
-      <div className="flex items-center justify-between mb-6">
-        <div className="flex items-center gap-3">
+    <div className="card quiz-card">
+      <div className="quiz-header">
+        <div className="quiz-info">
           {getQuizIcon(question.type)}
           <div>
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-              Geography Quiz
-            </h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
+            <h3 className="quiz-heading">Geography Quiz</h3>
+            <p className="quiz-progress">
               Question {currentQuestion + 1} of {quizQuestions.length}
             </p>
           </div>
         </div>
-        <div className="flex items-center gap-4">
-          <div className="flex items-center gap-2">
-            <Clock className="w-4 h-4 text-orange-500" />
+        <div className="quiz-status">
+          <div className="quiz-timer">
+            <Clock className="icon-sm text-warning" />
             <span
-              className={`font-bold ${
-                timeLeft <= 10
-                  ? "text-red-500"
-                  : "text-gray-700 dark:text-gray-300"
+              className={`quiz-time ${
+                timeLeft <= 10 ? "text-danger" : "text-muted"
               }`}
             >
               {timeLeft}s
             </span>
           </div>
-          <Badge variant="outline">Score: {score}</Badge>
+          <span className="badge outline">Score: {score}</span>
         </div>
       </div>
 
       {!isActive && !showResult && (
-        <div className="text-center py-8">
-          <Button
-            onClick={startQuiz}
-            className="bg-green-600 hover:bg-green-700"
-          >
+        <div className="quiz-center">
+          <button onClick={startQuiz} className="btn btn-success">
             Start Quiz
-          </Button>
+          </button>
         </div>
       )}
 
       {isActive && !showResult && (
-        <div className="space-y-6">
-          <div className="text-center">
-            <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-              {question.question}
-            </h4>
+        <div className="quiz-body">
+          <div className="quiz-question">
+            <h4 className="quiz-question-text">{question.question}</h4>
             {question.image && (
-              <div className="relative w-48 h-32 mx-auto mb-6 rounded-lg overflow-hidden">
+              <div className="quiz-image">
                 <Image
                   src={question.image || "/placeholder.svg"}
                   alt="Quiz question"
                   fill
-                  className="object-cover"
+                  className="img-cover"
                 />
               </div>
             )}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <div className="quiz-options">
             {question.options.map((option, index) => (
-              <Button
+              <button
                 key={index}
-                variant="outline"
                 onClick={() => handleAnswer(index)}
-                className="p-4 h-auto text-left justify-start hover:bg-blue-50 dark:hover:bg-blue-900/20"
+                className="btn btn-option"
               >
-                <span className="font-medium mr-3 text-blue-600 dark:text-blue-400">
+                <span className="option-label">
                   {String.fromCharCode(65 + index)}.
                 </span>
                 {option}
-              </Button>
+              </button>
             ))}
           </div>
         </div>
       )}
 
       {showResult && (
-        <div className="space-y-6">
-          <div className="text-center">
+        <div className="quiz-body">
+          <div className="quiz-result">
             <div
-              className={`text-lg font-bold mb-2 ${
+              className={`quiz-feedback ${
                 selectedAnswer === question.correct
-                  ? "text-green-600"
-                  : "text-red-600"
+                  ? "text-success"
+                  : "text-danger"
               }`}
             >
               {selectedAnswer === question.correct
@@ -274,31 +257,28 @@ export function QuizSystem() {
                 : "❌ Incorrect"}
             </div>
             {selectedAnswer !== question.correct && (
-              <p className="text-gray-600 dark:text-gray-400">
+              <p className="quiz-answer">
                 The correct answer was:{" "}
                 <strong>{question.options[question.correct]}</strong>
               </p>
             )}
           </div>
 
-          <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
-            <p className="text-sm text-gray-700 dark:text-gray-300">
+          <div className="quiz-explanation">
+            <p>
               <strong>Did you know?</strong> {question.explanation}
             </p>
           </div>
 
-          <div className="text-center">
-            <Button
-              onClick={nextQuestion}
-              className="bg-blue-600 hover:bg-blue-700"
-            >
+          <div className="quiz-center">
+            <button onClick={nextQuestion} className="btn btn-primary">
               {currentQuestion < quizQuestions.length - 1
                 ? "Next Question"
                 : "Finish Quiz"}
-            </Button>
+            </button>
           </div>
         </div>
       )}
-    </Card>
+    </div>
   );
 }
