@@ -59,32 +59,32 @@ export function InteractiveFilters({
   const hasActiveFilters = filters.search || filters.region || filters.sortBy;
 
   return (
-    <Card className="p-4">
-      <div className="flex items-center gap-2 mb-4">
-        <Filter className="h-4 w-4" />
-        <h3 className="font-semibold">Filters</h3>
+    <Card className="interactive-filters">
+      <div className="filters-header">
+        <Filter className="icon small" />
+        <h3 className="filters-title">Filters</h3>
         {hasActiveFilters && (
-          <Badge variant="secondary" className="ml-auto">
+          <Badge variant="secondary" className="filters-badge">
             Active
           </Badge>
         )}
       </div>
 
-      <div className="space-y-4">
+      <div className="filters-body">
         {/* Search Input */}
-        <div className="relative">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+        <div className="search-wrapper">
+          <Search className="icon search-icon" />
           <Input
             placeholder="Search..."
             value={filters.search}
             onChange={(e) => updateFilters({ search: e.target.value })}
-            className="pl-10"
+            className="search-input"
           />
         </div>
 
         {/* Region Filter */}
-        <div>
-          <label className="text-sm font-medium mb-2 block">Region</label>
+        <div className="filter-group">
+          <label className="filter-label">Region</label>
           <Select
             value={filters.region}
             onValueChange={(value) => updateFilters({ region: value })}
@@ -104,14 +104,14 @@ export function InteractiveFilters({
         </div>
 
         {/* Sort Options */}
-        <div>
-          <label className="text-sm font-medium mb-2 block">Sort by</label>
-          <div className="flex gap-2">
+        <div className="filter-group">
+          <label className="filter-label">Sort by</label>
+          <div className="sort-controls">
             <Select
               value={filters.sortBy}
               onValueChange={(value) => updateFilters({ sortBy: value })}
             >
-              <SelectTrigger className="flex-1">
+              <SelectTrigger className="sort-select">
                 <SelectValue placeholder="Sort by..." />
               </SelectTrigger>
               <SelectContent>
@@ -134,9 +134,9 @@ export function InteractiveFilters({
               disabled={!filters.sortBy}
             >
               {filters.sortOrder === "asc" ? (
-                <SortAsc className="h-4 w-4" />
+                <SortAsc className="icon small" />
               ) : (
-                <SortDesc className="h-4 w-4" />
+                <SortDesc className="icon small" />
               )}
             </Button>
           </div>
@@ -144,7 +144,7 @@ export function InteractiveFilters({
 
         {/* Clear Filters */}
         {hasActiveFilters && (
-          <Button variant="outline" onClick={clearFilters} className="w-full">
+          <Button variant="outline" onClick={clearFilters} className="clear-btn">
             Clear Filters
           </Button>
         )}

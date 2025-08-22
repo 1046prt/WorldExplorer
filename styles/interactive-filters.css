@@ -1,0 +1,89 @@
+/* Wrapper */
+.interactive-filters {
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+/* Header */
+.filters-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.filters-title {
+  font-weight: 600;
+  color: var(--color-foreground);
+}
+
+.filters-badge {
+  margin-left: auto;
+}
+
+/* Body */
+.filters-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+/* Search */
+.search-wrapper {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  left: var(--spacing-md);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-muted-foreground);
+}
+
+.search-input {
+  padding-left: 2.25rem; /* space for icon */
+}
+
+/* Filters */
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.filter-label {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  margin-bottom: var(--spacing-xs);
+}
+
+/* Sort */
+.sort-controls {
+  display: flex;
+  gap: var(--spacing-sm);
+  align-items: center;
+}
+
+.sort-select {
+  flex: 1;
+}
+
+/* Clear button */
+.clear-btn {
+  width: 100%;
+}
+
+/* Icons */
+.icon {
+  width: 20px;
+  height: 20px;
+  color: var(--color-primary);
+}
+
+.icon.small {
+  width: 16px;
+  height: 16px;
+}

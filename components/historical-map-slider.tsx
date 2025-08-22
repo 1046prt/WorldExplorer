@@ -110,7 +110,7 @@ export function HistoricalMapSlider() {
         </div>
 
         <div className="flex-row" style={{ marginTop: "1rem" }}>
-          <span>1900</span>
+          <span>1800</span>
           <input
             type="range"
             min="1800"
