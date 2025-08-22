@@ -74,12 +74,12 @@ export function QuickNavigation() {
   const popularSearches = [
     "United States",
     "France",
+    "Japan",
+    "China",
+    "India",
     "Eiffel Tower",
-    "Harvard University",
-    "Tokyo",
+    "Taj Mahal",
     "Great Wall of China",
-    "Amazon River",
-    "London",
   ];
 
   return (

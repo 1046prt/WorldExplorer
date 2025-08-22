@@ -1,4 +1,5 @@
 import { Building2 } from "lucide-react";
+import { OptimizedImage } from "@/components/ui/optimized-image";
 import type { Country } from "@/lib/types";
 import "@/styles/country-cities.css";
 interface CountryCitiesProps {
@@ -17,8 +18,20 @@ export function CountryCities({ country }: CountryCitiesProps) {
       <div className="city-list">
         {country.famousCities.map((city) => (
           <div key={city.slug} className="city-item">
-            <h3 className="city-name">{city.name}</h3>
-            <p className="city-desc">{city.whyFamous}</p>
+            <div className="city-image-container">
+              <OptimizedImage
+                src={city.image || `/images/cities/${city.slug}.jpg`}
+                alt={city.name}
+                width={120}
+                height={80}
+                className="city-image object-cover rounded-lg"
+                sizes="120px"
+              />
+            </div>
+            <div className="city-content">
+              <h3 className="city-name">{city.name}</h3>
+              <p className="city-desc">{city.whyFamous}</p>
+            </div>
           </div>
         ))}
       </div>

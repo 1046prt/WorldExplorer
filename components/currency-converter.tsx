@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { ArrowRightLeft, DollarSign } from "lucide-react";
-import "@/styles/currency-converter.css"; 
+// Removed OptimizedImage import - no longer using images
+import "@/styles/currency-converter.css";
 
 interface Currency {
   code: string;
@@ -131,6 +132,7 @@ export function CurrencyConverter() {
                 </option>
               ))}
             </select>
+            <div className="currency-flag">{fromCurrencyData?.flag}</div>
           </div>
 
           <div className="form-group">
@@ -146,6 +148,7 @@ export function CurrencyConverter() {
                 </option>
               ))}
             </select>
+            <div className="currency-flag">{toCurrencyData?.flag}</div>
           </div>
         </div>
 

@@ -1,10 +1,10 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { OptimizedImage } from "@/components/ui/optimized-image";
 import { MapPin, ExternalLink } from "lucide-react";
 import { LandmarkModal } from "@/components/landmark-modal";
 import type { Country } from "@/lib/types";
-import Image from "next/image";
 import "@/styles/country-landmarks.css";
 
 interface CountryLandmarksProps {
@@ -32,10 +32,12 @@ export function CountryLandmarks({ country }: CountryLandmarksProps) {
           >
             <Card className="landmark-card">
               <div className="landmark-image">
-                <Image
-                  src={landmark.imagePath || "/placeholder.svg"}
+                <OptimizedImage
+                  src={landmark.imagePath || "/images/placeholder.svg"}
                   alt={landmark.name}
                   fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>
               <div className="landmark-content">
