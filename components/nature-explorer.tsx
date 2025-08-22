@@ -33,6 +33,20 @@ const natureData = {
       area: "9.2M km²",
       coordinates: "23.4162°N, 25.6628°E",
     },
+    {
+      name: "Grand Canyon",
+      type: "Canyon",
+      country: "United States",
+      depth: "1,857m",
+      coordinates: "36.1069°N, 112.1129°W",
+    },
+    {
+      name: "Victoria Falls",
+      type: "Waterfall",
+      country: "Zambia/Zimbabwe",
+      height: "108m",
+      coordinates: "17.9243°S, 25.8572°E",
+    },
   ],
   volcanoes: [
     {
@@ -63,6 +77,20 @@ const natureData = {
       type: "Stratovolcano",
       status: "Dormant",
     },
+    {
+      name: "Mount Etna",
+      country: "Italy",
+      lastEruption: "2023",
+      type: "Stratovolcano",
+      status: "Active",
+    },
+    {
+      name: "Kilauea",
+      country: "USA (Hawaii)",
+      lastEruption: "2023",
+      type: "Shield Volcano",
+      status: "Active",
+    },
   ],
   migrations: [
     {
@@ -89,19 +117,43 @@ const natureData = {
       distance: "8,000 km",
       season: "Winter",
     },
+    {
+      species: "Gray Whale",
+      route: "Alaska to Mexico",
+      distance: "20,000 km",
+      season: "Winter/Summer",
+    },
+    {
+      species: "Caribou",
+      route: "Arctic Tundra",
+      distance: "5,000 km",
+      season: "Spring/Fall",
+    },
   ],
   rivers: [
     {
       name: "Nile",
       length: "6,650 km",
-      countries: "Egypt, Sudan, Uganda, Ethiopia, more",
+      countries: "Egypt, Sudan, Uganda, Ethiopia",
       outflow: "Mediterranean Sea",
     },
     {
       name: "Amazon River",
       length: "6,400 km",
-      countries: "Brazil, Peru, Colombia, more",
+      countries: "Brazil, Peru, Colombia",
       outflow: "Atlantic Ocean",
+    },
+    {
+      name: "Yangtze",
+      length: "6,300 km",
+      countries: "China",
+      outflow: "East China Sea",
+    },
+    {
+      name: "Mississippi",
+      length: "3,734 km",
+      countries: "United States",
+      outflow: "Gulf of Mexico",
     },
     {
       name: "Ganges",
@@ -109,25 +161,75 @@ const natureData = {
       countries: "India, Bangladesh",
       outflow: "Bay of Bengal",
     },
+    {
+      name: "Danube",
+      length: "2,850 km",
+      countries: "Germany, Austria, Hungary, Romania",
+      outflow: "Black Sea",
+    },
   ],
   climates: [
     {
       zone: "Tropical",
       temperature: "20-30°C",
-      rainfall: "Heavy",
+      rainfall: "Heavy (>2000mm/year)",
       regions: "Amazon, Congo Basin, Southeast Asia",
     },
     {
       zone: "Desert",
-      temperature: ">40°C daytime, <10°C night",
-      rainfall: "Minimal",
+      temperature: ">40°C day, <10°C night",
+      rainfall: "Minimal (<250mm/year)",
       regions: "Sahara, Arabian Desert, Gobi",
     },
     {
       zone: "Polar",
       temperature: "-40 to 0°C",
-      rainfall: "Snow/Ice",
+      rainfall: "Snow/Ice (<250mm/year)",
       regions: "Antarctica, Arctic Circle",
+    },
+    {
+      zone: "Temperate",
+      temperature: "0-20°C",
+      rainfall: "Moderate (500-1500mm/year)",
+      regions: "Europe, North America, East Asia",
+    },
+    {
+      zone: "Mediterranean",
+      temperature: "10-25°C",
+      rainfall: "Seasonal (300-900mm/year)",
+      regions: "Mediterranean Basin, California, Chile",
+    },
+    {
+      zone: "Monsoon",
+      temperature: "20-35°C",
+      rainfall: "Seasonal Heavy (1000-3000mm/year)",
+      regions: "South Asia, Southeast Asia",
+    },
+  ],
+  ecosystems: [
+    {
+      name: "Coral Reefs",
+      biodiversity: "25% of marine species",
+      threats: "Bleaching, pollution, overfishing",
+      locations: "Great Barrier Reef, Caribbean, Red Sea",
+    },
+    {
+      name: "Rainforests",
+      biodiversity: "50% of terrestrial species",
+      threats: "Deforestation, climate change",
+      locations: "Amazon, Congo, Southeast Asia",
+    },
+    {
+      name: "Wetlands",
+      biodiversity: "40% of species depend on them",
+      threats: "Drainage, pollution, development",
+      locations: "Everglades, Pantanal, Okavango Delta",
+    },
+    {
+      name: "Grasslands",
+      biodiversity: "Large herbivore ecosystems",
+      threats: "Agriculture, overgrazing",
+      locations: "Serengeti, Great Plains, Pampas",
     },
   ],
 };
@@ -162,20 +264,25 @@ export function NatureExplorer() {
 
       <div className="card-content">
         <div className="tabs">
-          <div className="tabs-list grid grid-cols-5">
-            {["wonders", "volcanoes", "migrations", "rivers", "climates"].map(
-              (cat) => (
-                <button
-                  key={cat}
-                  className={`tabs-trigger ${
-                    selectedCategory === cat ? "active" : ""
-                  }`}
-                  onClick={() => setSelectedCategory(cat)}
-                >
-                  {cat.charAt(0).toUpperCase() + cat.slice(1)}
-                </button>
-              )
-            )}
+          <div className="tabs-list nature-tabs">
+            {[
+              "wonders",
+              "volcanoes",
+              "migrations",
+              "rivers",
+              "climates",
+              "ecosystems",
+            ].map((cat) => (
+              <button
+                key={cat}
+                className={`tabs-trigger ${
+                  selectedCategory === cat ? "active" : ""
+                }`}
+                onClick={() => setSelectedCategory(cat)}
+              >
+                {cat.charAt(0).toUpperCase() + cat.slice(1)}
+              </button>
+            ))}
           </div>
 
           {/* Wonders */}
@@ -216,7 +323,146 @@ export function NatureExplorer() {
             </div>
           )}
 
-          {/* (Repeat similar structure for volcanoes, migrations, rivers, climates) */}
+          {/* Volcanoes */}
+          {selectedCategory === "volcanoes" && (
+            <div className="nature-grid">
+              {filterData(natureData.volcanoes, [
+                "name",
+                "country",
+                "type",
+              ]).map((volcano, i) => (
+                <div key={i} className="nature-card">
+                  <div className="nature-card-header">
+                    <h3 className="nature-card-title">🌋 {volcano.name}</h3>
+                    <span
+                      className={`nature-badge ${volcano.status.toLowerCase()}`}
+                    >
+                      {volcano.status}
+                    </span>
+                  </div>
+                  <div className="nature-card-content">
+                    <p>
+                      <strong>Country:</strong> {volcano.country}
+                    </p>
+                    <p>
+                      <strong>Type:</strong> {volcano.type}
+                    </p>
+                    <p>
+                      <strong>Last Eruption:</strong> {volcano.lastEruption}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* Migrations */}
+          {selectedCategory === "migrations" && (
+            <div className="nature-grid">
+              {filterData(natureData.migrations, ["species", "route"]).map(
+                (migration, i) => (
+                  <div key={i} className="nature-card">
+                    <div className="nature-card-header">
+                      <h3 className="nature-card-title">
+                        🦅 {migration.species}
+                      </h3>
+                      <span className="nature-badge">{migration.season}</span>
+                    </div>
+                    <div className="nature-card-content">
+                      <p>
+                        <strong>Route:</strong> {migration.route}
+                      </p>
+                      <p>
+                        <strong>Distance:</strong> {migration.distance}
+                      </p>
+                      <p>
+                        <strong>Season:</strong> {migration.season}
+                      </p>
+                    </div>
+                  </div>
+                )
+              )}
+            </div>
+          )}
+
+          {/* Rivers */}
+          {selectedCategory === "rivers" && (
+            <div className="nature-grid">
+              {filterData(natureData.rivers, ["name", "countries"]).map(
+                (river, i) => (
+                  <div key={i} className="nature-card">
+                    <div className="nature-card-header">
+                      <h3 className="nature-card-title">🌊 {river.name}</h3>
+                      <span className="nature-badge">{river.length}</span>
+                    </div>
+                    <div className="nature-card-content">
+                      <p>
+                        <strong>Length:</strong> {river.length}
+                      </p>
+                      <p>
+                        <strong>Countries:</strong> {river.countries}
+                      </p>
+                      <p>
+                        <strong>Outflow:</strong> {river.outflow}
+                      </p>
+                    </div>
+                  </div>
+                )
+              )}
+            </div>
+          )}
+
+          {/* Climates */}
+          {selectedCategory === "climates" && (
+            <div className="nature-grid">
+              {filterData(natureData.climates, ["zone", "regions"]).map(
+                (climate, i) => (
+                  <div key={i} className="nature-card">
+                    <div className="nature-card-header">
+                      <h3 className="nature-card-title">🌡️ {climate.zone}</h3>
+                    </div>
+                    <div className="nature-card-content">
+                      <p>
+                        <strong>Temperature:</strong> {climate.temperature}
+                      </p>
+                      <p>
+                        <strong>Rainfall:</strong> {climate.rainfall}
+                      </p>
+                      <p>
+                        <strong>Regions:</strong> {climate.regions}
+                      </p>
+                    </div>
+                  </div>
+                )
+              )}
+            </div>
+          )}
+
+          {/* Ecosystems */}
+          {selectedCategory === "ecosystems" && (
+            <div className="nature-grid">
+              {filterData(natureData.ecosystems, ["name", "locations"]).map(
+                (ecosystem, i) => (
+                  <div key={i} className="nature-card">
+                    <div className="nature-card-header">
+                      <h3 className="nature-card-title">🌿 {ecosystem.name}</h3>
+                    </div>
+                    <div className="nature-card-content">
+                      <p>
+                        <strong>Biodiversity:</strong> {ecosystem.biodiversity}
+                      </p>
+                      <p>
+                        <strong>Threats:</strong> {ecosystem.threats}
+                      </p>
+                      <p>
+                        <strong>Locations:</strong> {ecosystem.locations}
+                      </p>
+                    </div>
+                  </div>
+                )
+              )}
+            </div>
+          )}
         </div>
       </div>
     </div>
