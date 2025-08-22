@@ -1,11 +1,9 @@
-import { SearchBar } from "@/components/search-bar";
+import { GlobalNavigation } from "@/components/global-navigation";
 import { StatsOverview } from "@/components/stats-overview";
 import { QuickNavigation } from "@/components/quick-navigation";
-import { ThemeToggle } from "@/components/theme-toggle";
 import { QuizSystem } from "@/components/quiz-system";
 import { CurrencyConverter } from "@/components/currency-converter";
 import { RandomFactGenerator } from "@/components/random-fact-generator";
-import { WeatherWidget } from "@/components/weather-widget";
 import GlobalRankings from "@/components/global-rankings";
 import { InteractiveGames } from "@/components/interactive-games";
 import { EnvironmentDashboard } from "@/components/environment-dashboard";
@@ -17,100 +15,69 @@ import Footer from "@/components/footer";
 
 export default function HomePage() {
   return (
-    <div className="page-background">
-      <header className="header">
-        <div className="header-container">
-          <div className="header-content">
-            <div className="header-brand">
-              <div className="header-logo">
-                <span
-                  style={{
-                    color: "white",
-                    fontWeight: "bold",
-                    fontSize: "1.125rem",
-                  }}
-                >
-                  🌍
-                </span>
-              </div>
-              <div>
-                <h1 className="header-title">WorldExplorer</h1>
-                <p className="header-subtitle">
-                  Discover the world's knowledge
-                </p>
-              </div>
-            </div>
-            <div className="header-actions">
-              <SearchBar />
-              <ThemeToggle />
-            </div>
-          </div>
-        </div>
-      </header>
-
-      <main className="main">
-        <div className="main-hero">
-          <h2 className="main-hero-title">Explore Countries & Cultures</h2>
-          <p className="main-hero-description">
-            Click on any country to discover its history, landmarks, cities, and
-            more
-          </p>
-        </div>
-
-        <StatsOverview />
-
-        <div className="section">
-          <QuickNavigation />
-        </div>
-
-        <div className="sections-container">
-          <div className="section">
-            <HistoricalMapSlider />
+    <div className="page-wrapper page-background">
+      <GlobalNavigation currentPage="home" />
+      <div className="page-content">
+        <main className="main">
+          <div className="main-hero">
+            <h2 className="main-hero-title">Explore Countries & Cultures</h2>
+            <p className="main-hero-description">
+              Click on any country to discover its history, landmarks, cities,
+              and more
+            </p>
           </div>
 
-          <div className="section">
-            <RandomFactGenerator />
-          </div>
+          <StatsOverview />
 
-          <div className="section">
-            <CultureLifestyle />
-          </div>
+          <div className="sections-container">
+            <section className="section">
+              <QuickNavigation />
+            </section>
 
-          <div className="section">
-            <NatureExplorer />
-          </div>
+            <section className="section">
+              <HistoricalMapSlider />
+            </section>
 
-          <div className="section">
-            <GlobalRankings />
-          </div>
+            <section className="section">
+              <RandomFactGenerator />
+            </section>
 
-          <div className="section">
-            <LanguageExplorer />
-          </div>
+            <section className="section">
+              <CultureLifestyle />
+            </section>
 
-          <div className="section">
-            <div className="grid-layout grid-2">
-              <QuizSystem />
+            <section className="section">
+              <NatureExplorer />
+            </section>
+
+            <section className="section">
+              <GlobalRankings />
+            </section>
+
+            <section className="section">
+              <LanguageExplorer />
+            </section>
+
+            <section className="section">
               <CurrencyConverter />
-            </div>
-          </div>
+            </section>
 
-          <div className="section">
-            <WeatherWidget />
-          </div>
-
-          <div className="section">
-            <div className="grid-layout grid-2">
-              <InteractiveGames />
+            <section className="section">
               <EnvironmentDashboard />
-            </div>
-          </div>
-        </div>
-      </main>
+            </section>
 
-      <div>
-        <Footer />
+            <section className="section">
+              <QuizSystem />
+            </section>
+
+            <section className="section">
+              <InteractiveGames />
+            </section>
+          </div>
+        </main>
       </div>
+
+      <Footer />
     </div>
   );
 }
