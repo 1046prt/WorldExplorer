@@ -178,6 +178,26 @@
   padding: 0;
 }
 
+/* Remove underlines globally */
+a,
+button,
+span,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div {
+  text-decoration: none;
+}
+
+a:hover,
+button:hover {
+  text-decoration: none;
+}
+
 html {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     sans-serif;
