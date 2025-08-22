@@ -29,7 +29,7 @@
 .institutions-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--spacing-md);
+  gap: var(--spacing-sm);
 }
 
 @media (min-width: 768px) {
@@ -39,7 +39,7 @@
 }
 
 .institution-card {
-  padding: var(--spacing-md);
+  padding: var(--spacing-sm);
   transition: box-shadow var(--transition-normal);
 }
 
