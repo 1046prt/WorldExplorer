@@ -1,18 +1,16 @@
 /* Theme Toggle Styles */
-
 .theme-toggle {
   position: relative;
   width: 2.25rem;
   height: 2.25rem;
-  padding: 0;
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--accent);
   background-color: var(--color-background);
   border-radius: var(--radius-md);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all var(--transition-fast);
+  transition: background-color var(--transition-fast), color var(--transition-fast);
   box-shadow: var(--shadow-sm);
 }
 
@@ -26,32 +24,39 @@
   outline-offset: 2px;
 }
 
+/* Icon container */
 .theme-toggle-icon {
+  position: absolute;
   width: 1rem;
   height: 1rem;
-  transition: all var(--transition-fast);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
 }
 
+/* Sun icon */
 .theme-toggle-sun {
-  position: relative;
   transform: rotate(0deg) scale(1);
+  opacity: 1;
 }
 
+/* Moon icon */
 .theme-toggle-moon {
-  position: absolute;
-  transform: rotate(90deg) scale(0);
+  transform: rotate(-90deg) scale(0);
+  opacity: 0;
 }
 
 /* Dark theme states */
 .dark .theme-toggle-sun {
-  transform: rotate(-90deg) scale(0);
+  transform: rotate(90deg) scale(0);
+  opacity: 0;
 }
 
 .dark .theme-toggle-moon {
-  position: relative;
   transform: rotate(0deg) scale(1);
+  opacity: 1;
 }
 
+/* Visually hidden text for screen readers */
 .theme-toggle-sr-only {
   position: absolute;
   width: 1px;
