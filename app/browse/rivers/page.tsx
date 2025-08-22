@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import { GlobalNavigation } from "@/components/global-navigation";
+import Footer from "@/components/footer";
 import { Search, Filter, Waves, MapPin, Ruler, Globe } from "lucide-react";
 import "/app/globals.css";
 interface River {
@@ -210,125 +212,148 @@ export default function RiversPage() {
   });
 
   return (
-    <div className="page-background">
-      <div className="container mx-auto px-4 py-8">
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold mb-4 flex items-center gap-3">
-            <Waves className="w-8 h-8 text-cyan-600" />
-            Major Rivers of the World
-          </h1>
-          <p className="text-gray-600 dark:text-gray-300">
-            Explore the world's most important river systems and waterways
-          </p>
-        </div>
-
-        <div className="mb-6 flex flex-col sm:flex-row gap-4">
-          <div className="relative flex-1">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-            <input
-              type="text"
-              placeholder="Search rivers or countries..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-            />
-          </div>
-          <div className="relative">
-            <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-            <select
-              value={selectedContinent}
-              onChange={(e) => setSelectedContinent(e.target.value)}
-              className="pl-10 pr-8 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-            >
-              {continents.map((continent) => (
-                <option key={continent} value={continent}>
-                  {continent}
-                </option>
-              ))}
-            </select>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredRivers.map((river) => (
-            <div
-              key={river.id}
-              className="card hover:shadow-lg transition-all duration-200 hover:scale-105"
-            >
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-1">
-                    {river.flags.slice(0, 3).map((flag, index) => (
-                      <span key={index} className="text-xl">
-                        {flag}
-                      </span>
-                    ))}
-                    {river.flags.length > 3 && (
-                      <span className="text-sm text-gray-500 dark:text-gray-400">
-                        +{river.flags.length - 3}
-                      </span>
-                    )}
-                  </div>
-                  <span className="text-xs text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded">
-                    {river.continent}
-                  </span>
-                </div>
-
-                <h3 className="text-xl font-semibold mb-2">{river.name}</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-300 mb-3">
-                  {river.description}
+    <div className="page-wrapper page-background">
+      <GlobalNavigation
+        showBackButton={true}
+        backHref="/"
+        currentPage="rivers"
+      />
+      <div className="page-content">
+        <main className="main">
+          <div className="sections-container">
+            <section className="section">
+              <div className="text-center mb-8">
+                <h1 className="text-4xl font-bold mb-4 flex items-center justify-center gap-3">
+                  <Waves className="w-8 h-8 text-cyan-600" />
+                  Major Rivers of the World
+                </h1>
+                <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                  Explore the world's most important river systems and waterways
                 </p>
+              </div>
+            </section>
 
-                <div className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
-                  <div className="flex items-center gap-2">
-                    <Ruler className="w-4 h-4" />
-                    <span>{river.length}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <MapPin className="w-4 h-4" />
-                    <span>
-                      {river.source} → {river.mouth}
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Globe className="w-4 h-4" />
-                    <span>{river.countries.join(", ")}</span>
-                  </div>
+            <section className="section">
+              <div className="flex flex-col sm:flex-row gap-4 max-w-4xl mx-auto">
+                <div className="relative flex-1">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+                  <input
+                    type="text"
+                    placeholder="Search rivers or countries..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  />
                 </div>
-
-                <div className="mt-4 flex flex-wrap gap-1">
-                  {river.countries.slice(0, 2).map((country, index) => (
-                    <Link
-                      key={index}
-                      href={`/search?q=${encodeURIComponent(country)}`}
-                      className="text-xs text-cyan-600 dark:text-cyan-400 hover:underline bg-cyan-50 dark:bg-cyan-900/20 px-2 py-1 rounded"
-                    >
-                      {country}
-                    </Link>
-                  ))}
-                  {river.countries.length > 2 && (
-                    <span className="text-xs text-gray-500 dark:text-gray-400 px-2 py-1">
-                      +{river.countries.length - 2} more
-                    </span>
-                  )}
+                <div className="relative">
+                  <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+                  <select
+                    value={selectedContinent}
+                    onChange={(e) => setSelectedContinent(e.target.value)}
+                    className="pl-10 pr-8 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent min-w-[160px]"
+                  >
+                    {continents.map((continent) => (
+                      <option key={continent} value={continent}>
+                        {continent}
+                      </option>
+                    ))}
+                  </select>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
+            </section>
 
-        {filteredRivers.length === 0 && (
-          <div className="text-center py-12">
-            <Waves className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-gray-600 dark:text-gray-300 mb-2">
-              No rivers found
-            </h3>
-            <p className="text-gray-500 dark:text-gray-400">
-              Try adjusting your search or filter criteria
-            </p>
+            <section className="section">
+              <div className="grid-layout grid-3">
+                {filteredRivers.map((river) => (
+                  <div
+                    key={river.id}
+                    className="card hover:shadow-lg transition-all duration-200 hover:scale-105"
+                  >
+                    <div className="p-6">
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="flex items-center gap-1">
+                          {river.flags.slice(0, 3).map((flag, index) => (
+                            <span key={index} className="text-xl">
+                              {flag}
+                            </span>
+                          ))}
+                          {river.flags.length > 3 && (
+                            <span className="text-sm text-gray-500 dark:text-gray-400">
+                              +{river.flags.length - 3}
+                            </span>
+                          )}
+                        </div>
+                        <span className="text-xs text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded">
+                          {river.continent}
+                        </span>
+                      </div>
+
+                      <h3 className="text-xl font-semibold mb-2">
+                        {river.name}
+                      </h3>
+                      <p className="text-sm text-gray-600 dark:text-gray-300 mb-3">
+                        {river.description}
+                      </p>
+
+                      <div className="space-y-2 text-sm text-gray-600 dark:text-gray-300 mb-4">
+                        <div className="flex items-center gap-2">
+                          <Ruler className="w-4 h-4" />
+                          <span>{river.length}</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <MapPin className="w-4 h-4" />
+                          <span>
+                            {river.source} → {river.mouth}
+                          </span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Globe className="w-4 h-4" />
+                          <span className="truncate">
+                            {river.countries.join(", ")}
+                          </span>
+                        </div>
+                      </div>
+
+                      <div className="flex flex-wrap gap-1">
+                        {river.countries.slice(0, 2).map((country, index) => (
+                          <Link
+                            key={index}
+                            href={`/search?q=${encodeURIComponent(country)}`}
+                            className="text-xs text-cyan-600 dark:text-cyan-400 hover:underline bg-cyan-50 dark:bg-cyan-900/20 px-2 py-1 rounded transition-colors"
+                          >
+                            {country}
+                          </Link>
+                        ))}
+                        {river.countries.length > 2 && (
+                          <span className="text-xs text-gray-500 dark:text-gray-400 px-2 py-1">
+                            +{river.countries.length - 2} more
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {filteredRivers.length === 0 && (
+              <section className="section">
+                <div className="text-center py-12">
+                  <Waves className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold text-gray-600 dark:text-gray-300 mb-2">
+                    No rivers found
+                  </h3>
+                  <p className="text-gray-500 dark:text-gray-400">
+                    Try adjusting your search or filter criteria
+                  </p>
+                </div>
+              </section>
+            )}
           </div>
-        )}
+        </main>
       </div>
+
+      <Footer />
     </div>
   );
 }

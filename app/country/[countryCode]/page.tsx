@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { getCountryData } from "@/lib/data-utils";
+import { GlobalNavigation } from "@/components/global-navigation";
 import { CountryHeader } from "@/components/country-header";
 import { CountryOverview } from "@/components/country-overview";
 import { CountryHistory } from "@/components/country-history";
@@ -33,33 +34,53 @@ export default async function CountryPage({ params }: CountryPageProps) {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
+    <div className="page-wrapper page-background">
+      <GlobalNavigation
+        showBackButton={true}
+        backHref="/browse/countries"
+        currentPage={country.name}
+      />
       <CountryHeader country={country} />
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
-        <NavigationBreadcrumb items={breadcrumbItems} />
+      <div className="page-content">
+        <main className="main">
+          <NavigationBreadcrumb items={breadcrumbItems} />
 
-        <CountryOverview country={country} />
+          <div className="sections-container">
+            <section className="section">
+              <CountryOverview country={country} />
+            </section>
 
-        <ComprehensiveCountryData countryData={country} />
+            <section className="section">
+              <ComprehensiveCountryData countryData={country} />
+            </section>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <CountryMap country={country} />
-          <CountryHistory country={country} />
-        </div>
+            <section className="section">
+              <div className="grid-layout grid-2">
+                <CountryMap country={country} />
+                <CountryHistory country={country} />
+              </div>
+            </section>
 
-        <CountryLandmarks country={country} />
+            <section className="section">
+              <CountryLandmarks country={country} />
+            </section>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <CountryCities country={country} />
-          <CountryRivers country={country} />
-        </div>
+            <section className="section">
+              <div className="grid-layout grid-2">
+                <CountryCities country={country} />
+                <CountryRivers country={country} />
+              </div>
+            </section>
 
-        <CountryInstitutions country={country} />
-      </main>
-      <div>
-        <Footer />
+            <section className="section">
+              <CountryInstitutions country={country} />
+            </section>
+          </div>
+        </main>
       </div>
+
+      <Footer />
     </div>
   );
 }

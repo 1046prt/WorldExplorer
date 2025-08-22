@@ -2,7 +2,9 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import "/styles/citiespage.css";
+import { GlobalNavigation } from "@/components/global-navigation";
+import Footer from "@/components/footer";
+import "@/styles/cities-page.css";
 import { Search, Filter, Building2, Users, Globe } from "lucide-react";
 
 interface City {
@@ -17,7 +19,7 @@ interface City {
 }
 
 const cities: City[] = [
-{
+  {
     id: "tokyo",
     name: "Tokyo",
     country: "Japan",
@@ -223,82 +225,105 @@ export default function CitiesPage() {
   });
 
   return (
-    <div className="page">
-      <div className="container">
-        <header className="header">
-          <h1 className="title">
-            <Building2 className="icon" />
-            Major Cities of the World
-          </h1>
-          <p className="subtitle">
-            Discover the world's most populous and influential cities
-          </p>
-        </header>
+    <div className="page-wrapper page-background">
+      <GlobalNavigation
+        showBackButton={true}
+        backHref="/"
+        currentPage="cities"
+      />
+      <div className="page-content">
+        <main className="main">
+          <div className="sections-container">
+            <section className="section">
+              <div className="page-header">
+                <h1 className="page-title">
+                  <Building2 className="page-title-icon" />
+                  Major Cities of the World
+                </h1>
+                <p className="page-description">
+                  Discover the world's most populous and influential cities
+                </p>
+              </div>
+            </section>
 
-        <div className="filters">
-          <div className="search-box">
-            <Search className="input-icon" />
-            <input
-              type="text"
-              placeholder="Search cities or countries..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="input"
-            />
-          </div>
-
-          <div className="filter-box">
-            <Filter className="input-icon" />
-            <select
-              value={selectedRegion}
-              onChange={(e) => setSelectedRegion(e.target.value)}
-              className="input"
-            >
-              {regions.map((region) => (
-                <option key={region} value={region}>
-                  {region}
-                </option>
-              ))}
-            </select>
-          </div>
-        </div>
-
-        <div className="grid">
-          {filteredCities.map((city) => (
-            <div key={city.id} className="card">
-              <div className="card-header">
-                <div className="country-info">
-                  <div className="country-name">{city.country}</div>
-                  <div className="country-code">{city.countryCode}</div>
+            <section className="section">
+              <div className="countries-filters">
+                <div className="filter-input-wrapper">
+                  <Search className="filter-input-icon" />
+                  <input
+                    type="text"
+                    placeholder="Search cities or countries..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="input filter-input"
+                  />
+                </div>
+                <div className="filter-select-wrapper">
+                  <Filter className="filter-select-icon" />
+                  <select
+                    value={selectedRegion}
+                    onChange={(e) => setSelectedRegion(e.target.value)}
+                    className="input filter-select"
+                  >
+                    {regions.map((region) => (
+                      <option key={region} value={region}>
+                        {region}
+                      </option>
+                    ))}
+                  </select>
                 </div>
               </div>
-              <h3 className="city-name">{city.name}</h3>
-              <p className="city-desc">{city.description}</p>
-              <div className="city-meta">
-                <div className="meta-item">
-                  <Users className="meta-icon" />
-                  <span>{city.population}</span>
-                </div>
-                <div className="meta-item">
-                  <Globe className="meta-icon" />
-                  <span>{city.region}</span>
-                </div>
-              </div>
-              <Link href={`/country/${city.countryCode.toLowerCase()}`} className="view-country">
-                View Country →
-              </Link>
-            </div>
-          ))}
-        </div>
+            </section>
 
-        {filteredCities.length === 0 && (
-          <div className="no-results">
-            <Building2 className="no-icon" />
-            <h3>No cities found</h3>
-            <p>Try adjusting your search or filter criteria</p>
+            <section className="section">
+              <div className="cities-grid">
+                {filteredCities.map((city) => (
+                  <div key={city.id} className="city-card">
+                    <div className="city-card-header">
+                      <div className="city-country">{city.country}</div>
+                      <span className="city-code">{city.countryCode}</span>
+                    </div>
+                    <h3 className="city-name">{city.name}</h3>
+                    <p className="city-description">{city.description}</p>
+                    <div className="city-details">
+                      <div className="city-detail-item">
+                        <Users className="city-detail-icon" />
+                        <span className="city-detail-text">
+                          {city.population}
+                        </span>
+                      </div>
+                      <div className="city-detail-item">
+                        <Globe className="city-detail-icon" />
+                        <span className="city-detail-text">{city.region}</span>
+                      </div>
+                    </div>
+                    <Link
+                      href={`/country/${city.countryCode.toLowerCase()}`}
+                      className="city-link"
+                    >
+                      View Country →
+                    </Link>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {filteredCities.length === 0 && (
+              <section className="section">
+                <div className="empty-state">
+                  <Building2 className="empty-state-icon" />
+                  <h3 className="empty-state-title">No cities found</h3>
+                  <p className="empty-state-description">
+                    Try adjusting your search or filter criteria
+                  </p>
+                </div>
+              </section>
+            )}
           </div>
-        )}
+        </main>
       </div>
+
+      <Footer />
     </div>
   );
 }

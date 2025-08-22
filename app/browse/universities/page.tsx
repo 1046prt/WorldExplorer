@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import { GlobalNavigation } from "@/components/global-navigation";
+import Footer from "@/components/footer";
 import "/app/globals.css";
 import {
   Search,
@@ -307,120 +309,147 @@ export default function UniversitiesPage() {
   });
 
   return (
-    <div className="page-background">
-      <div className="container mx-auto px-4 py-8">
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold mb-4 flex items-center gap-3">
-            <GraduationCap className="w-8 h-8 text-purple-600" />
-            Top Universities Worldwide
-          </h1>
-          <p className="text-gray-600 dark:text-gray-300">
-            Explore the world's leading institutions of higher education
-          </p>
-        </div>
-
-        <div className="mb-6 flex flex-col sm:flex-row gap-4">
-          <div className="relative flex-1">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-            <input
-              type="text"
-              placeholder="Search universities, cities, or countries..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-            />
-          </div>
-          <div className="relative">
-            <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-            <select
-              value={selectedType}
-              onChange={(e) => setSelectedType(e.target.value)}
-              className="pl-10 pr-8 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-            >
-              {types.map((type) => (
-                <option key={type} value={type}>
-                  {type}
-                </option>
-              ))}
-            </select>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredUniversities.map((university) => (
-            <div
-              key={university.id}
-              className="card hover:shadow-lg transition-all duration-200 hover:scale-105"
-            >
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-2">
-                    <span className="text-2xl">{university.flag}</span>
-                    <div className="flex items-center gap-1">
-                      <Star className="w-4 h-4 text-yellow-500" />
-                      <span className="text-sm font-semibold">
-                        #{university.ranking}
-                      </span>
-                    </div>
-                  </div>
-                  <span
-                    className={`px-2 py-1 rounded-full text-xs font-medium ${
-                      university.type === "Private"
-                        ? "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200"
-                        : "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200"
-                    }`}
-                  >
-                    {university.type}
-                  </span>
+    <div className="page-wrapper page-background">
+      <GlobalNavigation
+        showBackButton={true}
+        backHref="/"
+        currentPage="universities"
+      />
+      <div className="page-content">
+        <main className="main">
+          <div className="sections-container">
+            <section className="section">
+              <div className="container-xl">
+                <div className="text-center mb-8">
+                  <h1 className="text-4xl font-bold mb-4 flex items-center justify-center gap-3">
+                    <GraduationCap className="w-8 h-8 text-purple-600" />
+                    Top Universities Worldwide
+                  </h1>
+                  <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    Explore the world's leading institutions of higher education
+                  </p>
                 </div>
-
-                <h3 className="text-xl font-semibold mb-2">
-                  {university.name}
-                </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-300 mb-3">
-                  {university.description}
-                </p>
-
-                <div className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
-                  <div className="flex items-center gap-2">
-                    <MapPin className="w-4 h-4" />
-                    <span>
-                      {university.city}, {university.country}
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Users className="w-4 h-4" />
-                    <span>{university.students} students</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4" />
-                    <span>Founded {university.founded}</span>
-                  </div>
-                </div>
-
-                <Link
-                  href={`/country/${university.countryCode.toLowerCase()}`}
-                  className="inline-block mt-4 text-purple-600 dark:text-purple-400 hover:underline text-sm"
-                >
-                  View Country →
-                </Link>
               </div>
-            </div>
-          ))}
-        </div>
+            </section>
 
-        {filteredUniversities.length === 0 && (
-          <div className="text-center py-12">
-            <GraduationCap className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-gray-600 dark:text-gray-300 mb-2">
-              No universities found
-            </h3>
-            <p className="text-gray-500 dark:text-gray-400">
-              Try adjusting your search or filter criteria
-            </p>
+            <section className="section">
+              <div className="container-xl">
+                <div className="flex flex-col sm:flex-row gap-4 max-w-4xl mx-auto">
+                  <div className="relative flex-1">
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+                    <input
+                      type="text"
+                      placeholder="Search universities, cities, or countries..."
+                      value={searchTerm}
+                      onChange={(e) => setSearchTerm(e.target.value)}
+                      className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    />
+                  </div>
+                  <div className="relative">
+                    <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+                    <select
+                      value={selectedType}
+                      onChange={(e) => setSelectedType(e.target.value)}
+                      className="pl-10 pr-8 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-purple-500 focus:border-transparent min-w-[160px]"
+                    >
+                      {types.map((type) => (
+                        <option key={type} value={type}>
+                          {type}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section className="section">
+              <div className="container-xl">
+                <div className="grid-layout grid-3">
+                  {filteredUniversities.map((university) => (
+                    <div
+                      key={university.id}
+                      className="card hover:shadow-lg transition-all duration-200 hover:scale-105"
+                    >
+                      <div className="p-6">
+                        <div className="flex items-center justify-between mb-4">
+                          <div className="flex items-center gap-2">
+                            <span className="text-2xl">{university.flag}</span>
+                            <div className="flex items-center gap-1">
+                              <Star className="w-4 h-4 text-yellow-500" />
+                              <span className="text-sm font-semibold">
+                                #{university.ranking}
+                              </span>
+                            </div>
+                          </div>
+                          <span
+                            className={`px-2 py-1 rounded-full text-xs font-medium ${
+                              university.type === "Private"
+                                ? "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200"
+                                : "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200"
+                            }`}
+                          >
+                            {university.type}
+                          </span>
+                        </div>
+
+                        <h3 className="text-xl font-semibold mb-2">
+                          {university.name}
+                        </h3>
+                        <p className="text-sm text-gray-600 dark:text-gray-300 mb-3">
+                          {university.description}
+                        </p>
+
+                        <div className="space-y-2 text-sm text-gray-600 dark:text-gray-300 mb-4">
+                          <div className="flex items-center gap-2">
+                            <MapPin className="w-4 h-4" />
+                            <span>
+                              {university.city}, {university.country}
+                            </span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <Users className="w-4 h-4" />
+                            <span>{university.students} students</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <Calendar className="w-4 h-4" />
+                            <span>Founded {university.founded}</span>
+                          </div>
+                        </div>
+
+                        <Link
+                          href={`/country/${university.countryCode.toLowerCase()}`}
+                          className="inline-flex items-center text-purple-600 hover:text-purple-700 font-medium text-sm transition-colors"
+                        >
+                          View Country →
+                        </Link>
+                      </div>
+                    </div>
+                  ))}{" "}
+                </div>
+              </div>
+            </section>
+
+            {filteredUniversities.length === 0 && (
+              <section className="section">
+                <div className="container-xl">
+                  <div className="text-center py-12">
+                    <GraduationCap className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+                    <h3 className="text-xl font-semibold text-gray-600 dark:text-gray-300 mb-2">
+                      No universities found
+                    </h3>
+                    <p className="text-gray-500 dark:text-gray-400">
+                      Try adjusting your search or filter criteria
+                    </p>
+                  </div>
+                </div>
+              </section>
+            )}
           </div>
-        )}
+        </main>
       </div>
+
+      <Footer />
     </div>
   );
 }
