@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { formatPopulation } from "@/lib/data-utils";
 import type { Country } from "@/lib/types";
 import Link from "next/link";
+import "/styles/global.css"; // 👈 single CSS file
 
 function getCountryFlag(countryCode: string): string {
   const flagMap: Record<string, string> = {
@@ -118,58 +119,46 @@ interface CountryHeaderProps {
 
 export function CountryHeader({ country }: CountryHeaderProps) {
   return (
-    <header className="bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <div className="flex items-center justify-between mb-4">
+    <header className="ch-header">
+      <div className="ch-container">
+        <div className="ch-topbar">
           <Link href="/">
-            <Button variant="ghost" size="sm" className="gap-2">
-              <ArrowLeft className="w-4 h-4" />
+            <Button variant="ghost" size="sm" className="ch-back-btn">
+              <ArrowLeft className="ch-icon-sm" />
               Back to World Map
             </Button>
           </Link>
-          <div className="flex items-center gap-2">
+          <div className="ch-badges">
             <Badge variant="outline">{country.iso2}</Badge>
             <Badge variant="secondary">{country.region}</Badge>
           </div>
         </div>
 
-        <div className="flex items-start justify-between">
-          <div className="space-y-2">
-            <div className="flex items-center gap-3">
-              <span className="text-5xl">{getCountryFlag(country.iso2)}</span>
-              <h1 className="text-4xl font-bold text-gray-900 dark:text-white">
-                {country.name}
-              </h1>
-              <div className="w-12 h-8 bg-gray-200 dark:bg-gray-700 rounded border flex items-center justify-center text-xs font-medium">
-                {country.currency.symbol}
-              </div>
+        <div className="ch-main">
+          <div className="ch-info">
+            <div className="ch-title-row">
+              <span className="ch-flag">{getCountryFlag(country.iso2)}</span>
+              <h1 className="ch-title">{country.name}</h1>
+              <div className="ch-currency">{country.currency.symbol}</div>
             </div>
-            <p className="text-lg text-gray-600 dark:text-gray-400">
+            <p className="ch-capital">
               Capital:{" "}
-              <span className="font-semibold text-gray-900 dark:text-white">
-                {country.capital}
-              </span>
+              <span className="ch-capital-name">{country.capital}</span>
             </p>
           </div>
 
-          <div className="flex items-center gap-6 text-sm">
-            <div className="flex items-center gap-2">
-              <Users className="w-4 h-4 text-blue-600" />
-              <span className="font-medium">
-                {formatPopulation(country.population)}
-              </span>
+          <div className="ch-stats">
+            <div className="ch-stat">
+              <Users className="ch-icon" />
+              <span>{formatPopulation(country.population)}</span>
             </div>
-            <div className="flex items-center gap-2">
-              <MapPin className="w-4 h-4 text-green-600" />
-              <span className="font-medium">
-                {country.landmarks.length} Landmarks
-              </span>
+            <div className="ch-stat">
+              <MapPin className="ch-icon" />
+              <span>{country.landmarks.length} Landmarks</span>
             </div>
-            <div className="flex items-center gap-2">
-              <Globe className="w-4 h-4 text-purple-600" />
-              <span className="font-medium">
-                {country.languages.join(", ")}
-              </span>
+            <div className="ch-stat">
+              <Globe className="ch-icon" />
+              <span>{country.languages.join(", ")}</span>
             </div>
           </div>
         </div>
