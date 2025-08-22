@@ -1,0 +1,116 @@
+/* Wrapper card */
+.city-card {
+  padding: var(--spacing-lg);
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: var(--blur-sm);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
+  color: var(--color-foreground);
+}
+
+/* Dark mode */
+.dark .city-card {
+  background: rgba(30, 41, 59, 0.9);
+}
+
+/* Header */
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.title-lg {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--color-card-foreground);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.text-info {
+  color: var(--color-info);
+}
+
+.badge {
+  background: var(--color-muted);
+  color: var(--color-muted-foreground);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+}
+
+/* Cities */
+.city-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.city-item {
+  padding: var(--spacing-md);
+  background: var(--color-muted);
+  border-radius: var(--radius-lg);
+}
+
+.dark .city-item {
+  background: rgba(55, 65, 81, 0.5); /* gray-700/50 */
+}
+
+.city-name {
+  font-weight: 600;
+  color: var(--color-card-foreground);
+  margin-bottom: var(--spacing-xs);
+}
+
+.city-desc {
+  font-size: var(--font-size-sm);
+  color: var(--color-muted-foreground);
+}
+
+/* States section */
+.states-section {
+  margin-top: var(--spacing-lg);
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--color-border);
+}
+
+.subtitle {
+  font-weight: 600;
+  font-size: var(--font-size-lg);
+  color: var(--color-card-foreground);
+  margin-bottom: var(--spacing-sm);
+}
+
+.states-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: var(--spacing-sm);
+}
+
+@media (min-width: 640px) {
+  .states-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.state-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--font-size-sm);
+}
+
+.state-name {
+  font-weight: 500;
+  color: var(--color-card-foreground);
+}
+
+.state-capital {
+  color: var(--color-muted-foreground);
+}
