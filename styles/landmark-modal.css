@@ -1,0 +1,148 @@
+.landmark-dialog {
+  max-width: 720px;
+  background: var(--color-card);
+  color: var(--color-card-foreground);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.landmark-title {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+}
+
+.landmark-title-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--color-destructive);
+}
+
+.landmark-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.landmark-image {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.landmark-img {
+  object-fit: cover;
+}
+
+.landmark-badges {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.badge-outline {
+  border: 1px solid var(--color-border);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  color: var(--color-foreground);
+  background: transparent;
+}
+
+.badge-secondary {
+  background: var(--color-secondary);
+  color: var(--color-secondary-foreground);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+}
+
+.landmark-subtitle {
+  font-weight: 600;
+  color: var(--color-foreground);
+  margin-bottom: var(--spacing-sm);
+}
+
+.landmark-text {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-muted-foreground);
+}
+
+.landmark-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-lg);
+  padding: var(--spacing-md);
+  background: var(--color-muted);
+  border-radius: var(--radius-lg);
+}
+
+.landmark-info-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-xs);
+}
+
+.info-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.info-icon.globe {
+  color: var(--color-info);
+}
+
+.info-icon.location {
+  color: var(--color-success);
+}
+
+.info-label {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-foreground);
+}
+
+.info-text {
+  font-size: var(--font-size-sm);
+  color: var(--color-muted-foreground);
+}
+
+.landmark-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-sm);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  transition: background var(--transition-fast), border var(--transition-fast);
+}
+
+.btn-outline:hover {
+  background: var(--color-accent);
+}
+
+.btn-sm {
+  padding: 0.25rem 0.75rem;
+  font-size: var(--font-size-sm);
+}
+
+.btn-icon {
+  width: 16px;
+  height: 16px;
+}

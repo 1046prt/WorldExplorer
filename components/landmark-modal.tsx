@@ -1,7 +1,6 @@
 "use client";
 
 import type React from "react";
-
 import { useState } from "react";
 import {
   Dialog,
@@ -10,8 +9,6 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { MapPin, ExternalLink, Globe } from "lucide-react";
 import type { Landmark } from "@/lib/types";
 import Image from "next/image";
@@ -27,81 +24,73 @@ export function LandmarkModal({ landmark, children }: LandmarkModalProps) {
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>{children}</DialogTrigger>
-      <DialogContent className="max-w-2xl">
+      <DialogContent className="landmark-dialog">
         <DialogHeader>
-          <DialogTitle className="flex items-center gap-2">
-            <MapPin className="w-5 h-5 text-red-600" />
+          <DialogTitle className="landmark-title">
+            <MapPin className="landmark-title-icon" />
             {landmark.name}
           </DialogTitle>
         </DialogHeader>
 
-        <div className="space-y-4">
-          <div className="aspect-video relative rounded-lg overflow-hidden">
+        <div className="landmark-content">
+          <div className="landmark-image">
             <Image
               src={landmark.imagePath || "/placeholder.svg"}
               alt={landmark.name}
               fill
-              className="object-cover"
+              className="landmark-img"
             />
           </div>
 
-          <div className="flex items-center gap-2">
-            <Badge variant="outline">{landmark.city}</Badge>
+          <div className="landmark-badges">
+            <span className="badge-outline">{landmark.city}</span>
             {landmark.country && (
-              <Badge variant="secondary">{landmark.country}</Badge>
+              <span className="badge-secondary">{landmark.country}</span>
             )}
           </div>
 
           <div>
-            <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
-              Why it's famous
-            </h3>
-            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-              {landmark.whyFamous}
-            </p>
+            <h3 className="landmark-subtitle">Why it's famous</h3>
+            <p className="landmark-text">{landmark.whyFamous}</p>
           </div>
 
-          <div className="grid grid-cols-2 gap-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+          <div className="landmark-info">
             <div>
-              <div className="flex items-center gap-2 mb-1">
-                <Globe className="w-4 h-4 text-blue-600" />
-                <span className="font-medium text-sm">Coordinates</span>
+              <div className="landmark-info-header">
+                <Globe className="info-icon globe" />
+                <span className="info-label">Coordinates</span>
               </div>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
+              <p className="info-text">
                 {landmark.coordinates.lat.toFixed(4)},{" "}
                 {landmark.coordinates.lng.toFixed(4)}
               </p>
             </div>
             <div>
-              <div className="flex items-center gap-2 mb-1">
-                <MapPin className="w-4 h-4 text-green-600" />
-                <span className="font-medium text-sm">Location</span>
+              <div className="landmark-info-header">
+                <MapPin className="info-icon location" />
+                <span className="info-label">Location</span>
               </div>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                {landmark.city}
-              </p>
+              <p className="info-text">{landmark.city}</p>
             </div>
           </div>
 
-          <div className="flex justify-end gap-2">
-            <Button
-              variant="outline"
-              size="sm"
+          <div className="landmark-actions">
+            <button
+              className="btn-outline btn-sm"
               onClick={() => {
                 const url = `https://www.google.com/maps?q=${landmark.coordinates.lat},${landmark.coordinates.lng}`;
                 window.open(url, "_blank");
               }}
             >
-              <ExternalLink className="w-4 h-4 mr-2" />
+              <ExternalLink className="btn-icon" />
               View on Maps
-            </Button>
-            <Button
-              variant="outline"
-              size="sm"
+            </button>
+            <button
+              className="btn-outline btn-sm"
               onClick={() => setIsOpen(false)}
             >
               Close
-            </Button>
+            </button>
           </div>
         </div>
       </DialogContent>
