@@ -35,6 +35,10 @@
   --color-warning: #f59e0b;
   --color-info: #3b82f6;
 
+  /* Additional color variables for compatibility */
+  --color-popover: #ffffff;
+  --color-popover-foreground: #0f172a;
+
   /* Modern Gradients */
   --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
@@ -118,20 +122,20 @@
 
   --color-secondary: #374151;
   --color-secondary-hover: #4b5563;
-  --color-secondary-foreground: #f9fafb;
+  --color-secondary-foreground: #f1f5f9;
 
   --color-background: #0f172a;
-  --color-foreground: #f8fafc;
+  --color-foreground: #f1f5f9;
 
   --color-card: #1e293b;
-  --color-card-foreground: #f8fafc;
+  --color-card-foreground: #f1f5f9;
   --color-card-border: #334155;
 
   --color-muted: #334155;
-  --color-muted-foreground: #94a3b8;
+  --color-muted-foreground: #cbd5e1;
 
   --color-accent: #334155;
-  --color-accent-foreground: #f8fafc;
+  --color-accent-foreground: #f1f5f9;
 
   --color-border: #334155;
   --color-input: #1e293b;
@@ -144,6 +148,10 @@
   --color-warning: #fbbf24;
   --color-info: #60a5fa;
 
+  /* Additional color variables for compatibility */
+  --color-popover: #1e293b;
+  --color-popover-foreground: #f1f5f9;
+
   --gradient-background: linear-gradient(
     135deg,
     #0f172a 0%,
@@ -152,15 +160,15 @@
   );
 
   /* Dark Shadows */
-  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
-  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.4), 0 1px 2px -1px rgba(0, 0, 0, 0.4);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4),
-    0 2px 4px -2px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4),
-    0 4px 6px -4px rgba(0, 0, 0, 0.4);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.4),
-    0 8px 10px -6px rgba(0, 0, 0, 0.4);
-  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.6), 0 1px 2px -1px rgba(0, 0, 0, 0.6);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.6),
+    0 2px 4px -2px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.6),
+    0 4px 6px -4px rgba(0, 0, 0, 0.6);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6),
+    0 8px 10px -6px rgba(0, 0, 0, 0.6);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
 }
 
 /* Base Styles */
@@ -353,7 +361,6 @@ body {
 
 .w-full {
   width: 100%;
-  margin: 5px 5px 5px 5px;
 }
 
 .h-full {
@@ -366,7 +373,6 @@ body {
 
 .text-center {
   text-align: center;
-  padding: 10px 10px !important;
 }
 
 .text-left {
@@ -395,7 +401,6 @@ body {
 
 .text-sm {
   font-size: var(--font-size-sm);
-  margin: 5px 5px;
 }
 
 .text-base {
