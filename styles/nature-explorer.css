@@ -1,86 +1,116 @@
-.card {
-  background: var(--color-card);
-  color: var(--color-card-foreground);
-  border: 1px solid var(--color-card-border);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
-  margin: var(--spacing-sm);
-  padding: var(--spacing-md);
-}
+/* Nature Explorer Styles */
 
-.card-header {
-  margin-bottom: var(--spacing-sm);
-}
-
-.card-title {
-  font-size: var(--font-size-xl);
-  font-weight: 600;
-}
-
-.card-content {
-  font-size: var(--font-size-sm);
-}
-
-.input {
-  width: 100%;
-  padding: var(--spacing-sm);
-  border: 1px solid var(--color-border);
+.nature-tabs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: var(--spacing-xs);
+  background-color: var(--color-muted);
+  padding: var(--spacing-xs);
   border-radius: var(--radius-md);
-  background: var(--color-input);
+  margin-bottom: var(--spacing-lg);
+}
+
+.nature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+}
+
+.nature-card {
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-sm);
+}
+
+.nature-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.nature-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-md);
+  gap: var(--spacing-sm);
+}
+
+.nature-card-title {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-foreground);
+  margin: 0;
+  line-height: var(--line-height-normal);
+  word-wrap: break-word;
+  flex: 1;
+}
+
+.nature-badge {
+  font-size: var(--font-size-xs);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background-color: var(--color-muted);
+  color: var(--color-muted-foreground);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+
+.nature-badge.active {
+  background-color: var(--color-destructive);
+  color: var(--color-destructive-foreground);
+}
+
+.nature-badge.dormant {
+  background-color: var(--color-warning);
   color: var(--color-foreground);
 }
 
-.btn {
-  display: block;
-  width: 100%;
-  padding: var(--spacing-sm);
-  background: var(--color-primary);
-  color: var(--color-primary-foreground);
-  border: none;
-  border-radius: var(--radius-md);
-  transition: background var(--transition-normal);
-}
-.btn:hover {
-  background: var(--color-primary-hover);
+.nature-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
 }
 
-.tabs-list {
-  display: grid;
-  gap: var(--spacing-sm);
-  margin-bottom: var(--spacing-md);
+.nature-card-content p {
+  font-size: var(--font-size-sm);
+  color: var(--color-foreground);
+  margin: 0;
+  line-height: var(--line-height-normal);
 }
 
-.tabs-trigger {
-  padding: var(--spacing-sm);
-  border-radius: var(--radius-md);
-  border: 1px solid var(--color-border);
-  background: var(--color-muted);
-  cursor: pointer;
-  transition: background var(--transition-fast);
-}
-.tabs-trigger.active {
-  background: var(--color-primary);
-  color: var(--color-primary-foreground);
-}
-
-.badge {
-  display: inline-block;
-  padding: var(--spacing-xs) var(--spacing-sm);
-  border-radius: var(--radius-full);
-  font-size: var(--font-size-xs);
-  background: var(--color-muted);
+.nature-card-content strong {
   color: var(--color-muted-foreground);
+  font-weight: 500;
 }
 
-/* Example contextual colors */
-.card.bordered.green {
-  border-color: var(--color-success);
-  background: rgba(16, 185, 129, 0.1);
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nature-tabs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nature-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .nature-card {
+    padding: var(--spacing-md);
+  }
+
+  .nature-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+  }
 }
-.green-text {
-  color: var(--color-success);
-}
-.icon {
-  width: 20px;
-  height: 20px;
+
+@media (max-width: 480px) {
+  .nature-tabs {
+    grid-template-columns: 1fr;
+  }
 }
