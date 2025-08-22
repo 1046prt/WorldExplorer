@@ -63,6 +63,124 @@ const quizQuestions: QuizQuestion[] = [
     explanation:
       "Ottawa is the capital city of Canada, located in the province of Ontario.",
   },
+  {
+    id: "6",
+    type: "capital",
+    question: "What is the capital of Brazil?",
+    options: ["São Paulo", "Rio de Janeiro", "Brasília", "Salvador"],
+    correct: 2,
+    explanation:
+      "Brasília is the capital of Brazil, built in the 1960s as a planned city.",
+  },
+  {
+    id: "7",
+    type: "landmark",
+    question: "Which landmark is located in India?",
+    options: ["Petra", "Taj Mahal", "Angkor Wat", "Borobudur"],
+    correct: 1,
+    explanation:
+      "The Taj Mahal is a white marble mausoleum located in Agra, India.",
+  },
+  {
+    id: "8",
+    type: "capital",
+    question: "What is the capital of Egypt?",
+    options: ["Alexandria", "Cairo", "Luxor", "Aswan"],
+    correct: 1,
+    explanation:
+      "Cairo is the capital and largest city of Egypt, located near the Nile Delta.",
+  },
+  {
+    id: "9",
+    type: "flag",
+    question: "Which country has a maple leaf on its flag?",
+    options: ["United States", "Canada", "Australia", "New Zealand"],
+    correct: 1,
+    image: "/images/flags/canada.png",
+    explanation:
+      "Canada's flag features a red maple leaf, which is a national symbol.",
+  },
+  {
+    id: "10",
+    type: "capital",
+    question: "What is the capital of Germany?",
+    options: ["Munich", "Hamburg", "Berlin", "Frankfurt"],
+    correct: 2,
+    explanation:
+      "Berlin is the capital and largest city of Germany, located in northeastern Germany.",
+  },
+  {
+    id: "11",
+    type: "landmark",
+    question: "In which country is the Great Wall located?",
+    options: ["Japan", "China", "Mongolia", "South Korea"],
+    correct: 1,
+    explanation:
+      "The Great Wall of China is a series of fortifications built across northern China.",
+  },
+  {
+    id: "12",
+    type: "capital",
+    question: "What is the capital of Italy?",
+    options: ["Milan", "Naples", "Florence", "Rome"],
+    correct: 3,
+    explanation:
+      "Rome is the capital of Italy and was the center of the ancient Roman Empire.",
+  },
+  {
+    id: "13",
+    type: "flag",
+    question: "Which country's flag has a Union Jack in the corner?",
+    options: ["South Africa", "Australia", "India", "Canada"],
+    correct: 1,
+    image: "/images/flags/australia.png",
+    explanation:
+      "Australia's flag features the Union Jack in the upper left corner.",
+  },
+  {
+    id: "14",
+    type: "capital",
+    question: "What is the capital of Russia?",
+    options: ["St. Petersburg", "Moscow", "Novosibirsk", "Yekaterinburg"],
+    correct: 1,
+    explanation:
+      "Moscow is the capital and largest city of Russia, located in western Russia.",
+  },
+  {
+    id: "15",
+    type: "landmark",
+    question: "Which ancient wonder is located in Egypt?",
+    options: ["Colosseum", "Pyramids of Giza", "Stonehenge", "Parthenon"],
+    correct: 1,
+    explanation:
+      "The Pyramids of Giza are ancient Egyptian pyramids located near Cairo.",
+  },
+  {
+    id: "16",
+    type: "capital",
+    question: "What is the capital of Spain?",
+    options: ["Barcelona", "Madrid", "Seville", "Valencia"],
+    correct: 1,
+    explanation:
+      "Madrid is the capital and largest city of Spain, located in central Spain.",
+  },
+  {
+    id: "17",
+    type: "capital",
+    question: "What is the capital of South Korea?",
+    options: ["Busan", "Seoul", "Incheon", "Daegu"],
+    correct: 1,
+    explanation: "Seoul is the capital and largest city of South Korea.",
+  },
+  {
+    id: "18",
+    type: "landmark",
+    question: "In which city is the Colosseum located?",
+    options: ["Athens", "Rome", "Naples", "Florence"],
+    correct: 1,
+    explanation:
+      "The Colosseum is an ancient amphitheater located in Rome, Italy.",
+  },
 ];
 
 export function QuizSystem() {
@@ -204,7 +322,7 @@ export function QuizSystem() {
       {!isActive && !showResult && (
         <div className="quiz-center">
           <button onClick={startQuiz} className="btn btn-success">
-            Start Quiz
+            🎯 Begin Challenge
           </button>
         </div>
       )}
