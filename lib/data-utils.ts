@@ -54,11 +54,20 @@ export async function getAllCountries(): Promise<string[]> {
   // Available country data files - only include countries we actually have data for
   return [
     "us", // United States
-    "cn", // China
     "fr", // France
+    "cn", // China
     "gb", // United Kingdom
     "jp", // Japan
+    "ca", // Canada
+    "de", // Germany
+    "it", // Italy
     "br", // Brazil
+    "in", // India
+    "au", // Australia
+    "ru", // Russia
+    "mx", // Mexico
+    "es", // Spain
+    "ar", // Argentina
   ];
 }
 
