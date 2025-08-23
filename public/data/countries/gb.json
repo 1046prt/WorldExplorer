@@ -138,10 +138,7 @@
       "countries": ["United Kingdom"],
       "source": "Thames Head, Gloucestershire",
       "mouth": "Thames Estuary",
-      "pathCoordinates": [
-        { "lat": 51.6844, "lng": -1.4544 },
-        { "lat": 51.45, "lng": 0.6 }
-      ]
+      "pathCoordinates": [{ "lat": 51.6844, "lng": -1.4544 }, { "lat": 51.45, "lng": 0.6 }]
     },
     {
       "slug": "river-severn",
@@ -150,10 +147,7 @@
       "countries": ["United Kingdom"],
       "source": "Plynlimon, Wales",
       "mouth": "Bristol Channel",
-      "pathCoordinates": [
-        { "lat": 52.4833, "lng": -3.7333 },
-        { "lat": 51.6167, "lng": -2.6667 }
-      ]
+      "pathCoordinates": [{ "lat": 52.4833, "lng": -3.7333 }, { "lat": 51.6167, "lng": -2.6667 }]
     }
   ],
   "institutions": [

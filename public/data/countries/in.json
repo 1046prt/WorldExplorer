@@ -1,0 +1,621 @@
+{
+  "iso2": "IN",
+  "iso3": "IND",
+  "name": "India",
+  "region": "Asia",
+  "capital": "New Delhi",
+  "population": 1380000000,
+  "image": "/images/countries/in.jpg",
+  "flag": "/images/flags/in.png",
+  "currency": {
+    "code": "INR",
+    "name": "Indian Rupee",
+    "symbol": "₹",
+    "image": "/images/currencies/inr.png"
+  },
+  "languages": ["Hindi", "English"],
+  "timezones": ["UTC+05:30"],
+  "geography": {
+    "climateZones": ["Tropical", "Subtropical", "Temperate", "Alpine"],
+    "geologicalFormations": [
+      {
+        "name": "Himalayas",
+        "type": "Mountain Range",
+        "description": "World's highest mountain range in northern India"
+      },
+      {
+        "name": "Deccan Plateau",
+        "type": "Plateau",
+        "description": "Large plateau covering most of southern India"
+      },
+      {
+        "name": "Indo-Gangetic Plain",
+        "type": "Plain",
+        "description": "Fertile plain formed by Indus and Ganges river systems"
+      }
+    ],
+    "naturalDisasters": [
+      {
+        "type": "Cyclone",
+        "name": "Cyclone Amphan",
+        "year": 2020,
+        "impact": "Super cyclonic storm affecting eastern India"
+      },
+      {
+        "type": "Earthquake",
+        "name": "Gujarat Earthquake",
+        "year": 2001,
+        "impact": "Devastating earthquake in western India"
+      }
+    ],
+    "majorWaterBodies": [
+      {
+        "name": "Arabian Sea",
+        "type": "Sea",
+        "coastline": "West Coast"
+      },
+      {
+        "name": "Bay of Bengal",
+        "type": "Bay",
+        "coastline": "East Coast"
+      },
+      {
+        "name": "Indian Ocean",
+        "type": "Ocean",
+        "coastline": "South Coast"
+      },
+      {
+        "name": "Ganges River",
+        "type": "River",
+        "description": "Sacred river flowing through northern India"
+      }
+    ]
+  },
+  "heritage": {
+    "independenceDate": "August 15, 1947",
+    "foundingEvent": "Independence from British Rule",
+    "majorHistoricalFigures": [
+      {
+        "name": "Mahatma Gandhi",
+        "role": "Independence Leader",
+        "period": "1869-1948",
+        "achievement": "Led non-violent independence movement"
+      },
+      {
+        "name": "Jawaharlal Nehru",
+        "role": "First Prime Minister",
+        "period": "1889-1964",
+        "achievement": "First Prime Minister and architect of modern India"
+      },
+      {
+        "name": "Ashoka the Great",
+        "role": "Emperor",
+        "period": "304-232 BC",
+        "achievement": "Mauryan emperor who spread Buddhism"
+      }
+    ],
+    "colonialHistory": [
+      {
+        "period": "1858-1947",
+        "description": "British Crown rule in India"
+      },
+      {
+        "period": "2600-1900 BC",
+        "description": "Indus Valley Civilization"
+      }
+    ],
+    "unescoSites": [
+      {
+        "name": "Taj Mahal",
+        "year": 1983,
+        "type": "Cultural"
+      },
+      {
+        "name": "Red Fort Complex",
+        "year": 2007,
+        "type": "Cultural"
+      },
+      {
+        "name": "Kaziranga National Park",
+        "year": 1985,
+        "type": "Natural"
+      },
+      {
+        "name": "Ajanta Caves",
+        "year": 1983,
+        "type": "Cultural"
+      }
+    ]
+  },
+  "politics": {
+    "currentLeaders": [
+      {
+        "position": "Prime Minister",
+        "name": "Narendra Modi",
+        "party": "BJP",
+        "termStart": "May 26, 2014"
+      },
+      {
+        "position": "President",
+        "name": "Droupadi Murmu",
+        "party": "BJP",
+        "termStart": "July 25, 2022"
+      }
+    ],
+    "governmentType": "Federal Parliamentary Republic",
+    "internationalMemberships": [
+      "United Nations (UN)",
+      "BRICS",
+      "Group of Twenty (G20)",
+      "Shanghai Cooperation Organisation (SCO)",
+      "Commonwealth of Nations",
+      "Non-Aligned Movement"
+    ]
+  },
+  "economy": {
+    "gdp": 3737878000000,
+    "gdpPerCapita": 2612,
+    "majorIndustries": [
+      "Information Technology",
+      "Pharmaceuticals",
+      "Textiles",
+      "Agriculture",
+      "Automotive",
+      "Steel",
+      "Chemicals"
+    ],
+    "topExports": [
+      {
+        "product": "Refined Petroleum",
+        "value": 49100000000
+      },
+      {
+        "product": "Packaged Medicaments",
+        "value": 24900000000
+      },
+      {
+        "product": "Rice",
+        "value": 11000000000
+      },
+      {
+        "product": "Jewelry",
+        "value": 10800000000
+      }
+    ],
+    "topImports": [
+      {
+        "product": "Crude Petroleum",
+        "value": 119200000000
+      },
+      {
+        "product": "Gold",
+        "value": 45500000000
+      },
+      {
+        "product": "Coal Briquettes",
+        "value": 26700000000
+      },
+      {
+        "product": "Diamonds",
+        "value": 26100000000
+      }
+    ],
+    "employmentRate": 90.9,
+    "employmentSectors": {
+      "services": 54.0,
+      "agriculture": 42.0,
+      "industry": 4.0
+    }
+  },
+  "culture": {
+    "officialLanguages": ["Hindi", "English"],
+    "regionalLanguages": [
+      "Bengali",
+      "Telugu",
+      "Marathi",
+      "Tamil",
+      "Gujarati",
+      "Urdu",
+      "Kannada",
+      "Odia",
+      "Malayalam",
+      "Punjabi"
+    ],
+    "religionDemographics": {
+      "Hinduism": 79.8,
+      "Islam": 14.2,
+      "Christianity": 2.3,
+      "Sikhism": 1.7,
+      "Buddhism": 0.7,
+      "Jainism": 0.4,
+      "Other": 0.9
+    },
+    "nationalFestivals": [
+      {
+        "name": "Diwali",
+        "date": "October-November",
+        "description": "Festival of lights celebrating victory of light over darkness"
+      },
+      {
+        "name": "Holi",
+        "date": "March",
+        "description": "Festival of colors celebrating spring"
+      },
+      {
+        "name": "Independence Day",
+        "date": "August 15",
+        "description": "Celebrates independence from British rule"
+      }
+    ],
+    "traditionalFoods": [
+      {
+        "name": "Curry",
+        "description": "Spiced dishes with vegetables, meat, or legumes"
+      },
+      {
+        "name": "Biryani",
+        "description": "Fragrant rice dish with meat or vegetables"
+      },
+      {
+        "name": "Naan",
+        "description": "Leavened flatbread baked in tandoor oven"
+      },
+      {
+        "name": "Masala Chai",
+        "description": "Spiced tea with milk and sugar"
+      }
+    ],
+    "nationalSymbols": {
+      "flag": "Tricolor (Saffron, White, Green with Ashoka Chakra)",
+      "emblem": "Lion Capital of Ashoka",
+      "anthem": "Jana Gana Mana",
+      "flower": "Lotus",
+      "bird": "Indian Peacock",
+      "animal": "Bengal Tiger"
+    }
+  },
+  "education": {
+    "literacyRate": 77.7,
+    "educationSystem": "Free and compulsory education, growing higher education sector",
+    "famousScientists": [
+      {
+        "name": "A.P.J. Abdul Kalam",
+        "field": "Aerospace Engineering",
+        "achievement": "Missile Man of India, former President"
+      },
+      {
+        "name": "C.V. Raman",
+        "field": "Physics",
+        "achievement": "Nobel Prize for Raman Effect"
+      },
+      {
+        "name": "Srinivasa Ramanujan",
+        "field": "Mathematics",
+        "achievement": "Extraordinary contributions to mathematical analysis"
+      }
+    ],
+    "nobelPrizeWinners": 9
+  },
+  "tourism": {
+    "mostVisitedCities": [
+      {
+        "name": "Delhi",
+        "visitors": 28500000,
+        "attractions": ["Red Fort", "India Gate", "Lotus Temple"]
+      },
+      {
+        "name": "Mumbai",
+        "visitors": 20200000,
+        "attractions": ["Gateway of India", "Marine Drive", "Bollywood Studios"]
+      },
+      {
+        "name": "Agra",
+        "visitors": 8500000,
+        "attractions": ["Taj Mahal", "Agra Fort", "Fatehpur Sikri"]
+      }
+    ],
+    "adventureActivities": [
+      "Himalayan Trekking",
+      "Kerala Backwaters",
+      "Rajasthan Desert Safari",
+      "Goa Beaches",
+      "Wildlife Safaris"
+    ],
+    "transportation": {
+      "airports": "Major airports in Delhi, Mumbai, Bangalore",
+      "railways": "Extensive rail network, one of the world's largest",
+      "highways": "National highway system connecting major cities"
+    },
+    "visaRequirements": "e-Visa or visa required for most visitors"
+  },
+  "demographics": {
+    "populationGrowth": [
+      { "year": 2020, "population": 1380004385 },
+      { "year": 2021, "population": 1393409038 },
+      { "year": 2022, "population": 1406631776 },
+      { "year": 2023, "population": 1428627663 }
+    ],
+    "urbanRural": {
+      "urban": 35.0,
+      "rural": 65.0
+    },
+    "lifeExpectancy": {
+      "total": 70.4,
+      "male": 69.0,
+      "female": 71.8
+    },
+    "ageDistribution": {
+      "youth": 26.2,
+      "workingAge": 67.3,
+      "elderly": 6.5
+    }
+  },
+  "scienceTechnology": {
+    "spaceMissions": [
+      {
+        "name": "Mars Orbiter Mission",
+        "year": 2013,
+        "achievement": "First Asian nation to reach Mars orbit"
+      },
+      {
+        "name": "Chandrayaan-3",
+        "year": 2023,
+        "achievement": "Successful lunar south pole landing"
+      },
+      {
+        "name": "Aryabhata",
+        "year": 1975,
+        "achievement": "India's first satellite"
+      }
+    ],
+    "techStartups": ["Flipkart", "Paytm", "Ola", "Zomato", "BYJU'S"],
+    "patents": 50055,
+    "breakthroughs": [
+      {
+        "year": 1920,
+        "invention": "Raman Effect",
+        "inventor": "C.V. Raman"
+      },
+      {
+        "year": 1910,
+        "invention": "Mathematical Theorems",
+        "inventor": "Srinivasa Ramanujan"
+      },
+      {
+        "year": 1974,
+        "invention": "Nuclear Technology",
+        "inventor": "Homi Bhabha"
+      }
+    ]
+  },
+  "sportsEntertainment": {
+    "nationalSports": ["Field Hockey", "Cricket"],
+    "olympicPerformance": {
+      "totalMedals": 41,
+      "goldMedals": 10,
+      "silverMedals": 9,
+      "bronzeMedals": 16
+    },
+    "popularMovies": [
+      "Bollywood films",
+      "Regional cinema",
+      "International co-productions"
+    ],
+    "musicArtists": [
+      "Lata Mangeshkar",
+      "A.R. Rahman",
+      "Ravi Shankar",
+      "Zakir Hussain",
+      "Anoushka Shankar"
+    ],
+    "worldRecords": [
+      {
+        "record": "Most populous country",
+        "value": "1.43 billion people"
+      },
+      {
+        "record": "Most languages spoken",
+        "value": "Over 700 languages"
+      }
+    ]
+  },
+  "history": [
+    {
+      "year": 2600,
+      "description": "Indus Valley Civilization flourishes in northwestern India"
+    },
+    {
+      "year": 1526,
+      "description": "Mughal Empire established, creating architectural wonders like Taj Mahal"
+    },
+    {
+      "year": 1858,
+      "description": "British Crown rule begins in India"
+    },
+    {
+      "year": 1947,
+      "description": "India gains independence from British rule"
+    },
+    {
+      "year": 1991,
+      "description": "Economic liberalization begins, leading to rapid growth"
+    }
+  ],
+  "states": [
+    {
+      "name": "Maharashtra",
+      "capital": "Mumbai",
+      "slug": "maharashtra"
+    },
+    {
+      "name": "Uttar Pradesh",
+      "capital": "Lucknow",
+      "slug": "uttar-pradesh"
+    },
+    {
+      "name": "West Bengal",
+      "capital": "Kolkata",
+      "slug": "west-bengal"
+    },
+    {
+      "name": "Tamil Nadu",
+      "capital": "Chennai",
+      "slug": "tamil-nadu"
+    },
+    {
+      "name": "Karnataka",
+      "capital": "Bangalore",
+      "slug": "karnataka"
+    }
+  ],
+  "famousCities": [
+    {
+      "name": "Mumbai",
+      "whyFamous": "Financial capital, Bollywood film industry, commercial hub",
+      "slug": "mumbai",
+      "image": "/images/cities/mumbai.jpg"
+    },
+    {
+      "name": "Delhi",
+      "whyFamous": "National capital, rich history, political center",
+      "slug": "delhi",
+      "image": "/images/cities/delhi.jpg"
+    },
+    {
+      "name": "Bangalore",
+      "whyFamous": "Silicon Valley of India, IT hub, garden city",
+      "slug": "bangalore",
+      "image": "/images/cities/bangalore.jpg"
+    },
+    {
+      "name": "Kolkata",
+      "whyFamous": "Cultural capital, literary heritage, City of Joy",
+      "slug": "kolkata",
+      "image": "/images/cities/kolkata.jpg"
+    },
+    {
+      "name": "Chennai",
+      "whyFamous": "Detroit of India, automotive hub, cultural center",
+      "slug": "chennai",
+      "image": "/images/cities/chennai.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "slug": "taj-mahal",
+      "name": "Taj Mahal",
+      "city": "Agra",
+      "coordinates": {
+        "lat": 27.1751,
+        "lng": 78.0421
+      },
+      "whyFamous": "Iconic white marble mausoleum, UNESCO World Heritage site",
+      "imagePath": "/images/landmarks/taj-mahal.jpg"
+    },
+    {
+      "slug": "red-fort",
+      "name": "Red Fort",
+      "city": "Delhi",
+      "coordinates": {
+        "lat": 28.6562,
+        "lng": 77.241
+      },
+      "whyFamous": "Historic Mughal fortress, symbol of Indian independence",
+      "imagePath": "/images/landmarks/red-fort.jpg"
+    },
+    {
+      "slug": "gateway-of-india",
+      "name": "Gateway of India",
+      "city": "Mumbai",
+      "coordinates": {
+        "lat": 18.922,
+        "lng": 72.8347
+      },
+      "whyFamous": "Iconic arch monument overlooking Arabian Sea",
+      "imagePath": "/images/landmarks/gateway-of-india.jpg"
+    },
+    {
+      "slug": "golden-temple",
+      "name": "Golden Temple",
+      "city": "Amritsar",
+      "coordinates": {
+        "lat": 31.62,
+        "lng": 74.8765
+      },
+      "whyFamous": "Holiest Sikh shrine, stunning golden architecture",
+      "imagePath": "/images/landmarks/golden-temple.jpg"
+    }
+  ],
+  "rivers": [
+    {
+      "slug": "ganges-river",
+      "name": "Ganges River",
+      "length": 2525,
+      "countries": ["India", "Bangladesh"],
+      "source": "Gangotri Glacier",
+      "mouth": "Bay of Bengal",
+      "pathCoordinates": [
+        { "lat": 30.9989, "lng": 78.9378 },
+        { "lat": 21.8, "lng": 89.5 }
+      ]
+    },
+    {
+      "slug": "brahmaputra-river",
+      "name": "Brahmaputra River",
+      "length": 2900,
+      "countries": ["India", "China", "Bangladesh"],
+      "source": "Angsi Glacier",
+      "mouth": "Bay of Bengal",
+      "pathCoordinates": [
+        { "lat": 30.7333, "lng": 82.0833 },
+        { "lat": 25.2, "lng": 89.7 }
+      ]
+    },
+    {
+      "slug": "yamuna-river",
+      "name": "Yamuna River",
+      "length": 1376,
+      "countries": ["India"],
+      "source": "Yamunotri Glacier",
+      "mouth": "Ganges River",
+      "pathCoordinates": [
+        { "lat": 31.0167, "lng": 78.45 },
+        { "lat": 25.4333, "lng": 81.8667 }
+      ]
+    }
+  ],
+  "institutions": [
+    {
+      "slug": "indian-institute-of-science",
+      "name": "Indian Institute of Science",
+      "city": "Bangalore, Karnataka",
+      "founded": 1909,
+      "globalRank": 31,
+      "type": "Public Research University"
+    },
+    {
+      "slug": "iit-bombay",
+      "name": "Indian Institute of Technology Bombay",
+      "city": "Mumbai, Maharashtra",
+      "founded": 1958,
+      "globalRank": 172,
+      "type": "Public Technical University"
+    },
+    {
+      "slug": "iit-delhi",
+      "name": "Indian Institute of Technology Delhi",
+      "city": "New Delhi",
+      "founded": 1961,
+      "globalRank": 197,
+      "type": "Public Technical University"
+    },
+    {
+      "slug": "university-of-delhi",
+      "name": "University of Delhi",
+      "city": "New Delhi",
+      "founded": 1922,
+      "globalRank": 500,
+      "type": "Public Research University"
+    }
+  ]
+}

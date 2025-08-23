@@ -1,0 +1,602 @@
+{
+  "iso2": "AR",
+  "iso3": "ARG",
+  "name": "Argentina",
+  "region": "South America",
+  "capital": "Buenos Aires",
+  "population": 45400000,
+  "image": "/images/countries/ar.jpg",
+  "flag": "/images/flags/ar.png",
+  "currency": {
+    "code": "ARS",
+    "name": "Argentine Peso",
+    "symbol": "$",
+    "image": "/images/currencies/ars.png"
+  },
+  "languages": ["Spanish"],
+  "timezones": ["UTC-03:00"],
+  "geography": {
+    "climateZones": ["Subtropical", "Temperate", "Arid", "Cold"],
+    "geologicalFormations": [
+      {
+        "name": "Andes Mountains",
+        "type": "Mountain Range",
+        "description": "Western mountain range including Aconcagua"
+      },
+      {
+        "name": "Pampas",
+        "type": "Plains",
+        "description": "Fertile grasslands in central Argentina"
+      },
+      {
+        "name": "Patagonia",
+        "type": "Region",
+        "description": "Southern region with steppes and glaciers"
+      }
+    ],
+    "naturalDisasters": [
+      {
+        "type": "Earthquake",
+        "name": "San Juan Earthquake",
+        "year": 1944,
+        "impact": "Devastating earthquake in San Juan province"
+      },
+      {
+        "type": "Flood",
+        "name": "La Plata Floods",
+        "year": 2013,
+        "impact": "Severe flooding in Buenos Aires metropolitan area"
+      }
+    ],
+    "majorWaterBodies": [
+      {
+        "name": "Atlantic Ocean",
+        "type": "Ocean",
+        "coastline": "East Coast"
+      },
+      {
+        "name": "Rio de la Plata",
+        "type": "River",
+        "description": "Estuary formed by Uruguay and Paraná rivers"
+      },
+      {
+        "name": "Lake Argentino",
+        "type": "Lake",
+        "description": "Largest freshwater lake in Argentina"
+      },
+      {
+        "name": "Drake Passage",
+        "type": "Strait",
+        "description": "Waterway between South America and Antarctica"
+      }
+    ]
+  },
+  "heritage": {
+    "independenceDate": "July 9, 1816",
+    "foundingEvent": "Argentine Declaration of Independence",
+    "majorHistoricalFigures": [
+      {
+        "name": "José de San Martín",
+        "role": "Independence Leader",
+        "period": "1778-1850",
+        "achievement": "Liberator of Argentina, Chile, and Peru"
+      },
+      {
+        "name": "Eva Perón",
+        "role": "First Lady",
+        "period": "1919-1952",
+        "achievement": "Advocate for women's rights and labor rights"
+      },
+      {
+        "name": "Jorge Luis Borges",
+        "role": "Writer",
+        "period": "1899-1986",
+        "achievement": "Influential author and poet"
+      }
+    ],
+    "colonialHistory": [
+      {
+        "period": "1516-1816",
+        "description": "Spanish colonial period as part of Viceroyalty of the Río de la Plata"
+      },
+      {
+        "period": "Pre-1516",
+        "description": "Indigenous peoples including Inca influence in northwest"
+      }
+    ],
+    "unescoSites": [
+      {
+        "name": "Los Glaciares National Park",
+        "year": 1981,
+        "type": "Natural"
+      },
+      {
+        "name": "Jesuit Missions of the Guaranis",
+        "year": 1984,
+        "type": "Cultural"
+      },
+      {
+        "name": "Iguazu National Park",
+        "year": 1984,
+        "type": "Natural"
+      },
+      {
+        "name": "Península Valdés",
+        "year": 1999,
+        "type": "Natural"
+      }
+    ]
+  },
+  "politics": {
+    "currentLeaders": [
+      {
+        "position": "President",
+        "name": "Javier Milei",
+        "party": "La Libertad Avanza",
+        "termStart": "December 10, 2023"
+      },
+      {
+        "position": "Vice President",
+        "name": "Victoria Villarruel",
+        "party": "La Libertad Avanza",
+        "termStart": "December 10, 2023"
+      }
+    ],
+    "governmentType": "Federal Presidential Republic",
+    "internationalMemberships": [
+      "United Nations (UN)",
+      "Organization of American States (OAS)",
+      "Mercosur",
+      "Group of Twenty (G20)",
+      "Union of South American Nations (UNASUR)",
+      "Community of Latin American and Caribbean States (CELAC)"
+    ]
+  },
+  "economy": {
+    "gdp": 487227000000,
+    "gdpPerCapita": 10729,
+    "majorIndustries": [
+      "Agriculture",
+      "Manufacturing",
+      "Mining",
+      "Energy",
+      "Services",
+      "Automotive",
+      "Textiles"
+    ],
+    "topExports": [
+      {
+        "product": "Soybeans",
+        "value": 16800000000
+      },
+      {
+        "product": "Beef",
+        "value": 8900000000
+      },
+      {
+        "product": "Wheat",
+        "value": 7200000000
+      },
+      {
+        "product": "Corn",
+        "value": 6800000000
+      }
+    ],
+    "topImports": [
+      {
+        "product": "Cars",
+        "value": 2800000000
+      },
+      {
+        "product": "Vehicle Parts",
+        "value": 2100000000
+      },
+      {
+        "product": "Refined Petroleum",
+        "value": 1900000000
+      },
+      {
+        "product": "Broadcasting Equipment",
+        "value": 1800000000
+      }
+    ],
+    "employmentRate": 89.2,
+    "employmentSectors": {
+      "services": 76.4,
+      "industry": 23.0,
+      "agriculture": 0.6
+    }
+  },
+  "culture": {
+    "officialLanguages": ["Spanish"],
+    "regionalLanguages": [
+      "Italian",
+      "German",
+      "English",
+      "French",
+      "Indigenous languages"
+    ],
+    "religionDemographics": {
+      "Christianity": 88.0,
+      "Unaffiliated": 11.3,
+      "Other": 0.7
+    },
+    "nationalFestivals": [
+      {
+        "name": "Carnival",
+        "date": "February-March",
+        "description": "Colorful carnival celebrations throughout the country"
+      },
+      {
+        "name": "Independence Day",
+        "date": "July 9",
+        "description": "Celebrates independence from Spain"
+      },
+      {
+        "name": "Tango Festival",
+        "date": "August",
+        "description": "World Tango Championship in Buenos Aires"
+      }
+    ],
+    "traditionalFoods": [
+      {
+        "name": "Asado",
+        "description": "Traditional barbecue with various cuts of beef"
+      },
+      {
+        "name": "Empanadas",
+        "description": "Baked or fried pastries with meat or vegetable filling"
+      },
+      {
+        "name": "Dulce de Leche",
+        "description": "Sweet caramel-like spread made from milk and sugar"
+      },
+      {
+        "name": "Mate",
+        "description": "Traditional herbal tea drink shared socially"
+      }
+    ],
+    "nationalSymbols": {
+      "flag": "Light Blue and White with Sun of May",
+      "emblem": "Argentine Coat of Arms",
+      "anthem": "Himno Nacional Argentino",
+      "flower": "Ceibo",
+      "bird": "Rufous Hornero",
+      "animal": "Jaguar"
+    }
+  },
+  "education": {
+    "literacyRate": 99.1,
+    "educationSystem": "Free public education including university level",
+    "famousScientists": [
+      {
+        "name": "Luis Federico Leloir",
+        "field": "Biochemistry",
+        "achievement": "Nobel Prize for carbohydrate metabolism research"
+      },
+      {
+        "name": "César Milstein",
+        "field": "Immunology",
+        "achievement": "Nobel Prize for monoclonal antibody development"
+      },
+      {
+        "name": "Bernardo Houssay",
+        "field": "Physiology",
+        "achievement": "Nobel Prize for hormone research"
+      }
+    ],
+    "nobelPrizeWinners": 5
+  },
+  "tourism": {
+    "mostVisitedCities": [
+      {
+        "name": "Buenos Aires",
+        "visitors": 2800000,
+        "attractions": ["Tango Shows", "Recoleta Cemetery", "San Telmo"]
+      },
+      {
+        "name": "Bariloche",
+        "visitors": 1200000,
+        "attractions": ["Lake District", "Skiing", "Chocolate Shops"]
+      },
+      {
+        "name": "Mendoza",
+        "visitors": 1100000,
+        "attractions": ["Wine Tours", "Aconcagua", "Andes Mountains"]
+      }
+    ],
+    "adventureActivities": [
+      "Iguazu Falls Tours",
+      "Patagonia Trekking",
+      "Wine Tasting",
+      "Glacier Tours",
+      "Tango Dancing"
+    ],
+    "transportation": {
+      "airports": "Major airports in Buenos Aires, Córdoba, Mendoza",
+      "railways": "Limited passenger rail service",
+      "highways": "National route system"
+    },
+    "visaRequirements": "Visa-free for many countries, reciprocity fee for some"
+  },
+  "demographics": {
+    "populationGrowth": [
+      { "year": 2020, "population": 45376763 },
+      { "year": 2021, "population": 45808747 },
+      { "year": 2022, "population": 46234830 },
+      { "year": 2023, "population": 46654581 }
+    ],
+    "urbanRural": {
+      "urban": 92.1,
+      "rural": 7.9
+    },
+    "lifeExpectancy": {
+      "total": 76.9,
+      "male": 73.9,
+      "female": 80.1
+    },
+    "ageDistribution": {
+      "youth": 24.0,
+      "workingAge": 64.3,
+      "elderly": 11.7
+    }
+  },
+  "scienceTechnology": {
+    "spaceMissions": [
+      {
+        "name": "SAC-D/Aquarius",
+        "year": 2011,
+        "achievement": "Earth observation satellite for ocean salinity"
+      },
+      {
+        "name": "ARSAT Satellite System",
+        "year": 2014,
+        "achievement": "Argentine geostationary communications satellites"
+      }
+    ],
+    "techStartups": ["MercadoLibre", "Globant", "Auth0", "Despegar", "OLX"],
+    "patents": 1205,
+    "breakthroughs": [
+      {
+        "year": 1947,
+        "invention": "Ballpoint Pen",
+        "inventor": "László Bíró"
+      },
+      {
+        "year": 1967,
+        "invention": "Artificial Heart",
+        "inventor": "Domingo Liotta"
+      }
+    ]
+  },
+  "sportsEntertainment": {
+    "nationalSports": ["Football (Soccer)", "Rugby", "Polo"],
+    "olympicPerformance": {
+      "totalMedals": 77,
+      "goldMedals": 21,
+      "silverMedals": 25,
+      "bronzeMedals": 31
+    },
+    "popularMovies": [
+      "Argentine cinema",
+      "Tango films",
+      "International co-productions"
+    ],
+    "musicArtists": [
+      "Carlos Gardel",
+      "Astor Piazzolla",
+      "Mercedes Sosa",
+      "Charly García",
+      "Gustavo Cerati"
+    ],
+    "worldRecords": [
+      {
+        "record": "FIFA World Cup wins",
+        "value": "3 titles (1978, 1986, 2022)"
+      },
+      {
+        "record": "Highest mountain in the Americas",
+        "value": "Aconcagua (6,961m)"
+      }
+    ]
+  },
+  "history": [
+    {
+      "year": 1516,
+      "description": "Spanish explorer Juan Díaz de Solís reaches Río de la Plata"
+    },
+    {
+      "year": 1816,
+      "description": "Declaration of Independence from Spain"
+    },
+    {
+      "year": 1946,
+      "description": "Juan Perón elected president, beginning of Peronism"
+    },
+    {
+      "year": 1982,
+      "description": "Falklands War with United Kingdom"
+    },
+    {
+      "year": 1983,
+      "description": "Return to democracy after military dictatorship"
+    }
+  ],
+  "provinces": [
+    {
+      "name": "Buenos Aires",
+      "capital": "La Plata",
+      "slug": "buenos-aires"
+    },
+    {
+      "name": "Córdoba",
+      "capital": "Córdoba",
+      "slug": "cordoba"
+    },
+    {
+      "name": "Santa Fe",
+      "capital": "Santa Fe",
+      "slug": "santa-fe"
+    },
+    {
+      "name": "Mendoza",
+      "capital": "Mendoza",
+      "slug": "mendoza"
+    },
+    {
+      "name": "Tucumán",
+      "capital": "San Miguel de Tucumán",
+      "slug": "tucuman"
+    }
+  ],
+  "famousCities": [
+    {
+      "name": "Buenos Aires",
+      "whyFamous": "Capital city, tango birthplace, European-style architecture",
+      "slug": "buenos-aires",
+      "image": "/images/cities/buenos-aires.jpg"
+    },
+    {
+      "name": "Córdoba",
+      "whyFamous": "Colonial architecture, university city, cultural center",
+      "slug": "cordoba",
+      "image": "/images/cities/cordoba.jpg"
+    },
+    {
+      "name": "Mendoza",
+      "whyFamous": "Wine capital, gateway to Aconcagua, Andes foothills",
+      "slug": "mendoza",
+      "image": "/images/cities/mendoza.jpg"
+    },
+    {
+      "name": "Bariloche",
+      "whyFamous": "Lake district, skiing destination, chocolate capital",
+      "slug": "bariloche",
+      "image": "/images/cities/bariloche.jpg"
+    },
+    {
+      "name": "Salta",
+      "whyFamous": "Colonial architecture, gateway to northwest, indigenous culture",
+      "slug": "salta",
+      "image": "/images/cities/salta.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "slug": "iguazu-falls",
+      "name": "Iguazu Falls",
+      "city": "Misiones",
+      "coordinates": {
+        "lat": -25.6953,
+        "lng": -54.4367
+      },
+      "whyFamous": "Spectacular waterfalls on border with Brazil",
+      "imagePath": "/images/landmarks/iguazu-falls.jpg"
+    },
+    {
+      "slug": "perito-moreno-glacier",
+      "name": "Perito Moreno Glacier",
+      "city": "Santa Cruz",
+      "coordinates": {
+        "lat": -50.4648,
+        "lng": -73.0311
+      },
+      "whyFamous": "Advancing glacier in Los Glaciares National Park",
+      "imagePath": "/images/landmarks/perito-moreno-glacier.jpg"
+    },
+    {
+      "slug": "aconcagua",
+      "name": "Aconcagua",
+      "city": "Mendoza",
+      "coordinates": {
+        "lat": -32.6532,
+        "lng": -70.0109
+      },
+      "whyFamous": "Highest mountain in the Americas",
+      "imagePath": "/images/landmarks/aconcagua.jpg"
+    },
+    {
+      "slug": "recoleta-cemetery",
+      "name": "Recoleta Cemetery",
+      "city": "Buenos Aires",
+      "coordinates": {
+        "lat": -34.5877,
+        "lng": -58.3934
+      },
+      "whyFamous": "Historic cemetery with elaborate mausoleums, Eva Perón's tomb",
+      "imagePath": "/images/landmarks/recoleta-cemetery.jpg"
+    }
+  ],
+  "rivers": [
+    {
+      "slug": "parana-river",
+      "name": "Paraná River",
+      "length": 4880,
+      "countries": ["Argentina", "Brazil", "Paraguay"],
+      "source": "Brazil",
+      "mouth": "Rio de la Plata",
+      "pathCoordinates": [
+        { "lat": -19.0167, "lng": -51.7833 },
+        { "lat": -34.0, "lng": -58.5 }
+      ]
+    },
+    {
+      "slug": "uruguay-river",
+      "name": "Uruguay River",
+      "length": 1838,
+      "countries": ["Argentina", "Brazil", "Uruguay"],
+      "source": "Brazil",
+      "mouth": "Rio de la Plata",
+      "pathCoordinates": [
+        { "lat": -27.4833, "lng": -49.8 },
+        { "lat": -34.0, "lng": -58.5 }
+      ]
+    },
+    {
+      "slug": "colorado-river-argentina",
+      "name": "Colorado River",
+      "length": 1114,
+      "countries": ["Argentina"],
+      "source": "Andes Mountains",
+      "mouth": "Atlantic Ocean",
+      "pathCoordinates": [
+        { "lat": -37.0, "lng": -70.0 },
+        { "lat": -39.5833, "lng": -62.25 }
+      ]
+    }
+  ],
+  "institutions": [
+    {
+      "slug": "university-of-buenos-aires",
+      "name": "University of Buenos Aires",
+      "city": "Buenos Aires",
+      "founded": 1821,
+      "globalRank": 67,
+      "type": "Public Research University"
+    },
+    {
+      "slug": "national-university-of-cordoba",
+      "name": "National University of Córdoba",
+      "city": "Córdoba",
+      "founded": 1613,
+      "globalRank": 201,
+      "type": "Public Research University"
+    },
+    {
+      "slug": "national-university-of-la-plata",
+      "name": "National University of La Plata",
+      "city": "La Plata, Buenos Aires",
+      "founded": 1905,
+      "globalRank": 250,
+      "type": "Public Research University"
+    },
+    {
+      "slug": "austral-university",
+      "name": "Austral University",
+      "city": "Buenos Aires",
+      "founded": 1991,
+      "globalRank": 400,
+      "type": "Private Research University"
+    }
+  ]
+}
