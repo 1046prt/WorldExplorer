@@ -7,6 +7,16 @@ import { ThemeProvider } from "@/components/theme-provider";
 export const metadata: Metadata = {
   title: "WorldExplorer",
   description: " Discover the world's knowledge",
+  icons: {
+    icon: [
+      {
+        url: "/images/logo/WORLD.svg",
+        type: "image/svg+xml",
+      },
+    ],
+    shortcut: "/images/logo/WORLD.svg",
+    apple: "/images/logo/WORLD.svg",
+  },
 };
 
 export default function RootLayout({
