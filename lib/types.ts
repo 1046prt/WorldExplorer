@@ -11,7 +11,7 @@ export interface Country {
   languages: string[];
   timezones: string[];
   history: HistoryEvent[];
-  states: State[];
+  states?: State[];
   famousCities: FamousCity[];
   landmarks: Landmark[];
   rivers: River[];

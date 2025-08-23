@@ -36,17 +36,19 @@ export function CountryCities({ country }: CountryCitiesProps) {
         ))}
       </div>
 
-      <div className="states-section">
-        <h3 className="subtitle">States/Provinces</h3>
-        <div className="states-grid">
-          {country.states.map((state) => (
-            <div key={state.slug} className="state-item">
-              <span className="state-name">{state.name}</span>
-              <span className="state-capital">{state.capital}</span>
-            </div>
-          ))}
+      {country.states && country.states.length > 0 && (
+        <div className="states-section">
+          <h3 className="subtitle">States/Provinces</h3>
+          <div className="states-grid">
+            {country.states.map((state) => (
+              <div key={state.slug} className="state-item">
+                <span className="state-name">{state.name}</span>
+                <span className="state-capital">{state.capital}</span>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
