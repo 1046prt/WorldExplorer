@@ -6,6 +6,7 @@ import { GlobalNavigation } from "@/components/global-navigation";
 import { BrowseFilters } from "@/components/browse-filters";
 import Footer from "@/components/footer";
 import "@/styles/search-page.css";
+import "@/styles/search-bar.css";
 import {
   Search,
   MapPin,
@@ -15,17 +16,8 @@ import {
   Globe,
 } from "lucide-react";
 import Link from "next/link";
-
-interface SearchResult {
-  type: "country" | "landmark" | "institution" | "river" | "city";
-  title: string;
-  subtitle: string;
-  description: string;
-  url: string;
-  badge?: string;
-  image?: string;
-  metadata?: Record<string, string>;
-}
+import { useDebounce } from "@/hooks/useDebounce";
+import { SearchService, type SearchResult } from "@/lib/search-service";
 
 function SearchContent() {
   const searchParams = useSearchParams();
@@ -37,137 +29,32 @@ function SearchContent() {
   const [selectedType, setSelectedType] = useState<string>("all");
   const [isLoading, setIsLoading] = useState(false);
 
-  // Mock search results - in real app, this would come from API
-  const mockResults: SearchResult[] = [
-    {
-      type: "country",
-      title: "United States",
-      subtitle: "North America",
-      description:
-        "Federal republic with 50 states, known for its diverse geography and cultural influence.",
-      url: "/country/us",
-      badge: "US",
-      image: "/images/flags/us.png",
-      metadata: { capital: "Washington, D.C.", population: "331.9M" },
-    },
-    {
-      type: "country",
-      title: "France",
-      subtitle: "Europe",
-      description:
-        "Western European country known for its art, cuisine, and cultural heritage.",
-      url: "/country/fr",
-      badge: "FR",
-      image: "/images/flags/france.png",
-      metadata: { capital: "Paris", population: "67.7M" },
-    },
-    {
-      type: "country",
-      title: "Japan",
-      subtitle: "Asia",
-      description:
-        "Island nation known for technology, culture, and traditional arts.",
-      url: "/country/jp",
-      badge: "JP",
-      image: "/images/flags/japan.png",
-      metadata: { capital: "Tokyo", population: "125.8M" },
-    },
-    {
-      type: "country",
-      title: "China",
-      subtitle: "Asia",
-      description:
-        "Most populous country, ancient civilization with rapid modern development.",
-      url: "/country/cn",
-      badge: "CN",
-      image: "/images/flags/cn.png",
-      metadata: { capital: "Beijing", population: "1.41B" },
-    },
-    {
-      type: "country",
-      title: "India",
-      subtitle: "Asia",
-      description:
-        "Diverse democracy with rich cultural heritage and growing economy.",
-      url: "/country/in",
-      badge: "IN",
-      image: "/images/flags/in.png",
-      metadata: { capital: "New Delhi", population: "1.38B" },
-    },
-    {
-      type: "landmark",
-      title: "Eiffel Tower",
-      subtitle: "Paris, France",
-      description:
-        "Iconic iron lattice tower and symbol of France, built for the 1889 World's Fair.",
-      url: "/country/fr#landmarks",
-      badge: "Landmark",
-      image: "/images/landmarks/eiffel-tower.png",
-      metadata: { height: "330m", built: "1889" },
-    },
-    {
-      type: "landmark",
-      title: "Statue of Liberty",
-      subtitle: "New York City, USA",
-      description: "Symbol of freedom and democracy, gift from France in 1886.",
-      url: "/country/us#landmarks",
-      badge: "Landmark",
-      image: "/images/landmarks/statue-of-liberty.png",
-      metadata: { height: "93m", built: "1886" },
-    },
-    {
-      type: "institution",
-      title: "Harvard University",
-      subtitle: "Cambridge, Massachusetts",
-      description:
-        "Private Ivy League research university, oldest in the United States.",
-      url: "/country/us#institutions",
-      badge: "University",
-      image: "/images/institutions/harvard.png",
-      metadata: { founded: "1636", rank: "#1" },
-    },
-    {
-      type: "city",
-      title: "Paris",
-      subtitle: "France",
-      description:
-        "City of Light, global center of art, fashion, gastronomy, and culture.",
-      url: "/country/fr#cities",
-      badge: "City",
-      image: "/images/cities/paris.png",
-      metadata: { population: "2.1M", region: "Île-de-France" },
-    },
-    {
-      type: "river",
-      title: "Mississippi River",
-      subtitle: "United States",
-      description:
-        "Major river system in North America, flowing from Minnesota to the Gulf of Mexico.",
-      url: "/country/us#rivers",
-      badge: "River",
-      image: "/images/rivers/mississippi.png",
-      metadata: { length: "3,734 km", source: "Lake Itasca" },
-    },
-  ];
+  const debouncedQuery = useDebounce(query, 300);
 
   useEffect(() => {
-    if (query) {
-      setIsLoading(true);
-      // Simulate API call
-      setTimeout(() => {
-        const filtered = mockResults.filter(
-          (result) =>
-            result.title.toLowerCase().includes(query.toLowerCase()) ||
-            result.subtitle.toLowerCase().includes(query.toLowerCase()) ||
-            result.description.toLowerCase().includes(query.toLowerCase())
-        );
-        setResults(filtered);
+    const performSearch = async () => {
+      if (debouncedQuery && debouncedQuery.length >= 2) {
+        setIsLoading(true);
+        try {
+          const searchResults = await SearchService.search(
+            debouncedQuery,
+            selectedType
+          );
+          setResults(searchResults);
+        } catch (error) {
+          console.error("Search error:", error);
+          setResults([]);
+        } finally {
+          setIsLoading(false);
+        }
+      } else {
+        setResults([]);
         setIsLoading(false);
-      }, 500);
-    } else {
-      setResults([]);
-    }
-  }, [query]);
+      }
+    };
+
+    performSearch();
+  }, [debouncedQuery, selectedType]);
 
   useEffect(() => {
     if (selectedType === "all") {
@@ -222,6 +109,7 @@ function SearchContent() {
                 "river",
               ]}
               filterLabel="Filter by type"
+              showSuggestions={false}
             />
             {query && (
               <section className="section">
