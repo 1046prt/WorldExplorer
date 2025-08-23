@@ -1,0 +1,597 @@
+{
+  "iso2": "ES",
+  "iso3": "ESP",
+  "name": "Spain",
+  "region": "Europe",
+  "capital": "Madrid",
+  "population": 47400000,
+  "image": "/images/countries/es.jpg",
+  "flag": "/images/flags/es.png",
+  "currency": {
+    "code": "EUR",
+    "name": "Euro",
+    "symbol": "€",
+    "image": "/images/currencies/eur.png"
+  },
+  "languages": ["Spanish"],
+  "timezones": ["UTC+01:00"],
+  "geography": {
+    "climateZones": ["Mediterranean", "Continental", "Oceanic", "Subtropical"],
+    "geologicalFormations": [
+      {
+        "name": "Pyrenees",
+        "type": "Mountain Range",
+        "description": "Mountain range forming natural border with France"
+      },
+      {
+        "name": "Meseta Central",
+        "type": "Plateau",
+        "description": "Central plateau covering much of interior Spain"
+      },
+      {
+        "name": "Andalusian Mountains",
+        "type": "Mountain Range",
+        "description": "Mountain system in southern Spain"
+      }
+    ],
+    "naturalDisasters": [
+      {
+        "type": "Flood",
+        "name": "Valencia Floods",
+        "year": 1957,
+        "impact": "Devastating floods in Valencia region"
+      },
+      {
+        "type": "Drought",
+        "name": "Iberian Droughts",
+        "year": "Periodic",
+        "impact": "Regular droughts affecting agriculture"
+      }
+    ],
+    "majorWaterBodies": [
+      {
+        "name": "Mediterranean Sea",
+        "type": "Sea",
+        "coastline": "East and South Coast"
+      },
+      {
+        "name": "Atlantic Ocean",
+        "type": "Ocean",
+        "coastline": "West and North Coast"
+      },
+      {
+        "name": "Bay of Biscay",
+        "type": "Bay",
+        "coastline": "North Coast"
+      },
+      {
+        "name": "Strait of Gibraltar",
+        "type": "Strait",
+        "description": "Narrow strait separating Spain from Africa"
+      }
+    ]
+  },
+  "heritage": {
+    "independenceDate": "1492",
+    "foundingEvent": "Reconquista completion and unification",
+    "majorHistoricalFigures": [
+      {
+        "name": "Isabella I of Castile",
+        "role": "Queen",
+        "period": "1451-1504",
+        "achievement": "Unified Spain and sponsored Columbus's voyages"
+      },
+      {
+        "name": "Charles V",
+        "role": "Holy Roman Emperor",
+        "period": "1500-1558",
+        "achievement": "Ruled vast Spanish Empire at its peak"
+      },
+      {
+        "name": "Francisco Franco",
+        "role": "Dictator",
+        "period": "1892-1975",
+        "achievement": "Ruled Spain for nearly 40 years"
+      }
+    ],
+    "colonialHistory": [
+      {
+        "period": "1492-1898",
+        "description": "Spanish Empire spanning Americas, Philippines, and parts of Africa"
+      },
+      {
+        "period": "711-1492",
+        "description": "Islamic rule in Iberian Peninsula (Al-Andalus)"
+      }
+    ],
+    "unescoSites": [
+      {
+        "name": "Alhambra, Generalife and Albayzín",
+        "year": 1984,
+        "type": "Cultural"
+      },
+      {
+        "name": "Works of Antoni Gaudí",
+        "year": 1984,
+        "type": "Cultural"
+      },
+      {
+        "name": "Historic City of Toledo",
+        "year": 1986,
+        "type": "Cultural"
+      },
+      {
+        "name": "Doñana National Park",
+        "year": 1994,
+        "type": "Natural"
+      }
+    ]
+  },
+  "politics": {
+    "currentLeaders": [
+      {
+        "position": "Prime Minister",
+        "name": "Pedro Sánchez",
+        "party": "PSOE",
+        "termStart": "June 2, 2018"
+      },
+      {
+        "position": "King",
+        "name": "Felipe VI",
+        "party": "Non-partisan",
+        "termStart": "June 19, 2014"
+      }
+    ],
+    "governmentType": "Parliamentary Constitutional Monarchy",
+    "internationalMemberships": [
+      "European Union (EU)",
+      "United Nations (UN)",
+      "North Atlantic Treaty Organization (NATO)",
+      "Organization for Economic Co-operation and Development (OECD)",
+      "Group of Twenty (G20)",
+      "Ibero-American Summit"
+    ]
+  },
+  "economy": {
+    "gdp": 1397870000000,
+    "gdpPerCapita": 29565,
+    "majorIndustries": [
+      "Tourism",
+      "Manufacturing",
+      "Agriculture",
+      "Automotive",
+      "Renewable Energy",
+      "Fashion",
+      "Food Processing"
+    ],
+    "topExports": [
+      {
+        "product": "Cars",
+        "value": 34200000000
+      },
+      {
+        "product": "Refined Petroleum",
+        "value": 20100000000
+      },
+      {
+        "product": "Packaged Medicaments",
+        "value": 18900000000
+      },
+      {
+        "product": "Vehicle Parts",
+        "value": 12800000000
+      }
+    ],
+    "topImports": [
+      {
+        "product": "Crude Petroleum",
+        "value": 24800000000
+      },
+      {
+        "product": "Cars",
+        "value": 18200000000
+      },
+      {
+        "product": "Vehicle Parts",
+        "value": 11900000000
+      },
+      {
+        "product": "Petroleum Gas",
+        "value": 11200000000
+      }
+    ],
+    "employmentRate": 87.3,
+    "employmentSectors": {
+      "services": 76.2,
+      "industry": 20.2,
+      "agriculture": 3.6
+    }
+  },
+  "culture": {
+    "officialLanguages": ["Spanish"],
+    "regionalLanguages": ["Catalan", "Galician", "Basque", "Aranese"],
+    "religionDemographics": {
+      "Christianity": 67.4,
+      "Unaffiliated": 27.9,
+      "Islam": 2.1,
+      "Other": 2.6
+    },
+    "nationalFestivals": [
+      {
+        "name": "La Tomatina",
+        "date": "Last Wednesday in August",
+        "description": "Famous tomato-throwing festival in Buñol"
+      },
+      {
+        "name": "Running of the Bulls",
+        "date": "July 6-14",
+        "description": "Traditional festival in Pamplona"
+      },
+      {
+        "name": "Semana Santa",
+        "date": "Easter Week",
+        "description": "Holy Week processions throughout Spain"
+      }
+    ],
+    "traditionalFoods": [
+      {
+        "name": "Paella",
+        "description": "Traditional rice dish from Valencia region"
+      },
+      {
+        "name": "Tapas",
+        "description": "Small plates of various appetizers"
+      },
+      {
+        "name": "Jamón Ibérico",
+        "description": "Cured ham from black Iberian pigs"
+      },
+      {
+        "name": "Gazpacho",
+        "description": "Cold soup made from vegetables"
+      }
+    ],
+    "nationalSymbols": {
+      "flag": "Red and Yellow with Coat of Arms",
+      "emblem": "Coat of Arms of Spain",
+      "anthem": "Marcha Real",
+      "flower": "Red Carnation",
+      "bird": "Spanish Imperial Eagle",
+      "animal": "Bull"
+    }
+  },
+  "education": {
+    "literacyRate": 98.4,
+    "educationSystem": "Free public education, autonomous regional systems",
+    "famousScientists": [
+      {
+        "name": "Santiago Ramón y Cajal",
+        "field": "Neuroscience",
+        "achievement": "Nobel Prize for neuron doctrine"
+      },
+      {
+        "name": "Severo Ochoa",
+        "field": "Biochemistry",
+        "achievement": "Nobel Prize for RNA synthesis"
+      },
+      {
+        "name": "Margarita Salas",
+        "field": "Biochemistry",
+        "achievement": "Pioneer in molecular biology"
+      }
+    ],
+    "nobelPrizeWinners": 8
+  },
+  "tourism": {
+    "mostVisitedCities": [
+      {
+        "name": "Barcelona",
+        "visitors": 32000000,
+        "attractions": ["Sagrada Familia", "Park Güell", "Las Ramblas"]
+      },
+      {
+        "name": "Madrid",
+        "visitors": 10400000,
+        "attractions": ["Prado Museum", "Royal Palace", "Retiro Park"]
+      },
+      {
+        "name": "Seville",
+        "visitors": 2800000,
+        "attractions": ["Alcázar", "Cathedral", "Giralda Tower"]
+      }
+    ],
+    "adventureActivities": [
+      "Camino de Santiago",
+      "Costa del Sol Beaches",
+      "Pyrenees Hiking",
+      "Flamenco Shows",
+      "Balearic Islands"
+    ],
+    "transportation": {
+      "airports": "Major airports in Madrid, Barcelona, Palma",
+      "railways": "High-speed AVE rail network",
+      "highways": "Extensive autopista highway system"
+    },
+    "visaRequirements": "Schengen visa or EU passport required"
+  },
+  "demographics": {
+    "populationGrowth": [
+      { "year": 2020, "population": 47351567 },
+      { "year": 2021, "population": 47415794 },
+      { "year": 2022, "population": 47475420 },
+      { "year": 2023, "population": 47519628 }
+    ],
+    "urbanRural": {
+      "urban": 81.0,
+      "rural": 19.0
+    },
+    "lifeExpectancy": {
+      "total": 83.6,
+      "male": 80.9,
+      "female": 86.2
+    },
+    "ageDistribution": {
+      "youth": 14.4,
+      "workingAge": 65.8,
+      "elderly": 19.8
+    }
+  },
+  "scienceTechnology": {
+    "spaceMissions": [
+      {
+        "name": "Hispasat Satellite System",
+        "year": 1992,
+        "achievement": "Spanish satellite communications system"
+      },
+      {
+        "name": "European Space Agency",
+        "year": 1975,
+        "achievement": "Founding member of ESA"
+      }
+    ],
+    "techStartups": ["Cabify", "Glovo", "Jobandtalent", "Typeform", "Wallapop"],
+    "patents": 3814,
+    "breakthroughs": [
+      {
+        "year": 1936,
+        "invention": "Autogyro",
+        "inventor": "Juan de la Cierva"
+      },
+      {
+        "year": 1959,
+        "invention": "Lollipop",
+        "inventor": "Enric Bernat"
+      }
+    ]
+  },
+  "sportsEntertainment": {
+    "nationalSports": ["Football (Soccer)", "Basketball", "Tennis"],
+    "olympicPerformance": {
+      "totalMedals": 174,
+      "goldMedals": 47,
+      "silverMedals": 65,
+      "bronzeMedals": 62
+    },
+    "popularMovies": [
+      "Pedro Almodóvar films",
+      "Spanish cinema",
+      "International co-productions"
+    ],
+    "musicArtists": [
+      "Paco de Lucía",
+      "Enrique Iglesias",
+      "Alejandro Sanz",
+      "Rosalía",
+      "Jesse & Joy"
+    ],
+    "worldRecords": [
+      {
+        "record": "FIFA World Cup winner",
+        "value": "2010 champion"
+      },
+      {
+        "record": "Most visited country in Europe",
+        "value": "83+ million tourists annually"
+      }
+    ]
+  },
+  "history": [
+    {
+      "year": 711,
+      "description": "Islamic conquest of Iberian Peninsula begins"
+    },
+    {
+      "year": 1492,
+      "description": "Reconquista completed, Columbus reaches Americas"
+    },
+    {
+      "year": 1936,
+      "description": "Spanish Civil War begins"
+    },
+    {
+      "year": 1975,
+      "description": "Death of Franco, transition to democracy begins"
+    },
+    {
+      "year": 1986,
+      "description": "Spain joins European Economic Community"
+    }
+  ],
+  "autonomousCommunities": [
+    {
+      "name": "Andalusia",
+      "capital": "Seville",
+      "slug": "andalusia"
+    },
+    {
+      "name": "Catalonia",
+      "capital": "Barcelona",
+      "slug": "catalonia"
+    },
+    {
+      "name": "Madrid",
+      "capital": "Madrid",
+      "slug": "madrid"
+    },
+    {
+      "name": "Valencia",
+      "capital": "Valencia",
+      "slug": "valencia"
+    },
+    {
+      "name": "Basque Country",
+      "capital": "Vitoria-Gasteiz",
+      "slug": "basque-country"
+    }
+  ],
+  "famousCities": [
+    {
+      "name": "Madrid",
+      "whyFamous": "Capital city, art museums, royal palaces",
+      "slug": "madrid",
+      "image": "/images/cities/madrid.jpg"
+    },
+    {
+      "name": "Barcelona",
+      "whyFamous": "Gaudí architecture, Mediterranean culture, Catalonian capital",
+      "slug": "barcelona",
+      "image": "/images/cities/barcelona.jpg"
+    },
+    {
+      "name": "Seville",
+      "whyFamous": "Moorish architecture, flamenco culture, historic center",
+      "slug": "seville",
+      "image": "/images/cities/seville.jpg"
+    },
+    {
+      "name": "Valencia",
+      "whyFamous": "City of Arts and Sciences, birthplace of paella",
+      "slug": "valencia",
+      "image": "/images/cities/valencia.jpg"
+    },
+    {
+      "name": "Bilbao",
+      "whyFamous": "Guggenheim Museum, Basque culture, industrial heritage",
+      "slug": "bilbao",
+      "image": "/images/cities/bilbao.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "slug": "sagrada-familia",
+      "name": "Sagrada Familia",
+      "city": "Barcelona",
+      "coordinates": {
+        "lat": 41.4036,
+        "lng": 2.1744
+      },
+      "whyFamous": "Gaudí's unfinished masterpiece basilica",
+      "imagePath": "/images/landmarks/sagrada-familia.jpg"
+    },
+    {
+      "slug": "alhambra",
+      "name": "Alhambra",
+      "city": "Granada",
+      "coordinates": {
+        "lat": 37.1773,
+        "lng": -3.5986
+      },
+      "whyFamous": "Moorish palace complex and fortress",
+      "imagePath": "/images/landmarks/alhambra.jpg"
+    },
+    {
+      "slug": "prado-museum",
+      "name": "Prado Museum",
+      "city": "Madrid",
+      "coordinates": {
+        "lat": 40.4138,
+        "lng": -3.6921
+      },
+      "whyFamous": "World-renowned art museum with Spanish masters",
+      "imagePath": "/images/landmarks/prado-museum.jpg"
+    },
+    {
+      "slug": "camino-de-santiago",
+      "name": "Camino de Santiago",
+      "city": "Multiple cities",
+      "coordinates": {
+        "lat": 42.8805,
+        "lng": -8.5456
+      },
+      "whyFamous": "Historic pilgrimage route across northern Spain",
+      "imagePath": "/images/landmarks/camino-de-santiago.jpg"
+    }
+  ],
+  "rivers": [
+    {
+      "slug": "ebro-river",
+      "name": "Ebro River",
+      "length": 930,
+      "countries": ["Spain"],
+      "source": "Cantabrian Mountains",
+      "mouth": "Mediterranean Sea",
+      "pathCoordinates": [
+        { "lat": 43.0, "lng": -4.2167 },
+        { "lat": 40.7167, "lng": 0.8667 }
+      ]
+    },
+    {
+      "slug": "tagus-river",
+      "name": "Tagus River",
+      "length": 1007,
+      "countries": ["Spain", "Portugal"],
+      "source": "Montes Universales",
+      "mouth": "Atlantic Ocean",
+      "pathCoordinates": [
+        { "lat": 40.2833, "lng": -1.6667 },
+        { "lat": 38.6833, "lng": -9.4167 }
+      ]
+    },
+    {
+      "slug": "guadalquivir-river",
+      "name": "Guadalquivir River",
+      "length": 657,
+      "countries": ["Spain"],
+      "source": "Cazorla Mountains",
+      "mouth": "Atlantic Ocean",
+      "pathCoordinates": [
+        { "lat": 37.9167, "lng": -2.8833 },
+        { "lat": 36.7833, "lng": -6.35 }
+      ]
+    }
+  ],
+  "institutions": [
+    {
+      "slug": "university-of-barcelona",
+      "name": "University of Barcelona",
+      "city": "Barcelona, Catalonia",
+      "founded": 1450,
+      "globalRank": 184,
+      "type": "Public Research University"
+    },
+    {
+      "slug": "autonomous-university-of-madrid",
+      "name": "Autonomous University of Madrid",
+      "city": "Madrid",
+      "founded": 1968,
+      "globalRank": 200,
+      "type": "Public Research University"
+    },
+    {
+      "slug": "university-of-salamanca",
+      "name": "University of Salamanca",
+      "city": "Salamanca, Castile and León",
+      "founded": 1218,
+      "globalRank": 601,
+      "type": "Public Research University"
+    },
+    {
+      "slug": "pompeu-fabra-university",
+      "name": "Pompeu Fabra University",
+      "city": "Barcelona, Catalonia",
+      "founded": 1990,
+      "globalRank": 287,
+      "type": "Public Research University"
+    }
+  ]
+}
