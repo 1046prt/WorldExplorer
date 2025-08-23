@@ -26,8 +26,18 @@ export function CountryMap({ country }: CountryMapProps) {
           src={`/images/country/${country.iso2.toLowerCase()}.svg`}
           alt={`${country.name} Map`}
           className="map-image"
+          onLoad={(e) => {
+            const fallback = (
+              e.target as HTMLImageElement
+            ).parentElement?.querySelector(".map-fallback") as HTMLElement;
+            if (fallback) fallback.style.display = "none";
+          }}
           onError={(e) => {
             (e.target as HTMLImageElement).style.display = "none";
+            const fallback = (
+              e.target as HTMLImageElement
+            ).parentElement?.querySelector(".map-fallback") as HTMLElement;
+            if (fallback) fallback.style.display = "flex";
           }}
         />
         <div className="map-fallback">
