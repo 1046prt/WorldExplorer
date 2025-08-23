@@ -1,6 +1,67 @@
-/* Component Styles */
+/* Header/Navigation Logo Styles */
+.header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 0;
+  height: 0;
+  transition: all var(--transition-fast);
+  background: none; 
+}
 
-/* Button Component */
+.header-logo-image {
+  width: 6rem;
+  height: 6rem;
+  object-fit: contain;
+  transition: transform var(--transition-fast);
+  background: none; 
+  margin: 1rem 5rem 1rem 1rem;
+}
+
+.header-brand-link {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+  text-decoration: none;
+  color: inherit;
+  transition: all var(--transition-fast);
+}
+
+.header-brand-link:hover .header-logo-image {
+  transform: scale(1.05);
+}
+
+.header-brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.header-title {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  line-height: var(--line-height-tight);
+  color: var(--color-foreground);
+  margin: 0;
+  transition: color var(--transition-fast);
+}
+
+.header-subtitle {
+  font-size: var(--font-size-xs);
+  color: var(--color-muted-foreground);
+  line-height: var(--line-height-normal);
+  margin: 0;
+  transition: color var(--transition-fast);
+}
+
+.header-brand-link:hover .header-title {
+  color: var(--color-primary);
+}
+
+.header-brand-link:hover .header-subtitle {
+  color: var(--color-foreground);
+}
+
 .btn {
   display: inline-flex;
   align-items: center;

@@ -33,7 +33,11 @@ export function GlobalNavigation({
             )}
             <Link href="/" className="header-brand-link">
               <div className="header-logo">
-                <span className="header-logo-emoji">🌍</span>
+                <img
+                  src="/images/logo/WORLD.svg"
+                  alt="WorldExplorer Logo"
+                  className="header-logo-image"
+                />
               </div>
               <div className="header-brand-text">
                 <h1 className="header-title">WorldExplorer</h1>
