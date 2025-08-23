@@ -1,0 +1,638 @@
+{
+  "iso2": "RU",
+  "iso3": "RUS",
+  "name": "Russia",
+  "region": "Europe/Asia",
+  "capital": "Moscow",
+  "population": 146200000,
+  "image": "/images/countries/ru.jpg",
+  "flag": "/images/flags/ru.png",
+  "currency": {
+    "code": "RUB",
+    "name": "Russian Ruble",
+    "symbol": "₽",
+    "image": "/images/currencies/rub.png"
+  },
+  "languages": ["Russian"],
+  "timezones": [
+    "UTC+02:00",
+    "UTC+03:00",
+    "UTC+04:00",
+    "UTC+05:00",
+    "UTC+06:00",
+    "UTC+07:00",
+    "UTC+08:00",
+    "UTC+09:00",
+    "UTC+10:00",
+    "UTC+11:00",
+    "UTC+12:00"
+  ],
+  "geography": {
+    "climateZones": ["Arctic", "Subarctic", "Continental", "Temperate"],
+    "geologicalFormations": [
+      {
+        "name": "Ural Mountains",
+        "type": "Mountain Range",
+        "description": "Mountain range separating European and Asian Russia"
+      },
+      {
+        "name": "Siberian Plain",
+        "type": "Plain",
+        "description": "Vast lowland region in northern Asia"
+      },
+      {
+        "name": "Caucasus Mountains",
+        "type": "Mountain Range",
+        "description": "Mountain range between Europe and Asia"
+      }
+    ],
+    "naturalDisasters": [
+      {
+        "type": "Earthquake",
+        "name": "Sakhalin Earthquake",
+        "year": 1995,
+        "impact": "Major earthquake in far eastern Russia"
+      },
+      {
+        "type": "Wildfire",
+        "name": "Siberian Wildfires",
+        "year": "Annual",
+        "impact": "Regular massive forest fires in Siberia"
+      }
+    ],
+    "majorWaterBodies": [
+      {
+        "name": "Arctic Ocean",
+        "type": "Ocean",
+        "coastline": "North Coast"
+      },
+      {
+        "name": "Pacific Ocean",
+        "type": "Ocean",
+        "coastline": "East Coast"
+      },
+      {
+        "name": "Black Sea",
+        "type": "Sea",
+        "coastline": "South Coast"
+      },
+      {
+        "name": "Lake Baikal",
+        "type": "Lake",
+        "description": "World's deepest and oldest freshwater lake"
+      }
+    ]
+  },
+  "heritage": {
+    "independenceDate": "June 12, 1990",
+    "foundingEvent": "Russian Federation Declaration of Sovereignty",
+    "majorHistoricalFigures": [
+      {
+        "name": "Peter the Great",
+        "role": "Tsar",
+        "period": "1682-1725",
+        "achievement": "Modernized Russia and founded St. Petersburg"
+      },
+      {
+        "name": "Catherine the Great",
+        "role": "Empress",
+        "period": "1762-1796",
+        "achievement": "Expanded Russian territory and promoted arts"
+      },
+      {
+        "name": "Vladimir Lenin",
+        "role": "Revolutionary Leader",
+        "period": "1917-1924",
+        "achievement": "Led Bolshevik Revolution and founded Soviet Union"
+      }
+    ],
+    "colonialHistory": [
+      {
+        "period": "1547-1917",
+        "description": "Russian Empire expansion across Eurasia"
+      },
+      {
+        "period": "1922-1991",
+        "description": "Soviet Union period"
+      }
+    ],
+    "unescoSites": [
+      {
+        "name": "Kremlin and Red Square",
+        "year": 1990,
+        "type": "Cultural"
+      },
+      {
+        "name": "Historic Centre of Saint Petersburg",
+        "year": 1990,
+        "type": "Cultural"
+      },
+      {
+        "name": "Lake Baikal",
+        "year": 1996,
+        "type": "Natural"
+      },
+      {
+        "name": "Golden Mountains of Altai",
+        "year": 1998,
+        "type": "Natural"
+      }
+    ]
+  },
+  "politics": {
+    "currentLeaders": [
+      {
+        "position": "President",
+        "name": "Vladimir Putin",
+        "party": "United Russia",
+        "termStart": "May 7, 2012"
+      },
+      {
+        "position": "Prime Minister",
+        "name": "Mikhail Mishustin",
+        "party": "Independent",
+        "termStart": "January 16, 2020"
+      }
+    ],
+    "governmentType": "Federal Semi-Presidential Republic",
+    "internationalMemberships": [
+      "United Nations (UN)",
+      "BRICS",
+      "Shanghai Cooperation Organisation (SCO)",
+      "Eurasian Economic Union (EAEU)",
+      "Commonwealth of Independent States (CIS)"
+    ]
+  },
+  "economy": {
+    "gdp": 1829734000000,
+    "gdpPerCapita": 12575,
+    "majorIndustries": [
+      "Oil and Gas",
+      "Mining",
+      "Defense",
+      "Machinery",
+      "Chemicals",
+      "Agriculture",
+      "Forestry"
+    ],
+    "topExports": [
+      {
+        "product": "Crude Petroleum",
+        "value": 123500000000
+      },
+      {
+        "product": "Refined Petroleum",
+        "value": 66200000000
+      },
+      {
+        "product": "Petroleum Gas",
+        "value": 26300000000
+      },
+      {
+        "product": "Coal Briquettes",
+        "value": 17600000000
+      }
+    ],
+    "topImports": [
+      {
+        "product": "Cars",
+        "value": 10800000000
+      },
+      {
+        "product": "Packaged Medicaments",
+        "value": 8900000000
+      },
+      {
+        "product": "Vehicle Parts",
+        "value": 4200000000
+      },
+      {
+        "product": "Broadcasting Equipment",
+        "value": 3800000000
+      }
+    ],
+    "employmentRate": 95.1,
+    "employmentSectors": {
+      "services": 62.3,
+      "industry": 32.0,
+      "agriculture": 5.7
+    }
+  },
+  "culture": {
+    "officialLanguages": ["Russian"],
+    "regionalLanguages": [
+      "Tatar",
+      "Ukrainian",
+      "Bashkir",
+      "Chuvash",
+      "Chechen"
+    ],
+    "religionDemographics": {
+      "Christianity": 71.0,
+      "Unaffiliated": 15.0,
+      "Islam": 10.0,
+      "Other": 4.0
+    },
+    "nationalFestivals": [
+      {
+        "name": "New Year",
+        "date": "January 1",
+        "description": "Most important holiday in Russia"
+      },
+      {
+        "name": "Maslenitsa",
+        "date": "February-March",
+        "description": "Traditional Slavic festival before Lent"
+      },
+      {
+        "name": "Victory Day",
+        "date": "May 9",
+        "description": "Commemorates victory in World War II"
+      }
+    ],
+    "traditionalFoods": [
+      {
+        "name": "Borscht",
+        "description": "Beetroot soup popular in Eastern Europe"
+      },
+      {
+        "name": "Beef Stroganoff",
+        "description": "Sautéed beef in sour cream sauce"
+      },
+      {
+        "name": "Blini",
+        "description": "Thin pancakes served with various toppings"
+      },
+      {
+        "name": "Caviar",
+        "description": "Luxury delicacy from sturgeon fish"
+      }
+    ],
+    "nationalSymbols": {
+      "flag": "White, Blue, and Red Tricolor",
+      "emblem": "Double-headed Eagle",
+      "anthem": "State Anthem of the Russian Federation",
+      "flower": "Chamomile",
+      "bird": "Double-headed Eagle",
+      "animal": "Eurasian Brown Bear"
+    }
+  },
+  "education": {
+    "literacyRate": 99.7,
+    "educationSystem": "Free public education, strong emphasis on sciences",
+    "famousScientists": [
+      {
+        "name": "Dmitri Mendeleev",
+        "field": "Chemistry",
+        "achievement": "Created the periodic table of elements"
+      },
+      {
+        "name": "Yuri Gagarin",
+        "field": "Space Exploration",
+        "achievement": "First human in space"
+      },
+      {
+        "name": "Ivan Pavlov",
+        "field": "Psychology",
+        "achievement": "Classical conditioning research"
+      }
+    ],
+    "nobelPrizeWinners": 32
+  },
+  "tourism": {
+    "mostVisitedCities": [
+      {
+        "name": "Moscow",
+        "visitors": 25000000,
+        "attractions": ["Red Square", "Kremlin", "St. Basil's Cathedral"]
+      },
+      {
+        "name": "St. Petersburg",
+        "visitors": 8500000,
+        "attractions": [
+          "Hermitage Museum",
+          "Peterhof Palace",
+          "Mariinsky Theatre"
+        ]
+      },
+      {
+        "name": "Sochi",
+        "visitors": 6200000,
+        "attractions": [
+          "Black Sea Resort",
+          "Olympic Park",
+          "Caucasus Mountains"
+        ]
+      }
+    ],
+    "adventureActivities": [
+      "Trans-Siberian Railway",
+      "Lake Baikal Tours",
+      "Arctic Expeditions",
+      "Kamchatka Wildlife",
+      "Golden Ring Tours"
+    ],
+    "transportation": {
+      "airports": "Major airports in Moscow, St. Petersburg, Sochi",
+      "railways": "Extensive rail network including Trans-Siberian Railway",
+      "highways": "Federal highway system"
+    },
+    "visaRequirements": "Visa required for most visitors"
+  },
+  "demographics": {
+    "populationGrowth": [
+      { "year": 2020, "population": 145912025 },
+      { "year": 2021, "population": 145805947 },
+      { "year": 2022, "population": 145478097 },
+      { "year": 2023, "population": 144444359 }
+    ],
+    "urbanRural": {
+      "urban": 74.4,
+      "rural": 25.6
+    },
+    "lifeExpectancy": {
+      "total": 72.6,
+      "male": 67.5,
+      "female": 77.8
+    },
+    "ageDistribution": {
+      "youth": 17.6,
+      "workingAge": 66.7,
+      "elderly": 15.7
+    }
+  },
+  "scienceTechnology": {
+    "spaceMissions": [
+      {
+        "name": "Sputnik 1",
+        "year": 1957,
+        "achievement": "First artificial satellite"
+      },
+      {
+        "name": "Vostok 1",
+        "year": 1961,
+        "achievement": "First human spaceflight with Yuri Gagarin"
+      },
+      {
+        "name": "International Space Station",
+        "year": 1998,
+        "achievement": "Major partner in ISS construction and operation"
+      }
+    ],
+    "techStartups": [
+      "Yandex",
+      "Mail.ru Group",
+      "Kaspersky Lab",
+      "ABBYY",
+      "JetBrains"
+    ],
+    "patents": 33896,
+    "breakthroughs": [
+      {
+        "year": 1869,
+        "invention": "Periodic Table",
+        "inventor": "Dmitri Mendeleev"
+      },
+      {
+        "year": 1957,
+        "invention": "Artificial Satellite",
+        "inventor": "Soviet Space Program"
+      },
+      {
+        "year": 1895,
+        "invention": "Radio",
+        "inventor": "Alexander Popov"
+      }
+    ]
+  },
+  "sportsEntertainment": {
+    "nationalSports": ["Ice Hockey", "Football (Soccer)", "Figure Skating"],
+    "olympicPerformance": {
+      "totalMedals": 1681,
+      "goldMedals": 473,
+      "silverMedals": 470,
+      "bronzeMedals": 738
+    },
+    "popularMovies": [
+      "Soviet cinema classics",
+      "Tarkovsky films",
+      "Modern Russian cinema"
+    ],
+    "musicArtists": [
+      "Pyotr Ilyich Tchaikovsky",
+      "Sergei Rachmaninoff",
+      "Igor Stravinsky",
+      "t.A.T.u.",
+      "Dima Bilan"
+    ],
+    "worldRecords": [
+      {
+        "record": "Largest country by land area",
+        "value": "17.1 million km²"
+      },
+      {
+        "record": "First nation to send human to space",
+        "value": "Yuri Gagarin, 1961"
+      }
+    ]
+  },
+  "history": [
+    {
+      "year": 862,
+      "description": "Traditional founding of Russian state by Rurik"
+    },
+    {
+      "year": 1547,
+      "description": "Ivan the Terrible becomes first Tsar of Russia"
+    },
+    {
+      "year": 1917,
+      "description": "Russian Revolution overthrows Tsarist regime"
+    },
+    {
+      "year": 1991,
+      "description": "Dissolution of Soviet Union, Russian Federation established"
+    },
+    {
+      "year": 2014,
+      "description": "Annexation of Crimea from Ukraine"
+    }
+  ],
+  "federalSubjects": [
+    {
+      "name": "Moscow",
+      "capital": "Moscow",
+      "slug": "moscow"
+    },
+    {
+      "name": "St. Petersburg",
+      "capital": "St. Petersburg",
+      "slug": "st-petersburg"
+    },
+    {
+      "name": "Tatarstan",
+      "capital": "Kazan",
+      "slug": "tatarstan"
+    },
+    {
+      "name": "Bashkortostan",
+      "capital": "Ufa",
+      "slug": "bashkortostan"
+    },
+    {
+      "name": "Sakha Republic",
+      "capital": "Yakutsk",
+      "slug": "sakha-republic"
+    }
+  ],
+  "famousCities": [
+    {
+      "name": "Moscow",
+      "whyFamous": "Capital city, political center, Red Square and Kremlin",
+      "slug": "moscow",
+      "image": "/images/cities/moscow.jpg"
+    },
+    {
+      "name": "St. Petersburg",
+      "whyFamous": "Cultural capital, former imperial capital, Hermitage Museum",
+      "slug": "st-petersburg",
+      "image": "/images/cities/st-petersburg.jpg"
+    },
+    {
+      "name": "Vladivostok",
+      "whyFamous": "Pacific port city, terminus of Trans-Siberian Railway",
+      "slug": "vladivostok",
+      "image": "/images/cities/vladivostok.jpg"
+    },
+    {
+      "name": "Sochi",
+      "whyFamous": "Black Sea resort, 2014 Winter Olympics host",
+      "slug": "sochi",
+      "image": "/images/cities/sochi.jpg"
+    },
+    {
+      "name": "Kazan",
+      "whyFamous": "Capital of Tatarstan, multicultural city with Kremlin",
+      "slug": "kazan",
+      "image": "/images/cities/kazan.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "slug": "red-square",
+      "name": "Red Square",
+      "city": "Moscow",
+      "coordinates": {
+        "lat": 55.7539,
+        "lng": 37.6208
+      },
+      "whyFamous": "Historic square in Moscow, heart of Russian power",
+      "imagePath": "/images/landmarks/red-square.jpg"
+    },
+    {
+      "slug": "hermitage-museum",
+      "name": "Hermitage Museum",
+      "city": "St. Petersburg",
+      "coordinates": {
+        "lat": 59.9398,
+        "lng": 30.3146
+      },
+      "whyFamous": "One of the world's largest and oldest museums",
+      "imagePath": "/images/landmarks/hermitage-museum.jpg"
+    },
+    {
+      "slug": "lake-baikal",
+      "name": "Lake Baikal",
+      "city": "Siberia",
+      "coordinates": {
+        "lat": 53.5587,
+        "lng": 108.165
+      },
+      "whyFamous": "World's deepest and oldest freshwater lake",
+      "imagePath": "/images/landmarks/lake-baikal.jpg"
+    },
+    {
+      "slug": "trans-siberian-railway",
+      "name": "Trans-Siberian Railway",
+      "city": "Multiple cities",
+      "coordinates": {
+        "lat": 55.7558,
+        "lng": 37.6176
+      },
+      "whyFamous": "Longest railway line in the world",
+      "imagePath": "/images/landmarks/trans-siberian-railway.jpg"
+    }
+  ],
+  "rivers": [
+    {
+      "slug": "volga-river",
+      "name": "Volga River",
+      "length": 3531,
+      "countries": ["Russia"],
+      "source": "Valdai Hills",
+      "mouth": "Caspian Sea",
+      "pathCoordinates": [
+        { "lat": 57.1522, "lng": 32.2619 },
+        { "lat": 45.7167, "lng": 47.7667 }
+      ]
+    },
+    {
+      "slug": "yenisei-river",
+      "name": "Yenisei River",
+      "length": 3487,
+      "countries": ["Russia", "Mongolia"],
+      "source": "Mongolia",
+      "mouth": "Kara Sea",
+      "pathCoordinates": [
+        { "lat": 50.4, "lng": 99.9833 },
+        { "lat": 71.8167, "lng": 82.6833 }
+      ]
+    },
+    {
+      "slug": "ob-river",
+      "name": "Ob River",
+      "length": 3650,
+      "countries": ["Russia"],
+      "source": "Altai Mountains",
+      "mouth": "Gulf of Ob",
+      "pathCoordinates": [
+        { "lat": 52.3667, "lng": 85.0333 },
+        { "lat": 66.6333, "lng": 66.5333 }
+      ]
+    }
+  ],
+  "institutions": [
+    {
+      "slug": "moscow-state-university",
+      "name": "Moscow State University",
+      "city": "Moscow",
+      "founded": 1755,
+      "globalRank": 74,
+      "type": "Public Research University"
+    },
+    {
+      "slug": "st-petersburg-state-university",
+      "name": "St. Petersburg State University",
+      "city": "St. Petersburg",
+      "founded": 1724,
+      "globalRank": 225,
+      "type": "Public Research University"
+    },
+    {
+      "slug": "novosibirsk-state-university",
+      "name": "Novosibirsk State University",
+      "city": "Novosibirsk",
+      "founded": 1959,
+      "globalRank": 250,
+      "type": "Public Research University"
+    },
+    {
+      "slug": "moscow-institute-physics-technology",
+      "name": "Moscow Institute of Physics and Technology",
+      "city": "Moscow",
+      "founded": 1946,
+      "globalRank": 290,
+      "type": "Public Technical University"
+    }
+  ]
+}
