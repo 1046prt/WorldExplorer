@@ -1,6 +1,4 @@
 import type { Country } from "./types";
-import { promises as fs } from "fs";
-import path from "path";
 
 export async function getCountryData(
   countryCode: string
@@ -8,7 +6,10 @@ export async function getCountryData(
   try {
     // Use file system on server, fetch on client
     if (typeof window === "undefined") {
-      // Server-side: read from file system
+      // Server-side: read from file system - import fs dynamically
+      const { promises: fs } = await import("fs");
+      const path = await import("path");
+
       const filePath = path.join(
         process.cwd(),
         "public",
@@ -81,18 +82,22 @@ export function searchCountries(
       country.name.toLowerCase().includes(lowercaseQuery) ||
       country.capital.toLowerCase().includes(lowercaseQuery) ||
       country.region.toLowerCase().includes(lowercaseQuery) ||
-      country.famousCities.some((city) =>
-        city.name.toLowerCase().includes(lowercaseQuery)
-      ) ||
-      country.landmarks.some((landmark) =>
-        landmark.name.toLowerCase().includes(lowercaseQuery)
-      ) ||
-      country.institutions.some((institution) =>
-        institution.name.toLowerCase().includes(lowercaseQuery)
-      ) ||
-      country.rivers.some((river) =>
-        river.name.toLowerCase().includes(lowercaseQuery)
-      )
+      (country.famousCities &&
+        country.famousCities.some((city) =>
+          city.name.toLowerCase().includes(lowercaseQuery)
+        )) ||
+      (country.landmarks &&
+        country.landmarks.some((landmark) =>
+          landmark.name.toLowerCase().includes(lowercaseQuery)
+        )) ||
+      (country.institutions &&
+        country.institutions.some((institution) =>
+          institution.name.toLowerCase().includes(lowercaseQuery)
+        )) ||
+      (country.rivers &&
+        country.rivers.some((river) =>
+          river.name.toLowerCase().includes(lowercaseQuery)
+        ))
   );
 }
 
@@ -101,17 +106,19 @@ export function searchLandmarks(query: string, countries: Country[]) {
   const landmarks = [];
 
   for (const country of countries) {
-    for (const landmark of country.landmarks) {
-      if (
-        landmark.name.toLowerCase().includes(lowercaseQuery) ||
-        landmark.city.toLowerCase().includes(lowercaseQuery) ||
-        landmark.whyFamous.toLowerCase().includes(lowercaseQuery)
-      ) {
-        landmarks.push({
-          ...landmark,
-          country: country.name,
-          countryCode: country.iso2,
-        });
+    if (country.landmarks && country.landmarks.length > 0) {
+      for (const landmark of country.landmarks) {
+        if (
+          landmark.name.toLowerCase().includes(lowercaseQuery) ||
+          landmark.city.toLowerCase().includes(lowercaseQuery) ||
+          landmark.whyFamous.toLowerCase().includes(lowercaseQuery)
+        ) {
+          landmarks.push({
+            ...landmark,
+            country: country.name,
+            countryCode: country.iso2,
+          });
+        }
       }
     }
   }
@@ -124,17 +131,19 @@ export function searchInstitutions(query: string, countries: Country[]) {
   const institutions = [];
 
   for (const country of countries) {
-    for (const institution of country.institutions) {
-      if (
-        institution.name.toLowerCase().includes(lowercaseQuery) ||
-        institution.city.toLowerCase().includes(lowercaseQuery) ||
-        institution.type.toLowerCase().includes(lowercaseQuery)
-      ) {
-        institutions.push({
-          ...institution,
-          country: country.name,
-          countryCode: country.iso2,
-        });
+    if (country.institutions && country.institutions.length > 0) {
+      for (const institution of country.institutions) {
+        if (
+          institution.name.toLowerCase().includes(lowercaseQuery) ||
+          institution.city.toLowerCase().includes(lowercaseQuery) ||
+          institution.type.toLowerCase().includes(lowercaseQuery)
+        ) {
+          institutions.push({
+            ...institution,
+            country: country.name,
+            countryCode: country.iso2,
+          });
+        }
       }
     }
   }
@@ -147,18 +156,20 @@ export function searchRivers(query: string, countries: Country[]) {
   const rivers = [];
 
   for (const country of countries) {
-    for (const river of country.rivers) {
-      if (
-        river.name.toLowerCase().includes(lowercaseQuery) ||
-        river.source.toLowerCase().includes(lowercaseQuery) ||
-        river.mouth.toLowerCase().includes(lowercaseQuery) ||
-        river.countries.some((c) => c.toLowerCase().includes(lowercaseQuery))
-      ) {
-        rivers.push({
-          ...river,
-          country: country.name,
-          countryCode: country.iso2,
-        });
+    if (country.rivers && country.rivers.length > 0) {
+      for (const river of country.rivers) {
+        if (
+          river.name.toLowerCase().includes(lowercaseQuery) ||
+          river.source.toLowerCase().includes(lowercaseQuery) ||
+          river.mouth.toLowerCase().includes(lowercaseQuery) ||
+          river.countries.some((c) => c.toLowerCase().includes(lowercaseQuery))
+        ) {
+          rivers.push({
+            ...river,
+            country: country.name,
+            countryCode: country.iso2,
+          });
+        }
       }
     }
   }
@@ -172,15 +183,16 @@ export function getCountryStats(countries: Country[]) {
     0
   );
   const totalLandmarks = countries.reduce(
-    (sum, country) => sum + country.landmarks.length,
+    (sum, country) => sum + (country.landmarks ? country.landmarks.length : 0),
     0
   );
   const totalInstitutions = countries.reduce(
-    (sum, country) => sum + country.institutions.length,
+    (sum, country) =>
+      sum + (country.institutions ? country.institutions.length : 0),
     0
   );
   const totalRivers = countries.reduce(
-    (sum, country) => sum + country.rivers.length,
+    (sum, country) => sum + (country.rivers ? country.rivers.length : 0),
     0
   );
 

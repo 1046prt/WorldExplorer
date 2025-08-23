@@ -7,7 +7,9 @@ import { OptimizedImage } from "@/components/ui/optimized-image";
 import { GlobalNavigation } from "@/components/global-navigation";
 import { BrowseFilters } from "@/components/browse-filters";
 import Footer from "@/components/footer";
+import { useDebounce } from "@/hooks/useDebounce";
 import "@/styles/countries-page.css";
+import "@/styles/search-bar.css";
 
 interface Country {
   iso2: string;
@@ -178,6 +180,8 @@ export default function CountriesPage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedRegion, setSelectedRegion] = useState("All");
 
+  const debouncedSearchTerm = useDebounce(searchTerm, 300);
+
   const regions = [
     "All",
     "Asia",
@@ -191,8 +195,8 @@ export default function CountriesPage() {
 
   const filteredCountries = availableCountries.filter((country) => {
     const matchesSearch =
-      country.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      country.capital.toLowerCase().includes(searchTerm.toLowerCase());
+      country.name.toLowerCase().includes(debouncedSearchTerm.toLowerCase()) ||
+      country.capital.toLowerCase().includes(debouncedSearchTerm.toLowerCase());
     const matchesRegion =
       selectedRegion === "All" || country.region === selectedRegion;
     return matchesSearch && matchesRegion;

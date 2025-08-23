@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { SearchBar } from "@/components/search-bar";
+import { GlobalSearch } from "@/components/global-search";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { ArrowLeft } from "lucide-react";
 
@@ -45,7 +45,7 @@ export function GlobalNavigation({
           </div>
 
           <div className="header-center">
-            <SearchBar />
+            <GlobalSearch />
           </div>
 
           <div className="header-right">
