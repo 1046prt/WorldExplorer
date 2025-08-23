@@ -34,6 +34,7 @@
 .nav-link,
 .btn {
   color: var(--text-medium-contrast) !important;
+  margin: 5px 5px 0px 0px;
 }
 
 /* Low contrast text */
@@ -114,6 +115,7 @@
 .badge {
   background-color: var(--bg-low-contrast) !important;
   color: var(--text-medium-contrast) !important;
+  padding: 8px 8px 8px 8px !important;
 }
 
 /* Border fixes */

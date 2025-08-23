@@ -108,6 +108,8 @@
 .search-input-wrapper {
   flex: 1;
   position: relative;
+  width: 30vw;
+  justify-content: center;
 }
 
 .search-input {
