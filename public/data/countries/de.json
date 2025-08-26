@@ -461,31 +461,31 @@
       "name": "Berlin",
       "whyFamous": "Capital city, rich history, cultural center with Brandenburg Gate",
       "slug": "berlin",
-      "image": "/images/cities/berlin.jpg"
+      "image": "/images/cities/berlin.webp"
     },
     {
       "name": "Munich",
       "whyFamous": "Bavarian capital, Oktoberfest, gateway to the Alps",
       "slug": "munich",
-      "image": "/images/cities/munich.jpg"
+      "image": "/images/cities/munich.webp"
     },
     {
       "name": "Hamburg",
       "whyFamous": "Major port city, maritime culture, media center",
       "slug": "hamburg",
-      "image": "/images/cities/hamburg.jpg"
+      "image": "/images/cities/hamburg.webp"
     },
     {
       "name": "Cologne",
       "whyFamous": "Ancient Roman city, Gothic cathedral, cultural center",
       "slug": "cologne",
-      "image": "/images/cities/cologne.jpg"
+      "image": "/images/cities/cologne.webp"
     },
     {
       "name": "Frankfurt",
       "whyFamous": "Financial center, European Central Bank, major airport hub",
       "slug": "frankfurt",
-      "image": "/images/cities/frankfurt.jpg"
+      "image": "/images/cities/frankfurt.webp"
     }
   ],
   "landmarks": [
@@ -509,7 +509,7 @@
         "lng": 10.7498
       },
       "whyFamous": "Fairy-tale castle that inspired Disney's Sleeping Beauty Castle",
-      "imagePath": "/images/landmarks/neuschwanstein-castle.jpg"
+      "imagePath": "/images/landmarks/neuschwanstein-castle.webp"
     },
     {
       "slug": "cologne-cathedral",
@@ -520,7 +520,7 @@
         "lng": 6.9583
       },
       "whyFamous": "Gothic masterpiece and UNESCO World Heritage site",
-      "imagePath": "/images/landmarks/cologne-cathedral.jpg"
+      "imagePath": "/images/landmarks/cologne-cathedral.webp"
     },
     {
       "slug": "berlin-wall",

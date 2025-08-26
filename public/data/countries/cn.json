@@ -69,31 +69,31 @@
       "name": "Beijing",
       "whyFamous": "Capital city, home to Forbidden City, Tiananmen Square, and political center",
       "slug": "beijing",
-      "image": "/images/cities/beijing.jpg"
+      "image": "/images/cities/beijing.webp"
     },
     {
       "name": "Shanghai",
       "whyFamous": "Economic powerhouse, modern skyline, and major financial center",
       "slug": "shanghai",
-      "image": "/images/cities/shanghai.jpg"
+      "image": "/images/cities/shanghai.webp"
     },
     {
       "name": "Hong Kong",
       "whyFamous": "International financial hub, unique culture, and vibrant nightlife",
       "slug": "hong-kong",
-      "image": "/images/cities/hong-kong.jpg"
+      "image": "/images/cities/hong-kong.webp"
     },
     {
       "name": "Xi'an",
       "whyFamous": "Ancient capital, home to Terracotta Army and Silk Road starting point",
       "slug": "xian",
-      "image": "/images/cities/xian.jpg"
+      "image": "/images/cities/xian.webp"
     },
     {
       "name": "Shenzhen",
       "whyFamous": "Technology hub, rapid development, and innovation center",
       "slug": "shenzhen",
-      "image": "/images/cities/shenzhen.jpg"
+      "image": "/images/cities/shenzhen.webp"
     }
   ],
   "landmarks": [
@@ -117,7 +117,7 @@
         "lng": 116.3972
       },
       "whyFamous": "Imperial palace complex, served as home to emperors for nearly 500 years",
-      "imagePath": "/images/landmarks/forbidden-city.jpg"
+      "imagePath": "/images/landmarks/forbidden-city.webp"
     },
     {
       "slug": "terracotta-army",
@@ -128,7 +128,7 @@
         "lng": 109.2734
       },
       "whyFamous": "Thousands of life-sized terracotta soldiers guarding Emperor Qin's tomb",
-      "imagePath": "/images/landmarks/terracotta-army.jpg"
+      "imagePath": "/images/landmarks/terracotta-army.webp"
     },
     {
       "slug": "temple-of-heaven",
@@ -139,7 +139,7 @@
         "lng": 116.4067
       },
       "whyFamous": "Religious complex where emperors prayed for good harvests",
-      "imagePath": "/images/landmarks/temple-of-heaven.jpg"
+      "imagePath": "/images/landmarks/temple-of-heaven.webp"
     }
   ],
   "rivers": [

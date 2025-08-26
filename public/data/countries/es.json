@@ -449,31 +449,31 @@
       "name": "Madrid",
       "whyFamous": "Capital city, art museums, royal palaces",
       "slug": "madrid",
-      "image": "/images/cities/madrid.jpg"
+      "image": "/images/cities/madrid.webp"
     },
     {
       "name": "Barcelona",
       "whyFamous": "Gaudí architecture, Mediterranean culture, Catalonian capital",
       "slug": "barcelona",
-      "image": "/images/cities/barcelona.jpg"
+      "image": "/images/cities/barcelona.webp"
     },
     {
       "name": "Seville",
       "whyFamous": "Moorish architecture, flamenco culture, historic center",
       "slug": "seville",
-      "image": "/images/cities/seville.jpg"
+      "image": "/images/cities/seville.webp"
     },
     {
       "name": "Valencia",
       "whyFamous": "City of Arts and Sciences, birthplace of paella",
       "slug": "valencia",
-      "image": "/images/cities/valencia.jpg"
+      "image": "/images/cities/valencia.webp"
     },
     {
       "name": "Bilbao",
       "whyFamous": "Guggenheim Museum, Basque culture, industrial heritage",
       "slug": "bilbao",
-      "image": "/images/cities/bilbao.jpg"
+      "image": "/images/cities/bilbao.webp"
     }
   ],
   "landmarks": [
@@ -486,7 +486,7 @@
         "lng": 2.1744
       },
       "whyFamous": "Gaudí's unfinished masterpiece basilica",
-      "imagePath": "/images/landmarks/sagrada-familia.jpg"
+      "imagePath": "/images/landmarks/sagrada-familia.webp"
     },
     {
       "slug": "alhambra",
@@ -497,7 +497,7 @@
         "lng": -3.5986
       },
       "whyFamous": "Moorish palace complex and fortress",
-      "imagePath": "/images/landmarks/alhambra.jpg"
+      "imagePath": "/images/landmarks/alhambra.webp"
     },
     {
       "slug": "prado-museum",
@@ -508,7 +508,7 @@
         "lng": -3.6921
       },
       "whyFamous": "World-renowned art museum with Spanish masters",
-      "imagePath": "/images/landmarks/prado-museum.jpg"
+      "imagePath": "/images/landmarks/prado-museum.webp"
     },
     {
       "slug": "camino-de-santiago",
@@ -519,7 +519,7 @@
         "lng": -8.5456
       },
       "whyFamous": "Historic pilgrimage route across northern Spain",
-      "imagePath": "/images/landmarks/camino-de-santiago.jpg"
+      "imagePath": "/images/landmarks/camino-de-santiago.webp   "
     }
   ],
   "rivers": [
