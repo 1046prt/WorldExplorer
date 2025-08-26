@@ -69,31 +69,31 @@
       "name": "Paris",
       "whyFamous": "City of Light, global center of art, fashion, gastronomy, and culture",
       "slug": "paris",
-      "image": "/images/cities/paris.jpg"
+      "image": "/images/cities/paris.webp"
     },
     {
       "name": "Lyon",
       "whyFamous": "Gastronomic capital of France, UNESCO World Heritage site",
       "slug": "lyon",
-      "image": "/images/cities/lyon.jpg"
+      "image": "/images/cities/lyon.webp"
     },
     {
       "name": "Marseille",
       "whyFamous": "Oldest city in France, major Mediterranean port",
       "slug": "marseille",
-      "image": "/images/cities/marseille.jpg"
+      "image": "/images/cities/marseille.webp"
     },
     {
       "name": "Nice",
       "whyFamous": "Glamorous resort city on the French Riviera",
       "slug": "nice",
-      "image": "/images/cities/nice.jpg"
+      "image": "/images/cities/nice.webp"
     },
     {
       "name": "Cannes",
       "whyFamous": "Host of the prestigious Cannes Film Festival",
       "slug": "cannes",
-      "image": "/images/cities/cannes.jpg"
+      "image": "/images/cities/cannes.webp"
     }
   ],
   "landmarks": [
@@ -117,7 +117,7 @@
         "lng": 2.3376
       },
       "whyFamous": "World's largest art museum, home to the Mona Lisa",
-      "imagePath": "/images/landmarks/louvre-museum.png"
+      "imagePath": "/images/landmarks/louvre-museum.webp"
     },
     {
       "slug": "notre-dame-cathedral",
@@ -128,7 +128,7 @@
         "lng": 2.3499
       },
       "whyFamous": "Medieval Catholic cathedral, masterpiece of Gothic architecture",
-      "imagePath": "/images/landmarks/notre-dame-cathedral.png"
+      "imagePath": "/images/landmarks/notre-dame-cathedral.webp"
     },
     {
       "slug": "palace-of-versailles",
@@ -139,7 +139,7 @@
         "lng": 2.1204
       },
       "whyFamous": "Opulent royal residence, symbol of absolute monarchy",
-      "imagePath": "/images/landmarks/palace-of-versailles.png"
+      "imagePath": "/images/landmarks/palace-of-versailles.webp"
     },
     {
       "slug": "mont-saint-michel",
@@ -150,7 +150,7 @@
         "lng": -1.5115
       },
       "whyFamous": "Medieval abbey on a tidal island, UNESCO World Heritage site",
-      "imagePath": "/images/landmarks/mont-saint-michel.png"
+      "imagePath": "/images/landmarks/mont-saint-michel.webp"
     }
   ],
   "rivers": [
