@@ -454,31 +454,31 @@
       "name": "Buenos Aires",
       "whyFamous": "Capital city, tango birthplace, European-style architecture",
       "slug": "buenos-aires",
-      "image": "/images/cities/buenos-aires.jpg"
+      "image": "/images/cities/buenos-aires.webp"
     },
     {
       "name": "Córdoba",
       "whyFamous": "Colonial architecture, university city, cultural center",
       "slug": "cordoba",
-      "image": "/images/cities/cordoba.jpg"
+      "image": "/images/cities/cordoba.webp"
     },
     {
       "name": "Mendoza",
       "whyFamous": "Wine capital, gateway to Aconcagua, Andes foothills",
       "slug": "mendoza",
-      "image": "/images/cities/mendoza.jpg"
+      "image": "/images/cities/mendoza.webp"
     },
     {
       "name": "Bariloche",
       "whyFamous": "Lake district, skiing destination, chocolate capital",
       "slug": "bariloche",
-      "image": "/images/cities/bariloche.jpg"
+      "image": "/images/cities/bariloche.webp"
     },
     {
       "name": "Salta",
       "whyFamous": "Colonial architecture, gateway to northwest, indigenous culture",
       "slug": "salta",
-      "image": "/images/cities/salta.jpg"
+      "image": "/images/cities/salta.webp"
     }
   ],
   "landmarks": [
@@ -491,7 +491,7 @@
         "lng": -54.4367
       },
       "whyFamous": "Spectacular waterfalls on border with Brazil",
-      "imagePath": "/images/landmarks/iguazu-falls.jpg"
+      "imagePath": "/images/landmarks/iguazu-falls.webp"
     },
     {
       "slug": "perito-moreno-glacier",
@@ -502,7 +502,7 @@
         "lng": -73.0311
       },
       "whyFamous": "Advancing glacier in Los Glaciares National Park",
-      "imagePath": "/images/landmarks/perito-moreno-glacier.jpg"
+      "imagePath": "/images/landmarks/perito-moreno-glacier.webp"
     },
     {
       "slug": "aconcagua",
@@ -513,7 +513,7 @@
         "lng": -70.0109
       },
       "whyFamous": "Highest mountain in the Americas",
-      "imagePath": "/images/landmarks/aconcagua.jpg"
+      "imagePath": "/images/landmarks/aconcagua.webp"
     },
     {
       "slug": "recoleta-cemetery",
@@ -524,7 +524,7 @@
         "lng": -58.3934
       },
       "whyFamous": "Historic cemetery with elaborate mausoleums, Eva Perón's tomb",
-      "imagePath": "/images/landmarks/recoleta-cemetery.jpg"
+      "imagePath": "/images/landmarks/recoleta-cemetery.webp"
     }
   ],
   "rivers": [

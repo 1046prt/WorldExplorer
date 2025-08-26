@@ -293,7 +293,7 @@
         "lng": -43.2105
       },
       "whyFamous": "Iconic Art Deco statue of Jesus Christ overlooking Rio de Janeiro",
-      "imagePath": "/images/landmarks/christ-the-redeemer.png"
+      "imagePath": "/images/landmarks/christ-the-redeemer.webp"
     },
     {
       "slug": "iguazu-falls",
@@ -304,7 +304,7 @@
         "lng": -54.4367
       },
       "whyFamous": "One of the world's most spectacular waterfalls",
-      "imagePath": "/images/landmarks/iguazu-falls.png"
+      "imagePath": "/images/landmarks/iguazu-falls.webp"
     }
   ],
   "rivers": [

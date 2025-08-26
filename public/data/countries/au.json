@@ -469,31 +469,31 @@
       "name": "Sydney",
       "whyFamous": "Iconic Opera House and Harbour Bridge, largest city",
       "slug": "sydney",
-      "image": "/images/cities/sydney.jpg"
+      "image": "/images/cities/sydney.webp"
     },
     {
       "name": "Melbourne",
       "whyFamous": "Cultural capital, coffee culture, and sporting events",
       "slug": "melbourne",
-      "image": "/images/cities/melbourne.jpg"
+      "image": "/images/cities/melbourne.webp"
     },
     {
       "name": "Perth",
       "whyFamous": "Isolated city, mining boom, beautiful beaches",
       "slug": "perth",
-      "image": "/images/cities/perth.jpg"
+      "image": "/images/cities/perth.webp"
     },
     {
       "name": "Brisbane",
       "whyFamous": "Subtropical climate, gateway to Gold Coast",
       "slug": "brisbane",
-      "image": "/images/cities/brisbane.jpg"
+      "image": "/images/cities/brisbane.webp"
     },
     {
       "name": "Adelaide",
       "whyFamous": "Wine regions, festivals, planned city layout",
       "slug": "adelaide",
-      "image": "/images/cities/adelaide.jpg"
+      "image": "/images/cities/adelaide.webp"
     }
   ],
   "landmarks": [
@@ -506,7 +506,7 @@
         "lng": 151.2153
       },
       "whyFamous": "Iconic architectural masterpiece and UNESCO World Heritage site",
-      "imagePath": "/images/landmarks/sydney-opera-house.jpg"
+      "imagePath": "/images/landmarks/sydney-opera-house.webp"
     },
     {
       "slug": "uluru",
@@ -517,7 +517,7 @@
         "lng": 131.0369
       },
       "whyFamous": "Sacred Aboriginal site and massive monolith in the desert",
-      "imagePath": "/images/landmarks/uluru.jpg"
+      "imagePath": "/images/landmarks/uluru.webp"
     },
     {
       "slug": "great-barrier-reef",
@@ -528,7 +528,7 @@
         "lng": 147.6992
       },
       "whyFamous": "World's largest coral reef system, natural wonder",
-      "imagePath": "/images/landmarks/great-barrier-reef.jpg"
+      "imagePath": "/images/landmarks/great-barrier-reef.webp"
     },
     {
       "slug": "twelve-apostles",
@@ -539,7 +539,7 @@
         "lng": 143.1048
       },
       "whyFamous": "Limestone stacks along the Great Ocean Road",
-      "imagePath": "/images/landmarks/twelve-apostles.jpg"
+      "imagePath": "/images/landmarks/twelve-apostles.webp"
     }
   ],
   "rivers": [
