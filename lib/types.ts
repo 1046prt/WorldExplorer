@@ -59,6 +59,7 @@ export interface River {
   countries: string[];
   source: string;
   mouth: string;
+  imagePath: string;
   pathCoordinates: Coordinates[];
 }
 
@@ -69,6 +70,7 @@ export interface Institution {
   founded: number;
   globalRank: number;
   type: string;
+  imagePath: string;
 }
 
 export interface Coordinates {
