@@ -460,31 +460,31 @@
       "name": "Rome",
       "whyFamous": "Eternal City, capital, ancient Roman ruins and Vatican City",
       "slug": "rome",
-      "image": "/images/cities/rome.jpg"
+      "image": "/images/cities/italy/rome.png"
     },
     {
       "name": "Venice",
       "whyFamous": "City of canals, unique architecture, romantic gondola rides",
       "slug": "venice",
-      "image": "/images/cities/venice.jpg"
+      "image": "/images/cities/italy/venice.png"
     },
     {
       "name": "Florence",
       "whyFamous": "Renaissance art capital, birthplace of Renaissance",
       "slug": "florence",
-      "image": "/images/cities/florence.jpg"
+      "image": "/images/cities/italy/florence.png"
     },
     {
       "name": "Milan",
       "whyFamous": "Fashion and design capital, economic powerhouse",
       "slug": "milan",
-      "image": "/images/cities/milan.jpg"
+      "image": "/images/cities/italy/milan.png"
     },
     {
       "name": "Naples",
       "whyFamous": "Birthplace of pizza, gateway to Pompeii and Mount Vesuvius",
       "slug": "naples",
-      "image": "/images/cities/naples.jpg"
+      "image": "/images/cities/italy/naples.png"
     }
   ],
   "landmarks": [
@@ -497,7 +497,7 @@
         "lng": 12.4922
       },
       "whyFamous": "Ancient Roman amphitheater, iconic symbol of Imperial Rome",
-      "imagePath": "/images/landmarks/colosseum.jpg"
+      "imagePath": "/images/landmarks/italy/colosseum.jpg"
     },
     {
       "slug": "leaning-tower-of-pisa",
@@ -508,7 +508,7 @@
         "lng": 10.3966
       },
       "whyFamous": "Famous tilted bell tower, architectural marvel",
-      "imagePath": "/images/landmarks/leaning-tower-pisa.jpg"
+      "imagePath": "/images/landmarks/italy/leaning-tower-pisa.jpg"
     },
     {
       "slug": "trevi-fountain",
@@ -519,7 +519,7 @@
         "lng": 12.4833
       },
       "whyFamous": "Baroque fountain, famous for coin-throwing tradition",
-      "imagePath": "/images/landmarks/trevi-fountain.jpg"
+      "imagePath": "/images/landmarks/italy/trevi-fountain.jpg"
     },
     {
       "slug": "duomo-florence",
@@ -530,7 +530,7 @@
         "lng": 11.256
       },
       "whyFamous": "Gothic cathedral with iconic Renaissance dome",
-      "imagePath": "/images/landmarks/duomo-florence.jpg"
+      "imagePath": "/images/landmarks/italy/duomo-florence.jpg"
     }
   ],
   "rivers": [
