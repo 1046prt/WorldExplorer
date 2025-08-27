@@ -480,31 +480,31 @@
       "name": "New York City",
       "whyFamous": "Global financial center, home to Wall Street, Broadway, and iconic landmarks like the Statue of Liberty",
       "slug": "new-york-city",
-      "image": "/images/cities/new-york-city.jpg"
+      "image": "/images/cities/us/new-york-city.jpg"
     },
     {
       "name": "Los Angeles",
       "whyFamous": "Entertainment capital of the world, home to Hollywood and the film industry",
       "slug": "los-angeles",
-      "image": "/images/cities/los-angeles.jpg"
+      "image": "/images/cities/us/los-angeles.png"
     },
     {
       "name": "Las Vegas",
       "whyFamous": "Entertainment and gambling destination known as 'Sin City'",
       "slug": "las-vegas",
-      "image": "/images/cities/las-vegas.jpg"
+      "image": "/images/cities/us/las-vegas.jpg"
     },
     {
       "name": "San Francisco",
       "whyFamous": "Tech hub of Silicon Valley, famous for Golden Gate Bridge and steep hills",
       "slug": "san-francisco",
-      "image": "/images/cities/san-francisco.jpg"
+      "image": "/images/cities/us/san-francisco.jpg"
     },
     {
       "name": "Chicago",
       "whyFamous": "Architectural marvel known for skyscrapers and deep-dish pizza",
       "slug": "chicago",
-      "image": "/images/cities/chicago.jpg"
+      "image": "/images/cities/us/chicago.jpg"
     }
   ],
   "landmarks": [
@@ -517,7 +517,7 @@
         "lng": -74.0445
       },
       "whyFamous": "Symbol of freedom and democracy, gift from France in 1886",
-      "imagePath": "/images/landmarks/statue-of-liberty.png"
+      "imagePath": "/images/landmarks/us/statue-of-liberty.jpg"
     },
     {
       "slug": "grand-canyon",
@@ -528,7 +528,7 @@
         "lng": -112.1129
       },
       "whyFamous": "One of the world's most spectacular natural wonders, carved by the Colorado River",
-      "imagePath": "/images/landmarks/grand-canyon.png"
+      "imagePath": "/images/landmarks/us/grand-canyon.jpg"
     },
     {
       "slug": "golden-gate-bridge",
@@ -539,7 +539,7 @@
         "lng": -122.4783
       },
       "whyFamous": "Iconic suspension bridge and symbol of San Francisco",
-      "imagePath": "/images/landmarks/golden-gate-bridge.jpg"
+      "imagePath": "/images/landmarks/us/golden-gate-bridge.jpg"
     },
     {
       "slug": "mount-rushmore",
@@ -550,7 +550,7 @@
         "lng": -103.4591
       },
       "whyFamous": "Massive sculpture carved into granite featuring four US presidents",
-      "imagePath": "/images/landmarks/mount-rushmore.jpg"
+      "imagePath": "/images/landmarks/us/mount-rushmore.jpg"
     },
     {
       "slug": "empire-state-building",
@@ -561,7 +561,7 @@
         "lng": -73.9857
       },
       "whyFamous": "Art Deco skyscraper and iconic symbol of New York City",
-      "imagePath": "/images/landmarks/empire-state-building.jpg"
+      "imagePath": "/images/landmarks/us/empire-state-building.jpg"
     }
   ],
   "rivers": [
