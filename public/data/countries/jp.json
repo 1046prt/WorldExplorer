@@ -69,31 +69,31 @@
       "name": "Tokyo",
       "whyFamous": "Capital and largest city, global center of technology and pop culture",
       "slug": "tokyo",
-      "image": "/images/cities/tokyo.jpg"
+      "image": "/images/cities/japan/tokyo.jpg"
     },
     {
       "name": "Kyoto",
       "whyFamous": "Former imperial capital, thousands of temples and traditional culture",
       "slug": "kyoto",
-      "image": "/images/cities/kyoto.jpg"
+      "image": "/images/cities/japan/kyoto.jpg"
     },
     {
       "name": "Osaka",
       "whyFamous": "Kitchen of Japan, famous for food culture and commerce",
       "slug": "osaka",
-      "image": "/images/cities/osaka.jpg"
+      "image": "/images/cities/japan/osaka.jpg"
     },
     {
       "name": "Hiroshima",
       "whyFamous": "Peace memorial city, site of atomic bombing in WWII",
       "slug": "hiroshima",
-      "image": "/images/cities/hiroshima.jpg"
+      "image": "/images/cities/japan/hiroshima.jpg"
     },
     {
       "name": "Nara",
       "whyFamous": "Ancient capital, famous for deer park and Buddhist temples",
       "slug": "nara",
-      "image": "/images/cities/nara.jpg"
+      "image": "/images/cities/japan/nara.jpg"
     }
   ],
   "landmarks": [
@@ -106,7 +106,7 @@
         "lng": 138.7274
       },
       "whyFamous": "Sacred mountain and symbol of Japan, UNESCO World Heritage site",
-      "imagePath": "/images/landmarks/mount-fuji.png"
+      "imagePath": "/images/landmarks/mount-fuji.jpg"
     },
     {
       "slug": "tokyo-tower",
@@ -117,7 +117,7 @@
         "lng": 139.7454
       },
       "whyFamous": "Communications tower inspired by Eiffel Tower, symbol of post-war recovery",
-      "imagePath": "/images/landmarks/tokyo-tower.png"
+      "imagePath": "/images/landmarks/tokyo-tower.jpg"
     },
     {
       "slug": "fushimi-inari-shrine",
@@ -128,7 +128,7 @@
         "lng": 135.7727
       },
       "whyFamous": "Thousands of vermillion torii gates creating tunnels up the mountain",
-      "imagePath": "/images/landmarks/fushimi-inari-shrine.png"
+      "imagePath": "/images/landmarks/fushimi-inari-shrine.jpg"
     },
     {
       "slug": "golden-pavilion",
