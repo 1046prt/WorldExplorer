@@ -442,31 +442,31 @@
       "name": "Mexico City",
       "whyFamous": "Capital and largest city, rich Aztec and colonial history",
       "slug": "mexico-city",
-      "image": "/images/cities/mexico-city.jpg"
+      "image": "/images/cities/mexico/mexico-city.jpg"
     },
     {
       "name": "Cancun",
       "whyFamous": "World-famous beach resort destination",
       "slug": "cancun",
-      "image": "/images/cities/cancun.jpg"
+      "image": "/images/cities/mexico/cancun.jpg"
     },
     {
       "name": "Guadalajara",
       "whyFamous": "Cultural center, birthplace of mariachi music",
       "slug": "guadalajara",
-      "image": "/images/cities/guadalajara.jpg"
+      "image": "/images/cities/mexico/guadalajara.jpg"
     },
     {
       "name": "Puebla",
       "whyFamous": "Colonial architecture and traditional cuisine",
       "slug": "puebla",
-      "image": "/images/cities/puebla.jpg"
+      "image": "/images/cities/mexico/puebla.jpg"
     },
     {
       "name": "Oaxaca",
       "whyFamous": "Indigenous culture and traditional crafts",
       "slug": "oaxaca",
-      "image": "/images/cities/oaxaca.jpg"
+      "image": "/images/cities/mexico/oaxaca.jpg"
     }
   ],
   "landmarks": [
@@ -479,7 +479,7 @@
         "lng": -88.5678
       },
       "whyFamous": "Ancient Mayan city and one of the New Seven Wonders",
-      "imagePath": "/images/landmarks/chichen-itza.jpg"
+      "imagePath": "/images/landmarks/mexico/chichen-itza.jpg"
     },
     {
       "slug": "teotihuacan",
@@ -490,7 +490,7 @@
         "lng": -98.8438
       },
       "whyFamous": "Ancient Mesoamerican city with massive pyramids",
-      "imagePath": "/images/landmarks/teotihuacan.jpg"
+      "imagePath": "/images/landmarks/mexico/teotihuacan.jpg"
     },
     {
       "slug": "zocalo",
@@ -501,7 +501,7 @@
         "lng": -99.1332
       },
       "whyFamous": "Main square of Mexico City, heart of the nation",
-      "imagePath": "/images/landmarks/zocalo.jpg"
+      "imagePath": "/images/landmarks/mexico/zocalo.jpg"
     },
     {
       "slug": "palenque",
@@ -512,7 +512,7 @@
         "lng": -92.0458
       },
       "whyFamous": "Ancient Mayan archaeological site in jungle setting",
-      "imagePath": "/images/landmarks/palenque.jpg"
+      "imagePath": "/images/landmarks/mexico/palenque.jpg"
     }
   ],
   "rivers": [
