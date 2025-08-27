@@ -94,7 +94,7 @@
         "lng": -0.1245
       },
       "whyFamous": "Iconic clock tower and symbol of London and the UK",
-      "imagePath": "/images/landmarks/big-ben.png"
+      "imagePath": "/images/landmarks/big-ben.webp"
     },
     {
       "slug": "tower-bridge",
@@ -105,7 +105,7 @@
         "lng": -0.0754
       },
       "whyFamous": "Victorian Gothic bascule bridge, iconic London landmark",
-      "imagePath": "/images/landmarks/tower-bridge.png"
+      "imagePath": "/images/landmarks/tower-bridge.webp"
     },
     {
       "slug": "stonehenge",
@@ -116,7 +116,7 @@
         "lng": -1.8262
       },
       "whyFamous": "Prehistoric monument, mysterious stone circle",
-      "imagePath": "/images/landmarks/stonehenge.png"
+      "imagePath": "/images/landmarks/stonehenge.webp"
     },
     {
       "slug": "buckingham-palace",
@@ -127,7 +127,7 @@
         "lng": -0.1419
       },
       "whyFamous": "Official residence of the British monarch",
-      "imagePath": "/images/landmarks/buckingham-palace.png"
+      "imagePath": "/images/landmarks/buckingham-palace.webp"
     }
   ],
   "rivers": [

@@ -473,31 +473,31 @@
       "name": "Mumbai",
       "whyFamous": "Financial capital, Bollywood film industry, commercial hub",
       "slug": "mumbai",
-      "image": "/images/cities/mumbai.jpg"
+      "image": "/images/cities/india/mumbai.webp"
     },
     {
       "name": "Delhi",
       "whyFamous": "National capital, rich history, political center",
       "slug": "delhi",
-      "image": "/images/cities/delhi.jpg"
+      "image": "/images/cities/india/delhi.png"
     },
     {
       "name": "Bangalore",
       "whyFamous": "Silicon Valley of India, IT hub, garden city",
       "slug": "bangalore",
-      "image": "/images/cities/bangalore.jpg"
+      "image": "/images/cities/india/bangalore.png"
     },
     {
       "name": "Kolkata",
       "whyFamous": "Cultural capital, literary heritage, City of Joy",
       "slug": "kolkata",
-      "image": "/images/cities/kolkata.jpg"
+      "image": "/images/cities/india/kolkata.png"
     },
     {
       "name": "Chennai",
       "whyFamous": "Detroit of India, automotive hub, cultural center",
       "slug": "chennai",
-      "image": "/images/cities/chennai.jpg"
+      "image": "/images/cities/india/chennai.png"
     }
   ],
   "landmarks": [
@@ -510,7 +510,7 @@
         "lng": 78.0421
       },
       "whyFamous": "Iconic white marble mausoleum, UNESCO World Heritage site",
-      "imagePath": "/images/landmarks/taj-mahal.jpg"
+      "imagePath": "/images/landmarks/india/taj-mahal.jpg"
     },
     {
       "slug": "red-fort",
@@ -521,7 +521,7 @@
         "lng": 77.241
       },
       "whyFamous": "Historic Mughal fortress, symbol of Indian independence",
-      "imagePath": "/images/landmarks/red-fort.jpg"
+      "imagePath": "/images/landmarks/india/red-fort.jpg"
     },
     {
       "slug": "gateway-of-india",
@@ -532,7 +532,7 @@
         "lng": 72.8347
       },
       "whyFamous": "Iconic arch monument overlooking Arabian Sea",
-      "imagePath": "/images/landmarks/gateway-of-india.jpg"
+      "imagePath": "/images/landmarks/india/gateway-of-india.png"
     },
     {
       "slug": "golden-temple",
@@ -543,7 +543,7 @@
         "lng": 74.8765
       },
       "whyFamous": "Holiest Sikh shrine, stunning golden architecture",
-      "imagePath": "/images/landmarks/golden-temple.jpg"
+      "imagePath": "/images/landmarks/india/golden-temple.png"
     }
   ],
   "rivers": [
