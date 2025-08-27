@@ -490,31 +490,31 @@
       "name": "Moscow",
       "whyFamous": "Capital city, political center, Red Square and Kremlin",
       "slug": "moscow",
-      "image": "/images/cities/moscow.jpg"
+      "image": "/images/cities/russia/moscow.jpg"
     },
     {
       "name": "St. Petersburg",
       "whyFamous": "Cultural capital, former imperial capital, Hermitage Museum",
       "slug": "st-petersburg",
-      "image": "/images/cities/st-petersburg.jpg"
+      "image": "/images/cities/russia/st-petersburg.jpg"
     },
     {
       "name": "Vladivostok",
       "whyFamous": "Pacific port city, terminus of Trans-Siberian Railway",
       "slug": "vladivostok",
-      "image": "/images/cities/vladivostok.jpg"
+      "image": "/images/cities/russia/vladivostok.jpg"
     },
     {
       "name": "Sochi",
       "whyFamous": "Black Sea resort, 2014 Winter Olympics host",
       "slug": "sochi",
-      "image": "/images/cities/sochi.jpg"
+      "image": "/images/cities/russia/sochi.jpg"
     },
     {
       "name": "Kazan",
       "whyFamous": "Capital of Tatarstan, multicultural city with Kremlin",
       "slug": "kazan",
-      "image": "/images/cities/kazan.jpg"
+      "image": "/images/cities/russia/kazan.jpg"
     }
   ],
   "landmarks": [
@@ -527,7 +527,7 @@
         "lng": 37.6208
       },
       "whyFamous": "Historic square in Moscow, heart of Russian power",
-      "imagePath": "/images/landmarks/red-square.jpg"
+      "imagePath": "/images/landmarks/russia/red-square.jpg"
     },
     {
       "slug": "hermitage-museum",
@@ -538,7 +538,7 @@
         "lng": 30.3146
       },
       "whyFamous": "One of the world's largest and oldest museums",
-      "imagePath": "/images/landmarks/hermitage-museum.jpg"
+      "imagePath": "/images/landmarks/russia/hermitage-museum.jpg"
     },
     {
       "slug": "lake-baikal",
@@ -549,7 +549,7 @@
         "lng": 108.165
       },
       "whyFamous": "World's deepest and oldest freshwater lake",
-      "imagePath": "/images/landmarks/lake-baikal.jpg"
+      "imagePath": "/images/landmarks/russia/lake-baikal.jpg"
     },
     {
       "slug": "trans-siberian-railway",
@@ -560,7 +560,7 @@
         "lng": 37.6176
       },
       "whyFamous": "Longest railway line in the world",
-      "imagePath": "/images/landmarks/trans-siberian-railway.jpg"
+      "imagePath": "/images/landmarks/russia/trans-siberian-railway.jpg"
     }
   ],
   "rivers": [
