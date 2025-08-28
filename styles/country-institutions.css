@@ -39,12 +39,16 @@
 }
 
 .institution-card {
-  padding: var(--spacing-sm);
-  transition: box-shadow var(--transition-normal);
+  padding: var(--spacing-md);
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
 }
 
 .institution-card:hover {
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
 }
 
 .institution-top {
@@ -108,4 +112,19 @@
 
 .badge.small {
   font-size: var(--font-size-xs);
+}
+.institution-image-container {
+  width: 100%;
+  margin-bottom: var(--spacing-sm);
+}
+
+.institution-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.institution-content {
+  flex: 1;
 }

@@ -54,7 +54,7 @@
 }
 
 .river-item {
-  padding: var(--spacing-sm);
+  padding: var(--spacing-md);
   background: linear-gradient(
     90deg,
     var(--color-accent) 0%,
@@ -62,7 +62,15 @@
   );
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  transition: background var(--transition-normal);
+  transition: all var(--transition-normal);
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: flex-start;
+}
+
+.river-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
 }
 
 .dark .river-item {
@@ -114,4 +122,20 @@
   font-size: var(--font-size-xs);
   color: var(--color-muted-foreground);
   text-decoration: none;
+}
+
+.river-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.river-image-container {
+  flex-shrink: 0;
+}
+
+.river-image {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: var(--radius);
 }
