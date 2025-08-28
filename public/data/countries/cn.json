@@ -69,31 +69,31 @@
       "name": "Beijing",
       "whyFamous": "Capital city, home to Forbidden City, Tiananmen Square, and political center",
       "slug": "beijing",
-      "image": "/images/cities/beijing.webp"
+      "image": "/images/cities/china/beijing.jpg"
     },
     {
       "name": "Shanghai",
       "whyFamous": "Economic powerhouse, modern skyline, and major financial center",
       "slug": "shanghai",
-      "image": "/images/cities/shanghai.webp"
+      "image": "/images/cities/china/shanghai.jpg"
     },
     {
       "name": "Hong Kong",
       "whyFamous": "International financial hub, unique culture, and vibrant nightlife",
       "slug": "hong-kong",
-      "image": "/images/cities/hong-kong.webp"
+      "image": "/images/cities/china/hong-kong.jpg"
     },
     {
       "name": "Xi'an",
       "whyFamous": "Ancient capital, home to Terracotta Army and Silk Road starting point",
       "slug": "xian",
-      "image": "/images/cities/xian.webp"
+      "image": "/images/cities/china/xian.png"
     },
     {
       "name": "Shenzhen",
       "whyFamous": "Technology hub, rapid development, and innovation center",
       "slug": "shenzhen",
-      "image": "/images/cities/shenzhen.webp"
+      "image": "/images/cities/china/shenzhen.jpg"
     }
   ],
   "landmarks": [
@@ -106,7 +106,7 @@
         "lng": 116.5704
       },
       "whyFamous": "Ancient fortification system, UNESCO World Heritage site, and symbol of China",
-      "imagePath": "/images/landmarks/great-wall-china.png"
+      "imagePath": "/images/landmarks/china/great-wall-china.png"
     },
     {
       "slug": "forbidden-city",
@@ -117,7 +117,7 @@
         "lng": 116.3972
       },
       "whyFamous": "Imperial palace complex, served as home to emperors for nearly 500 years",
-      "imagePath": "/images/landmarks/forbidden-city.webp"
+      "imagePath": "/images/landmarks/china/forbidden-city.jpg"
     },
     {
       "slug": "terracotta-army",
@@ -128,7 +128,7 @@
         "lng": 109.2734
       },
       "whyFamous": "Thousands of life-sized terracotta soldiers guarding Emperor Qin's tomb",
-      "imagePath": "/images/landmarks/terracotta-army.webp"
+      "imagePath": "/images/landmarks/china/terracotta-army.png"
     },
     {
       "slug": "temple-of-heaven",
@@ -139,7 +139,7 @@
         "lng": 116.4067
       },
       "whyFamous": "Religious complex where emperors prayed for good harvests",
-      "imagePath": "/images/landmarks/temple-of-heaven.webp"
+      "imagePath": "/images/landmarks/china/temple-of-heaven.jpg"
     }
   ],
   "rivers": [
@@ -150,6 +150,7 @@
       "countries": ["China"],
       "source": "Tibetan Plateau",
       "mouth": "East China Sea",
+      "imagePath": "/images/rivers/china/yangtze-river.jpg",
       "pathCoordinates": [
         { "lat": 33.25, "lng": 90.9 },
         { "lat": 31.23, "lng": 121.5 }
@@ -162,6 +163,7 @@
       "countries": ["China"],
       "source": "Bayan Har Mountains",
       "mouth": "Bohai Sea",
+      "imagePath": "/images/rivers/china/yellow-river.jpg",
       "pathCoordinates": [
         { "lat": 35.5, "lng": 96.2 },
         { "lat": 37.75, "lng": 119.1 }
@@ -175,7 +177,8 @@
       "city": "Beijing",
       "founded": 1911,
       "globalRank": 17,
-      "type": "Public Research University"
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/china/tsinghua-university.png"
     },
     {
       "slug": "peking-university",
@@ -183,7 +186,8 @@
       "city": "Beijing",
       "founded": 1898,
       "globalRank": 18,
-      "type": "Public Research University"
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/china/peking-university.png"
     },
     {
       "slug": "fudan-university",
@@ -191,7 +195,8 @@
       "city": "Shanghai",
       "founded": 1905,
       "globalRank": 34,
-      "type": "Public Research University"
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/china/fudan-university.jpg"
     }
   ]
 }
