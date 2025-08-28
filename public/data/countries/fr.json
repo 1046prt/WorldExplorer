@@ -69,31 +69,31 @@
       "name": "Paris",
       "whyFamous": "City of Light, global center of art, fashion, gastronomy, and culture",
       "slug": "paris",
-      "image": "/images/cities/paris.webp"
+      "image": "/images/cities/france/paris.png"
     },
     {
       "name": "Lyon",
       "whyFamous": "Gastronomic capital of France, UNESCO World Heritage site",
       "slug": "lyon",
-      "image": "/images/cities/lyon.webp"
+      "image": "/images/cities/france/lyon.jpg"
     },
     {
       "name": "Marseille",
       "whyFamous": "Oldest city in France, major Mediterranean port",
       "slug": "marseille",
-      "image": "/images/cities/marseille.webp"
+      "image": "/images/cities/france/marseille.png"
     },
     {
       "name": "Nice",
       "whyFamous": "Glamorous resort city on the French Riviera",
       "slug": "nice",
-      "image": "/images/cities/nice.webp"
+      "image": "/images/cities/france/nice.jpg"
     },
     {
       "name": "Cannes",
       "whyFamous": "Host of the prestigious Cannes Film Festival",
       "slug": "cannes",
-      "image": "/images/cities/cannes.webp"
+      "image": "/images/cities/france/cannes.jpg"
     }
   ],
   "landmarks": [
@@ -106,7 +106,7 @@
         "lng": 2.2945
       },
       "whyFamous": "Iconic iron lattice tower and symbol of France, built for the 1889 World's Fair",
-      "imagePath": "/images/landmarks/eiffel-tower.png"
+      "imagePath": "/images/landmarks/france/eiffel-tower.jpg"
     },
     {
       "slug": "louvre-museum",
@@ -117,7 +117,7 @@
         "lng": 2.3376
       },
       "whyFamous": "World's largest art museum, home to the Mona Lisa",
-      "imagePath": "/images/landmarks/louvre-museum.webp"
+      "imagePath": "/images/landmarks/france/louvre-museum.jpg"
     },
     {
       "slug": "notre-dame-cathedral",
@@ -128,7 +128,7 @@
         "lng": 2.3499
       },
       "whyFamous": "Medieval Catholic cathedral, masterpiece of Gothic architecture",
-      "imagePath": "/images/landmarks/notre-dame-cathedral.webp"
+      "imagePath": "/images/landmarks/france/notre-dame-cathedral.jpg"
     },
     {
       "slug": "palace-of-versailles",
@@ -139,7 +139,7 @@
         "lng": 2.1204
       },
       "whyFamous": "Opulent royal residence, symbol of absolute monarchy",
-      "imagePath": "/images/landmarks/palace-of-versailles.webp"
+      "imagePath": "/images/landmarks/france/palace-of-versailles.jpg"
     },
     {
       "slug": "mont-saint-michel",
@@ -150,7 +150,7 @@
         "lng": -1.5115
       },
       "whyFamous": "Medieval abbey on a tidal island, UNESCO World Heritage site",
-      "imagePath": "/images/landmarks/mont-saint-michel.webp"
+      "imagePath": "/images/landmarks/france/mont-saint-michel.jpg"
     }
   ],
   "rivers": [
@@ -161,6 +161,7 @@
       "countries": ["France"],
       "source": "Burgundy",
       "mouth": "English Channel",
+      "imagePath": "/images/rivers/france/seine-river.jpg",
       "pathCoordinates": [
         { "lat": 47.2883, "lng": 4.7094 },
         { "lat": 49.4344, "lng": 0.1079 }
@@ -173,6 +174,7 @@
       "countries": ["France"],
       "source": "Cévennes Mountains",
       "mouth": "Atlantic Ocean",
+      "imagePath": "/images/rivers/france/loire-river.jpg",
       "pathCoordinates": [
         { "lat": 44.8419, "lng": 4.1389 },
         { "lat": 47.2692, "lng": -2.1667 }
@@ -185,6 +187,7 @@
       "countries": ["Switzerland", "France"],
       "source": "Rhône Glacier, Switzerland",
       "mouth": "Mediterranean Sea",
+      "imagePath": "/images/rivers/france/rhone-river.jpg",
       "pathCoordinates": [
         { "lat": 46.6197, "lng": 8.3744 },
         { "lat": 43.325, "lng": 4.8333 }
@@ -198,7 +201,8 @@
       "city": "Paris",
       "founded": 1150,
       "globalRank": 44,
-      "type": "Public Research University"
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/france/sorbonne-university.jpg"
     },
     {
       "slug": "ecole-normale-superieure",
@@ -206,7 +210,8 @@
       "city": "Paris",
       "founded": 1794,
       "globalRank": 45,
-      "type": "Public Research University"
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/france/ecole-normale-superieure.jpg"
     },
     {
       "slug": "ecole-polytechnique",
@@ -214,7 +219,8 @@
       "city": "Palaiseau",
       "founded": 1794,
       "globalRank": 61,
-      "type": "Public Research University"
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/france/ecole-polytechnique.jpg"
     }
   ]
 }
