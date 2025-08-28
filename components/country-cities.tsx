@@ -1,6 +1,6 @@
 import { Building2 } from "lucide-react";
-import { OptimizedImage } from "@/components/ui/optimized-image";
 import type { Country } from "@/lib/types";
+import { ImageModal } from "@/components/ui/image-modal";
 import "@/styles/country-cities.css";
 interface CountryCitiesProps {
   country: Country;
@@ -19,13 +19,12 @@ export function CountryCities({ country }: CountryCitiesProps) {
         {country.famousCities.map((city) => (
           <div key={city.slug} className="city-item">
             <div className="city-image-container">
-              <OptimizedImage
+              <ImageModal
                 src={city.image || `/images/cities/${city.slug}.jpg`}
                 alt={city.name}
                 width={120}
                 height={80}
-                className="city-image object-cover rounded-lg"
-                sizes="120px"
+                className="city-image"
               />
             </div>
             <div className="city-content">

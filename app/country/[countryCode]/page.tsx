@@ -56,10 +56,13 @@ export default async function CountryPage({ params }: CountryPageProps) {
             </section>
 
             <section className="section">
-              <div className="grid-layout grid-2">
+              <div>
                 <CountryMap country={country} />
-                <CountryHistory country={country} />
               </div>
+            </section>
+
+            <section className="section">
+              <CountryHistory country={country} />
             </section>
 
             <section className="section">
@@ -67,10 +70,13 @@ export default async function CountryPage({ params }: CountryPageProps) {
             </section>
 
             <section className="section">
-              <div className="grid-layout grid-2">
+              <div>
                 <CountryCities country={country} />
-                <CountryRivers country={country} />
               </div>
+            </section>
+
+            <section className="section">
+              <CountryRivers country={country} />
             </section>
 
             <section className="section">

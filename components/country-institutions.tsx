@@ -1,5 +1,6 @@
 import { GraduationCap, Trophy } from "lucide-react";
 import type { Country } from "@/lib/types";
+import { ImageModal } from "@/components/ui/image-modal";
 import "@/styles/country-institutions.css";
 interface CountryInstitutionsProps {
   country: Country;
@@ -17,18 +18,34 @@ export function CountryInstitutions({ country }: CountryInstitutionsProps) {
       <div className="institutions-grid">
         {country.institutions.map((institution) => (
           <div key={institution.slug} className="card institution-card">
-            <div className="institution-top">
-              <div className="institution-rank">
-                <Trophy className="icon trophy" />
-                <span className="badge outline">#{institution.globalRank}</span>
+            {institution.imagePath && (
+              <div className="institution-image-container">
+                <ImageModal
+                  src={institution.imagePath}
+                  alt={`${institution.name}`}
+                  width={280}
+                  height={160}
+                  className="institution-image"
+                />
               </div>
-              <span className="badge secondary small">
-                Est. {institution.founded}
-              </span>
+            )}
+
+            <div className="institution-content">
+              <div className="institution-top">
+                <div className="institution-rank">
+                  <Trophy className="icon trophy" />
+                  <span className="badge outline">
+                    #{institution.globalRank}
+                  </span>
+                </div>
+                <span className="badge secondary small">
+                  Est. {institution.founded}
+                </span>
+              </div>
+              <h3 className="institution-name">{institution.name}</h3>
+              <p className="institution-city">{institution.city}</p>
+              <p className="institution-type">{institution.type}</p>
             </div>
-            <h3 className="institution-name">{institution.name}</h3>
-            <p className="institution-city">{institution.city}</p>
-            <p className="institution-type">{institution.type}</p>
           </div>
         ))}
       </div>
