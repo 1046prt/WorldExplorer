@@ -572,6 +572,7 @@
       "countries": ["United States"],
       "source": "Lake Itasca, Minnesota",
       "mouth": "Gulf of Mexico",
+      "imagePath": "/images/rivers/us/",
       "pathCoordinates": [
         { "lat": 47.2396, "lng": -95.2138 },
         { "lat": 29.0955, "lng": -89.2531 }
@@ -584,6 +585,7 @@
       "countries": ["United States", "Mexico"],
       "source": "Rocky Mountain National Park, Colorado",
       "mouth": "Gulf of California",
+      "imagePath": "/images/rivers/us/",
       "pathCoordinates": [
         { "lat": 40.4708, "lng": -105.8286 },
         { "lat": 31.7811, "lng": -114.7724 }
@@ -596,6 +598,7 @@
       "countries": ["United States"],
       "source": "Three Forks, Montana",
       "mouth": "Mississippi River",
+      "imagePath": "/images/rivers/us/",
       "pathCoordinates": [
         { "lat": 45.9239, "lng": -111.4983 },
         { "lat": 38.8146, "lng": -90.1218 }
@@ -609,7 +612,8 @@
       "city": "Cambridge, Massachusetts",
       "founded": 1636,
       "globalRank": 1,
-      "type": "Private Research University"
+      "type": "Private Research University",
+      "imagePath": "/images/institutions/us/"
     },
     {
       "slug": "mit",
@@ -617,7 +621,8 @@
       "city": "Cambridge, Massachusetts",
       "founded": 1861,
       "globalRank": 2,
-      "type": "Private Research University"
+      "type": "Private Research University",
+      "imagePath": "/images/institutions/us/"
     },
     {
       "slug": "stanford-university",
@@ -625,7 +630,8 @@
       "city": "Stanford, California",
       "founded": 1885,
       "globalRank": 3,
-      "type": "Private Research University"
+      "type": "Private Research University",
+      "imagePath": "/images/institutions/us/"
     },
     {
       "slug": "california-institute-of-technology",
@@ -633,7 +639,8 @@
       "city": "Pasadena, California",
       "founded": 1891,
       "globalRank": 4,
-      "type": "Private Research University"
+      "type": "Private Research University",
+      "imagePath": "/images/institutions/us/"
     },
     {
       "slug": "university-of-chicago",
@@ -641,7 +648,8 @@
       "city": "Chicago, Illinois",
       "founded": 1890,
       "globalRank": 10,
-      "type": "Private Research University"
+      "type": "Private Research University",
+      "imagePath": "/images/institutions/us/"
     }
   ]
 }
