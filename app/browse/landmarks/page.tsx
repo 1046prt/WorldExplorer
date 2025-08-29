@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { GlobalNavigation } from "@/components/global-navigation";
 import { BrowseFilters } from "@/components/browse-filters";
-import Footer from "@/components/footer";
+
 import { MapPin, Calendar, Globe, Star } from "lucide-react";
 import "@/styles/landmarks-page.css";
 interface Landmark {

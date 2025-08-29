@@ -318,7 +318,8 @@ export default function UniversitiesPage() {
                   Top Universities Worldwide
                 </h1>
                 <p className="page-description">
-                  Explore the world's leading institutions of higher education
+                  Explore the world&apos;s leading institutions of higher
+                  education
                 </p>
               </div>
             </section>

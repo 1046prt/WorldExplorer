@@ -229,7 +229,8 @@ export default function RiversPage() {
                   Major Rivers of the World
                 </h1>
                 <p className="page-description">
-                  Explore the world's most important river systems and waterways
+                  Explore the world&apos;s most important river systems and
+                  waterways
                 </p>
               </div>
             </section>

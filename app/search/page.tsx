@@ -115,7 +115,7 @@ function SearchContent() {
               <section className="section">
                 <div className="search-results-header">
                   <h2 className="search-results-title">
-                    Search Results for "{query}"
+                    Search Results for &quot;{query}&quot;
                   </h2>
                   <p className="search-results-subtitle">
                     {isLoading

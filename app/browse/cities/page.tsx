@@ -242,7 +242,7 @@ export default function CitiesPage() {
                   Major Cities of the World
                 </h1>
                 <p className="page-description">
-                  Discover the world's most populous and influential cities
+                  Discover the world&apos;s most populous and influential cities
                 </p>
               </div>
             </section>
