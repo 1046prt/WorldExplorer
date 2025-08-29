@@ -469,31 +469,31 @@
       "name": "Sydney",
       "whyFamous": "Iconic Opera House and Harbour Bridge, largest city",
       "slug": "sydney",
-      "image": "/images/cities/sydney.webp"
+      "image": "/images/cities/aus/sydney.webp"
     },
     {
       "name": "Melbourne",
       "whyFamous": "Cultural capital, coffee culture, and sporting events",
       "slug": "melbourne",
-      "image": "/images/cities/melbourne.webp"
+      "image": "/images/cities/aus/melbourne.webp"
     },
     {
       "name": "Perth",
       "whyFamous": "Isolated city, mining boom, beautiful beaches",
       "slug": "perth",
-      "image": "/images/cities/perth.webp"
+      "image": "/images/cities/aus/perth.webp"
     },
     {
       "name": "Brisbane",
       "whyFamous": "Subtropical climate, gateway to Gold Coast",
       "slug": "brisbane",
-      "image": "/images/cities/brisbane.webp"
+      "image": "/images/cities/aus/brisbane.webp"
     },
     {
       "name": "Adelaide",
       "whyFamous": "Wine regions, festivals, planned city layout",
       "slug": "adelaide",
-      "image": "/images/cities/adelaide.webp"
+      "image": "/images/cities/aus/adelaide.webp"
     }
   ],
   "landmarks": [
@@ -506,7 +506,7 @@
         "lng": 151.2153
       },
       "whyFamous": "Iconic architectural masterpiece and UNESCO World Heritage site",
-      "imagePath": "/images/landmarks/sydney-opera-house.webp"
+      "imagePath": "/images/landmarks/aus/sydney-opera-house.jpg"
     },
     {
       "slug": "uluru",
@@ -517,7 +517,7 @@
         "lng": 131.0369
       },
       "whyFamous": "Sacred Aboriginal site and massive monolith in the desert",
-      "imagePath": "/images/landmarks/uluru.webp"
+      "imagePath": "/images/landmarks/aus/uluru.jpg"
     },
     {
       "slug": "great-barrier-reef",
@@ -527,8 +527,8 @@
         "lat": -18.2871,
         "lng": 147.6992
       },
-      "whyFamous": "World's largest coral reef system, natural wonder",
-      "imagePath": "/images/landmarks/great-barrier-reef.webp"
+      "whyFamous": "World's largest coral reef system, natural wonder of Australia",
+      "imagePath": "/images/landmarks/aus/great-barrier-reef.jpg"
     },
     {
       "slug": "twelve-apostles",
@@ -539,7 +539,7 @@
         "lng": 143.1048
       },
       "whyFamous": "Limestone stacks along the Great Ocean Road",
-      "imagePath": "/images/landmarks/twelve-apostles.webp"
+      "imagePath": "/images/landmarks/aus/twelve-apostles.jpg"
     }
   ],
   "rivers": [
@@ -550,6 +550,7 @@
       "countries": ["Australia"],
       "source": "Australian Alps",
       "mouth": "Southern Ocean",
+      "imagePath": "/images/rivers/aus/murray-river.jpg",
       "pathCoordinates": [
         { "lat": -36.4167, "lng": 148.0 },
         { "lat": -35.5333, "lng": 138.9667 }
@@ -562,6 +563,7 @@
       "countries": ["Australia"],
       "source": "Great Dividing Range",
       "mouth": "Murray River",
+      "imagePath": "/images/rivers/aus/darling-river.jpg",
       "pathCoordinates": [
         { "lat": -28.1667, "lng": 150.2833 },
         { "lat": -34.1833, "lng": 142.0167 }
@@ -575,7 +577,8 @@
       "city": "Melbourne, Victoria",
       "founded": 1853,
       "globalRank": 33,
-      "type": "Public Research University"
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/aus/university-of-melbourne.jpg"
     },
     {
       "slug": "australian-national-university",
@@ -583,7 +586,8 @@
       "city": "Canberra, ACT",
       "founded": 1946,
       "globalRank": 30,
-      "type": "Public Research University"
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/aus/australian-national-university.jpg"
     },
     {
       "slug": "university-of-sydney",
@@ -591,7 +595,8 @@
       "city": "Sydney, New South Wales",
       "founded": 1850,
       "globalRank": 41,
-      "type": "Public Research University"
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/aus/university-of-sydney.jpg"
     },
     {
       "slug": "university-of-queensland",
@@ -599,7 +604,8 @@
       "city": "Brisbane, Queensland",
       "founded": 1909,
       "globalRank": 50,
-      "type": "Public Research University"
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/aus/university-of-queensland.jpg"
     }
   ]
 }
