@@ -531,7 +531,7 @@
         "lat": 18.922,
         "lng": 72.8347
       },
-      "whyFamous": "Iconic arch monument overlooking Arabian Sea",
+      "whyFamous": "Iconic arch monument of mumbai overlooking Arabian Sea",
       "imagePath": "/images/landmarks/india/gateway-of-india.png"
     },
     {
@@ -554,6 +554,7 @@
       "countries": ["India", "Bangladesh"],
       "source": "Gangotri Glacier",
       "mouth": "Bay of Bengal",
+      "imagePath": "/images/rivers/india/ganges-river.jpg",
       "pathCoordinates": [
         { "lat": 30.9989, "lng": 78.9378 },
         { "lat": 21.8, "lng": 89.5 }
@@ -566,6 +567,7 @@
       "countries": ["India", "China", "Bangladesh"],
       "source": "Angsi Glacier",
       "mouth": "Bay of Bengal",
+      "imagePath": "/images/rivers/india/brahmaputra-river.jpg",
       "pathCoordinates": [
         { "lat": 30.7333, "lng": 82.0833 },
         { "lat": 25.2, "lng": 89.7 }
@@ -578,6 +580,7 @@
       "countries": ["India"],
       "source": "Yamunotri Glacier",
       "mouth": "Ganges River",
+      "imagePath": "/images/rivers/india/yamuna-river.jpg",
       "pathCoordinates": [
         { "lat": 31.0167, "lng": 78.45 },
         { "lat": 25.4333, "lng": 81.8667 }
@@ -591,7 +594,8 @@
       "city": "Bangalore, Karnataka",
       "founded": 1909,
       "globalRank": 31,
-      "type": "Public Research University"
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/india/indian-institute-of-science.jpg"
     },
     {
       "slug": "iit-bombay",
@@ -599,7 +603,8 @@
       "city": "Mumbai, Maharashtra",
       "founded": 1958,
       "globalRank": 172,
-      "type": "Public Technical University"
+      "type": "Public Technical University",
+      "imagePath": "/images/institutions/india/iit-bombay.jpg"
     },
     {
       "slug": "iit-delhi",
@@ -607,7 +612,8 @@
       "city": "New Delhi",
       "founded": 1961,
       "globalRank": 197,
-      "type": "Public Technical University"
+      "type": "Public Technical University",
+      "imagePath": "/images/institutions/india/iit-delhi.jpg"
     },
     {
       "slug": "university-of-delhi",
@@ -615,7 +621,8 @@
       "city": "New Delhi",
       "founded": 1922,
       "globalRank": 500,
-      "type": "Public Research University"
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/india/university-of-delhi.jpg"
     }
   ]
 }
