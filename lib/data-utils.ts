@@ -21,7 +21,7 @@ export async function getCountryData(
         const fileContents = await fs.readFile(filePath, "utf8");
         const data = JSON.parse(fileContents);
         return data;
-      } catch (fileError) {
+      } catch {
         console.warn(`Country data file not found for: ${countryCode}`);
         return null;
       }
