@@ -454,31 +454,31 @@
       "name": "Buenos Aires",
       "whyFamous": "Capital city, tango birthplace, European-style architecture",
       "slug": "buenos-aires",
-      "image": "/images/cities/buenos-aires.webp"
+      "image": "/images/cities/argentina/buenos-aires.jpg"
     },
     {
       "name": "Córdoba",
       "whyFamous": "Colonial architecture, university city, cultural center",
       "slug": "cordoba",
-      "image": "/images/cities/cordoba.webp"
+      "image": "/images/cities/argentina/cordoba.jpg"
     },
     {
       "name": "Mendoza",
       "whyFamous": "Wine capital, gateway to Aconcagua, Andes foothills",
       "slug": "mendoza",
-      "image": "/images/cities/mendoza.webp"
+      "image": "/images/cities/argentina/mendoza.jpg"
     },
     {
       "name": "Bariloche",
       "whyFamous": "Lake district, skiing destination, chocolate capital",
       "slug": "bariloche",
-      "image": "/images/cities/bariloche.webp"
+      "image": "/images/cities/argentina/bariloche.jpg"
     },
     {
       "name": "Salta",
       "whyFamous": "Colonial architecture, gateway to northwest, indigenous culture",
       "slug": "salta",
-      "image": "/images/cities/salta.webp"
+      "image": "/images/cities/argentina/salta.jpg"
     }
   ],
   "landmarks": [
@@ -491,7 +491,7 @@
         "lng": -54.4367
       },
       "whyFamous": "Spectacular waterfalls on border with Brazil",
-      "imagePath": "/images/landmarks/iguazu-falls.webp"
+      "imagePath": "/images/landmarks/argentina/iguazu-falls.jpg"
     },
     {
       "slug": "perito-moreno-glacier",
@@ -502,7 +502,7 @@
         "lng": -73.0311
       },
       "whyFamous": "Advancing glacier in Los Glaciares National Park",
-      "imagePath": "/images/landmarks/perito-moreno-glacier.webp"
+      "imagePath": "/images/landmarks/argentina/perito-moreno-glacier.jpg"
     },
     {
       "slug": "aconcagua",
@@ -513,7 +513,7 @@
         "lng": -70.0109
       },
       "whyFamous": "Highest mountain in the Americas",
-      "imagePath": "/images/landmarks/aconcagua.webp"
+      "imagePath": "/images/landmarks/argentina/aconcagua.jpg"
     },
     {
       "slug": "recoleta-cemetery",
@@ -524,7 +524,7 @@
         "lng": -58.3934
       },
       "whyFamous": "Historic cemetery with elaborate mausoleums, Eva Perón's tomb",
-      "imagePath": "/images/landmarks/recoleta-cemetery.webp"
+      "imagePath": "/images/landmarks/argentina/recoleta-cemetery.jpg"
     }
   ],
   "rivers": [
@@ -535,6 +535,7 @@
       "countries": ["Argentina", "Brazil", "Paraguay"],
       "source": "Brazil",
       "mouth": "Rio de la Plata",
+      "imagePath": "/images/rivers/argentina/parana-river.jpg",
       "pathCoordinates": [
         { "lat": -19.0167, "lng": -51.7833 },
         { "lat": -34.0, "lng": -58.5 }
@@ -547,6 +548,7 @@
       "countries": ["Argentina", "Brazil", "Uruguay"],
       "source": "Brazil",
       "mouth": "Rio de la Plata",
+      "imagePath": "/images/rivers/argentina/uruguay-river.jpg",
       "pathCoordinates": [
         { "lat": -27.4833, "lng": -49.8 },
         { "lat": -34.0, "lng": -58.5 }
@@ -559,6 +561,7 @@
       "countries": ["Argentina"],
       "source": "Andes Mountains",
       "mouth": "Atlantic Ocean",
+      "imagePath": "/images/rivers/argentina/colorado-river-argentina.jpg",
       "pathCoordinates": [
         { "lat": -37.0, "lng": -70.0 },
         { "lat": -39.5833, "lng": -62.25 }
@@ -572,7 +575,8 @@
       "city": "Buenos Aires",
       "founded": 1821,
       "globalRank": 67,
-      "type": "Public Research University"
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/argentina/university-of-buenos-aires.jpg"
     },
     {
       "slug": "national-university-of-cordoba",
@@ -580,7 +584,8 @@
       "city": "Córdoba",
       "founded": 1613,
       "globalRank": 201,
-      "type": "Public Research University"
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/argentina/national-university-of-cordoba.jpg"
     },
     {
       "slug": "national-university-of-la-plata",
@@ -588,7 +593,8 @@
       "city": "La Plata, Buenos Aires",
       "founded": 1905,
       "globalRank": 250,
-      "type": "Public Research University"
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/argentina/national-university-of-la-plata.jpg"
     },
     {
       "slug": "austral-university",
@@ -596,7 +602,8 @@
       "city": "Buenos Aires",
       "founded": 1991,
       "globalRank": 400,
-      "type": "Private Research University"
+      "type": "Private Research University",
+      "imagePath": "/images/institutions/argentina/austral-university.jpg"
     }
   ]
 }

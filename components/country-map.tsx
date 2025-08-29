@@ -40,13 +40,6 @@ export function CountryMap({ country }: CountryMapProps) {
             if (fallback) fallback.style.display = "flex";
           }}
         />
-        <div className="map-fallback">
-          <div className="map-fallback-content">
-            <div className="map-fallback-emoji">🗺️</div>
-            <p className="map-fallback-title">{country.name} Map</p>
-            <p className="map-fallback-subtitle">Map not available</p>
-          </div>
-        </div>
       </div>
 
       <div className="map-details">
