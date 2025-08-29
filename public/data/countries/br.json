@@ -270,17 +270,20 @@
     {
       "name": "Rio de Janeiro",
       "whyFamous": "Famous for Christ the Redeemer statue, Carnival, and beautiful beaches",
+      "image": "/images/cities/brazil/rio-de-janeiro.jpg",
       "slug": "rio-de-janeiro"
     },
     {
       "name": "São Paulo",
       "whyFamous": "Largest city in South America and major economic center",
-      "slug": "sao-paulo"
+      "slug": "sao-paulo",
+      "image": "/images/cities/brazil/sao-paulo.jpg"
     },
     {
       "name": "Salvador",
       "whyFamous": "Historic colonial city and cultural center of Afro-Brazilian culture",
-      "slug": "salvador"
+      "slug": "salvador",
+      "image": "/images/cities/brazil/salvador.jpg"
     }
   ],
   "landmarks": [
@@ -293,7 +296,7 @@
         "lng": -43.2105
       },
       "whyFamous": "Iconic Art Deco statue of Jesus Christ overlooking Rio de Janeiro",
-      "imagePath": "/images/landmarks/christ-the-redeemer.webp"
+      "imagePath": "/images/landmarks/brazil/christ-the-redeemer.jpg"
     },
     {
       "slug": "iguazu-falls",
@@ -303,8 +306,8 @@
         "lat": -25.6953,
         "lng": -54.4367
       },
-      "whyFamous": "One of the world's most spectacular waterfalls",
-      "imagePath": "/images/landmarks/iguazu-falls.webp"
+      "whyFamous": "One of the world's most spectacular waterfalls of Brazil",
+      "imagePath": "/images/landmarks/brazil/iguazu-falls.jpg"
     }
   ],
   "rivers": [
@@ -315,6 +318,7 @@
       "countries": ["Brazil", "Peru", "Colombia"],
       "source": "Peruvian Andes",
       "mouth": "Atlantic Ocean",
+      "imagePath": "/images/rivers/brazil/amazon-river.jpg",
       "pathCoordinates": [
         { "lat": -3.4653, "lng": -62.2159 },
         { "lat": 0.1807, "lng": -51.7792 }
@@ -328,7 +332,8 @@
       "city": "São Paulo",
       "founded": 1934,
       "globalRank": 115,
-      "type": "Public Research University"
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/brazil/university-of-sao-paulo.jpg"
     }
   ]
 }
