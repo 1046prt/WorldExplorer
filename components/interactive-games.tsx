@@ -161,7 +161,7 @@ export function InteractiveGames() {
         </div>
       ) : (
         <div className="text-center py-8 text-gray-500">
-          Click "Start Hunt" to begin your treasure hunting adventure!
+          Click &quot;Start Hunt&quot; to begin your treasure hunting adventure!
         </div>
       )}
     </div>

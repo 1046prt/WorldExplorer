@@ -5,6 +5,7 @@ import { MapPin, ExternalLink } from "lucide-react";
 import { LandmarkModal } from "@/components/landmark-modal";
 import type { Country } from "@/lib/types";
 import "@/styles/country-landmarks.css";
+import Image from "next/image";
 
 interface CountryLandmarksProps {
   country: Country;
@@ -31,11 +32,13 @@ export function CountryLandmarks({ country }: CountryLandmarksProps) {
           >
             <Card className="landmark-card">
               <div className="landmark-image">
-                <img
+                <Image
                   src={landmark.imagePath || "/images/placeholder.svg"}
                   alt={landmark.name}
                   className="contain-cover w-full h-full rounded-lg"
                   loading="lazy"
+                  width={300}
+                  height={200}
                 />
               </div>
               <div className="landmark-content">

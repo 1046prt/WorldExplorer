@@ -11,22 +11,77 @@ const languageData = {
     title: "Common Phrases",
     icon: Volume2,
     data: [
-      { language: "Spanish", country: "Spain", phrase: "Hola, ¿cómo estás?", translation: "Hello, how are you?", flag: "🇪🇸" },
-      { language: "French", country: "France", phrase: "Bonjour, comment allez-vous?", translation: "Hello, how are you?", flag: "🇫🇷" },
-      { language: "German", country: "Germany", phrase: "Hallo, wie geht es dir?", translation: "Hello, how are you?", flag: "🇩🇪" },
-      { language: "Japanese", country: "Japan", phrase: "こんにちは、元気ですか？", translation: "Hello, how are you?", flag: "🇯🇵" },
-      { language: "Arabic", country: "Saudi Arabia", phrase: "مرحبا، كيف حالك؟", translation: "Hello, how are you?", flag: "🇸🇦" },
+      {
+        language: "Spanish",
+        country: "Spain",
+        phrase: "Hola, ¿cómo estás?",
+        translation: "Hello, how are you?",
+        flag: "🇪🇸",
+      },
+      {
+        language: "French",
+        country: "France",
+        phrase: "Bonjour, comment allez-vous?",
+        translation: "Hello, how are you?",
+        flag: "🇫🇷",
+      },
+      {
+        language: "German",
+        country: "Germany",
+        phrase: "Hallo, wie geht es dir?",
+        translation: "Hello, how are you?",
+        flag: "🇩🇪",
+      },
+      {
+        language: "Japanese",
+        country: "Japan",
+        phrase: "こんにちは、元気ですか？",
+        translation: "Hello, how are you?",
+        flag: "🇯🇵",
+      },
+      {
+        language: "Arabic",
+        country: "Saudi Arabia",
+        phrase: "مرحبا، كيف حالك؟",
+        translation: "Hello, how are you?",
+        flag: "🇸🇦",
+      },
     ],
   },
   scripts: {
     title: "Writing Systems",
     icon: Languages,
     data: [
-      { name: "Latin", example: "Hello World", countries: "Europe, Americas", type: "Alphabet" },
-      { name: "Arabic", example: "مرحبا بالعالم", countries: "Middle East, North Africa", type: "Abjad" },
-      { name: "Chinese", example: "你好世界", countries: "China, Taiwan", type: "Logographic" },
-      { name: "Devanagari", example: "नमस्ते संसार", countries: "India, Nepal", type: "Abugida" },
-      { name: "Cyrillic", example: "Привет мир", countries: "Russia, Eastern Europe", type: "Alphabet" },
+      {
+        name: "Latin",
+        example: "Hello World",
+        countries: "Europe, Americas",
+        type: "Alphabet",
+      },
+      {
+        name: "Arabic",
+        example: "مرحبا بالعالم",
+        countries: "Middle East, North Africa",
+        type: "Abjad",
+      },
+      {
+        name: "Chinese",
+        example: "你好世界",
+        countries: "China, Taiwan",
+        type: "Logographic",
+      },
+      {
+        name: "Devanagari",
+        example: "नमस्ते संसार",
+        countries: "India, Nepal",
+        type: "Abugida",
+      },
+      {
+        name: "Cyrillic",
+        example: "Привет мир",
+        countries: "Russia, Eastern Europe",
+        type: "Alphabet",
+      },
     ],
   },
 };
@@ -45,7 +100,7 @@ export function LanguageExplorer() {
 
   const renderPhrases = () => (
     <div className="le-phrases">
-      {currentData.data.map((item: any, index: number) => (
+      {currentData.data.map((item: Record<string, unknown>, index: number) => (
         <Card key={index} className="le-card">
           <CardContent className="le-card-content">
             <div className="le-phrase-header">

@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { Github, Twitter, Globe, Mail } from "lucide-react";
 import "@/styles/footer.css";
+import Link from "next/link";
 
 const Footer: FC = () => {
   return (
@@ -18,7 +19,7 @@ const Footer: FC = () => {
           <h3 className="footer-subtitle">Quick Links</h3>
           <ul className="footer-links">
             <li>
-              <a href="/">Home</a>
+              <Link href="/">Home</Link>
             </li>
             <li>
               <a href="/browse/countries">Countries</a>

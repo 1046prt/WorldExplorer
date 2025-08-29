@@ -117,7 +117,7 @@ export function WeatherWidget() {
 
   useEffect(() => {
     fetchWeather(city);
-  }, []);
+  }, [city]);
 
   const fetchWeather = async (cityName: string) => {
     setLoading(true);

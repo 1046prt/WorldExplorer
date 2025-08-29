@@ -5,8 +5,7 @@ import type React from "react";
 import { useState, useEffect, useRef } from "react";
 import { Search, X } from "lucide-react";
 import { useRouter } from "next/navigation";
-import type { Country } from "@/lib/types";
-import "@/styles/search-bar.css"
+import "@/styles/search-bar.css";
 interface SearchResult {
   type: "country" | "landmark" | "institution" | "river" | "city";
   title: string;
@@ -29,7 +28,7 @@ export function SearchBar() {
         setIsLoading(true);
         try {
           // Load sample countries for search (in real app, this would be from API)
-          const sampleCountries: Country[] = [];
+
           // This would normally fetch from your data source
 
           const searchResults: SearchResult[] = [];
@@ -285,13 +284,13 @@ export function SearchBar() {
                   className="btn btn-ghost search-see-all-button"
                 >
                   <Search />
-                  See all results for "{query}"
+                  See all results for &quot;{query}&quot;
                 </button>
               </div>
             </div>
           ) : query.length >= 2 ? (
             <div className="search-no-results">
-              No results found for "{query}"
+              No results found for &quot;{query}&quot;
             </div>
           ) : null}
         </div>

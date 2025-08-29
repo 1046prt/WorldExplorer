@@ -5,6 +5,7 @@ import Link from "next/link";
 import { GlobalSearch } from "@/components/global-search";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { ArrowLeft } from "lucide-react";
+import Image from "next/image";
 
 interface GlobalNavigationProps {
   showBackButton?: boolean;
@@ -15,7 +16,6 @@ interface GlobalNavigationProps {
 export function GlobalNavigation({
   showBackButton = false,
   backHref = "/",
-  currentPage,
 }: GlobalNavigationProps) {
   return (
     <header className="header">
@@ -33,16 +33,18 @@ export function GlobalNavigation({
             )}
             <Link href="/" className="header-brand-link">
               <div className="header-logo">
-                <img
+                <Image
                   src="/images/logo/WORLD.svg"
                   alt="WorldExplorer Logo"
                   className="header-logo-image"
+                  width={40}
+                  height={40}
                 />
               </div>
               <div className="header-brand-text">
                 <h1 className="header-title">WorldExplorer</h1>
                 <p className="header-subtitle">
-                  Discover the world's knowledge
+                  Discover the world&apos;s knowledge
                 </p>
               </div>
             </Link>

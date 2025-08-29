@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import {
   Globe,
   MapPin,
@@ -19,20 +19,7 @@ interface QuickNavItem {
   color: string;
 }
 
-function getCategoryColor(colorClass: string): string {
-  const colorMap: Record<string, string> = {
-    "text-blue-600": "#2563eb",
-    "text-red-600": "#dc2626",
-    "text-green-600": "#16a34a",
-    "text-purple-600": "#9333ea",
-    "text-cyan-600": "#0891b2",
-  };
-  return colorMap[colorClass] || "#6b7280";
-}
-
 export function QuickNavigation() {
-  const [activeCategory, setActiveCategory] = useState<string | null>(null);
-
   const categories: QuickNavItem[] = [
     {
       icon: <Globe className="w-5 h-5" />,

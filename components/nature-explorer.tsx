@@ -238,7 +238,10 @@ export function NatureExplorer() {
   const [selectedCategory, setSelectedCategory] = useState("wonders");
   const [search, setSearch] = useState("");
 
-  const filterData = (items: any[], keyFields: string[]) => {
+  const filterData = (
+    items: Record<string, unknown>[],
+    keyFields: string[]
+  ) => {
     return items.filter((item) =>
       keyFields.some((key) =>
         String(item[key]).toLowerCase().includes(search.toLowerCase())

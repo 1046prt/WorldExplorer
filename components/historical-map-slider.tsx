@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import "@/styles/historical-map-slider.css";
 import { Clock, Play, Pause } from "lucide-react";
+import Image from "next/image";
 
 const historicalData = [
   {
@@ -95,10 +96,12 @@ export function HistoricalMapSlider() {
       <div className="card-content">
         <div className="map-container">
           <div className="map-wrapper">
-            <img
+            <Image
               src={currentData.mapUrl}
               alt={`World map ${currentData.year}`}
               className="map-image"
+              width={600}
+              height={400}
             />
           </div>
           <div className="badge">{currentData.year}</div>

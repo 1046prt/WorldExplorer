@@ -67,26 +67,26 @@ export function CurrencyConverter() {
   const [fromCurrency, setFromCurrency] = useState("USD");
   const [toCurrency, setToCurrency] = useState("EUR");
   const [result, setResult] = useState<number | null>(null);
-  const [loading, setLoading] = useState(false);
+  const [, setLoading] = useState(false);
 
   useEffect(() => {
-    convertCurrency();
+    const performConversion = () => {
+      if (!amount || isNaN(Number(amount))) {
+        setResult(null);
+        return;
+      }
+
+      setLoading(true);
+      setTimeout(() => {
+        const rate = exchangeRates[fromCurrency]?.[toCurrency] || 1;
+        const convertedAmount = Number(amount) * rate;
+        setResult(convertedAmount);
+        setLoading(false);
+      }, 300);
+    };
+
+    performConversion();
   }, [amount, fromCurrency, toCurrency]);
-
-  const convertCurrency = () => {
-    if (!amount || isNaN(Number(amount))) {
-      setResult(null);
-      return;
-    }
-
-    setLoading(true);
-    setTimeout(() => {
-      const rate = exchangeRates[fromCurrency]?.[toCurrency] || 1;
-      const convertedAmount = Number(amount) * rate;
-      setResult(convertedAmount);
-      setLoading(false);
-    }, 300);
-  };
 
   const swapCurrencies = () => {
     setFromCurrency(toCurrency);

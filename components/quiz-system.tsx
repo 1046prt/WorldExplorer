@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Trophy, RefreshCw, Flag, MapPin, Clock } from "lucide-react";
 import Image from "next/image";
 import "@/styles/quiz-system.css";
@@ -192,6 +192,19 @@ export function QuizSystem() {
   const [timeLeft, setTimeLeft] = useState(30);
   const [isActive, setIsActive] = useState(false);
 
+  const handleAnswer = React.useCallback(
+    (answerIndex: number) => {
+      setSelectedAnswer(answerIndex);
+      setShowResult(true);
+      setIsActive(false);
+
+      if (answerIndex === quizQuestions[currentQuestion].correct) {
+        setScore(score + 1);
+      }
+    },
+    [currentQuestion, score]
+  );
+
   useEffect(() => {
     let interval: NodeJS.Timeout | null = null;
     if (isActive && timeLeft > 0 && !showResult) {
@@ -204,21 +217,11 @@ export function QuizSystem() {
     return () => {
       if (interval) clearInterval(interval);
     };
-  }, [isActive, timeLeft, showResult]);
+  }, [isActive, timeLeft, showResult, handleAnswer]);
 
   const startQuiz = () => {
     setIsActive(true);
     setTimeLeft(30);
-  };
-
-  const handleAnswer = (answerIndex: number) => {
-    setSelectedAnswer(answerIndex);
-    setShowResult(true);
-    setIsActive(false);
-
-    if (answerIndex === quizQuestions[currentQuestion].correct) {
-      setScore(score + 1);
-    }
   };
 
   const nextQuestion = () => {

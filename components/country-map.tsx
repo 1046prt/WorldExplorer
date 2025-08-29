@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Map } from "lucide-react";
 import type { Country } from "@/lib/types";
 import "@/styles/country-map.css";
+import Image from "next/image";
 
 interface CountryMapProps {
   country: Country;
@@ -22,10 +23,12 @@ export function CountryMap({ country }: CountryMapProps) {
 
       {/* Map Image */}
       <div className="map-image-container">
-        <img
+        <Image
           src={`/images/country/${country.iso2.toLowerCase()}.svg`}
           alt={`${country.name} Map`}
           className="map-image"
+          width={400}
+          height={300}
           onLoad={(e) => {
             const fallback = (
               e.target as HTMLImageElement

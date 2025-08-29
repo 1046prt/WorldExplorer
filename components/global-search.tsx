@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { Search, ArrowRight } from "lucide-react";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useDebounce } from "@/hooks/useDebounce";
 import { SearchService, type SearchResult } from "@/lib/search-service";
@@ -206,7 +205,7 @@ export function GlobalSearch({
                     className="search-see-all-button btn btn-ghost"
                     onClick={handleSeeAllResults}
                   >
-                    <span>See all results for "{query}"</span>
+                    <span>See all results for &quot;{query}&quot;</span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
@@ -214,7 +213,7 @@ export function GlobalSearch({
             </>
           ) : query.length >= 2 ? (
             <div className="search-no-results">
-              <span>No results found for "{query}"</span>
+              <span>No results found for &quot;{query}&quot;</span>
             </div>
           ) : null}
         </div>

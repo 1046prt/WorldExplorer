@@ -51,7 +51,7 @@ export function LandmarkModal({ landmark, children }: LandmarkModalProps) {
           </div>
 
           <div>
-            <h3 className="landmark-subtitle">Why it's famous</h3>
+            <h3 className="landmark-subtitle">Why it&apos;s famous</h3>
             <p className="landmark-text">{landmark.whyFamous}</p>
           </div>
 
