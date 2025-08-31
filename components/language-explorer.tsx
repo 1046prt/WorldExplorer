@@ -6,6 +6,21 @@ import { Button } from "@/components/ui/button";
 import { Languages, Volume2 } from "lucide-react";
 import "@/styles/language-explorer.css";
 
+interface LanguagePhrase {
+  language: string;
+  country: string;
+  phrase: string;
+  translation: string;
+  flag: string;
+}
+
+interface WritingScript {
+  name: string;
+  example: string;
+  countries: string;
+  type: string;
+}
+
 const languageData = {
   phrases: {
     title: "Common Phrases",
@@ -100,7 +115,7 @@ export function LanguageExplorer() {
 
   const renderPhrases = () => (
     <div className="le-phrases">
-      {currentData.data.map((item: Record<string, unknown>, index: number) => (
+      {(currentData.data as LanguagePhrase[]).map((item, index: number) => (
         <Card key={index} className="le-card">
           <CardContent className="le-card-content">
             <div className="le-phrase-header">
@@ -114,7 +129,7 @@ export function LanguageExplorer() {
               <Button
                 size="sm"
                 variant="outline"
-                onClick={() => playPhrase(item.phrase)}
+                onClick={() => playPhrase(item.phrase as string)}
                 disabled={playingAudio === item.phrase}
                 className="le-listen-btn"
               >

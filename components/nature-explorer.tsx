@@ -3,6 +3,52 @@
 import { useState } from "react";
 import { Mountain, Waves, TreePine } from "lucide-react";
 import "@/styles/nature-explorer.css";
+
+interface NatureWonder {
+  name: string;
+  type: string;
+  country: string;
+  height?: string;
+  area?: string;
+  depth?: string;
+  coordinates: string;
+}
+
+interface Volcano {
+  name: string;
+  country: string;
+  type: string;
+  status: string;
+  lastEruption: string;
+}
+
+interface Migration {
+  species: string;
+  route: string;
+  distance: string;
+  season: string;
+}
+
+interface River {
+  name: string;
+  length: string;
+  countries: string;
+  outflow: string;
+}
+
+interface Climate {
+  zone: string;
+  temperature: string;
+  rainfall: string;
+  regions: string;
+}
+
+interface Ecosystem {
+  name: string;
+  biodiversity: string;
+  threats: string;
+  locations: string;
+}
 const natureData = {
   wonders: [
     {
@@ -238,10 +284,10 @@ export function NatureExplorer() {
   const [selectedCategory, setSelectedCategory] = useState("wonders");
   const [search, setSearch] = useState("");
 
-  const filterData = (
-    items: Record<string, unknown>[],
+  const filterData = <T extends Record<string, unknown>>(
+    items: T[],
     keyFields: string[]
-  ) => {
+  ): T[] => {
     return items.filter((item) =>
       keyFields.some((key) =>
         String(item[key]).toLowerCase().includes(search.toLowerCase())
@@ -292,7 +338,7 @@ export function NatureExplorer() {
           {selectedCategory === "wonders" && (
             <div className="grid grid-cols-1 md:grid-cols-3 gap-md">
               {filterData(natureData.wonders, ["name", "type", "country"]).map(
-                (wonder, i) => (
+                (wonder: NatureWonder, i) => (
                   <div key={i} className="card bordered green">
                     <div className="card-header">
                       <h3 className="card-title flex gap-sm items-center green-text">
@@ -345,12 +391,14 @@ export function NatureExplorer() {
                 "name",
                 "country",
                 "type",
-              ]).map((volcano, i) => (
+              ]).map((volcano: Volcano, i) => (
                 <div key={i} className="nature-card">
                   <div className="nature-card-header">
                     <h3 className="nature-card-title">🌋 {volcano.name}</h3>
                     <span
-                      className={`nature-badge ${volcano.status.toLowerCase()}`}
+                      className={`nature-badge ${(
+                        volcano.status as string
+                      ).toLowerCase()}`}
                     >
                       {volcano.status}
                     </span>
@@ -375,7 +423,7 @@ export function NatureExplorer() {
           {selectedCategory === "migrations" && (
             <div className="nature-grid">
               {filterData(natureData.migrations, ["species", "route"]).map(
-                (migration, i) => (
+                (migration: Migration, i) => (
                   <div key={i} className="nature-card">
                     <div className="nature-card-header">
                       <h3 className="nature-card-title">
@@ -404,7 +452,7 @@ export function NatureExplorer() {
           {selectedCategory === "rivers" && (
             <div className="nature-grid">
               {filterData(natureData.rivers, ["name", "countries"]).map(
-                (river, i) => (
+                (river: River, i) => (
                   <div key={i} className="nature-card">
                     <div className="nature-card-header">
                       <h3 className="nature-card-title">🌊 {river.name}</h3>
@@ -431,7 +479,7 @@ export function NatureExplorer() {
           {selectedCategory === "climates" && (
             <div className="nature-grid">
               {filterData(natureData.climates, ["zone", "regions"]).map(
-                (climate, i) => (
+                (climate: Climate, i) => (
                   <div key={i} className="nature-card">
                     <div className="nature-card-header">
                       <h3 className="nature-card-title">🌡️ {climate.zone}</h3>
@@ -457,7 +505,7 @@ export function NatureExplorer() {
           {selectedCategory === "ecosystems" && (
             <div className="nature-grid">
               {filterData(natureData.ecosystems, ["name", "locations"]).map(
-                (ecosystem, i) => (
+                (ecosystem: Ecosystem, i) => (
                   <div key={i} className="nature-card">
                     <div className="nature-card-header">
                       <h3 className="nature-card-title">🌿 {ecosystem.name}</h3>

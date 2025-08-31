@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { GlobalSearch } from "@/components/global-search";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { ArrowLeft } from "lucide-react";
@@ -17,19 +18,29 @@ export function GlobalNavigation({
   showBackButton = false,
   backHref = "/",
 }: GlobalNavigationProps) {
+  const router = useRouter();
+
+  const handleBackClick = () => {
+    if (window.history.length > 1) {
+      router.back();
+    } else {
+      router.push(backHref);
+    }
+  };
+
   return (
     <header className="header">
       <div className="header-container">
         <div className="header-content">
           <div className="header-left">
             {showBackButton && (
-              <Link
-                href={backHref}
+              <button
+                onClick={handleBackClick}
                 className="header-back-button"
                 aria-label="Go back"
               >
                 <ArrowLeft className="header-back-icon" />
-              </Link>
+              </button>
             )}
             <Link href="/" className="header-brand-link">
               <div className="header-logo">
