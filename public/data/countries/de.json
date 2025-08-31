@@ -461,31 +461,31 @@
       "name": "Berlin",
       "whyFamous": "Capital city, rich history, cultural center with Brandenburg Gate",
       "slug": "berlin",
-      "image": "/images/cities/berlin.webp"
+      "image": "/images/cities/germany/berlin.jpg"
     },
     {
       "name": "Munich",
       "whyFamous": "Bavarian capital, Oktoberfest, gateway to the Alps",
       "slug": "munich",
-      "image": "/images/cities/munich.webp"
+      "image": "/images/cities/germany/munich.jpg"
     },
     {
       "name": "Hamburg",
       "whyFamous": "Major port city, maritime culture, media center",
       "slug": "hamburg",
-      "image": "/images/cities/hamburg.webp"
+      "image": "/images/cities/germany/hamburg.jpg"
     },
     {
       "name": "Cologne",
       "whyFamous": "Ancient Roman city, Gothic cathedral, cultural center",
       "slug": "cologne",
-      "image": "/images/cities/cologne.webp"
+      "image": "/images/cities/germany/cologne.jpg"
     },
     {
       "name": "Frankfurt",
       "whyFamous": "Financial center, European Central Bank, major airport hub",
       "slug": "frankfurt",
-      "image": "/images/cities/frankfurt.webp"
+      "image": "/images/cities/germany/frankfurt.jpg"
     }
   ],
   "landmarks": [
@@ -497,8 +497,8 @@
         "lat": 52.5163,
         "lng": 13.3777
       },
-      "whyFamous": "Iconic symbol of Berlin and German reunification",
-      "imagePath": "/images/landmarks/brandenburg-gate.jpg"
+      "whyFamous": "Iconic symbol of Berlin and German reunification history",
+      "imagePath": "/images/landmarks/germany/brandenburg-gate.jpg"
     },
     {
       "slug": "neuschwanstein-castle",
@@ -509,7 +509,7 @@
         "lng": 10.7498
       },
       "whyFamous": "Fairy-tale castle that inspired Disney's Sleeping Beauty Castle",
-      "imagePath": "/images/landmarks/neuschwanstein-castle.webp"
+      "imagePath": "/images/landmarks/germany/neuschwanstein-castle.jpg"
     },
     {
       "slug": "cologne-cathedral",
@@ -520,7 +520,7 @@
         "lng": 6.9583
       },
       "whyFamous": "Gothic masterpiece and UNESCO World Heritage site",
-      "imagePath": "/images/landmarks/cologne-cathedral.webp"
+      "imagePath": "/images/landmarks/germany/cologne-cathedral.jpg"
     },
     {
       "slug": "berlin-wall",
@@ -531,7 +531,7 @@
         "lng": 13.3905
       },
       "whyFamous": "Historic Cold War barrier and symbol of division",
-      "imagePath": "/images/landmarks/berlin-wall.jpg"
+      "imagePath": "/images/landmarks/germany/berlin-wall.jpg"
     }
   ],
   "rivers": [
@@ -542,6 +542,7 @@
       "countries": ["Germany", "Switzerland", "France", "Netherlands"],
       "source": "Swiss Alps",
       "mouth": "North Sea",
+      "imagePath": "/images/rivers/germany/rhine-river.jpg",
       "pathCoordinates": [
         { "lat": 46.6003, "lng": 8.6756 },
         { "lat": 51.9833, "lng": 4.1333 }
@@ -554,6 +555,7 @@
       "countries": ["Germany", "Czech Republic"],
       "source": "Krkonoše Mountains",
       "mouth": "North Sea",
+      "imagePath": "/images/rivers/germany/elbe-river.jpg",
       "pathCoordinates": [
         { "lat": 50.7667, "lng": 15.5333 },
         { "lat": 53.8833, "lng": 8.7167 }
@@ -577,6 +579,7 @@
       ],
       "source": "Black Forest",
       "mouth": "Black Sea",
+      "imagePath": "/images/rivers/germany/danube-river.jpg",
       "pathCoordinates": [
         { "lat": 48.0975, "lng": 8.1506 },
         { "lat": 45.2167, "lng": 29.7167 }
@@ -590,7 +593,8 @@
       "city": "Heidelberg, Baden-Württemberg",
       "founded": 1386,
       "globalRank": 64,
-      "type": "Public Research University"
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/germany/heidelberg-university.jpg"
     },
     {
       "slug": "technical-university-of-munich",
@@ -598,7 +602,8 @@
       "city": "Munich, Bavaria",
       "founded": 1868,
       "globalRank": 50,
-      "type": "Public Technical University"
+      "type": "Public Technical University",
+      "imagePath": "/images/institutions/germany/technical-university-of-munich.jpg"
     },
     {
       "slug": "ludwig-maximilian-university",
@@ -606,7 +611,8 @@
       "city": "Munich, Bavaria",
       "founded": 1472,
       "globalRank": 59,
-      "type": "Public Research University"
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/germany/ludwig-maximilian-university.jpg"
     },
     {
       "slug": "humboldt-university",
@@ -614,7 +620,8 @@
       "city": "Berlin",
       "founded": 1810,
       "globalRank": 87,
-      "type": "Public Research University"
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/germany/humboldt-university.jpg"
     }
   ]
 }

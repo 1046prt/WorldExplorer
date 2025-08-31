@@ -507,7 +507,7 @@
         "lat": 43.723,
         "lng": 10.3966
       },
-      "whyFamous": "Famous tilted bell tower, architectural marvel",
+      "whyFamous": "Famous tilted bell tower, architectural marvel of Pisa",
       "imagePath": "/images/landmarks/italy/leaning-tower-pisa.jpg"
     },
     {
@@ -541,6 +541,7 @@
       "countries": ["Italy"],
       "source": "Cottian Alps",
       "mouth": "Adriatic Sea",
+      "imagePath": "/images/rivers/italy/po-river.jpg",
       "pathCoordinates": [
         { "lat": 44.6989, "lng": 7.0892 },
         { "lat": 44.9778, "lng": 12.4358 }
@@ -553,6 +554,7 @@
       "countries": ["Italy"],
       "source": "Apennine Mountains",
       "mouth": "Tyrrhenian Sea",
+      "imagePath": "/images/rivers/italy/tiber-river.jpg",
       "pathCoordinates": [
         { "lat": 43.5947, "lng": 12.1347 },
         { "lat": 41.7364, "lng": 12.2847 }
@@ -565,6 +567,7 @@
       "countries": ["Italy"],
       "source": "Apennine Mountains",
       "mouth": "Ligurian Sea",
+      "imagePath": "/images/rivers/italy/arno-river.jpg",
       "pathCoordinates": [
         { "lat": 43.7833, "lng": 11.8667 },
         { "lat": 43.6833, "lng": 10.3 }
@@ -578,7 +581,8 @@
       "city": "Bologna, Emilia-Romagna",
       "founded": 1088,
       "globalRank": 167,
-      "type": "Public Research University"
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/italy/university-of-bologna.jpg"
     },
     {
       "slug": "sapienza-university",
@@ -586,7 +590,8 @@
       "city": "Rome, Lazio",
       "founded": 1303,
       "globalRank": 134,
-      "type": "Public Research University"
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/italy/sapienza-university.jpg"
     },
     {
       "slug": "university-of-milan",
@@ -594,7 +599,8 @@
       "city": "Milan, Lombardy",
       "founded": 1924,
       "globalRank": 316,
-      "type": "Public Research University"
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/italy/university-of-milan.jpg"
     },
     {
       "slug": "scuola-normale-superiore",
@@ -602,7 +608,8 @@
       "city": "Pisa, Tuscany",
       "founded": 1810,
       "globalRank": 201,
-      "type": "Public Graduate School"
+      "type": "Public Graduate School",
+      "imagePath": "/images/institutions/italy/scuola-normale-superiore.jpg"
     }
   ]
 }
