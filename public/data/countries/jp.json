@@ -106,7 +106,7 @@
         "lng": 138.7274
       },
       "whyFamous": "Sacred mountain and symbol of Japan, UNESCO World Heritage site",
-      "imagePath": "/images/landmarks/mount-fuji.jpg"
+      "imagePath": "/images/landmarks/japan/mount-fuji.jpg"
     },
     {
       "slug": "tokyo-tower",
@@ -117,7 +117,7 @@
         "lng": 139.7454
       },
       "whyFamous": "Communications tower inspired by Eiffel Tower, symbol of post-war recovery",
-      "imagePath": "/images/landmarks/tokyo-tower.jpg"
+      "imagePath": "/images/landmarks/japan/tokyo-tower.jpg"
     },
     {
       "slug": "fushimi-inari-shrine",
@@ -128,7 +128,7 @@
         "lng": 135.7727
       },
       "whyFamous": "Thousands of vermillion torii gates creating tunnels up the mountain",
-      "imagePath": "/images/landmarks/fushimi-inari-shrine.jpg"
+      "imagePath": "/images/landmarks/japan/fushimi-inari-shrine.jpg"
     },
     {
       "slug": "golden-pavilion",
@@ -139,7 +139,7 @@
         "lng": 135.7292
       },
       "whyFamous": "Gold-covered Buddhist temple, one of Japan's most photographed buildings",
-      "imagePath": "/images/landmarks/golden-pavilion.png"
+      "imagePath": "/images/landmarks/japan/golden-pavilion.jpg"
     }
   ],
   "rivers": [
@@ -150,6 +150,7 @@
       "countries": ["Japan"],
       "source": "Mount Kobushi",
       "mouth": "Sea of Japan",
+      "imagePath": "/images/rivers/japan/shinano-river.jpg",
       "pathCoordinates": [
         { "lat": 35.95, "lng": 138.7167 },
         { "lat": 37.9167, "lng": 139.0333 }
@@ -162,6 +163,7 @@
       "countries": ["Japan"],
       "source": "Mount Ominakami",
       "mouth": "Pacific Ocean",
+      "imagePath": "/images/rivers/japan/tone-river.jpg",
       "pathCoordinates": [
         { "lat": 36.95, "lng": 139.2167 },
         { "lat": 35.7667, "lng": 140.8333 }
@@ -175,7 +177,8 @@
       "city": "Tokyo",
       "founded": 1877,
       "globalRank": 23,
-      "type": "Public Research University"
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/japan/university-of-tokyo.jpg"
     },
     {
       "slug": "kyoto-university",
@@ -183,7 +186,8 @@
       "city": "Kyoto",
       "founded": 1897,
       "globalRank": 36,
-      "type": "Public Research University"
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/japan/kyoto-university.jpg"
     },
     {
       "slug": "osaka-university",
@@ -191,7 +195,8 @@
       "city": "Osaka",
       "founded": 1931,
       "globalRank": 68,
-      "type": "Public Research University"
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/japan/osaka-university.jpg"
     }
   ]
 }

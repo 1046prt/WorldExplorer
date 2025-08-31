@@ -470,31 +470,31 @@
       "name": "Toronto",
       "whyFamous": "Canada's largest city, financial center, and home to CN Tower",
       "slug": "toronto",
-      "image": "/images/cities/toronto.jpg"
+      "image": "/images/cities/canada/toronto.jpg"
     },
     {
       "name": "Vancouver",
       "whyFamous": "Pacific coast city known for natural beauty and film industry",
       "slug": "vancouver",
-      "image": "/images/cities/vancouver.jpg"
+      "image": "/images/cities/canada/vancouver.jpg"
     },
     {
       "name": "Montreal",
       "whyFamous": "French-speaking cultural center with historic Old Montreal",
       "slug": "montreal",
-      "image": "/images/cities/montreal.jpg"
+      "image": "/images/cities/canada/montreal.jpg"
     },
     {
       "name": "Quebec City",
       "whyFamous": "Historic walled city and UNESCO World Heritage site",
       "slug": "quebec-city",
-      "image": "/images/cities/quebec-city.jpg"
+      "image": "/images/cities/canada/quebec-city.jpg"
     },
     {
       "name": "Calgary",
       "whyFamous": "Oil industry hub and gateway to Canadian Rockies",
       "slug": "calgary",
-      "image": "/images/cities/calgary.jpg"
+      "image": "/images/cities/canada/calgary.jpg"
     }
   ],
   "landmarks": [
@@ -506,8 +506,8 @@
         "lat": 43.6426,
         "lng": -79.3871
       },
-      "whyFamous": "Iconic telecommunications tower and symbol of Toronto",
-      "imagePath": "/images/landmarks/cn-tower.jpg"
+      "whyFamous": "Iconic telecommunications tower",
+      "imagePath": "/images/landmarks/canada/cn-tower.jpg"
     },
     {
       "slug": "niagara-falls",
@@ -518,7 +518,7 @@
         "lng": -79.0377
       },
       "whyFamous": "World-famous waterfalls on the US-Canada border",
-      "imagePath": "/images/landmarks/niagara-falls.jpg"
+      "imagePath": "/images/landmarks/canada/niagara-falls.jpg"
     },
     {
       "slug": "banff-national-park",
@@ -529,7 +529,7 @@
         "lng": -115.9281
       },
       "whyFamous": "Canada's first national park in the Rocky Mountains",
-      "imagePath": "/images/landmarks/banff-national-park.jpg"
+      "imagePath": "/images/landmarks/canada/banff-national-park.jpg"
     },
     {
       "slug": "parliament-hill",
@@ -540,7 +540,7 @@
         "lng": -75.7009
       },
       "whyFamous": "Seat of Canadian federal government",
-      "imagePath": "/images/landmarks/parliament-hill.jpg"
+      "imagePath": "/images/landmarks/canada/parliament-hill.jpg"
     }
   ],
   "rivers": [
@@ -551,6 +551,7 @@
       "countries": ["Canada", "United States"],
       "source": "Lake Ontario",
       "mouth": "Gulf of St. Lawrence",
+      "imagePath": "/images/rivers/canada/st-lawrence-river.jpg",
       "pathCoordinates": [
         { "lat": 44.2619, "lng": -76.5197 },
         { "lat": 49.5904, "lng": -64.5037 }
@@ -563,6 +564,7 @@
       "countries": ["Canada"],
       "source": "Great Slave Lake",
       "mouth": "Beaufort Sea",
+      "imagePath": "/images/rivers/canada/mackenzie-river.jpg",
       "pathCoordinates": [
         { "lat": 61.5064, "lng": -113.4909 },
         { "lat": 69.3592, "lng": -133.7593 }
@@ -575,6 +577,7 @@
       "countries": ["Canada"],
       "source": "Fraser Pass",
       "mouth": "Strait of Georgia",
+      "imagePath": "/images/rivers/canada/fraser-river.jpg",
       "pathCoordinates": [
         { "lat": 52.7661, "lng": -118.0481 },
         { "lat": 49.2057, "lng": -123.1636 }
@@ -588,7 +591,8 @@
       "city": "Toronto, Ontario",
       "founded": 1827,
       "globalRank": 18,
-      "type": "Public Research University"
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/canada/university-of-toronto.jpg"
     },
     {
       "slug": "mcgill-university",
@@ -596,7 +600,8 @@
       "city": "Montreal, Quebec",
       "founded": 1821,
       "globalRank": 31,
-      "type": "Public Research University"
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/canada/mcgill-university.jpg"
     },
     {
       "slug": "university-of-british-columbia",
@@ -604,7 +609,8 @@
       "city": "Vancouver, British Columbia",
       "founded": 1908,
       "globalRank": 34,
-      "type": "Public Research University"
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/canada/university-of-british-columbia.jpg"
     },
     {
       "slug": "university-of-alberta",
@@ -612,7 +618,8 @@
       "city": "Edmonton, Alberta",
       "founded": 1908,
       "globalRank": 110,
-      "type": "Public Research University"
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/canada/university-of-alberta.jpg"
     }
   ]
 }

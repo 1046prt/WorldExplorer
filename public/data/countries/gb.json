@@ -165,7 +165,7 @@
       "founded": 1096,
       "globalRank": 5,
       "type": "Public Research University",
-      "image": "/images/institutions/gb/university-of-oxford.jpg"
+      "imagePath": "/images/institutions/gb/university-of-oxford.jpg"
     },
     {
       "slug": "university-of-cambridge",
@@ -174,7 +174,7 @@
       "founded": 1209,
       "globalRank": 7,
       "type": "Public Research University",
-      "image": "/images/institutions/gb/university-of-cambridge.jpg"  
+      "imagePath": "/images/institutions/gb/university-of-cambridge.jpg"  
     },
     {
       "slug": "imperial-college-london",
@@ -183,7 +183,7 @@
       "founded": 1907,
       "globalRank": 8,
       "type": "Public Research University",
-      "image": "/images/institutions/gb/imperial-college-london.jpg"
+      "imagePath": "/images/institutions/gb/imperial-college-london.jpg"
     }
   ]
 }
