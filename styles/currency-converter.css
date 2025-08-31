@@ -1,6 +1,6 @@
 /* Currency Converter Styles */
 
-.header {
+.ccheader {
   display: flex;
   align-items: center;
   gap: var(--spacing-md);

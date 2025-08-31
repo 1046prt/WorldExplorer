@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Search, Filter, X } from "lucide-react";
 import { useDebounce } from "@/hooks/useDebounce";
 import { SearchService } from "@/lib/search-service";
-
+import "@/styles//interactive-filters.css";
 interface BrowseFiltersProps {
   searchTerm: string;
   onSearchChange: (value: string) => void;

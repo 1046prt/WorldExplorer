@@ -20,7 +20,6 @@ interface Country {
   region: string;
 }
 
-// Available countries with data files - only include countries we actually have data for
 const availableCountries: Country[] = [
   {
     iso2: "US",

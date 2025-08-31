@@ -83,12 +83,13 @@
 }
 
 .btn-success {
-  background: var(--color-success);
+  background: var(--color-primary);
   color: white;
 }
 
 .btn-success:hover {
-  background: #059669;
+  background: white;
+  color: var(--color-primary) !important;
 }
 
 .btn-option {

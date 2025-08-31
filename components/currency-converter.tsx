@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { ArrowRightLeft, DollarSign } from "lucide-react";
-// Removed OptimizedImage import - no longer using images
 import "@/styles/currency-converter.css";
 
 interface Currency {
@@ -13,16 +12,16 @@ interface Currency {
 }
 
 const currencies: Currency[] = [
-  { code: "USD", name: "US Dollar", symbol: "$", flag: "🇺🇸" },
+  { code: "USD", name: "US Dollar", symbol: "$", flag: "" },
   { code: "EUR", name: "Euro", symbol: "€", flag: "🇪🇺" },
-  { code: "GBP", name: "British Pound", symbol: "£", flag: "🇬🇧" },
-  { code: "JPY", name: "Japanese Yen", symbol: "¥", flag: "🇯🇵" },
-  { code: "CNY", name: "Chinese Yuan", symbol: "¥", flag: "🇨🇳" },
-  { code: "CAD", name: "Canadian Dollar", symbol: "C$", flag: "🇨🇦" },
-  { code: "AUD", name: "Australian Dollar", symbol: "A$", flag: "🇦🇺" },
-  { code: "CHF", name: "Swiss Franc", symbol: "Fr", flag: "🇨🇭" },
-  { code: "INR", name: "Indian Rupee", symbol: "₹", flag: "🇮🇳" },
-  { code: "BRL", name: "Brazilian Real", symbol: "R$", flag: "🇧🇷" },
+  { code: "GBP", name: "British Pound", symbol: "£", flag: "" },
+  { code: "JPY", name: "Japanese Yen", symbol: "¥", flag: "" },
+  { code: "CNY", name: "Chinese Yuan", symbol: "¥", flag: "" },
+  { code: "CAD", name: "Canadian Dollar", symbol: "C$", flag: "" },
+  { code: "AUD", name: "Australian Dollar", symbol: "A$", flag: "" },
+  { code: "CHF", name: "Swiss Franc", symbol: "Fr", flag: "" },
+  { code: "INR", name: "Indian Rupee", symbol: "₹", flag: "" },
+  { code: "BRL", name: "Brazilian Real", symbol: "R$", flag: "" },
 ];
 
 // Mock exchange rates
@@ -98,7 +97,7 @@ export function CurrencyConverter() {
 
   return (
     <div className="card">
-      <div className="header">
+      <div className="ccheader">
         <DollarSign className="icon" />
         <div>
           <h3 className="title">Currency Converter</h3>
@@ -180,10 +179,10 @@ export function CurrencyConverter() {
         )}
 
         <div className="quick-rates">
-          <div className="rate-card">🇺🇸 USD → $1.00</div>
-          <div className="rate-card">🇪🇺 EUR → €0.85</div>
-          <div className="rate-card">🇬🇧 GBP → £0.73</div>
-          <div className="rate-card">🇯🇵 JPY → ¥110</div>
+          <div className="rate-card">USD → $1.00</div>
+          <div className="rate-card">EUR → €0.85</div>
+          <div className="rate-card">GBP → £0.73</div>
+          <div className="rate-card">JPY → ¥110</div>
         </div>
       </div>
     </div>
