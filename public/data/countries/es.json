@@ -449,31 +449,31 @@
       "name": "Madrid",
       "whyFamous": "Capital city, art museums, royal palaces",
       "slug": "madrid",
-      "image": "/images/cities/madrid.webp"
+      "image": "/images/cities/spain/madrid.jpg"
     },
     {
       "name": "Barcelona",
       "whyFamous": "Gaudí architecture, Mediterranean culture, Catalonian capital",
       "slug": "barcelona",
-      "image": "/images/cities/barcelona.webp"
+      "image": "/images/cities/spain/barcelona.jpg"
     },
     {
       "name": "Seville",
       "whyFamous": "Moorish architecture, flamenco culture, historic center",
       "slug": "seville",
-      "image": "/images/cities/seville.webp"
+      "image": "/images/cities/spain/seville.jpg"
     },
     {
       "name": "Valencia",
       "whyFamous": "City of Arts and Sciences, birthplace of paella",
       "slug": "valencia",
-      "image": "/images/cities/valencia.webp"
+      "image": "/images/cities/spain/valencia.jpg"
     },
     {
       "name": "Bilbao",
       "whyFamous": "Guggenheim Museum, Basque culture, industrial heritage",
       "slug": "bilbao",
-      "image": "/images/cities/bilbao.webp"
+      "image": "/images/cities/spain/bilbao.jpg"
     }
   ],
   "landmarks": [
@@ -486,7 +486,7 @@
         "lng": 2.1744
       },
       "whyFamous": "Gaudí's unfinished masterpiece basilica",
-      "imagePath": "/images/landmarks/sagrada-familia.webp"
+      "imagePath": "/images/landmarks/spain/sagrada-familia.jpg"
     },
     {
       "slug": "alhambra",
@@ -497,7 +497,7 @@
         "lng": -3.5986
       },
       "whyFamous": "Moorish palace complex and fortress",
-      "imagePath": "/images/landmarks/alhambra.webp"
+      "imagePath": "/images/landmarks/spain/alhambra.jpg"
     },
     {
       "slug": "prado-museum",
@@ -508,7 +508,7 @@
         "lng": -3.6921
       },
       "whyFamous": "World-renowned art museum with Spanish masters",
-      "imagePath": "/images/landmarks/prado-museum.webp"
+      "imagePath": "/images/landmarks/spain/prado-museum.jpg"
     },
     {
       "slug": "camino-de-santiago",
@@ -519,7 +519,7 @@
         "lng": -8.5456
       },
       "whyFamous": "Historic pilgrimage route across northern Spain",
-      "imagePath": "/images/landmarks/camino-de-santiago.webp   "
+      "imagePath": "/images/landmarks/spain/camino-de-santiago.jpg"
     }
   ],
   "rivers": [
@@ -530,6 +530,7 @@
       "countries": ["Spain"],
       "source": "Cantabrian Mountains",
       "mouth": "Mediterranean Sea",
+      "imagePath": "/images/rivers/spain/ebro-river.jpg",
       "pathCoordinates": [
         { "lat": 43.0, "lng": -4.2167 },
         { "lat": 40.7167, "lng": 0.8667 }
@@ -542,6 +543,7 @@
       "countries": ["Spain", "Portugal"],
       "source": "Montes Universales",
       "mouth": "Atlantic Ocean",
+      "imagePath": "/images/rivers/spain/tagus-river.jpg",
       "pathCoordinates": [
         { "lat": 40.2833, "lng": -1.6667 },
         { "lat": 38.6833, "lng": -9.4167 }
@@ -554,6 +556,7 @@
       "countries": ["Spain"],
       "source": "Cazorla Mountains",
       "mouth": "Atlantic Ocean",
+      "imagePath": "/images/rivers/spain/guadalquivir-river.jpg",
       "pathCoordinates": [
         { "lat": 37.9167, "lng": -2.8833 },
         { "lat": 36.7833, "lng": -6.35 }
@@ -567,7 +570,8 @@
       "city": "Barcelona, Catalonia",
       "founded": 1450,
       "globalRank": 184,
-      "type": "Public Research University"
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/spain/university-of-barcelona.jpg"
     },
     {
       "slug": "autonomous-university-of-madrid",
@@ -575,7 +579,8 @@
       "city": "Madrid",
       "founded": 1968,
       "globalRank": 200,
-      "type": "Public Research University"
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/spain/autonomous-university-of-madrid.jpg"
     },
     {
       "slug": "university-of-salamanca",
@@ -583,7 +588,8 @@
       "city": "Salamanca, Castile and León",
       "founded": 1218,
       "globalRank": 601,
-      "type": "Public Research University"
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/spain/university-of-salamanca.jpg"
     },
     {
       "slug": "pompeu-fabra-university",
@@ -591,7 +597,8 @@
       "city": "Barcelona, Catalonia",
       "founded": 1990,
       "globalRank": 287,
-      "type": "Public Research University"
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/spain/pompeu-fabra-university.jpg"
     }
   ]
 }

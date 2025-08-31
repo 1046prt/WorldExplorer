@@ -571,6 +571,7 @@
       "countries": ["Russia"],
       "source": "Valdai Hills",
       "mouth": "Caspian Sea",
+      "imagePath": "/images/rivers/russia/volga-river.jpg",
       "pathCoordinates": [
         { "lat": 57.1522, "lng": 32.2619 },
         { "lat": 45.7167, "lng": 47.7667 }
@@ -583,6 +584,7 @@
       "countries": ["Russia", "Mongolia"],
       "source": "Mongolia",
       "mouth": "Kara Sea",
+      "imagePath": "/images/rivers/russia/yenisei-river.jpg",
       "pathCoordinates": [
         { "lat": 50.4, "lng": 99.9833 },
         { "lat": 71.8167, "lng": 82.6833 }
@@ -595,6 +597,7 @@
       "countries": ["Russia"],
       "source": "Altai Mountains",
       "mouth": "Gulf of Ob",
+      "imagePath": "/images/rivers/russia/ob-river.jpg",
       "pathCoordinates": [
         { "lat": 52.3667, "lng": 85.0333 },
         { "lat": 66.6333, "lng": 66.5333 }
@@ -608,7 +611,8 @@
       "city": "Moscow",
       "founded": 1755,
       "globalRank": 74,
-      "type": "Public Research University"
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/russia/moscow-state-university.jpg"
     },
     {
       "slug": "st-petersburg-state-university",
@@ -616,7 +620,8 @@
       "city": "St. Petersburg",
       "founded": 1724,
       "globalRank": 225,
-      "type": "Public Research University"
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/russia/st-petersburg-state-university.jpg"
     },
     {
       "slug": "novosibirsk-state-university",
@@ -624,7 +629,8 @@
       "city": "Novosibirsk",
       "founded": 1959,
       "globalRank": 250,
-      "type": "Public Research University"
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/russia/novosibirsk-state-university.jpg"
     },
     {
       "slug": "moscow-institute-physics-technology",
@@ -632,7 +638,8 @@
       "city": "Moscow",
       "founded": 1946,
       "globalRank": 290,
-      "type": "Public Technical University"
+      "type": "Public Technical University",
+      "imagePath": "/images/institutions/russia/moscow-institute-physics-technology.jpg"
     }
   ]
 }

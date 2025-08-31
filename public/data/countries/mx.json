@@ -478,7 +478,7 @@
         "lat": 20.6843,
         "lng": -88.5678
       },
-      "whyFamous": "Ancient Mayan city and one of the New Seven Wonders",
+      "whyFamous": "Ancient Mayan city and the New Seven Wonders",
       "imagePath": "/images/landmarks/mexico/chichen-itza.jpg"
     },
     {
@@ -523,6 +523,7 @@
       "countries": ["Mexico", "United States"],
       "source": "Colorado",
       "mouth": "Gulf of Mexico",
+      "imagePath": "/images/rivers/mexico/rio-grande.jpg",
       "pathCoordinates": [
         { "lat": 37.7983, "lng": -107.5917 },
         { "lat": 25.9017, "lng": -97.1397 }
@@ -535,6 +536,7 @@
       "countries": ["Mexico"],
       "source": "Guatemala border",
       "mouth": "Gulf of Mexico",
+      "imagePath": "/images/rivers/mexico/grijalva-river.jpg",
       "pathCoordinates": [
         { "lat": 15.8333, "lng": -91.5 },
         { "lat": 18.6167, "lng": -92.9333 }
@@ -548,7 +550,8 @@
       "city": "Mexico City",
       "founded": 1551,
       "globalRank": 103,
-      "type": "Public Research University"
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/mexico/unam.jpg"
     },
     {
       "slug": "tecnologico-de-monterrey",
@@ -556,7 +559,8 @@
       "city": "Monterrey, Nuevo León",
       "founded": 1943,
       "globalRank": 170,
-      "type": "Private Research University"
+      "type": "Private Research University",
+      "imagePath": "/images/institutions/mexico/tecnologico-de-monterrey.jpg"
     },
     {
       "slug": "ipn",
@@ -564,7 +568,8 @@
       "city": "Mexico City",
       "founded": 1936,
       "globalRank": 250,
-      "type": "Public Technical University"
+      "type": "Public Technical University",
+      "imagePath": "/images/institutions/mexico/ipn.jpg"
     }
   ]
 }
