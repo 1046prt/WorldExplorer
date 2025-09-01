@@ -4,6 +4,8 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacing-lg);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Header */
@@ -86,4 +88,65 @@
 .icon.small {
   width: 16px;
   height: 16px;
+}
+
+/* Responsive design for interactive filters */
+@media (max-width: 768px) {
+  .interactive-filters {
+    padding: var(--spacing-md);
+    gap: var(--spacing-md);
+  }
+
+  .filters-header {
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+  }
+
+  .filters-title {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .filters-badge {
+    margin-left: 0;
+  }
+
+  .search-input,
+  .sort-select {
+    height: 2.5rem;
+    font-size: 1rem;
+  }
+
+  .sort-controls {
+    gap: var(--spacing-xs);
+  }
+}
+
+@media (max-width: 480px) {
+  .interactive-filters {
+    padding: var(--spacing-sm);
+    gap: var(--spacing-sm);
+  }
+
+  .filters-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+  }
+
+  .search-input,
+  .sort-select {
+    height: 2.25rem;
+    font-size: 0.875rem;
+  }
+
+  .icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .icon.small {
+    width: 14px;
+    height: 14px;
+  }
 }
