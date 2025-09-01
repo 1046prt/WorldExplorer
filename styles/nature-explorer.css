@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   gap: var(--spacing-sm);
   background-color: var(--color-muted);
-  padding: var(--spacing-sm);
+  padding: 4px;
   border-radius: var(--radius-md);
   margin-bottom: var(--spacing-lg);
   align-items: center;
@@ -90,12 +90,13 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .nature-tabs {
-    gap: var(--spacing-xs);
-    padding: var(--spacing-xs);
+    gap: 6px;
+    padding: 6px;
     overflow-x: auto;
     flex-wrap: nowrap;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
   }
 
   .nature-tabs::-webkit-scrollbar {
@@ -119,11 +120,26 @@
 
   .tabs-trigger {
     flex-shrink: 0;
-    min-width: 90px;
-    font-size: var(--font-size-xs);
-    padding: var(--spacing-xs) var(--spacing-sm);
+    min-width: 100px;
+    font-size: var(--font-size-sm);
+    padding: 8px 12px;
     white-space: nowrap;
-    margin-right: var(--spacing-xs);
+    border-radius: var(--radius-md);
+    background-color: var(--color-muted);
+    border: 1px solid var(--color-border);
+    color: var(--color-muted-foreground);
+    transition: all var(--transition-normal);
+  }
+
+  .tabs-trigger.active {
+    background-color: var(--color-primary);
+    color: var(--color-primary-foreground);
+    border-color: var(--color-primary);
+  }
+
+  .tabs-trigger:hover {
+    background-color: var(--color-accent);
+    color: var(--color-accent-foreground);
   }
 }
 
@@ -133,20 +149,62 @@
     padding: 4px;
     overflow-x: auto;
     flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
   }
 
   .tabs-trigger {
-    min-width: 80px;
-    font-size: 10px;
-    padding: 4px 8px;
+    min-width: 85px;
+    font-size: 12px;
+    padding: 6px 10px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin-right: 4px;
     border-radius: var(--radius-sm);
+    background-color: var(--color-muted);
+    border: 1px solid var(--color-border);
+    color: var(--color-muted-foreground);
+    transition: all var(--transition-normal);
   }
 
-  .tabs-trigger:last-child {
-    margin-right: 0;
+  .tabs-trigger.active {
+    background-color: var(--color-primary);
+    color: var(--color-primary-foreground);
+    border-color: var(--color-primary);
+    font-weight: 500;
+  }
+
+  .tabs-trigger:hover {
+    background-color: var(--color-accent);
+    color: var(--color-accent-foreground);
+  }
+
+  .nature-card {
+    padding: var(--spacing-sm);
+  }
+
+  .nature-card-title {
+    font-size: var(--font-size-sm);
+    line-height: 1.4;
+  }
+
+  .nature-badge {
+    font-size: 10px;
+    padding: 2px 6px;
+  }
+}
+
+@media (max-width: 360px) {
+  .tabs-trigger {
+    min-width: 75px;
+    font-size: 11px;
+    padding: 5px 8px;
+  }
+
+  .nature-card {
+    padding: 12px;
+  }
+
+  .nature-card-title {
+    font-size: 14px;
   }
 }
