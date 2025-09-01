@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { getCountryData } from "@/lib/data-utils";
+import { getCountryData, getAllCountries } from "@/lib/data-utils";
 import { GlobalNavigation } from "@/components/global-navigation";
 import { CountryHeader } from "@/components/country-header";
 import { CountryOverview } from "@/components/country-overview";
@@ -89,6 +89,14 @@ export default async function CountryPage({ params }: CountryPageProps) {
       <Footer />
     </div>
   );
+}
+
+export async function generateStaticParams() {
+  const countries = await getAllCountries();
+
+  return countries.map((countryCode: string) => ({
+    slug: countryCode,
+  }));
 }
 
 export async function generateMetadata({ params }: CountryPageProps) {

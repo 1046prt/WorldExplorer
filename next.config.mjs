@@ -9,6 +9,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-}
+  // Uncomment if using static export
+  // output: 'export',
+  // trailingSlash: true,
+};
 
-export default nextConfig
+export default nextConfig;
