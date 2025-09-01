@@ -9,8 +9,10 @@
 }
 
 .institutions-card {
-  background-color: rgba(255, 255, 255, 0.9);
-  backdrop-filter: var(--blur-sm);
+  background-color: var(--color-card);
+  backdrop-filter: blur(8px);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .institutions-header {
@@ -18,23 +20,50 @@
   align-items: center;
   gap: var(--spacing-sm);
   margin-bottom: var(--spacing-lg);
+  flex-wrap: wrap;
 }
 
 .institutions-title {
   font-size: var(--font-size-2xl);
   font-weight: 700;
   color: var(--color-foreground);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .institutions-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--spacing-sm);
+  width: 100%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   .institutions-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .institutions-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .institutions-title {
+    font-size: var(--font-size-xl);
+  }
+
+  .institutions-grid {
+    gap: var(--spacing-xs);
+  }
+}
+
+@media (max-width: 480px) {
+  .institutions-title {
+    font-size: var(--font-size-lg);
   }
 }
 
@@ -44,6 +73,8 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacing-sm);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .institution-card:hover {
@@ -56,29 +87,83 @@
   align-items: flex-start;
   justify-content: space-between;
   margin-bottom: var(--spacing-sm);
+  gap: var(--spacing-xs);
+  flex-wrap: wrap;
 }
 
 .institution-rank {
   display: flex;
   align-items: center;
   gap: var(--spacing-xs);
+  flex-shrink: 0;
 }
 
 .institution-name {
   font-weight: 600;
   color: var(--color-foreground);
   margin-bottom: var(--spacing-xs);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: var(--line-height-normal);
 }
 
 .institution-city {
   font-size: var(--font-size-sm);
   color: var(--color-muted-foreground);
   margin-bottom: var(--spacing-xs);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .institution-type {
   font-size: var(--font-size-xs);
   color: var(--color-muted-foreground);
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .institution-card {
+    padding: var(--spacing-sm);
+  }
+
+  .institution-card:hover {
+    transform: none;
+  }
+
+  .institution-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .institution-name {
+    font-size: var(--font-size-sm);
+  }
+
+  .institution-city {
+    font-size: var(--font-size-xs);
+  }
+
+  .institution-type {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .institution-card {
+    padding: var(--spacing-xs);
+  }
+
+  .institution-name {
+    font-size: var(--font-size-xs);
+  }
+
+  .institution-city {
+    font-size: 11px;
+  }
+
+  .institution-type {
+    font-size: 10px;
+  }
 }
 
 .icon {
@@ -122,9 +207,23 @@
   width: 100%;
   height: 160px;
   object-fit: cover;
-  border-radius: var(--radius);
+  border-radius: var(--radius-md);
 }
 
 .institution-content {
   flex: 1;
+  min-width: 0;
+}
+
+/* Mobile responsive adjustments for images */
+@media (max-width: 768px) {
+  .institution-image {
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .institution-image {
+    height: 100px;
+  }
 }
