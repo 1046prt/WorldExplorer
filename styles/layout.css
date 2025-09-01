@@ -218,33 +218,36 @@
 @media (max-width: 768px) {
   .header-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     gap: var(--spacing-sm);
     position: relative;
+    flex-wrap: wrap;
   }
 
   .header-left {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    width: 100%;
-    position: relative;
+    flex: 1;
+    min-width: 0;
     margin-bottom: 5px;
-    margin-top: 0px;
-    padding-right: 3rem;
   }
 
   .header-center {
     width: 100%;
     max-width: none;
-    order: 2;
+    order: 3;
+    flex-basis: 100%;
   }
 
   .header-right {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 10;
+    display: flex;
+    align-items: center;
+    height: auto;
+    flex-shrink: 0;
+    order: 2;
   }
 
   .header-brand-text {
@@ -255,6 +258,18 @@
     gap: var(--spacing-sm);
     flex: 1;
     min-width: 0;
+    align-items: center;
+    display: flex;
+  }
+
+  .header-logo {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .header-logo-image {
+    width: 5rem;
+    height: 5rem;
   }
 }
 
@@ -268,7 +283,8 @@
   }
 
   .header-left {
-    padding-right: 3rem; /* Make space for theme toggle */
+    justify-content: flex-start;
+    align-items: center;
     min-width: 0;
     flex: 1;
   }
@@ -283,23 +299,26 @@
   }
 
   .header-logo {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 2rem;
+    height: 2rem;
   }
 
   .header-logo-image {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 5rem;
+    height: 5rem;
   }
 
   .header-brand-link {
     gap: var(--spacing-xs);
     min-width: 0;
+    align-items: center;
+    flex: 1;
   }
 
   .header-right {
-    top: var(--spacing-sm);
-    right: var(--spacing-sm);
+    display: flex;
+    align-items: center;
+    height: auto;
   }
 
   .header-center {
