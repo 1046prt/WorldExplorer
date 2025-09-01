@@ -116,7 +116,7 @@
         "lat": 48.8606,
         "lng": 2.3376
       },
-      "whyFamous": "World's largest art museum, home to the Mona Lisa",
+      "whyFamous": "World's largest art museum, home to the Mona Lisa and countless other masterpieces",
       "imagePath": "/images/landmarks/france/louvre-museum.jpg"
     },
     {
@@ -138,7 +138,7 @@
         "lat": 48.8049,
         "lng": 2.1204
       },
-      "whyFamous": "Opulent royal residence, symbol of absolute monarchy",
+      "whyFamous": "Opulent royal residence, symbol of absolute monarchy and French classical architecture",
       "imagePath": "/images/landmarks/france/palace-of-versailles.jpg"
     },
     {
