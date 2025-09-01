@@ -1,13 +1,13 @@
-/* Nature Explorer Styles */
-
 .nature-tabs {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: var(--spacing-xs);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
   background-color: var(--color-muted);
-  padding: var(--spacing-xs);
+  padding: var(--spacing-sm);
   border-radius: var(--radius-md);
   margin-bottom: var(--spacing-lg);
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .nature-grid {
@@ -90,7 +90,16 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .nature-tabs {
-    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xs);
+    padding: var(--spacing-xs);
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .nature-tabs::-webkit-scrollbar {
+    display: none;
   }
 
   .nature-grid {
@@ -107,10 +116,37 @@
     align-items: flex-start;
     gap: var(--spacing-xs);
   }
+
+  .tabs-trigger {
+    flex-shrink: 0;
+    min-width: 90px;
+    font-size: var(--font-size-xs);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    white-space: nowrap;
+    margin-right: var(--spacing-xs);
+  }
 }
 
 @media (max-width: 480px) {
   .nature-tabs {
-    grid-template-columns: 1fr;
+    gap: 4px;
+    padding: 4px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
+
+  .tabs-trigger {
+    min-width: 80px;
+    font-size: 10px;
+    padding: 4px 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 4px;
+    border-radius: var(--radius-sm);
+  }
+
+  .tabs-trigger:last-child {
+    margin-right: 0;
   }
 }
