@@ -229,6 +229,9 @@
     justify-content: flex-start;
     width: 100%;
     position: relative;
+    margin-bottom: 5px;
+    margin-top: 0px;
+    padding-right: 3rem;
   }
 
   .header-center {
@@ -266,6 +269,8 @@
 
   .header-left {
     padding-right: 3rem; /* Make space for theme toggle */
+    min-width: 0;
+    flex: 1;
   }
 
   .header-title {
@@ -289,11 +294,16 @@
 
   .header-brand-link {
     gap: var(--spacing-xs);
+    min-width: 0;
   }
 
   .header-right {
     top: var(--spacing-sm);
     right: var(--spacing-sm);
+  }
+
+  .header-center {
+    margin-top: var(--spacing-xs);
   }
 }
 

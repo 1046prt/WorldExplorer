@@ -3,15 +3,18 @@
   position: relative;
   width: 2.25rem;
   height: 2.25rem;
-  border: 1px solid var(--accent);
+  border: 1px solid var(--color-border);
   background-color: var(--color-background);
   border-radius: var(--radius-md);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color var(--transition-fast), color var(--transition-fast);
+  transition: background-color var(--transition-fast),
+    color var(--transition-fast);
   box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
+  z-index: 10;
 }
 
 .theme-toggle:hover {
@@ -74,10 +77,28 @@
   .theme-toggle {
     width: 2rem;
     height: 2rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 20;
   }
 
   .theme-toggle-icon {
     width: 0.875rem;
     height: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .theme-toggle {
+    width: 1.75rem;
+    height: 1.75rem;
+    top: 0.25rem;
+    right: 0.25rem;
+  }
+
+  .theme-toggle-icon {
+    width: 0.75rem;
+    height: 0.75rem;
   }
 }

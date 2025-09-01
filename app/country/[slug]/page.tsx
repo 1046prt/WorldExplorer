@@ -16,13 +16,13 @@ import Footer from "@/components/footer";
 
 interface CountryPageProps {
   params: Promise<{
-    countryCode: string;
+    slug: string;
   }>;
 }
 
 export default async function CountryPage({ params }: CountryPageProps) {
-  const { countryCode } = await params;
-  const country = await getCountryData(countryCode);
+  const { slug } = await params;
+  const country = await getCountryData(slug);
 
   if (!country) {
     notFound();
@@ -92,8 +92,8 @@ export default async function CountryPage({ params }: CountryPageProps) {
 }
 
 export async function generateMetadata({ params }: CountryPageProps) {
-  const { countryCode } = await params;
-  const country = await getCountryData(countryCode);
+  const { slug } = await params;
+  const country = await getCountryData(slug);
 
   if (!country) {
     return {

@@ -14,13 +14,6 @@ interface LanguagePhrase {
   flag: string;
 }
 
-interface WritingScript {
-  name: string;
-  example: string;
-  countries: string;
-  type: string;
-}
-
 const languageData = {
   phrases: {
     title: "Common Phrases",

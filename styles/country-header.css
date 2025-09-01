@@ -66,15 +66,39 @@
   justify-content: center;
   min-width: 40px;
   height: 30px;
+  flex-shrink: 0;
 }
 
 .ch-flag-image {
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: block;
+  width: 40px;
+  height: 30px;
+  object-fit: cover;
 }
 
 .ch-flag {
   font-size: 2.5rem;
+  display: block;
+  line-height: 1;
+}
+
+/* Ensure flag is visible on all screen sizes */
+@media (min-width: 768px) {
+  .ch-flag-container {
+    min-width: 48px;
+    height: 36px;
+  }
+
+  .ch-flag-image {
+    width: 48px;
+    height: 36px;
+  }
+
+  .ch-flag {
+    font-size: 3rem;
+  }
 }
 
 .ch-title {
