@@ -35,6 +35,8 @@
 .page-content {
   flex: 1;
   width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 /* Header Styles */
@@ -44,8 +46,9 @@
   border-bottom: 1px solid var(--color-border);
   position: sticky;
   top: 0;
-  z-index: 50;
+  z-index: 1000;
   transition: all var(--transition-normal);
+  isolation: isolate;
 }
 
 .dark .header {
@@ -224,6 +227,7 @@
     gap: var(--spacing-sm);
     position: relative;
     flex-wrap: wrap;
+    isolation: isolate;
   }
 
   .header-left {
@@ -240,6 +244,9 @@
     max-width: none;
     order: 3;
     flex-basis: 100%;
+    position: relative;
+    z-index: 10;
+    isolation: isolate;
   }
 
   .header-right {
@@ -1283,4 +1290,35 @@
   max-width: 100%;
   margin: 0;
   padding: 0;
+}
+/* Country page specific fixes */
+.country-page-container {
+  position: relative;
+  z-index: 1;
+}
+
+.country-page-container .header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  isolation: isolate;
+}
+
+/* Ensure proper stacking for mobile */
+@media (max-width: 768px) {
+  .country-page-container .header-center {
+    position: relative;
+    z-index: 1001;
+    isolation: isolate;
+  }
+
+  .country-page-container .global-search {
+    position: relative;
+    z-index: 1002;
+    isolation: isolate;
+  }
+
+  .country-page-container .global-search .search-results {
+    z-index: 1003;
+  }
 }
