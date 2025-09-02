@@ -376,7 +376,8 @@
   opacity: 0.5;
 }
 
-.tabs-trigger[data-state="active"] {
+.tabs-trigger[data-state="active"],
+.tabs-trigger.active {
   background-color: var(--color-background);
   color: var(--color-foreground);
   box-shadow: var(--shadow-sm);
@@ -968,4 +969,55 @@
 
 .accordion-content-inner {
   padding-bottom: var(--spacing-md);
+}
+/* Mobile Responsive Tabs */
+@media (max-width: 768px) {
+  .tabs-list {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: var(--spacing-xs);
+    gap: var(--spacing-xs);
+    flex-wrap: nowrap;
+  }
+
+  .tabs-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tabs-trigger {
+    flex-shrink: 0;
+    min-width: 80px;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: var(--font-size-xs);
+    white-space: nowrap;
+  }
+
+  /* Specific styles for nature tabs */
+  .nature-tabs .tabs-trigger {
+    margin: 0;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .tabs-list {
+    gap: 4px;
+    padding: 4px;
+  }
+
+  .tabs-trigger {
+    min-width: 70px;
+    padding: 6px 8px;
+    font-size: 11px;
+    border-radius: 4px;
+  }
+
+  /* Specific styles for nature tabs on mobile */
+  .nature-tabs .tabs-trigger {
+    min-width: 75px;
+    font-size: 10px;
+    padding: 4px 6px;
+  }
 }

@@ -257,6 +257,10 @@
   .country-card {
     padding: var(--spacing-lg);
   }
+
+  .country-flag-image{
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {

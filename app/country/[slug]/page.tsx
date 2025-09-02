@@ -34,7 +34,7 @@ export default async function CountryPage({ params }: CountryPageProps) {
   ];
 
   return (
-    <div className="page-wrapper page-background">
+    <div className="page-wrapper page-background country-page-container">
       <GlobalNavigation
         showBackButton={true}
         backHref="/browse/countries"
@@ -47,39 +47,39 @@ export default async function CountryPage({ params }: CountryPageProps) {
           <NavigationBreadcrumb items={breadcrumbItems} />
 
           <div className="sections-container">
-            <section className="section">
+            <section className="section country-component">
               <CountryOverview country={country} />
             </section>
 
-            <section className="section">
+            <section className="section country-component">
               <ComprehensiveCountryData countryData={country} />
             </section>
 
-            <section className="section">
-              <div>
+            <section className="section country-component">
+              <div className="country-card">
                 <CountryMap country={country} />
               </div>
             </section>
 
-            <section className="section">
+            <section className="section country-component">
               <CountryHistory country={country} />
             </section>
 
-            <section className="section">
+            <section className="section country-component">
               <CountryLandmarks country={country} />
             </section>
 
-            <section className="section">
-              <div>
+            <section className="section country-component">
+              <div className="country-card">
                 <CountryCities country={country} />
               </div>
             </section>
 
-            <section className="section">
+            <section className="section country-component">
               <CountryRivers country={country} />
             </section>
 
-            <section className="section">
+            <section className="section country-component">
               <CountryInstitutions country={country} />
             </section>
           </div>

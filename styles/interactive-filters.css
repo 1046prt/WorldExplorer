@@ -35,18 +35,22 @@
 /* Search */
 .search-wrapper {
   position: relative;
+  isolation: isolate;
 }
 
 .search-icon {
   position: absolute;
-  left: var(--spacing-md);
+  left: 0.75rem;
   top: 50%;
   transform: translateY(-50%);
   color: var(--color-muted-foreground);
+  z-index: 1;
+  pointer-events: none;
 }
 
 .search-input {
-  padding-left: 2.25rem; /* space for icon */
+  padding-left: 2.5rem; /* space for icon */
+  padding-right: 0.75rem;
 }
 
 /* Filters */
@@ -111,10 +115,20 @@
     margin-left: 0;
   }
 
+  .search-wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+
   .search-input,
   .sort-select {
     height: 2.5rem;
     font-size: 1rem;
+  }
+
+  .search-icon {
+    width: 16px;
+    height: 16px;
   }
 
   .sort-controls {
@@ -140,6 +154,17 @@
     font-size: 0.875rem;
   }
 
+  .search-icon {
+    left: 0.625rem;
+    width: 14px;
+    height: 14px;
+  }
+
+  .search-input {
+    padding-left: 2rem;
+    padding-right: 0.5rem;
+  }
+
   .icon {
     width: 16px;
     height: 16px;
@@ -148,5 +173,46 @@
   .icon.small {
     width: 14px;
     height: 14px;
+  }
+}
+
+/* Mobile specific fixes for icon overlapping */
+@media (max-width: 640px) {
+  .search-wrapper {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .search-icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .search-input {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 360px) {
+  .search-icon {
+    left: 0.5rem;
+    width: 12px;
+    height: 12px;
+  }
+
+  .search-input {
+    padding-left: 1.75rem;
+    padding-right: 0.5rem;
+    font-size: 0.8rem;
   }
 }

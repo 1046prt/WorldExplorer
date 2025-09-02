@@ -119,6 +119,8 @@ export function LanguageExplorer() {
                   <div className="le-country">{item.country}</div>
                 </div>
               </div>
+
+              {/*
               <Button
                 size="sm"
                 variant="outline"
@@ -129,6 +131,8 @@ export function LanguageExplorer() {
                 <Volume2 className="le-icon-small" />
                 {playingAudio === item.phrase ? "Playing..." : "Listen"}
               </Button>
+              */}
+
             </div>
             <div className="le-phrase-body">
               <div className="le-phrase">{item.phrase}</div>

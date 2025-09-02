@@ -15,6 +15,8 @@
 @import "../styles/nature-explorer.css";
 @import "../styles/currency-converter.css";
 @import "../styles/image-modal.css";
+@import "../styles/country-page-responsive.css";
+@import "../styles/responsive-utilities.css";
 
 /* CSS variables are defined in styles/globals.css */
 
