@@ -203,6 +203,10 @@
     min-width: 200px;
     flex: 0 0 auto;
   }
+  
+   .country-flag-image{
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
@@ -261,6 +265,10 @@
 
   .search-container {
     max-width: none;
+  }
+
+  .country-flag-image{
+    display: none;
   }
 }
 
