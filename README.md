@@ -258,14 +258,18 @@ Please use the [GitHub Issues](https://github.com/1046prt/WorldExplorer/issues) 
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License,see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 👨‍💻 Author
+## 👨‍💻Credit and Author
 
-### **Prakash Raj**
+### 🎨 Logo Design
 
-- GitHub: [@1046prt](https://github.com/1046prt)
+> **Shiven Anandam**
 
---
+### ✍️ Author
+
+> **[Prakash Raj](https://github.com/1046prt)**
+
+---

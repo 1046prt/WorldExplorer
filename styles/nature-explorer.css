@@ -1,9 +1,9 @@
 .nature-tabs {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--spacing-sm);
+  gap: 9.3vw;
   background-color: var(--color-muted);
-  padding: 4px;
+  padding: 2px;
   border-radius: var(--radius-md);
   margin-bottom: var(--spacing-lg);
   align-items: center;
