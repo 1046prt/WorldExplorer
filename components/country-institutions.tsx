@@ -8,16 +8,19 @@ interface CountryInstitutionsProps {
 
 export function CountryInstitutions({ country }: CountryInstitutionsProps) {
   return (
-    <div className="card institutions-card">
+    <div className="country-institutions-card institutions-card">
       <div className="institutions-header">
-        <GraduationCap className="icon" />
+        <GraduationCap className="country-institutions-icon" />
         <h2 className="institutions-title">Top Educational Institutions</h2>
         <span className="badge secondary">{country.institutions.length}</span>
       </div>
 
       <div className="institutions-grid">
         {country.institutions.map((institution) => (
-          <div key={institution.slug} className="card institution-card">
+          <div
+            key={institution.slug}
+            className="country-institutions-card institution-card"
+          >
             {institution.imagePath && (
               <div className="institution-image-container">
                 <ImageModal
@@ -33,7 +36,7 @@ export function CountryInstitutions({ country }: CountryInstitutionsProps) {
             <div className="institution-content">
               <div className="institution-top">
                 <div className="institution-rank">
-                  <Trophy className="icon trophy" />
+                  <Trophy className="country-institutions-icon trophy" />
                   <span className="badge outline">
                     #{institution.globalRank}
                   </span>

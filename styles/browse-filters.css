@@ -1,0 +1,203 @@
+/* Browse Filters Component Styles */
+.browse-filters-section {
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.browse-filters-countries-filters {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  width: 100%;
+}
+
+/* Filter Input Wrapper */
+.browse-filters-input-wrapper {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+}
+
+.browse-filters-input-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-muted-foreground);
+  z-index: 1;
+  pointer-events: none;
+  width: 20px;
+  height: 20px;
+}
+
+.browse-filters-input {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  width: 100%;
+}
+
+.browse-filters-clear-button {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: var(--color-muted-foreground);
+  cursor: pointer;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.browse-filters-clear-button:hover {
+  color: var(--color-foreground);
+  background-color: var(--color-accent);
+}
+
+/* Search Suggestions */
+.browse-filters-search-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background-color: var(--color-popover);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  max-height: 300px;
+  overflow-y: auto;
+  margin-top: 0.25rem;
+}
+
+.browse-filters-suggestion-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  color: var(--color-foreground);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-size: var(--font-size-sm);
+}
+
+.browse-filters-suggestion-item:hover {
+  background-color: var(--color-accent);
+  color: var(--color-accent-foreground);
+}
+
+.browse-filters-suggestion-item:first-child {
+  border-top-left-radius: var(--radius-md);
+  border-top-right-radius: var(--radius-md);
+}
+
+.browse-filters-suggestion-item:last-child {
+  border-bottom-left-radius: var(--radius-md);
+  border-bottom-right-radius: var(--radius-md);
+}
+
+/* Filter Select Wrapper */
+.browse-filters-select-wrapper {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+}
+
+.browse-filters-select-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-muted-foreground);
+  z-index: 1;
+  pointer-events: none;
+  width: 20px;
+  height: 20px;
+}
+
+.browse-filters-select {
+  padding-left: 2.5rem;
+  padding-right: 0.75rem;
+  width: 100%;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.5rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (min-width: 640px) {
+  .browse-filters-countries-filters {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--spacing-lg);
+  }
+
+  .browse-filters-input-wrapper,
+  .browse-filters-select-wrapper {
+    flex: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .browse-filters-section {
+    padding: var(--spacing-md);
+    gap: var(--spacing-md);
+  }
+
+  .browse-filters-input-icon,
+  .browse-filters-select-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .browse-filters-input,
+  .browse-filters-select {
+    height: 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .browse-filters-section {
+    padding: var(--spacing-sm);
+    gap: var(--spacing-sm);
+  }
+
+  .browse-filters-input,
+  .browse-filters-select {
+    height: 2.25rem;
+    font-size: 0.875rem;
+  }
+
+  .browse-filters-input-icon,
+  .browse-filters-select-icon {
+    left: 0.625rem;
+    width: 14px;
+    height: 14px;
+  }
+
+  .browse-filters-input {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .browse-filters-select {
+    padding-left: 2rem;
+  }
+}

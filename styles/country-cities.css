@@ -25,13 +25,13 @@
 }
 
 /* Header */
-.card-header {
+.country-cities-card-header {
   display: flex;
   align-items: center;
   gap: var(--spacing-sm);
 }
 
-.title-lg {
+.country-cities-title-lg {
   font-size: var(--font-size-2xl);
   font-weight: 700;
   color: var(--color-foreground);
@@ -39,7 +39,7 @@
   overflow-wrap: break-word;
 }
 
-.icon {
+.country-cities-icon {
   width: 20px;
   height: 20px;
   flex-shrink: 0;
@@ -61,11 +61,11 @@
 
 /* Mobile responsive adjustments for header */
 @media (max-width: 768px) {
-  .title-lg {
+  .country-cities-title-lg {
     font-size: var(--font-size-xl);
   }
 
-  .icon {
+  .country-cities-icon {
     width: 16px;
     height: 16px;
   }
@@ -77,11 +77,11 @@
 }
 
 @media (max-width: 480px) {
-  .title-lg {
+  .country-cities-title-lg {
     font-size: var(--font-size-lg);
   }
 
-  .icon {
+  .country-cities-icon {
     width: 14px;
     height: 14px;
   }

@@ -1,0 +1,116 @@
+/* Global Navigation Component Styles */
+.global-navigation-container {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: var(--color-background);
+  border-bottom: 1px solid var(--color-border);
+  backdrop-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.dark .global-navigation-container {
+  background-color: rgba(15, 23, 42, 0.95);
+}
+
+.global-navigation-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.global-navigation-left {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.global-navigation-back-button {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm);
+  border-radius: var(--radius-md);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-foreground);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  font-size: var(--font-size-sm);
+}
+
+.global-navigation-back-button:hover {
+  background-color: var(--color-accent);
+  color: var(--color-accent-foreground);
+}
+
+.global-navigation-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  text-decoration: none;
+  color: var(--color-foreground);
+  font-weight: 700;
+  font-size: var(--font-size-lg);
+}
+
+.global-navigation-logo-image {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-md);
+}
+
+.global-navigation-center {
+  flex: 1;
+  max-width: 500px;
+  margin: 0 var(--spacing-lg);
+}
+
+.global-navigation-right {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.global-navigation-current-page {
+  font-size: var(--font-size-sm);
+  color: var(--color-muted-foreground);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background-color: var(--color-muted);
+  border-radius: var(--radius-sm);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .global-navigation-content {
+    padding: 0 var(--spacing-sm);
+    height: 56px;
+  }
+
+  .global-navigation-center {
+    margin: 0 var(--spacing-sm);
+    max-width: none;
+  }
+
+  .global-navigation-logo span {
+    display: none;
+  }
+
+  .global-navigation-current-page {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .global-navigation-back-button span {
+    display: none;
+  }
+
+  .global-navigation-center {
+    margin: 0 var(--spacing-xs);
+  }
+}

@@ -1,0 +1,112 @@
+/* Environment Dashboard Component Styles */
+.environment-dashboard-container {
+  width: 100%;
+  padding: var(--spacing-lg);
+}
+
+.environment-dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.environment-dashboard-card {
+  background-color: var(--color-card);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+
+.environment-dashboard-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.environment-dashboard-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.environment-dashboard-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--color-primary);
+}
+
+.environment-dashboard-title {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-foreground);
+}
+
+.environment-dashboard-metric {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-sm) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.environment-dashboard-metric:last-child {
+  border-bottom: none;
+}
+
+.environment-dashboard-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-muted-foreground);
+}
+
+.environment-dashboard-value {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-foreground);
+}
+
+.environment-dashboard-progress {
+  width: 100%;
+  height: 8px;
+  background-color: var(--color-muted);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-top: var(--spacing-xs);
+}
+
+.environment-dashboard-progress-bar {
+  height: 100%;
+  background-color: var(--color-primary);
+  transition: width var(--transition-normal);
+}
+
+/* Status indicators */
+.environment-dashboard-status-good {
+  color: var(--color-success);
+}
+
+.environment-dashboard-status-warning {
+  color: var(--color-warning);
+}
+
+.environment-dashboard-status-danger {
+  color: var(--color-destructive);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .environment-dashboard-container {
+    padding: var(--spacing-md);
+  }
+
+  .environment-dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .environment-dashboard-card {
+    padding: var(--spacing-md);
+  }
+}

@@ -62,7 +62,7 @@ export function InteractiveFilters({
   return (
     <Card className="interactive-filters">
       <div className="filters-header">
-        <Filter className="icon small" />
+        <Filter className="interactive-filters-icon small" />
         <h3 className="filters-title">Filters</h3>
         {hasActiveFilters && (
           <Badge variant="secondary" className="filters-badge">
@@ -74,7 +74,7 @@ export function InteractiveFilters({
       <div className="filters-body">
         {/* Search Input */}
         <div className="search-wrapper">
-          <Search className="icon search-icon" />
+          <Search className="interactive-filters-icon search-icon" />
           <Input
             placeholder="Search..."
             value={filters.search}
@@ -135,9 +135,9 @@ export function InteractiveFilters({
               disabled={!filters.sortBy}
             >
               {filters.sortOrder === "asc" ? (
-                <SortAsc className="icon small" />
+                <SortAsc className="interactive-filters-icon small" />
               ) : (
-                <SortDesc className="icon small" />
+                <SortDesc className="interactive-filters-icon small" />
               )}
             </Button>
           </div>
@@ -145,7 +145,11 @@ export function InteractiveFilters({
 
         {/* Clear Filters */}
         {hasActiveFilters && (
-          <Button variant="outline" onClick={clearFilters} className="clear-btn">
+          <Button
+            variant="outline"
+            onClick={clearFilters}
+            className="clear-btn"
+          >
             Clear Filters
           </Button>
         )}

@@ -1,4 +1,3 @@
-/* All CSS files */
 @import "../styles/globals.css";
 @import "../styles/layout.css";
 @import "../styles/components.css";
@@ -9,15 +8,7 @@
 @import "../styles/countries-page.css";
 @import "../styles/quick-navigation.css";
 @import "../styles/optimized-image.css";
-@import "../styles/alignment-fixes.css";
-@import "../styles/color-fixes.css";
 @import "../styles/cities-page.css";
 @import "../styles/nature-explorer.css";
 @import "../styles/currency-converter.css";
 @import "../styles/image-modal.css";
-@import "../styles/country-page-responsive.css";
-@import "../styles/responsive-utilities.css";
-
-/* CSS variables are defined in styles/globals.css */
-
-/* Remove @apply directives - they cause CSS loading issues */

@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { GamepadIcon, Target, MapPin, Puzzle, Clock, Star } from "lucide-react";
+import "@/styles/interactive-games.css";
 
 const games = {
   treasureHunt: {

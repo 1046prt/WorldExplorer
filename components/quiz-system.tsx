@@ -249,13 +249,13 @@ export function QuizSystem() {
   const getQuizIcon = (type: string) => {
     switch (type) {
       case "flag":
-        return <Flag className="icon" />;
+        return <Flag className="quiz-system-icon" />;
       case "capital":
-        return <MapPin className="icon" />;
+        return <MapPin className="quiz-system-icon" />;
       case "landmark":
-        return <Trophy className="icon" />;
+        return <Trophy className="quiz-system-icon" />;
       default:
-        return <Trophy className="icon" />;
+        return <Trophy className="quiz-system-icon" />;
     }
   };
 

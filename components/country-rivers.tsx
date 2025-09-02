@@ -10,7 +10,7 @@ export function CountryRivers({ country }: CountryRiversProps) {
   return (
     <div className="card rivers-card">
       <div className="rivers-header">
-        <Waves className="icon" />
+        <Waves className="country-river-icon" />
         <h2 className="rivers-title">Major Rivers</h2>
         <span className="badge badge-secondary">{country.rivers.length}</span>
       </div>

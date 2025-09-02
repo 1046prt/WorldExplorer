@@ -97,9 +97,9 @@ export function CurrencyConverter() {
   return (
     <div className="card">
       <div className="ccheader">
-        <DollarSign className="icon" />
+        <DollarSign className="currency-converter-icon" />
         <div>
-          <h3 className="title">Currency Converter</h3>
+          <h3 className="currency-converter-title">Currency Converter</h3>
           <p className="subtitle">Live exchange rates</p>
         </div>
       </div>
@@ -113,7 +113,7 @@ export function CurrencyConverter() {
               value={amount}
               onChange={(e) => setAmount(e.target.value)}
               placeholder="Enter amount"
-              className="input"
+              className="currency-converter-input"
             />
           </div>
 

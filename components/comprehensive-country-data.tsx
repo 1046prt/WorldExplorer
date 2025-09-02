@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import type { Country } from "@/lib/types";
+import "@/styles/comprehensive-country-data.css";
 
 interface ComprehensiveCountryDataProps {
   countryData: Country;

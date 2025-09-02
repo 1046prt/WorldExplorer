@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "@/styles/global-ranking.css";
 import {
   Trophy,
@@ -253,16 +253,10 @@ const rankingCategories = {
 };
 
 export default function GlobalRankings() {
-  const [activeCategory, setActiveCategory] = useState<string | null>(null);
+  const [activeCategory, setActiveCategory] =
+    useState<string>("tallestBuildings");
 
-  // ensure hydration consistency
-  useEffect(() => {
-    setActiveCategory("tallestBuildings");
-  }, []);
-
-  if (!activeCategory) {
-    return null; // avoid mismatch during hydration
-  }
+  // No need for useEffect since we initialize with the default value
 
   const currentData =
     rankingCategories[activeCategory as keyof typeof rankingCategories];
