@@ -1,6 +1,6 @@
 /* RandomFactGenerator styles */
 .rf-card {
-  background: var(--card-bg);
+  background: var(--color-card);
   color: var(--text-primary);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);

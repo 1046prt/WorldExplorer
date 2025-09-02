@@ -69,6 +69,7 @@
   background: var(--gradient-primary);
   color: var(--color-primary-foreground);
   box-shadow: var(--shadow-md);
+  border: 1px solid transparent;
 }
 
 .btn-primary:hover {

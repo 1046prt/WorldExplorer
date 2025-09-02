@@ -144,7 +144,7 @@ export function CountryHeader({ country }: CountryHeaderProps) {
             </Button>
           </Link>
           <div className="ch-badges">
-            <Badge variant="outline">{country.iso2}</Badge>.global-search .search-input
+            <Badge variant="outline">{country.iso2}</Badge>
             <Badge variant="secondary">{country.region}</Badge>
           </div>
         </div>

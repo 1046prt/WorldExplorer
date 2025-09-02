@@ -1,5 +1,5 @@
 .le-wrapper {
-  background-color: var(--card-bg);
+  background-color: var(--color-card);
   color: var(--text-primary);
   border-radius: var(--radius-lg);
 }

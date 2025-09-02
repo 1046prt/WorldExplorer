@@ -40,7 +40,7 @@ const quizQuestions: QuizQuestion[] = [
     question: "In which country is Machu Picchu located?",
     options: ["Chile", "Peru", "Bolivia", "Ecuador"],
     correct: 1,
-    image: "/images/landmarks/machu-picchu.png",
+    image: "/images/quiz/machu_picchu.jpg",
     explanation:
       "Machu Picchu is an ancient Incan citadel located in Peru's Andes Mountains.",
   },
@@ -50,7 +50,7 @@ const quizQuestions: QuizQuestion[] = [
     question: "Which country's flag is this?",
     options: ["Japan", "Bangladesh", "Palau", "South Korea"],
     correct: 0,
-    image: "/images/flags/japan.png",
+    image: "/images/flags/jp.png",
     explanation:
       "Japan's flag features a red circle (representing the sun) on a white background.",
   },
@@ -96,7 +96,7 @@ const quizQuestions: QuizQuestion[] = [
     question: "Which country has a maple leaf on its flag?",
     options: ["United States", "Canada", "Australia", "New Zealand"],
     correct: 1,
-    image: "/images/flags/canada.png",
+    image: "/images/flags/ca.png",
     explanation:
       "Canada's flag features a red maple leaf, which is a national symbol.",
   },
@@ -133,7 +133,7 @@ const quizQuestions: QuizQuestion[] = [
     question: "Which country's flag has a Union Jack in the corner?",
     options: ["South Africa", "Australia", "India", "Canada"],
     correct: 1,
-    image: "/images/flags/australia.png",
+    image: "/images/flags/au.png",
     explanation:
       "Australia's flag features the Union Jack in the upper left corner.",
   },

@@ -129,6 +129,7 @@
     border: 1px solid var(--color-border);
     color: var(--color-muted-foreground);
     transition: all var(--transition-normal);
+    margin: 4px  4px;
   }
 
   .tabs-trigger.active {
