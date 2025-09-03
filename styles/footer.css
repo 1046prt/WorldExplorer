@@ -20,12 +20,14 @@
   flex-direction: column;
 }
 
-
 .footer-title {
   font-size: 1.5rem;
   font-weight: bold;
   color: #6366f1;
   margin-bottom: 0.5rem;
+}
+.mr-3{
+  margin-left: -1rem;
 }
 
 .footer-text {
