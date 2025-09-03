@@ -40,7 +40,7 @@ const quizQuestions: QuizQuestion[] = [
     question: "In which country is Machu Picchu located?",
     options: ["Chile", "Peru", "Bolivia", "Ecuador"],
     correct: 1,
-    image: "/images/landmarks/machu-picchu.png",
+    image: "/images/quiz/machu_picchu.jpg",
     explanation:
       "Machu Picchu is an ancient Incan citadel located in Peru's Andes Mountains.",
   },
@@ -50,7 +50,7 @@ const quizQuestions: QuizQuestion[] = [
     question: "Which country's flag is this?",
     options: ["Japan", "Bangladesh", "Palau", "South Korea"],
     correct: 0,
-    image: "/images/flags/japan.png",
+    image: "/images/flags/jp.png",
     explanation:
       "Japan's flag features a red circle (representing the sun) on a white background.",
   },
@@ -96,7 +96,7 @@ const quizQuestions: QuizQuestion[] = [
     question: "Which country has a maple leaf on its flag?",
     options: ["United States", "Canada", "Australia", "New Zealand"],
     correct: 1,
-    image: "/images/flags/canada.png",
+    image: "/images/flags/ca.png",
     explanation:
       "Canada's flag features a red maple leaf, which is a national symbol.",
   },
@@ -133,7 +133,7 @@ const quizQuestions: QuizQuestion[] = [
     question: "Which country's flag has a Union Jack in the corner?",
     options: ["South Africa", "Australia", "India", "Canada"],
     correct: 1,
-    image: "/images/flags/australia.png",
+    image: "/images/flags/au.png",
     explanation:
       "Australia's flag features the Union Jack in the upper left corner.",
   },
@@ -191,6 +191,7 @@ export function QuizSystem() {
   const [quizComplete, setQuizComplete] = useState(false);
   const [timeLeft, setTimeLeft] = useState(30);
   const [isActive, setIsActive] = useState(false);
+  const [autoAdvance, setAutoAdvance] = useState(false);
 
   const handleAnswer = React.useCallback(
     (answerIndex: number) => {
@@ -205,6 +206,14 @@ export function QuizSystem() {
     [currentQuestion, score]
   );
 
+  const handleTimeExpired = React.useCallback(() => {
+    setSelectedAnswer(-1); // -1 indicates time expired/skipped
+    setShowResult(true);
+    setIsActive(false);
+    setAutoAdvance(true);
+    // No score increment for expired time
+  }, []);
+
   useEffect(() => {
     let interval: NodeJS.Timeout | null = null;
     if (isActive && timeLeft > 0 && !showResult) {
@@ -212,12 +221,25 @@ export function QuizSystem() {
         setTimeLeft((timeLeft) => timeLeft - 1);
       }, 1000);
     } else if (timeLeft === 0 && !showResult) {
-      handleAnswer(-1);
+      handleTimeExpired();
     }
     return () => {
       if (interval) clearInterval(interval);
     };
-  }, [isActive, timeLeft, showResult, handleAnswer]);
+  }, [isActive, timeLeft, showResult, handleTimeExpired]);
+
+  // Auto-advance to next question when time expires
+  useEffect(() => {
+    let timeout: NodeJS.Timeout | null = null;
+    if (autoAdvance && showResult) {
+      timeout = setTimeout(() => {
+        nextQuestion();
+      }, 2000); // Wait 2 seconds before auto-advancing
+    }
+    return () => {
+      if (timeout) clearTimeout(timeout);
+    };
+  }, [autoAdvance, showResult]);
 
   const startQuiz = () => {
     setIsActive(true);
@@ -231,6 +253,7 @@ export function QuizSystem() {
       setShowResult(false);
       setTimeLeft(30);
       setIsActive(true);
+      setAutoAdvance(false);
     } else {
       setQuizComplete(true);
     }
@@ -244,18 +267,19 @@ export function QuizSystem() {
     setQuizComplete(false);
     setTimeLeft(30);
     setIsActive(false);
+    setAutoAdvance(false);
   };
 
   const getQuizIcon = (type: string) => {
     switch (type) {
       case "flag":
-        return <Flag className="icon" />;
+        return <Flag className="quiz-system-icon" />;
       case "capital":
-        return <MapPin className="icon" />;
+        return <MapPin className="quiz-system-icon" />;
       case "landmark":
-        return <Trophy className="icon" />;
+        return <Trophy className="quiz-system-icon" />;
       default:
-        return <Trophy className="icon" />;
+        return <Trophy className="quiz-system-icon" />;
     }
   };
 
@@ -370,11 +394,15 @@ export function QuizSystem() {
               className={`quiz-feedback ${
                 selectedAnswer === question.correct
                   ? "text-success"
+                  : selectedAnswer === -1
+                  ? "text-warning"
                   : "text-danger"
               }`}
             >
               {selectedAnswer === question.correct
                 ? "✅ Correct!"
+                : selectedAnswer === -1
+                ? "⏰ Time's Up!"
                 : "❌ Incorrect"}
             </div>
             {selectedAnswer !== question.correct && (
@@ -392,11 +420,18 @@ export function QuizSystem() {
           </div>
 
           <div className="quiz-center">
-            <button onClick={nextQuestion} className="btn btn-primary">
-              {currentQuestion < quizQuestions.length - 1
-                ? "Next Question"
-                : "Finish Quiz"}
-            </button>
+            {autoAdvance ? (
+              <div className="text-muted">
+                <Clock className="icon-sm" />
+                <span>Skipping to next question...</span>
+              </div>
+            ) : (
+              <button onClick={nextQuestion} className="btn btn-primary">
+                {currentQuestion < quizQuestions.length - 1
+                  ? "Next Question"
+                  : "Finish Quiz"}
+              </button>
+            )}
           </div>
         </div>
       )}

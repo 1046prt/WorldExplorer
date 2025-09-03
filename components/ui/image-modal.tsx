@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { OptimizedImage } from "@/components/ui/optimized-image";
 import { ZoomIn } from "lucide-react";
+import "@/styles/image-modal.css";
 
 interface ImageModalProps {
   src: string;

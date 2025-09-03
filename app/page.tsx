@@ -5,9 +5,8 @@ import { QuizSystem } from "@/components/quiz-system";
 import { CurrencyConverter } from "@/components/currency-converter";
 import { RandomFactGenerator } from "@/components/random-fact-generator";
 import GlobalRankings from "@/components/global-rankings";
-import { InteractiveGames } from "@/components/interactive-games";
 import { EnvironmentDashboard } from "@/components/environment-dashboard";
-import { LanguageExplorer } from "@/components/language-explorer";
+import LanguageExplorer from "@/components/language-explorer";
 import CultureLifestyle from "@/components/culture-lifestyle";
 import { HistoricalMapSlider } from "@/components/historical-map-slider";
 import { NatureExplorer } from "@/components/nature-explorer";
@@ -68,10 +67,6 @@ export default function HomePage() {
 
             <section className="section">
               <QuizSystem />
-            </section>
-
-            <section className="section">
-              <InteractiveGames />
             </section>
           </div>
         </main>

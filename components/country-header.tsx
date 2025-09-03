@@ -137,10 +137,10 @@ export function CountryHeader({ country }: CountryHeaderProps) {
 
       <div className="ch-container">
         <div className="ch-topbar">
-          <Link href="/">
+          <Link href="/browse/countries/">
             <Button variant="ghost" size="sm" className="ch-back-btn">
               <ArrowLeft className="ch-icon-sm" />
-              Back to World Map
+              Back
             </Button>
           </Link>
           <div className="ch-badges">
@@ -152,37 +152,7 @@ export function CountryHeader({ country }: CountryHeaderProps) {
         <div className="ch-main">
           <div className="ch-info">
             <div className="ch-title-row">
-              {/* Flag image with emoji fallback */}
-              <div className="ch-flag-container">
-                {country.flag ? (
-                  <OptimizedImage
-                    src={country.flag}
-                    alt={`${country.name} flag`}
-                    width={40}
-                    height={30}
-                    className="ch-flag-image"
-                    fallbackSrc="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 30'%3E%3Crect width='40' height='30' fill='%23f3f4f6'/%3E%3Ctext x='20' y='20' text-anchor='middle' font-size='20'%3E{getCountryFlag(country.iso2)}%3C/text%3E%3C/svg%3E"
-                  />
-                ) : (
-                  <span className="ch-flag">
-                    {getCountryFlag(country.iso2)}
-                  </span>
-                )}
-              </div>
               <h1 className="ch-title">{country.name}</h1>
-              <div className="ch-currency">
-                {country.currency.image ? (
-                  <OptimizedImage
-                    src={country.currency.image}
-                    alt={`${country.currency.name} symbol`}
-                    width={24}
-                    height={24}
-                    className="ch-currency-icon"
-                  />
-                ) : (
-                  <span>{country.currency.symbol}</span>
-                )}
-              </div>
             </div>
             <p className="ch-capital">
               Capital:{" "}

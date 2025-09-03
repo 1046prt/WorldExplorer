@@ -1,29 +1,16 @@
-/* Optimized Image Component */
-
+/* Optimized Image Component Styles */
 .optimized-image-container {
   position: relative;
-  overflow: hidden;
   display: inline-block;
-  width: auto;
-  height: auto;
-}
-
-.optimized-image-placeholder {
-  position: absolute;
-  inset: 0;
+  overflow: hidden;
   background-color: var(--color-muted);
-  border-radius: var(--radius-sm);
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  z-index: 1;
+  border-radius: var(--radius-md);
 }
 
 .optimized-image {
-  transition: opacity var(--transition-normal);
-  display: block;
-  max-width: 100%;
+  transition: all var(--transition-normal);
+  width: 100%;
   height: auto;
-  position: relative;
-  z-index: 2;
 }
 
 .optimized-image-loading {
@@ -32,65 +19,70 @@
 
 .optimized-image-loaded {
   opacity: 1;
+  display: none;
 }
 
 .optimized-image-error {
-  opacity: 0.7;
-  filter: grayscale(50%);
+  opacity: 0.5;
+  filter: grayscale(100%);
 }
 
 .optimized-image-fill {
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+.optimized-image-placeholder {
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    var(--color-muted) 25%,
+    var(--color-accent) 50%,
+    var(--color-muted) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+  border-radius: inherit;
 }
 
-/* Specific image sizing for different contexts */
-.country-flag-image {
-  width: auto !important;
-  height: auto !important;
-  object-fit:contain;
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
 }
 
-.landmark-image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+/* Error state */
+.optimized-image-container::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 48px;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236b7280'%3e%3cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0;
+  pointer-events: none;
 }
 
-.city-image {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
+.optimized-image-error + .optimized-image-container::after {
+  opacity: 0.5;
 }
 
-/* Ensure proper aspect ratio maintenance */
-.optimized-image-container img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Fix for Next.js Image component */
-.optimized-image-container > span {
-  display: block !important;
-  width: 100% !important;
-  height: auto !important;
-}
-
-/* Responsive image handling */
+/* Responsive Design */
 @media (max-width: 768px) {
   .optimized-image-container {
-    width: 100%;
-  }
-  
-  .landmark-image {
-    height: 150px;
-  }
-  
-  .city-image {
-    height: 120px;
+    border-radius: var(--radius-sm);
   }
 }

@@ -9,9 +9,9 @@ interface CountryCitiesProps {
 export function CountryCities({ country }: CountryCitiesProps) {
   return (
     <div className="card city-card">
-      <div className="card-header flex gap-sm items-center mb-lg">
-        <Building2 className="icon text-info" />
-        <h2 className="title-lg">Famous Cities</h2>
+      <div className="country-cities-card-header flex gap-sm items-center mb-lg">
+        <Building2 className="country-cities-icon text-info" />
+        <h2 className="country-cities-title-lg">Famous Cities</h2>
         <span className="badge">{country.famousCities.length}</span>
       </div>
 

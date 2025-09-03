@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Languages, Volume2 } from "lucide-react";
+import { Languages, Volume2, X } from "lucide-react";
 import "@/styles/language-explorer.css";
 
 interface LanguagePhrase {
@@ -14,11 +14,54 @@ interface LanguagePhrase {
   flag: string;
 }
 
+interface WritingSystem {
+  name: string;
+  example: string;
+  countries: string;
+  type: string;
+  image: string;
+}
+
 const languageData = {
   phrases: {
     title: "Common Phrases",
     icon: Volume2,
     data: [
+      {
+        language: "Arabic",
+        country: "Saudi Arabia",
+        phrase: "مرحبا، كيف حالك؟",
+        translation: "Hello, how are you?",
+        flag: "🇸🇦",
+      },
+      {
+        language: "English",
+        country: "Australia",
+        phrase: "G'day, how are you?",
+        translation: "Hello, how are you?",
+        flag: "🇦🇺",
+      },
+      {
+        language: "Portuguese",
+        country: "Brazil",
+        phrase: "Olá, como você está?",
+        translation: "Hello, how are you?",
+        flag: "🇧🇷",
+      },
+      {
+        language: "English",
+        country: "Canada",
+        phrase: "Hello, how are you?",
+        translation: "Hello, how are you?",
+        flag: "🇨🇦",
+      },
+      {
+        language: "German",
+        country: "Germany",
+        phrase: "Hallo, wie geht es dir?",
+        translation: "Hello, how are you?",
+        flag: "🇩🇪",
+      },
       {
         language: "Spanish",
         country: "Spain",
@@ -34,11 +77,25 @@ const languageData = {
         flag: "🇫🇷",
       },
       {
-        language: "German",
-        country: "Germany",
-        phrase: "Hallo, wie geht es dir?",
+        language: "English",
+        country: "United Kingdom",
+        phrase: "Hello, how are you?",
         translation: "Hello, how are you?",
-        flag: "🇩🇪",
+        flag: "🇬🇧",
+      },
+      {
+        language: "Hindi",
+        country: "India",
+        phrase: "नमस्ते, आप कैसे हैं?",
+        translation: "Hello, how are you?",
+        flag: "🇮🇳",
+      },
+      {
+        language: "Italian",
+        country: "Italy",
+        phrase: "Ciao, come stai?",
+        translation: "Hello, how are you?",
+        flag: "🇮🇹",
       },
       {
         language: "Japanese",
@@ -48,11 +105,18 @@ const languageData = {
         flag: "🇯🇵",
       },
       {
-        language: "Arabic",
-        country: "Saudi Arabia",
-        phrase: "مرحبا، كيف حالك؟",
+        language: "Russian",
+        country: "Russia",
+        phrase: "Привет, как дела?",
         translation: "Hello, how are you?",
-        flag: "🇸🇦",
+        flag: "🇷🇺",
+      },
+      {
+        language: "English",
+        country: "United States",
+        phrase: "Hey, how are you?",
+        translation: "Hello, how are you?",
+        flag: "🇺🇸",
       },
     ],
   },
@@ -61,122 +125,181 @@ const languageData = {
     icon: Languages,
     data: [
       {
-        name: "Latin",
-        example: "Hello World",
-        countries: "Europe, Americas",
-        type: "Alphabet",
-      },
-      {
         name: "Arabic",
         example: "مرحبا بالعالم",
-        countries: "Middle East, North Africa",
+        countries: "Saudi Arabia, Middle East, North Africa",
         type: "Abjad",
+        image: "/images/writting/arabic.png",
       },
       {
-        name: "Chinese",
-        example: "你好世界",
-        countries: "China, Taiwan",
-        type: "Logographic",
+        name: "Latin",
+        example: "Hello World",
+        countries:
+          "Australia, Brazil, Canada, Germany, Spain, France, UK, Italy, US",
+        type: "Alphabet",
+        image: "/images/writting/latin.png",
       },
       {
         name: "Devanagari",
         example: "नमस्ते संसार",
         countries: "India, Nepal",
         type: "Abugida",
+        image: "/images/writting/devanagari.png",
+      },
+      {
+        name: "Kanji & Kana",
+        example: "こんにちは世界",
+        countries: "Japan",
+        type: "Syllabary + Logographic",
+        image: "/images/writting/japanese.png",
       },
       {
         name: "Cyrillic",
         example: "Привет мир",
         countries: "Russia, Eastern Europe",
         type: "Alphabet",
+        image: "/images/writting/russian.png",
+      },
+      {
+        name: "Chinese Characters",
+        example: "你好世界",
+        countries: "China, Taiwan, Singapore",
+        type: "Logographic",
+        image: "/images/writting/chinese.png",
       },
     ],
   },
 };
 
-export function LanguageExplorer() {
+export default function LanguageExplorer() {
   const [activeSection, setActiveSection] = useState("phrases");
-  const [playingAudio, setPlayingAudio] = useState<string | null>(null);
+  const [selectedScript, setSelectedScript] = useState<WritingSystem | null>(
+    null
+  );
 
   const currentData = languageData[activeSection as keyof typeof languageData];
   const IconComponent = currentData.icon;
 
-  const playPhrase = (phrase: string) => {
-    setPlayingAudio(phrase);
-    setTimeout(() => setPlayingAudio(null), 2000);
-  };
+  // Scroll lock effect
+  useEffect(() => {
+    if (selectedScript) {
+      document.body.classList.add("body-lock");
+    } else {
+      document.body.classList.remove("body-lock");
+    }
+    return () => document.body.classList.remove("body-lock");
+  }, [selectedScript]);
 
   const renderPhrases = () => (
-    <div className="le-phrases">
-      {(currentData.data as LanguagePhrase[]).map((item, index: number) => (
-        <Card key={index} className="le-card">
-          <CardContent className="le-card-content">
-            <div className="le-phrase-header">
-              <div className="le-phrase-left">
-                <span className="le-flag">{item.flag}</span>
-                <div>
-                  <div className="le-lang">{item.language}</div>
-                  <div className="le-country">{item.country}</div>
-                </div>
+    <div className="le-grid">
+      {(currentData.data as LanguagePhrase[]).map((item, index) => (
+        <div key={index} className="le-card">
+          <div className="le-phrase-header">
+            <div className="le-phrase-left">
+              <span className="le-flag">{item.flag}</span>
+              <div>
+                <div className="le-lang">{item.language}</div>
+                <div className="le-country">{item.country}</div>
               </div>
-
-              {/*
-              <Button
-                size="sm"
-                variant="outline"
-                onClick={() => playPhrase(item.phrase as string)}
-                disabled={playingAudio === item.phrase}
-                className="le-listen-btn"
-              >
-                <Volume2 className="le-icon-small" />
-                {playingAudio === item.phrase ? "Playing..." : "Listen"}
-              </Button>
-              */}
-
             </div>
-            <div className="le-phrase-body">
-              <div className="le-phrase">{item.phrase}</div>
-              <div className="le-translation">{item.translation}</div>
-            </div>
-          </CardContent>
-        </Card>
+          </div>
+          <div className="le-phrase-body">
+            <div className="le-phrase">{item.phrase}</div>
+            <div className="le-translation">{item.translation}</div>
+          </div>
+        </div>
       ))}
     </div>
   );
 
-  return (
-    <Card className="le-wrapper">
-      <CardHeader>
-        <CardTitle className="le-title">
-          <Languages className="le-icon" />
-          Language & Communication Explorer
-        </CardTitle>
-      </CardHeader>
-      <CardContent>
-        <div className="le-tabs">
-          {Object.entries(languageData).map(([key, section]) => (
-            <Button
-              key={key}
-              variant={activeSection === key ? "default" : "outline"}
-              size="sm"
-              onClick={() => setActiveSection(key)}
-              className="le-tab-btn"
-            >
-              <section.icon className="le-icon-small" />
-              {section.title}
-            </Button>
-          ))}
-        </div>
+  const renderScripts = () => (
+    <>
+      <div className="le-grid">
+        {(currentData.data as WritingSystem[]).map((item, index) => (
+          <div
+            key={index}
+            className="le-card"
+            onClick={() => setSelectedScript(item)}
+          >
+            <div className="le-script-header">
+              <div className="le-lang">{item.name}</div>
+              <div className="le-type">{item.type}</div>
+            </div>
+            <div className="le-preview-chip">Click to Preview</div>
+            <div className="le-script-body">
+              <div className="le-example">{item.example}</div>
 
-        <div className="le-section">
-          <div className="le-section-header">
-            <IconComponent className="le-icon-small" />
-            <h3 className="le-section-title">{currentData.title}</h3>
+              <div className="le-countries">{item.countries}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {selectedScript &&
+        createPortal(
+          <div
+            className="le-modal-overlay"
+            onClick={() => setSelectedScript(null)}
+          >
+            <div className="le-modal" onClick={(e) => e.stopPropagation()}>
+              <button
+                className="le-modal-close"
+                onClick={() => setSelectedScript(null)}
+              >
+                <X className="le-icon-small" />
+              </button>
+              <h2 className="le-modal-title">{selectedScript.name}</h2>
+              <div className="le-modal-type">{selectedScript.type}</div>
+              <div className="le-modal-example">{selectedScript.example}</div>
+              <img
+                src={selectedScript.image}
+                alt={selectedScript.name}
+                className="le-modal-image"
+              />
+              <p className="le-modal-countries">{selectedScript.countries}</p>
+            </div>
+          </div>,
+          document.body
+        )}
+    </>
+  );
+
+  return (
+    <div className="language-explorer">
+      <Card>
+        <CardHeader>
+          <CardTitle className="le-header">
+            <Languages className="le-icon" />
+            Language & Communication Explorer
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="le-tabs">
+            {Object.entries(languageData).map(([key, section]) => (
+              <button
+                key={key}
+                className={`le-tab-btn ${
+                  activeSection === key ? "active" : ""
+                }`}
+                onClick={() => setActiveSection(key)}
+              >
+                <section.icon className="le-icon-small" />
+                {section.title}
+              </button>
+            ))}
           </div>
 
-          {activeSection === "phrases" && renderPhrases()}
-        </div>
-      </CardContent>
-    </Card>
+          <div className="le-section">
+            <div className="le-section-header">
+              <IconComponent className="le-icon-small" />
+              <h3>{currentData.title}</h3>
+            </div>
+
+            {activeSection === "phrases" && renderPhrases()}
+            {activeSection === "scripts" && renderScripts()}
+          </div>
+        </CardContent>
+      </Card>
+    </div>
   );
 }

@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Search, Filter, X } from "lucide-react";
 import { useDebounce } from "@/hooks/useDebounce";
 import { SearchService } from "@/lib/search-service";
-import "@/styles//interactive-filters.css";
+import "@/styles/browse-filters.css";
 interface BrowseFiltersProps {
   searchTerm: string;
   onSearchChange: (value: string) => void;
@@ -108,10 +108,10 @@ export function BrowseFilters({
   };
 
   return (
-    <section className="section">
-      <div className="countries-filters">
-        <div className="filter-input-wrapper">
-          <Search className="filter-input-icon" />
+    <section className="browse-filters-section">
+      <div className="browse-filters-countries-filters">
+        <div className="browse-filters-input-wrapper">
+          <Search className="browse-filters-input-icon" />
           <input
             ref={inputRef}
             type="text"
@@ -120,13 +120,13 @@ export function BrowseFilters({
             onChange={(e) => handleInputChange(e.target.value)}
             onFocus={handleInputFocus}
             onBlur={handleInputBlur}
-            className="input filter-input"
+            className="input browse-filters-input"
             autoComplete="off"
           />
           {searchTerm && (
             <button
               onClick={clearSearch}
-              className="filter-clear-button"
+              className="browse-filters-clear-button"
               aria-label="Clear search"
             >
               <X className="w-4 h-4" />
@@ -134,11 +134,14 @@ export function BrowseFilters({
           )}
 
           {showSuggestionsList && suggestions.length > 0 && (
-            <div ref={suggestionsRef} className="search-suggestions">
+            <div
+              ref={suggestionsRef}
+              className="browse-filters-search-suggestions"
+            >
               {suggestions.map((suggestion, index) => (
                 <button
                   key={index}
-                  className="search-suggestion-item"
+                  className="browse-filters-suggestion-item"
                   onClick={() => handleSuggestionClick(suggestion)}
                 >
                   <Search className="w-4 h-4 text-gray-400" />
@@ -149,12 +152,12 @@ export function BrowseFilters({
           )}
         </div>
 
-        <div className="filter-select-wrapper">
-          <Filter className="filter-select-icon" />
+        <div className="browse-filters-select-wrapper">
+          <Filter className="browse-filters-select-icon" />
           <select
             value={filterValue}
             onChange={(e) => onFilterChange(e.target.value)}
-            className="input filter-select"
+            className="input browse-filters-select"
             aria-label={filterLabel}
           >
             {filterOptions.map((option) => (

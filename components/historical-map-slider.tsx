@@ -86,7 +86,7 @@ export function HistoricalMapSlider() {
   const currentData = historicalData[currentIndex];
 
   return (
-    <div className="card">
+    <div className="historical-map-slider-card">
       <div className="card-header">
         <div className="card-title">
           <Clock className="h-6 w-6" />
@@ -104,11 +104,11 @@ export function HistoricalMapSlider() {
               height={400}
             />
           </div>
-          <div className="badge">{currentData.year}</div>
+          <div className="hm-badge">{currentData.year}</div>
         </div>
 
         <div className="text-center">
-          <h3 className="title">{currentData.title}</h3>
+          <h3 className="historical-map-slider-title">{currentData.title}</h3>
           <p className="description">{currentData.description}</p>
         </div>
 

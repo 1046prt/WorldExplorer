@@ -5,6 +5,7 @@ import { Search, ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useDebounce } from "@/hooks/useDebounce";
 import { SearchService, type SearchResult } from "@/lib/search-service";
+import "@/styles/global-search.css";
 
 interface GlobalSearchProps {
   className?: string;
@@ -14,7 +15,7 @@ interface GlobalSearchProps {
 
 export function GlobalSearch({
   className = "",
-  placeholder = "Search countries, cities, landmarks...",
+  placeholder = "Search...",
   showFullResults = false,
 }: GlobalSearchProps) {
   const [query, setQuery] = useState("");

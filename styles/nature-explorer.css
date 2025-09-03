@@ -1,13 +1,81 @@
+.nature-tabs-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.nature-scroll-btn {
+  display: none;
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.nature-scroll-btn:hover {
+  background-color: var(--color-accent);
+  color: var(--color-accent-foreground);
+}
+
+.nature-scroll-left {
+  margin-right: 8px;
+}
+
+.nature-scroll-right {
+  margin-left: 8px;
+}
+
 .nature-tabs {
   display: flex;
-  flex-wrap: wrap;
-  gap: 9.3vw;
+  flex-wrap: nowrap;
+  gap: 8px;
   background-color: var(--color-muted);
-  padding: 2px;
+  padding: 6px 4px;
   border-radius: var(--radius-md);
-  margin-bottom: var(--spacing-lg);
   align-items: center;
   justify-content: flex-start;
+  flex: 1;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nature-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.ne-tabs-trigger {
+  flex-shrink: 0;
+  min-width: 90px;
+  font-size: var(--font-size-sm);
+  padding: 4px 12px;
+  white-space: nowrap;
+  border-radius: 8px;
+  background-color: var(--color-muted);
+  border: 1px solid var(--color-primary);
+  color: var(--color-muted-foreground);
+  transition: all var(--transition-normal);
+  cursor: pointer;
+}
+
+.ne-tabs-trigger.active {
+  background-color: var(--color-primary) !important;
+  color: var(--color-primary-foreground) !important;
+  border-color: var(--color-primary) !important;
+}
+
+.ne-tabs-trigger:hover:not(.active) {
+  background-color: var(--color-accent);
+  color: var(--color-accent-foreground);
 }
 
 .nature-grid {
@@ -87,8 +155,33 @@
   font-weight: 500;
 }
 
+/* Desktop - Hide scroll buttons and distribute evenly */
+@media (min-width: 769px) {
+  .nature-scroll-btn {
+    display: none;
+  }
+
+  .nature-tabs {
+    justify-content: space-between;
+    gap: 0;
+    flex-wrap: wrap;
+    overflow-x: visible;
+  }
+
+  .ne-tabs-trigger {
+    flex: 1;
+    min-width: auto;
+    margin: 0 4px;
+    text-align: center;
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
+  .nature-scroll-btn {
+    display: flex;
+  }
+
   .nature-tabs {
     gap: 6px;
     padding: 6px;
@@ -118,9 +211,9 @@
     gap: var(--spacing-xs);
   }
 
-  .tabs-trigger {
+  .ne-tabs-trigger {
     flex-shrink: 0;
-    min-width: 100px;
+    min-width: 90px;
     font-size: var(--font-size-sm);
     padding: 8px 12px;
     white-space: nowrap;
@@ -129,21 +222,35 @@
     border: 1px solid var(--color-border);
     color: var(--color-muted-foreground);
     transition: all var(--transition-normal);
+    cursor: pointer;
   }
 
-  .tabs-trigger.active {
-    background-color: var(--color-primary);
-    color: var(--color-primary-foreground);
-    border-color: var(--color-primary);
+  .ne-tabs-trigger.active {
+    background-color: var(--color-primary) !important;
+    color: var(--color-primary-foreground) !important;
+    border-color: var(--color-primary) !important;
   }
 
-  .tabs-trigger:hover {
+  .ne-tabs-trigger:hover:not(.active) {
     background-color: var(--color-accent);
     color: var(--color-accent-foreground);
   }
 }
 
 @media (max-width: 480px) {
+  .nature-scroll-btn {
+    width: 28px;
+    height: 28px;
+  }
+
+  .nature-scroll-left {
+    margin-right: 4px;
+  }
+
+  .nature-scroll-right {
+    margin-left: 4px;
+  }
+
   .nature-tabs {
     gap: 4px;
     padding: 4px;
@@ -152,10 +259,10 @@
     -webkit-overflow-scrolling: touch;
   }
 
-  .tabs-trigger {
-    min-width: 85px;
+  .ne-tabs-trigger {
+    min-width: 80px;
     font-size: 12px;
-    padding: 6px 10px;
+    padding: 6px 8px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -164,16 +271,17 @@
     border: 1px solid var(--color-border);
     color: var(--color-muted-foreground);
     transition: all var(--transition-normal);
+    cursor: pointer;
   }
 
-  .tabs-trigger.active {
-    background-color: var(--color-primary);
-    color: var(--color-primary-foreground);
-    border-color: var(--color-primary);
+  .ne-tabs-trigger.active {
+    background-color: var(--color-primary) !important;
+    color: var(--color-primary-foreground) !important;
+    border-color: var(--color-primary) !important;
     font-weight: 500;
   }
 
-  .tabs-trigger:hover {
+  .ne-tabs-trigger:hover:not(.active) {
     background-color: var(--color-accent);
     color: var(--color-accent-foreground);
   }
@@ -194,10 +302,35 @@
 }
 
 @media (max-width: 360px) {
-  .tabs-trigger {
-    min-width: 75px;
+  .nature-scroll-btn {
+    width: 24px;
+    height: 24px;
+  }
+
+  .nature-scroll-left {
+    margin-right: 3px;
+  }
+
+  .nature-scroll-right {
+    margin-left: 3px;
+  }
+
+  .ne-tabs-trigger {
+    min-width: 70px;
     font-size: 11px;
-    padding: 5px 8px;
+    padding: 4px 6px;
+    cursor: pointer;
+  }
+
+  .ne-tabs-trigger.active {
+    background-color: var(--color-primary) !important;
+    color: var(--color-primary-foreground) !important;
+    border-color: var(--color-primary) !important;
+  }
+
+  .ne-tabs-trigger:hover:not(.active) {
+    background-color: var(--color-accent);
+    color: var(--color-accent-foreground);
   }
 
   .nature-card {

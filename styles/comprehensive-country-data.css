@@ -1,0 +1,56 @@
+/* Comprehensive Country Data Component Styles */
+.comprehensive-country-data-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+}
+
+.comprehensive-country-data-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.comprehensive-country-data-section {
+  background-color: var(--color-card);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.comprehensive-country-data-title {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--color-foreground);
+  margin-bottom: var(--spacing-md);
+}
+
+.comprehensive-country-data-subtitle {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-foreground);
+  margin-bottom: var(--spacing-sm);
+}
+
+.comprehensive-country-data-text {
+  font-size: var(--font-size-base);
+  color: var(--color-muted-foreground);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .comprehensive-country-data-container {
+    padding: var(--spacing-md);
+  }
+
+  .comprehensive-country-data-title {
+    font-size: var(--font-size-xl);
+  }
+
+  .comprehensive-country-data-subtitle {
+    font-size: var(--font-size-base);
+  }
+}

@@ -26,6 +26,9 @@
   color: #6366f1;
   margin-bottom: 0.5rem;
 }
+.mr-3{
+  margin-left: -1rem;
+}
 
 .footer-text {
   font-size: 0.9rem;
@@ -121,7 +124,7 @@
 @media (max-width: 768px) {
   .footer-container {
     grid-template-columns: 1fr;
-    text-align: center;
+    text-align: justify;
   }
 
   .footer-socials {

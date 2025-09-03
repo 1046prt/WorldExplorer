@@ -7,6 +7,7 @@ import { GlobalSearch } from "@/components/global-search";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { ArrowLeft } from "lucide-react";
 import Image from "next/image";
+import "@/styles/global-navigation.css";
 
 interface GlobalNavigationProps {
   showBackButton?: boolean;
