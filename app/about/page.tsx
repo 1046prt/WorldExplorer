@@ -248,7 +248,7 @@ const AboutPage = () => {
                   <Github size={18} />
                 </a>
                 <a
-                  href="mailto:shivenshrivastava012@gmail.com"
+                  href="mailto:shivensrivastava018@gmail.com"
                   className="about-contributor-link"
                   title="Send Email"
                 >

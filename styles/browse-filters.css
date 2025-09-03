@@ -27,7 +27,7 @@
   left: 0.75rem;
   top: 50%;
   transform: translateY(-50%);
-  color: var(--color-muted-foreground);
+  color: var(--color-primary);
   z-index: 1;
   pointer-events: none;
   width: 20px;
@@ -121,7 +121,7 @@
   left: 0.75rem;
   top: 50%;
   transform: translateY(-50%);
-  color: var(--color-muted-foreground);
+  color: var(--color-primary);
   z-index: 1;
   pointer-events: none;
   width: 20px;
@@ -138,6 +138,11 @@
   background-repeat: no-repeat;
   background-size: 1.5em 1.5em;
   cursor: pointer;
+}
+
+.browse-filters-select:focus {
+  background-color: var(--color-accent);
+  color: var(--color-accent-foreground);
 }
 
 /* Responsive Design */
