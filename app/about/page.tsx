@@ -216,8 +216,6 @@ const AboutPage = () => {
               <div className="about-contributor-links">
                 <a
                   href="https://github.com/1046prt"
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="about-contributor-link"
                   title="GitHub Profile"
                 >
@@ -240,8 +238,7 @@ const AboutPage = () => {
               <div className="about-contributor-links">
                 <a
                   href="https://github.com/shiven0204"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                
                   className="about-contributor-link"
                   title="GitHub Profile"
                 >

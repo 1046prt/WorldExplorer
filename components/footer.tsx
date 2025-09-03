@@ -48,19 +48,19 @@ const Footer: FC = () => {
           <div className="footer-socials">
             <a
               href="https://github.com/1046prt"
-              target="_blank"
+              
               aria-label="Github"
             >
               <Github size={20} />
             </a>
             <a
               href="https://twitter.com/1046prt"
-              target="_blank"
+              
               aria-label="Twitter"
             >
               <Twitter size={20} />
             </a>
-            <a href="/" target="_blank" aria-label="Website">
+            <a href="/" aria-label="Website">
               <Globe size={20} />
             </a>
             <a href="mailto:1046prt@gmail.com" aria-label="Email">
