@@ -1,7 +1,13 @@
 "use client";
 
-import { useState } from "react";
-import { Mountain, Waves, TreePine } from "lucide-react";
+import { useState, useRef } from "react";
+import {
+  Mountain,
+  Waves,
+  TreePine,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
 import "@/styles/nature-explorer.css";
 
 interface NatureWonder {
@@ -283,6 +289,7 @@ const natureData = {
 export function NatureExplorer() {
   const [selectedCategory, setSelectedCategory] = useState("wonders");
   const [search, setSearch] = useState("");
+  const tabsRef = useRef<HTMLDivElement>(null);
 
   const filterData = <T extends Record<string, unknown>>(
     items: T[],
@@ -293,6 +300,22 @@ export function NatureExplorer() {
         String(item[key]).toLowerCase().includes(search.toLowerCase())
       )
     );
+  };
+
+  const scrollTabs = (direction: "left" | "right") => {
+    if (tabsRef.current) {
+      const scrollAmount = 200;
+      const currentScroll = tabsRef.current.scrollLeft;
+      const targetScroll =
+        direction === "left"
+          ? currentScroll - scrollAmount
+          : currentScroll + scrollAmount;
+
+      tabsRef.current.scrollTo({
+        left: targetScroll,
+        behavior: "smooth",
+      });
+    }
   };
 
   return (
@@ -313,25 +336,41 @@ export function NatureExplorer() {
 
       <div className="card-content">
         <div className="tabs">
-          <div className="tabs-list nature-tabs">
-            {[
-              "wonders",
-              "volcanoes",
-              "migrations",
-              "rivers",
-              "climates",
-              "ecosystems",
-            ].map((cat) => (
-              <button
-                key={cat}
-                className={`tabs-trigger ${
-                  selectedCategory === cat ? "active" : ""
-                }`}
-                onClick={() => setSelectedCategory(cat)}
-              >
-                {cat.charAt(0).toUpperCase() + cat.slice(1)}
-              </button>
-            ))}
+          <div className="nature-tabs-container">
+            <button
+              className="nature-scroll-btn nature-scroll-left"
+              onClick={() => scrollTabs("left")}
+              aria-label="Scroll left"
+            >
+              <ChevronLeft size={16} />
+            </button>
+            <div className="tabs-list nature-tabs" ref={tabsRef}>
+              {[
+                "wonders",
+                "volcanoes",
+                "migrations",
+                "rivers",
+                "climates",
+                "ecosystems",
+              ].map((cat) => (
+                <button
+                  key={cat}
+                  className={`ne-tabs-trigger ${
+                    selectedCategory === cat ? "active" : ""
+                  }`}
+                  onClick={() => setSelectedCategory(cat)}
+                >
+                  {cat.charAt(0).toUpperCase() + cat.slice(1)}
+                </button>
+              ))}
+            </div>
+            <button
+              className="nature-scroll-btn nature-scroll-right"
+              onClick={() => scrollTabs("right")}
+              aria-label="Scroll right"
+            >
+              <ChevronRight size={16} />
+            </button>
           </div>
 
           {/* Wonders */}
