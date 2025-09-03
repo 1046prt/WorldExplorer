@@ -15,7 +15,7 @@ interface GlobalSearchProps {
 
 export function GlobalSearch({
   className = "",
-  placeholder = "Search countries, cities, landmarks...",
+  placeholder = "Search...",
   showFullResults = false,
 }: GlobalSearchProps) {
   const [query, setQuery] = useState("");

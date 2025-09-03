@@ -97,7 +97,7 @@ function SearchContent() {
             <BrowseFilters
               searchTerm={query}
               onSearchChange={setQuery}
-              searchPlaceholder="Search countries, cities, landmarks..."
+              searchPlaceholder="Search..."
               filterValue={selectedType}
               onFilterChange={setSelectedType}
               filterOptions={[

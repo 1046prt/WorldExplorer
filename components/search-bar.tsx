@@ -214,7 +214,7 @@ export function SearchBar() {
           <Search className="search-input-icon" />
           <input
             type="text"
-            placeholder="Search countries, cities, landmarks..."
+            placeholder="Search..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onFocus={() => results.length > 0 && setIsOpen(true)}
