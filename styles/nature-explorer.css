@@ -1,3 +1,125 @@
+.nature-explorer-container {
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.nature-explorer-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.nature-explorer-title {
+  display: flex;
+  align-items: center;
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--color-foreground);
+  margin: 0;
+}
+
+.nature-title-icon {
+  color: var(--color-primary);
+}
+
+.nature-search-input {
+  padding: var(--spacing-sm);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-size: var(--font-size-sm);
+  transition: border-color var(--transition-normal);
+}
+
+.nature-search-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px var(--color-primary-foreground);
+}
+
+.nature-explorer-content {
+  margin-top: var(--spacing-md);
+}
+
+.nature-explorer-loading,
+.nature-explorer-error {
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  text-align: center;
+  color: var(--color-muted-foreground);
+  font-size: var(--font-size-base);
+}
+
+.nature-explorer-error {
+  color: var(--color-destructive);
+  border-color: var(--color-destructive);
+}
+
+/* Wonder Card Specific Styles */
+.wonder-card {
+  background: linear-gradient(
+    135deg,
+    var(--color-card) 0%,
+    var(--color-muted) 100%
+  );
+  border-color: var(--color-primary);
+}
+
+.wonder-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary);
+}
+
+.wonder-card .nature-card-title {
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+}
+
+.wonder-icon {
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.wonder-type {
+  background-color: var(--color-primary);
+  color: var(--color-primary-foreground);
+  border-color: var(--color-primary);
+}
+
+.nature-map-btn {
+  background-color: var(--color-primary);
+  color: var(--color-primary-foreground);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  margin-top: var(--spacing-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.nature-map-btn:hover {
+  background-color: var(--color-primary-foreground);
+  color: var(--color-primary);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
 .nature-tabs-container {
   position: relative;
   display: flex;
@@ -80,7 +202,7 @@
 
 .nature-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
   gap: var(--spacing-md);
   margin-top: var(--spacing-md);
 }
@@ -155,7 +277,6 @@
   font-weight: 500;
 }
 
-/* Desktop - Hide scroll buttons and distribute evenly */
 @media (min-width: 769px) {
   .nature-scroll-btn {
     display: none;
@@ -176,7 +297,6 @@
   }
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .nature-scroll-btn {
     display: flex;
@@ -219,7 +339,7 @@
     white-space: nowrap;
     border-radius: var(--radius-md);
     background-color: var(--color-muted);
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--color-primary);
     color: var(--color-muted-foreground);
     transition: all var(--transition-normal);
     cursor: pointer;
@@ -268,7 +388,7 @@
     text-overflow: ellipsis;
     border-radius: var(--radius-sm);
     background-color: var(--color-muted);
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--color-primary);
     color: var(--color-muted-foreground);
     transition: all var(--transition-normal);
     cursor: pointer;
