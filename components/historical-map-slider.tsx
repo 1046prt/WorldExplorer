@@ -104,7 +104,7 @@ export function HistoricalMapSlider() {
               height={400}
             />
           </div>
-          <div className="badge">{currentData.year}</div>
+          <div className="hm-badge">{currentData.year}</div>
         </div>
 
         <div className="text-center">
