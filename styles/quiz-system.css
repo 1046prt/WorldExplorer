@@ -168,7 +168,7 @@
 
 .badge-neutral {
   background: var(--color-secondary-hover);
-  color: var(--color-secondary-foreground);
+  color: var(--color-accent);
 }
 
 .badge-danger {
@@ -192,7 +192,7 @@
   width: 16px;
   height: 16px;
 }
-/* Responsive design for smaller screens */
+
 @media (max-width: 640px) {
   .quiz-header {
     flex-direction: column;
@@ -211,7 +211,6 @@
   }
 }
 
-/* Ensure proper spacing and alignment */
 .quiz-heading {
   font-size: var(--font-size-lg);
   font-weight: 600;
