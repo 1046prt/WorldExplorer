@@ -143,3 +143,19 @@
   font-weight: bold;
   color: var(--color-primary);
 }
+
+/* Loading and Error States */
+.loading-state,
+.error-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xl);
+  text-align: center;
+  color: var(--color-muted-foreground);
+  font-size: var(--font-size-base);
+}
+
+.error-state {
+  color: var(--color-destructive);
+}
