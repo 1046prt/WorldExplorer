@@ -300,7 +300,7 @@
   font-size: var(--font-size-base);
   color: var(--color-muted-foreground);
   line-height: var(--line-height-relaxed);
-  margin: 0px;
+  margin: 10px;
 }
 
 .environment-loading,
@@ -363,7 +363,7 @@
   }
 
   .category-nav {
-    padding: var(--spacing);
+    padding: var(--spacing-sm);
   }
 
   .category-btn {
@@ -410,7 +410,7 @@
   }
 
   .category-nav {
-    gap: var(--spacing);
+    gap: var(--spacing-sm);
   }
 
   .data-item-header {
