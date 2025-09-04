@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import {
   Mountain,
   Waves,
@@ -8,8 +8,6 @@ import {
   Sun,
   Landmark,
   Droplet,
-  ChevronLeft,
-  ChevronRight,
 } from "lucide-react";
 import "@/styles/nature-explorer.css";
 
@@ -75,7 +73,15 @@ export function NatureExplorer() {
   const [natureData, setNatureData] = useState<NatureData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const tabsRef = useRef<HTMLDivElement>(null);
+
+  const categories = [
+    { key: "wonders", label: "Natural Wonders", icon: Mountain },
+    { key: "volcanoes", label: "Volcanoes", icon: TreePine },
+    { key: "migrations", label: "Migrations", icon: Waves },
+    { key: "rivers", label: "Rivers", icon: Droplet },
+    { key: "climates", label: "Climate Zones", icon: Sun },
+    { key: "ecosystems", label: "Ecosystems", icon: Landmark },
+  ];
 
   // Fetch data from JSON file
   useEffect(() => {
@@ -107,20 +113,8 @@ export function NatureExplorer() {
     );
   };
 
-  const scrollTabs = (direction: "left" | "right") => {
-    if (tabsRef.current) {
-      const scrollAmount = 200;
-      const currentScroll = tabsRef.current.scrollLeft;
-      const targetScroll =
-        direction === "left"
-          ? currentScroll - scrollAmount
-          : currentScroll + scrollAmount;
-
-      tabsRef.current.scrollTo({
-        left: targetScroll,
-        behavior: "smooth",
-      });
-    }
+  const handleCategorySelect = (categoryKey: string) => {
+    setSelectedCategory(categoryKey as keyof NatureData);
   };
 
   if (loading) {
@@ -157,44 +151,29 @@ export function NatureExplorer() {
       </div>
 
       <div className="nature-explorer-content">
-        <div className="tabs">
-          <div className="nature-tabs-container">
-            <button
-              className="nature-scroll-btn nature-scroll-left"
-              onClick={() => scrollTabs("left")}
-              aria-label="Scroll left"
-            >
-              <ChevronLeft size={16} />
-            </button>
-            <div className="tabs-list nature-tabs" ref={tabsRef}>
-              {[
-                "wonders",
-                "volcanoes",
-                "migrations",
-                "rivers",
-                "climates",
-                "ecosystems",
-              ].map((cat) => (
-                <button
-                  key={cat}
-                  className={`ne-tabs-trigger ${
-                    selectedCategory === cat ? "active" : ""
-                  }`}
-                  onClick={() => setSelectedCategory(cat as keyof NatureData)}
-                >
-                  {cat.charAt(0).toUpperCase() + cat.slice(1)}
-                </button>
-              ))}
-            </div>
-            <button
-              className="nature-scroll-btn nature-scroll-right"
-              onClick={() => scrollTabs("right")}
-              aria-label="Scroll right"
-            >
-              <ChevronRight size={16} />
-            </button>
-          </div>
+        {/* Simple Category Selector */}
+        <div className="nature-category-section">
+          <div className="nature-categories-grid">
+            {categories.map((category) => {
+              const IconComponent = category.icon;
+              const isActive = selectedCategory === category.key;
 
+              return (
+                <button
+                  key={category.key}
+                  className={`nature-category-btn ${isActive ? "active" : ""}`}
+                  onClick={() => handleCategorySelect(category.key)}
+                >
+                  <IconComponent size={16} />
+                  <span>{category.label}</span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Content Section */}
+        <div className="nature-content-area">
           {/* Wonders */}
           {selectedCategory === "wonders" && (
             <div className="nature-grid">

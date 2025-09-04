@@ -120,84 +120,41 @@
   box-shadow: var(--shadow-sm);
 }
 
-.nature-tabs-container {
-  position: relative;
-  display: flex;
-  align-items: center;
+/* Simple Category Selector */
+.nature-category-section {
   margin-bottom: var(--spacing-lg);
 }
 
-.nature-scroll-btn {
-  display: none;
-  background-color: var(--color-background);
-  border: 1px solid var(--color-border);
-  border-radius: 50%;
-  width: 32px;
-  height: 32px;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all var(--transition-normal);
-  z-index: 2;
-  flex-shrink: 0;
+.nature-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
 }
 
-.nature-scroll-btn:hover {
-  background-color: var(--color-accent);
-  color: var(--color-accent-foreground);
-}
-
-.nature-scroll-left {
-  margin-right: 8px;
-}
-
-.nature-scroll-right {
-  margin-left: 8px;
-}
-
-.nature-tabs {
+.nature-category-btn {
   display: flex;
-  flex-wrap: nowrap;
-  gap: 8px;
-  background-color: var(--color-muted);
-  padding: 6px 4px;
-  border-radius: var(--radius-md);
   align-items: center;
-  justify-content: flex-start;
-  flex: 1;
-  overflow-x: auto;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  -webkit-overflow-scrolling: touch;
-}
-
-.nature-tabs::-webkit-scrollbar {
-  display: none;
-}
-
-.ne-tabs-trigger {
-  flex-shrink: 0;
-  min-width: 90px;
-  font-size: var(--font-size-sm);
-  padding: 4px 12px;
-  white-space: nowrap;
-  border-radius: 8px;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-md);
   background-color: var(--color-muted);
-  border: 1px solid var(--color-primary);
-  color: var(--color-muted-foreground);
-  transition: all var(--transition-normal);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-foreground);
+  font-size: var(--font-size-sm);
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-.ne-tabs-trigger.active {
-  background-color: var(--color-primary) !important;
-  color: var(--color-primary-foreground) !important;
-  border-color: var(--color-primary) !important;
-}
-
-.ne-tabs-trigger:hover:not(.active) {
+.nature-category-btn:hover {
   background-color: var(--color-accent);
-  color: var(--color-accent-foreground);
+  border-color: var(--color-primary);
+}
+
+.nature-category-btn.active {
+  background-color: var(--color-primary);
+  color: var(--color-primary-foreground);
+  border-color: var(--color-primary);
 }
 
 .nature-grid {
@@ -277,43 +234,16 @@
   font-weight: 500;
 }
 
-@media (min-width: 769px) {
-  .nature-scroll-btn {
-    display: none;
-  }
-
-  .nature-tabs {
-    justify-content: space-between;
-    gap: 0;
-    flex-wrap: wrap;
-    overflow-x: visible;
-  }
-
-  .ne-tabs-trigger {
-    flex: 1;
-    min-width: auto;
-    margin: 0 4px;
-    text-align: center;
-  }
-}
-
+/* Simple Responsive Styles */
 @media (max-width: 768px) {
-  .nature-scroll-btn {
-    display: flex;
+  .nature-categories-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: var(--spacing-xs);
   }
 
-  .nature-tabs {
-    gap: 6px;
-    padding: 6px;
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .nature-tabs::-webkit-scrollbar {
-    display: none;
+  .nature-category-btn {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: var(--font-size-xs);
   }
 
   .nature-grid {
@@ -330,80 +260,17 @@
     align-items: flex-start;
     gap: var(--spacing-xs);
   }
-
-  .ne-tabs-trigger {
-    flex-shrink: 0;
-    min-width: 90px;
-    font-size: var(--font-size-sm);
-    padding: 8px 12px;
-    white-space: nowrap;
-    border-radius: var(--radius-md);
-    background-color: var(--color-muted);
-    border: 1px solid var(--color-primary);
-    color: var(--color-muted-foreground);
-    transition: all var(--transition-normal);
-    cursor: pointer;
-  }
-
-  .ne-tabs-trigger.active {
-    background-color: var(--color-primary) !important;
-    color: var(--color-primary-foreground) !important;
-    border-color: var(--color-primary) !important;
-  }
-
-  .ne-tabs-trigger:hover:not(.active) {
-    background-color: var(--color-accent);
-    color: var(--color-accent-foreground);
-  }
 }
 
 @media (max-width: 480px) {
-  .nature-scroll-btn {
-    width: 28px;
-    height: 28px;
+  .nature-categories-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .nature-scroll-left {
-    margin-right: 4px;
-  }
-
-  .nature-scroll-right {
-    margin-left: 4px;
-  }
-
-  .nature-tabs {
+  .nature-category-btn {
+    flex-direction: column;
     gap: 4px;
-    padding: 4px;
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .ne-tabs-trigger {
-    min-width: 80px;
-    font-size: 12px;
-    padding: 6px 8px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    border-radius: var(--radius-sm);
-    background-color: var(--color-muted);
-    border: 1px solid var(--color-primary);
-    color: var(--color-muted-foreground);
-    transition: all var(--transition-normal);
-    cursor: pointer;
-  }
-
-  .ne-tabs-trigger.active {
-    background-color: var(--color-primary) !important;
-    color: var(--color-primary-foreground) !important;
-    border-color: var(--color-primary) !important;
-    font-weight: 500;
-  }
-
-  .ne-tabs-trigger:hover:not(.active) {
-    background-color: var(--color-accent);
-    color: var(--color-accent-foreground);
+    text-align: center;
   }
 
   .nature-card {
@@ -418,46 +285,5 @@
   .nature-badge {
     font-size: 10px;
     padding: 2px 6px;
-  }
-}
-
-@media (max-width: 360px) {
-  .nature-scroll-btn {
-    width: 24px;
-    height: 24px;
-  }
-
-  .nature-scroll-left {
-    margin-right: 3px;
-  }
-
-  .nature-scroll-right {
-    margin-left: 3px;
-  }
-
-  .ne-tabs-trigger {
-    min-width: 70px;
-    font-size: 11px;
-    padding: 4px 6px;
-    cursor: pointer;
-  }
-
-  .ne-tabs-trigger.active {
-    background-color: var(--color-primary) !important;
-    color: var(--color-primary-foreground) !important;
-    border-color: var(--color-primary) !important;
-  }
-
-  .ne-tabs-trigger:hover:not(.active) {
-    background-color: var(--color-accent);
-    color: var(--color-accent-foreground);
-  }
-
-  .nature-card {
-    padding: 12px;
-  }
-
-  .nature-card-title {
-    font-size: 14px;
   }
 }
