@@ -1,9 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import "@/styles/environment-dashboard.css";
 import {
   Leaf,
@@ -15,239 +14,289 @@ import {
   Trash2,
   ThermometerSun,
   Globe2,
+  TrendingUp,
+  TrendingDown,
+  Award,
+  RefreshCw,
+  BarChart3,
 } from "lucide-react";
 
-const environmentData = {
-  carbonEmissions: {
-    title: "Carbon Emissions (CO2)",
-    icon: Wind,
-    unit: "Mt CO2",
-    data: [
-      { country: "China", value: 10065, status: "high" },
-      { country: "United States", value: 5416, status: "high" },
-      { country: "India", value: 2654, status: "medium" },
-      { country: "Russia", value: 1711, status: "medium" },
-      { country: "Japan", value: 1162, status: "medium" },
-      { country: "Germany", value: 702, status: "medium" },
-      { country: "Iran", value: 672, status: "medium" },
-      { country: "South Korea", value: 659, status: "medium" },
-      { country: "Saudi Arabia", value: 621, status: "medium" },
-      { country: "Indonesia", value: 590, status: "medium" },
-    ],
-  },
-  renewableEnergy: {
-    title: "Renewable Energy Usage",
-    icon: Zap,
-    unit: "% of total",
-    data: [
-      { country: "Iceland", value: 86.9, status: "excellent" },
-      { country: "Norway", value: 71.6, status: "excellent" },
-      { country: "Brazil", value: 45.3, status: "good" },
-      { country: "Canada", value: 37.3, status: "good" },
-      { country: "Germany", value: 19.3, status: "medium" },
-      { country: "Sweden", value: 54.5, status: "good" },
-      { country: "Denmark", value: 50.0, status: "good" },
-      { country: "Spain", value: 36.1, status: "good" },
-      { country: "United Kingdom", value: 33.0, status: "good" },
-      { country: "China", value: 27.4, status: "medium" },
-    ],
-  },
-  airQuality: {
-    title: "Air Quality Index (AQI)",
-    icon: AlertTriangle,
-    unit: "AQI",
-    data: [
-      { country: "Bangladesh", value: 164, status: "unhealthy" },
-      { country: "Pakistan", value: 156, status: "unhealthy" },
-      { country: "India", value: 144, status: "unhealthy" },
-      { country: "Mongolia", value: 128, status: "moderate" },
-      { country: "Afghanistan", value: 122, status: "moderate" },
-      { country: "Nepal", value: 110, status: "moderate" },
-      { country: "Nigeria", value: 105, status: "moderate" },
-      { country: "China", value: 95, status: "moderate" },
-      { country: "Egypt", value: 90, status: "moderate" },
-      { country: "Thailand", value: 82, status: "moderate" },
-    ],
-  },
-  forestCover: {
-    title: "Forest Coverage",
-    icon: TreePine,
-    unit: "% of land",
-    data: [
-      { country: "Suriname", value: 98.3, status: "excellent" },
-      { country: "Micronesia", value: 91.9, status: "excellent" },
-      { country: "Gabon", value: 90.0, status: "excellent" },
-      { country: "Seychelles", value: 88.5, status: "excellent" },
-      { country: "Palau", value: 87.6, status: "excellent" },
-      { country: "Finland", value: 73.7, status: "excellent" },
-      { country: "Sweden", value: 69.0, status: "excellent" },
-      { country: "Japan", value: 68.5, status: "good" },
-      { country: "Malaysia", value: 62.3, status: "good" },
-      { country: "Bolivia", value: 53.0, status: "good" },
-    ],
-  },
-  waterStress: {
-    title: "Water Stress Levels",
-    icon: Droplets,
-    unit: "% of resources used",
-    data: [
-      { country: "Qatar", value: 398, status: "critical" },
-      { country: "Israel", value: 287, status: "critical" },
-      { country: "Iran", value: 132, status: "high" },
-      { country: "India", value: 73, status: "high" },
-      { country: "United States", value: 41, status: "medium" },
-      { country: "Brazil", value: 25, status: "low" },
-    ],
-  },
-  wasteGeneration: {
-    title: "Waste Generation",
-    icon: Trash2,
-    unit: "kg per capita/day",
-    data: [
-      { country: "United States", value: 2.6, status: "high" },
-      { country: "Canada", value: 2.2, status: "high" },
-      { country: "Germany", value: 1.9, status: "medium" },
-      { country: "India", value: 0.6, status: "low" },
-      { country: "Nigeria", value: 0.5, status: "low" },
-      { country: "Brazil", value: 1.1, status: "medium" },
-    ],
-  },
-  temperatureChange: {
-    title: "Temperature Change",
-    icon: ThermometerSun,
-    unit: "°C since 1900",
-    data: [
-      { country: "Arctic Region", value: 2.3, status: "critical" },
-      { country: "Russia", value: 1.6, status: "high" },
-      { country: "Canada", value: 1.5, status: "high" },
-      { country: "India", value: 1.1, status: "medium" },
-      { country: "United States", value: 1.2, status: "medium" },
-      { country: "Australia", value: 1.4, status: "high" },
-    ],
-  },
-  biodiversity: {
-    title: "Biodiversity Index",
-    icon: Globe2,
-    unit: "Score (0–100)",
-    data: [
-      { country: "Brazil", value: 94, status: "excellent" },
-      { country: "Indonesia", value: 91, status: "excellent" },
-      { country: "Congo", value: 89, status: "excellent" },
-      { country: "India", value: 80, status: "good" },
-      { country: "Australia", value: 77, status: "good" },
-      { country: "United States", value: 70, status: "medium" },
-    ],
-  },
+interface EnvironmentDataItem {
+  country: string;
+  value: number;
+  status: string;
+  flag: string;
+}
+
+interface EnvironmentCategory {
+  title: string;
+  icon: string;
+  unit: string;
+  description: string;
+  data: EnvironmentDataItem[];
+}
+
+interface EnvironmentData {
+  categories: Record<string, EnvironmentCategory>;
+  insights: Record<string, string>;
+}
+
+const getIconComponent = (iconName: string) => {
+  const icons = {
+    Wind,
+    Zap,
+    AlertTriangle,
+    TreePine,
+    Droplets,
+    Trash2,
+    ThermometerSun,
+    Globe2,
+  };
+  return icons[iconName as keyof typeof icons] || Leaf;
 };
 
-const getStatusColor = (status: string) => {
-  switch (status) {
-    case "excellent":
-      return "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200";
-    case "good":
-      return "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200";
-    case "medium":
-      return "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200";
-    case "high":
-      return "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200";
-    case "unhealthy":
-    case "critical":
-      return "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200";
-    case "low":
-      return "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200";
-    default:
-      return "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200";
-  }
+const getStatusInfo = (status: string) => {
+  const statusMap = {
+    excellent: {
+      color: "text-foreground",
+      bgColor: "bg-accent",
+      icon: Award,
+      label: "Excellent",
+    },
+    good: {
+      color: "text-foreground",
+      bgColor: "bg-muted",
+      icon: TrendingUp,
+      label: "Good",
+    },
+    medium: {
+      color: "text-muted-foreground",
+      bgColor: "bg-muted",
+      icon: BarChart3,
+      label: "Medium",
+    },
+    moderate: {
+      color: "text-muted-foreground",
+      bgColor: "bg-accent",
+      icon: BarChart3,
+      label: "Moderate",
+    },
+    high: {
+      color: "text-muted-foreground",
+      bgColor: "bg-accent",
+      icon: TrendingUp,
+      label: "High",
+    },
+    unhealthy: {
+      color: "text-muted-foreground",
+      bgColor: "bg-muted",
+      icon: AlertTriangle,
+      label: "Unhealthy",
+    },
+    critical: {
+      color: "text-foreground",
+      bgColor: "bg-accent",
+      icon: AlertTriangle,
+      label: "Critical",
+    },
+    low: {
+      color: "text-muted-foreground",
+      bgColor: "bg-muted",
+      icon: TrendingDown,
+      label: "Low",
+    },
+  };
+  return statusMap[status as keyof typeof statusMap] || statusMap.medium;
 };
 
 export function EnvironmentDashboard() {
+  const [environmentData, setEnvironmentData] =
+    useState<EnvironmentData | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [activeCategory, setActiveCategory] = useState("carbonEmissions");
-  const currentData =
-    environmentData[activeCategory as keyof typeof environmentData];
-  const IconComponent = currentData.icon;
+
+  // Load environment data from JSON file
+  useEffect(() => {
+    const loadEnvironmentData = async () => {
+      try {
+        setLoading(true);
+        const response = await fetch("/data/environment.json");
+        if (!response.ok) {
+          throw new Error("Failed to load environment data");
+        }
+        const data: EnvironmentData = await response.json();
+        setEnvironmentData(data);
+        setError(null);
+      } catch (err) {
+        setError(
+          err instanceof Error ? err.message : "Failed to load environment data"
+        );
+        console.error("Error loading environment data:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadEnvironmentData();
+  }, []);
+
+  // Loading state
+  if (loading) {
+    return (
+      <Card className="environment-card">
+        <CardContent className="environment-loading">
+          <div className="loading-spinner">
+            <Leaf className="animate-spin" size={32} />
+          </div>
+          <h3 className="loading-title">Loading Environment Data...</h3>
+          <p className="loading-subtitle">
+            Gathering global sustainability metrics
+          </p>
+        </CardContent>
+      </Card>
+    );
+  }
+
+  // Error state
+  if (error) {
+    return (
+      <Card className="environment-card">
+        <CardContent className="environment-error">
+          <div className="error-icon">
+            <AlertTriangle className="text-muted-foreground" size={32} />
+          </div>
+          <h3 className="error-title">Environment Data Unavailable</h3>
+          <p className="error-subtitle">
+            Failed to load environmental metrics: {error}
+          </p>
+          <Button
+            onClick={() => window.location.reload()}
+            className="error-retry-btn"
+          >
+            <RefreshCw size={16} /> Try Again
+          </Button>
+        </CardContent>
+      </Card>
+    );
+  }
+
+  if (!environmentData) return null;
+
+  const currentCategory = environmentData.categories[activeCategory];
+  const IconComponent = getIconComponent(currentCategory.icon);
+  const insight = environmentData.insights[activeCategory];
 
   return (
-    <Card className="w-full">
-      <CardHeader>
-        <CardTitle className="flex items-center gap-2">
-          <Leaf className="w-5 h-5 text-green-500" />
-          Environment & Sustainability Dashboard
-        </CardTitle>
-      </CardHeader>
-      <CardContent>
-        <div className="flex flex-wrap gap-2 mb-6">
-          {Object.entries(environmentData).map(([key, category]) => (
-            <Button
-              key={key}
-              variant={activeCategory === key ? "default" : "outline"}
-              size="sm"
-              onClick={() => setActiveCategory(key)}
-              className="flex items-center gap-2"
-            >
-              <category.icon className="w-4 h-4" />
-              {category.title}
-            </Button>
-          ))}
-        </div>
+    <div className="environment-dashboard">
+      <Card className="environment-card">
+        <CardHeader className="environment-header">
+          <CardTitle className="environment-title">
+            <div className="title-icon">
+              <Leaf className="text-primary" size={28} />
+            </div>
+            <div className="title-content">
+              <h2>Environment & Sustainability Dashboard</h2>
+              <p className="title-subtitle">
+                Global environmental metrics and sustainability indicators
+              </p>
+            </div>
+          </CardTitle>
+        </CardHeader>
 
-        <div className="space-y-4">
-          <div className="flex items-center gap-2">
-            <IconComponent className="w-5 h-5" />
-            <h3 className="text-lg font-semibold">{currentData.title}</h3>
+        <CardContent className="environment-content">
+          {/* Category Navigation */}
+          <div className="category-nav">
+            {Object.entries(environmentData.categories).map(
+              ([key, category]) => {
+                const CategoryIcon = getIconComponent(category.icon);
+                return (
+                  <Button
+                    key={key}
+                    variant={activeCategory === key ? "default" : "outline"}
+                    size="sm"
+                    onClick={() => setActiveCategory(key)}
+                    className={`category-btn ${
+                      activeCategory === key
+                        ? "category-btn-active"
+                        : "category-btn-inactive"
+                    }`}
+                  >
+                    <CategoryIcon size={16} />
+                    <span className="category-btn-text">{category.title}</span>
+                  </Button>
+                );
+              }
+            )}
           </div>
 
-          <div className="space-y-3">
-            {currentData.data.map((item, index) => (
-              <div
-                key={index}
-                className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-800 rounded-lg"
-              >
-                <div className="flex items-center gap-3">
-                  <div>
-                    <div className="font-medium">{item.country}</div>
-                    <Badge
-                      className={getStatusColor(item.status)}
-                      variant="secondary"
-                    >
-                      {item.status}
-                    </Badge>
-                  </div>
-                </div>
-                <div className="text-right">
-                  <div className="text-lg font-bold">{item.value}</div>
-                  <div className="text-sm text-gray-500">
-                    {currentData.unit}
-                  </div>
-                </div>
+          {/* Current Category Header */}
+          <div className="category-header">
+            <div className="category-info">
+              <div className="category-icon-large">
+                <IconComponent size={24} />
               </div>
-            ))}
+              <div className="category-details">
+                <h3 className="category-title">{currentCategory.title}</h3>
+                <p className="category-description">
+                  {currentCategory.description}
+                </p>
+              </div>
+            </div>
           </div>
 
-          <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-            <h4 className="font-semibold text-blue-800 dark:text-blue-200 mb-2">
-              Environmental Insights
-            </h4>
-            <p className="text-sm text-blue-700 dark:text-blue-300">
-              {activeCategory === "carbonEmissions" &&
-                "China and the US account for nearly 50% of global CO2 emissions. Transitioning to renewable energy is crucial for climate goals."}
-              {activeCategory === "renewableEnergy" &&
-                "Nordic countries lead in renewable energy adoption, with Iceland using almost 87% renewable sources, primarily geothermal and hydroelectric."}
-              {activeCategory === "airQuality" &&
-                "South Asian countries face severe air pollution challenges. Bangladesh has the world's worst air quality with an AQI of 164."}
-              {activeCategory === "forestCover" &&
-                "Small island nations and tropical countries maintain the highest forest coverage, with Suriname preserving over 98% of its land as forest."}
-              {activeCategory === "waterStress" &&
-                "Middle Eastern countries like Qatar and Israel face extreme water scarcity, with usage far exceeding natural replenishment."}
-              {activeCategory === "wasteGeneration" &&
-                "High-income countries produce the most waste per capita, with the US generating over 2.5 kg per person daily."}
-              {activeCategory === "temperatureChange" &&
-                "The Arctic is warming more than twice as fast as the global average, with temperature increases over 2°C since 1900."}
-              {activeCategory === "biodiversity" &&
-                "Tropical regions like Brazil and Indonesia hold the richest biodiversity, but deforestation threatens these ecosystems."}
-            </p>
+          {/* Data Grid */}
+          <div className="data-grid">
+            {currentCategory.data.map((item, index) => {
+              const statusInfo = getStatusInfo(item.status);
+              const StatusIcon = statusInfo.icon;
+
+              return (
+                <div key={index} className={`data-item ${statusInfo.bgColor}`}>
+                  <div className="data-item-header">
+                    <div className="country-info">
+                      <span className="country-flag">{item.flag}</span>
+                      <span className="country-name">{item.country}</span>
+                    </div>
+                    <div className={`status-badge ${statusInfo.color}`}>
+                      <StatusIcon size={14} />
+                      <span>{statusInfo.label}</span>
+                    </div>
+                  </div>
+
+                  <div className="data-item-content">
+                    <div className="value-display">
+                      <span className="value-number">{item.value}</span>
+                      <span className="value-unit">{currentCategory.unit}</span>
+                    </div>
+
+                    {/* Progress bar for percentage values */}
+                    {(currentCategory.unit.includes("%") ||
+                      currentCategory.unit.includes("Score")) && (
+                      <div className="progress-container">
+                        <div className="progress-bar" />
+                      </div>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
           </div>
-        </div>
-      </CardContent>
-    </Card>
+
+          {/* Insights Section */}
+          <div className="insights-section">
+            <div className="insights-header">
+              <div className="insights-icon">
+                <BarChart3 className="text-primary" size={20} />
+              </div>
+              <h4 className="insights-title">Environmental Insights</h4>
+            </div>
+            <div className="insights-content">
+              <p className="insights-text">{insight}</p>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+    </div>
   );
 }
