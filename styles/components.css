@@ -557,6 +557,11 @@
   transition: all var(--transition-fast);
 }
 
+.nav-link:visited,
+.nav-link:active {
+  color: var(--color-muted-foreground);
+}
+
 .nav-link:hover {
   color: var(--color-foreground);
   background-color: var(--color-accent);
@@ -580,6 +585,11 @@
   color: var(--color-muted-foreground);
   text-decoration: none;
   transition: color var(--transition-fast);
+}
+
+.breadcrumb-link:visited,
+.breadcrumb-link:active {
+  color: var(--color-muted-foreground);
 }
 
 .breadcrumb-link:hover {

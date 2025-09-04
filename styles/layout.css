@@ -119,6 +119,11 @@
   transition: all var(--transition-fast);
 }
 
+.header-back-button:visited,
+.header-back-button:active {
+  color: var(--color-foreground);
+}
+
 .header-back-button:hover {
   background-color: var(--color-accent);
   color: var(--color-accent-foreground);
@@ -136,6 +141,11 @@
   text-decoration: none;
   color: inherit;
   transition: opacity var(--transition-fast);
+}
+
+.header-brand-link:visited,
+.header-brand-link:active {
+  color: inherit;
 }
 
 .header-brand-link:hover {

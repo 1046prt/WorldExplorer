@@ -100,6 +100,11 @@
   height: 100%;
 }
 
+.country-card:visited,
+.country-card:active {
+  color: var(--color-card-foreground);
+}
+
 .country-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);

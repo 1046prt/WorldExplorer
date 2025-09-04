@@ -46,6 +46,12 @@
   transition: all var(--transition-fast);
   text-decoration: none;
   display: block;
+  color: inherit;
+}
+
+.navigation-category-button:visited,
+.navigation-category-button:active {
+  color: inherit;
 }
 
 .navigation-category-button:hover {
@@ -92,6 +98,11 @@
   text-decoration: none;
   transition: all var(--transition-fast);
   border: 1px solid var(--color-primary);
+}
+
+.popular-search-tag:visited,
+.popular-search-tag:active {
+  color: var(--color-muted-foreground);
 }
 
 .popular-search-tag:hover {

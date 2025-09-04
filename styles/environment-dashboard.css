@@ -7,7 +7,6 @@
   backdrop-filter: var(--blur-md);
   border: 1px solid var(--color-card-border);
   border-radius: var(--radius-2xl);
-  box-shadow: var(--shadow-xl);
   overflow: hidden;
   transition: all var(--transition-normal);
 }
@@ -343,9 +342,6 @@
 }
 
 @media (max-width: 768px) {
-  .environment-dashboard {
-    padding: 0 var(--spacing-md);
-  }
 
   .environment-header,
   .environment-content {

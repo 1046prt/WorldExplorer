@@ -101,6 +101,11 @@
   margin-top: var(--spacing-sm);
 }
 
+.city-link:visited,
+.city-link:active {
+  color: var(--color-primary);
+}
+
 .city-link:hover {
   color: var(--color-primary-hover);
 }

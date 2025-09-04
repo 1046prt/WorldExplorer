@@ -140,6 +140,11 @@
   margin-top: auto;
 }
 
+.university-link:visited,
+.university-link:active {
+  color: var(--color-primary);
+}
+
 .university-link:hover {
   color: var(--color-primary-hover);
 }
