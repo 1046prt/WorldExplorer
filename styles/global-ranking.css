@@ -159,7 +159,6 @@
   overflow: hidden;
 }
 
-
 .ranking-item:hover {
   transform: translateX(4px);
   box-shadow: var(--shadow-md);
@@ -169,8 +168,6 @@
 .ranking-item:hover::before {
   opacity: 1;
 }
-
-
 
 .ranking-left {
   display: flex;
@@ -215,8 +212,6 @@
   background-clip: text;
   position: relative;
 }
-
-
 
 .loading-state,
 .error-state {
