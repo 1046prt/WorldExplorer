@@ -135,7 +135,7 @@
 .popular-search-tag {
   padding: var(--spacing-xs) var(--spacing-sm);
   background: var(--color-card);
-  color: var(--color-primary);
+  color: var(--color-accent-foreground);
   border-radius: var(--radius-full);
   font-size: var(--font-size-xs);
   font-weight: 500;
@@ -148,7 +148,7 @@
 
 .popular-search-tag:visited,
 .popular-search-tag:active {
-  color: var(--color-primary);
+  color: var(--color-accent-foreground);
 }
 
 .popular-search-tag:hover {
@@ -179,7 +179,7 @@
 
 @media (max-width: 768px) {
   .quick-navigation {
-    padding: var(--spacing-md);
+    padding: 10px;
   }
 
   .quick-navigation-title {
@@ -217,7 +217,7 @@
 
 @media (max-width: 480px) {
   .quick-navigation {
-    padding: var(--spacing-xs);
+    padding: 10px;
   }
 
   .quick-navigation-title {
