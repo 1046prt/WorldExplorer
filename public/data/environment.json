@@ -1,0 +1,340 @@
+{
+  "categories": {
+    "carbonEmissions": {
+      "title": "Carbon Emissions (CO2)",
+      "icon": "Wind",
+      "unit": "Mt CO2",
+      "description": "Annual carbon dioxide emissions by country",
+      "color": "#ef4444",
+      "data": [
+        { "country": "China", "value": 10065, "status": "high", "flag": "🇨🇳" },
+        {
+          "country": "United States",
+          "value": 5416,
+          "status": "high",
+          "flag": "🇺🇸"
+        },
+        { "country": "India", "value": 2654, "status": "medium", "flag": "🇮🇳" },
+        {
+          "country": "Russia",
+          "value": 1711,
+          "status": "medium",
+          "flag": "🇷🇺"
+        },
+        { "country": "Japan", "value": 1162, "status": "medium", "flag": "🇯🇵" },
+        {
+          "country": "Germany",
+          "value": 702,
+          "status": "medium",
+          "flag": "🇩🇪"
+        },
+        { "country": "Iran", "value": 672, "status": "medium", "flag": "🇮🇷" },
+        {
+          "country": "South Korea",
+          "value": 659,
+          "status": "medium",
+          "flag": "🇰🇷"
+        },
+        {
+          "country": "Saudi Arabia",
+          "value": 621,
+          "status": "medium",
+          "flag": "🇸🇦"
+        },
+        {
+          "country": "Indonesia",
+          "value": 590,
+          "status": "medium",
+          "flag": "🇮🇩"
+        }
+      ]
+    },
+    "renewableEnergy": {
+      "title": "Renewable Energy Usage",
+      "icon": "Zap",
+      "unit": "% of total",
+      "description": "Percentage of renewable energy in total energy consumption",
+      "color": "#10b981",
+      "data": [
+        {
+          "country": "Iceland",
+          "value": 86.9,
+          "status": "excellent",
+          "flag": "🇮🇸"
+        },
+        {
+          "country": "Norway",
+          "value": 71.6,
+          "status": "excellent",
+          "flag": "🇳🇴"
+        },
+        { "country": "Sweden", "value": 54.5, "status": "good", "flag": "🇸🇪" },
+        { "country": "Denmark", "value": 50.0, "status": "good", "flag": "🇩🇰" },
+        { "country": "Brazil", "value": 45.3, "status": "good", "flag": "🇧🇷" },
+        { "country": "Canada", "value": 37.3, "status": "good", "flag": "🇨🇦" },
+        { "country": "Spain", "value": 36.1, "status": "good", "flag": "🇪🇸" },
+        {
+          "country": "United Kingdom",
+          "value": 33.0,
+          "status": "good",
+          "flag": "🇬🇧"
+        },
+        { "country": "China", "value": 27.4, "status": "medium", "flag": "🇨🇳" },
+        {
+          "country": "Germany",
+          "value": 19.3,
+          "status": "medium",
+          "flag": "🇩🇪"
+        }
+      ]
+    },
+    "airQuality": {
+      "title": "Air Quality Index (AQI)",
+      "icon": "AlertTriangle",
+      "unit": "AQI",
+      "description": "Air quality index - lower values indicate better air quality",
+      "color": "#f59e0b",
+      "data": [
+        {
+          "country": "Bangladesh",
+          "value": 164,
+          "status": "unhealthy",
+          "flag": "🇧🇩"
+        },
+        {
+          "country": "Pakistan",
+          "value": 156,
+          "status": "unhealthy",
+          "flag": "🇵🇰"
+        },
+        {
+          "country": "India",
+          "value": 144,
+          "status": "unhealthy",
+          "flag": "🇮🇳"
+        },
+        {
+          "country": "Mongolia",
+          "value": 128,
+          "status": "moderate",
+          "flag": "🇲🇳"
+        },
+        {
+          "country": "Afghanistan",
+          "value": 122,
+          "status": "moderate",
+          "flag": "🇦🇫"
+        },
+        {
+          "country": "Nepal",
+          "value": 110,
+          "status": "moderate",
+          "flag": "🇳🇵"
+        },
+        {
+          "country": "Nigeria",
+          "value": 105,
+          "status": "moderate",
+          "flag": "🇳🇬"
+        },
+        { "country": "China", "value": 95, "status": "moderate", "flag": "🇨🇳" },
+        { "country": "Egypt", "value": 90, "status": "moderate", "flag": "🇪🇬" },
+        {
+          "country": "Thailand",
+          "value": 82,
+          "status": "moderate",
+          "flag": "🇹🇭"
+        }
+      ]
+    },
+    "forestCover": {
+      "title": "Forest Coverage",
+      "icon": "TreePine",
+      "unit": "% of land",
+      "description": "Percentage of land area covered by forests",
+      "color": "#059669",
+      "data": [
+        {
+          "country": "Suriname",
+          "value": 98.3,
+          "status": "excellent",
+          "flag": "🇸🇷"
+        },
+        {
+          "country": "Micronesia",
+          "value": 91.9,
+          "status": "excellent",
+          "flag": "🇫🇲"
+        },
+        {
+          "country": "Gabon",
+          "value": 90.0,
+          "status": "excellent",
+          "flag": "🇬🇦"
+        },
+        {
+          "country": "Seychelles",
+          "value": 88.5,
+          "status": "excellent",
+          "flag": "🇸🇨"
+        },
+        {
+          "country": "Palau",
+          "value": 87.6,
+          "status": "excellent",
+          "flag": "🇵🇼"
+        },
+        {
+          "country": "Finland",
+          "value": 73.7,
+          "status": "excellent",
+          "flag": "🇫🇮"
+        },
+        {
+          "country": "Sweden",
+          "value": 69.0,
+          "status": "excellent",
+          "flag": "🇸🇪"
+        },
+        { "country": "Japan", "value": 68.5, "status": "good", "flag": "🇯🇵" },
+        {
+          "country": "Malaysia",
+          "value": 62.3,
+          "status": "good",
+          "flag": "🇲🇾"
+        },
+        { "country": "Bolivia", "value": 53.0, "status": "good", "flag": "🇧🇴" }
+      ]
+    },
+    "waterStress": {
+      "title": "Water Stress Levels",
+      "icon": "Droplets",
+      "unit": "% of resources used",
+      "description": "Water usage as percentage of available renewable water resources",
+      "color": "#3b82f6",
+      "data": [
+        {
+          "country": "Qatar",
+          "value": 398,
+          "status": "critical",
+          "flag": "🇶🇦"
+        },
+        {
+          "country": "Israel",
+          "value": 287,
+          "status": "critical",
+          "flag": "🇮🇱"
+        },
+        { "country": "Iran", "value": 132, "status": "high", "flag": "🇮🇷" },
+        { "country": "India", "value": 73, "status": "high", "flag": "🇮🇳" },
+        {
+          "country": "United States",
+          "value": 41,
+          "status": "medium",
+          "flag": "🇺🇸"
+        },
+        { "country": "Brazil", "value": 25, "status": "low", "flag": "🇧🇷" }
+      ]
+    },
+    "wasteGeneration": {
+      "title": "Waste Generation",
+      "icon": "Trash2",
+      "unit": "kg per capita/day",
+      "description": "Daily waste generation per person",
+      "color": "#8b5cf6",
+      "data": [
+        {
+          "country": "United States",
+          "value": 2.6,
+          "status": "high",
+          "flag": "🇺🇸"
+        },
+        { "country": "Canada", "value": 2.2, "status": "high", "flag": "🇨🇦" },
+        {
+          "country": "Germany",
+          "value": 1.9,
+          "status": "medium",
+          "flag": "🇩🇪"
+        },
+        { "country": "Brazil", "value": 1.1, "status": "medium", "flag": "🇧🇷" },
+        { "country": "India", "value": 0.6, "status": "low", "flag": "🇮🇳" },
+        { "country": "Nigeria", "value": 0.5, "status": "low", "flag": "🇳🇬" }
+      ]
+    },
+    "temperatureChange": {
+      "title": "Temperature Change",
+      "icon": "ThermometerSun",
+      "unit": "°C since 1900",
+      "description": "Average temperature increase since 1900",
+      "color": "#dc2626",
+      "data": [
+        {
+          "country": "Arctic Region",
+          "value": 2.3,
+          "status": "critical",
+          "flag": "🏔️"
+        },
+        { "country": "Russia", "value": 1.6, "status": "high", "flag": "🇷🇺" },
+        { "country": "Canada", "value": 1.5, "status": "high", "flag": "🇨🇦" },
+        {
+          "country": "Australia",
+          "value": 1.4,
+          "status": "high",
+          "flag": "🇦🇺"
+        },
+        {
+          "country": "United States",
+          "value": 1.2,
+          "status": "medium",
+          "flag": "🇺🇸"
+        },
+        { "country": "India", "value": 1.1, "status": "medium", "flag": "🇮🇳" }
+      ]
+    },
+    "biodiversity": {
+      "title": "Biodiversity Index",
+      "icon": "Globe2",
+      "unit": "Score (0–100)",
+      "description": "Biodiversity richness and conservation status",
+      "color": "#16a34a",
+      "data": [
+        {
+          "country": "Brazil",
+          "value": 94,
+          "status": "excellent",
+          "flag": "🇧🇷"
+        },
+        {
+          "country": "Indonesia",
+          "value": 91,
+          "status": "excellent",
+          "flag": "🇮🇩"
+        },
+        {
+          "country": "Congo",
+          "value": 89,
+          "status": "excellent",
+          "flag": "🇨🇩"
+        },
+        { "country": "India", "value": 80, "status": "good", "flag": "🇮🇳" },
+        { "country": "Australia", "value": 77, "status": "good", "flag": "🇦🇺" },
+        {
+          "country": "United States",
+          "value": 70,
+          "status": "medium",
+          "flag": "🇺🇸"
+        }
+      ]
+    }
+  },
+  "insights": {
+    "carbonEmissions": "China and the US account for nearly 50% of global CO2 emissions. Transitioning to renewable energy is crucial for climate goals.",
+    "renewableEnergy": "Nordic countries lead in renewable energy adoption, with Iceland using almost 87% renewable sources, primarily geothermal and hydroelectric.",
+    "airQuality": "South Asian countries face severe air pollution challenges. Bangladesh has the world's worst air quality with an AQI of 164.",
+    "forestCover": "Small island nations and tropical countries maintain the highest forest coverage, with Suriname preserving over 98% of its land as forest.",
+    "waterStress": "Middle Eastern countries like Qatar and Israel face extreme water scarcity, with usage far exceeding natural replenishment.",
+    "wasteGeneration": "High-income countries produce the most waste per capita, with the US generating over 2.5 kg per person daily.",
+    "temperatureChange": "The Arctic is warming more than twice as fast as the global average, with temperature increases over 2°C since 1900.",
+    "biodiversity": "Tropical regions like Brazil and Indonesia hold the richest biodiversity, but deforestation threatens these ecosystems."
+  }
+}

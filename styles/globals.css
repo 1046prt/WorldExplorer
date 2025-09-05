@@ -198,6 +198,33 @@ button:hover {
   text-decoration: none;
 }
 
+/* Fix link color changes after visit/click */
+a:visited {
+  color: inherit;
+}
+
+a:active {
+  color: inherit;
+}
+
+/* Ensure component links maintain their intended colors */
+.navigation-category-button:visited,
+.navigation-category-button:active,
+.country-card:visited,
+.country-card:active,
+.popular-search-tag:visited,
+.popular-search-tag:active,
+.university-link:visited,
+.university-link:active,
+.river-country-link:visited,
+.river-country-link:active,
+.breadcrumb-link:visited,
+.breadcrumb-link:active,
+.nav-link:visited,
+.nav-link:active {
+  color: inherit;
+}
+
 html {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     sans-serif;

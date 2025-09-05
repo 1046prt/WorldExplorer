@@ -1,16 +1,17 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useEffect } from "react";
 import {
   Mountain,
   Waves,
   TreePine,
-  ChevronLeft,
-  ChevronRight,
+  Sun,
+  Landmark,
+  Droplet,
 } from "lucide-react";
 import "@/styles/nature-explorer.css";
 
-interface NatureWonder {
+interface NatureWonder extends Record<string, unknown> {
   name: string;
   type: string;
   country: string;
@@ -20,7 +21,7 @@ interface NatureWonder {
   coordinates: string;
 }
 
-interface Volcano {
+interface Volcano extends Record<string, unknown> {
   name: string;
   country: string;
   type: string;
@@ -28,268 +29,78 @@ interface Volcano {
   lastEruption: string;
 }
 
-interface Migration {
+interface Migration extends Record<string, unknown> {
   species: string;
   route: string;
   distance: string;
   season: string;
 }
 
-interface River {
+interface River extends Record<string, unknown> {
   name: string;
   length: string;
   countries: string;
   outflow: string;
 }
 
-interface Climate {
+interface Climate extends Record<string, unknown> {
   zone: string;
   temperature: string;
   rainfall: string;
   regions: string;
 }
 
-interface Ecosystem {
+interface Ecosystem extends Record<string, unknown> {
   name: string;
   biodiversity: string;
   threats: string;
   locations: string;
 }
-const natureData = {
-  wonders: [
-    {
-      name: "Mount Everest",
-      type: "Mountain",
-      country: "Nepal/China",
-      height: "8,849m",
-      coordinates: "27.9881°N, 86.9250°E",
-    },
-    {
-      name: "Great Barrier Reef",
-      type: "Reef",
-      country: "Australia",
-      area: "344,400 km²",
-      coordinates: "18.2871°S, 147.6992°E",
-    },
-    {
-      name: "Amazon Rainforest",
-      type: "Forest",
-      country: "Brazil/Peru/Colombia",
-      area: "5.5M km²",
-      coordinates: "3.4653°S, 62.2159°W",
-    },
-    {
-      name: "Sahara Desert",
-      type: "Desert",
-      country: "North Africa",
-      area: "9.2M km²",
-      coordinates: "23.4162°N, 25.6628°E",
-    },
-    {
-      name: "Grand Canyon",
-      type: "Canyon",
-      country: "United States",
-      depth: "1,857m",
-      coordinates: "36.1069°N, 112.1129°W",
-    },
-    {
-      name: "Victoria Falls",
-      type: "Waterfall",
-      country: "Zambia/Zimbabwe",
-      height: "108m",
-      coordinates: "17.9243°S, 25.8572°E",
-    },
-  ],
-  volcanoes: [
-    {
-      name: "Mount Vesuvius",
-      country: "Italy",
-      lastEruption: "1944",
-      type: "Stratovolcano",
-      status: "Active",
-    },
-    {
-      name: "Krakatoa",
-      country: "Indonesia",
-      lastEruption: "2018",
-      type: "Caldera",
-      status: "Active",
-    },
-    {
-      name: "Yellowstone",
-      country: "USA",
-      lastEruption: "70,000 years ago",
-      type: "Supervolcano",
-      status: "Active",
-    },
-    {
-      name: "Mount Fuji",
-      country: "Japan",
-      lastEruption: "1707",
-      type: "Stratovolcano",
-      status: "Dormant",
-    },
-    {
-      name: "Mount Etna",
-      country: "Italy",
-      lastEruption: "2023",
-      type: "Stratovolcano",
-      status: "Active",
-    },
-    {
-      name: "Kilauea",
-      country: "USA (Hawaii)",
-      lastEruption: "2023",
-      type: "Shield Volcano",
-      status: "Active",
-    },
-  ],
-  migrations: [
-    {
-      species: "Arctic Tern",
-      route: "Arctic to Antarctic",
-      distance: "71,000 km",
-      season: "Annual",
-    },
-    {
-      species: "Monarch Butterfly",
-      route: "Canada to Mexico",
-      distance: "4,800 km",
-      season: "Fall/Spring",
-    },
-    {
-      species: "Wildebeest",
-      route: "Serengeti Circuit",
-      distance: "1,800 km",
-      season: "Year-round",
-    },
-    {
-      species: "Humpback Whale",
-      route: "Alaska to Hawaii",
-      distance: "8,000 km",
-      season: "Winter",
-    },
-    {
-      species: "Gray Whale",
-      route: "Alaska to Mexico",
-      distance: "20,000 km",
-      season: "Winter/Summer",
-    },
-    {
-      species: "Caribou",
-      route: "Arctic Tundra",
-      distance: "5,000 km",
-      season: "Spring/Fall",
-    },
-  ],
-  rivers: [
-    {
-      name: "Nile",
-      length: "6,650 km",
-      countries: "Egypt, Sudan, Uganda, Ethiopia",
-      outflow: "Mediterranean Sea",
-    },
-    {
-      name: "Amazon River",
-      length: "6,400 km",
-      countries: "Brazil, Peru, Colombia",
-      outflow: "Atlantic Ocean",
-    },
-    {
-      name: "Yangtze",
-      length: "6,300 km",
-      countries: "China",
-      outflow: "East China Sea",
-    },
-    {
-      name: "Mississippi",
-      length: "3,734 km",
-      countries: "United States",
-      outflow: "Gulf of Mexico",
-    },
-    {
-      name: "Ganges",
-      length: "2,525 km",
-      countries: "India, Bangladesh",
-      outflow: "Bay of Bengal",
-    },
-    {
-      name: "Danube",
-      length: "2,850 km",
-      countries: "Germany, Austria, Hungary, Romania",
-      outflow: "Black Sea",
-    },
-  ],
-  climates: [
-    {
-      zone: "Tropical",
-      temperature: "20-30°C",
-      rainfall: "Heavy (>2000mm/year)",
-      regions: "Amazon, Congo Basin, Southeast Asia",
-    },
-    {
-      zone: "Desert",
-      temperature: ">40°C day, <10°C night",
-      rainfall: "Minimal (<250mm/year)",
-      regions: "Sahara, Arabian Desert, Gobi",
-    },
-    {
-      zone: "Polar",
-      temperature: "-40 to 0°C",
-      rainfall: "Snow/Ice (<250mm/year)",
-      regions: "Antarctica, Arctic Circle",
-    },
-    {
-      zone: "Temperate",
-      temperature: "0-20°C",
-      rainfall: "Moderate (500-1500mm/year)",
-      regions: "Europe, North America, East Asia",
-    },
-    {
-      zone: "Mediterranean",
-      temperature: "10-25°C",
-      rainfall: "Seasonal (300-900mm/year)",
-      regions: "Mediterranean Basin, California, Chile",
-    },
-    {
-      zone: "Monsoon",
-      temperature: "20-35°C",
-      rainfall: "Seasonal Heavy (1000-3000mm/year)",
-      regions: "South Asia, Southeast Asia",
-    },
-  ],
-  ecosystems: [
-    {
-      name: "Coral Reefs",
-      biodiversity: "25% of marine species",
-      threats: "Bleaching, pollution, overfishing",
-      locations: "Great Barrier Reef, Caribbean, Red Sea",
-    },
-    {
-      name: "Rainforests",
-      biodiversity: "50% of terrestrial species",
-      threats: "Deforestation, climate change",
-      locations: "Amazon, Congo, Southeast Asia",
-    },
-    {
-      name: "Wetlands",
-      biodiversity: "40% of species depend on them",
-      threats: "Drainage, pollution, development",
-      locations: "Everglades, Pantanal, Okavango Delta",
-    },
-    {
-      name: "Grasslands",
-      biodiversity: "Large herbivore ecosystems",
-      threats: "Agriculture, overgrazing",
-      locations: "Serengeti, Great Plains, Pampas",
-    },
-  ],
-};
+
+interface NatureData {
+  wonders: NatureWonder[];
+  volcanoes: Volcano[];
+  migrations: Migration[];
+  rivers: River[];
+  climates: Climate[];
+  ecosystems: Ecosystem[];
+}
 
 export function NatureExplorer() {
-  const [selectedCategory, setSelectedCategory] = useState("wonders");
+  const [selectedCategory, setSelectedCategory] =
+    useState<keyof NatureData>("wonders");
   const [search, setSearch] = useState("");
-  const tabsRef = useRef<HTMLDivElement>(null);
+  const [natureData, setNatureData] = useState<NatureData | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  const categories = [
+    { key: "wonders", label: "Natural Wonders", icon: Mountain },
+    { key: "volcanoes", label: "Volcanoes", icon: TreePine },
+    { key: "migrations", label: "Migrations", icon: Waves },
+    { key: "rivers", label: "Rivers", icon: Droplet },
+    { key: "climates", label: "Climate Zones", icon: Sun },
+    { key: "ecosystems", label: "Ecosystems", icon: Landmark },
+  ];
+
+  // Fetch data from JSON file
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("/data/nature.json");
+        if (!response.ok) {
+          throw new Error("Failed to fetch nature data");
+        }
+        const data: NatureData = await response.json();
+        setNatureData(data);
+        setLoading(false);
+      } catch (err) {
+        setError("Error loading data. Please try again later.");
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
 
   const filterData = <T extends Record<string, unknown>>(
     items: T[],
@@ -302,27 +113,32 @@ export function NatureExplorer() {
     );
   };
 
-  const scrollTabs = (direction: "left" | "right") => {
-    if (tabsRef.current) {
-      const scrollAmount = 200;
-      const currentScroll = tabsRef.current.scrollLeft;
-      const targetScroll =
-        direction === "left"
-          ? currentScroll - scrollAmount
-          : currentScroll + scrollAmount;
-
-      tabsRef.current.scrollTo({
-        left: targetScroll,
-        behavior: "smooth",
-      });
-    }
+  const handleCategorySelect = (categoryKey: string) => {
+    setSelectedCategory(categoryKey as keyof NatureData);
   };
 
+  if (loading) {
+    return (
+      <div className="nature-explorer-loading">Loading nature data...</div>
+    );
+  }
+
+  if (error || !natureData) {
+    return (
+      <div className="nature-explorer-error">
+        {error || "No nature data available"}
+      </div>
+    );
+  }
+
   return (
-    <div className="card">
-      <div className="card-header">
-        <h2 className="card-title flex gap-sm items-center">
-          <TreePine className="icon" />
+    <div className="nature-explorer-container">
+      <div className="nature-explorer-header">
+        <h2 className="nature-explorer-title">
+          <TreePine
+            className="nature-title-icon"
+            style={{ marginRight: "8px", width: "20px", height: "20px" }}
+          />
           Nature & Exploration
         </h2>
         <input
@@ -330,81 +146,128 @@ export function NatureExplorer() {
           placeholder="Search..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="input mt-sm"
+          className="nature-search-input"
         />
       </div>
 
-      <div className="card-content">
-        <div className="tabs">
-          <div className="nature-tabs-container">
-            <button
-              className="nature-scroll-btn nature-scroll-left"
-              onClick={() => scrollTabs("left")}
-              aria-label="Scroll left"
-            >
-              <ChevronLeft size={16} />
-            </button>
-            <div className="tabs-list nature-tabs" ref={tabsRef}>
-              {[
-                "wonders",
-                "volcanoes",
-                "migrations",
-                "rivers",
-                "climates",
-                "ecosystems",
-              ].map((cat) => (
-                <button
-                  key={cat}
-                  className={`ne-tabs-trigger ${
-                    selectedCategory === cat ? "active" : ""
-                  }`}
-                  onClick={() => setSelectedCategory(cat)}
-                >
-                  {cat.charAt(0).toUpperCase() + cat.slice(1)}
-                </button>
-              ))}
-            </div>
-            <button
-              className="nature-scroll-btn nature-scroll-right"
-              onClick={() => scrollTabs("right")}
-              aria-label="Scroll right"
-            >
-              <ChevronRight size={16} />
-            </button>
-          </div>
+      <div className="nature-explorer-content">
+        {/* Simple Category Selector */}
+        <div className="nature-category-section">
+          <div className="nature-categories-grid">
+            {categories.map((category) => {
+              const IconComponent = category.icon;
+              const isActive = selectedCategory === category.key;
 
+              return (
+                <button
+                  key={category.key}
+                  className={`nature-category-btn ${isActive ? "active" : ""}`}
+                  onClick={() => handleCategorySelect(category.key)}
+                >
+                  <IconComponent size={16} />
+                  <span>{category.label}</span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Content Section */}
+        <div className="nature-content-area">
           {/* Wonders */}
           {selectedCategory === "wonders" && (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-md">
+            <div className="nature-grid">
               {filterData(natureData.wonders, ["name", "type", "country"]).map(
                 (wonder: NatureWonder, i) => (
-                  <div key={i} className="card bordered green">
-                    <div className="card-header">
-                      <h3 className="card-title flex gap-sm items-center green-text">
+                  <div key={i} className="nature-card wonder-card">
+                    <div className="nature-card-header">
+                      <h3 className="nature-card-title">
                         {wonder.type === "Mountain" && (
-                          <Mountain className="icon" />
+                          <Mountain
+                            className="wonder-icon"
+                            style={{
+                              marginRight: "8px",
+                              width: "16px",
+                              height: "16px",
+                            }}
+                          />
                         )}
-                        {wonder.type === "Reef" && <Waves className="icon" />}
+                        {wonder.type === "Reef" && (
+                          <Waves
+                            className="wonder-icon"
+                            style={{
+                              marginRight: "8px",
+                              width: "16px",
+                              height: "16px",
+                            }}
+                          />
+                        )}
                         {wonder.type === "Forest" && (
-                          <TreePine className="icon" />
+                          <TreePine
+                            className="wonder-icon"
+                            style={{
+                              marginRight: "8px",
+                              width: "16px",
+                              height: "16px",
+                            }}
+                          />
+                        )}
+                        {wonder.type === "Desert" && (
+                          <Sun
+                            className="wonder-icon"
+                            style={{
+                              marginRight: "8px",
+                              width: "16px",
+                              height: "16px",
+                            }}
+                          />
+                        )}
+                        {wonder.type === "Canyon" && (
+                          <Landmark
+                            className="wonder-icon"
+                            style={{
+                              marginRight: "8px",
+                              width: "16px",
+                              height: "16px",
+                            }}
+                          />
+                        )}
+                        {wonder.type === "Waterfall" && (
+                          <Droplet
+                            className="wonder-icon"
+                            style={{
+                              marginRight: "8px",
+                              width: "16px",
+                              height: "16px",
+                            }}
+                          />
                         )}
                         {wonder.name}
                       </h3>
-                      <span className="badge">{wonder.type}</span>
+                      <span className="nature-badge wonder-type">
+                        {wonder.type}
+                      </span>
                     </div>
-                    <div className="card-content">
-                      <p className="text-sm">
+                    <div className="nature-card-content">
+                      <p>
                         <strong>Location:</strong> {wonder.country}
                       </p>
-                      <p className="text-sm">
-                        <strong>{wonder.height ? "Height" : "Area"}:</strong>{" "}
-                        {wonder.height || wonder.area}
+                      <p>
+                        <strong>
+                          {wonder.height
+                            ? "Height"
+                            : wonder.depth
+                            ? "Depth"
+                            : "Area"}
+                          :
+                        </strong>{" "}
+                        {wonder.height || wonder.depth || wonder.area}
                       </p>
-                      <p className="text-sm">
+                      <p>
                         <strong>Coordinates:</strong> {wonder.coordinates}
                       </p>
                       <button
-                        className="btn mt-sm"
+                        className="nature-map-btn"
                         onClick={() =>
                           window.open(
                             `https://www.google.com/maps/search/${encodeURIComponent(

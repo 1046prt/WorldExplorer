@@ -103,11 +103,21 @@
   margin-top: auto;
 }
 
+.landmark-link:visited,
+.landmark-link:active {
+  color: #dc2626;
+}
+
 .landmark-link:hover {
   color: #b91c1c;
 }
 
 [data-theme="dark"] .landmark-link {
+  color: #f87171;
+}
+
+[data-theme="dark"] .landmark-link:visited,
+[data-theme="dark"] .landmark-link:active {
   color: #f87171;
 }
 

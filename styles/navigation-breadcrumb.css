@@ -14,6 +14,11 @@
   transition: color 0.2s ease-in-out;
 }
 
+.nb-home:visited,
+.nb-home:active {
+  color: inherit;
+}
+
 .nb-home:hover {
   color: var(--text-primary);
 }
@@ -32,6 +37,11 @@
 .nb-link {
   color: inherit;
   transition: color 0.2s ease-in-out;
+}
+
+.nb-link:visited,
+.nb-link:active {
+  color: inherit;
 }
 
 .nb-link:hover {
