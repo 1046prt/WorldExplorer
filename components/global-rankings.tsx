@@ -55,14 +55,14 @@ export default function GlobalRankings() {
     const loadRankingData = async () => {
       try {
         setLoading(true);
-        const response = await fetch('/data/rankings.json');
+        const response = await fetch("/data/rankings.json");
         if (!response.ok) {
-          throw new Error('Failed to load ranking data');
+          throw new Error("Failed to load ranking data");
         }
         const data = await response.json();
         setRankingData(data);
       } catch (err) {
-        setError(err instanceof Error ? err.message : 'Failed to load data');
+        setError(err instanceof Error ? err.message : "Failed to load data");
       } finally {
         setLoading(false);
       }
@@ -77,7 +77,7 @@ export default function GlobalRankings() {
         <div className="gr-header">
           <h2 className="gr-title">
             <Trophy className="icon-trophy" />
-            Global Rankings & Top 10 Lists
+            Global Rankings
           </h2>
         </div>
         <div className="card-content">
@@ -98,7 +98,7 @@ export default function GlobalRankings() {
         </div>
         <div className="card-content">
           <div className="error-state">
-            {error || 'Failed to load ranking data'}
+            {error || "Failed to load ranking data"}
           </div>
         </div>
       </div>
@@ -106,21 +106,23 @@ export default function GlobalRankings() {
   }
 
   const currentData = rankingData[activeCategory];
-  const IconComponent = iconMap[currentData.icon as keyof typeof iconMap] || Building;
+  const IconComponent =
+    iconMap[currentData.icon as keyof typeof iconMap] || Building;
 
   return (
     <div className="gr-card">
       <div className="gr-header">
         <h2 className="gr-title">
           <Trophy className="icon-trophy" />
-          Global Rankings & Top 10 Lists
+          Global Rankings
         </h2>
       </div>
 
       <div className="card-content">
         <div className="categories">
           {Object.entries(rankingData).map(([key, category]) => {
-            const CategoryIcon = iconMap[category.icon as keyof typeof iconMap] || Building;
+            const CategoryIcon =
+              iconMap[category.icon as keyof typeof iconMap] || Building;
             return (
               <button
                 key={key}
@@ -150,7 +152,7 @@ export default function GlobalRankings() {
                 >
                   {index + 1}
                 </div>
-                <div>
+                <div className="item-content">
                   <div className="item-name">{item.name}</div>
                   <div className="item-country">{item.country}</div>
                 </div>
