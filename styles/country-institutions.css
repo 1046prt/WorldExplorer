@@ -50,7 +50,6 @@
   }
 }
 
-/* Mobile responsive adjustments */
 @media (max-width: 768px) {
   .institutions-title {
     font-size: var(--font-size-xl);
@@ -120,7 +119,6 @@
   color: var(--color-muted-foreground);
 }
 
-/* Mobile responsive adjustments */
 @media (max-width: 768px) {
   .institution-card {
     padding: var(--spacing-sm);
@@ -215,7 +213,6 @@
   min-width: 0;
 }
 
-/* Mobile responsive adjustments for images */
 @media (max-width: 768px) {
   .institution-image {
     height: 120px;

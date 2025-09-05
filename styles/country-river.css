@@ -26,7 +26,6 @@
   overflow-wrap: break-word;
 }
 
-/* Mobile responsive adjustments */
 @media (max-width: 768px) {
   .rivers-card {
     padding: var(--spacing-md);

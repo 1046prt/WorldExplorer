@@ -46,7 +46,6 @@
   );
 }
 
-/* Mobile responsive adjustments */
 @media (max-width: 768px) {
   .country-map {
     padding: var(--spacing-md);
@@ -118,7 +117,6 @@
   margin-top: var(--spacing-xs);
 }
 
-/* Mobile responsive adjustments for fallback */
 @media (max-width: 768px) {
   .map-fallback-emoji {
     font-size: var(--font-size-3xl);
@@ -170,7 +168,6 @@
   overflow-wrap: break-word;
 }
 
-/* Mobile responsive adjustments for map details */
 @media (max-width: 768px) {
   .map-details {
     grid-template-columns: 1fr;

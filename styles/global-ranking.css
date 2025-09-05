@@ -26,7 +26,7 @@
 .icon-trophy {
   width: 28px;
   height: 28px;
-  color: var(--color-warning);
+  color: var(--color-primary);
   filter: drop-shadow(0 2px 4px rgba(245, 158, 11, 0.3));
   animation: trophy-glow 2s ease-in-out infinite alternate;
 }
@@ -146,12 +146,6 @@
   transition: var(--transition-normal);
   position: relative;
   overflow: hidden;
-}
-
-.ranking-item:hover {
-  transform: translateX(4px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--color-primary-light);
 }
 
 .ranking-item:hover::before {

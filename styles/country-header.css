@@ -99,7 +99,6 @@
   line-height: 1;
 }
 
-/* Ensure flag is visible on all screen sizes */
 @media (min-width: 768px) {
   .ch-flag-container {
     min-width: 48px;
@@ -184,7 +183,6 @@
   color: var(--color-primary);
 }
 
-/* Mobile Responsive Styles */
 @media (max-width: 768px) {
   .ch-container {
     padding: var(--spacing-md) var(--spacing-sm);
@@ -279,7 +277,6 @@
   }
 }
 
-/* Tablet Responsive Styles */
 @media (min-width: 769px) and (max-width: 1024px) {
   .ch-container {
     padding: var(--spacing-lg) var(--spacing-md);

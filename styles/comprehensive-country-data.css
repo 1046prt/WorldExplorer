@@ -1,4 +1,3 @@
-/* Comprehensive Country Data Component Styles */
 .comprehensive-country-data-container {
   width: 100%;
   max-width: 100%;
@@ -40,7 +39,6 @@
   line-height: var(--line-height-relaxed);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .comprehensive-country-data-container {
     padding: var(--spacing-md);

@@ -1,4 +1,3 @@
-/* Optimized Image Component Styles */
 .optimized-image-container {
   position: relative;
   display: inline-block;
@@ -59,7 +58,6 @@
   }
 }
 
-/* Error state */
 .optimized-image-container::after {
   content: "";
   position: absolute;
@@ -80,7 +78,6 @@
   opacity: 0.5;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .optimized-image-container {
     border-radius: var(--radius-sm);
