@@ -73,9 +73,9 @@ export default function GlobalRankings() {
 
   if (loading) {
     return (
-      <div className="global-card">
-        <div className="card-header">
-          <h2 className="card-title">
+      <div className="gr-card">
+        <div className="gr-header">
+          <h2 className="gr-title">
             <Trophy className="icon-trophy" />
             Global Rankings & Top 10 Lists
           </h2>
@@ -89,9 +89,9 @@ export default function GlobalRankings() {
 
   if (error || !rankingData) {
     return (
-      <div className="global-card">
-        <div className="card-header">
-          <h2 className="card-title">
+      <div className="gr-card">
+        <div className="gr-header">
+          <h2 className="gr-title">
             <Trophy className="icon-trophy" />
             Global Rankings & Top 10 Lists
           </h2>
@@ -109,9 +109,9 @@ export default function GlobalRankings() {
   const IconComponent = iconMap[currentData.icon as keyof typeof iconMap] || Building;
 
   return (
-    <div className="global-card">
-      <div className="card-header">
-        <h2 className="card-title">
+    <div className="gr-card">
+      <div className="gr-header">
+        <h2 className="gr-title">
           <Trophy className="icon-trophy" />
           Global Rankings & Top 10 Lists
         </h2>

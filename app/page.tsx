@@ -50,10 +50,6 @@ export default function HomePage() {
             </section>
 
             <section className="section">
-              <GlobalRankings />
-            </section>
-
-            <section className="section">
               <LanguageExplorer />
             </section>
 
@@ -63,6 +59,10 @@ export default function HomePage() {
 
             <section className="section">
               <EnvironmentDashboard />
+            </section>
+
+            <section className="section">
+              <GlobalRankings />
             </section>
 
             <section className="section">
