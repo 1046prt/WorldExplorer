@@ -1,0 +1,247 @@
+[
+  {
+    "fact": "In Finland, there are more saunas than cars.",
+    "category": "Culture",
+    "country": "Finland"
+  },
+  {
+    "fact": "Bhutan measures its success by Gross National Happiness instead of GDP.",
+    "category": "Society",
+    "country": "Bhutan"
+  },
+  {
+    "fact": "Mongolia has more horses than people.",
+    "category": "Demographics",
+    "country": "Mongolia"
+  },
+  {
+    "fact": "In Bolivia, there are zebras—but they’re actually people dressed in costumes who help children cross streets safely.",
+    "category": "Culture",
+    "country": "Bolivia"
+  },
+  {
+    "fact": "Greenland has no roads connecting its towns; travel is mainly by boat, plane, or dog sled.",
+    "category": "Geography",
+    "country": "Greenland"
+  },
+  {
+    "fact": "In Japan, there’s a train station that has no entrance or exit—it exists solely for passengers to enjoy the scenery when the train stops.",
+    "category": "Culture",
+    "country": "Japan"
+  },
+  {
+    "fact": "In Egypt, new desert cities are being built to reduce overcrowding in Cairo, including one with Africa’s tallest skyscraper.",
+    "category": "Urban Development",
+    "country": "Egypt"
+  },
+  {
+    "fact": "Scotland has 421 words for snow, including 'sneesl' (to begin snowing) and 'skelf' (large snowflake).",
+    "category": "Language",
+    "country": "Scotland"
+  },
+  {
+    "fact": "Ethiopia uses a different calendar system, which is about seven years behind the Gregorian calendar.",
+    "category": "Culture",
+    "country": "Ethiopia"
+  },
+  {
+    "fact": "In South Korea, there are special 'silent cafés' where customers are discouraged from talking to maintain complete quiet.",
+    "category": "Society",
+    "country": "South Korea"
+  },
+  {
+    "fact": "In Turkey, people drink more tea per person than anywhere else in the world, even more than in the UK.",
+    "category": "Culture",
+    "country": "Turkey"
+  },
+  {
+    "fact": "Madagascar is home to over 90% of its wildlife species that are found nowhere else on Earth.",
+    "category": "Environment",
+    "country": "Madagascar"
+  },
+  {
+    "fact": "In Iceland, many people still believe in elves and hidden people; some construction projects are rerouted to avoid disturbing their supposed homes.",
+    "category": "Folklore",
+    "country": "Iceland"
+  },
+  {
+    "fact": "Singapore has a building shaped like a durian, the country's famously spiky-smelling fruit.",
+    "category": "Architecture",
+    "country": "Singapore"
+  },
+  {
+    "fact": "In India, there’s a temple where rats are worshipped and freely roam among the devotees.",
+    "category": "Religion",
+    "country": "India"
+  },
+  {
+    "fact": "Chile’s Atacama Desert is one of the driest places on Earth, yet flowers bloom across it once every few years in a rare event called 'desierto florido.'",
+    "category": "Environment",
+    "country": "Chile"
+  },
+  {
+    "fact": "In Sweden, people celebrate 'Fika'—a cultural practice of taking a daily coffee and pastry break, seen as a social necessity.",
+    "category": "Culture",
+    "country": "Sweden"
+  },
+  {
+    "fact": "In Kenya, the Great Rift Valley is so large it can be seen from space and is slowly splitting the African continent in two.",
+    "category": "Geology",
+    "country": "Kenya"
+  },
+  {
+    "fact": "The Philippines has the world’s largest underground river that flows directly into the sea.",
+    "category": "Geography",
+    "country": "Philippines"
+  },
+  {
+    "fact": "In Norway, you can see the midnight sun in summer, where the sun doesn’t set for weeks above the Arctic Circle.",
+    "category": "Nature",
+    "country": "Norway"
+  },
+  {
+    "fact": "New Zealand was the first country to give women the right to vote, in 1893.",
+    "category": "History",
+    "country": "New Zealand"
+  },
+  {
+    "fact": "In Mexico, there’s an island filled with hundreds of dolls hanging from trees, believed to be haunted.",
+    "category": "Folklore",
+    "country": "Mexico"
+  },
+  {
+    "fact": "Liechtenstein is so small that its entire population could fit inside a single football stadium.",
+    "category": "Geography",
+    "country": "Liechtenstein"
+  },
+  {
+    "fact": "In Nigeria, Nollywood produces more films each year than Hollywood.",
+    "category": "Culture",
+    "country": "Nigeria"
+  },
+  {
+    "fact": "In Croatia, the necktie was invented and introduced to Europe by Croatian soldiers in the 17th century.",
+    "category": "History",
+    "country": "Croatia"
+  },
+  {
+    "fact": "In Switzerland, it is illegal to own just one guinea pig because they get lonely.",
+    "category": "Law",
+    "country": "Switzerland"
+  },
+  {
+    "fact": "In Canada, parts of Hudson Bay don’t have full gravity strength due to past glaciers pressing into the Earth’s crust.",
+    "category": "Geology",
+    "country": "Canada"
+  },
+  {
+    "fact": "In Portugal, there’s a tradition of walking across hot coals barefoot as a cultural ritual in some villages.",
+    "category": "Tradition",
+    "country": "Portugal"
+  },
+  {
+    "fact": "The Maldives is the flattest country in the world, with an average ground level of just 1.5 meters above sea level.",
+    "category": "Geography",
+    "country": "Maldives"
+  },
+  {
+    "fact": "In Brazil, the Amazon River once flowed in the opposite direction, toward the Pacific Ocean.",
+    "category": "Geology",
+    "country": "Brazil"
+  },
+  {
+    "fact": "In Germany, there are more than 1,500 types of sausages.",
+    "category": "Cuisine",
+    "country": "Germany"
+  },
+  {
+    "fact": "In Poland, a crooked forest exists where trees grow with a 90-degree bend at the base.",
+    "category": "Nature",
+    "country": "Poland"
+  },
+  {
+    "fact": "In Thailand, there is a festival where monkeys are given a buffet of food as a way to honor them.",
+    "category": "Tradition",
+    "country": "Thailand"
+  },
+  {
+    "fact": "In France, there’s a town named Y, making it the shortest place name in the world.",
+    "category": "Geography",
+    "country": "France"
+  },
+  {
+    "fact": "In Argentina, there’s a lake with petrified trees and fossilized remains from millions of years ago.",
+    "category": "Geology",
+    "country": "Argentina"
+  },
+  {
+    "fact": "In Russia, Lake Baikal holds about 20% of the world’s unfrozen freshwater.",
+    "category": "Nature",
+    "country": "Russia"
+  },
+  {
+    "fact": "In South Africa, Table Mountain is home to more plant species than the entire United Kingdom.",
+    "category": "Environment",
+    "country": "South Africa"
+  },
+  {
+    "fact": "In Ireland, Halloween originated as the ancient Celtic festival of Samhain.",
+    "category": "History",
+    "country": "Ireland"
+  },
+  {
+    "fact": "In Cuba, old American cars from the 1950s are still widely used due to trade restrictions.",
+    "category": "Culture",
+    "country": "Cuba"
+  },
+  {
+    "fact": "In Saudi Arabia, camels once outnumbered cars as the main mode of transportation.",
+    "category": "History",
+    "country": "Saudi Arabia"
+  },
+  {
+    "fact": "In China, ice cream was invented around 200 BC, long before it appeared in Europe.",
+    "category": "Cuisine",
+    "country": "China"
+  },
+  {
+    "fact": "In Australia, wombats have cube-shaped poop to mark their territory.",
+    "category": "Nature",
+    "country": "Australia"
+  },
+  {
+    "fact": "In Austria, there’s a village named Fucking, which had to change its name in 2021 due to tourist theft of its signs.",
+    "category": "Geography",
+    "country": "Austria"
+  },
+  {
+    "fact": "In Spain, people participate in 'La Tomatina,' the world’s biggest food fight, using over 100 tons of tomatoes.",
+    "category": "Tradition",
+    "country": "Spain"
+  },
+  {
+    "fact": "In Denmark, people throw cinnamon at anyone who remains unmarried on their 25th birthday.",
+    "category": "Tradition",
+    "country": "Denmark"
+  },
+  {
+    "fact": "In Jordan, the ancient city of Petra was carved entirely into rose-red cliffs over 2,000 years ago.",
+    "category": "History",
+    "country": "Jordan"
+  },
+  {
+    "fact": "In Nepal, Mount Everest grows about 4 millimeters taller each year due to tectonic activity.",
+    "category": "Geology",
+    "country": "Nepal"
+  },
+  {
+    "fact": "In Iran, the Lut Desert is one of the hottest places on Earth, with ground temperatures above 70°C recorded.",
+    "category": "Environment",
+    "country": "Iran"
+  },
+  {
+    "fact": "In Tanzania, Mount Kilimanjaro has glaciers at its summit despite being near the equator.",
+    "category": "Nature",
+    "country": "Tanzania"
+  }
+]

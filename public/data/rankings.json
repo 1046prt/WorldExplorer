@@ -58,7 +58,7 @@
     ]
   },
   "largestCities": {
-    "title": "Largest Cities by Population",
+    "title": "Cities by Population",
     "icon": "Users",
     "data": [
       { "name": "Tokyo", "country": "Japan", "value": "37.4M" },
@@ -79,7 +79,7 @@
     ]
   },
   "gdpRanking": {
-    "title": "GDP Rankings (Nominal)",
+    "title": "GDP Rankings",
     "icon": "DollarSign",
     "data": [
       { "name": "United States", "country": "USA", "value": "$26.9T" },
@@ -100,7 +100,7 @@
     ]
   },
   "largestCountries": {
-    "title": "Largest Countries by Area",
+    "title": "Largest Countries",
     "icon": "Globe",
     "data": [
       { "name": "Russia", "country": "Russia", "value": "17.1M km²" },
@@ -223,7 +223,7 @@
     ]
   },
   "mostSpokenLanguages": {
-    "title": "Most Spoken Languages",
+    "title": "Spoken Languages",
     "icon": "Languages",
     "data": [
       { "name": "English", "country": "Global", "value": "1.5B" },
@@ -252,7 +252,7 @@
     ]
   },
   "busiestAirports": {
-    "title": "Busiest Airports (Passengers)",
+    "title": "Busiest Airports",
     "icon": "PlaneTakeoff",
     "data": [
       {
@@ -285,7 +285,7 @@
     ]
   },
   "mostVisitedCountries": {
-    "title": "Most Visited Countries (Tourists)",
+    "title": "Most Visited Countries",
     "icon": "Globe",
     "data": [
       { "name": "France", "country": "France", "value": "89M" },
