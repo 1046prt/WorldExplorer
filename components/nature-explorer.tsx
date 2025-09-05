@@ -277,7 +277,7 @@ export function NatureExplorer() {
                           )
                         }
                       >
-                        📍 View on Map
+                        🗺️ View on Map
                       </button>
                     </div>
                   </div>
