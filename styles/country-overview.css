@@ -155,8 +155,6 @@
 }
 
 @media (max-width: 480px) {
-
-
   .section-value {
     font-size: var(--font-size-lg);
   }

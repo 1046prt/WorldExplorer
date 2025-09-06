@@ -247,7 +247,7 @@
 .badge-list {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--spacing-xs);
+  gap: var(--spacing-md);
   margin-top: var(--spacing-sm);
 }
 
