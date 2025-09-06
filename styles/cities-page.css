@@ -22,12 +22,6 @@
   height: 100%;
 }
 
-.city-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--color-primary);
-}
-
 .city-card-header {
   display: flex;
   align-items: center;

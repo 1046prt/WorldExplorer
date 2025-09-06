@@ -90,11 +90,6 @@
   box-sizing: border-box;
 }
 
-.landmark-card:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
-}
-
 .landmark-image {
   position: relative;
   aspect-ratio: 16 / 9;
@@ -156,13 +151,19 @@
   flex-wrap: wrap;
 }
 
+.compass{
+
+}
+
 .landmark-coordinates {
+  display: flex;
   font-size: var(--font-size-xs);
-  color: var(--color-muted-foreground);
+  color: var(--color-primary);
   word-wrap: break-word;
   overflow-wrap: break-word;
   flex: 1;
   min-width: 0;
+  font-weight: 500;
 }
 
 .external-icon {

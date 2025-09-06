@@ -76,11 +76,6 @@
   box-sizing: border-box;
 }
 
-.institution-card:hover {
-  box-shadow: var(--shadow-lg);
-  transform: translateY(-2px);
-}
-
 .institution-top {
   display: flex;
   align-items: flex-start;
@@ -122,10 +117,6 @@
 @media (max-width: 768px) {
   .institution-card {
     padding: var(--spacing-sm);
-  }
-
-  .institution-card:hover {
-    transform: none;
   }
 
   .institution-top {
