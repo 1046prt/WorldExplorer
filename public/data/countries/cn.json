@@ -15,6 +15,420 @@
   },
   "languages": ["Mandarin Chinese"],
   "timezones": ["UTC+08:00"],
+  "geography": {
+    "climateZones": [
+      "Tropical",
+      "Subtropical",
+      "Temperate",
+      "Continental",
+      "Alpine"
+    ],
+    "geologicalFormations": [
+      {
+        "name": "Himalayas",
+        "type": "Mountain Range",
+        "description": "World's highest mountain range forming southern border"
+      },
+      {
+        "name": "Tibetan Plateau",
+        "type": "Plateau",
+        "description": "World's highest plateau, often called 'Roof of the World'"
+      },
+      {
+        "name": "Gobi Desert",
+        "type": "Desert",
+        "description": "Large desert region in northern China and southern Mongolia"
+      }
+    ],
+    "naturalDisasters": [
+      {
+        "type": "Earthquake",
+        "name": "Sichuan Earthquake",
+        "year": 2008,
+        "impact": "Devastating earthquake that killed over 87,000 people"
+      },
+      {
+        "type": "Flood",
+        "name": "Yangtze River Floods",
+        "year": 1998,
+        "impact": "Major flooding affecting 240 million people"
+      }
+    ],
+    "majorWaterBodies": [
+      {
+        "name": "South China Sea",
+        "type": "Sea",
+        "coastline": "Southeast Coast"
+      },
+      {
+        "name": "East China Sea",
+        "type": "Sea",
+        "coastline": "East Coast"
+      },
+      {
+        "name": "Yellow Sea",
+        "type": "Sea",
+        "coastline": "Northeast Coast"
+      }
+    ]
+  },
+  "heritage": {
+    "independenceDate": "October 1, 1949",
+    "foundingEvent": "Establishment of People's Republic of China",
+    "majorHistoricalFigures": [
+      {
+        "name": "Mao Zedong",
+        "role": "Founding Chairman",
+        "period": "1949-1976",
+        "achievement": "Founded the People's Republic of China"
+      },
+      {
+        "name": "Deng Xiaoping",
+        "role": "Economic Reformer",
+        "period": "1978-1989",
+        "achievement": "Introduced market reforms and opened China to the world"
+      },
+      {
+        "name": "Confucius",
+        "role": "Philosopher",
+        "period": "551-479 BC",
+        "achievement": "Influential philosopher whose teachings shaped Chinese culture"
+      }
+    ],
+    "colonialHistory": [
+      {
+        "period": "1839-1949",
+        "description": "Century of Humiliation with foreign concessions and unequal treaties"
+      },
+      {
+        "period": "1937-1945",
+        "description": "Japanese occupation during World War II"
+      }
+    ],
+    "unescoSites": [
+      {
+        "name": "Great Wall of China",
+        "year": 1987,
+        "type": "Cultural"
+      },
+      {
+        "name": "Forbidden City",
+        "year": 1987,
+        "type": "Cultural"
+      },
+      {
+        "name": "Terracotta Army",
+        "year": 1987,
+        "type": "Cultural"
+      },
+      {
+        "name": "Mount Huangshan",
+        "year": 1990,
+        "type": "Natural"
+      }
+    ]
+  },
+  "politics": {
+    "currentLeaders": [
+      {
+        "position": "President",
+        "name": "Xi Jinping",
+        "party": "Communist Party of China",
+        "termStart": "March 14, 2013"
+      },
+      {
+        "position": "Premier",
+        "name": "Li Qiang",
+        "party": "Communist Party of China",
+        "termStart": "March 11, 2023"
+      }
+    ],
+    "governmentType": "Socialist Republic",
+    "internationalMemberships": [
+      "United Nations (UN)",
+      "World Trade Organization (WTO)",
+      "Shanghai Cooperation Organization (SCO)",
+      "BRICS",
+      "G20",
+      "Asian Infrastructure Investment Bank (AIIB)"
+    ]
+  },
+  "economy": {
+    "gdp": 17734000000000,
+    "gdpPerCapita": 12556,
+    "majorIndustries": [
+      "Manufacturing",
+      "Technology",
+      "Agriculture",
+      "Mining",
+      "Construction",
+      "Services",
+      "Textiles"
+    ],
+    "topExports": [
+      {
+        "product": "Broadcasting Equipment",
+        "value": 208400000000
+      },
+      {
+        "product": "Computers",
+        "value": 141300000000
+      },
+      {
+        "product": "Integrated Circuits",
+        "value": 130800000000
+      },
+      {
+        "product": "Office Machine Parts",
+        "value": 103200000000
+      }
+    ],
+    "topImports": [
+      {
+        "product": "Integrated Circuits",
+        "value": 350800000000
+      },
+      {
+        "product": "Crude Petroleum",
+        "value": 176200000000
+      },
+      {
+        "product": "Iron Ore",
+        "value": 118100000000
+      },
+      {
+        "product": "Cars",
+        "value": 43400000000
+      }
+    ],
+    "employmentRate": 95.1,
+    "employmentSectors": {
+      "services": 47.7,
+      "industry": 28.1,
+      "agriculture": 24.2
+    }
+  },
+  "culture": {
+    "officialLanguages": ["Mandarin Chinese"],
+    "regionalLanguages": [
+      "Cantonese",
+      "Wu",
+      "Min",
+      "Hakka",
+      "Gan",
+      "Xiang",
+      "Tibetan",
+      "Uyghur"
+    ],
+    "religionDemographics": {
+      "Non-religious": 52.0,
+      "Buddhism": 18.2,
+      "Christianity": 5.1,
+      "Folk Religion": 21.9,
+      "Taoism": 1.6,
+      "Islam": 1.8,
+      "Other": 0.4
+    },
+    "nationalFestivals": [
+      {
+        "name": "Chinese New Year (Spring Festival)",
+        "date": "January/February (Lunar Calendar)",
+        "description": "Most important traditional festival celebrating the lunar new year"
+      },
+      {
+        "name": "National Day",
+        "date": "October 1",
+        "description": "Celebrates the founding of the People's Republic of China"
+      },
+      {
+        "name": "Mid-Autumn Festival",
+        "date": "September/October (Lunar Calendar)",
+        "description": "Festival celebrating harvest and family reunion"
+      }
+    ],
+    "traditionalFoods": [
+      {
+        "name": "Peking Duck",
+        "description": "Famous roasted duck dish from Beijing with crispy skin"
+      },
+      {
+        "name": "Dim Sum",
+        "description": "Traditional Cantonese small plates served with tea"
+      },
+      {
+        "name": "Hot Pot",
+        "description": "Communal cooking method with shared pot of boiling broth"
+      },
+      {
+        "name": "Dumplings",
+        "description": "Traditional filled pastries, especially popular during New Year"
+      }
+    ],
+    "nationalSymbols": {
+      "flag": "Five-starred Red Flag",
+      "emblem": "National Emblem of China",
+      "anthem": "March of the Volunteers",
+      "flower": "Peony",
+      "animal": "Giant Panda",
+      "bird": "Red-crowned Crane"
+    }
+  },
+  "education": {
+    "literacyRate": 96.8,
+    "educationSystem": "9-year compulsory education, extensive higher education system",
+    "famousScientists": [
+      {
+        "name": "Tu Youyou",
+        "field": "Medicine",
+        "achievement": "Discovered artemisinin for malaria treatment, Nobel Prize winner"
+      },
+      {
+        "name": "Yang Zhenning",
+        "field": "Physics",
+        "achievement": "Nobel Prize in Physics for parity conservation laws"
+      },
+      {
+        "name": "Yuan Longping",
+        "field": "Agriculture",
+        "achievement": "Father of hybrid rice, significantly increased crop yields"
+      }
+    ],
+    "nobelPrizeWinners": 11
+  },
+  "tourism": {
+    "mostVisitedCities": [
+      {
+        "name": "Beijing",
+        "visitors": 320000000,
+        "attractions": ["Forbidden City", "Great Wall", "Temple of Heaven"]
+      },
+      {
+        "name": "Shanghai",
+        "visitors": 340000000,
+        "attractions": ["The Bund", "Yu Garden", "Oriental Pearl Tower"]
+      },
+      {
+        "name": "Xi'an",
+        "visitors": 280000000,
+        "attractions": [
+          "Terracotta Army",
+          "Ancient City Wall",
+          "Muslim Quarter"
+        ]
+      }
+    ],
+    "adventureActivities": [
+      "Great Wall Hiking",
+      "Yangtze River Cruising",
+      "Tibet Trekking",
+      "Guilin Karst Landscape Tours",
+      "Silk Road Exploration"
+    ],
+    "transportation": {
+      "airports": "Major international airports in Beijing, Shanghai, Guangzhou",
+      "railways": "Extensive high-speed rail network",
+      "highways": "National Highway System"
+    },
+    "visaRequirements": "Visa required for most visitors, some transit visa exemptions"
+  },
+  "demographics": {
+    "populationGrowth": [
+      { "year": 2020, "population": 1411778724 },
+      { "year": 2021, "population": 1412360000 },
+      { "year": 2022, "population": 1411750000 },
+      { "year": 2023, "population": 1409670000 }
+    ],
+    "urbanRural": {
+      "urban": 64.7,
+      "rural": 35.3
+    },
+    "lifeExpectancy": {
+      "total": 78.2,
+      "male": 75.7,
+      "female": 80.9
+    },
+    "ageDistribution": {
+      "youth": 17.6,
+      "workingAge": 68.1,
+      "elderly": 14.3
+    }
+  },
+  "scienceTechnology": {
+    "spaceMissions": [
+      {
+        "name": "Chang'e Lunar Program",
+        "year": "2007-present",
+        "achievement": "Lunar exploration missions"
+      },
+      {
+        "name": "Tianwen-1",
+        "year": 2021,
+        "achievement": "Mars rover mission"
+      },
+      {
+        "name": "Tiangong Space Station",
+        "year": "2021-present",
+        "achievement": "Chinese space station construction"
+      }
+    ],
+    "techStartups": [
+      "Alibaba",
+      "Tencent",
+      "Baidu",
+      "ByteDance",
+      "Huawei",
+      "Xiaomi"
+    ],
+    "patents": 696000,
+    "breakthroughs": [
+      {
+        "year": 105,
+        "invention": "Paper",
+        "inventor": "Cai Lun"
+      },
+      {
+        "year": 1040,
+        "invention": "Gunpowder",
+        "inventor": "Chinese Alchemists"
+      },
+      {
+        "year": 1040,
+        "invention": "Compass",
+        "inventor": "Chinese Inventors"
+      }
+    ]
+  },
+  "sportsEntertainment": {
+    "nationalSports": ["Table Tennis", "Badminton", "Basketball", "Football"],
+    "olympicPerformance": {
+      "totalMedals": 608,
+      "goldMedals": 263,
+      "silverMedals": 199,
+      "bronzeMedals": 146
+    },
+    "popularMovies": [
+      "Crouching Tiger, Hidden Dragon",
+      "Hero",
+      "The Wandering Earth"
+    ],
+    "musicArtists": [
+      "Teresa Teng",
+      "Jay Chou",
+      "Faye Wong",
+      "Andy Lau",
+      "Jackie Chan"
+    ],
+    "worldRecords": [
+      {
+        "record": "Most table tennis Olympic gold medals",
+        "value": "32 gold medals"
+      },
+      {
+        "record": "Largest high-speed rail network",
+        "value": "40,000+ km"
+      }
+    ]
+  },
   "history": [
     {
       "year": 221,
