@@ -310,9 +310,9 @@
     "currentLeaders": [
       {
         "position": "Prime Minister",
-        "name": "Fumio Kishida",
+        "name": "Shigeru Ishiba",
         "party": "Liberal Democratic Party",
-        "termStart": "October 4, 2021"
+        "termStart": "October 1, 2024"
       },
       {
         "position": "Emperor",
@@ -472,7 +472,11 @@
       {
         "name": "Kyoto",
         "visitors": 5500000,
-        "attractions": ["Fushimi Inari", "Golden Pavilion", "Arashiyama Bamboo Grove"]
+        "attractions": [
+          "Fushimi Inari",
+          "Golden Pavilion",
+          "Arashiyama Bamboo Grove"
+        ]
       },
       {
         "name": "Osaka",

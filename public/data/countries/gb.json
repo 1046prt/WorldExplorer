@@ -144,7 +144,10 @@
       "source": "Thames Head, Gloucestershire",
       "mouth": "Thames Estuary",
       "imagePath": "/images/rivers/gb/river-thames.jpg",
-      "pathCoordinates": [{ "lat": 51.6844, "lng": -1.4544 }, { "lat": 51.45, "lng": 0.6 }]
+      "pathCoordinates": [
+        { "lat": 51.6844, "lng": -1.4544 },
+        { "lat": 51.45, "lng": 0.6 }
+      ]
     },
     {
       "slug": "river-severn",
@@ -154,7 +157,10 @@
       "source": "Plynlimon, Wales",
       "mouth": "Bristol Channel",
       "imagePath": "/images/rivers/gb/river-severn.jpg",
-      "pathCoordinates": [{ "lat": 52.4833, "lng": -3.7333 }, { "lat": 51.6167, "lng": -2.6667 }]
+      "pathCoordinates": [
+        { "lat": 52.4833, "lng": -3.7333 },
+        { "lat": 51.6167, "lng": -2.6667 }
+      ]
     }
   ],
   "institutions": [
@@ -174,7 +180,7 @@
       "founded": 1209,
       "globalRank": 7,
       "type": "Public Research University",
-      "imagePath": "/images/institutions/gb/university-of-cambridge.jpg"  
+      "imagePath": "/images/institutions/gb/university-of-cambridge.jpg"
     },
     {
       "slug": "imperial-college-london",
@@ -302,9 +308,9 @@
     "currentLeaders": [
       {
         "position": "Prime Minister",
-        "name": "Rishi Sunak",
-        "party": "Conservative",
-        "termStart": "October 25, 2022"
+        "name": "Keir Starmer",
+        "party": "Labour",
+        "termStart": "July 5, 2024"
       },
       {
         "position": "Monarch",
@@ -380,7 +386,13 @@
   },
   "culture": {
     "officialLanguages": ["English"],
-    "regionalLanguages": ["Welsh", "Scottish Gaelic", "Irish", "Cornish", "Ulster Scots"],
+    "regionalLanguages": [
+      "Welsh",
+      "Scottish Gaelic",
+      "Irish",
+      "Cornish",
+      "Ulster Scots"
+    ],
     "religionDemographics": {
       "Christianity": 59.5,
       "Non-religious": 25.7,

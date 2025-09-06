@@ -141,16 +141,15 @@
     "currentLeaders": [
       {
         "position": "President",
-        "name": "Joe Biden",
-        "party": "Democratic",
-        "termStart": "January 20, 2021",
-        "termEnd": "January 20, 2025"
+        "name": "Donald Trump",
+        "party": "Republican",
+        "termStart": "January 20, 2025"
       },
       {
         "position": "Vice President",
-        "name": "Kamala Harris",
-        "party": "Democratic",
-        "termStart": "January 20, 2021"
+        "name": "J.D. Vance",
+        "party": "Republican",
+        "termStart": "January 20, 2025"
       }
     ],
     "governmentType": "Federal Presidential Constitutional Republic",

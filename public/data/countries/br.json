@@ -377,18 +377,19 @@
     ]
   },
   "sportsEntertainment": {
-    "nationalSports": ["Football (Soccer)", "Volleyball", "Beach Volleyball", "Capoeira"],
+    "nationalSports": [
+      "Football (Soccer)",
+      "Volleyball",
+      "Beach Volleyball",
+      "Capoeira"
+    ],
     "olympicPerformance": {
       "totalMedals": 150,
       "goldMedals": 37,
       "silverMedals": 42,
       "bronzeMedals": 71
     },
-    "popularMovies": [
-      "City of God",
-      "Central Station",
-      "Elite Squad"
-    ],
+    "popularMovies": ["City of God", "Central Station", "Elite Squad"],
     "musicArtists": [
       "Bossa Nova (João Gilberto, Antonio Carlos Jobim)",
       "Caetano Veloso",
