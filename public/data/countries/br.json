@@ -335,5 +335,76 @@
       "type": "Public Research University",
       "imagePath": "/images/institutions/brazil/university-of-sao-paulo.jpg"
     }
-  ]
+  ],
+  "scienceTechnology": {
+    "spaceMissions": [
+      {
+        "name": "Brazilian Space Program",
+        "year": "1994-present",
+        "achievement": "INPE satellite development and space research"
+      },
+      {
+        "name": "Amazônia-1",
+        "year": 2021,
+        "achievement": "First Earth observation satellite fully developed in Brazil"
+      }
+    ],
+    "techStartups": [
+      "Nubank",
+      "StoneCo",
+      "PagSeguro",
+      "Totvs",
+      "Magazine Luiza",
+      "Mercado Libre"
+    ],
+    "patents": 6100,
+    "breakthroughs": [
+      {
+        "year": 1906,
+        "invention": "14-bis Aircraft",
+        "inventor": "Alberto Santos-Dumont"
+      },
+      {
+        "year": 1909,
+        "invention": "Chagas Disease Discovery",
+        "inventor": "Carlos Chagas"
+      },
+      {
+        "year": 1988,
+        "invention": "Biodegradable Plastic",
+        "inventor": "Brazilian researchers"
+      }
+    ]
+  },
+  "sportsEntertainment": {
+    "nationalSports": ["Football (Soccer)", "Volleyball", "Beach Volleyball", "Capoeira"],
+    "olympicPerformance": {
+      "totalMedals": 150,
+      "goldMedals": 37,
+      "silverMedals": 42,
+      "bronzeMedals": 71
+    },
+    "popularMovies": [
+      "City of God",
+      "Central Station",
+      "Elite Squad"
+    ],
+    "musicArtists": [
+      "Bossa Nova (João Gilberto, Antonio Carlos Jobim)",
+      "Caetano Veloso",
+      "Gilberto Gil",
+      "Anitta",
+      "Sérgio Mendes"
+    ],
+    "worldRecords": [
+      {
+        "record": "Most FIFA World Cup wins",
+        "value": "5 titles (1958, 1962, 1970, 1994, 2002)"
+      },
+      {
+        "record": "Largest rainforest",
+        "value": "Amazon rainforest covers 60% of Brazil"
+      }
+    ]
+  }
 }
