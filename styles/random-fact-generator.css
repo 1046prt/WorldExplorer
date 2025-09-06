@@ -34,7 +34,7 @@
 .rf-icon {
   width: 24px;
   height: 24px;
-  color: var(--color-warning);
+  color: var(--color-primary);
   filter: drop-shadow(0 2px 4px rgba(245, 158, 11, 0.3));
   animation: bulb-glow 2s ease-in-out infinite alternate;
 }

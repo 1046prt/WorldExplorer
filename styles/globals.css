@@ -119,39 +119,28 @@
   --color-primary-foreground: #ffffff;
   --color-primary-light: #c4b5fd;
   --color-primary-dark: #5b21b6;
-
   --color-secondary: #374151;
   --color-secondary-hover: #4b5563;
   --color-secondary-foreground: #f1f5f9;
-
   --color-background: #0f172a;
   --color-foreground: #f1f5f9;
-
   --color-card: #1e293b;
   --color-card-foreground: #f1f5f9;
   --color-card-border: #334155;
-
   --color-muted: #334155;
   --color-muted-foreground: #cbd5e1;
-
   --color-accent: #334155;
   --color-accent-foreground: #f1f5f9;
-
   --color-border: #334155;
   --color-input: #1e293b;
   --color-ring: #8b5cf6;
-
   --color-destructive: #f87171;
   --color-destructive-foreground: #ffffff;
-
   --color-success: #34d399;
   --color-warning: #fbbf24;
   --color-info: #60a5fa;
-
-  /* Additional color variables for compatibility */
   --color-popover: #1e293b;
   --color-popover-foreground: #f1f5f9;
-
   --gradient-background: linear-gradient(
     135deg,
     #0f172a 0%,
@@ -198,7 +187,6 @@ button:hover {
   text-decoration: none;
 }
 
-/* Fix link color changes after visit/click */
 a:visited {
   color: inherit;
 }
@@ -207,7 +195,6 @@ a:active {
   color: inherit;
 }
 
-/* Ensure component links maintain their intended colors */
 .navigation-category-button:visited,
 .navigation-category-button:active,
 .country-card:visited,

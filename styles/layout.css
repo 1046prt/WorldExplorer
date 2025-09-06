@@ -849,6 +849,7 @@
 
 .h-6 {
   height: 1.5rem;
+  color: var(--color-primary);
 }
 
 .h-8 {

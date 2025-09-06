@@ -50,7 +50,6 @@
   }
 }
 
-/* Mobile responsive adjustments */
 @media (max-width: 768px) {
   .institutions-title {
     font-size: var(--font-size-xl);
@@ -75,11 +74,6 @@
   gap: var(--spacing-sm);
   width: 100%;
   box-sizing: border-box;
-}
-
-.institution-card:hover {
-  box-shadow: var(--shadow-lg);
-  transform: translateY(-2px);
 }
 
 .institution-top {
@@ -120,15 +114,8 @@
   color: var(--color-muted-foreground);
 }
 
-/* Mobile responsive adjustments */
 @media (max-width: 768px) {
-  .institution-card {
-    padding: var(--spacing-sm);
-  }
 
-  .institution-card:hover {
-    transform: none;
-  }
 
   .institution-top {
     flex-direction: column;
@@ -149,9 +136,7 @@
 }
 
 @media (max-width: 480px) {
-  .institution-card {
-    padding: var(--spacing-xs);
-  }
+
 
   .institution-name {
     font-size: var(--font-size-xs);
@@ -185,8 +170,7 @@
 }
 
 .badge.secondary {
-  background-color: var(--color-secondary-hover);
-  color: var(--color-secondary-foreground);
+display: none;
 }
 
 .badge.outline {
@@ -215,7 +199,6 @@
   min-width: 0;
 }
 
-/* Mobile responsive adjustments for images */
 @media (max-width: 768px) {
   .institution-image {
     height: 120px;

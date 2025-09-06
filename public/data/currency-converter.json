@@ -1,0 +1,131 @@
+{
+  "currencies": [
+    { "code": "USD", "name": "US Dollar", "symbol": "$", "flag": "🇺🇸" },
+    { "code": "EUR", "name": "Euro", "symbol": "€", "flag": "🇪🇺" },
+    { "code": "GBP", "name": "British Pound", "symbol": "£", "flag": "🇬🇧" },
+    { "code": "JPY", "name": "Japanese Yen", "symbol": "¥", "flag": "🇯🇵" },
+    { "code": "CNY", "name": "Chinese Yuan", "symbol": "¥", "flag": "🇨🇳" },
+    { "code": "CAD", "name": "Canadian Dollar", "symbol": "C$", "flag": "🇨🇦" },
+    {
+      "code": "AUD",
+      "name": "Australian Dollar",
+      "symbol": "A$",
+      "flag": "🇦🇺"
+    },
+    { "code": "CHF", "name": "Swiss Franc", "symbol": "Fr", "flag": "🇨🇭" },
+    { "code": "INR", "name": "Indian Rupee", "symbol": "₹", "flag": "🇮🇳" },
+    { "code": "BRL", "name": "Brazilian Real", "symbol": "R$", "flag": "🇧🇷" }
+  ],
+  "exchangeRates": {
+    "USD": {
+      "EUR": 0.8536,
+      "GBP": 0.7404,
+      "JPY": 147.41,
+      "CNY": 7.1335,
+      "CAD": 1.3835,
+      "AUD": 1.5247,
+      "CHF": 0.7993,
+      "INR": 88.21,
+      "BRL": 5.4143
+    },
+    "EUR": {
+      "USD": 1.1715,
+      "GBP": 0.8674,
+      "JPY": 172.73,
+      "CNY": 8.3582,
+      "CAD": 1.6211,
+      "AUD": 1.7862,
+      "CHF": 0.9361,
+      "INR": 103.35,
+      "BRL": 6.3442
+    },
+    "GBP": {
+      "USD": 1.3505,
+      "EUR": 1.1527,
+      "JPY": 199.09,
+      "CNY": 9.6379,
+      "CAD": 1.8687,
+      "AUD": 2.0591,
+      "CHF": 1.0795,
+      "INR": 119.14,
+      "BRL": 7.3135
+    },
+    "JPY": {
+      "USD": 0.006784,
+      "EUR": 0.00579,
+      "GBP": 0.005023,
+      "CNY": 0.0484,
+      "CAD": 0.009385,
+      "AUD": 0.010342,
+      "CHF": 0.005424,
+      "INR": 0.5985,
+      "BRL": 0.03673
+    },
+    "CNY": {
+      "USD": 0.1402,
+      "EUR": 0.1196,
+      "GBP": 0.1038,
+      "JPY": 20.66,
+      "CAD": 0.194,
+      "AUD": 0.2137,
+      "CHF": 0.1121,
+      "INR": 12.37,
+      "BRL": 0.7587
+    },
+    "CAD": {
+      "USD": 0.7228,
+      "EUR": 0.6169,
+      "GBP": 0.5351,
+      "JPY": 106.54,
+      "CNY": 5.1546,
+      "AUD": 1.102,
+      "CHF": 0.5777,
+      "INR": 63.74,
+      "BRL": 3.9131
+    },
+    "AUD": {
+      "USD": 0.6558,
+      "EUR": 0.5598,
+      "GBP": 0.4856,
+      "JPY": 96.67,
+      "CNY": 4.6781,
+      "CAD": 0.9075,
+      "CHF": 0.5243,
+      "INR": 57.84,
+      "BRL": 3.5515
+    },
+    "CHF": {
+      "USD": 1.251,
+      "EUR": 1.0683,
+      "GBP": 0.9264,
+      "JPY": 184.37,
+      "CNY": 8.925,
+      "CAD": 1.7311,
+      "AUD": 1.9073,
+      "INR": 110.31,
+      "BRL": 6.7735
+    },
+    "INR": {
+      "USD": 0.01134,
+      "EUR": 0.009677,
+      "GBP": 0.008394,
+      "JPY": 1.671,
+      "CNY": 0.08086,
+      "CAD": 0.01569,
+      "AUD": 0.01729,
+      "CHF": 0.009065,
+      "BRL": 0.0614
+    },
+    "BRL": {
+      "USD": 0.1847,
+      "EUR": 0.1576,
+      "GBP": 0.1368,
+      "JPY": 27.22,
+      "CNY": 1.3177,
+      "CAD": 0.2555,
+      "AUD": 0.2816,
+      "CHF": 0.1476,
+      "INR": 16.29
+    }
+  }
+}

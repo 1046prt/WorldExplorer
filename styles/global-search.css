@@ -1,4 +1,3 @@
-/* Global Search Component Styles */
 .global-search-container {
   position: relative;
   width: 100%;
@@ -134,7 +133,6 @@
   font-size: var(--font-size-sm);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .global-search-input {
     height: 2.25rem;

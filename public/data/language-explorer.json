@@ -1,0 +1,145 @@
+{
+  "phrases": {
+    "title": "Common Phrases",
+    "data": [
+      {
+        "language": "Arabic",
+        "country": "Saudi Arabia",
+        "phrase": "مرحبا، كيف حالك؟",
+        "translation": "Hello, how are you?",
+        "flag": "🇸🇦"
+      },
+      {
+        "language": "English",
+        "country": "Australia",
+        "phrase": "G'day, how are you?",
+        "translation": "Hello, how are you?",
+        "flag": "🇦🇺"
+      },
+      {
+        "language": "Portuguese",
+        "country": "Brazil",
+        "phrase": "Olá, como você está?",
+        "translation": "Hello, how are you?",
+        "flag": "🇧🇷"
+      },
+      {
+        "language": "English",
+        "country": "Canada",
+        "phrase": "Hello, how are you?",
+        "translation": "Hello, how are you?",
+        "flag": "🇨🇦"
+      },
+      {
+        "language": "German",
+        "country": "Germany",
+        "phrase": "Hallo, wie geht es dir?",
+        "translation": "Hello, how are you?",
+        "flag": "🇩🇪"
+      },
+      {
+        "language": "Spanish",
+        "country": "Spain",
+        "phrase": "Hola, ¿cómo estás?",
+        "translation": "Hello, how are you?",
+        "flag": "🇪🇸"
+      },
+      {
+        "language": "French",
+        "country": "France",
+        "phrase": "Bonjour, comment allez-vous?",
+        "translation": "Hello, how are you?",
+        "flag": "🇫🇷"
+      },
+      {
+        "language": "English",
+        "country": "United Kingdom",
+        "phrase": "Hello, how are you?",
+        "translation": "Hello, how are you?",
+        "flag": "🇬🇧"
+      },
+      {
+        "language": "Hindi",
+        "country": "India",
+        "phrase": "नमस्ते, आप कैसे हैं?",
+        "translation": "Hello, how are you?",
+        "flag": "🇮🇳"
+      },
+      {
+        "language": "Italian",
+        "country": "Italy",
+        "phrase": "Ciao, come stai?",
+        "translation": "Hello, how are you?",
+        "flag": "🇮🇹"
+      },
+      {
+        "language": "Japanese",
+        "country": "Japan",
+        "phrase": "こんにちは、元気ですか？",
+        "translation": "Hello, how are you?",
+        "flag": "🇯🇵"
+      },
+      {
+        "language": "Russian",
+        "country": "Russia",
+        "phrase": "Привет, как дела?",
+        "translation": "Hello, how are you?",
+        "flag": "🇷🇺"
+      },
+      {
+        "language": "English",
+        "country": "United States",
+        "phrase": "Hey, how are you?",
+        "translation": "Hello, how are you?",
+        "flag": "🇺🇸"
+      }
+    ]
+  },
+  "scripts": {
+    "title": "Writing Systems",
+    "data": [
+      {
+        "name": "Arabic",
+        "example": "مرحبا بالعالم",
+        "countries": "Saudi Arabia, Middle East, North Africa",
+        "type": "Abjad",
+        "image": "/images/writting/arabic.png"
+      },
+      {
+        "name": "Latin",
+        "example": "Hello World",
+        "countries": "Australia, Brazil, Canada, Germany, Spain, France, UK, Italy, US",
+        "type": "Alphabet",
+        "image": "/images/writting/latin.png"
+      },
+      {
+        "name": "Devanagari",
+        "example": "नमस्ते संसार",
+        "countries": "India, Nepal",
+        "type": "Abugida",
+        "image": "/images/writting/devanagari.png"
+      },
+      {
+        "name": "Kanji & Kana",
+        "example": "こんにちは世界",
+        "countries": "Japan",
+        "type": "Syllabary + Logographic",
+        "image": "/images/writting/japanese.png"
+      },
+      {
+        "name": "Cyrillic",
+        "example": "Привет мир",
+        "countries": "Russia, Eastern Europe",
+        "type": "Alphabet",
+        "image": "/images/writting/russian.png"
+      },
+      {
+        "name": "Chinese Characters",
+        "example": "你好世界",
+        "countries": "China, Taiwan, Singapore",
+        "type": "Logographic",
+        "image": "/images/writting/chinese.png"
+      }
+    ]
+  }
+}

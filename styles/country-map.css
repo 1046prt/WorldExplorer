@@ -46,11 +46,8 @@
   );
 }
 
-/* Mobile responsive adjustments */
 @media (max-width: 768px) {
-  .country-map {
-    padding: var(--spacing-md);
-  }
+
 
   .map-title {
     font-size: var(--font-size-xl);
@@ -62,9 +59,7 @@
 }
 
 @media (max-width: 480px) {
-  .country-map {
-    padding: var(--spacing-sm);
-  }
+
 
   .map-title {
     font-size: var(--font-size-lg);
@@ -118,7 +113,6 @@
   margin-top: var(--spacing-xs);
 }
 
-/* Mobile responsive adjustments for fallback */
 @media (max-width: 768px) {
   .map-fallback-emoji {
     font-size: var(--font-size-3xl);
@@ -170,7 +164,6 @@
   overflow-wrap: break-word;
 }
 
-/* Mobile responsive adjustments for map details */
 @media (max-width: 768px) {
   .map-details {
     grid-template-columns: 1fr;

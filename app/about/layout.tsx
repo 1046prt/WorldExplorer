@@ -1,22 +1,15 @@
-import type { Metadata } from "next";
+import { Metadata } from "next";
+import { generateSEOMetadata } from "@/components/seo/seo-config";
 
 export const metadata: Metadata = {
-  title: "About - WorldExplorer",
-  description:
-    "Learn about WorldExplorer, our mission to make geography and cultural education accessible worldwide. Meet our contributors and discover our technology stack.",
-  keywords: [
-    "about worldexplorer",
-    "geography education",
-    "cultural learning",
-    "interactive maps",
-    "country information",
-  ],
-  openGraph: {
-    title: "About WorldExplorer",
+  ...generateSEOMetadata({
+    title: "About WorldExplorer - Our Mission & Team",
     description:
-      "A comprehensive educational platform for exploring countries, cultures, and landmarks worldwide.",
-    type: "website",
-  },
+      "Learn about WorldExplorer, our mission to make world exploration accessible through interactive educational tools. Meet our team and discover our story behind creating this comprehensive geography platform.",
+    keywords:
+      "about worldexplorer, mission, team, educational platform, world exploration, interactive learning, geography education, about us, our story",
+    canonical: "https://theworldexplorer.vercel.app/about",
+  }),
 };
 
 export default function AboutLayout({
@@ -24,5 +17,5 @@ export default function AboutLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return <>{children}</>;
 }

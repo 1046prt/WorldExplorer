@@ -1,5 +1,3 @@
-/* About Page Styles - Mobile First Approach */
-
 .about-page {
   min-height: 100vh;
   background: var(--color-background);
@@ -13,7 +11,6 @@
   padding: 1rem;
 }
 
-/* Hero Section - Mobile First */
 .about-hero {
   text-align: center;
   margin-bottom: 2rem;
@@ -36,7 +33,7 @@
 }
 
 .about-hero-title {
-  font-size: 1.875rem; /* 30px */
+  font-size: 1.875rem;
   font-weight: 700;
   color: var(--color-foreground);
   margin: 0;
@@ -44,14 +41,14 @@
 }
 
 .about-hero-tagline {
-  font-size: 0.875rem; /* 14px */
+  font-size: 0.875rem;
   color: var(--color-primary);
   font-weight: 500;
   margin-top: 0.5rem;
 }
 
 .about-hero-description {
-  font-size: 0.875rem; /* 14px */
+  font-size: 0.875rem;
   color: var(--color-muted-foreground);
   max-width: 100%;
   margin: 1rem auto 0;
@@ -59,7 +56,6 @@
   padding: 0 0.5rem;
 }
 
-/* Section Cards - Mobile First */
 .about-section {
   background: var(--color-card);
   border-radius: 0.75rem;
@@ -89,7 +85,7 @@
 }
 
 .about-section-title {
-  font-size: 1.25rem; /* 20px */
+  font-size: 1.25rem;
   font-weight: 600;
   color: var(--color-foreground);
   margin: 0;
@@ -97,19 +93,18 @@
 }
 
 .about-section-text {
-  font-size: 0.875rem; /* 14px */
+  font-size: 0.875rem;
   color: var(--color-muted-foreground);
   line-height: 1.6;
 }
 
-/* Features Section - Mobile First */
 .about-features-section {
   margin-bottom: 2rem;
 }
 
 .about-features-title {
   text-align: left;
-  font-size: 1.25rem; /* 20px */
+  font-size: 1.25rem;
   font-weight: 600;
   color: var(--color-foreground);
   margin-bottom: 1.5rem;
@@ -124,15 +119,10 @@
 
 .about-feature-card {
   background: var(--color-card);
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-primary);
   border-radius: 0.75rem;
   padding: 1rem;
   transition: all 0.2s ease;
-}
-
-.about-feature-card:hover {
-  border-color: var(--color-primary);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 .about-feature-header {
@@ -144,7 +134,7 @@
 }
 
 .about-feature-icon {
-  font-size: 1.5rem; /* 24px */
+  font-size: 1.5rem;
   background: var(--color-accent);
   padding: 0.75rem;
   border-radius: 0.5rem;
@@ -155,7 +145,7 @@
 }
 
 .about-feature-title {
-  font-size: 1rem; /* 16px */
+  font-size: 1rem;
   font-weight: 600;
   color: var(--color-foreground);
   margin: 0;
@@ -165,10 +155,9 @@
 .about-feature-description {
   color: var(--color-muted-foreground);
   line-height: 1.5;
-  font-size: 0.875rem; /* 14px */
+  font-size: 0.875rem;
 }
 
-/* Tech Stack Section - Mobile First */
 .about-tech-section {
   background: var(--color-card);
   border: 1px solid var(--color-border);
@@ -212,7 +201,7 @@
   margin-bottom: 0.5rem;
   padding-left: 1rem;
   position: relative;
-  font-size: 0.875rem; /* 14px */
+  font-size: 0.875rem;
   line-height: 1.5;
 }
 
@@ -224,7 +213,6 @@
   font-weight: bold;
 }
 
-/* Contributors Section - Mobile First */
 .about-contributors-section {
   background: var(--color-card);
   border: 1px solid var(--color-border);
@@ -255,7 +243,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1rem; /* 16px */
+  font-size: 1rem;
   font-weight: 700;
   color: white;
 }
@@ -269,7 +257,7 @@
 }
 
 .about-contributor-name {
-  font-size: 1rem; /* 16px */
+  font-size: 1rem;
   font-weight: 600;
   color: var(--color-foreground);
   margin-bottom: 0.25rem;
@@ -278,7 +266,7 @@
 .about-contributor-role {
   color: var(--color-muted-foreground);
   margin-bottom: 0.75rem;
-  font-size: 0.75rem; /* 12px */
+  font-size: 0.75rem;
 }
 
 .about-contributor-links {
@@ -314,12 +302,11 @@
   color: white;
   padding: 0.25rem 0.5rem;
   border-radius: 9999px;
-  font-size: 0.75rem; /* 12px */
+  font-size: 0.75rem;
   font-weight: 500;
   gap: 0.25rem;
 }
 
-/* Contributing Section - Mobile First */
 .about-contributing-section {
   background: var(--color-card);
   border: 1px solid var(--color-border);
@@ -342,7 +329,7 @@
 }
 
 .about-contributing-card-title {
-  font-size: 1rem; /* 16px */
+  font-size: 1rem;
   font-weight: 600;
   color: var(--color-foreground);
   margin-bottom: 0.75rem;
@@ -367,11 +354,10 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.875rem; /* 14px */
+  font-size: 0.875rem;
   line-height: 1.4;
 }
 
-/* Call to Action - Mobile First */
 .about-cta-section {
   background: var(--color-primary);
   color: var(--color-primary-foreground);
@@ -381,14 +367,14 @@
 }
 
 .about-cta-title {
-  font-size: 1.5rem; /* 24px */
+  font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 0.75rem;
   line-height: 1.3;
 }
 
 .about-cta-description {
-  font-size: 0.875rem; /* 14px */
+  font-size: 0.875rem;
   margin-bottom: 1.5rem;
   opacity: 0.9;
   max-width: 100%;
@@ -415,7 +401,7 @@
   border: 2px solid transparent;
   width: 100%;
   max-width: 280px;
-  font-size: 0.875rem; /* 14px */
+  font-size: 0.875rem;
 }
 
 .about-cta-button.primary {
@@ -438,7 +424,6 @@
   color: var(--color-primary);
 }
 
-/* Tablet Styles */
 @media (min-width: 640px) {
   .about-container {
     padding: 1.5rem;
@@ -460,15 +445,15 @@
   }
 
   .about-hero-title {
-    font-size: 2.25rem; /* 36px */
+    font-size: 2.25rem;
   }
 
   .about-hero-tagline {
-    font-size: 1rem; /* 16px */
+    font-size: 1rem;
   }
 
   .about-hero-description {
-    font-size: 1rem; /* 16px */
+    font-size: 1rem;
     max-width: 600px;
   }
 
@@ -483,15 +468,15 @@
   }
 
   .about-section-title {
-    font-size: 1.5rem; /* 24px */
+    font-size: 1.5rem;
   }
 
   .about-section-text {
-    font-size: 1rem; /* 16px */
+    font-size: 1rem;
   }
 
   .about-features-title {
-    font-size: 1.5rem; /* 24px */
+    font-size: 1.5rem;
     text-align: center;
   }
 
@@ -511,11 +496,11 @@
   }
 
   .about-feature-title {
-    font-size: 1.125rem; /* 18px */
+    font-size: 1.125rem;
   }
 
   .about-feature-description {
-    font-size: 1rem; /* 16px */
+    font-size: 1rem;
   }
 
   .about-tech-grid {
@@ -526,7 +511,7 @@
   .about-tech-category-title {
     flex-direction: row;
     align-items: center;
-    font-size: 1.125rem; /* 18px */
+    font-size: 1.125rem;
   }
 
   .about-contributors-grid {
@@ -537,15 +522,15 @@
   .about-contributor-avatar {
     width: 80px;
     height: 80px;
-    font-size: 1.25rem; /* 20px */
+    font-size: 1.25rem;
   }
 
   .about-contributor-name {
-    font-size: 1.125rem; /* 18px */
+    font-size: 1.125rem;
   }
 
   .about-contributor-role {
-    font-size: 0.875rem; /* 14px */
+    font-size: 0.875rem;
   }
 
   .about-contributing-grid {
@@ -556,7 +541,7 @@
   .about-contributing-card-title {
     flex-direction: row;
     align-items: center;
-    font-size: 1.125rem; /* 18px */
+    font-size: 1.125rem;
   }
 
   .about-cta-section {
@@ -564,11 +549,11 @@
   }
 
   .about-cta-title {
-    font-size: 2rem; /* 32px */
+    font-size: 2rem;
   }
 
   .about-cta-description {
-    font-size: 1rem; /* 16px */
+    font-size: 1rem;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -586,7 +571,6 @@
   }
 }
 
-/* Desktop Styles */
 @media (min-width: 1024px) {
   .about-container {
     padding: 3rem 2rem;
@@ -603,15 +587,15 @@
   }
 
   .about-hero-title {
-    font-size: 3rem; /* 48px */
+    font-size: 3rem;
   }
 
   .about-hero-tagline {
-    font-size: 1.125rem; /* 18px */
+    font-size: 1.125rem;
   }
 
   .about-hero-description {
-    font-size: 1.125rem; /* 18px */
+    font-size: 1.125rem;
     max-width: 700px;
   }
 
@@ -621,11 +605,11 @@
   }
 
   .about-section-title {
-    font-size: 2rem; /* 32px */
+    font-size: 2rem;
   }
 
   .about-features-title {
-    font-size: 2rem; /* 32px */
+    font-size: 2rem;
     margin-bottom: 2rem;
   }
 
@@ -650,10 +634,10 @@
   }
 
   .about-cta-title {
-    font-size: 2.5rem; /* 40px */
+    font-size: 2.5rem;
   }
 
   .about-cta-description {
-    font-size: 1.125rem; /* 18px */
+    font-size: 1.125rem;
   }
 }

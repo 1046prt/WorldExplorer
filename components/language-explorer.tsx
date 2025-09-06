@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
+import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Languages, Volume2, X } from "lucide-react";
 import "@/styles/language-explorer.css";
@@ -22,163 +23,50 @@ interface WritingSystem {
   image: string;
 }
 
-const languageData = {
+interface LanguageData {
   phrases: {
-    title: "Common Phrases",
-    icon: Volume2,
-    data: [
-      {
-        language: "Arabic",
-        country: "Saudi Arabia",
-        phrase: "مرحبا، كيف حالك؟",
-        translation: "Hello, how are you?",
-        flag: "🇸🇦",
-      },
-      {
-        language: "English",
-        country: "Australia",
-        phrase: "G'day, how are you?",
-        translation: "Hello, how are you?",
-        flag: "🇦🇺",
-      },
-      {
-        language: "Portuguese",
-        country: "Brazil",
-        phrase: "Olá, como você está?",
-        translation: "Hello, how are you?",
-        flag: "🇧🇷",
-      },
-      {
-        language: "English",
-        country: "Canada",
-        phrase: "Hello, how are you?",
-        translation: "Hello, how are you?",
-        flag: "🇨🇦",
-      },
-      {
-        language: "German",
-        country: "Germany",
-        phrase: "Hallo, wie geht es dir?",
-        translation: "Hello, how are you?",
-        flag: "🇩🇪",
-      },
-      {
-        language: "Spanish",
-        country: "Spain",
-        phrase: "Hola, ¿cómo estás?",
-        translation: "Hello, how are you?",
-        flag: "🇪🇸",
-      },
-      {
-        language: "French",
-        country: "France",
-        phrase: "Bonjour, comment allez-vous?",
-        translation: "Hello, how are you?",
-        flag: "🇫🇷",
-      },
-      {
-        language: "English",
-        country: "United Kingdom",
-        phrase: "Hello, how are you?",
-        translation: "Hello, how are you?",
-        flag: "🇬🇧",
-      },
-      {
-        language: "Hindi",
-        country: "India",
-        phrase: "नमस्ते, आप कैसे हैं?",
-        translation: "Hello, how are you?",
-        flag: "🇮🇳",
-      },
-      {
-        language: "Italian",
-        country: "Italy",
-        phrase: "Ciao, come stai?",
-        translation: "Hello, how are you?",
-        flag: "🇮🇹",
-      },
-      {
-        language: "Japanese",
-        country: "Japan",
-        phrase: "こんにちは、元気ですか？",
-        translation: "Hello, how are you?",
-        flag: "🇯🇵",
-      },
-      {
-        language: "Russian",
-        country: "Russia",
-        phrase: "Привет, как дела?",
-        translation: "Hello, how are you?",
-        flag: "🇷🇺",
-      },
-      {
-        language: "English",
-        country: "United States",
-        phrase: "Hey, how are you?",
-        translation: "Hello, how are you?",
-        flag: "🇺🇸",
-      },
-    ],
-  },
+    title: string;
+    data: LanguagePhrase[];
+  };
   scripts: {
-    title: "Writing Systems",
-    icon: Languages,
-    data: [
-      {
-        name: "Arabic",
-        example: "مرحبا بالعالم",
-        countries: "Saudi Arabia, Middle East, North Africa",
-        type: "Abjad",
-        image: "/images/writting/arabic.png",
-      },
-      {
-        name: "Latin",
-        example: "Hello World",
-        countries:
-          "Australia, Brazil, Canada, Germany, Spain, France, UK, Italy, US",
-        type: "Alphabet",
-        image: "/images/writting/latin.png",
-      },
-      {
-        name: "Devanagari",
-        example: "नमस्ते संसार",
-        countries: "India, Nepal",
-        type: "Abugida",
-        image: "/images/writting/devanagari.png",
-      },
-      {
-        name: "Kanji & Kana",
-        example: "こんにちは世界",
-        countries: "Japan",
-        type: "Syllabary + Logographic",
-        image: "/images/writting/japanese.png",
-      },
-      {
-        name: "Cyrillic",
-        example: "Привет мир",
-        countries: "Russia, Eastern Europe",
-        type: "Alphabet",
-        image: "/images/writting/russian.png",
-      },
-      {
-        name: "Chinese Characters",
-        example: "你好世界",
-        countries: "China, Taiwan, Singapore",
-        type: "Logographic",
-        image: "/images/writting/chinese.png",
-      },
-    ],
-  },
-};
+    title: string;
+    data: WritingSystem[];
+  };
+}
 
 export default function LanguageExplorer() {
   const [activeSection, setActiveSection] = useState("phrases");
   const [selectedScript, setSelectedScript] = useState<WritingSystem | null>(
     null
   );
+  const [languageData, setLanguageData] = useState<LanguageData | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-  const currentData = languageData[activeSection as keyof typeof languageData];
-  const IconComponent = currentData.icon;
+  // Load language data from JSON file
+  useEffect(() => {
+    const loadLanguageData = async () => {
+      try {
+        setLoading(true);
+        const response = await fetch("/data/language-explorer.json");
+        if (!response.ok) {
+          throw new Error("Failed to load language data");
+        }
+        const data: LanguageData = await response.json();
+        setLanguageData(data);
+        setError(null);
+      } catch (err) {
+        setError(
+          err instanceof Error ? err.message : "Failed to load language data"
+        );
+        console.error("Error loading language data:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadLanguageData();
+  }, []);
 
   // Scroll lock effect
   useEffect(() => {
@@ -189,6 +77,45 @@ export default function LanguageExplorer() {
     }
     return () => document.body.classList.remove("body-lock");
   }, [selectedScript]);
+
+  // Loading state
+  if (loading) {
+    return (
+      <Card>
+        <CardContent className="language-explorer-loading">
+          <div className="loading-spinner">
+            <Languages className="animate-spin" size={32} />
+          </div>
+          <h3 className="loading-title">Loading Language Data...</h3>
+          <p className="loading-subtitle">
+            Gathering global language information
+          </p>
+        </CardContent>
+      </Card>
+    );
+  }
+
+  // Error state
+  if (error) {
+    return (
+      <Card>
+        <CardContent className="language-explorer-error">
+          <div className="error-icon">
+            <X className="text-red-500" size={32} />
+          </div>
+          <h3 className="error-title">Error Loading Data</h3>
+          <p className="error-subtitle">{error}</p>
+        </CardContent>
+      </Card>
+    );
+  }
+
+  if (!languageData) {
+    return null;
+  }
+
+  const currentData = languageData[activeSection as keyof typeof languageData];
+  const IconComponent = activeSection === "phrases" ? Volume2 : Languages;
 
   const renderPhrases = () => (
     <div className="le-grid">
@@ -251,9 +178,11 @@ export default function LanguageExplorer() {
               <h2 className="le-modal-title">{selectedScript.name}</h2>
               <div className="le-modal-type">{selectedScript.type}</div>
               <div className="le-modal-example">{selectedScript.example}</div>
-              <img
+              <Image
                 src={selectedScript.image}
                 alt={selectedScript.name}
+                width={500}
+                height={300}
                 className="le-modal-image"
               />
               <p className="le-modal-countries">{selectedScript.countries}</p>
@@ -283,7 +212,11 @@ export default function LanguageExplorer() {
                 }`}
                 onClick={() => setActiveSection(key)}
               >
-                <section.icon className="le-icon-small" />
+                {key === "phrases" ? (
+                  <Volume2 className="le-icon-small" />
+                ) : (
+                  <Languages className="le-icon-small" />
+                )}
                 {section.title}
               </button>
             ))}

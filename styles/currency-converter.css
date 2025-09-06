@@ -1,5 +1,3 @@
-/* Currency Converter Styles */
-
 .ccheader {
   display: flex;
   align-items: center;
@@ -171,7 +169,6 @@
   color: var(--color-foreground);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .form-grid {
     grid-template-columns: 1fr;

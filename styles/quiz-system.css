@@ -1,6 +1,6 @@
 .quiz-card {
   background-color: var(--color-card);
-  border: 1px solid var(--color-card-border);
+  border: 2px solid transparent;
   border-radius: var(--radius-lg);
   padding: var(--spacing-lg);
   box-shadow: var(--shadow-sm);
@@ -31,7 +31,7 @@
   align-items: center;
   gap: var(--spacing-sm);
   flex: 1;
-  min-width: 0; /* Allows flex item to shrink below content size */
+  min-width: 0; 
 }
 
 .quiz-timer {
@@ -43,7 +43,7 @@
 
 .quiz-time {
   font-weight: 600;
-  min-width: 35px; /* Ensures consistent width for timer */
+  min-width: 35px; 
 }
 
 .quiz-title {
@@ -234,7 +234,6 @@
   gap: var(--spacing-xs);
 }
 
-/* Loading and Error States */
 .loading-spinner {
   margin-bottom: var(--spacing-md);
 }
@@ -260,7 +259,6 @@
   }
 }
 
-/* Pause/Resume Button Styles */
 .btn-timer {
   background: transparent;
   border: 1px solid var(--color-border);
@@ -275,7 +273,6 @@
   border-color: var(--color-primary);
 }
 
-/* Pause Screen Styles */
 .quiz-pause-screen {
   text-align: center;
   padding: var(--spacing-xl) var(--spacing-lg);
@@ -311,7 +308,6 @@
   font-weight: 600;
 }
 
-/* Quiz Completion Styles */
 .quiz-completion-container {
   position: relative;
   min-height: 600px;
@@ -558,7 +554,6 @@
   color: var(--color-primary-foreground);
 }
 
-/* Confetti Animation */
 .confetti-container {
   position: absolute;
   top: 0;
@@ -608,7 +603,6 @@
   animation-delay: 1s;
 }
 
-/* Animations */
 @keyframes bounce {
   0%,
   20%,
@@ -645,7 +639,6 @@
   }
 }
 
-/* Mobile Responsive */
 @media (max-width: 640px) {
   .quiz-completion-card {
     margin: var(--spacing-md);

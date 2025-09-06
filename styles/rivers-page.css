@@ -1,5 +1,3 @@
-/* Rivers Page Styles */
-
 .rivers-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -144,7 +142,6 @@
   background-color: rgba(6, 182, 212, 0.2);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .rivers-grid {
     grid-template-columns: 1fr;

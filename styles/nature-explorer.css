@@ -183,10 +183,14 @@
   gap: var(--spacing-sm);
 }
 
+.nature-title-icon{
+  color: var(--color-primary);
+}
+
 .nature-card-title {
   font-size: var(--font-size-base);
   font-weight: 600;
-  color: var(--color-foreground);
+  color: var(--color-primary);
   margin: 0;
   line-height: var(--line-height-normal);
   word-wrap: break-word;
@@ -227,8 +231,8 @@
 }
 
 .nature-card-content strong {
-  color: var(--color-muted-foreground);
-  font-weight: 500;
+  color: var(--color-foreground);
+  font-weight: 700;
 }
 
 /* Simple Responsive Styles */

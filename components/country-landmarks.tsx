@@ -51,12 +51,10 @@ export function CountryLandmarks({ country }: CountryLandmarksProps) {
                 <p className="landmark-description">{landmark.whyFamous}</p>
                 <div className="landmark-footer">
                   <div className="landmark-coordinates">
+                    <p className="compass" >🧭</p>
                     {landmark.coordinates.lat.toFixed(4)},{" "}
                     {landmark.coordinates.lng.toFixed(4)}
                   </div>
-                  <Button size="sm" variant="ghost">
-                    <ExternalLink className="external-icon" />
-                  </Button>
                 </div>
               </div>
             </Card>
