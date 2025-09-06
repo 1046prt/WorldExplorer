@@ -185,5 +185,405 @@
       "type": "Public Research University",
       "imagePath": "/images/institutions/gb/imperial-college-london.jpg"
     }
-  ]
+  ],
+  "geography": {
+    "climateZones": ["Oceanic", "Highland"],
+    "geologicalFormations": [
+      {
+        "name": "Scottish Highlands",
+        "type": "Highlands",
+        "description": "Mountainous region in northern Scotland with ancient geology"
+      },
+      {
+        "name": "Pennines",
+        "type": "Mountain Range",
+        "description": "Chain of hills forming the backbone of northern England"
+      },
+      {
+        "name": "Lake District",
+        "type": "National Park",
+        "description": "Mountainous region in northwest England with glacial lakes"
+      }
+    ],
+    "naturalDisasters": [
+      {
+        "type": "Storm",
+        "name": "Great Storm of 1987",
+        "year": 1987,
+        "impact": "Severe windstorm that caused widespread damage across southern England"
+      },
+      {
+        "type": "Flood",
+        "name": "Winter Floods",
+        "year": 2015,
+        "impact": "Severe flooding across northern England and Scotland"
+      }
+    ],
+    "majorWaterBodies": [
+      {
+        "name": "Atlantic Ocean",
+        "type": "Ocean",
+        "coastline": "West Coast"
+      },
+      {
+        "name": "North Sea",
+        "type": "Sea",
+        "coastline": "East Coast"
+      },
+      {
+        "name": "English Channel",
+        "type": "Channel",
+        "coastline": "South Coast"
+      },
+      {
+        "name": "Irish Sea",
+        "type": "Sea",
+        "coastline": "Between Great Britain and Ireland"
+      }
+    ]
+  },
+  "heritage": {
+    "independenceDate": "N/A (Island nation, gradual unification)",
+    "foundingEvent": "Act of Union 1707 (Great Britain), 1801 (United Kingdom)",
+    "majorHistoricalFigures": [
+      {
+        "name": "Winston Churchill",
+        "role": "Prime Minister",
+        "period": "1940-1945, 1951-1955",
+        "achievement": "Led Britain through World War II, Nobel Prize in Literature"
+      },
+      {
+        "name": "Queen Elizabeth II",
+        "role": "Monarch",
+        "period": "1952-2022",
+        "achievement": "Longest-reigning British monarch, oversaw decolonization"
+      },
+      {
+        "name": "William Shakespeare",
+        "role": "Playwright/Poet",
+        "period": "1564-1616",
+        "achievement": "Greatest writer in English language, created timeless plays"
+      }
+    ],
+    "colonialHistory": [
+      {
+        "period": "16th-20th centuries",
+        "description": "British Empire, largest empire in history spanning all continents"
+      },
+      {
+        "period": "1947-1997",
+        "description": "Decolonization period, including independence of India and Hong Kong handover"
+      }
+    ],
+    "unescoSites": [
+      {
+        "name": "Stonehenge",
+        "year": 1986,
+        "type": "Cultural"
+      },
+      {
+        "name": "Tower of London",
+        "year": 1988,
+        "type": "Cultural"
+      },
+      {
+        "name": "City of Bath",
+        "year": 1987,
+        "type": "Cultural"
+      },
+      {
+        "name": "Giant's Causeway",
+        "year": 1986,
+        "type": "Natural"
+      }
+    ]
+  },
+  "politics": {
+    "currentLeaders": [
+      {
+        "position": "Prime Minister",
+        "name": "Rishi Sunak",
+        "party": "Conservative",
+        "termStart": "October 25, 2022"
+      },
+      {
+        "position": "Monarch",
+        "name": "King Charles III",
+        "party": "N/A",
+        "termStart": "September 8, 2022"
+      }
+    ],
+    "governmentType": "Constitutional Monarchy, Parliamentary Democracy",
+    "internationalMemberships": [
+      "United Nations (UN)",
+      "Commonwealth of Nations",
+      "North Atlantic Treaty Organization (NATO)",
+      "Group of Seven (G7)",
+      "Group of Twenty (G20)",
+      "Five Eyes Intelligence Alliance"
+    ]
+  },
+  "economy": {
+    "gdp": 3131000000000,
+    "gdpPerCapita": 46344,
+    "majorIndustries": [
+      "Financial Services",
+      "Manufacturing",
+      "Technology",
+      "Creative Industries",
+      "Aerospace",
+      "Automotive",
+      "Energy"
+    ],
+    "topExports": [
+      {
+        "product": "Cars",
+        "value": 35200000000
+      },
+      {
+        "product": "Crude Petroleum",
+        "value": 31800000000
+      },
+      {
+        "product": "Gold",
+        "value": 28900000000
+      },
+      {
+        "product": "Gas Turbines",
+        "value": 26700000000
+      }
+    ],
+    "topImports": [
+      {
+        "product": "Cars",
+        "value": 58100000000
+      },
+      {
+        "product": "Crude Petroleum",
+        "value": 34200000000
+      },
+      {
+        "product": "Gold",
+        "value": 33100000000
+      },
+      {
+        "product": "Refined Petroleum",
+        "value": 25400000000
+      }
+    ],
+    "employmentRate": 95.4,
+    "employmentSectors": {
+      "services": 80.4,
+      "industry": 18.2,
+      "agriculture": 1.4
+    }
+  },
+  "culture": {
+    "officialLanguages": ["English"],
+    "regionalLanguages": ["Welsh", "Scottish Gaelic", "Irish", "Cornish", "Ulster Scots"],
+    "religionDemographics": {
+      "Christianity": 59.5,
+      "Non-religious": 25.7,
+      "Islam": 4.4,
+      "Hinduism": 1.3,
+      "Sikhism": 0.7,
+      "Judaism": 0.4,
+      "Other": 8.0
+    },
+    "nationalFestivals": [
+      {
+        "name": "Guy Fawkes Night",
+        "date": "November 5",
+        "description": "Commemorates the failed Gunpowder Plot of 1605"
+      },
+      {
+        "name": "St. George's Day",
+        "date": "April 23",
+        "description": "National day of England, honoring the patron saint"
+      },
+      {
+        "name": "Burns Night",
+        "date": "January 25",
+        "description": "Scottish celebration of poet Robert Burns"
+      }
+    ],
+    "traditionalFoods": [
+      {
+        "name": "Fish and Chips",
+        "description": "National dish of battered fish with fried potatoes"
+      },
+      {
+        "name": "Afternoon Tea",
+        "description": "Traditional light meal with tea, sandwiches, and pastries"
+      },
+      {
+        "name": "Sunday Roast",
+        "description": "Traditional Sunday meal with roasted meat and vegetables"
+      },
+      {
+        "name": "Haggis",
+        "description": "Scottish savory pudding, national dish of Scotland"
+      }
+    ],
+    "nationalSymbols": {
+      "flag": "Union Jack",
+      "emblem": "Royal Coat of Arms",
+      "anthem": "God Save the King",
+      "flower": "Rose (England), Thistle (Scotland), Daffodil (Wales)",
+      "animal": "Lion",
+      "motto": "Dieu et mon droit"
+    }
+  },
+  "education": {
+    "literacyRate": 99.0,
+    "educationSystem": "Free compulsory education from ages 5-16, world-renowned universities",
+    "famousScientists": [
+      {
+        "name": "Isaac Newton",
+        "field": "Physics/Mathematics",
+        "achievement": "Laws of motion and universal gravitation, calculus"
+      },
+      {
+        "name": "Charles Darwin",
+        "field": "Biology",
+        "achievement": "Theory of evolution by natural selection"
+      },
+      {
+        "name": "Stephen Hawking",
+        "field": "Theoretical Physics",
+        "achievement": "Black hole physics and cosmology"
+      }
+    ],
+    "nobelPrizeWinners": 137
+  },
+  "tourism": {
+    "mostVisitedCities": [
+      {
+        "name": "London",
+        "visitors": 20000000,
+        "attractions": ["Big Ben", "Tower Bridge", "British Museum"]
+      },
+      {
+        "name": "Edinburgh",
+        "visitors": 4500000,
+        "attractions": ["Edinburgh Castle", "Royal Mile", "Arthur's Seat"]
+      },
+      {
+        "name": "Bath",
+        "visitors": 4100000,
+        "attractions": ["Roman Baths", "Royal Crescent", "Bath Abbey"]
+      }
+    ],
+    "adventureActivities": [
+      "Scottish Highlands Hiking",
+      "Lake District Walking",
+      "Cotswolds Touring",
+      "Welsh Mountain Climbing",
+      "Coastal Path Walking"
+    ],
+    "transportation": {
+      "airports": "Heathrow, Gatwick, Manchester, Edinburgh",
+      "railways": "National Rail network, London Underground",
+      "highways": "Motorway network (M1, M25, etc.)"
+    },
+    "visaRequirements": "Visa required for most non-EU visitors post-Brexit"
+  },
+  "demographics": {
+    "populationGrowth": [
+      { "year": 2020, "population": 67081000 },
+      { "year": 2021, "population": 67326569 },
+      { "year": 2022, "population": 67508936 },
+      { "year": 2023, "population": 67736802 }
+    ],
+    "urbanRural": {
+      "urban": 84.0,
+      "rural": 16.0
+    },
+    "lifeExpectancy": {
+      "total": 81.2,
+      "male": 79.4,
+      "female": 83.1
+    },
+    "ageDistribution": {
+      "youth": 17.6,
+      "workingAge": 63.5,
+      "elderly": 18.9
+    }
+  },
+  "scienceTechnology": {
+    "spaceMissions": [
+      {
+        "name": "UK Space Agency Programs",
+        "year": "2010-present",
+        "achievement": "Satellite programs and space research"
+      },
+      {
+        "name": "Tim Peake Mission",
+        "year": 2015,
+        "achievement": "First British astronaut to visit ISS"
+      },
+      {
+        "name": "OneWeb Constellation",
+        "year": "2019-present",
+        "achievement": "Global satellite internet constellation"
+      }
+    ],
+    "techStartups": [
+      "ARM Holdings",
+      "DeepMind",
+      "Revolut",
+      "Monzo",
+      "Rolls-Royce",
+      "BAE Systems"
+    ],
+    "patents": 24500,
+    "breakthroughs": [
+      {
+        "year": 1928,
+        "invention": "Penicillin",
+        "inventor": "Alexander Fleming"
+      },
+      {
+        "year": 1989,
+        "invention": "World Wide Web",
+        "inventor": "Tim Berners-Lee"
+      },
+      {
+        "year": 1865,
+        "invention": "Electromagnetic Theory",
+        "inventor": "James Clerk Maxwell"
+      }
+    ]
+  },
+  "sportsEntertainment": {
+    "nationalSports": ["Football", "Cricket", "Rugby", "Tennis"],
+    "olympicPerformance": {
+      "totalMedals": 918,
+      "goldMedals": 296,
+      "silverMedals": 323,
+      "bronzeMedals": 299
+    },
+    "popularMovies": [
+      "James Bond Series",
+      "Harry Potter Series",
+      "Four Weddings and a Funeral"
+    ],
+    "musicArtists": [
+      "The Beatles",
+      "Queen",
+      "Led Zeppelin",
+      "Adele",
+      "Ed Sheeran"
+    ],
+    "worldRecords": [
+      {
+        "record": "Home of football",
+        "value": "Football Association founded 1863"
+      },
+      {
+        "record": "Most Olympic medals in 2012 London Olympics",
+        "value": "65 medals as host nation"
+      }
+    ]
+  }
 }

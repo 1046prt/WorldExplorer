@@ -198,5 +198,398 @@
       "type": "Public Research University",
       "imagePath": "/images/institutions/japan/osaka-university.jpg"
     }
-  ]
+  ],
+  "geography": {
+    "climateZones": ["Subtropical", "Temperate", "Subarctic"],
+    "geologicalFormations": [
+      {
+        "name": "Japanese Alps",
+        "type": "Mountain Range",
+        "description": "Mountain ranges in central Honshu including Mount Fuji"
+      },
+      {
+        "name": "Ring of Fire",
+        "type": "Volcanic Arc",
+        "description": "Japan sits on active volcanic belt with over 100 active volcanoes"
+      },
+      {
+        "name": "Japanese Archipelago",
+        "type": "Island Chain",
+        "description": "Chain of 6,852 islands formed by volcanic activity"
+      }
+    ],
+    "naturalDisasters": [
+      {
+        "type": "Earthquake/Tsunami",
+        "name": "Great East Japan Earthquake",
+        "year": 2011,
+        "impact": "Magnitude 9.0 earthquake and tsunami causing nuclear disaster"
+      },
+      {
+        "type": "Earthquake",
+        "name": "Great Hanshin Earthquake",
+        "year": 1995,
+        "impact": "Magnitude 7.3 earthquake that devastated Kobe"
+      }
+    ],
+    "majorWaterBodies": [
+      {
+        "name": "Pacific Ocean",
+        "type": "Ocean",
+        "coastline": "East Coast"
+      },
+      {
+        "name": "Sea of Japan",
+        "type": "Sea",
+        "coastline": "West Coast"
+      },
+      {
+        "name": "Seto Inland Sea",
+        "type": "Sea",
+        "coastline": "Between Honshu, Shikoku, and Kyushu"
+      }
+    ]
+  },
+  "heritage": {
+    "independenceDate": "N/A (Never colonized)",
+    "foundingEvent": "Founding of Japan traditionally dated to 660 BC",
+    "majorHistoricalFigures": [
+      {
+        "name": "Emperor Meiji",
+        "role": "Emperor",
+        "period": "1868-1912",
+        "achievement": "Led Japan's modernization and transformation into world power"
+      },
+      {
+        "name": "Tokugawa Ieyasu",
+        "role": "Shogun",
+        "period": "1603-1605",
+        "achievement": "Founded Tokugawa shogunate, brought peace and stability"
+      },
+      {
+        "name": "Prince Shotoku",
+        "role": "Prince Regent",
+        "period": "593-622",
+        "achievement": "Promoted Buddhism and Chinese culture, wrote first constitution"
+      }
+    ],
+    "colonialHistory": [
+      {
+        "period": "1910-1945",
+        "description": "Japanese colonial empire including Korea, Taiwan, and Manchuria"
+      },
+      {
+        "period": "1945-1952",
+        "description": "Allied occupation under General MacArthur"
+      }
+    ],
+    "unescoSites": [
+      {
+        "name": "Mount Fuji",
+        "year": 2013,
+        "type": "Cultural"
+      },
+      {
+        "name": "Historic Monuments of Ancient Kyoto",
+        "year": 1994,
+        "type": "Cultural"
+      },
+      {
+        "name": "Hiroshima Peace Memorial",
+        "year": 1996,
+        "type": "Cultural"
+      },
+      {
+        "name": "Shrines and Temples of Nikko",
+        "year": 1999,
+        "type": "Cultural"
+      }
+    ]
+  },
+  "politics": {
+    "currentLeaders": [
+      {
+        "position": "Prime Minister",
+        "name": "Fumio Kishida",
+        "party": "Liberal Democratic Party",
+        "termStart": "October 4, 2021"
+      },
+      {
+        "position": "Emperor",
+        "name": "Emperor Naruhito",
+        "party": "N/A",
+        "termStart": "May 1, 2019"
+      }
+    ],
+    "governmentType": "Constitutional Monarchy, Parliamentary Democracy",
+    "internationalMemberships": [
+      "United Nations (UN)",
+      "Group of Seven (G7)",
+      "Group of Twenty (G20)",
+      "Asia-Pacific Economic Cooperation (APEC)",
+      "Association of Southeast Asian Nations (ASEAN) Plus Three",
+      "Comprehensive and Progressive Trans-Pacific Partnership (CPTPP)"
+    ]
+  },
+  "economy": {
+    "gdp": 4937000000000,
+    "gdpPerCapita": 39285,
+    "majorIndustries": [
+      "Automotive",
+      "Electronics",
+      "Machinery",
+      "Steel",
+      "Shipbuilding",
+      "Chemicals",
+      "Robotics"
+    ],
+    "topExports": [
+      {
+        "product": "Cars",
+        "value": 98500000000
+      },
+      {
+        "product": "Integrated Circuits",
+        "value": 48200000000
+      },
+      {
+        "product": "Vehicle Parts",
+        "value": 45800000000
+      },
+      {
+        "product": "Machinery",
+        "value": 40100000000
+      }
+    ],
+    "topImports": [
+      {
+        "product": "Crude Petroleum",
+        "value": 78900000000
+      },
+      {
+        "product": "Liquefied Natural Gas",
+        "value": 48300000000
+      },
+      {
+        "product": "Coal",
+        "value": 38700000000
+      },
+      {
+        "product": "Integrated Circuits",
+        "value": 35200000000
+      }
+    ],
+    "employmentRate": 97.4,
+    "employmentSectors": {
+      "services": 70.9,
+      "industry": 25.8,
+      "agriculture": 3.3
+    }
+  },
+  "culture": {
+    "officialLanguages": ["Japanese"],
+    "regionalLanguages": ["Ainu", "Ryukyuan", "Japanese Sign Language"],
+    "religionDemographics": {
+      "Shinto": 70.5,
+      "Buddhism": 67.2,
+      "Christianity": 1.5,
+      "Non-religious": 57.1,
+      "Other": 3.7
+    },
+    "nationalFestivals": [
+      {
+        "name": "Cherry Blossom Festival (Hanami)",
+        "date": "March-May",
+        "description": "Traditional custom of enjoying the beauty of cherry blossoms"
+      },
+      {
+        "name": "Golden Week",
+        "date": "Late April - Early May",
+        "description": "Week of national holidays including Constitution Day and Children's Day"
+      },
+      {
+        "name": "Obon Festival",
+        "date": "Mid-August",
+        "description": "Buddhist festival honoring ancestors"
+      }
+    ],
+    "traditionalFoods": [
+      {
+        "name": "Sushi",
+        "description": "Traditional dish of vinegared rice with fish and vegetables"
+      },
+      {
+        "name": "Ramen",
+        "description": "Noodle soup with various toppings and broths"
+      },
+      {
+        "name": "Tempura",
+        "description": "Light, crispy battered and fried seafood and vegetables"
+      },
+      {
+        "name": "Kaiseki",
+        "description": "Traditional multi-course haute cuisine"
+      }
+    ],
+    "nationalSymbols": {
+      "flag": "Hinomaru (Rising Sun)",
+      "emblem": "Imperial Seal",
+      "anthem": "Kimigayo",
+      "flower": "Cherry Blossom (Sakura)",
+      "animal": "Japanese Macaque",
+      "bird": "Green Pheasant"
+    }
+  },
+  "education": {
+    "literacyRate": 99.0,
+    "educationSystem": "6-3-3-4 system: 6 years elementary, 3 years junior high, 3 years senior high, 4 years university",
+    "famousScientists": [
+      {
+        "name": "Hideki Yukawa",
+        "field": "Physics",
+        "achievement": "Nobel Prize for predicting existence of mesons"
+      },
+      {
+        "name": "Shinya Yamanaka",
+        "field": "Medicine",
+        "achievement": "Nobel Prize for induced pluripotent stem cell research"
+      },
+      {
+        "name": "Akira Yoshino",
+        "field": "Chemistry",
+        "achievement": "Nobel Prize for development of lithium-ion batteries"
+      }
+    ],
+    "nobelPrizeWinners": 29
+  },
+  "tourism": {
+    "mostVisitedCities": [
+      {
+        "name": "Tokyo",
+        "visitors": 14000000,
+        "attractions": ["Tokyo Tower", "Senso-ji Temple", "Imperial Palace"]
+      },
+      {
+        "name": "Kyoto",
+        "visitors": 5500000,
+        "attractions": ["Fushimi Inari", "Golden Pavilion", "Arashiyama Bamboo Grove"]
+      },
+      {
+        "name": "Osaka",
+        "visitors": 4800000,
+        "attractions": ["Osaka Castle", "Dotonbori", "Universal Studios"]
+      }
+    ],
+    "adventureActivities": [
+      "Mount Fuji Climbing",
+      "Hot Spring (Onsen) Tours",
+      "Cherry Blossom Viewing",
+      "Traditional Temple Visits",
+      "Bullet Train (Shinkansen) Journeys"
+    ],
+    "transportation": {
+      "airports": "Narita, Haneda, Kansai, and regional airports",
+      "railways": "Extensive rail network including Shinkansen bullet trains",
+      "highways": "National expressway system"
+    },
+    "visaRequirements": "Visa-free for many countries up to 90 days, working holiday agreements"
+  },
+  "demographics": {
+    "populationGrowth": [
+      { "year": 2020, "population": 125710000 },
+      { "year": 2021, "population": 125502000 },
+      { "year": 2022, "population": 125124989 },
+      { "year": 2023, "population": 124612530 }
+    ],
+    "urbanRural": {
+      "urban": 91.8,
+      "rural": 8.2
+    },
+    "lifeExpectancy": {
+      "total": 84.3,
+      "male": 81.1,
+      "female": 87.6
+    },
+    "ageDistribution": {
+      "youth": 12.0,
+      "workingAge": 59.4,
+      "elderly": 28.6
+    }
+  },
+  "scienceTechnology": {
+    "spaceMissions": [
+      {
+        "name": "Hayabusa Missions",
+        "year": "2003-2020",
+        "achievement": "Sample return missions from asteroids"
+      },
+      {
+        "name": "Akatsuki",
+        "year": 2010,
+        "achievement": "Venus climate orbiter mission"
+      },
+      {
+        "name": "International Space Station",
+        "year": "1998-present",
+        "achievement": "Kibo laboratory module contribution"
+      }
+    ],
+    "techStartups": [
+      "Sony",
+      "Nintendo",
+      "SoftBank",
+      "Rakuten",
+      "Toyota",
+      "Honda"
+    ],
+    "patents": 307969,
+    "breakthroughs": [
+      {
+        "year": 1979,
+        "invention": "Walkman",
+        "inventor": "Sony"
+      },
+      {
+        "year": 1991,
+        "invention": "Lithium-ion Battery",
+        "inventor": "Akira Yoshino"
+      },
+      {
+        "year": 1985,
+        "invention": "Game Boy",
+        "inventor": "Nintendo"
+      }
+    ]
+  },
+  "sportsEntertainment": {
+    "nationalSports": ["Sumo", "Baseball", "Football", "Martial Arts"],
+    "olympicPerformance": {
+      "totalMedals": 523,
+      "goldMedals": 169,
+      "silverMedals": 150,
+      "bronzeMedals": 178
+    },
+    "popularMovies": [
+      "Studio Ghibli Films",
+      "Seven Samurai",
+      "Godzilla Series"
+    ],
+    "musicArtists": [
+      "Hikaru Utada",
+      "X Japan",
+      "Perfume",
+      "One Ok Rock",
+      "Babymetal"
+    ],
+    "worldRecords": [
+      {
+        "record": "Highest life expectancy",
+        "value": "84.3 years average"
+      },
+      {
+        "record": "Most vending machines per capita",
+        "value": "1 per 23 people"
+      }
+    ]
+  }
 }
