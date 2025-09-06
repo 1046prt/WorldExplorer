@@ -45,10 +45,10 @@ const AboutPage = () => {
 
           <p className="about-hero-description">
             We built WorldExplorer because we believe learning about our world
-            should be engaging, accessible, and fun. Whether you're a student,
-            educator, or just curious about different cultures and places, our
-            platform makes exploring countries and their rich histories an
-            enjoyable experience.
+            should be engaging, accessible, and fun. Whether you&apos;re a
+            student, educator, or just curious about different cultures and
+            places, our platform makes exploring countries and their rich
+            histories an enjoyable experience.
           </p>
         </div>
 
@@ -65,7 +65,7 @@ const AboutPage = () => {
           <p className="about-section-text">
             WorldExplorer brings together comprehensive information about
             countries, their landmarks, cultures, and histories in an
-            interactive and engaging way.In today's interconnected world,
+            interactive and engaging way.In today&apos;s interconnected world,
             understanding different cultures and countries is more important
             than ever. We wanted to create a platform that goes beyond basic
             facts and figures to help people truly appreciate the diversity and
@@ -86,9 +86,9 @@ const AboutPage = () => {
               </div>
               <p className="about-feature-description">
                 Navigate through countries with our intuitive search and
-                filtering system. Find exactly what you're looking for, whether
-                it's a specific landmark, cultural tradition, or geographical
-                feature.
+                filtering system. Find exactly what you&apos;re looking for,
+                whether it&apos;s a specific landmark, cultural tradition, or
+                geographical feature.
               </p>
             </div>
 
@@ -136,8 +136,8 @@ const AboutPage = () => {
               </div>
               <p className="about-feature-description">
                 Experience a clean, modern interface that works seamlessly
-                across all devices. We've prioritized accessibility and user
-                experience to ensure everyone can explore comfortably.
+                across all devices. We&apos;ve prioritized accessibility and
+                user experience to ensure everyone can explore comfortably.
               </p>
             </div>
 

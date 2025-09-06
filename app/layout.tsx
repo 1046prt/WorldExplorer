@@ -7,12 +7,6 @@ import { ThemeProvider } from "@/components/theme-provider";
 export const metadata: Metadata = {
   title: "WorldExplorer",
   description: " Discover the world's knowledge",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 5,
-    userScalable: true,
-  },
   icons: {
     icon: [
       {
@@ -23,6 +17,13 @@ export const metadata: Metadata = {
     shortcut: "/images/logo/WORLD.svg",
     apple: "/images/logo/WORLD.svg",
   },
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
 };
 
 export default function RootLayout({

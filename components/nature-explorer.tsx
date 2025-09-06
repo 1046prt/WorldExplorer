@@ -94,7 +94,7 @@ export function NatureExplorer() {
         const data: NatureData = await response.json();
         setNatureData(data);
         setLoading(false);
-      } catch (err) {
+      } catch {
         setError("Error loading data. Please try again later.");
         setLoading(false);
       }
