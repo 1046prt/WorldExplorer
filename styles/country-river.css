@@ -1,27 +1,30 @@
 .rivers-card {
-  padding: var(--spacing-lg);
+  padding: var(--spacing-md);
   background-color: var(--color-card);
   color: var(--color-card-foreground);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
   border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-lg);
   backdrop-filter: blur(8px);
   width: 100%;
   box-sizing: border-box;
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
 }
 
 .rivers-header {
   display: flex;
   align-items: center;
   gap: var(--spacing-sm);
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
   flex-wrap: wrap;
 }
 
 .rivers-title {
   font-size: var(--font-size-2xl);
   font-weight: 700;
-  color: var(--color-foreground);
+  color: var(--color-primary);
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
@@ -49,27 +52,44 @@
 .country-river-icon {
   width: 20px;
   height: 20px;
-  color: var(--color-info);
+  color: var(--color-primary);
 }
 
 .badge {
   display: inline-block;
-  padding: 0.25rem 0.6rem;
+  padding: var(--spacing-xs) var(--spacing-sm);
   border-radius: var(--radius-full);
   font-size: var(--font-size-sm);
   font-weight: 600;
   line-height: 1.25;
+  border: 1px solid var(--color-primary);
+  transition: all var(--transition-normal);
 }
 
 .badge-secondary {
-  background-color: var(--color-secondary-hover);
-  color: var(--color-secondary-foreground);
+  background: transparent;
+  color: var(--color-foreground);
+  border-color: var(--color-primary);
+}
+
+.badge-secondary:hover {
+  background-color: var(--color-primary);
+  color: var(--color-primary-foreground);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
 }
 
 .badge-outline {
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-primary);
   background: transparent;
   color: var(--color-foreground);
+}
+
+.badge-outline:hover {
+  background-color: var(--color-primary);
+  color: var(--color-primary-foreground);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
 }
 
 .rivers-list {
@@ -79,39 +99,38 @@
 }
 
 .river-item {
-  padding: var(--spacing-md);
-  background: linear-gradient(
-    90deg,
-    var(--color-accent) 0%,
-    var(--color-muted) 100%
-  );
+  padding: var(--spacing-sm);
+  background: var(--color-card);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
   transition: all var(--transition-normal);
   display: flex;
   gap: var(--spacing-md);
   align-items: flex-start;
   width: 100%;
   box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.river-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary);
 }
 
 @media (max-width: 768px) {
   .river-item {
     flex-direction: column;
     gap: var(--spacing-sm);
-    padding: var(--spacing-sm);
   }
 
   .river-item:hover {
-    transform: none;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
   }
 }
 
-@media (max-width: 480px) {
-  .river-item {
-    padding: var(--spacing-xs);
-  }
-}
 
 .river-top {
   display: flex;
@@ -124,7 +143,7 @@
 
 .river-name {
   font-size: var(--font-size-lg);
-  font-weight: 600;
+  font-weight: 700;
   color: var(--color-foreground);
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -146,7 +165,7 @@
 }
 
 .label {
-  font-weight: 500;
+  font-weight: 700;
   color: var(--color-muted-foreground);
   font-size: var(--font-size-sm);
 }
@@ -160,7 +179,7 @@
 
 .river-countries {
   margin-top: var(--spacing-xs);
-  font-size: var(--font-size-xs);
+  font-size: var(--font-size-xl);
   color: var(--color-muted-foreground);
   text-decoration: none;
   word-wrap: break-word;
@@ -192,6 +211,7 @@
 
   .river-name {
     font-size: var(--font-size-base);
+    margin-top: 10px;
   }
 
   .river-info {
@@ -226,6 +246,7 @@
 @media (max-width: 480px) {
   .river-name {
     font-size: var(--font-size-sm);
+    margin-top: 10px;
   }
 
   .label {

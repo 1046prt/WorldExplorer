@@ -140,7 +140,6 @@
   .city-item {
     flex-direction: column;
     gap: var(--spacing-sm);
-    padding: var(--spacing-sm);
   }
 
   .city-item:hover {
@@ -168,9 +167,6 @@
 }
 
 @media (max-width: 480px) {
-  .city-item {
-    padding: var(--spacing-xs);
-  }
 
   .city-image {
     height: 100px;

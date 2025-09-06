@@ -35,7 +35,7 @@ export function ComprehensiveCountryData({
   return (
     <div className="comprehensive-container">
       <div className="comprehensive-header">
-        <h1 className="comprehensive-title">Complete Data: {country.name}</h1>
+        <h1 className="comprehensive-title"> {country.name} at a Glance</h1>
         <p className="comprehensive-subtitle">
           Comprehensive information about {country.name}
         </p>

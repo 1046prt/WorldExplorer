@@ -134,9 +134,7 @@
 }
 
 @media (max-width: 768px) {
-  .overview-section {
-    padding: var(--spacing-sm);
-  }
+
 
   .section-icon {
     width: 16px;
@@ -157,9 +155,7 @@
 }
 
 @media (max-width: 480px) {
-  .overview-section {
-    padding: var(--spacing-xs);
-  }
+
 
   .section-value {
     font-size: var(--font-size-lg);

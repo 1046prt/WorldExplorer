@@ -115,9 +115,7 @@
 }
 
 @media (max-width: 768px) {
-  .institution-card {
-    padding: var(--spacing-sm);
-  }
+
 
   .institution-top {
     flex-direction: column;
@@ -138,9 +136,7 @@
 }
 
 @media (max-width: 480px) {
-  .institution-card {
-    padding: var(--spacing-xs);
-  }
+
 
   .institution-name {
     font-size: var(--font-size-xs);
@@ -174,8 +170,7 @@
 }
 
 .badge.secondary {
-  background-color: var(--color-secondary-hover);
-  color: var(--color-secondary-foreground);
+display: none;
 }
 
 .badge.outline {

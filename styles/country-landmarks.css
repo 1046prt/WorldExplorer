@@ -183,6 +183,7 @@
 
   .landmark-header h3 {
     font-size: var(--font-size-sm);
+    padding: 5px 5px;
   }
 
   .landmark-description {

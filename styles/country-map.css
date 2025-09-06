@@ -47,9 +47,7 @@
 }
 
 @media (max-width: 768px) {
-  .country-map {
-    padding: var(--spacing-md);
-  }
+
 
   .map-title {
     font-size: var(--font-size-xl);
@@ -61,9 +59,7 @@
 }
 
 @media (max-width: 480px) {
-  .country-map {
-    padding: var(--spacing-sm);
-  }
+
 
   .map-title {
     font-size: var(--font-size-lg);
