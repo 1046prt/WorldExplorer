@@ -73,11 +73,8 @@
   overflow-wrap: break-word;
 }
 
-/* Mobile responsive adjustments */
 @media (max-width: 768px) {
-  .country-history {
-    padding: var(--spacing-md);
-  }
+
 
   .history-title {
     font-size: var(--font-size-xl);
@@ -104,9 +101,7 @@
 }
 
 @media (max-width: 480px) {
-  .country-history {
-    padding: var(--spacing-sm);
-  }
+
 
   .history-title {
     font-size: var(--font-size-lg);

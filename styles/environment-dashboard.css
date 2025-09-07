@@ -99,7 +99,6 @@
   white-space: nowrap;
 }
 
-/* Category Header */
 .category-header {
   margin-bottom: var(--spacing-2xl);
 }
@@ -140,7 +139,6 @@
   line-height: var(--line-height-relaxed);
 }
 
-/* Data Grid */
 .data-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -191,7 +189,7 @@
   display: flex;
   align-items: center;
   gap: var(--spacing-xs);
-  padding: var(--spacing-xs) var(--spacing-sm);
+
   border: 2px solid var(--color-primary);
   border-radius: var(--radius-md);
   font-size: var(--font-size-xs);

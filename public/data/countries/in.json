@@ -498,6 +498,198 @@
       "whyFamous": "Detroit of India, automotive hub, cultural center",
       "slug": "chennai",
       "image": "/images/cities/india/chennai.png"
+    },
+    {
+      "name": "Hyderabad",
+      "whyFamous": "Charminar, IT hub, biryani, pearl trade",
+      "slug": "hyderabad",
+      "image": "/images/cities/india/hyderabad.jpg"
+    },
+    {
+      "name": "Pune",
+      "whyFamous": "Education hub, IT industries, cultural heritage",
+      "slug": "pune",
+      "image": "/images/cities/india/pune.jpg"
+    },
+    {
+      "name": "Ahmedabad",
+      "whyFamous": "Textile hub, Sabarmati Ashram, UNESCO heritage city",
+      "slug": "ahmedabad",
+      "image": "/images/cities/india/ahmedabad.jpg"
+    },
+    {
+      "name": "Jaipur",
+      "whyFamous": "Pink City, palaces, forts, tourism hub",
+      "slug": "jaipur",
+      "image": "/images/cities/india/jaipur.jpg"
+    },
+    {
+      "name": "Varanasi",
+      "whyFamous": "Spiritual capital, Ganga ghats, temples",
+      "slug": "varanasi",
+      "image": "/images/cities/india/varanasi.jpg"
+    },
+    {
+      "name": "Lucknow",
+      "whyFamous": "City of Nawabs, kebabs, Mughal heritage",
+      "slug": "lucknow",
+      "image": "/images/cities/india/lucknow.jpg"
+    },
+    {
+      "name": "Amritsar",
+      "whyFamous": "Golden Temple, Wagah Border, Punjabi culture",
+      "slug": "amritsar",
+      "image": "/images/cities/india/amritsar.jpg"
+    },
+    {
+      "name": "Agra",
+      "whyFamous": "Taj Mahal, Mughal history, world heritage sites",
+      "slug": "agra",
+      "image": "/images/cities/india/agra.jpg"
+    },
+    {
+      "name": "Surat",
+      "whyFamous": "Diamond polishing hub, textile industries",
+      "slug": "surat",
+      "image": "/images/cities/india/surat.jpg"
+    },
+    {
+      "name": "Indore",
+      "whyFamous": "Cleanest city, food capital of Madhya Pradesh",
+      "slug": "indore",
+      "image": "/images/cities/india/indore.jpg"
+    },
+    {
+      "name": "Bhopal",
+      "whyFamous": "City of Lakes, heritage sites, greenery",
+      "slug": "bhopal",
+      "image": "/images/cities/india/bhopal.jpg"
+    },
+    {
+      "name": "Nagpur",
+      "whyFamous": "Orange city, geographical center of India",
+      "slug": "nagpur",
+      "image": "/images/cities/india/nagpur.jpg"
+    },
+    {
+      "name": "Kanpur",
+      "whyFamous": "Leather industry, industrial hub",
+      "slug": "kanpur",
+      "image": "/images/cities/india/kanpur.jpg"
+    },
+    {
+      "name": "Mysore",
+      "whyFamous": "Mysore Palace, silk, yoga capital",
+      "slug": "mysore",
+      "image": "/images/cities/india/mysore.jpg"
+    },
+    {
+      "name": "Coimbatore",
+      "whyFamous": "Textile hub, engineering city",
+      "slug": "coimbatore",
+      "image": "/images/cities/india/coimbatore.jpg"
+    },
+    {
+      "name": "Thiruvananthapuram",
+      "whyFamous": "Padmanabhaswamy Temple, IT hub in Kerala",
+      "slug": "thiruvananthapuram",
+      "image": "/images/cities/india/thiruvananthapuram.jpg"
+    },
+    {
+      "name": "Kochi",
+      "whyFamous": "Port city, spices trade, backwaters",
+      "slug": "kochi",
+      "image": "/images/cities/india/kochi.jpg"
+    },
+    {
+      "name": "Goa",
+      "whyFamous": "Beaches, Portuguese heritage, tourism hub",
+      "slug": "goa",
+      "image": "/images/cities/india/goa.jpg"
+    },
+    {
+      "name": "Patna",
+      "whyFamous": "Ancient city, Buddhist heritage, educational center",
+      "slug": "patna",
+      "image": "/images/cities/india/patna.jpg"
+    },
+    {
+      "name": "Ranchi",
+      "whyFamous": "Waterfalls, mineral resources, hometown of MS Dhoni",
+      "slug": "ranchi",
+      "image": "/images/cities/india/ranchi.jpg"
+    },
+    {
+      "name": "Bhubaneswar",
+      "whyFamous": "Temple city, smart city hub, Kalinga heritage",
+      "slug": "bhubaneswar",
+      "image": "/images/cities/india/bhubaneswar.jpg"
+    },
+    {
+      "name": "Cuttack",
+      "whyFamous": "Silver filigree work, Durga Puja celebrations",
+      "slug": "cuttack",
+      "image": "/images/cities/india/cuttack.jpg"
+    },
+    {
+      "name": "Shillong",
+      "whyFamous": "Scotland of the East, music capital of India",
+      "slug": "shillong",
+      "image": "/images/cities/india/shillong.jpg"
+    },
+    {
+      "name": "Guwahati",
+      "whyFamous": "Gateway to Northeast, Kamakhya Temple",
+      "slug": "guwahati",
+      "image": "/images/cities/india/guwahati.jpg"
+    },
+    {
+      "name": "Gangtok",
+      "whyFamous": "Himalayan city, Buddhist monasteries, tourism",
+      "slug": "gangtok",
+      "image": "/images/cities/india/gangtok.jpg"
+    },
+    {
+      "name": "Shimla",
+      "whyFamous": "Queen of Hills, colonial architecture",
+      "slug": "shimla",
+      "image": "/images/cities/india/shimla.jpg"
+    },
+    {
+      "name": "Dehradun",
+      "whyFamous": "Educational hub, gateway to Mussoorie",
+      "slug": "dehradun",
+      "image": "/images/cities/india/dehradun.jpg"
+    },
+    {
+      "name": "Udaipur",
+      "whyFamous": "City of Lakes, palaces, romantic destination",
+      "slug": "udaipur",
+      "image": "/images/cities/india/udaipur.jpg"
+    },
+    {
+      "name": "Jodhpur",
+      "whyFamous": "Blue City, Mehrangarh Fort, desert culture",
+      "slug": "jodhpur",
+      "image": "/images/cities/india/jodhpur.jpg"
+    },
+    {
+      "name": "Ajmer",
+      "whyFamous": "Ajmer Sharif Dargah, Mughal heritage",
+      "slug": "ajmer",
+      "image": "/images/cities/india/ajmer.jpg"
+    },
+    {
+      "name": "Madurai",
+      "whyFamous": "Meenakshi Temple, cultural heritage",
+      "slug": "madurai",
+      "image": "/images/cities/india/madurai.jpg"
+    },
+    {
+      "name": "Tirupati",
+      "whyFamous": "Tirumala Venkateswara Temple, spiritual hub",
+      "slug": "tirupati",
+      "image": "/images/cities/india/tirupati.jpg"
     }
   ],
   "landmarks": [
@@ -505,10 +697,7 @@
       "slug": "taj-mahal",
       "name": "Taj Mahal",
       "city": "Agra",
-      "coordinates": {
-        "lat": 27.1751,
-        "lng": 78.0421
-      },
+      "coordinates": { "lat": 27.1751, "lng": 78.0421 },
       "whyFamous": "Iconic white marble mausoleum, UNESCO World Heritage site",
       "imagePath": "/images/landmarks/india/taj-mahal.png"
     },
@@ -516,10 +705,7 @@
       "slug": "red-fort",
       "name": "Red Fort",
       "city": "Delhi",
-      "coordinates": {
-        "lat": 28.6562,
-        "lng": 77.241
-      },
+      "coordinates": { "lat": 28.6562, "lng": 77.241 },
       "whyFamous": "Historic Mughal fortress, symbol of Indian independence",
       "imagePath": "/images/landmarks/india/red-fort.jpg"
     },
@@ -527,23 +713,153 @@
       "slug": "gateway-of-india",
       "name": "Gateway of India",
       "city": "Mumbai",
-      "coordinates": {
-        "lat": 18.922,
-        "lng": 72.8347
-      },
-      "whyFamous": "Iconic arch monument of mumbai overlooking Arabian Sea",
+      "coordinates": { "lat": 18.922, "lng": 72.8347 },
+      "whyFamous": "Iconic arch monument of Mumbai overlooking Arabian Sea",
       "imagePath": "/images/landmarks/india/gateway-of-india.png"
     },
     {
       "slug": "golden-temple",
       "name": "Golden Temple",
       "city": "Amritsar",
-      "coordinates": {
-        "lat": 31.62,
-        "lng": 74.8765
-      },
+      "coordinates": { "lat": 31.62, "lng": 74.8765 },
       "whyFamous": "Holiest Sikh shrine, stunning golden architecture",
       "imagePath": "/images/landmarks/india/golden-temple.png"
+    },
+    {
+      "slug": "india-gate",
+      "name": "India Gate",
+      "city": "Delhi",
+      "coordinates": { "lat": 28.6129, "lng": 77.2295 },
+      "whyFamous": "War memorial dedicated to Indian soldiers of WWI",
+      "imagePath": "/images/landmarks/india/india-gate.jpg"
+    },
+    {
+      "slug": "qutub-minar",
+      "name": "Qutub Minar",
+      "city": "Delhi",
+      "coordinates": { "lat": 28.5245, "lng": 77.1855 },
+      "whyFamous": "Tallest brick minaret in the world, UNESCO site",
+      "imagePath": "/images/landmarks/india/qutub-minar.jpg"
+    },
+    {
+      "slug": "hawa-mahal",
+      "name": "Hawa Mahal",
+      "city": "Jaipur",
+      "coordinates": { "lat": 26.9239, "lng": 75.8267 },
+      "whyFamous": "Palace of Winds with unique pink sandstone latticework",
+      "imagePath": "/images/landmarks/india/hawa-mahal.jpg"
+    },
+    {
+      "slug": "amber-fort",
+      "name": "Amber Fort",
+      "city": "Jaipur",
+      "coordinates": { "lat": 26.9855, "lng": 75.8513 },
+      "whyFamous": "Majestic fort blending Hindu and Mughal architecture",
+      "imagePath": "/images/landmarks/india/amber-fort.jpg"
+    },
+    {
+      "slug": "charminar",
+      "name": "Charminar",
+      "city": "Hyderabad",
+      "coordinates": { "lat": 17.3616, "lng": 78.4747 },
+      "whyFamous": "Historic mosque and monument, symbol of Hyderabad",
+      "imagePath": "/images/landmarks/india/charminar.jpg"
+    },
+    {
+      "slug": "mysore-palace",
+      "name": "Mysore Palace",
+      "city": "Mysore",
+      "coordinates": { "lat": 12.3051, "lng": 76.6551 },
+      "whyFamous": "Royal residence of Wodeyar dynasty, illuminated beauty",
+      "imagePath": "/images/landmarks/india/mysore-palace.avif"
+    },
+    {
+      "slug": "meenakshi-temple",
+      "name": "Meenakshi Amman Temple",
+      "city": "Madurai",
+      "coordinates": { "lat": 9.9195, "lng": 78.1193 },
+      "whyFamous": "Magnificent Dravidian-style temple, cultural center",
+      "imagePath": "/images/landmarks/india/meenakshi-temple.avif"
+    },
+    {
+      "slug": "konark-sun-temple",
+      "name": "Konark Sun Temple",
+      "city": "Konark",
+      "coordinates": { "lat": 19.8876, "lng": 86.0945 },
+      "whyFamous": "13th-century temple shaped like a chariot, UNESCO site",
+      "imagePath": "/images/landmarks/india/konark-sun-temple.avif"
+    },
+    {
+      "slug": "victoria-memorial",
+      "name": "Victoria Memorial",
+      "city": "Kolkata",
+      "coordinates": { "lat": 22.5448, "lng": 88.3426 },
+      "whyFamous": "Grand marble monument dedicated to Queen Victoria",
+      "imagePath": "/images/landmarks/india/victoria-memorial.jpg"
+    },
+    {
+      "slug": "howrah-bridge",
+      "name": "Howrah Bridge",
+      "city": "Kolkata",
+      "coordinates": { "lat": 22.585, "lng": 88.3468 },
+      "whyFamous": "Cantilever bridge, engineering marvel of India",
+      "imagePath": "/images/landmarks/india/howrah-bridge.jpg"
+    },
+    {
+      "slug": "sanchi-stupa",
+      "name": "Sanchi Stupa",
+      "city": "Sanchi",
+      "coordinates": { "lat": 23.4866, "lng": 77.7369 },
+      "whyFamous": "Ancient Buddhist stupa, UNESCO World Heritage site",
+      "imagePath": "/images/landmarks/india/sanchi-stupa.jpg"
+    },
+    {
+      "slug": "somnath-temple",
+      "name": "Somnath Temple",
+      "city": "Somnath",
+      "coordinates": { "lat": 20.888, "lng": 70.4012 },
+      "whyFamous": "One of the 12 Jyotirlinga shrines of Lord Shiva",
+      "imagePath": "/images/landmarks/india/somnath-temple.jpg"
+    },
+    {
+      "slug": "sanchi-stupa",
+      "name": "Lotus Temple",
+      "city": "Delhi",
+      "coordinates": { "lat": 28.5535, "lng": 77.2588 },
+      "whyFamous": "Baháʼí House of Worship, lotus-shaped architecture",
+      "imagePath": "/images/landmarks/india/lotus-temple.jpg"
+    },
+    {
+      "slug": "kedarnath-temple",
+      "name": "Kedarnath Temple",
+      "city": "Kedarnath",
+      "coordinates": { "lat": 30.7346, "lng": 79.0669 },
+      "whyFamous": "Sacred Hindu temple, one of the Char Dhams",
+      "imagePath": "/images/landmarks/india/kedarnath-temple.jpg"
+    },
+    {
+      "slug": "ajanta-caves",
+      "name": "Ajanta Caves",
+      "city": "Aurangabad",
+      "coordinates": { "lat": 20.5519, "lng": 75.7033 },
+      "whyFamous": "Ancient rock-cut caves with Buddhist paintings & sculptures",
+      "imagePath": "/images/landmarks/india/ajanta-caves.jpg"
+    },
+    {
+      "slug": "ellora-caves",
+      "name": "Ellora Caves",
+      "city": "Aurangabad",
+      "coordinates": { "lat": 20.0268, "lng": 75.1791 },
+      "whyFamous": "Rock-cut temples representing Hindu, Buddhist & Jain faiths",
+      "imagePath": "/images/landmarks/india/ellora-caves.jpg"
+    },
+    {
+      "slug": "lake-palace",
+      "name": "Lake Palace",
+      "city": "Udaipur",
+      "coordinates": { "lat": 24.576, "lng": 73.6834 },
+      "whyFamous": "Floating palace on Lake Pichola, luxury heritage hotel",
+      "imagePath": "/images/landmarks/india/lake-palace.jpg"
     }
   ],
   "rivers": [
@@ -585,6 +901,149 @@
         { "lat": 31.0167, "lng": 78.45 },
         { "lat": 25.4333, "lng": 81.8667 }
       ]
+    },
+    {
+      "slug": "godavari-river",
+      "name": "Godavari River",
+      "length": 1465,
+      "countries": ["India"],
+      "source": "Trimbak Plateau, Maharashtra",
+      "mouth": "Bay of Bengal",
+      "imagePath": "/images/rivers/india/godavari-river.jpg",
+      "pathCoordinates": [
+        { "lat": 19.9, "lng": 73.5 },
+        { "lat": 16.7833, "lng": 82.2167 }
+      ]
+    },
+    {
+      "slug": "krishna-river",
+      "name": "Krishna River",
+      "length": 1400,
+      "countries": ["India"],
+      "source": "Mahabaleshwar, Maharashtra",
+      "mouth": "Bay of Bengal",
+      "imagePath": "/images/rivers/india/krishna-river.jpg",
+      "pathCoordinates": [
+        { "lat": 17.92, "lng": 73.65 },
+        { "lat": 15.9, "lng": 80.9 }
+      ]
+    },
+    {
+      "slug": "narmada-river",
+      "name": "Narmada River",
+      "length": 1312,
+      "countries": ["India"],
+      "source": "Amarkantak Plateau, Madhya Pradesh",
+      "mouth": "Arabian Sea",
+      "imagePath": "/images/rivers/india/narmada-river.jpg",
+      "pathCoordinates": [
+        { "lat": 22.673, "lng": 81.75 },
+        { "lat": 21.633, "lng": 72.65 }
+      ]
+    },
+    {
+      "slug": "tapi-river",
+      "name": "Tapi River",
+      "length": 724,
+      "countries": ["India"],
+      "source": "Satpura Ranges, Madhya Pradesh",
+      "mouth": "Arabian Sea",
+      "imagePath": "/images/rivers/india/tapi-river.jpg",
+      "pathCoordinates": [
+        { "lat": 21.35, "lng": 78.1667 },
+        { "lat": 21.1167, "lng": 72.6167 }
+      ]
+    },
+    {
+      "slug": "mahanadi-river",
+      "name": "Mahanadi River",
+      "length": 858,
+      "countries": ["India"],
+      "source": "Sihawa, Chhattisgarh",
+      "mouth": "Bay of Bengal",
+      "imagePath": "/images/rivers/india/mahanadi-river.jpg",
+      "pathCoordinates": [
+        { "lat": 20.6, "lng": 81.95 },
+        { "lat": 20.5, "lng": 86.7 }
+      ]
+    },
+    {
+      "slug": "cauvery-river",
+      "name": "Cauvery River",
+      "length": 805,
+      "countries": ["India"],
+      "source": "Talakaveri, Karnataka",
+      "mouth": "Bay of Bengal",
+      "imagePath": "/images/rivers/india/cauvery-river.jpg",
+      "pathCoordinates": [
+        { "lat": 12.45, "lng": 75.75 },
+        { "lat": 11.4, "lng": 79.8 }
+      ]
+    },
+    {
+      "slug": "sutlej-river",
+      "name": "Sutlej River",
+      "length": 1450,
+      "countries": ["India", "China", "Pakistan"],
+      "source": "Rakshastal Lake, Tibet",
+      "mouth": "Indus River",
+      "imagePath": "/images/rivers/india/sutlej-river.jpg",
+      "pathCoordinates": [
+        { "lat": 30.2, "lng": 81.2 },
+        { "lat": 29.7167, "lng": 71.6333 }
+      ]
+    },
+    {
+      "slug": "beas-river",
+      "name": "Beas River",
+      "length": 470,
+      "countries": ["India"],
+      "source": "Himalayas, Himachal Pradesh",
+      "mouth": "Sutlej River",
+      "imagePath": "/images/rivers/india/beas-river.jpg",
+      "pathCoordinates": [
+        { "lat": 32.4, "lng": 77.0 },
+        { "lat": 31.8, "lng": 75.1 }
+      ]
+    },
+    {
+      "slug": "chenab-river",
+      "name": "Chenab River",
+      "length": 960,
+      "countries": ["India", "Pakistan"],
+      "source": "Baralacha Pass, Himachal Pradesh",
+      "mouth": "Indus River",
+      "imagePath": "/images/rivers/india/chenab-river.jpg",
+      "pathCoordinates": [
+        { "lat": 32.7, "lng": 77.35 },
+        { "lat": 31.3, "lng": 72.3 }
+      ]
+    },
+    {
+      "slug": "jhelum-river",
+      "name": "Jhelum River",
+      "length": 725,
+      "countries": ["India", "Pakistan"],
+      "source": "Verinag Spring, Jammu & Kashmir",
+      "mouth": "Chenab River",
+      "imagePath": "/images/rivers/india/jhelum-river.jpg",
+      "pathCoordinates": [
+        { "lat": 33.55, "lng": 75.25 },
+        { "lat": 31.55, "lng": 72.7 }
+      ]
+    },
+    {
+      "slug": "indus-river",
+      "name": "Indus River",
+      "length": 3180,
+      "countries": ["India", "China", "Pakistan"],
+      "source": "Tibetan Plateau, near Lake Mansarovar",
+      "mouth": "Arabian Sea",
+      "imagePath": "/images/rivers/india/indus-river.jpg",
+      "pathCoordinates": [
+        { "lat": 31.3, "lng": 81.5 },
+        { "lat": 24.0, "lng": 67.0 }
+      ]
     }
   ],
   "institutions": [
@@ -623,6 +1082,105 @@
       "globalRank": 500,
       "type": "Public Research University",
       "imagePath": "/images/institutions/india/university-of-delhi.jpg"
+    },
+    {
+      "slug": "iit-madras",
+      "name": "Indian Institute of Technology Madras",
+      "city": "Chennai, Tamil Nadu",
+      "founded": 1959,
+      "globalRank": 285,
+      "type": "Public Technical University",
+      "imagePath": "/images/institutions/india/iit-madras.jpg"
+    },
+    {
+      "slug": "iit-kanpur",
+      "name": "Indian Institute of Technology Kanpur",
+      "city": "Kanpur, Uttar Pradesh",
+      "founded": 1959,
+      "globalRank": 278,
+      "type": "Public Technical University",
+      "imagePath": "/images/institutions/india/iit-kanpur.jpg"
+    },
+    {
+      "slug": "iit-kharagpur",
+      "name": "Indian Institute of Technology Kharagpur",
+      "city": "Kharagpur, West Bengal",
+      "founded": 1951,
+      "globalRank": 270,
+      "type": "Public Technical University",
+      "imagePath": "/images/institutions/india/iit-kharagpur.jpg"
+    },
+    {
+      "slug": "iim-ahmedabad",
+      "name": "Indian Institute of Management Ahmedabad",
+      "city": "Ahmedabad, Gujarat",
+      "founded": 1961,
+      "globalRank": 47,
+      "type": "Public Business School",
+      "imagePath": "/images/institutions/india/iim-ahmedabad.jpg"
+    },
+    {
+      "slug": "iim-bangalore",
+      "name": "Indian Institute of Management Bangalore",
+      "city": "Bangalore, Karnataka",
+      "founded": 1973,
+      "globalRank": 52,
+      "type": "Public Business School",
+      "imagePath": "/images/institutions/india/iim-bangalore.jpg"
+    },
+    {
+      "slug": "iim-calcutta",
+      "name": "Indian Institute of Management Calcutta",
+      "city": "Kolkata, West Bengal",
+      "founded": 1961,
+      "globalRank": 76,
+      "type": "Public Business School",
+      "imagePath": "/images/institutions/india/iim-calcutta.jpg"
+    },
+    {
+      "slug": "aiims-delhi",
+      "name": "All India Institute of Medical Sciences Delhi",
+      "city": "New Delhi",
+      "founded": 1956,
+      "globalRank": 204,
+      "type": "Public Medical Research University",
+      "imagePath": "/images/institutions/india/aiims-delhi.jpg"
+    },
+    {
+      "slug": "jnu-delhi",
+      "name": "Jawaharlal Nehru University",
+      "city": "New Delhi",
+      "founded": 1969,
+      "globalRank": 601,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/india/jnu-delhi.jpg"
+    },
+    {
+      "slug": "banaras-hindu-university",
+      "name": "Banaras Hindu University",
+      "city": "Varanasi, Uttar Pradesh",
+      "founded": 1916,
+      "globalRank": 801,
+      "type": "Public Central University",
+      "imagePath": "/images/institutions/india/banaras-hindu-university.jpg"
+    },
+    {
+      "slug": "amity-university",
+      "name": "Amity University",
+      "city": "Noida, Uttar Pradesh",
+      "founded": 2005,
+      "globalRank": 1000,
+      "type": "Private University",
+      "imagePath": "/images/institutions/india/amity-university.jpg"
+    },
+    {
+      "slug": "bits-pilani",
+      "name": "Birla Institute of Technology and Science Pilani",
+      "city": "Pilani, Rajasthan",
+      "founded": 1964,
+      "globalRank": 951,
+      "type": "Private Deemed University",
+      "imagePath": "/images/institutions/india/bits-pilani.jpg"
     }
   ]
 }

@@ -1,4 +1,3 @@
-/* Wrapper card */
 .city-card {
   padding: var(--spacing-lg);
   background: var(--color-card);
@@ -11,7 +10,6 @@
   box-sizing: border-box;
 }
 
-/* Mobile responsive adjustments */
 @media (max-width: 768px) {
   .city-card {
     padding: var(--spacing-md);
@@ -24,7 +22,6 @@
   }
 }
 
-/* Header */
 .country-cities-card-header {
   display: flex;
   align-items: center;
@@ -59,7 +56,6 @@
   flex-shrink: 0;
 }
 
-/* Mobile responsive adjustments for header */
 @media (max-width: 768px) {
   .country-cities-title-lg {
     font-size: var(--font-size-xl);
@@ -92,7 +88,6 @@
   }
 }
 
-/* Cities */
 .city-list {
   display: flex;
   flex-direction: column;
@@ -109,11 +104,6 @@
   transition: all 0.2s ease;
   width: 100%;
   box-sizing: border-box;
-}
-
-.city-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .city-image-container {
@@ -146,12 +136,10 @@
   line-height: var(--line-height-normal);
 }
 
-/* Mobile responsive adjustments */
 @media (max-width: 768px) {
   .city-item {
     flex-direction: column;
     gap: var(--spacing-sm);
-    padding: var(--spacing-sm);
   }
 
   .city-item:hover {
@@ -179,9 +167,6 @@
 }
 
 @media (max-width: 480px) {
-  .city-item {
-    padding: var(--spacing-xs);
-  }
 
   .city-image {
     height: 100px;
@@ -196,7 +181,6 @@
   }
 }
 
-/* States section */
 .states-section {
   margin-top: var(--spacing-lg);
   padding-top: var(--spacing-lg);
@@ -257,7 +241,6 @@
   flex-shrink: 0;
 }
 
-/* Mobile responsive adjustments for states */
 @media (max-width: 768px) {
   .states-section {
     margin-top: var(--spacing-md);

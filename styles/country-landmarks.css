@@ -50,7 +50,6 @@
   }
 }
 
-/* Mobile responsive adjustments */
 @media (max-width: 768px) {
   .country-landmarks {
     padding: var(--spacing-md);
@@ -89,11 +88,6 @@
   border-radius: var(--radius-lg);
   width: 100%;
   box-sizing: border-box;
-}
-
-.landmark-card:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
 }
 
 .landmark-image {
@@ -157,13 +151,19 @@
   flex-wrap: wrap;
 }
 
+.compass{
+
+}
+
 .landmark-coordinates {
+  display: flex;
   font-size: var(--font-size-xs);
-  color: var(--color-muted-foreground);
+  color: var(--color-primary);
   word-wrap: break-word;
   overflow-wrap: break-word;
   flex: 1;
   min-width: 0;
+  font-weight: 500;
 }
 
 .external-icon {
@@ -172,7 +172,6 @@
   flex-shrink: 0;
 }
 
-/* Mobile responsive adjustments */
 @media (max-width: 768px) {
   .landmark-card:hover {
     transform: none;
@@ -184,6 +183,7 @@
 
   .landmark-header h3 {
     font-size: var(--font-size-sm);
+    padding: 5px 5px;
   }
 
   .landmark-description {

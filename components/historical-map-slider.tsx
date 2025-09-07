@@ -5,72 +5,48 @@ import "@/styles/historical-map-slider.css";
 import { Clock, Play, Pause } from "lucide-react";
 import Image from "next/image";
 
-const historicalData = [
-  {
-    year: 1800,
-    title: "Regency Era",
-    description:
-      "Britain marked by elegance, social change, and cultural growth",
-    mapUrl: "/images/maps/world-1800.png",
-  },
-  {
-    year: 1900,
-    title: "Colonial Era",
-    description: "European colonial empires at their peak",
-    mapUrl: "/images/maps/world-1900.png",
-  },
-  {
-    year: 1930,
-    title: "Great Depression Era",
-    description: "Worldwide economic crisis with mass unemployment and poverty",
-    mapUrl: "/images/maps/world-1930.png",
-  },
-  {
-    year: 1945,
-    title: "Post-WWII",
-    description: "Global borders redrawn after World War II",
-    mapUrl: "/images/maps/world-1945.png",
-  },
-  {
-    year: 1965,
-    title: "Cold War Tensions",
-    description: "US–Soviet rivalry shaping global politics and conflicts",
-    mapUrl: "/images/maps/world-1965.png",
-  },
-  {
-    year: 1991,
-    title: "End of Cold War",
-    description: "Dissolution of the Soviet Union and rise of new nations",
-    mapUrl: "/images/maps/world-1991.png",
-  },
-  {
-    year: 2001,
-    title: "Globalization Era",
-    description:
-      "Increased global interconnectedness and post-9/11 geopolitics",
-    mapUrl: "/images/maps/world-2001.png",
-  },
-  {
-    year: 2015,
-    title: "Digital Age",
-    description: "Rapid technological advances and global connectivity",
-    mapUrl: "/images/maps/world-2015.png",
-  },
-  {
-    year: 2025,
-    title: "Modern Day",
-    description: "Current world borders and contemporary challenges",
-    mapUrl: "/images/maps/world-2025.png",
-  },
-];
+interface HistoricalPeriod {
+  year: number;
+  title: string;
+  description: string;
+  mapUrl: string;
+}
 
 export function HistoricalMapSlider() {
   const [currentYear, setCurrentYear] = useState([1800]);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [historicalData, setHistoricalData] = useState<HistoricalPeriod[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  // Load historical data from JSON file
+  useEffect(() => {
+    const loadHistoricalData = async () => {
+      try {
+        setLoading(true);
+        const response = await fetch("/data/historical-timeline.json");
+        if (!response.ok) {
+          throw new Error("Failed to load historical data");
+        }
+        const data: HistoricalPeriod[] = await response.json();
+        setHistoricalData(data);
+        setError(null);
+      } catch (err) {
+        setError(
+          err instanceof Error ? err.message : "Failed to load historical data"
+        );
+        console.error("Error loading historical data:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadHistoricalData();
+  }, []);
 
   useEffect(() => {
-    if (!isPlaying) return;
+    if (!isPlaying || historicalData.length === 0) return;
 
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => {
@@ -81,7 +57,48 @@ export function HistoricalMapSlider() {
     }, 2000);
 
     return () => clearInterval(interval);
-  }, [isPlaying]);
+  }, [isPlaying, historicalData]);
+
+  // Loading state
+  if (loading) {
+    return (
+      <div className="historical-map-slider-card">
+        <div className="card-header">
+          <div className="card-title">
+            <Clock className="h-6 w-6" />
+            Historical Map Timeline
+          </div>
+        </div>
+        <div className="card-content">
+          <div className="loading-spinner">
+            <Clock className="animate-spin" size={32} />
+          </div>
+          <p>Loading historical timeline...</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Error state
+  if (error) {
+    return (
+      <div className="historical-map-slider-card">
+        <div className="card-header">
+          <div className="card-title">
+            <Clock className="h-6 w-6" />
+            Historical Map Timeline
+          </div>
+        </div>
+        <div className="card-content">
+          <p className="error-message">{error}</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (historicalData.length === 0) {
+    return null;
+  }
 
   const currentData = historicalData[currentIndex];
 

@@ -1,4 +1,3 @@
-/* Global Navigation Component Styles */
 .global-navigation-container {
   position: sticky;
   top: 0;
@@ -84,7 +83,6 @@
   border-radius: var(--radius-sm);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .global-navigation-content {
     padding: 0 var(--spacing-sm);

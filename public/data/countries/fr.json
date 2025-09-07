@@ -222,5 +222,404 @@
       "type": "Public Research University",
       "imagePath": "/images/institutions/france/ecole-polytechnique.jpg"
     }
-  ]
+  ],
+  "geography": {
+    "climateZones": ["Oceanic", "Mediterranean", "Continental", "Alpine"],
+    "geologicalFormations": [
+      {
+        "name": "Alps",
+        "type": "Mountain Range",
+        "description": "Highest mountain range in Western Europe, including Mont Blanc"
+      },
+      {
+        "name": "Pyrenees",
+        "type": "Mountain Range",
+        "description": "Mountain range forming border between France and Spain"
+      },
+      {
+        "name": "Massif Central",
+        "type": "Highland",
+        "description": "Highland region in south-central France with extinct volcanoes"
+      }
+    ],
+    "naturalDisasters": [
+      {
+        "type": "Flood",
+        "name": "Great Flood of Paris",
+        "year": 1910,
+        "impact": "Seine River flood that submerged much of Paris"
+      },
+      {
+        "type": "Heat Wave",
+        "name": "European Heat Wave",
+        "year": 2003,
+        "impact": "Record-breaking heat wave causing thousands of deaths"
+      }
+    ],
+    "majorWaterBodies": [
+      {
+        "name": "Mediterranean Sea",
+        "type": "Sea",
+        "coastline": "Southeast Coast"
+      },
+      {
+        "name": "Atlantic Ocean",
+        "type": "Ocean",
+        "coastline": "West Coast"
+      },
+      {
+        "name": "English Channel",
+        "type": "Channel",
+        "coastline": "North Coast"
+      }
+    ]
+  },
+  "heritage": {
+    "independenceDate": "N/A (Never colonized)",
+    "foundingEvent": "Formation of the French Republic in 1792",
+    "majorHistoricalFigures": [
+      {
+        "name": "Napoleon Bonaparte",
+        "role": "Emperor",
+        "period": "1804-1814, 1815",
+        "achievement": "Military genius who shaped modern Europe and legal systems"
+      },
+      {
+        "name": "Charles de Gaulle",
+        "role": "President",
+        "period": "1959-1969",
+        "achievement": "Leader of Free France, founder of Fifth Republic"
+      },
+      {
+        "name": "Joan of Arc",
+        "role": "National Heroine",
+        "period": "1412-1431",
+        "achievement": "Peasant girl who helped crown the Dauphin as King Charles VII"
+      }
+    ],
+    "colonialHistory": [
+      {
+        "period": "16th-20th centuries",
+        "description": "Major colonial empire in Africa, Asia, and the Americas"
+      },
+      {
+        "period": "1960s",
+        "description": "Decolonization period, especially in Africa"
+      }
+    ],
+    "unescoSites": [
+      {
+        "name": "Palace and Park of Versailles",
+        "year": 1979,
+        "type": "Cultural"
+      },
+      {
+        "name": "Mont-Saint-Michel",
+        "year": 1979,
+        "type": "Cultural"
+      },
+      {
+        "name": "Historic Centre of Avignon",
+        "year": 1995,
+        "type": "Cultural"
+      },
+      {
+        "name": "Palace and Park of Fontainebleau",
+        "year": 1981,
+        "type": "Cultural"
+      }
+    ]
+  },
+  "politics": {
+    "currentLeaders": [
+      {
+        "position": "President",
+        "name": "Emmanuel Macron",
+        "party": "Renaissance",
+        "termStart": "May 14, 2017",
+        "termEnd": "May 13, 2027"
+      },
+      {
+        "position": "Prime Minister",
+        "name": "François Bayrou",
+        "party": "MoDem",
+        "termStart": "December 13, 2024"
+      }
+    ],
+    "governmentType": "Semi-Presidential Republic",
+    "internationalMemberships": [
+      "United Nations (UN)",
+      "European Union (EU)",
+      "North Atlantic Treaty Organization (NATO)",
+      "Group of Seven (G7)",
+      "Group of Twenty (G20)",
+      "Organisation for Economic Co-operation and Development (OECD)"
+    ]
+  },
+  "economy": {
+    "gdp": 2940000000000,
+    "gdpPerCapita": 43518,
+    "majorIndustries": [
+      "Tourism",
+      "Agriculture",
+      "Fashion",
+      "Luxury Goods",
+      "Aerospace",
+      "Nuclear Energy",
+      "Technology"
+    ],
+    "topExports": [
+      {
+        "product": "Aircraft",
+        "value": 65400000000
+      },
+      {
+        "product": "Machinery",
+        "value": 45600000000
+      },
+      {
+        "product": "Vehicles",
+        "value": 43200000000
+      },
+      {
+        "product": "Pharmaceuticals",
+        "value": 35800000000
+      }
+    ],
+    "topImports": [
+      {
+        "product": "Crude Petroleum",
+        "value": 43900000000
+      },
+      {
+        "product": "Cars",
+        "value": 42100000000
+      },
+      {
+        "product": "Machinery",
+        "value": 35700000000
+      },
+      {
+        "product": "Pharmaceuticals",
+        "value": 33200000000
+      }
+    ],
+    "employmentRate": 92.0,
+    "employmentSectors": {
+      "services": 78.8,
+      "industry": 19.5,
+      "agriculture": 2.8
+    }
+  },
+  "culture": {
+    "officialLanguages": ["French"],
+    "regionalLanguages": [
+      "Breton",
+      "Corsican",
+      "Alsatian",
+      "Basque",
+      "Catalan",
+      "Occitan"
+    ],
+    "religionDemographics": {
+      "Catholic": 51.0,
+      "Non-religious": 31.0,
+      "Islam": 5.0,
+      "Protestant": 3.0,
+      "Orthodox": 1.0,
+      "Judaism": 1.0,
+      "Other": 8.0
+    },
+    "nationalFestivals": [
+      {
+        "name": "Bastille Day",
+        "date": "July 14",
+        "description": "National holiday commemorating the French Revolution"
+      },
+      {
+        "name": "Festival de Cannes",
+        "date": "May",
+        "description": "Prestigious international film festival"
+      },
+      {
+        "name": "Fête de la Musique",
+        "date": "June 21",
+        "description": "Music festival celebrated throughout France"
+      }
+    ],
+    "traditionalFoods": [
+      {
+        "name": "Croissant",
+        "description": "Buttery, flaky pastry that is a symbol of French cuisine"
+      },
+      {
+        "name": "Coq au Vin",
+        "description": "Traditional dish of chicken braised with wine"
+      },
+      {
+        "name": "Bouillabaisse",
+        "description": "Traditional Provençal fish stew"
+      },
+      {
+        "name": "Cheese",
+        "description": "France produces over 400 varieties of cheese"
+      }
+    ],
+    "nationalSymbols": {
+      "flag": "Tricolore (Blue, White, Red)",
+      "emblem": "Marianne",
+      "anthem": "La Marseillaise",
+      "flower": "Iris",
+      "animal": "Gallic Rooster",
+      "motto": "Liberté, égalité, fraternité"
+    }
+  },
+  "education": {
+    "literacyRate": 99.0,
+    "educationSystem": "Free, secular, and compulsory education from ages 3 to 16",
+    "famousScientists": [
+      {
+        "name": "Marie Curie",
+        "field": "Physics/Chemistry",
+        "achievement": "First woman to win Nobel Prize, discovered polonium and radium"
+      },
+      {
+        "name": "Louis Pasteur",
+        "field": "Microbiology",
+        "achievement": "Developed pasteurization and vaccination principles"
+      },
+      {
+        "name": "Pierre-Simon Laplace",
+        "field": "Mathematics/Astronomy",
+        "achievement": "Contributions to mathematical astronomy and statistics"
+      }
+    ],
+    "nobelPrizeWinners": 70
+  },
+  "tourism": {
+    "mostVisitedCities": [
+      {
+        "name": "Paris",
+        "visitors": 38000000,
+        "attractions": ["Eiffel Tower", "Louvre Museum", "Notre-Dame"]
+      },
+      {
+        "name": "Nice",
+        "visitors": 4000000,
+        "attractions": ["Promenade des Anglais", "Old Town", "Beaches"]
+      },
+      {
+        "name": "Lyon",
+        "visitors": 6000000,
+        "attractions": ["Basilica of Notre-Dame", "Old Lyon", "Gastronomy"]
+      }
+    ],
+    "adventureActivities": [
+      "Alpine Skiing",
+      "Loire Valley Cycling",
+      "Provence Hiking",
+      "Wine Tasting Tours",
+      "Corsica Island Exploration"
+    ],
+    "transportation": {
+      "airports": "Charles de Gaulle, Orly, and regional airports",
+      "railways": "TGV high-speed rail network",
+      "highways": "Extensive autoroute system"
+    },
+    "visaRequirements": "Schengen visa requirements, EU citizens visa-free"
+  },
+  "demographics": {
+    "populationGrowth": [
+      { "year": 2020, "population": 67422241 },
+      { "year": 2021, "population": 67571107 },
+      { "year": 2022, "population": 67813396 },
+      { "year": 2023, "population": 68042591 }
+    ],
+    "urbanRural": {
+      "urban": 81.0,
+      "rural": 19.0
+    },
+    "lifeExpectancy": {
+      "total": 82.7,
+      "male": 79.8,
+      "female": 85.7
+    },
+    "ageDistribution": {
+      "youth": 17.9,
+      "workingAge": 61.3,
+      "elderly": 20.8
+    }
+  },
+  "scienceTechnology": {
+    "spaceMissions": [
+      {
+        "name": "CNES Space Program",
+        "year": "1961-present",
+        "achievement": "National space program with satellite launches"
+      },
+      {
+        "name": "Ariane Rocket Program",
+        "year": "1979-present",
+        "achievement": "European space launcher family"
+      },
+      {
+        "name": "Thomas Pesquet Missions",
+        "year": "2016, 2021",
+        "achievement": "French astronaut missions to ISS"
+      }
+    ],
+    "techStartups": [
+      "Criteo",
+      "BlaBlaCar",
+      "Dassault Systèmes",
+      "Ubisoft",
+      "Orange",
+      "Atos"
+    ],
+    "patents": 16200,
+    "breakthroughs": [
+      {
+        "year": 1895,
+        "invention": "Cinema",
+        "inventor": "Lumière Brothers"
+      },
+      {
+        "year": 1898,
+        "invention": "Radium",
+        "inventor": "Marie and Pierre Curie"
+      },
+      {
+        "year": 1885,
+        "invention": "Rabies Vaccine",
+        "inventor": "Louis Pasteur"
+      }
+    ]
+  },
+  "sportsEntertainment": {
+    "nationalSports": ["Football", "Rugby", "Tennis", "Cycling"],
+    "olympicPerformance": {
+      "totalMedals": 840,
+      "goldMedals": 248,
+      "silverMedals": 276,
+      "bronzeMedals": 316
+    },
+    "popularMovies": ["Amélie", "The Artist", "La Vie en Rose"],
+    "musicArtists": [
+      "Édith Piaf",
+      "Charles Aznavour",
+      "Daft Punk",
+      "Céline Dion",
+      "Stromae"
+    ],
+    "worldRecords": [
+      {
+        "record": "Most visited country by international tourists",
+        "value": "89 million visitors annually"
+      },
+      {
+        "record": "Most Michelin-starred restaurants",
+        "value": "630+ restaurants"
+      }
+    ]
+  }
 }

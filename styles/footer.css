@@ -124,10 +124,10 @@
 @media (max-width: 768px) {
   .footer-container {
     grid-template-columns: 1fr;
-    text-align: justify;
+    text-align: left;
   }
 
   .footer-socials {
-    justify-content: center;
+    justify-content: left;
   }
 }

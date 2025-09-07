@@ -192,7 +192,6 @@
   color: var(--color-muted-foreground);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .search-form {
     gap: var(--spacing-sm);
@@ -205,7 +204,7 @@
   }
 
   .search-input {
-    font-size: 1rem; /* Prevent zoom on iOS */
+    font-size: 1rem;
   }
 
   .global-search {
@@ -269,7 +268,7 @@
     align-self: flex-start;
   }
 }
-/* Search Suggestions Styles */
+
 .filter-input-wrapper {
   position: relative;
 }
@@ -343,12 +342,10 @@
   font-size: 0.875rem;
 }
 
-/* Filter input adjustments for clear button */
 .filter-input:not(:placeholder-shown) {
   padding-right: 2.5rem;
 }
 
-/* Browse Filters Responsive Design */
 @media (max-width: 768px) {
   .countries-filters {
     gap: var(--spacing-sm);
@@ -413,7 +410,6 @@
   }
 }
 
-/* Animation for suggestions */
 .search-suggestions {
   animation: slideDown 0.2s ease-out;
 }
@@ -429,7 +425,6 @@
   }
 }
 
-/* Mobile responsive adjustments */
 @media (max-width: 768px) {
   .search-suggestions {
     left: -1rem;
@@ -441,7 +436,7 @@
     padding: 1rem;
   }
 }
-/* Global Search Component Styles */
+
 .global-search {
   position: relative;
   width: 100%;
@@ -626,7 +621,6 @@
   font-size: 0.875rem;
 }
 
-/* Mobile responsive adjustments */
 @media (max-width: 768px) {
   .global-search {
     max-width: 100%;

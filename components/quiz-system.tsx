@@ -442,7 +442,7 @@ export function QuizSystem() {
             </div>
             <h3 className="pause-title">Quiz Paused</h3>
             <p className="pause-subtitle">
-              Take your time! Click resume when you're ready to continue.
+              Take your time! Click resume when you&apos;re ready to continue.
             </p>
             <button onClick={resumeQuiz} className="btn btn-success btn-large">
               <Play className="icon-sm" /> Resume Quiz

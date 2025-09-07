@@ -35,7 +35,6 @@
   }
 }
 
-/* Mobile responsive adjustments */
 @media (max-width: 768px) {
   .country-overview {
     padding: var(--spacing-md);
@@ -84,7 +83,6 @@
   box-shadow: var(--shadow-md);
 }
 
-/* Section headers */
 .section-header {
   display: flex;
   align-items: center;
@@ -117,7 +115,6 @@
   font-size: var(--font-size-sm);
 }
 
-/* Values & Subtext */
 .section-value {
   font-size: var(--font-size-2xl);
   font-weight: bold;
@@ -136,12 +133,7 @@
   line-height: var(--line-height-normal);
 }
 
-/* Mobile responsive adjustments */
 @media (max-width: 768px) {
-  .overview-section {
-    padding: var(--spacing-sm);
-  }
-
   .section-icon {
     width: 16px;
     height: 16px;
@@ -161,16 +153,11 @@
 }
 
 @media (max-width: 480px) {
-  .overview-section {
-    padding: var(--spacing-xs);
-  }
-
   .section-value {
     font-size: var(--font-size-lg);
   }
 }
 
-/* Currency */
 .currency-info {
   display: flex;
   align-items: center;
@@ -190,7 +177,6 @@
   overflow-wrap: break-word;
 }
 
-/* Languages */
 .languages-list {
   display: flex;
   flex-wrap: wrap;
@@ -198,7 +184,6 @@
   align-items: flex-start;
 }
 
-/* Timezones */
 .timezones-list {
   display: flex;
   flex-direction: column;
@@ -218,7 +203,6 @@
   opacity: 0.7;
 }
 
-/* Mobile responsive adjustments for specific sections */
 @media (max-width: 768px) {
   .currency-info {
     gap: var(--spacing-xs);
