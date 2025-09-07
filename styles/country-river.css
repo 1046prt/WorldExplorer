@@ -179,7 +179,7 @@
 
 .river-countries {
   margin-top: var(--spacing-xs);
-  font-size: var(--font-size-xl);
+  font-size: 400;
   color: var(--color-muted-foreground);
   text-decoration: none;
   word-wrap: break-word;
@@ -189,6 +189,7 @@
 .river-content {
   flex: 1;
   min-width: 0;
+  margin: 10px 10px;
 }
 
 .river-image-container {
