@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { Country } from "@/lib/types";
 
 interface SEOConfigOptions {
   title: string;
@@ -52,7 +53,7 @@ export function generateSEOMetadata({
       "max-video-preview": -1,
     },
     openGraph: {
-      type: type as any,
+      type: type,
       title: fullTitle,
       description,
       url: fullUrl,
@@ -142,20 +143,13 @@ export function generateOrganizationStructuredData() {
   };
 }
 
-export function generateCountryStructuredData(country: any) {
+export function generateCountryStructuredData(country: Country) {
   return {
     "@context": "https://schema.org",
     "@type": "Place",
     name: country.name,
     description: `Explore ${country.name}: Learn about its capital ${country.capital}, population, culture, landmarks, and history`,
-    url: `${baseUrl}/country/${country.code?.toLowerCase()}`,
-    geo: country.coordinates
-      ? {
-          "@type": "GeoCoordinates",
-          latitude: country.coordinates.lat,
-          longitude: country.coordinates.lng,
-        }
-      : undefined,
+    url: `${baseUrl}/country/${country.iso2?.toLowerCase()}`,
     containedInPlace: {
       "@type": "Place",
       name: "Earth",
@@ -174,8 +168,8 @@ export function generateCountryStructuredData(country: any) {
       {
         "@type": "PropertyValue",
         name: "Area",
-        value: country.area
-          ? `${country.area.toLocaleString()} km²`
+        value: country.geography?.area
+          ? `${country.geography?.area.toLocaleString()} km²`
           : undefined,
       },
     ].filter(Boolean),

@@ -1,7 +1,6 @@
 import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { MapPin, ExternalLink } from "lucide-react";
+import { MapPin } from "lucide-react";
 import { LandmarkModal } from "@/components/landmark-modal";
 import type { Country } from "@/lib/types";
 import "@/styles/country-landmarks.css";
@@ -51,7 +50,7 @@ export function CountryLandmarks({ country }: CountryLandmarksProps) {
                 <p className="landmark-description">{landmark.whyFamous}</p>
                 <div className="landmark-footer">
                   <div className="landmark-coordinates">
-                    <p className="compass" >🧭</p>
+                    <p className="compass">🧭</p>
                     {landmark.coordinates.lat.toFixed(4)},{" "}
                     {landmark.coordinates.lng.toFixed(4)}
                   </div>

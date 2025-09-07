@@ -4,19 +4,29 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { OptimizedImage } from "@/components/ui/optimized-image";
-import type { Country } from "@/lib/types";
+import type {
+  Country,
+  GeologicalFormation,
+  WaterBody,
+  HistoricalFigure,
+  UnescoSite,
+  ColonialPeriod,
+  PoliticalLeader,
+  TradeItem,
+  NationalFestival,
+  TraditionalFood,
+  Scientist,
+  PopulationData,
+} from "@/lib/types";
 import { formatPopulation } from "@/lib/data-utils";
 import {
   Globe,
   Users,
-  MapPin,
   Landmark,
   Building2,
   GraduationCap,
   DollarSign,
   Calendar,
-  Award,
-  Rocket,
   Mountain,
   Waves,
 } from "lucide-react";
@@ -146,7 +156,7 @@ export function ComprehensiveCountryData({
 
         {/* Geography */}
         <TabsContent value="geography" className="comprehensive-tab-content">
-          {(country as any).geography && (
+          {country.geography && (
             <div className="data-grid">
               <Card className="data-card">
                 <CardHeader className="card-header-compact">
@@ -159,13 +169,11 @@ export function ComprehensiveCountryData({
                   <div className="data-section">
                     <span className="data-label">Climate Zones:</span>
                     <div className="badge-list">
-                      {(country as any).geography.climateZones?.map(
-                        (zone: string) => (
-                          <Badge key={zone} variant="secondary">
-                            {zone}
-                          </Badge>
-                        )
-                      )}
+                      {country.geography.climateZones?.map((zone: string) => (
+                        <Badge key={zone} variant="secondary">
+                          {zone}
+                        </Badge>
+                      ))}
                     </div>
                   </div>
                 </CardContent>
@@ -178,8 +186,8 @@ export function ComprehensiveCountryData({
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="card-content-compact">
-                  {(country as any).geography.geologicalFormations?.map(
-                    (formation: any) => (
+                  {country.geography.geologicalFormations?.map(
+                    (formation: GeologicalFormation) => (
                       <div key={formation.name} className="formation-item">
                         <div className="formation-header">
                           <span className="formation-name">
@@ -204,8 +212,8 @@ export function ComprehensiveCountryData({
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="card-content-compact">
-                  {(country as any).geography.majorWaterBodies?.map(
-                    (body: any) => (
+                  {country.geography.majorWaterBodies?.map(
+                    (body: WaterBody) => (
                       <div key={body.name} className="water-body-item">
                         <div className="water-body-header">
                           <span className="water-body-name">{body.name}</span>
@@ -375,7 +383,7 @@ export function ComprehensiveCountryData({
 
         {/* Additional tabs would be implemented similarly */}
         <TabsContent value="heritage" className="comprehensive-tab-content">
-          {(country as any).heritage && (
+          {country.heritage && (
             <div className="data-grid">
               <Card className="data-card">
                 <CardHeader className="card-header-compact">
@@ -388,13 +396,13 @@ export function ComprehensiveCountryData({
                   <div className="data-row">
                     <span className="data-label">Independence Date:</span>
                     <span className="data-value">
-                      {(country as any).heritage.independenceDate}
+                      {country.heritage.independenceDate}
                     </span>
                   </div>
                   <div className="data-row">
                     <span className="data-label">Founding Event:</span>
                     <span className="data-value">
-                      {(country as any).heritage.foundingEvent}
+                      {country.heritage.foundingEvent}
                     </span>
                   </div>
                 </CardContent>
@@ -407,8 +415,8 @@ export function ComprehensiveCountryData({
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="card-content-compact">
-                  {(country as any).heritage.majorHistoricalFigures?.map(
-                    (figure: any) => (
+                  {country.heritage.majorHistoricalFigures?.map(
+                    (figure: HistoricalFigure) => (
                       <div key={figure.name} className="formation-item">
                         <div className="formation-header">
                           <span className="formation-name">{figure.name}</span>
@@ -430,7 +438,7 @@ export function ComprehensiveCountryData({
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="card-content-compact">
-                  {(country as any).heritage.unescoSites?.map((site: any) => (
+                  {country.heritage.unescoSites?.map((site: UnescoSite) => (
                     <div key={site.name} className="formation-item">
                       <div className="formation-header">
                         <span className="formation-name">{site.name}</span>
@@ -455,8 +463,8 @@ export function ComprehensiveCountryData({
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="card-content-compact">
-                  {(country as any).heritage.colonialHistory?.map(
-                    (period: any, index: number) => (
+                  {country.heritage.colonialHistory?.map(
+                    (period: ColonialPeriod, index: number) => (
                       <div key={index} className="formation-item">
                         <div className="formation-header">
                           <span className="formation-name">
@@ -474,7 +482,7 @@ export function ComprehensiveCountryData({
         </TabsContent>
 
         <TabsContent value="politics" className="comprehensive-tab-content">
-          {(country as any).politics && (
+          {country.politics && (
             <div className="data-grid">
               <Card className="data-card">
                 <CardHeader className="card-header-compact">
@@ -486,7 +494,7 @@ export function ComprehensiveCountryData({
                   <div className="data-row">
                     <span className="data-label">Type:</span>
                     <span className="data-value">
-                      {(country as any).politics.governmentType}
+                      {country.politics.governmentType}
                     </span>
                   </div>
                 </CardContent>
@@ -499,8 +507,8 @@ export function ComprehensiveCountryData({
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="card-content-compact">
-                  {(country as any).politics.currentLeaders?.map(
-                    (leader: any, index: number) => (
+                  {country.politics.currentLeaders?.map(
+                    (leader: PoliticalLeader, index: number) => (
                       <div key={index} className="formation-item">
                         <div className="formation-header">
                           <span className="formation-name">{leader.name}</span>
@@ -524,7 +532,7 @@ export function ComprehensiveCountryData({
                 </CardHeader>
                 <CardContent className="card-content-compact">
                   <div className="badge-list">
-                    {(country as any).politics.internationalMemberships?.map(
+                    {country.politics.internationalMemberships?.map(
                       (membership: string) => (
                         <Badge key={membership} variant="secondary">
                           {membership}
@@ -539,7 +547,7 @@ export function ComprehensiveCountryData({
         </TabsContent>
 
         <TabsContent value="economy" className="comprehensive-tab-content">
-          {(country as any).economy && (
+          {country.economy && (
             <div className="data-grid">
               <Card className="data-card">
                 <CardHeader className="card-header-compact">
@@ -552,20 +560,20 @@ export function ComprehensiveCountryData({
                   <div className="data-row">
                     <span className="data-label">GDP:</span>
                     <span className="data-value">
-                      ${((country as any).economy.gdp / 1e12).toFixed(2)}T
+                      ${(country.economy.gdp / 1e12).toFixed(2)}T
                     </span>
                   </div>
                   <div className="data-row">
                     <span className="data-label">GDP Per Capita:</span>
                     <span className="data-value">
-                      ${(country as any).economy.gdpPerCapita?.toLocaleString()}
+                      ${country.economy.gdpPerCapita?.toLocaleString()}
                     </span>
                   </div>
-                  {(country as any).economy.employmentRate && (
+                  {country.economy.employmentRate && (
                     <div className="data-row">
                       <span className="data-label">Employment Rate:</span>
                       <span className="data-value">
-                        {(country as any).economy.employmentRate}%
+                        {country.economy.employmentRate}%
                       </span>
                     </div>
                   )}
@@ -580,7 +588,7 @@ export function ComprehensiveCountryData({
                 </CardHeader>
                 <CardContent className="card-content-compact">
                   <div className="badge-list">
-                    {(country as any).economy.majorIndustries?.map(
+                    {country.economy.majorIndustries?.map(
                       (industry: string) => (
                         <Badge key={industry} variant="secondary">
                           {industry}
@@ -598,18 +606,14 @@ export function ComprehensiveCountryData({
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="card-content-compact">
-                  {(country as any).economy.topExports?.map(
-                    (exportItem: any) => (
-                      <div key={exportItem.product} className="data-row">
-                        <span className="data-label">
-                          {exportItem.product}:
-                        </span>
-                        <span className="data-value">
-                          ${(exportItem.value / 1e9).toFixed(1)}B
-                        </span>
-                      </div>
-                    )
-                  )}
+                  {country.economy.topExports?.map((exportItem: TradeItem) => (
+                    <div key={exportItem.product} className="data-row">
+                      <span className="data-label">{exportItem.product}:</span>
+                      <span className="data-value">
+                        ${(exportItem.value / 1e9).toFixed(1)}B
+                      </span>
+                    </div>
+                  ))}
                 </CardContent>
               </Card>
 
@@ -620,22 +624,18 @@ export function ComprehensiveCountryData({
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="card-content-compact">
-                  {(country as any).economy.topImports?.map(
-                    (importItem: any) => (
-                      <div key={importItem.product} className="data-row">
-                        <span className="data-label">
-                          {importItem.product}:
-                        </span>
-                        <span className="data-value">
-                          ${(importItem.value / 1e9).toFixed(1)}B
-                        </span>
-                      </div>
-                    )
-                  )}
+                  {country.economy.topImports?.map((importItem: TradeItem) => (
+                    <div key={importItem.product} className="data-row">
+                      <span className="data-label">{importItem.product}:</span>
+                      <span className="data-value">
+                        ${(importItem.value / 1e9).toFixed(1)}B
+                      </span>
+                    </div>
+                  ))}
                 </CardContent>
               </Card>
 
-              {(country as any).economy.employmentSectors && (
+              {country.economy.employmentSectors && (
                 <Card className="data-card">
                   <CardHeader className="card-header-compact">
                     <CardTitle className="card-title-compact">
@@ -646,20 +646,19 @@ export function ComprehensiveCountryData({
                     <div className="data-row">
                       <span className="data-label">Services:</span>
                       <span className="data-value">
-                        {(country as any).economy.employmentSectors.services}%
+                        {country.economy.employmentSectors.services}%
                       </span>
                     </div>
                     <div className="data-row">
                       <span className="data-label">Industry:</span>
                       <span className="data-value">
-                        {(country as any).economy.employmentSectors.industry}%
+                        {country.economy.employmentSectors.industry}%
                       </span>
                     </div>
                     <div className="data-row">
                       <span className="data-label">Agriculture:</span>
                       <span className="data-value">
-                        {(country as any).economy.employmentSectors.agriculture}
-                        %
+                        {country.economy.employmentSectors.agriculture}%
                       </span>
                     </div>
                   </CardContent>
@@ -670,7 +669,7 @@ export function ComprehensiveCountryData({
         </TabsContent>
 
         <TabsContent value="culture" className="comprehensive-tab-content">
-          {(country as any).culture && (
+          {country.culture && (
             <div className="data-grid">
               <Card className="data-card">
                 <CardHeader className="card-header-compact">
@@ -682,7 +681,7 @@ export function ComprehensiveCountryData({
                   <div className="data-section">
                     <span className="data-label">Official Languages:</span>
                     <div className="badge-list">
-                      {(country as any).culture.officialLanguages?.map(
+                      {country.culture.officialLanguages?.map(
                         (lang: string) => (
                           <Badge key={lang} variant="default">
                             {lang}
@@ -694,7 +693,7 @@ export function ComprehensiveCountryData({
                   <div className="data-section">
                     <span className="data-label">Regional Languages:</span>
                     <div className="badge-list">
-                      {(country as any).culture.regionalLanguages?.map(
+                      {country.culture.regionalLanguages?.map(
                         (lang: string) => (
                           <Badge key={lang} variant="secondary">
                             {lang}
@@ -713,17 +712,17 @@ export function ComprehensiveCountryData({
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="card-content-compact">
-                  {(country as any).culture.religionDemographics &&
-                    Object.entries(
-                      (country as any).culture.religionDemographics
-                    ).map(([religion, percentage]) => (
-                      <div key={religion} className="data-row">
-                        <span className="data-label">{religion}:</span>
-                        <span className="data-value">
-                          {String(percentage)}%
-                        </span>
-                      </div>
-                    ))}
+                  {country.culture.religionDemographics &&
+                    Object.entries(country.culture.religionDemographics).map(
+                      ([religion, percentage]) => (
+                        <div key={religion} className="data-row">
+                          <span className="data-label">{religion}:</span>
+                          <span className="data-value">
+                            {String(percentage)}%
+                          </span>
+                        </div>
+                      )
+                    )}
                 </CardContent>
               </Card>
 
@@ -734,8 +733,8 @@ export function ComprehensiveCountryData({
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="card-content-compact">
-                  {(country as any).culture.nationalFestivals?.map(
-                    (festival: any) => (
+                  {country.culture.nationalFestivals?.map(
+                    (festival: NationalFestival) => (
                       <div key={festival.name} className="formation-item">
                         <div className="formation-header">
                           <span className="formation-name">
@@ -757,8 +756,8 @@ export function ComprehensiveCountryData({
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="card-content-compact">
-                  {(country as any).culture.traditionalFoods?.map(
-                    (food: any) => (
+                  {country.culture.traditionalFoods?.map(
+                    (food: TraditionalFood) => (
                       <div key={food.name} className="formation-item">
                         <div className="formation-header">
                           <span className="formation-name">{food.name}</span>
@@ -777,17 +776,17 @@ export function ComprehensiveCountryData({
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="card-content-compact">
-                  {(country as any).culture.nationalSymbols &&
-                    Object.entries(
-                      (country as any).culture.nationalSymbols
-                    ).map(([symbol, value]) => (
-                      <div key={symbol} className="data-row">
-                        <span className="data-label">
-                          {symbol.charAt(0).toUpperCase() + symbol.slice(1)}:
-                        </span>
-                        <span className="data-value">{String(value)}</span>
-                      </div>
-                    ))}
+                  {country.culture.nationalSymbols &&
+                    Object.entries(country.culture.nationalSymbols).map(
+                      ([symbol, value]) => (
+                        <div key={symbol} className="data-row">
+                          <span className="data-label">
+                            {symbol.charAt(0).toUpperCase() + symbol.slice(1)}:
+                          </span>
+                          <span className="data-value">{String(value)}</span>
+                        </div>
+                      )
+                    )}
                 </CardContent>
               </Card>
             </div>
@@ -795,7 +794,7 @@ export function ComprehensiveCountryData({
         </TabsContent>
 
         <TabsContent value="education" className="comprehensive-tab-content">
-          {(country as any).education && (
+          {country.education && (
             <div className="data-grid">
               <Card className="data-card">
                 <CardHeader className="card-header-compact">
@@ -808,19 +807,19 @@ export function ComprehensiveCountryData({
                   <div className="data-row">
                     <span className="data-label">Literacy Rate:</span>
                     <span className="data-value">
-                      {(country as any).education.literacyRate}%
+                      {country.education.literacyRate}%
                     </span>
                   </div>
                   <div className="data-row">
                     <span className="data-label">Nobel Prize Winners:</span>
                     <span className="data-value">
-                      {(country as any).education.nobelPrizeWinners}
+                      {country.education.nobelPrizeWinners}
                     </span>
                   </div>
                   <div className="data-section">
                     <span className="data-label">Education System:</span>
                     <p className="formation-desc">
-                      {(country as any).education.educationSystem}
+                      {country.education.educationSystem}
                     </p>
                   </div>
                 </CardContent>
@@ -833,8 +832,8 @@ export function ComprehensiveCountryData({
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="card-content-compact">
-                  {(country as any).education.famousScientists?.map(
-                    (scientist: any) => (
+                  {country.education.famousScientists?.map(
+                    (scientist: Scientist) => (
                       <div key={scientist.name} className="formation-item">
                         <div className="formation-header">
                           <span className="formation-name">
@@ -855,7 +854,7 @@ export function ComprehensiveCountryData({
         </TabsContent>
 
         <TabsContent value="demographics" className="comprehensive-tab-content">
-          {(country as any).demographics && (
+          {country.demographics && (
             <div className="data-grid">
               <Card className="data-card">
                 <CardHeader className="card-header-compact">
@@ -865,8 +864,8 @@ export function ComprehensiveCountryData({
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="card-content-compact">
-                  {(country as any).demographics.populationGrowth?.map(
-                    (data: any) => (
+                  {country.demographics.populationGrowth?.map(
+                    (data: PopulationData) => (
                       <div key={data.year} className="data-row">
                         <span className="data-label">{data.year}:</span>
                         <span className="data-value">
@@ -885,18 +884,18 @@ export function ComprehensiveCountryData({
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="card-content-compact">
-                  {(country as any).demographics.urbanRural && (
+                  {country.demographics.urbanRural && (
                     <>
                       <div className="data-row">
                         <span className="data-label">Urban:</span>
                         <span className="data-value">
-                          {(country as any).demographics.urbanRural.urban}%
+                          {country.demographics.urbanRural.urban}%
                         </span>
                       </div>
                       <div className="data-row">
                         <span className="data-label">Rural:</span>
                         <span className="data-value">
-                          {(country as any).demographics.urbanRural.rural}%
+                          {country.demographics.urbanRural.rural}%
                         </span>
                       </div>
                     </>
@@ -911,27 +910,24 @@ export function ComprehensiveCountryData({
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="card-content-compact">
-                  {(country as any).demographics.lifeExpectancy && (
+                  {country.demographics.lifeExpectancy && (
                     <>
                       <div className="data-row">
                         <span className="data-label">Total:</span>
                         <span className="data-value">
-                          {(country as any).demographics.lifeExpectancy.total}{" "}
-                          years
+                          {country.demographics.lifeExpectancy.total} years
                         </span>
                       </div>
                       <div className="data-row">
                         <span className="data-label">Male:</span>
                         <span className="data-value">
-                          {(country as any).demographics.lifeExpectancy.male}{" "}
-                          years
+                          {country.demographics.lifeExpectancy.male} years
                         </span>
                       </div>
                       <div className="data-row">
                         <span className="data-label">Female:</span>
                         <span className="data-value">
-                          {(country as any).demographics.lifeExpectancy.female}{" "}
-                          years
+                          {country.demographics.lifeExpectancy.female} years
                         </span>
                       </div>
                     </>
@@ -946,32 +942,24 @@ export function ComprehensiveCountryData({
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="card-content-compact">
-                  {(country as any).demographics.ageDistribution && (
+                  {country.demographics.ageDistribution && (
                     <>
                       <div className="data-row">
                         <span className="data-label">Youth (0-17):</span>
                         <span className="data-value">
-                          {(country as any).demographics.ageDistribution.youth}%
+                          {country.demographics.ageDistribution.youth}%
                         </span>
                       </div>
                       <div className="data-row">
                         <span className="data-label">Working Age (18-64):</span>
                         <span className="data-value">
-                          {
-                            (country as any).demographics.ageDistribution
-                              .workingAge
-                          }
-                          %
+                          {country.demographics.ageDistribution.workingAge}%
                         </span>
                       </div>
                       <div className="data-row">
                         <span className="data-label">Elderly (65+):</span>
                         <span className="data-value">
-                          {
-                            (country as any).demographics.ageDistribution
-                              .elderly
-                          }
-                          %
+                          {country.demographics.ageDistribution.elderly}%
                         </span>
                       </div>
                     </>

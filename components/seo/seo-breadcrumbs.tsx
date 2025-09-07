@@ -1,5 +1,5 @@
-import Link from \"next/link\";
-import { ChevronRight, Home } from \"lucide-react\";
+import Link from "next/link";
+import { ChevronRight, Home } from "lucide-react";
 
 interface BreadcrumbItem {
   label: string;
@@ -11,55 +11,57 @@ interface SEOBreadcrumbsProps {
   className?: string;
 }
 
-export function SEOBreadcrumbs({ items, className = \"\" }: SEOBreadcrumbsProps) {
+export function SEOBreadcrumbs({ items, className = "" }: SEOBreadcrumbsProps) {
   // Generate structured data for breadcrumbs
   const breadcrumbStructuredData = {
-    \"@context\": \"https://schema.org\",
-    \"@type\": \"BreadcrumbList\",
-    \"itemListElement\": [
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
       {
-        \"@type\": \"ListItem\",
-        \"position\": 1,
-        \"name\": \"Home\",
-        \"item\": \"https://theworldexplorer.vercel.app\"
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://theworldexplorer.vercel.app",
       },
       ...items.map((item, index) => ({
-        \"@type\": \"ListItem\",
-        \"position\": index + 2,
-        \"name\": item.label,
-        ...(item.href && { \"item\": `https://theworldexplorer.vercel.app${item.href}` })
-      }))
-    ]
+        "@type": "ListItem",
+        position: index + 2,
+        name: item.label,
+        ...(item.href && {
+          item: `https://theworldexplorer.vercel.app${item.href}`,
+        }),
+      })),
+    ],
   };
 
   return (
     <>
       {/* Structured Data for Breadcrumbs */}
       <script
-        type=\"application/ld+json\"
+        type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(breadcrumbStructuredData),
         }}
       />
-      
+
       {/* Visual Breadcrumbs */}
-      <nav className={`breadcrumbs ${className}`} aria-label=\"Breadcrumb\">
-        <ol className=\"breadcrumb-list\">
-          <li className=\"breadcrumb-item\">
-            <Link href=\"/\" className=\"breadcrumb-link\">
+      <nav className={`breadcrumbs ${className}`} aria-label="Breadcrumb">
+        <ol className="breadcrumb-list">
+          <li className="breadcrumb-item">
+            <Link href="/" className="breadcrumb-link">
               <Home size={16} />
-              <span className=\"sr-only\">Home</span>
+              <span className="sr-only">Home</span>
             </Link>
           </li>
           {items.map((item, index) => (
-            <li key={index} className=\"breadcrumb-item\">
-              <ChevronRight size={16} className=\"breadcrumb-separator\" />
+            <li key={index} className="breadcrumb-item">
+              <ChevronRight size={16} className="breadcrumb-separator" />
               {item.href ? (
-                <Link href={item.href} className=\"breadcrumb-link\">
+                <Link href={item.href} className="breadcrumb-link">
                   {item.label}
                 </Link>
               ) : (
-                <span className=\"breadcrumb-current\" aria-current=\"page\">
+                <span className="breadcrumb-current" aria-current="page">
                   {item.label}
                 </span>
               )}
@@ -67,13 +69,13 @@ export function SEOBreadcrumbs({ items, className = \"\" }: SEOBreadcrumbsProps)
           ))}
         </ol>
       </nav>
-      
+
       <style jsx>{`
         .breadcrumbs {
           margin: var(--spacing-md) 0;
           padding: 0;
         }
-        
+
         .breadcrumb-list {
           display: flex;
           align-items: center;
@@ -83,13 +85,13 @@ export function SEOBreadcrumbs({ items, className = \"\" }: SEOBreadcrumbsProps)
           padding: 0;
           font-size: var(--font-size-sm);
         }
-        
+
         .breadcrumb-item {
           display: flex;
           align-items: center;
           gap: var(--spacing-xs);
         }
-        
+
         .breadcrumb-link {
           display: flex;
           align-items: center;
@@ -98,20 +100,20 @@ export function SEOBreadcrumbs({ items, className = \"\" }: SEOBreadcrumbsProps)
           text-decoration: none;
           transition: color var(--transition-fast);
         }
-        
+
         .breadcrumb-link:hover {
           color: var(--color-primary);
         }
-        
+
         .breadcrumb-separator {
           color: var(--color-text-muted);
         }
-        
+
         .breadcrumb-current {
           color: var(--color-text-primary);
           font-weight: var(--font-weight-medium);
         }
-        
+
         .sr-only {
           position: absolute;
           width: 1px;
