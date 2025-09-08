@@ -5,7 +5,7 @@
   "region": "Asia",
   "capital": "Beijing",
   "population": 1412000000,
-  "image": "/images/countries/cn.jpg",
+  "image": "/images/country/cn.svg",
   "flag": "/images/flags/cn.png",
   "currency": {
     "code": "CNY",

@@ -5,7 +5,7 @@
   "region": "South America",
   "capital": "Buenos Aires",
   "population": 45400000,
-  "image": "/images/countries/ar.jpg",
+  "image": "/images/country/ar.svg",
   "flag": "/images/flags/ar.png",
   "currency": {
     "code": "ARS",

@@ -5,7 +5,7 @@
   "region": "Europe",
   "capital": "Berlin",
   "population": 83200000,
-  "image": "/images/countries/de.jpg",
+  "image": "/images/country/de.svg",
   "flag": "/images/flags/de.png",
   "currency": {
     "code": "EUR",

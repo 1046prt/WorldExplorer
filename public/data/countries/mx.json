@@ -5,7 +5,7 @@
   "region": "North America",
   "capital": "Mexico City",
   "population": 128900000,
-  "image": "/images/countries/mx.jpg",
+  "image": "/images/country/mx.svg",
   "flag": "/images/flags/mx.png",
   "currency": {
     "code": "MXN",

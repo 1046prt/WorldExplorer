@@ -5,7 +5,7 @@
   "region": "Asia",
   "capital": "Tokyo",
   "population": 125800000,
-  "image": "/images/countries/jp.jpg",
+  "image": "/images/country/jp.svg",
   "flag": "/images/flags/japan.png",
   "currency": {
     "code": "JPY",

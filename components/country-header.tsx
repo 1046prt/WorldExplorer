@@ -18,8 +18,7 @@ export function CountryHeader({ country }: CountryHeaderProps) {
       <div className="ch-bg-image">
         <OptimizedImage
           src={
-            country.image ||
-            `/images/countries/${country.iso2.toLowerCase()}.jpg`
+            country.image || `/images/country/${country.iso2.toLowerCase()}.svg`
           }
           alt={`${country.name} landscape`}
           fill

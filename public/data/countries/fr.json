@@ -5,7 +5,7 @@
   "region": "Europe",
   "capital": "Paris",
   "population": 67700000,
-  "image": "/images/countries/fr.jpg",
+  "image": "/images/country/fr.svg",
   "flag": "/images/flags/france.png",
   "currency": {
     "code": "EUR",

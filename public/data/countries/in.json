@@ -5,7 +5,7 @@
   "region": "Asia",
   "capital": "New Delhi",
   "population": 1380000000,
-  "image": "/images/countries/in.jpg",
+  "image": "/images/country/in.svg",
   "flag": "/images/flags/in.png",
   "currency": {
     "code": "INR",

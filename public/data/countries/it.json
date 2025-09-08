@@ -5,7 +5,7 @@
   "region": "Europe",
   "capital": "Rome",
   "population": 59100000,
-  "image": "/images/countries/it.jpg",
+  "image": "/images/country/it.svg",
   "flag": "/images/flags/it.png",
   "currency": {
     "code": "EUR",

@@ -5,7 +5,7 @@
   "region": "Europe",
   "capital": "Madrid",
   "population": 47400000,
-  "image": "/images/countries/es.jpg",
+  "image": "/images/country/es.svg",
   "flag": "/images/flags/es.png",
   "currency": {
     "code": "EUR",

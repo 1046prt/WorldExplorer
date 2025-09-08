@@ -5,7 +5,7 @@
   "region": "Europe/Asia",
   "capital": "Moscow",
   "population": 146200000,
-  "image": "/images/countries/ru.jpg",
+  "image": "/images/country/ru.svg",
   "flag": "/images/flags/ru.png",
   "currency": {
     "code": "RUB",

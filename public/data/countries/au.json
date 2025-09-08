@@ -5,7 +5,7 @@
   "region": "Oceania",
   "capital": "Canberra",
   "population": 25700000,
-  "image": "/images/countries/au.jpg",
+  "image": "/images/country/au.svg",
   "flag": "/images/flags/au.png",
   "currency": {
     "code": "AUD",

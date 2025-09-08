@@ -5,7 +5,7 @@
   "region": "North America",
   "capital": "Ottawa",
   "population": 38200000,
-  "image": "/images/countries/ca.jpg",
+  "image": "/images/country/ca.svg",
   "flag": "/images/flags/ca.png",
   "currency": {
     "code": "CAD",
