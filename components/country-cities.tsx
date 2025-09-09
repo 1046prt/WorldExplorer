@@ -22,8 +22,8 @@ export function CountryCities({ country }: CountryCitiesProps) {
               <ImageModal
                 src={city.image || `/images/cities/${city.slug}.jpg`}
                 alt={city.name}
-                width={120}
-                height={80}
+                width={160}
+                height={120}
                 className="city-image"
               />
             </div>
