@@ -37,15 +37,6 @@
   opacity: 1;
 }
 
-.image-modal-overlay .zoom-icon {
-  width: 32px;
-  height: 32px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: var(--spacing-sm);
-  border-radius: var(--radius-full);
-}
-
 .image-modal-content {
   max-width: 90vw;
   max-height: 90vh;
@@ -67,11 +58,5 @@
   .image-modal-content {
     max-width: 95vw;
     max-height: 95vh;
-  }
-
-  .image-modal-overlay .zoom-icon {
-    width: 24px;
-    height: 24px;
-    padding: var(--spacing-xs);
   }
 }

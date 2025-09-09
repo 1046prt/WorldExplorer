@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { OptimizedImage } from "@/components/ui/optimized-image";
-import { ZoomIn } from "lucide-react";
 import "@/styles/image-modal.css";
 
 interface ImageModalProps {
@@ -36,9 +35,7 @@ export function ImageModal({
             height={height}
             className={`image-modal-thumbnail ${className}`}
           />
-          <div className="image-modal-overlay">
-            <ZoomIn className="zoom-icon" />
-          </div>
+          <div className="image-modal-overlay"></div>
         </div>
       </DialogTrigger>
       <DialogContent className="image-modal-content">
