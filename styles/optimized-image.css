@@ -4,12 +4,14 @@
   overflow: hidden;
   background-color: var(--color-muted);
   border-radius: var(--radius-md);
+  will-change: transform;
 }
 
 .optimized-image {
-  transition: all var(--transition-normal);
+  transition: opacity var(--transition-normal) ease;
   width: 100%;
   height: auto;
+  will-change: opacity;
 }
 
 .optimized-image-loading {
@@ -44,8 +46,9 @@
     var(--color-muted) 75%
   );
   background-size: 200% 100%;
-  animation: shimmer 2s infinite;
+  animation: shimmer 1.5s infinite ease-in-out;
   border-radius: inherit;
+  will-change: transform;
 }
 
 @keyframes shimmer {
@@ -71,6 +74,7 @@
   background-size: contain;
   opacity: 0;
   pointer-events: none;
+  will-change: opacity;
 }
 
 .optimized-image-error + .optimized-image-container::after {
@@ -80,5 +84,9 @@
 @media (max-width: 768px) {
   .optimized-image-container {
     border-radius: var(--radius-sm);
+  }
+
+  .optimized-image-placeholder {
+    animation-duration: 2s;
   }
 }

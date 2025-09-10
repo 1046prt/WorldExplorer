@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { OptimizedImage } from "@/components/ui/optimized-image";
 import "@/styles/image-modal.css";
@@ -42,8 +42,8 @@ export function ImageModal({
         <OptimizedImage
           src={src}
           alt={alt}
-          width={800}
-          height={600}
+          width={600}
+          height={450}
           className="image-modal-full"
         />
       </DialogContent>
