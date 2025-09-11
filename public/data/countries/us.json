@@ -448,31 +448,68 @@
     }
   ],
   "states": [
+    { "name": "Alabama", "capital": "Montgomery", "slug": "alabama" },
+    { "name": "Alaska", "capital": "Juneau", "slug": "alaska" },
+    { "name": "Arizona", "capital": "Phoenix", "slug": "arizona" },
+    { "name": "Arkansas", "capital": "Little Rock", "slug": "arkansas" },
+    { "name": "California", "capital": "Sacramento", "slug": "california" },
+    { "name": "Colorado", "capital": "Denver", "slug": "colorado" },
+    { "name": "Connecticut", "capital": "Hartford", "slug": "connecticut" },
+    { "name": "Delaware", "capital": "Dover", "slug": "delaware" },
+    { "name": "Florida", "capital": "Tallahassee", "slug": "florida" },
+    { "name": "Georgia", "capital": "Atlanta", "slug": "georgia" },
+    { "name": "Hawaii", "capital": "Honolulu", "slug": "hawaii" },
+    { "name": "Idaho", "capital": "Boise", "slug": "idaho" },
+    { "name": "Illinois", "capital": "Springfield", "slug": "illinois" },
+    { "name": "Indiana", "capital": "Indianapolis", "slug": "indiana" },
+    { "name": "Iowa", "capital": "Des Moines", "slug": "iowa" },
+    { "name": "Kansas", "capital": "Topeka", "slug": "kansas" },
+    { "name": "Kentucky", "capital": "Frankfort", "slug": "kentucky" },
+    { "name": "Louisiana", "capital": "Baton Rouge", "slug": "louisiana" },
+    { "name": "Maine", "capital": "Augusta", "slug": "maine" },
+    { "name": "Maryland", "capital": "Annapolis", "slug": "maryland" },
+    { "name": "Massachusetts", "capital": "Boston", "slug": "massachusetts" },
+    { "name": "Michigan", "capital": "Lansing", "slug": "michigan" },
+    { "name": "Minnesota", "capital": "St. Paul", "slug": "minnesota" },
+    { "name": "Mississippi", "capital": "Jackson", "slug": "mississippi" },
+    { "name": "Missouri", "capital": "Jefferson City", "slug": "missouri" },
+    { "name": "Montana", "capital": "Helena", "slug": "montana" },
+    { "name": "Nebraska", "capital": "Lincoln", "slug": "nebraska" },
+    { "name": "Nevada", "capital": "Carson City", "slug": "nevada" },
+    { "name": "New Hampshire", "capital": "Concord", "slug": "new-hampshire" },
+    { "name": "New Jersey", "capital": "Trenton", "slug": "new-jersey" },
+    { "name": "New Mexico", "capital": "Santa Fe", "slug": "new-mexico" },
+    { "name": "New York", "capital": "Albany", "slug": "new-york" },
     {
-      "name": "California",
-      "capital": "Sacramento",
-      "slug": "california"
+      "name": "North Carolina",
+      "capital": "Raleigh",
+      "slug": "north-carolina"
     },
+    { "name": "North Dakota", "capital": "Bismarck", "slug": "north-dakota" },
+    { "name": "Ohio", "capital": "Columbus", "slug": "ohio" },
+    { "name": "Oklahoma", "capital": "Oklahoma City", "slug": "oklahoma" },
+    { "name": "Oregon", "capital": "Salem", "slug": "oregon" },
+    { "name": "Pennsylvania", "capital": "Harrisburg", "slug": "pennsylvania" },
+    { "name": "Rhode Island", "capital": "Providence", "slug": "rhode-island" },
     {
-      "name": "Texas",
-      "capital": "Austin",
-      "slug": "texas"
+      "name": "South Carolina",
+      "capital": "Columbia",
+      "slug": "south-carolina"
     },
+    { "name": "South Dakota", "capital": "Pierre", "slug": "south-dakota" },
+    { "name": "Tennessee", "capital": "Nashville", "slug": "tennessee" },
+    { "name": "Texas", "capital": "Austin", "slug": "texas" },
+    { "name": "Utah", "capital": "Salt Lake City", "slug": "utah" },
+    { "name": "Vermont", "capital": "Montpelier", "slug": "vermont" },
+    { "name": "Virginia", "capital": "Richmond", "slug": "virginia" },
+    { "name": "Washington", "capital": "Olympia", "slug": "washington" },
     {
-      "name": "New York",
-      "capital": "Albany",
-      "slug": "new-york"
+      "name": "West Virginia",
+      "capital": "Charleston",
+      "slug": "west-virginia"
     },
-    {
-      "name": "Florida",
-      "capital": "Tallahassee",
-      "slug": "florida"
-    },
-    {
-      "name": "Illinois",
-      "capital": "Springfield",
-      "slug": "illinois"
-    }
+    { "name": "Wisconsin", "capital": "Madison", "slug": "wisconsin" },
+    { "name": "Wyoming", "capital": "Cheyenne", "slug": "wyoming" }
   ],
   "famousCities": [
     {
@@ -504,6 +541,48 @@
       "whyFamous": "Architectural marvel known for skyscrapers and deep-dish pizza",
       "slug": "chicago",
       "image": "/images/cities/us/chicago.jpg"
+    },
+    {
+      "name": "Miami",
+      "whyFamous": "Famous for beaches, nightlife, Cuban culture, and Art Deco architecture",
+      "slug": "miami",
+      "image": "/images/cities/us/miami.png"
+    },
+    {
+      "name": "Washington D.C.",
+      "whyFamous": "Capital of the U.S., home to the White House, Capitol, and Smithsonian museums",
+      "slug": "washington-dc",
+      "image": "/images/cities/us/washington-dc.jpg"
+    },
+    {
+      "name": "Seattle",
+      "whyFamous": "Tech hub, home to Amazon and Microsoft, famous for the Space Needle and coffee culture",
+      "slug": "seattle",
+      "image": "/images/cities/us/seattle.jpg"
+    },
+    {
+      "name": "Boston",
+      "whyFamous": "Historic city central to the American Revolution, known for Harvard and MIT",
+      "slug": "boston",
+      "image": "/images/cities/us/boston.jpg"
+    },
+    {
+      "name": "New Orleans",
+      "whyFamous": "Cultural hub known for jazz, Mardi Gras celebrations, and Creole cuisine",
+      "slug": "new-orleans",
+      "image": "/images/cities/us/new-orleans.jpg"
+    },
+    {
+      "name": "Houston",
+      "whyFamous": "Energy capital of the world, home to NASA’s Johnson Space Center",
+      "slug": "houston",
+      "image": "/images/cities/us/houston.jpg"
+    },
+    {
+      "name": "Philadelphia",
+      "whyFamous": "Historic city known for the Liberty Bell, Independence Hall, and Philly cheesesteaks",
+      "slug": "philadelphia",
+      "image": "/images/cities/us/philadelphia.jpg"
     }
   ],
   "landmarks": [
@@ -511,10 +590,7 @@
       "slug": "statue-of-liberty",
       "name": "Statue of Liberty",
       "city": "New York City",
-      "coordinates": {
-        "lat": 40.6892,
-        "lng": -74.0445
-      },
+      "coordinates": { "lat": 40.6892, "lng": -74.0445 },
       "whyFamous": "Symbol of freedom and democracy, gift from France in 1886",
       "imagePath": "/images/landmarks/us/statue-of-liberty.jpg"
     },
@@ -522,10 +598,7 @@
       "slug": "grand-canyon",
       "name": "Grand Canyon",
       "city": "Arizona",
-      "coordinates": {
-        "lat": 36.1069,
-        "lng": -112.1129
-      },
+      "coordinates": { "lat": 36.1069, "lng": -112.1129 },
       "whyFamous": "One of the world's most spectacular natural wonders, carved by the Colorado River",
       "imagePath": "/images/landmarks/us/grand-canyon.jpg"
     },
@@ -533,21 +606,15 @@
       "slug": "golden-gate-bridge",
       "name": "Golden Gate Bridge",
       "city": "San Francisco",
-      "coordinates": {
-        "lat": 37.8199,
-        "lng": -122.4783
-      },
-      "whyFamous": "Iconic suspension bridge and symbol of San Francisco that  connects the Bay Area to the Pacific Ocean",
+      "coordinates": { "lat": 37.8199, "lng": -122.4783 },
+      "whyFamous": "Iconic suspension bridge and symbol of San Francisco that connects the Bay Area to the Pacific Ocean",
       "imagePath": "/images/landmarks/us/golden-gate-bridge.jpg"
     },
     {
       "slug": "mount-rushmore",
       "name": "Mount Rushmore",
       "city": "South Dakota",
-      "coordinates": {
-        "lat": 43.8791,
-        "lng": -103.4591
-      },
+      "coordinates": { "lat": 43.8791, "lng": -103.4591 },
       "whyFamous": "Massive sculpture carved into granite featuring four US presidents",
       "imagePath": "/images/landmarks/us/mount-rushmore.jpg"
     },
@@ -555,12 +622,89 @@
       "slug": "empire-state-building",
       "name": "Empire State Building",
       "city": "New York City",
-      "coordinates": {
-        "lat": 40.7484,
-        "lng": -73.9857
-      },
+      "coordinates": { "lat": 40.7484, "lng": -73.9857 },
       "whyFamous": "Art Deco skyscraper and iconic symbol of New York City",
       "imagePath": "/images/landmarks/us/empire-state-building.jpg"
+    },
+    {
+      "slug": "white-house",
+      "name": "The White House",
+      "city": "Washington D.C.",
+      "coordinates": { "lat": 38.8977, "lng": -77.0365 },
+      "whyFamous": "Official residence and workplace of the President of the United States",
+      "imagePath": "/images/landmarks/us/white-house.jpg"
+    },
+    {
+      "slug": "times-square",
+      "name": "Times Square",
+      "city": "New York City",
+      "coordinates": { "lat": 40.758, "lng": -73.9855 },
+      "whyFamous": "World-famous commercial and entertainment hub known for billboards and New Year celebrations",
+      "imagePath": "/images/landmarks/us/times-square.jpg"
+    },
+    {
+      "slug": "niagara-falls",
+      "name": "Niagara Falls",
+      "city": "New York",
+      "coordinates": { "lat": 43.0962, "lng": -79.0377 },
+      "whyFamous": "Majestic waterfalls on the U.S.-Canada border, a natural wonder attracting millions",
+      "imagePath": "/images/landmarks/us/niagara-falls.png"
+    },
+    {
+      "slug": "hollywood-sign",
+      "name": "Hollywood Sign",
+      "city": "Los Angeles",
+      "coordinates": { "lat": 34.1341, "lng": -118.3215 },
+      "whyFamous": "Iconic symbol of the entertainment industry in Hollywood",
+      "imagePath": "/images/landmarks/us/hollywood-sign.jpg"
+    },
+    {
+      "slug": "space-needle",
+      "name": "Space Needle",
+      "city": "Seattle",
+      "coordinates": { "lat": 47.6205, "lng": -122.3493 },
+      "whyFamous": "Observation tower and iconic Seattle landmark built for the 1962 World's Fair",
+      "imagePath": "/images/landmarks/us/space-needle.jpg"
+    },
+    {
+      "slug": "gateway-arch",
+      "name": "Gateway Arch",
+      "city": "St. Louis",
+      "coordinates": { "lat": 38.6247, "lng": -90.1848 },
+      "whyFamous": "Tallest arch in the world, symbol of westward expansion in the U.S.",
+      "imagePath": "/images/landmarks/us/gateway-arch.png"
+    },
+    {
+      "slug": "yellowstone-national-park",
+      "name": "Yellowstone National Park",
+      "city": "Wyoming",
+      "coordinates": { "lat": 44.428, "lng": -110.5885 },
+      "whyFamous": "First U.S. national park, famous for geysers, wildlife, and the Yellowstone Caldera",
+      "imagePath": "/images/landmarks/us/yellowstone.jpg"
+    },
+    {
+      "slug": "liberty-bell",
+      "name": "Liberty Bell",
+      "city": "Philadelphia",
+      "coordinates": { "lat": 39.9496, "lng": -75.1503 },
+      "whyFamous": "Historic symbol of American independence and liberty",
+      "imagePath": "/images/landmarks/us/liberty-bell.jpg"
+    },
+    {
+      "slug": "alcatraz-island",
+      "name": "Alcatraz Island",
+      "city": "San Francisco",
+      "coordinates": { "lat": 37.8267, "lng": -122.423 },
+      "whyFamous": "Notorious former federal prison, now a museum and historic site",
+      "imagePath": "/images/landmarks/us/alcatraz-island.jpg"
+    },
+    {
+      "slug": "disney-world",
+      "name": "Walt Disney World Resort",
+      "city": "Orlando",
+      "coordinates": { "lat": 28.3852, "lng": -81.5639 },
+      "whyFamous": "Largest theme park in the world, iconic entertainment destination",
+      "imagePath": "/images/landmarks/us/disney-world.jpg"
     }
   ],
   "rivers": [
@@ -601,6 +745,71 @@
       "pathCoordinates": [
         { "lat": 45.9239, "lng": -111.4983 },
         { "lat": 38.8146, "lng": -90.1218 }
+      ]
+    },
+    {
+      "slug": "rio-grande",
+      "name": "Rio Grande",
+      "length": 3034,
+      "countries": ["United States", "Mexico"],
+      "source": "San Juan Mountains, Colorado",
+      "mouth": "Gulf of Mexico",
+      "imagePath": "/images/rivers/us/rio-grande.jpg",
+      "pathCoordinates": [
+        { "lat": 37.796, "lng": -107.561 },
+        { "lat": 25.9685, "lng": -97.14 }
+      ]
+    },
+    {
+      "slug": "ohio-river",
+      "name": "Ohio River",
+      "length": 1579,
+      "countries": ["United States"],
+      "source": "Pittsburgh, Pennsylvania (confluence of Allegheny and Monongahela)",
+      "mouth": "Mississippi River",
+      "imagePath": "/images/rivers/us/ohio-river.jpg",
+      "pathCoordinates": [
+        { "lat": 40.441, "lng": -80.0089 },
+        { "lat": 37.0667, "lng": -89.1833 }
+      ]
+    },
+    {
+      "slug": "hudson-river",
+      "name": "Hudson River",
+      "length": 507,
+      "countries": ["United States"],
+      "source": "Adirondack Mountains, New York",
+      "mouth": "New York Harbor, Atlantic Ocean",
+      "imagePath": "/images/rivers/us/hudson-river.jpg",
+      "pathCoordinates": [
+        { "lat": 44.1066, "lng": -73.9352 },
+        { "lat": 40.7033, "lng": -74.017 }
+      ]
+    },
+    {
+      "slug": "columbia-river",
+      "name": "Columbia River",
+      "length": 2000,
+      "countries": ["United States", "Canada"],
+      "source": "Columbia Lake, British Columbia",
+      "mouth": "Pacific Ocean (Astoria, Oregon)",
+      "imagePath": "/images/rivers/us/columbia-river.jpg",
+      "pathCoordinates": [
+        { "lat": 50.2167, "lng": -115.85 },
+        { "lat": 46.25, "lng": -124.05 }
+      ]
+    },
+    {
+      "slug": "yukon-river",
+      "name": "Yukon River",
+      "length": 3185,
+      "countries": ["United States", "Canada"],
+      "source": "Llewellyn Glacier, British Columbia",
+      "mouth": "Bering Sea, Alaska",
+      "imagePath": "/images/rivers/us/yukon-river.jpg",
+      "pathCoordinates": [
+        { "lat": 60.4167, "lng": -135.05 },
+        { "lat": 63.25, "lng": -167.5 }
       ]
     }
   ],
@@ -649,6 +858,69 @@
       "globalRank": 10,
       "type": "Private Research University",
       "imagePath": "/images/institutions/us/university-of-chicago.jpg"
+    },
+    {
+      "slug": "princeton-university",
+      "name": "Princeton University",
+      "city": "Princeton, New Jersey",
+      "founded": 1746,
+      "globalRank": 5,
+      "type": "Private Ivy League Research University",
+      "imagePath": "/images/institutions/us/princeton-university.png"
+    },
+    {
+      "slug": "columbia-university",
+      "name": "Columbia University",
+      "city": "New York City, New York",
+      "founded": 1754,
+      "globalRank": 8,
+      "type": "Private Ivy League Research University",
+      "imagePath": "/images/institutions/us/columbia-university.jpg"
+    },
+    {
+      "slug": "yale-university",
+      "name": "Yale University",
+      "city": "New Haven, Connecticut",
+      "founded": 1701,
+      "globalRank": 9,
+      "type": "Private Ivy League Research University",
+      "imagePath": "/images/institutions/us/yale-university.jpg"
+    },
+    {
+      "slug": "university-of-pennsylvania",
+      "name": "University of Pennsylvania",
+      "city": "Philadelphia, Pennsylvania",
+      "founded": 1740,
+      "globalRank": 12,
+      "type": "Private Ivy League Research University",
+      "imagePath": "/images/institutions/us/university-of-pennsylvania.jpg"
+    },
+    {
+      "slug": "cornell-university",
+      "name": "Cornell University",
+      "city": "Ithaca, New York",
+      "founded": 1865,
+      "globalRank": 13,
+      "type": "Private Ivy League Research University",
+      "imagePath": "/images/institutions/us/cornell-university.jpg"
+    },
+    {
+      "slug": "university-of-california-berkeley",
+      "name": "University of California, Berkeley",
+      "city": "Berkeley, California",
+      "founded": 1868,
+      "globalRank": 14,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/us/university-of-california-berkeley.jpg"
+    },
+    {
+      "slug": "university-of-california-los-angeles",
+      "name": "University of California, Los Angeles (UCLA)",
+      "city": "Los Angeles, California",
+      "founded": 1919,
+      "globalRank": 18,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/us/ucla.jpg"
     }
   ]
 }
