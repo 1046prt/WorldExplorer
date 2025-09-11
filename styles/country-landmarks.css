@@ -112,7 +112,6 @@
   align-items: flex-start;
   justify-content: space-between;
   margin-bottom: var(--spacing-sm);
-  gap: var(--spacing-xs);
   flex-wrap: wrap;
 }
 
