@@ -443,30 +443,45 @@
   ],
   "states": [
     {
-      "name": "Maharashtra",
-      "capital": "Mumbai",
-      "slug": "maharashtra"
+      "name": "Andhra Pradesh",
+      "capital": "Amaravati",
+      "slug": "andhra-pradesh"
     },
     {
-      "name": "Uttar Pradesh",
-      "capital": "Lucknow",
-      "slug": "uttar-pradesh"
+      "name": "Arunachal Pradesh",
+      "capital": "Itanagar",
+      "slug": "arunachal-pradesh"
     },
+    { "name": "Assam", "capital": "Dispur", "slug": "assam" },
+    { "name": "Bihar", "capital": "Patna", "slug": "bihar" },
+    { "name": "Chhattisgarh", "capital": "Raipur", "slug": "chhattisgarh" },
+    { "name": "Goa", "capital": "Panaji", "slug": "goa" },
+    { "name": "Gujarat", "capital": "Gandhinagar", "slug": "gujarat" },
+    { "name": "Haryana", "capital": "Chandigarh", "slug": "haryana" },
     {
-      "name": "West Bengal",
-      "capital": "Kolkata",
-      "slug": "west-bengal"
+      "name": "Himachal Pradesh",
+      "capital": "Shimla",
+      "slug": "himachal-pradesh"
     },
-    {
-      "name": "Tamil Nadu",
-      "capital": "Chennai",
-      "slug": "tamil-nadu"
-    },
-    {
-      "name": "Karnataka",
-      "capital": "Bangalore",
-      "slug": "karnataka"
-    }
+    { "name": "Jharkhand", "capital": "Ranchi", "slug": "jharkhand" },
+    { "name": "Karnataka", "capital": "Bangalore", "slug": "karnataka" },
+    { "name": "Kerala", "capital": "Thiruvananthapuram", "slug": "kerala" },
+    { "name": "Madhya Pradesh", "capital": "Bhopal", "slug": "madhya-pradesh" },
+    { "name": "Maharashtra", "capital": "Mumbai", "slug": "maharashtra" },
+    { "name": "Manipur", "capital": "Imphal", "slug": "manipur" },
+    { "name": "Meghalaya", "capital": "Shillong", "slug": "meghalaya" },
+    { "name": "Mizoram", "capital": "Aizawl", "slug": "mizoram" },
+    { "name": "Nagaland", "capital": "Kohima", "slug": "nagaland" },
+    { "name": "Odisha", "capital": "Bhubaneswar", "slug": "odisha" },
+    { "name": "Punjab", "capital": "Chandigarh", "slug": "punjab" },
+    { "name": "Rajasthan", "capital": "Jaipur", "slug": "rajasthan" },
+    { "name": "Sikkim", "capital": "Gangtok", "slug": "sikkim" },
+    { "name": "Tamil Nadu", "capital": "Chennai", "slug": "tamil-nadu" },
+    { "name": "Telangana", "capital": "Hyderabad", "slug": "telangana" },
+    { "name": "Tripura", "capital": "Agartala", "slug": "tripura" },
+    { "name": "Uttar Pradesh", "capital": "Lucknow", "slug": "uttar-pradesh" },
+    { "name": "Uttarakhand", "capital": "Dehradun", "slug": "uttarakhand" },
+    { "name": "West Bengal", "capital": "Kolkata", "slug": "west-bengal" }
   ],
   "famousCities": [
     {
