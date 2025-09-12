@@ -463,6 +463,46 @@
       "name": "Manitoba",
       "capital": "Winnipeg",
       "slug": "manitoba"
+    },
+    {
+      "name": "Saskatchewan",
+      "capital": "Regina",
+      "slug": "saskatchewan"
+    },
+    {
+      "name": "Nova Scotia",
+      "capital": "Halifax",
+      "slug": "nova-scotia"
+    },
+    {
+      "name": "New Brunswick",
+      "capital": "Fredericton",
+      "slug": "new-brunswick"
+    },
+    {
+      "name": "Newfoundland and Labrador",
+      "capital": "St. John's",
+      "slug": "newfoundland-and-labrador"
+    },
+    {
+      "name": "Prince Edward Island",
+      "capital": "Charlottetown",
+      "slug": "prince-edward-island"
+    },
+    {
+      "name": "Northwest Territories",
+      "capital": "Yellowknife",
+      "slug": "northwest-territories"
+    },
+    {
+      "name": "Yukon",
+      "capital": "Whitehorse",
+      "slug": "yukon"
+    },
+    {
+      "name": "Nunavut",
+      "capital": "Iqaluit",
+      "slug": "nunavut"
     }
   ],
   "famousCities": [
@@ -495,6 +535,48 @@
       "whyFamous": "Oil industry hub and gateway to Canadian Rockies",
       "slug": "calgary",
       "image": "/images/cities/canada/calgary.jpg"
+    },
+    {
+      "name": "Ottawa",
+      "whyFamous": "Capital of Canada, home to Parliament Hill and national museums",
+      "slug": "ottawa",
+      "image": "/images/cities/canada/ottawa.jpg"
+    },
+    {
+      "name": "Edmonton",
+      "whyFamous": "Known for West Edmonton Mall and gateway to northern Canada",
+      "slug": "edmonton",
+      "image": "/images/cities/canada/edmonton.jpg"
+    },
+    {
+      "name": "Winnipeg",
+      "whyFamous": "Cultural hub of the Prairies, home to Canadian Museum for Human Rights",
+      "slug": "winnipeg",
+      "image": "/images/cities/canada/winnipeg.jpg"
+    },
+    {
+      "name": "Halifax",
+      "whyFamous": "Atlantic port city with historic waterfront and maritime heritage",
+      "slug": "halifax",
+      "image": "/images/cities/canada/halifax.jpg"
+    },
+    {
+      "name": "Victoria",
+      "whyFamous": "Capital of British Columbia, known for its gardens and colonial architecture",
+      "slug": "victoria",
+      "image": "/images/cities/canada/victoria.jpg"
+    },
+    {
+      "name": "St. John's",
+      "whyFamous": "Oldest city in North America, colorful row houses and Atlantic gateway",
+      "slug": "st-johns",
+      "image": "/images/cities/canada/st-johns.jpg"
+    },
+    {
+      "name": "Saskatoon",
+      "whyFamous": "Prairie city along the South Saskatchewan River, known for cultural festivals",
+      "slug": "saskatoon",
+      "image": "/images/cities/canada/saskatoon.jpg"
     }
   ],
   "landmarks": [
@@ -502,21 +584,15 @@
       "slug": "cn-tower",
       "name": "CN Tower",
       "city": "Toronto",
-      "coordinates": {
-        "lat": 43.6426,
-        "lng": -79.3871
-      },
-      "whyFamous": "Iconic telecommunications tower",
+      "coordinates": { "lat": 43.6426, "lng": -79.3871 },
+      "whyFamous": "Iconic telecommunications and observation tower",
       "imagePath": "/images/landmarks/canada/cn-tower.jpg"
     },
     {
       "slug": "niagara-falls",
       "name": "Niagara Falls",
       "city": "Niagara Falls",
-      "coordinates": {
-        "lat": 43.0962,
-        "lng": -79.0377
-      },
+      "coordinates": { "lat": 43.0962, "lng": -79.0377 },
       "whyFamous": "World-famous waterfalls on the US-Canada border",
       "imagePath": "/images/landmarks/canada/niagara-falls.jpg"
     },
@@ -524,10 +600,7 @@
       "slug": "banff-national-park",
       "name": "Banff National Park",
       "city": "Alberta",
-      "coordinates": {
-        "lat": 51.4968,
-        "lng": -115.9281
-      },
+      "coordinates": { "lat": 51.4968, "lng": -115.9281 },
       "whyFamous": "Canada's first national park in the Rocky Mountains",
       "imagePath": "/images/landmarks/canada/banff-national-park.jpg"
     },
@@ -535,12 +608,73 @@
       "slug": "parliament-hill",
       "name": "Parliament Hill",
       "city": "Ottawa",
-      "coordinates": {
-        "lat": 45.4236,
-        "lng": -75.7009
-      },
+      "coordinates": { "lat": 45.4236, "lng": -75.7009 },
       "whyFamous": "Seat of Canadian federal government",
       "imagePath": "/images/landmarks/canada/parliament-hill.jpg"
+    },
+    {
+      "slug": "old-quebec",
+      "name": "Old Quebec",
+      "city": "Quebec City",
+      "coordinates": { "lat": 46.8139, "lng": -71.2082 },
+      "whyFamous": "UNESCO World Heritage Site with fortified colonial architecture",
+      "imagePath": "/images/landmarks/canada/old-quebec.jpg"
+    },
+    {
+      "slug": "stanley-park",
+      "name": "Stanley Park",
+      "city": "Vancouver",
+      "coordinates": { "lat": 49.3043, "lng": -123.1443 },
+      "whyFamous": "Vancouver's most famous park with seawall and totem poles",
+      "imagePath": "/images/landmarks/canada/stanley-park.jpg"
+    },
+    {
+      "slug": "capilano-suspension-bridge",
+      "name": "Capilano Suspension Bridge",
+      "city": "Vancouver",
+      "coordinates": { "lat": 49.3429, "lng": -123.1149 },
+      "whyFamous": "Scenic suspension bridge over Capilano River",
+      "imagePath": "/images/landmarks/canada/capilano-suspension-bridge.jpg"
+    },
+    {
+      "slug": "royal-ontario-museum",
+      "name": "Royal Ontario Museum",
+      "city": "Toronto",
+      "coordinates": { "lat": 43.6677, "lng": -79.3948 },
+      "whyFamous": "Major museum of world culture and natural history",
+      "imagePath": "/images/landmarks/canada/royal-ontario-museum.jpg"
+    },
+    {
+      "slug": "pegasus-bridge",
+      "name": "Peggy's Cove Lighthouse",
+      "city": "Nova Scotia",
+      "coordinates": { "lat": 44.4939, "lng": -63.9156 },
+      "whyFamous": "Iconic lighthouse and picturesque Atlantic coast village",
+      "imagePath": "/images/landmarks/canada/peggys-cove-lighthouse.jpg"
+    },
+    {
+      "slug": "whistler-blackcomb",
+      "name": "Whistler Blackcomb",
+      "city": "British Columbia",
+      "coordinates": { "lat": 50.115, "lng": -122.95 },
+      "whyFamous": "World-famous ski resort and 2010 Winter Olympics venue",
+      "imagePath": "/images/landmarks/canada/whistler-blackcomb.jpg"
+    },
+    {
+      "slug": "hopewell-rocks",
+      "name": "Hopewell Rocks",
+      "city": "New Brunswick",
+      "coordinates": { "lat": 45.8131, "lng": -64.5744 },
+      "whyFamous": "Unique rock formations shaped by Bay of Fundy tides",
+      "imagePath": "/images/landmarks/canada/hopewell-rocks.jpg"
+    },
+    {
+      "slug": "prince-edward-island-national-park",
+      "name": "Prince Edward Island National Park",
+      "city": "Prince Edward Island",
+      "coordinates": { "lat": 46.4833, "lng": -63.3667 },
+      "whyFamous": "Famous red sandstone cliffs and beaches",
+      "imagePath": "/images/landmarks/canada/prince-edward-island-national-park.jpg"
     }
   ],
   "rivers": [
@@ -582,6 +716,71 @@
         { "lat": 52.7661, "lng": -118.0481 },
         { "lat": 49.2057, "lng": -123.1636 }
       ]
+    },
+    {
+      "slug": "ottawa-river",
+      "name": "Ottawa River",
+      "length": 1271,
+      "countries": ["Canada"],
+      "source": "Lake Capimitchigama",
+      "mouth": "St. Lawrence River",
+      "imagePath": "/images/rivers/canada/ottawa-river.jpg",
+      "pathCoordinates": [
+        { "lat": 47.1667, "lng": -75.3833 },
+        { "lat": 45.4333, "lng": -75.7 }
+      ]
+    },
+    {
+      "slug": "nelson-river",
+      "name": "Nelson River",
+      "length": 2575,
+      "countries": ["Canada"],
+      "source": "Lake Winnipeg",
+      "mouth": "Hudson Bay",
+      "imagePath": "/images/rivers/canada/nelson-river.jpg",
+      "pathCoordinates": [
+        { "lat": 52.0, "lng": -97.0 },
+        { "lat": 57.0, "lng": -94.0 }
+      ]
+    },
+    {
+      "slug": "yukon-river",
+      "name": "Yukon River",
+      "length": 3185,
+      "countries": ["Canada", "United States"],
+      "source": "Atlin Lake (British Columbia)",
+      "mouth": "Bering Sea (Alaska)",
+      "imagePath": "/images/rivers/canada/yukon-river.jpg",
+      "pathCoordinates": [
+        { "lat": 59.75, "lng": -133.0 },
+        { "lat": 64.0, "lng": -165.0 }
+      ]
+    },
+    {
+      "slug": "churchill-river",
+      "name": "Churchill River",
+      "length": 1609,
+      "countries": ["Canada"],
+      "source": "Churchill Lake (Saskatchewan)",
+      "mouth": "Hudson Bay",
+      "imagePath": "/images/rivers/canada/churchill-river.jpg",
+      "pathCoordinates": [
+        { "lat": 55.6, "lng": -108.7 },
+        { "lat": 58.8, "lng": -94.2 }
+      ]
+    },
+    {
+      "slug": "red-river",
+      "name": "Red River of the North",
+      "length": 885,
+      "countries": ["Canada", "United States"],
+      "source": "Bois de Sioux and Otter Tail rivers",
+      "mouth": "Lake Winnipeg",
+      "imagePath": "/images/rivers/canada/red-river.jpg",
+      "pathCoordinates": [
+        { "lat": 46.3, "lng": -96.6 },
+        { "lat": 50.0, "lng": -97.1 }
+      ]
     }
   ],
   "institutions": [
@@ -620,6 +819,42 @@
       "globalRank": 110,
       "type": "Public Research University",
       "imagePath": "/images/institutions/canada/university-of-alberta.jpg"
+    },
+    {
+      "slug": "mcmasters-university",
+      "name": "McMaster University",
+      "city": "Hamilton, Ontario",
+      "founded": 1887,
+      "globalRank": 152,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/canada/mcmaster-university.jpg"
+    },
+    {
+      "slug": "university-of-montreal",
+      "name": "Université de Montréal",
+      "city": "Montreal, Quebec",
+      "founded": 1878,
+      "globalRank": 111,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/canada/university-of-montreal.jpg"
+    },
+    {
+      "slug": "university-of-waterloo",
+      "name": "University of Waterloo",
+      "city": "Waterloo, Ontario",
+      "founded": 1957,
+      "globalRank": 154,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/canada/university-of-waterloo.jpg"
+    },
+    {
+      "slug": "western-university",
+      "name": "Western University",
+      "city": "London, Ontario",
+      "founded": 1878,
+      "globalRank": 114,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/canada/western-university.jpg"
     }
   ]
 }
