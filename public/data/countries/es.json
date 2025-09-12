@@ -417,7 +417,7 @@
       "description": "Spain joins European Economic Community"
     }
   ],
-  "autonomousCommunities": [
+  "states": [
     {
       "name": "Andalusia",
       "capital": "Seville",
@@ -442,6 +442,66 @@
       "name": "Basque Country",
       "capital": "Vitoria-Gasteiz",
       "slug": "basque-country"
+    },
+    {
+      "name": "Galicia",
+      "capital": "Santiago de Compostela",
+      "slug": "galicia"
+    },
+    {
+      "name": "Castile and León",
+      "capital": "Valladolid",
+      "slug": "castile-and-leon"
+    },
+    {
+      "name": "Castile-La Mancha",
+      "capital": "Toledo",
+      "slug": "castile-la-mancha"
+    },
+    {
+      "name": "Aragon",
+      "capital": "Zaragoza",
+      "slug": "aragon"
+    },
+    {
+      "name": "Canary Islands",
+      "capital": "Las Palmas de Gran Canaria / Santa Cruz de Tenerife",
+      "slug": "canary-islands"
+    },
+    {
+      "name": "Balearic Islands",
+      "capital": "Palma",
+      "slug": "balearic-islands"
+    },
+    {
+      "name": "Extremadura",
+      "capital": "Mérida",
+      "slug": "extremadura"
+    },
+    {
+      "name": "Murcia",
+      "capital": "Murcia",
+      "slug": "murcia"
+    },
+    {
+      "name": "Navarre",
+      "capital": "Pamplona",
+      "slug": "navarre"
+    },
+    {
+      "name": "La Rioja",
+      "capital": "Logroño",
+      "slug": "la-rioja"
+    },
+    {
+      "name": "Asturias",
+      "capital": "Oviedo",
+      "slug": "asturias"
+    },
+    {
+      "name": "Cantabria",
+      "capital": "Santander",
+      "slug": "cantabria"
     }
   ],
   "famousCities": [
@@ -474,6 +534,18 @@
       "whyFamous": "Guggenheim Museum, Basque culture, industrial heritage",
       "slug": "bilbao",
       "image": "/images/cities/spain/bilbao.jpg"
+    },
+    {
+      "name": "Granada",
+      "whyFamous": "Alhambra Palace, Moorish architecture, Sierra Nevada backdrop",
+      "slug": "granada",
+      "image": "/images/cities/spain/granada.jpg"
+    },
+    {
+      "name": "Malaga",
+      "whyFamous": "Mediterranean beaches, Picasso Museum, historic port city",
+      "slug": "malaga",
+      "image": "/images/cities/spain/malaga.jpg"
     }
   ],
   "landmarks": [
@@ -520,6 +592,39 @@
       },
       "whyFamous": "Historic pilgrimage route across northern Spain",
       "imagePath": "/images/landmarks/spain/camino-de-santiago.jpg"
+    },
+    {
+      "slug": "park-guell",
+      "name": "Park Güell",
+      "city": "Barcelona",
+      "coordinates": {
+        "lat": 41.4145,
+        "lng": 2.1527
+      },
+      "whyFamous": "Gaudí-designed public park with colorful mosaics",
+      "imagePath": "/images/landmarks/spain/park-guell.jpg"
+    },
+    {
+      "slug": "seville-cathedral",
+      "name": "Seville Cathedral",
+      "city": "Seville",
+      "coordinates": {
+        "lat": 37.3861,
+        "lng": -5.9923
+      },
+      "whyFamous": "Largest Gothic cathedral and UNESCO World Heritage site",
+      "imagePath": "/images/landmarks/spain/seville-cathedral.jpg"
+    },
+    {
+      "slug": "plaza-mayor-madrid",
+      "name": "Plaza Mayor",
+      "city": "Madrid",
+      "coordinates": {
+        "lat": 40.4153,
+        "lng": -3.7074
+      },
+      "whyFamous": "Historic square in the heart of Madrid",
+      "imagePath": "/images/landmarks/spain/plaza-mayor-madrid.jpg"
     }
   ],
   "rivers": [
@@ -561,6 +666,32 @@
         { "lat": 37.9167, "lng": -2.8833 },
         { "lat": 36.7833, "lng": -6.35 }
       ]
+    },
+    {
+      "slug": "jucar-river",
+      "name": "Júcar River",
+      "length": 498,
+      "countries": ["Spain"],
+      "source": "Albarracín Mountains",
+      "mouth": "Mediterranean Sea",
+      "imagePath": "/images/rivers/spain/jucar-river.jpg",
+      "pathCoordinates": [
+        { "lat": 39.9833, "lng": -1.6333 },
+        { "lat": 39.15, "lng": 0.2667 }
+      ]
+    },
+    {
+      "slug": "guadiana-river",
+      "name": "Guadiana River",
+      "length": 744,
+      "countries": ["Spain", "Portugal"],
+      "source": "Laguna de la Serena",
+      "mouth": "Atlantic Ocean",
+      "imagePath": "/images/rivers/spain/guadiana-river.jpg",
+      "pathCoordinates": [
+        { "lat": 38.4, "lng": -5.7667 },
+        { "lat": 37.2167, "lng": -7.35 }
+      ]
     }
   ],
   "institutions": [
@@ -599,6 +730,33 @@
       "globalRank": 287,
       "type": "Public Research University",
       "imagePath": "/images/institutions/spain/pompeu-fabra-university.jpg"
+    },
+    {
+      "slug": "university-of-valencia",
+      "name": "University of Valencia",
+      "city": "Valencia, Valencia",
+      "founded": 1499,
+      "globalRank": 451,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/spain/university-of-valencia.jpg"
+    },
+    {
+      "slug": "university-of-seville",
+      "name": "University of Seville",
+      "city": "Seville, Andalusia",
+      "founded": 1505,
+      "globalRank": 601,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/spain/university-of-seville.jpg"
+    },
+    {
+      "slug": "complutense-university-of-madrid",
+      "name": "Complutense University of Madrid",
+      "city": "Madrid",
+      "founded": 1293,
+      "globalRank": 250,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/spain/complutense-university-of-madrid.jpg"
     }
   ]
 }

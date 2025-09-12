@@ -411,31 +411,53 @@
     }
   ],
   "states": [
+    { "name": "Mexico City", "capital": "Mexico City", "slug": "mexico-city" },
+    { "name": "Jalisco", "capital": "Guadalajara", "slug": "jalisco" },
+    { "name": "Nuevo León", "capital": "Monterrey", "slug": "nuevo-leon" },
+    { "name": "Quintana Roo", "capital": "Chetumal", "slug": "quintana-roo" },
+    { "name": "Yucatán", "capital": "Mérida", "slug": "yucatan" },
+    { "name": "Chiapas", "capital": "Tuxtla Gutiérrez", "slug": "chiapas" },
+    { "name": "Chihuahua", "capital": "Chihuahua", "slug": "chihuahua" },
+    { "name": "Coahuila", "capital": "Saltillo", "slug": "coahuila" },
+    { "name": "Colima", "capital": "Colima", "slug": "colima" },
+    { "name": "Durango", "capital": "Durango", "slug": "durango" },
+    { "name": "Guanajuato", "capital": "Guanajuato", "slug": "guanajuato" },
+    { "name": "Guerrero", "capital": "Chilpancingo", "slug": "guerrero" },
+    { "name": "Hidalgo", "capital": "Pachuca", "slug": "hidalgo" },
+    { "name": "México State", "capital": "Toluca", "slug": "mexico-state" },
+    { "name": "Michoacán", "capital": "Morelia", "slug": "michoacan" },
+    { "name": "Morelos", "capital": "Cuernavaca", "slug": "morelos" },
+    { "name": "Oaxaca", "capital": "Oaxaca City", "slug": "oaxaca" },
+    { "name": "Puebla", "capital": "Puebla", "slug": "puebla" },
     {
-      "name": "Mexico City",
-      "capital": "Mexico City",
-      "slug": "mexico-city"
+      "name": "San Luis Potosí",
+      "capital": "San Luis Potosí",
+      "slug": "san-luis-potosi"
+    },
+    { "name": "Sinaloa", "capital": "Culiacán", "slug": "sinaloa" },
+    { "name": "Sonora", "capital": "Hermosillo", "slug": "sonora" },
+    { "name": "Tabasco", "capital": "Villahermosa", "slug": "tabasco" },
+    {
+      "name": "Tamaulipas",
+      "capital": "Ciudad Victoria",
+      "slug": "tamaulipas"
+    },
+    { "name": "Tlaxcala", "capital": "Tlaxcala City", "slug": "tlaxcala" },
+    { "name": "Veracruz", "capital": "Xalapa", "slug": "veracruz" },
+    { "name": "Zacatecas", "capital": "Zacatecas", "slug": "zacatecas" },
+    {
+      "name": "Baja California",
+      "capital": "Mexicali",
+      "slug": "baja-california"
     },
     {
-      "name": "Jalisco",
-      "capital": "Guadalajara",
-      "slug": "jalisco"
+      "name": "Baja California Sur",
+      "capital": "La Paz",
+      "slug": "baja-california-sur"
     },
-    {
-      "name": "Nuevo León",
-      "capital": "Monterrey",
-      "slug": "nuevo-leon"
-    },
-    {
-      "name": "Quintana Roo",
-      "capital": "Chetumal",
-      "slug": "quintana-roo"
-    },
-    {
-      "name": "Yucatán",
-      "capital": "Mérida",
-      "slug": "yucatan"
-    }
+    { "name": "Campeche", "capital": "Campeche", "slug": "campeche" },
+    { "name": "Querétaro", "capital": "Querétaro", "slug": "queretaro" },
+    { "name": "Tlaxcala", "capital": "Tlaxcala City", "slug": "tlaxcala" }
   ],
   "famousCities": [
     {
@@ -467,6 +489,36 @@
       "whyFamous": "Indigenous culture and traditional crafts",
       "slug": "oaxaca",
       "image": "/images/cities/mexico/oaxaca.jpg"
+    },
+    {
+      "name": "Monterrey",
+      "whyFamous": "Industrial hub and modern skyline",
+      "slug": "monterrey",
+      "image": "/images/cities/mexico/monterrey.jpg"
+    },
+    {
+      "name": "Merida",
+      "whyFamous": "Colonial city with rich Mayan heritage",
+      "slug": "merida",
+      "image": "/images/cities/mexico/merida.jpg"
+    },
+    {
+      "name": "Tulum",
+      "whyFamous": "Beach town with ancient Mayan ruins",
+      "slug": "tulum",
+      "image": "/images/cities/mexico/tulum.jpg"
+    },
+    {
+      "name": "San Miguel de Allende",
+      "whyFamous": "UNESCO World Heritage site with baroque architecture",
+      "slug": "san-miguel-de-allende",
+      "image": "/images/cities/mexico/san-miguel-de-allende.jpg"
+    },
+    {
+      "name": "Chiapas (San Cristóbal de las Casas)",
+      "whyFamous": "Colonial town known for indigenous culture and markets",
+      "slug": "san-cristobal-de-las-casas",
+      "image": "/images/cities/mexico/san-cristobal-de-las-casas.jpg"
     }
   ],
   "landmarks": [
@@ -474,21 +526,15 @@
       "slug": "chichen-itza",
       "name": "Chichen Itza",
       "city": "Yucatan",
-      "coordinates": {
-        "lat": 20.6843,
-        "lng": -88.5678
-      },
-      "whyFamous": "Ancient Mayan city and the New Seven Wonders",
+      "coordinates": { "lat": 20.6843, "lng": -88.5678 },
+      "whyFamous": "Ancient Mayan city and one of the New Seven Wonders",
       "imagePath": "/images/landmarks/mexico/chichen-itza.jpg"
     },
     {
       "slug": "teotihuacan",
       "name": "Teotihuacan",
       "city": "Mexico State",
-      "coordinates": {
-        "lat": 19.6925,
-        "lng": -98.8438
-      },
+      "coordinates": { "lat": 19.6925, "lng": -98.8438 },
       "whyFamous": "Ancient Mesoamerican city with massive pyramids",
       "imagePath": "/images/landmarks/mexico/teotihuacan.jpg"
     },
@@ -496,10 +542,7 @@
       "slug": "zocalo",
       "name": "Zócalo",
       "city": "Mexico City",
-      "coordinates": {
-        "lat": 19.4326,
-        "lng": -99.1332
-      },
+      "coordinates": { "lat": 19.4326, "lng": -99.1332 },
       "whyFamous": "Main square of Mexico City, heart of the nation",
       "imagePath": "/images/landmarks/mexico/zocalo.jpg"
     },
@@ -507,12 +550,41 @@
       "slug": "palenque",
       "name": "Palenque",
       "city": "Chiapas",
-      "coordinates": {
-        "lat": 17.4839,
-        "lng": -92.0458
-      },
+      "coordinates": { "lat": 17.4839, "lng": -92.0458 },
       "whyFamous": "Ancient Mayan archaeological site in jungle setting",
       "imagePath": "/images/landmarks/mexico/palenque.jpg"
+    },
+    {
+      "slug": "monte-alban",
+      "name": "Monte Albán",
+      "city": "Oaxaca",
+      "coordinates": { "lat": 17.0439, "lng": -96.7676 },
+      "whyFamous": "Pre-Columbian archaeological site with panoramic views",
+      "imagePath": "/images/landmarks/mexico/monte-alban.jpg"
+    },
+    {
+      "slug": "frida-kahlo-museum",
+      "name": "Frida Kahlo Museum",
+      "city": "Mexico City",
+      "coordinates": { "lat": 19.3556, "lng": -99.162 },
+      "whyFamous": "Famous museum dedicated to iconic Mexican painter",
+      "imagePath": "/images/landmarks/mexico/frida-kahlo-museum.jpg"
+    },
+    {
+      "slug": "cancun-beaches",
+      "name": "Cancún Beaches",
+      "city": "Cancún",
+      "coordinates": { "lat": 21.1619, "lng": -86.8515 },
+      "whyFamous": "World-renowned beaches and resort destination",
+      "imagePath": "/images/landmarks/mexico/cancun-beaches.jpg"
+    },
+    {
+      "slug": "guanajuato",
+      "name": "Guanajuato City",
+      "city": "Guanajuato",
+      "coordinates": { "lat": 21.019, "lng": -101.2574 },
+      "whyFamous": "Colorful colonial city, UNESCO World Heritage site",
+      "imagePath": "/images/landmarks/mexico/guanajuato.jpg"
     }
   ],
   "rivers": [
@@ -540,6 +612,45 @@
       "pathCoordinates": [
         { "lat": 15.8333, "lng": -91.5 },
         { "lat": 18.6167, "lng": -92.9333 }
+      ]
+    },
+    {
+      "slug": "usumacinta-river",
+      "name": "Usumacinta River",
+      "length": 1120,
+      "countries": ["Mexico", "Guatemala"],
+      "source": "Guatemala highlands",
+      "mouth": "Gulf of Mexico",
+      "imagePath": "/images/rivers/mexico/usumacinta-river.jpg",
+      "pathCoordinates": [
+        { "lat": 16.5, "lng": -91.5 },
+        { "lat": 17.6, "lng": -92.0 }
+      ]
+    },
+    {
+      "slug": "papaloapan-river",
+      "name": "Papaloapan River",
+      "length": 354,
+      "countries": ["Mexico"],
+      "source": "Sierra Madre Oriental",
+      "mouth": "Gulf of Mexico",
+      "imagePath": "/images/rivers/mexico/papaloapan-river.jpg",
+      "pathCoordinates": [
+        { "lat": 18.0, "lng": -96.2 },
+        { "lat": 17.9, "lng": -95.5 }
+      ]
+    },
+    {
+      "slug": "lerma-river",
+      "name": "Lerma River",
+      "length": 750,
+      "countries": ["Mexico"],
+      "source": "Toluca Valley",
+      "mouth": "Lake Chapala",
+      "imagePath": "/images/rivers/mexico/lerma-river.jpg",
+      "pathCoordinates": [
+        { "lat": 19.3, "lng": -99.6 },
+        { "lat": 20.3, "lng": -103.3 }
       ]
     }
   ],
@@ -570,6 +681,42 @@
       "globalRank": 250,
       "type": "Public Technical University",
       "imagePath": "/images/institutions/mexico/ipn.jpg"
+    },
+    {
+      "slug": "universidad-de-guadalajara",
+      "name": "University of Guadalajara",
+      "city": "Guadalajara, Jalisco",
+      "founded": 1792,
+      "globalRank": 450,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/mexico/universidad-de-guadalajara.jpg"
+    },
+    {
+      "slug": "buap",
+      "name": "Benemérita Universidad Autónoma de Puebla",
+      "city": "Puebla",
+      "founded": 1587,
+      "globalRank": 600,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/mexico/buap.jpg"
+    },
+    {
+      "slug": "universidad-autonoma-del-estdo-de-mexico",
+      "name": "Autonomous University of the State of Mexico",
+      "city": "Toluca, State of Mexico",
+      "founded": 1956,
+      "globalRank": 700,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/mexico/uaem.jpg"
+    },
+    {
+      "slug": "universidad-veracruzana",
+      "name": "Universidad Veracruzana",
+      "city": "Xalapa, Veracruz",
+      "founded": 1944,
+      "globalRank": 750,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/mexico/uv.jpg"
     }
   ]
 }
