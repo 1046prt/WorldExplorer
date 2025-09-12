@@ -1,9 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { OptimizedImage } from "@/components/ui/optimized-image";
-import { ZoomIn } from "lucide-react";
 import "@/styles/image-modal.css";
 
 interface ImageModalProps {
@@ -36,20 +35,20 @@ export function ImageModal({
             height={height}
             className={`image-modal-thumbnail ${className}`}
           />
-          <div className="image-modal-overlay">
-            <ZoomIn className="zoom-icon" />
-          </div>
+          <div className="image-modal-overlay"></div>
         </div>
       </DialogTrigger>
+      {/*
       <DialogContent className="image-modal-content">
         <OptimizedImage
           src={src}
           alt={alt}
-          width={800}
-          height={600}
+          width={600}
+          height={450}
           className="image-modal-full"
         />
       </DialogContent>
+      */}
     </Dialog>
   );
 }

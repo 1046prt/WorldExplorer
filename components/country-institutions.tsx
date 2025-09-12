@@ -26,8 +26,8 @@ export function CountryInstitutions({ country }: CountryInstitutionsProps) {
                 <ImageModal
                   src={institution.imagePath}
                   alt={`${institution.name}`}
-                  width={280}
-                  height={160}
+                  width={160}
+                  height={120}
                   className="institution-image"
                 />
               </div>

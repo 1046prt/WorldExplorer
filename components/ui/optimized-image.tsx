@@ -56,6 +56,7 @@ export function OptimizedImage({
     fill ? "optimized-image-fill" : ""
   }`;
 
+  // Removed client-side only rendering to improve performance
   return (
     <div className={containerClasses}>
       {isImageLoading && <div className="optimized-image-placeholder" />}
@@ -70,6 +71,11 @@ export function OptimizedImage({
         className={imageClasses}
         onLoad={handleImageLoad}
         onError={handleImageError}
+        // Optimized loading settings
+        loading={priority ? "eager" : "lazy"}
+        quality={85}
+        placeholder="blur"
+        blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="
       />
     </div>
   );

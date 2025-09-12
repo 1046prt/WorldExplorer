@@ -251,9 +251,89 @@
   ],
   "states": [
     {
-      "name": "São Paulo",
-      "capital": "São Paulo",
-      "slug": "sao-paulo"
+      "name": "Acre",
+      "capital": "Rio Branco",
+      "slug": "acre"
+    },
+    {
+      "name": "Alagoas",
+      "capital": "Maceió",
+      "slug": "alagoas"
+    },
+    {
+      "name": "Amapá",
+      "capital": "Macapá",
+      "slug": "amapa"
+    },
+    {
+      "name": "Amazonas",
+      "capital": "Manaus",
+      "slug": "amazonas"
+    },
+    {
+      "name": "Bahia",
+      "capital": "Salvador",
+      "slug": "bahia"
+    },
+    {
+      "name": "Ceará",
+      "capital": "Fortaleza",
+      "slug": "ceara"
+    },
+    {
+      "name": "Espírito Santo",
+      "capital": "Vitória",
+      "slug": "espirito-santo"
+    },
+    {
+      "name": "Goiás",
+      "capital": "Goiânia",
+      "slug": "goias"
+    },
+    {
+      "name": "Maranhão",
+      "capital": "São Luís",
+      "slug": "maranhao"
+    },
+    {
+      "name": "Mato Grosso",
+      "capital": "Cuiabá",
+      "slug": "mato-grosso"
+    },
+    {
+      "name": "Mato Grosso do Sul",
+      "capital": "Campo Grande",
+      "slug": "mato-grosso-do-sul"
+    },
+    {
+      "name": "Minas Gerais",
+      "capital": "Belo Horizonte",
+      "slug": "minas-gerais"
+    },
+    {
+      "name": "Pará",
+      "capital": "Belém",
+      "slug": "para"
+    },
+    {
+      "name": "Paraíba",
+      "capital": "João Pessoa",
+      "slug": "paraiba"
+    },
+    {
+      "name": "Paraná",
+      "capital": "Curitiba",
+      "slug": "parana"
+    },
+    {
+      "name": "Pernambuco",
+      "capital": "Recife",
+      "slug": "pernambuco"
+    },
+    {
+      "name": "Piauí",
+      "capital": "Teresina",
+      "slug": "piaui"
     },
     {
       "name": "Rio de Janeiro",
@@ -261,9 +341,49 @@
       "slug": "rio-de-janeiro"
     },
     {
-      "name": "Minas Gerais",
-      "capital": "Belo Horizonte",
-      "slug": "minas-gerais"
+      "name": "Rio Grande do Norte",
+      "capital": "Natal",
+      "slug": "rio-grande-do-norte"
+    },
+    {
+      "name": "Rio Grande do Sul",
+      "capital": "Porto Alegre",
+      "slug": "rio-grande-do-sul"
+    },
+    {
+      "name": "Rondônia",
+      "capital": "Porto Velho",
+      "slug": "rondonia"
+    },
+    {
+      "name": "Roraima",
+      "capital": "Boa Vista",
+      "slug": "roraima"
+    },
+    {
+      "name": "Santa Catarina",
+      "capital": "Florianópolis",
+      "slug": "santa-catarina"
+    },
+    {
+      "name": "São Paulo",
+      "capital": "São Paulo",
+      "slug": "sao-paulo"
+    },
+    {
+      "name": "Sergipe",
+      "capital": "Aracaju",
+      "slug": "sergipe"
+    },
+    {
+      "name": "Tocantins",
+      "capital": "Palmas",
+      "slug": "tocantins"
+    },
+    {
+      "name": "Federal District",
+      "capital": "Brasília",
+      "slug": "federal-district"
     }
   ],
   "famousCities": [
@@ -284,6 +404,48 @@
       "whyFamous": "Historic colonial city and cultural center of Afro-Brazilian culture",
       "slug": "salvador",
       "image": "/images/cities/brazil/salvador.jpg"
+    },
+    {
+      "name": "Brasília",
+      "whyFamous": "Modernist capital city designed by Oscar Niemeyer and UNESCO site",
+      "slug": "brasilia",
+      "image": "/images/cities/brazil/brasilia.jpg"
+    },
+    {
+      "name": "Fortaleza",
+      "whyFamous": "Known for its stunning beaches and vibrant nightlife",
+      "slug": "fortaleza",
+      "image": "/images/cities/brazil/fortaleza.jpg"
+    },
+    {
+      "name": "Recife",
+      "whyFamous": "Venice of Brazil, historic old town, and cultural hub of the northeast",
+      "slug": "recife",
+      "image": "/images/cities/brazil/recife.jpg"
+    },
+    {
+      "name": "Manaus",
+      "whyFamous": "Gateway to the Amazon rainforest and famous opera house",
+      "slug": "manaus",
+      "image": "/images/cities/brazil/manaus.jpg"
+    },
+    {
+      "name": "Curitiba",
+      "whyFamous": "Renowned for innovative urban planning and eco-friendly design",
+      "slug": "curitiba",
+      "image": "/images/cities/brazil/curitiba.jpg"
+    },
+    {
+      "name": "Belo Horizonte",
+      "whyFamous": "Capital of Minas Gerais, known for modern architecture and cuisine",
+      "slug": "belo-horizonte",
+      "image": "/images/cities/brazil/belo-horizonte.jpg"
+    },
+    {
+      "name": "Porto Alegre",
+      "whyFamous": "Cultural hub in southern Brazil, famous for gaucho traditions",
+      "slug": "porto-alegre",
+      "image": "/images/cities/brazil/porto-alegre.jpg"
     }
   ],
   "landmarks": [
@@ -308,6 +470,61 @@
       },
       "whyFamous": "One of the world's most spectacular waterfalls of Brazil",
       "imagePath": "/images/landmarks/brazil/iguazu-falls.jpg"
+    },
+    {
+      "slug": "sugarloaf-mountain",
+      "name": "Sugarloaf Mountain",
+      "city": "Rio de Janeiro",
+      "coordinates": {
+        "lat": -22.9486,
+        "lng": -43.1566
+      },
+      "whyFamous": "Granite peak offering cable car rides and panoramic views of Rio",
+      "imagePath": "/images/landmarks/brazil/sugarloaf-mountain.jpg"
+    },
+    {
+      "slug": "amazon-theatre",
+      "name": "Amazon Theatre",
+      "city": "Manaus",
+      "coordinates": {
+        "lat": -3.1303,
+        "lng": -60.0239
+      },
+      "whyFamous": "19th-century opera house in the heart of the Amazon rainforest",
+      "imagePath": "/images/landmarks/brazil/amazon-theatre.jpg"
+    },
+    {
+      "slug": "lençóis-maranhenses",
+      "name": "Lençóis Maranhenses National Park",
+      "city": "Maranhão",
+      "coordinates": {
+        "lat": -2.4861,
+        "lng": -43.115
+      },
+      "whyFamous": "Unique desert landscape with white sand dunes and blue lagoons",
+      "imagePath": "/images/landmarks/brazil/lencois-maranhenses.jpg"
+    },
+    {
+      "slug": "pelourinho",
+      "name": "Pelourinho",
+      "city": "Salvador",
+      "coordinates": {
+        "lat": -12.9714,
+        "lng": -38.5108
+      },
+      "whyFamous": "Historic colonial neighborhood, UNESCO World Heritage Site",
+      "imagePath": "/images/landmarks/brazil/pelourinho.jpg"
+    },
+    {
+      "slug": "oscar-niemeyer-museum",
+      "name": "Oscar Niemeyer Museum",
+      "city": "Curitiba",
+      "coordinates": {
+        "lat": -25.4106,
+        "lng": -49.2697
+      },
+      "whyFamous": "Striking contemporary art museum designed by Oscar Niemeyer",
+      "imagePath": "/images/landmarks/brazil/oscar-niemeyer-museum.jpg"
     }
   ],
   "rivers": [
@@ -323,6 +540,45 @@
         { "lat": -3.4653, "lng": -62.2159 },
         { "lat": 0.1807, "lng": -51.7792 }
       ]
+    },
+    {
+      "slug": "parana-river",
+      "name": "Paraná River",
+      "length": 4880,
+      "countries": ["Brazil", "Paraguay", "Argentina"],
+      "source": "Paraná Highlands",
+      "mouth": "Río de la Plata",
+      "imagePath": "/images/rivers/brazil/parana-river.jpg",
+      "pathCoordinates": [
+        { "lat": -23.0, "lng": -46.0 },
+        { "lat": -34.9, "lng": -58.0 }
+      ]
+    },
+    {
+      "slug": "tocantins-river",
+      "name": "Tocantins River",
+      "length": 2410,
+      "countries": ["Brazil"],
+      "source": "Brazilian Highlands",
+      "mouth": "Atlantic Ocean",
+      "imagePath": "/images/rivers/brazil/tocantins-river.jpg",
+      "pathCoordinates": [
+        { "lat": -10.5, "lng": -48.5 },
+        { "lat": -1.0, "lng": -48.5 }
+      ]
+    },
+    {
+      "slug": "sao-francisco-river",
+      "name": "São Francisco River",
+      "length": 3162,
+      "countries": ["Brazil"],
+      "source": "Minas Gerais",
+      "mouth": "Atlantic Ocean",
+      "imagePath": "/images/rivers/brazil/sao-francisco-river.jpg",
+      "pathCoordinates": [
+        { "lat": -19.9, "lng": -43.3 },
+        { "lat": -8.8, "lng": -35.0 }
+      ]
     }
   ],
   "institutions": [
@@ -334,6 +590,33 @@
       "globalRank": 115,
       "type": "Public Research University",
       "imagePath": "/images/institutions/brazil/university-of-sao-paulo.jpg"
+    },
+    {
+      "slug": "university-of-rio-de-janeiro",
+      "name": "Federal University of Rio de Janeiro",
+      "city": "Rio de Janeiro",
+      "founded": 1920,
+      "globalRank": 223,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/brazil/federal-university-rio.jpg"
+    },
+    {
+      "slug": "university-of-brasilia",
+      "name": "University of Brasília",
+      "city": "Brasília",
+      "founded": 1962,
+      "globalRank": 447,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/brazil/university-of-brasilia.jpg"
+    },
+    {
+      "slug": "state-university-of-campinas",
+      "name": "State University of Campinas",
+      "city": "Campinas, São Paulo",
+      "founded": 1966,
+      "globalRank": 314,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/brazil/state-university-campinas.jpg"
     }
   ],
   "scienceTechnology": {

@@ -49,8 +49,8 @@ export function CountryRivers({ country }: CountryRiversProps) {
                 <ImageModal
                   src={river.imagePath}
                   alt={`${river.name} river`}
-                  width={120}
-                  height={80}
+                  width={160}
+                  height={120}
                   className="river-image"
                 />
               </div>

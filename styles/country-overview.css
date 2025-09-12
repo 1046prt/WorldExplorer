@@ -180,7 +180,7 @@
 .languages-list {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--spacing-xs);
+  gap: var(--spacing-md);
   align-items: flex-start;
 }
 

@@ -87,6 +87,48 @@
       "whyFamous": "Roman-built baths and Georgian architecture",
       "slug": "bath",
       "image": "/images/cities/gb/bath.jpg"
+    },
+    {
+      "name": "Manchester",
+      "whyFamous": "Industrial Revolution hub, music scene, and football legacy",
+      "slug": "manchester",
+      "image": "/images/cities/gb/manchester.jpg"
+    },
+    {
+      "name": "Birmingham",
+      "whyFamous": "Second-largest UK city, diverse culture, and industrial history",
+      "slug": "birmingham",
+      "image": "/images/cities/gb/birmingham.jpg"
+    },
+    {
+      "name": "Glasgow",
+      "whyFamous": "Largest city in Scotland, vibrant arts and music culture",
+      "slug": "glasgow",
+      "image": "/images/cities/gb/glasgow.jpg"
+    },
+    {
+      "name": "Cardiff",
+      "whyFamous": "Capital of Wales, famous for Cardiff Castle and Millennium Stadium",
+      "slug": "cardiff",
+      "image": "/images/cities/gb/cardiff.jpg"
+    },
+    {
+      "name": "Belfast",
+      "whyFamous": "Capital of Northern Ireland, shipbuilding city where Titanic was built",
+      "slug": "belfast",
+      "image": "/images/cities/gb/belfast.jpg"
+    },
+    {
+      "name": "Liverpool",
+      "whyFamous": "Home of The Beatles, maritime history, and Liverpool FC",
+      "slug": "liverpool",
+      "image": "/images/cities/gb/liverpool.jpg"
+    },
+    {
+      "name": "York",
+      "whyFamous": "Historic walled city with York Minster and Viking heritage",
+      "slug": "york",
+      "image": "/images/cities/gb/york.jpg"
     }
   ],
   "landmarks": [
@@ -94,10 +136,7 @@
       "slug": "big-ben",
       "name": "Big Ben",
       "city": "London",
-      "coordinates": {
-        "lat": 51.4994,
-        "lng": -0.1245
-      },
+      "coordinates": { "lat": 51.4994, "lng": -0.1245 },
       "whyFamous": "Iconic clock tower and symbol of London and the UK",
       "imagePath": "/images/landmarks/gb/big-ben.jpg"
     },
@@ -105,10 +144,7 @@
       "slug": "tower-bridge",
       "name": "Tower Bridge",
       "city": "London",
-      "coordinates": {
-        "lat": 51.5055,
-        "lng": -0.0754
-      },
+      "coordinates": { "lat": 51.5055, "lng": -0.0754 },
       "whyFamous": "Victorian Gothic bascule bridge, iconic London landmark",
       "imagePath": "/images/landmarks/gb/tower-bridge.jpg"
     },
@@ -116,10 +152,7 @@
       "slug": "stonehenge",
       "name": "Stonehenge",
       "city": "Wiltshire",
-      "coordinates": {
-        "lat": 51.1789,
-        "lng": -1.8262
-      },
+      "coordinates": { "lat": 51.1789, "lng": -1.8262 },
       "whyFamous": "Prehistoric monument, mysterious stone circle dating back to 3000 BC",
       "imagePath": "/images/landmarks/gb/stonehenge.jpg"
     },
@@ -127,12 +160,97 @@
       "slug": "buckingham-palace",
       "name": "Buckingham Palace",
       "city": "London",
-      "coordinates": {
-        "lat": 51.5014,
-        "lng": -0.1419
-      },
+      "coordinates": { "lat": 51.5014, "lng": -0.1419 },
       "whyFamous": "Official residence of the British monarch",
       "imagePath": "/images/landmarks/gb/buckingham-palace.jpg"
+    },
+    {
+      "slug": "tower-of-london",
+      "name": "Tower of London",
+      "city": "London",
+      "coordinates": { "lat": 51.5081, "lng": -0.0759 },
+      "whyFamous": "Historic castle and former royal prison, home to the Crown Jewels",
+      "imagePath": "/images/landmarks/gb/tower-of-london.jpg"
+    },
+    {
+      "slug": "edinburgh-castle",
+      "name": "Edinburgh Castle",
+      "city": "Edinburgh",
+      "coordinates": { "lat": 55.9486, "lng": -3.1999 },
+      "whyFamous": "Historic fortress dominating Edinburgh’s skyline, symbol of Scotland",
+      "imagePath": "/images/landmarks/gb/edinburgh-castle.jpg"
+    },
+    {
+      "slug": "giants-causeway",
+      "name": "Giant's Causeway",
+      "city": "County Antrim",
+      "coordinates": { "lat": 55.2408, "lng": -6.5116 },
+      "whyFamous": "UNESCO site with 40,000 interlocking basalt columns formed by volcanic activity",
+      "imagePath": "/images/landmarks/gb/giants-causeway.jpg"
+    },
+    {
+      "slug": "st-pauls-cathedral",
+      "name": "St Paul's Cathedral",
+      "city": "London",
+      "coordinates": { "lat": 51.5138, "lng": -0.0984 },
+      "whyFamous": "Iconic English Baroque cathedral designed by Sir Christopher Wren",
+      "imagePath": "/images/landmarks/gb/st-pauls-cathedral.jpg"
+    },
+    {
+      "slug": "windsor-castle",
+      "name": "Windsor Castle",
+      "city": "Windsor",
+      "coordinates": { "lat": 51.4839, "lng": -0.6044 },
+      "whyFamous": "Oldest and largest inhabited castle in the world, royal residence",
+      "imagePath": "/images/landmarks/gb/windsor-castle.jpg"
+    },
+    {
+      "slug": "cardiff-castle",
+      "name": "Cardiff Castle",
+      "city": "Cardiff",
+      "coordinates": { "lat": 51.4811, "lng": -3.1816 },
+      "whyFamous": "Historic castle blending Roman, Norman, and Gothic architecture",
+      "imagePath": "/images/landmarks/gb/cardiff-castle.jpg"
+    },
+    {
+      "slug": "hadrians-wall",
+      "name": "Hadrian's Wall",
+      "city": "Northern England",
+      "coordinates": { "lat": 55.0, "lng": -2.3 },
+      "whyFamous": "Roman defensive fortification marking the northern boundary of the Empire",
+      "imagePath": "/images/landmarks/gb/hadrians-wall.jpg"
+    },
+    {
+      "slug": "palace-of-westminster",
+      "name": "Palace of Westminster",
+      "city": "London",
+      "coordinates": { "lat": 51.4995, "lng": -0.1248 },
+      "whyFamous": "Seat of the UK Parliament, Gothic Revival masterpiece",
+      "imagePath": "/images/landmarks/gb/palace-of-westminster.jpg"
+    },
+    {
+      "slug": "lochness",
+      "name": "Loch Ness",
+      "city": "Inverness-shire",
+      "coordinates": { "lat": 57.3229, "lng": -4.4244 },
+      "whyFamous": "Famous freshwater loch, legendary home of the Loch Ness Monster",
+      "imagePath": "/images/landmarks/gb/lochness.jpg"
+    },
+    {
+      "slug": "white-cliffs-dover",
+      "name": "White Cliffs of Dover",
+      "city": "Dover",
+      "coordinates": { "lat": 51.1251, "lng": 1.3336 },
+      "whyFamous": "Iconic chalk cliffs overlooking the English Channel",
+      "imagePath": "/images/landmarks/gb/white-cliffs-dover.jpg"
+    },
+    {
+      "slug": "liverpool-cathedral",
+      "name": "Liverpool Cathedral",
+      "city": "Liverpool",
+      "coordinates": { "lat": 53.4025, "lng": -2.9739 },
+      "whyFamous": "Largest cathedral in Britain, stunning Gothic Revival architecture",
+      "imagePath": "/images/landmarks/gb/liverpool-cathedral.jpg"
     }
   ],
   "rivers": [
@@ -160,6 +278,110 @@
       "pathCoordinates": [
         { "lat": 52.4833, "lng": -3.7333 },
         { "lat": 51.6167, "lng": -2.6667 }
+      ]
+    },
+    {
+      "slug": "river-trent",
+      "name": "River Trent",
+      "length": 298,
+      "countries": ["United Kingdom"],
+      "source": "Staffordshire, Biddulph Moor",
+      "mouth": "Humber Estuary",
+      "imagePath": "/images/rivers/gb/river-trent.jpg",
+      "pathCoordinates": [
+        { "lat": 53.1, "lng": -2.2 },
+        { "lat": 53.7, "lng": 0.6 }
+      ]
+    },
+    {
+      "slug": "river-ouse",
+      "name": "River Ouse",
+      "length": 84,
+      "countries": ["United Kingdom"],
+      "source": "Yorkshire Dales",
+      "mouth": "Humber Estuary",
+      "imagePath": "/images/rivers/gb/river-ouse.jpg",
+      "pathCoordinates": [
+        { "lat": 54.0, "lng": -1.2 },
+        { "lat": 53.7, "lng": -0.5 }
+      ]
+    },
+    {
+      "slug": "river-mersey",
+      "name": "River Mersey",
+      "length": 113,
+      "countries": ["United Kingdom"],
+      "source": "Stockport (confluence of Tame and Goyt)",
+      "mouth": "Liverpool Bay, Irish Sea",
+      "imagePath": "/images/rivers/gb/river-mersey.jpg",
+      "pathCoordinates": [
+        { "lat": 53.4, "lng": -2.2 },
+        { "lat": 53.45, "lng": -3.0 }
+      ]
+    },
+    {
+      "slug": "river-tyne",
+      "name": "River Tyne",
+      "length": 118,
+      "countries": ["United Kingdom"],
+      "source": "Confluence of North and South Tyne",
+      "mouth": "North Sea at Tynemouth",
+      "imagePath": "/images/rivers/gb/river-tyne.jpg",
+      "pathCoordinates": [
+        { "lat": 55.0, "lng": -2.6 },
+        { "lat": 55.0, "lng": -1.4 }
+      ]
+    },
+    {
+      "slug": "river-clyde",
+      "name": "River Clyde",
+      "length": 176,
+      "countries": ["United Kingdom"],
+      "source": "Lowther Hills, South Lanarkshire",
+      "mouth": "Firth of Clyde",
+      "imagePath": "/images/rivers/gb/river-clyde.jpg",
+      "pathCoordinates": [
+        { "lat": 55.4, "lng": -3.7 },
+        { "lat": 55.9, "lng": -4.3 }
+      ]
+    },
+    {
+      "slug": "river-tay",
+      "name": "River Tay",
+      "length": 193,
+      "countries": ["United Kingdom"],
+      "source": "Ben Lui, Scottish Highlands",
+      "mouth": "Firth of Tay, North Sea",
+      "imagePath": "/images/rivers/gb/river-tay.jpg",
+      "pathCoordinates": [
+        { "lat": 56.4, "lng": -4.8 },
+        { "lat": 56.4, "lng": -2.9 }
+      ]
+    },
+    {
+      "slug": "river-dee",
+      "name": "River Dee",
+      "length": 110,
+      "countries": ["United Kingdom"],
+      "source": "Snowdonia, Wales",
+      "mouth": "Dee Estuary, Irish Sea",
+      "imagePath": "/images/rivers/gb/river-dee.jpg",
+      "pathCoordinates": [
+        { "lat": 53.1, "lng": -3.7 },
+        { "lat": 53.4, "lng": -3.1 }
+      ]
+    },
+    {
+      "slug": "river-bann",
+      "name": "River Bann",
+      "length": 129,
+      "countries": ["United Kingdom"],
+      "source": "Mourne Mountains",
+      "mouth": "Atlantic Ocean",
+      "imagePath": "/images/rivers/gb/river-bann.jpg",
+      "pathCoordinates": [
+        { "lat": 54.2, "lng": -6.2 },
+        { "lat": 55.2, "lng": -6.8 }
       ]
     }
   ],
@@ -190,6 +412,69 @@
       "globalRank": 8,
       "type": "Public Research University",
       "imagePath": "/images/institutions/gb/imperial-college-london.jpg"
+    },
+    {
+      "slug": "lse",
+      "name": "London School of Economics and Political Science (LSE)",
+      "city": "London",
+      "founded": 1895,
+      "globalRank": 45,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/gb/lse.jpg"
+    },
+    {
+      "slug": "university-of-edinburgh",
+      "name": "University of Edinburgh",
+      "city": "Edinburgh",
+      "founded": 1582,
+      "globalRank": 22,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/gb/university-of-edinburgh.jpg"
+    },
+    {
+      "slug": "kings-college-london",
+      "name": "King's College London",
+      "city": "London",
+      "founded": 1829,
+      "globalRank": 40,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/gb/kings-college-london.jpg"
+    },
+    {
+      "slug": "university-of-manchester",
+      "name": "University of Manchester",
+      "city": "Manchester",
+      "founded": 1824,
+      "globalRank": 32,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/gb/university-of-manchester.jpg"
+    },
+    {
+      "slug": "university-of-glasgow",
+      "name": "University of Glasgow",
+      "city": "Glasgow",
+      "founded": 1451,
+      "globalRank": 74,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/gb/university-of-glasgow.jpg"
+    },
+    {
+      "slug": "university-of-bristol",
+      "name": "University of Bristol",
+      "city": "Bristol",
+      "founded": 1876,
+      "globalRank": 62,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/gb/university-of-bristol.jpg"
+    },
+    {
+      "slug": "durham-university",
+      "name": "Durham University",
+      "city": "Durham",
+      "founded": 1832,
+      "globalRank": 78,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/gb/durham-university.jpg"
     }
   ],
   "geography": {

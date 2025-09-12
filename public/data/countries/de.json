@@ -431,19 +431,39 @@
   ],
   "states": [
     {
+      "name": "Baden-Württemberg",
+      "capital": "Stuttgart",
+      "slug": "baden-wurttemberg"
+    },
+    {
       "name": "Bavaria",
       "capital": "Munich",
       "slug": "bavaria"
     },
     {
-      "name": "North Rhine-Westphalia",
-      "capital": "Düsseldorf",
-      "slug": "north-rhine-westphalia"
+      "name": "Berlin",
+      "capital": "Berlin",
+      "slug": "berlin"
     },
     {
-      "name": "Baden-Württemberg",
-      "capital": "Stuttgart",
-      "slug": "baden-wurttemberg"
+      "name": "Brandenburg",
+      "capital": "Potsdam",
+      "slug": "brandenburg"
+    },
+    {
+      "name": "Bremen",
+      "capital": "Bremen",
+      "slug": "bremen"
+    },
+    {
+      "name": "Hamburg",
+      "capital": "Hamburg",
+      "slug": "hamburg"
+    },
+    {
+      "name": "Hesse",
+      "capital": "Wiesbaden",
+      "slug": "hesse"
     },
     {
       "name": "Lower Saxony",
@@ -451,15 +471,50 @@
       "slug": "lower-saxony"
     },
     {
-      "name": "Hesse",
-      "capital": "Wiesbaden",
-      "slug": "hesse"
+      "name": "Mecklenburg-Vorpommern",
+      "capital": "Schwerin",
+      "slug": "mecklenburg-vorpommern"
+    },
+    {
+      "name": "North Rhine-Westphalia",
+      "capital": "Düsseldorf",
+      "slug": "north-rhine-westphalia"
+    },
+    {
+      "name": "Rhineland-Palatinate",
+      "capital": "Mainz",
+      "slug": "rhineland-palatinate"
+    },
+    {
+      "name": "Saarland",
+      "capital": "Saarbrücken",
+      "slug": "saarland"
+    },
+    {
+      "name": "Saxony",
+      "capital": "Dresden",
+      "slug": "saxony"
+    },
+    {
+      "name": "Saxony-Anhalt",
+      "capital": "Magdeburg",
+      "slug": "saxony-anhalt"
+    },
+    {
+      "name": "Schleswig-Holstein",
+      "capital": "Kiel",
+      "slug": "schleswig-holstein"
+    },
+    {
+      "name": "Thuringia",
+      "capital": "Erfurt",
+      "slug": "thuringia"
     }
   ],
   "famousCities": [
     {
       "name": "Berlin",
-      "whyFamous": "Capital city, rich history, cultural center with Brandenburg Gate",
+      "whyFamous": "Capital city, rich history, cultural center with Brandenburg Gate and Berlin Wall",
       "slug": "berlin",
       "image": "/images/cities/germany/berlin.jpg"
     },
@@ -471,21 +526,63 @@
     },
     {
       "name": "Hamburg",
-      "whyFamous": "Major port city, maritime culture, media center",
+      "whyFamous": "Major port city, maritime culture, media and music center",
       "slug": "hamburg",
       "image": "/images/cities/germany/hamburg.jpg"
     },
     {
       "name": "Cologne",
-      "whyFamous": "Ancient Roman city, Gothic cathedral, cultural center",
+      "whyFamous": "Ancient Roman city, Gothic cathedral, Rhine River hub",
       "slug": "cologne",
       "image": "/images/cities/germany/cologne.jpg"
     },
     {
       "name": "Frankfurt",
-      "whyFamous": "Financial center, European Central Bank, major airport hub",
+      "whyFamous": "Financial hub, European Central Bank, international airport",
       "slug": "frankfurt",
       "image": "/images/cities/germany/frankfurt.jpg"
+    },
+    {
+      "name": "Dresden",
+      "whyFamous": "Baroque architecture, rebuilt after WWII, cultural capital of Saxony",
+      "slug": "dresden",
+      "image": "/images/cities/germany/dresden.jpg"
+    },
+    {
+      "name": "Stuttgart",
+      "whyFamous": "Automotive hub, headquarters of Mercedes-Benz and Porsche",
+      "slug": "stuttgart",
+      "image": "/images/cities/germany/stuttgart.jpg"
+    },
+    {
+      "name": "Leipzig",
+      "whyFamous": "Historic trade city, cultural center, home of composer Johann Sebastian Bach",
+      "slug": "leipzig",
+      "image": "/images/cities/germany/leipzig.jpg"
+    },
+    {
+      "name": "Nuremberg",
+      "whyFamous": "Medieval history, Nuremberg Trials, famous Christmas market",
+      "slug": "nuremberg",
+      "image": "/images/cities/germany/nuremberg.jpg"
+    },
+    {
+      "name": "Heidelberg",
+      "whyFamous": "Germany’s oldest university town, romantic castle ruins",
+      "slug": "heidelberg",
+      "image": "/images/cities/germany/heidelberg.jpg"
+    },
+    {
+      "name": "Bonn",
+      "whyFamous": "Former capital of West Germany, birthplace of Beethoven",
+      "slug": "bonn",
+      "image": "/images/cities/germany/bonn.jpg"
+    },
+    {
+      "name": "Düsseldorf",
+      "whyFamous": "Fashion and arts hub, modern architecture, Rhine River city",
+      "slug": "dusseldorf",
+      "image": "/images/cities/germany/dusseldorf.jpg"
     }
   ],
   "landmarks": [
@@ -532,6 +629,94 @@
       },
       "whyFamous": "Historic Cold War barrier and symbol of division",
       "imagePath": "/images/landmarks/germany/berlin-wall.jpg"
+    },
+    {
+      "slug": "reichstag-building",
+      "name": "Reichstag Building",
+      "city": "Berlin",
+      "coordinates": {
+        "lat": 52.5186,
+        "lng": 13.3762
+      },
+      "whyFamous": "Seat of the German Parliament with glass dome symbolizing transparency",
+      "imagePath": "/images/landmarks/germany/reichstag-building.jpg"
+    },
+    {
+      "slug": "heidelberg-castle",
+      "name": "Heidelberg Castle",
+      "city": "Heidelberg",
+      "coordinates": {
+        "lat": 49.4106,
+        "lng": 8.7153
+      },
+      "whyFamous": "Romantic ruins overlooking the Neckar River, Renaissance architecture",
+      "imagePath": "/images/landmarks/germany/heidelberg-castle.jpg"
+    },
+    {
+      "slug": "zugspitze",
+      "name": "Zugspitze",
+      "city": "Bavaria",
+      "coordinates": {
+        "lat": 47.421,
+        "lng": 10.9855
+      },
+      "whyFamous": "Germany’s highest peak in the Bavarian Alps",
+      "imagePath": "/images/landmarks/germany/zugspitze.jpg"
+    },
+    {
+      "slug": "dresden-frauenkirche",
+      "name": "Frauenkirche Dresden",
+      "city": "Dresden",
+      "coordinates": {
+        "lat": 51.051,
+        "lng": 13.7414
+      },
+      "whyFamous": "Reconstructed Baroque church, symbol of reconciliation after WWII",
+      "imagePath": "/images/landmarks/germany/dresden-frauenkirche.jpg"
+    },
+    {
+      "slug": "wartburg-castle",
+      "name": "Wartburg Castle",
+      "city": "Eisenach",
+      "coordinates": {
+        "lat": 50.9666,
+        "lng": 10.3065
+      },
+      "whyFamous": "Where Martin Luther translated the New Testament into German",
+      "imagePath": "/images/landmarks/germany/wartburg-castle.jpg"
+    },
+    {
+      "slug": "black-forest",
+      "name": "Black Forest (Schwarzwald)",
+      "city": "Baden-Württemberg",
+      "coordinates": {
+        "lat": 48.1167,
+        "lng": 8.2333
+      },
+      "whyFamous": "Dense forested region famous for cuckoo clocks and folklore",
+      "imagePath": "/images/landmarks/germany/black-forest.jpg"
+    },
+    {
+      "slug": "sanssouci-palace",
+      "name": "Sanssouci Palace",
+      "city": "Potsdam",
+      "coordinates": {
+        "lat": 52.4,
+        "lng": 13.0333
+      },
+      "whyFamous": "Prussian royal palace of Frederick the Great, Rococo masterpiece",
+      "imagePath": "/images/landmarks/germany/sanssouci-palace.jpg"
+    },
+    {
+      "slug": "miniatur-wunderland",
+      "name": "Miniatur Wunderland",
+      "city": "Hamburg",
+      "coordinates": {
+        "lat": 53.5436,
+        "lng": 9.9881
+      },
+      "whyFamous": "World’s largest model railway exhibition",
+      "imagePath": "/images/landmarks/germany/miniatur-wunderland.jpg"
     }
   ],
   "rivers": [
@@ -584,6 +769,58 @@
         { "lat": 48.0975, "lng": 8.1506 },
         { "lat": 45.2167, "lng": 29.7167 }
       ]
+    },
+    {
+      "slug": "main-river",
+      "name": "Main River",
+      "length": 525,
+      "countries": ["Germany"],
+      "source": "Fichtel Mountains",
+      "mouth": "Rhine River",
+      "imagePath": "/images/rivers/germany/main-river.jpg",
+      "pathCoordinates": [
+        { "lat": 50.0833, "lng": 11.85 },
+        { "lat": 49.9833, "lng": 8.2667 }
+      ]
+    },
+    {
+      "slug": "weser-river",
+      "name": "Weser River",
+      "length": 452,
+      "countries": ["Germany"],
+      "source": "Confluence of Fulda and Werra Rivers",
+      "mouth": "North Sea",
+      "imagePath": "/images/rivers/germany/weser-river.jpg",
+      "pathCoordinates": [
+        { "lat": 51.5667, "lng": 9.4667 },
+        { "lat": 53.5333, "lng": 8.5667 }
+      ]
+    },
+    {
+      "slug": "oder-river",
+      "name": "Oder River",
+      "length": 854,
+      "countries": ["Germany", "Poland", "Czech Republic"],
+      "source": "Oder Mountains",
+      "mouth": "Baltic Sea",
+      "imagePath": "/images/rivers/germany/oder-river.jpg",
+      "pathCoordinates": [
+        { "lat": 49.55, "lng": 17.7167 },
+        { "lat": 53.6667, "lng": 14.4 }
+      ]
+    },
+    {
+      "slug": "moselle-river",
+      "name": "Moselle River",
+      "length": 545,
+      "countries": ["Germany", "France", "Luxembourg"],
+      "source": "Vosges Mountains",
+      "mouth": "Rhine River",
+      "imagePath": "/images/rivers/germany/moselle-river.jpg",
+      "pathCoordinates": [
+        { "lat": 48.1333, "lng": 7.0 },
+        { "lat": 50.3667, "lng": 7.6 }
+      ]
     }
   ],
   "institutions": [
@@ -622,6 +859,42 @@
       "globalRank": 87,
       "type": "Public Research University",
       "imagePath": "/images/institutions/germany/humboldt-university.jpg"
+    },
+    {
+      "slug": "freie-universitat-berlin",
+      "name": "Freie Universität Berlin",
+      "city": "Berlin",
+      "founded": 1948,
+      "globalRank": 118,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/germany/freie-universitat-berlin.jpg"
+    },
+    {
+      "slug": "rwth-aachen-university",
+      "name": "RWTH Aachen University",
+      "city": "Aachen, North Rhine-Westphalia",
+      "founded": 1870,
+      "globalRank": 106,
+      "type": "Public Technical University",
+      "imagePath": "/images/institutions/germany/rwth-aachen-university.jpg"
+    },
+    {
+      "slug": "university-of-freiburg",
+      "name": "University of Freiburg",
+      "city": "Freiburg, Baden-Württemberg",
+      "founded": 1457,
+      "globalRank": 192,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/germany/university-of-freiburg.jpg"
+    },
+    {
+      "slug": "university-of-gottingen",
+      "name": "University of Göttingen",
+      "city": "Göttingen, Lower Saxony",
+      "founded": 1737,
+      "globalRank": 232,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/germany/university-of-gottingen.jpg"
     }
   ]
 }
