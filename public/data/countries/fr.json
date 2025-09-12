@@ -37,192 +37,7 @@
       "description": "France adopts the Euro as its currency"
     }
   ],
-  "states": [
-    {
-      "name": "Île-de-France",
-      "capital": "Paris",
-      "slug": "ile-de-france"
-    },
-    {
-      "name": "Provence-Alpes-Côte d'Azur",
-      "capital": "Marseille",
-      "slug": "provence-alpes-cote-azur"
-    },
-    {
-      "name": "Auvergne-Rhône-Alpes",
-      "capital": "Lyon",
-      "slug": "auvergne-rhone-alpes"
-    },
-    {
-      "name": "Nouvelle-Aquitaine",
-      "capital": "Bordeaux",
-      "slug": "nouvelle-aquitaine"
-    },
-    {
-      "name": "Occitanie",
-      "capital": "Toulouse",
-      "slug": "occitanie"
-    }
-  ],
-  "famousCities": [
-    {
-      "name": "Paris",
-      "whyFamous": "City of Light, global center of art, fashion, gastronomy, and culture",
-      "slug": "paris",
-      "image": "/images/cities/france/paris.png"
-    },
-    {
-      "name": "Lyon",
-      "whyFamous": "Gastronomic capital of France, UNESCO World Heritage site",
-      "slug": "lyon",
-      "image": "/images/cities/france/lyon.jpg"
-    },
-    {
-      "name": "Marseille",
-      "whyFamous": "Oldest city in France, major Mediterranean port",
-      "slug": "marseille",
-      "image": "/images/cities/france/marseille.png"
-    },
-    {
-      "name": "Nice",
-      "whyFamous": "Glamorous resort city on the French Riviera",
-      "slug": "nice",
-      "image": "/images/cities/france/nice.jpg"
-    },
-    {
-      "name": "Cannes",
-      "whyFamous": "Host of the prestigious Cannes Film Festival",
-      "slug": "cannes",
-      "image": "/images/cities/france/cannes.jpg"
-    }
-  ],
-  "landmarks": [
-    {
-      "slug": "eiffel-tower",
-      "name": "Eiffel Tower",
-      "city": "Paris",
-      "coordinates": {
-        "lat": 48.8584,
-        "lng": 2.2945
-      },
-      "whyFamous": "Iconic iron lattice tower and symbol of France, built for the 1889 World's Fair",
-      "imagePath": "/images/landmarks/france/eiffel-tower.jpg"
-    },
-    {
-      "slug": "louvre-museum",
-      "name": "Louvre Museum",
-      "city": "Paris",
-      "coordinates": {
-        "lat": 48.8606,
-        "lng": 2.3376
-      },
-      "whyFamous": "World's largest art museum, home to the Mona Lisa and countless other masterpieces",
-      "imagePath": "/images/landmarks/france/louvre-museum.jpg"
-    },
-    {
-      "slug": "notre-dame-cathedral",
-      "name": "Notre-Dame Cathedral",
-      "city": "Paris",
-      "coordinates": {
-        "lat": 48.853,
-        "lng": 2.3499
-      },
-      "whyFamous": "Medieval Catholic cathedral, masterpiece of Gothic architecture",
-      "imagePath": "/images/landmarks/france/notre-dame-cathedral.jpg"
-    },
-    {
-      "slug": "palace-of-versailles",
-      "name": "Palace of Versailles",
-      "city": "Versailles",
-      "coordinates": {
-        "lat": 48.8049,
-        "lng": 2.1204
-      },
-      "whyFamous": "Opulent royal residence, symbol of absolute monarchy and French classical architecture",
-      "imagePath": "/images/landmarks/france/palace-of-versailles.jpg"
-    },
-    {
-      "slug": "mont-saint-michel",
-      "name": "Mont-Saint-Michel",
-      "city": "Normandy",
-      "coordinates": {
-        "lat": 48.6361,
-        "lng": -1.5115
-      },
-      "whyFamous": "Medieval abbey on a tidal island, UNESCO World Heritage site",
-      "imagePath": "/images/landmarks/france/mont-saint-michel.jpg"
-    }
-  ],
-  "rivers": [
-    {
-      "slug": "seine-river",
-      "name": "Seine River",
-      "length": 777,
-      "countries": ["France"],
-      "source": "Burgundy",
-      "mouth": "English Channel",
-      "imagePath": "/images/rivers/france/seine-river.jpg",
-      "pathCoordinates": [
-        { "lat": 47.2883, "lng": 4.7094 },
-        { "lat": 49.4344, "lng": 0.1079 }
-      ]
-    },
-    {
-      "slug": "loire-river",
-      "name": "Loire River",
-      "length": 1012,
-      "countries": ["France"],
-      "source": "Cévennes Mountains",
-      "mouth": "Atlantic Ocean",
-      "imagePath": "/images/rivers/france/loire-river.jpg",
-      "pathCoordinates": [
-        { "lat": 44.8419, "lng": 4.1389 },
-        { "lat": 47.2692, "lng": -2.1667 }
-      ]
-    },
-    {
-      "slug": "rhone-river",
-      "name": "Rhône River",
-      "length": 812,
-      "countries": ["Switzerland", "France"],
-      "source": "Rhône Glacier, Switzerland",
-      "mouth": "Mediterranean Sea",
-      "imagePath": "/images/rivers/france/rhone-river.jpg",
-      "pathCoordinates": [
-        { "lat": 46.6197, "lng": 8.3744 },
-        { "lat": 43.325, "lng": 4.8333 }
-      ]
-    }
-  ],
-  "institutions": [
-    {
-      "slug": "sorbonne-university",
-      "name": "Sorbonne University",
-      "city": "Paris",
-      "founded": 1150,
-      "globalRank": 44,
-      "type": "Public Research University",
-      "imagePath": "/images/institutions/france/sorbonne-university.jpg"
-    },
-    {
-      "slug": "ecole-normale-superieure",
-      "name": "École Normale Supérieure",
-      "city": "Paris",
-      "founded": 1794,
-      "globalRank": 45,
-      "type": "Public Research University",
-      "imagePath": "/images/institutions/france/ecole-normale-superieure.jpg"
-    },
-    {
-      "slug": "ecole-polytechnique",
-      "name": "École Polytechnique",
-      "city": "Palaiseau",
-      "founded": 1794,
-      "globalRank": 61,
-      "type": "Public Research University",
-      "imagePath": "/images/institutions/france/ecole-polytechnique.jpg"
-    }
-  ],
+
   "geography": {
     "climateZones": ["Oceanic", "Mediterranean", "Continental", "Alpine"],
     "geologicalFormations": [
@@ -621,5 +436,631 @@
         "value": "630+ restaurants"
       }
     ]
-  }
+  },
+  "states": [
+    {
+      "name": "Auvergne-Rhône-Alpes",
+      "capital": "Lyon",
+      "slug": "auvergne-rhone-alpes"
+    },
+    {
+      "name": "Bourgogne-Franche-Comté",
+      "capital": "Dijon",
+      "slug": "bourgogne-franche-comte"
+    },
+    {
+      "name": "Bretagne",
+      "capital": "Rennes",
+      "slug": "bretagne"
+    },
+    {
+      "name": "Centre-Val de Loire",
+      "capital": "Orléans",
+      "slug": "centre-val-de-loire"
+    },
+    {
+      "name": "Corse",
+      "capital": "Ajaccio",
+      "slug": "corse"
+    },
+    {
+      "name": "Grand Est",
+      "capital": "Strasbourg",
+      "slug": "grand-est"
+    },
+    {
+      "name": "Hauts-de-France",
+      "capital": "Lille",
+      "slug": "hauts-de-france"
+    },
+    {
+      "name": "Île-de-France",
+      "capital": "Paris",
+      "slug": "ile-de-france"
+    },
+    {
+      "name": "Normandie",
+      "capital": "Rouen",
+      "slug": "normandie"
+    },
+    {
+      "name": "Nouvelle-Aquitaine",
+      "capital": "Bordeaux",
+      "slug": "nouvelle-aquitaine"
+    },
+    {
+      "name": "Occitanie",
+      "capital": "Toulouse",
+      "slug": "occitanie"
+    },
+    {
+      "name": "Pays de la Loire",
+      "capital": "Nantes",
+      "slug": "pays-de-la-loire"
+    },
+    {
+      "name": "Provence-Alpes-Côte d'Azur",
+      "capital": "Marseille",
+      "slug": "provence-alpes-cote-azur"
+    },
+    {
+      "name": "Guadeloupe",
+      "capital": "Basse-Terre",
+      "slug": "guadeloupe"
+    },
+    {
+      "name": "Martinique",
+      "capital": "Fort-de-France",
+      "slug": "martinique"
+    },
+    {
+      "name": "Guyane",
+      "capital": "Cayenne",
+      "slug": "guyane"
+    },
+    {
+      "name": "La Réunion",
+      "capital": "Saint-Denis",
+      "slug": "la-reunion"
+    },
+    {
+      "name": "Mayotte",
+      "capital": "Mamoudzou",
+      "slug": "mayotte"
+    }
+  ],
+  "famousCities": [
+    {
+      "name": "Paris",
+      "whyFamous": "City of Light, global center of art, fashion, gastronomy, and culture",
+      "slug": "paris",
+      "image": "/images/cities/france/paris.png"
+    },
+    {
+      "name": "Lyon",
+      "whyFamous": "Gastronomic capital of France, UNESCO World Heritage site",
+      "slug": "lyon",
+      "image": "/images/cities/france/lyon.jpg"
+    },
+    {
+      "name": "Marseille",
+      "whyFamous": "Oldest city in France, major Mediterranean port",
+      "slug": "marseille",
+      "image": "/images/cities/france/marseille.png"
+    },
+    {
+      "name": "Nice",
+      "whyFamous": "Glamorous resort city on the French Riviera",
+      "slug": "nice",
+      "image": "/images/cities/france/nice.jpg"
+    },
+    {
+      "name": "Cannes",
+      "whyFamous": "Host of the prestigious Cannes Film Festival",
+      "slug": "cannes",
+      "image": "/images/cities/france/cannes.jpg"
+    },
+    {
+      "name": "Bordeaux",
+      "whyFamous": "World capital of wine, elegant architecture and vineyards",
+      "slug": "bordeaux",
+      "image": "/images/cities/france/bordeaux.jpg"
+    },
+    {
+      "name": "Toulouse",
+      "whyFamous": "Known as 'La Ville Rose', hub of aerospace industry",
+      "slug": "toulouse",
+      "image": "/images/cities/france/toulouse.jpg"
+    },
+    {
+      "name": "Strasbourg",
+      "whyFamous": "European Parliament seat, blend of French and German culture",
+      "slug": "strasbourg",
+      "image": "/images/cities/france/strasbourg.png"
+    },
+    {
+      "name": "Montpellier",
+      "whyFamous": "Vibrant student city with medieval charm and Mediterranean vibe",
+      "slug": "montpellier",
+      "image": "/images/cities/france/montpellier.jpg"
+    },
+    {
+      "name": "Lille",
+      "whyFamous": "Northern cultural hub, famous for Flemish architecture",
+      "slug": "lille",
+      "image": "/images/cities/france/lille.jpg"
+    },
+    {
+      "name": "Nantes",
+      "whyFamous": "Historic city with Château des Ducs de Bretagne, creative arts",
+      "slug": "nantes",
+      "image": "/images/cities/france/nantes.png"
+    },
+    {
+      "name": "Avignon",
+      "whyFamous": "City of the Popes, famous bridge, and theater festival",
+      "slug": "avignon",
+      "image": "/images/cities/france/avignon.jpg"
+    },
+    {
+      "name": "Dijon",
+      "whyFamous": "Historic capital of Burgundy, known for mustard and wine",
+      "slug": "dijon",
+      "image": "/images/cities/france/dijon.jpg"
+    },
+    {
+      "name": "Reims",
+      "whyFamous": "Coronation city of French kings, heart of Champagne region",
+      "slug": "reims",
+      "image": "/images/cities/france/reims.jpg"
+    },
+    {
+      "name": "Rouen",
+      "whyFamous": "Medieval city with Gothic cathedral, linked to Joan of Arc",
+      "slug": "rouen",
+      "image": "/images/cities/france/rouen.jpg"
+    },
+    {
+      "name": "Saint-Tropez",
+      "whyFamous": "Luxury Mediterranean resort, celebrity hotspot",
+      "slug": "saint-tropez",
+      "image": "/images/cities/france/saint-tropez.jpg"
+    },
+    {
+      "name": "Versailles",
+      "whyFamous": "Famous for the Palace of Versailles and royal history",
+      "slug": "versailles",
+      "image": "/images/cities/france/versailles.jpg"
+    },
+    {
+      "name": "Arles",
+      "whyFamous": "Roman heritage, Van Gogh inspiration, UNESCO World Heritage site",
+      "slug": "arles",
+      "image": "/images/cities/france/arles.jpg"
+    },
+    {
+      "name": "Clermont-Ferrand",
+      "whyFamous": "Known for volcanoes, Michelin headquarters, Gothic cathedral",
+      "slug": "clermont-ferrand",
+      "image": "/images/cities/france/clermont-ferrand.jpg"
+    },
+    {
+      "name": "Annecy",
+      "whyFamous": "Picturesque alpine town, 'Venice of the Alps', famous lake",
+      "slug": "annecy",
+      "image": "/images/cities/france/annecy.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "slug": "eiffel-tower",
+      "name": "Eiffel Tower",
+      "city": "Paris",
+      "coordinates": { "lat": 48.8584, "lng": 2.2945 },
+      "whyFamous": "Iconic iron lattice tower and symbol of France, built for the 1889 World's Fair",
+      "imagePath": "/images/landmarks/france/eiffel-tower.jpg"
+    },
+    {
+      "slug": "louvre-museum",
+      "name": "Louvre Museum",
+      "city": "Paris",
+      "coordinates": { "lat": 48.8606, "lng": 2.3376 },
+      "whyFamous": "World's largest art museum, home to the Mona Lisa and countless other masterpieces",
+      "imagePath": "/images/landmarks/france/louvre-museum.jpg"
+    },
+    {
+      "slug": "notre-dame-cathedral",
+      "name": "Notre-Dame Cathedral",
+      "city": "Paris",
+      "coordinates": { "lat": 48.853, "lng": 2.3499 },
+      "whyFamous": "Medieval Catholic cathedral, masterpiece of Gothic architecture",
+      "imagePath": "/images/landmarks/france/notre-dame-cathedral.jpg"
+    },
+    {
+      "slug": "palace-of-versailles",
+      "name": "Palace of Versailles",
+      "city": "Versailles",
+      "coordinates": { "lat": 48.8049, "lng": 2.1204 },
+      "whyFamous": "Opulent royal residence, symbol of absolute monarchy and French classical architecture",
+      "imagePath": "/images/landmarks/france/palace-of-versailles.jpg"
+    },
+    {
+      "slug": "mont-saint-michel",
+      "name": "Mont-Saint-Michel",
+      "city": "Normandy",
+      "coordinates": { "lat": 48.6361, "lng": -1.5115 },
+      "whyFamous": "Medieval abbey on a tidal island, UNESCO World Heritage site",
+      "imagePath": "/images/landmarks/france/mont-saint-michel.jpg"
+    },
+    {
+      "slug": "arc-de-triomphe",
+      "name": "Arc de Triomphe",
+      "city": "Paris",
+      "coordinates": { "lat": 48.8738, "lng": 2.295 },
+      "whyFamous": "Triumphal arch honoring those who fought and died for France in the French Revolutionary and Napoleonic Wars",
+      "imagePath": "/images/landmarks/france/arc-de-triomphe.jpg"
+    },
+    {
+      "slug": "sainte-chapelle",
+      "name": "Sainte-Chapelle",
+      "city": "Paris",
+      "coordinates": { "lat": 48.8554, "lng": 2.3445 },
+      "whyFamous": "Gothic chapel famous for its stunning stained-glass windows",
+      "imagePath": "/images/landmarks/france/sainte-chapelle.jpg"
+    },
+    {
+      "slug": "pont-du-gard",
+      "name": "Pont du Gard",
+      "city": "Occitanie",
+      "coordinates": { "lat": 43.9476, "lng": 4.535 },
+      "whyFamous": "Ancient Roman aqueduct bridge, UNESCO World Heritage site",
+      "imagePath": "/images/landmarks/france/pont-du-gard.jpg"
+    },
+    {
+      "slug": "chateau-de-chambord",
+      "name": "Château de Chambord",
+      "city": "Loire Valley",
+      "coordinates": { "lat": 47.616, "lng": 1.517 },
+      "whyFamous": "Renaissance castle, the largest château in the Loire Valley",
+      "imagePath": "/images/landmarks/france/chateau-de-chambord.jpg"
+    },
+    {
+      "slug": "palais-des-papes",
+      "name": "Palais des Papes",
+      "city": "Avignon",
+      "coordinates": { "lat": 43.9506, "lng": 4.8075 },
+      "whyFamous": "Former residence of the Popes during the 14th century",
+      "imagePath": "/images/landmarks/france/palais-des-papes.jpg"
+    },
+    {
+      "slug": "place-de-la-bourse",
+      "name": "Place de la Bourse",
+      "city": "Bordeaux",
+      "coordinates": { "lat": 44.8416, "lng": -0.5692 },
+      "whyFamous": "18th-century square, famous for its reflecting pool 'Miroir d'eau'",
+      "imagePath": "/images/landmarks/france/place-de-la-bourse.jpg"
+    },
+    {
+      "slug": "basilica-of-sacred-heart",
+      "name": "Basilica of the Sacred Heart (Sacré-Cœur)",
+      "city": "Paris",
+      "coordinates": { "lat": 48.8867, "lng": 2.3431 },
+      "whyFamous": "Iconic white basilica located at the summit of Montmartre",
+      "imagePath": "/images/landmarks/france/sacre-coeur.jpg"
+    },
+    {
+      "slug": "palais-garnier",
+      "name": "Palais Garnier",
+      "city": "Paris",
+      "coordinates": { "lat": 48.8719, "lng": 2.3316 },
+      "whyFamous": "19th-century opera house, masterpiece of Beaux-Arts architecture",
+      "imagePath": "/images/landmarks/france/palais-garnier.jpg"
+    },
+    {
+      "slug": "alsace-villages",
+      "name": "Alsace Villages",
+      "city": "Alsace",
+      "coordinates": { "lat": 48.2167, "lng": 7.4667 },
+      "whyFamous": "Picturesque half-timbered villages like Colmar and Riquewihr",
+      "imagePath": "/images/landmarks/france/alsace-villages.jpg"
+    },
+    {
+      "slug": "cathedrale-de-chartres",
+      "name": "Chartres Cathedral",
+      "city": "Chartres",
+      "coordinates": { "lat": 48.4477, "lng": 1.487 },
+      "whyFamous": "Gothic cathedral known for its stained glass and UNESCO status",
+      "imagePath": "/images/landmarks/france/chartres-cathedral.jpg"
+    },
+    {
+      "slug": "pont-alexandre-iii",
+      "name": "Pont Alexandre III",
+      "city": "Paris",
+      "coordinates": { "lat": 48.8638, "lng": 2.313 },
+      "whyFamous": "Most ornate bridge in Paris, symbol of Franco-Russian alliance",
+      "imagePath": "/images/landmarks/france/pont-alexandre-iii.jpg"
+    },
+    {
+      "slug": "fort-boyard",
+      "name": "Fort Boyard",
+      "city": "Charente-Maritime",
+      "coordinates": { "lat": 45.9966, "lng": -1.2264 },
+      "whyFamous": "19th-century sea fort, made famous by TV game show",
+      "imagePath": "/images/landmarks/france/fort-boyard.jpg"
+    },
+    {
+      "slug": "palais-des-congres-strasbourg",
+      "name": "Strasbourg Cathedral",
+      "city": "Strasbourg",
+      "coordinates": { "lat": 48.5816, "lng": 7.7508 },
+      "whyFamous": "Tallest medieval building in Europe for centuries",
+      "imagePath": "/images/landmarks/france/strasbourg-cathedral.jpg"
+    },
+    {
+      "slug": "gorges-du-verdon",
+      "name": "Gorges du Verdon",
+      "city": "Provence",
+      "coordinates": { "lat": 43.737, "lng": 6.363 },
+      "whyFamous": "Spectacular river canyon, often called the 'Grand Canyon of Europe'",
+      "imagePath": "/images/landmarks/france/gorges-du-verdon.jpg"
+    },
+    {
+      "slug": "palais-longchamp",
+      "name": "Palais Longchamp",
+      "city": "Marseille",
+      "coordinates": { "lat": 43.3045, "lng": 5.4006 },
+      "whyFamous": "19th-century monument celebrating water supply and arts",
+      "imagePath": "/images/landmarks/france/palais-longchamp.jpg"
+    }
+  ],
+  "rivers": [
+    {
+      "slug": "seine-river",
+      "name": "Seine River",
+      "length": 777,
+      "countries": ["France"],
+      "source": "Burgundy",
+      "mouth": "English Channel",
+      "imagePath": "/images/rivers/france/seine-river.jpg",
+      "pathCoordinates": [
+        { "lat": 47.2883, "lng": 4.7094 },
+        { "lat": 49.4344, "lng": 0.1079 }
+      ]
+    },
+    {
+      "slug": "loire-river",
+      "name": "Loire River",
+      "length": 1012,
+      "countries": ["France"],
+      "source": "Cévennes Mountains",
+      "mouth": "Atlantic Ocean",
+      "imagePath": "/images/rivers/france/loire-river.jpg",
+      "pathCoordinates": [
+        { "lat": 44.8419, "lng": 4.1389 },
+        { "lat": 47.2692, "lng": -2.1667 }
+      ]
+    },
+    {
+      "slug": "rhone-river",
+      "name": "Rhône River",
+      "length": 812,
+      "countries": ["Switzerland", "France"],
+      "source": "Rhône Glacier, Switzerland",
+      "mouth": "Mediterranean Sea",
+      "imagePath": "/images/rivers/france/rhone-river.jpg",
+      "pathCoordinates": [
+        { "lat": 46.6197, "lng": 8.3744 },
+        { "lat": 43.325, "lng": 4.8333 }
+      ]
+    },
+    {
+      "slug": "garonne-river",
+      "name": "Garonne River",
+      "length": 602,
+      "countries": ["Spain", "France"],
+      "source": "Spanish Pyrenees",
+      "mouth": "Atlantic Ocean (via Gironde Estuary)",
+      "imagePath": "/images/rivers/france/garonne-river.jpg",
+      "pathCoordinates": [
+        { "lat": 42.7003, "lng": 0.6389 },
+        { "lat": 45.535, "lng": -1.0333 }
+      ]
+    },
+    {
+      "slug": "dordogne-river",
+      "name": "Dordogne River",
+      "length": 483,
+      "countries": ["France"],
+      "source": "Massif Central",
+      "mouth": "Atlantic Ocean (via Gironde Estuary)",
+      "imagePath": "/images/rivers/france/dordogne-river.jpg",
+      "pathCoordinates": [
+        { "lat": 45.1042, "lng": 2.4839 },
+        { "lat": 45.535, "lng": -1.0333 }
+      ]
+    },
+    {
+      "slug": "meuse-river",
+      "name": "Meuse River",
+      "length": 925,
+      "countries": ["France", "Belgium", "Netherlands"],
+      "source": "Pouilly-en-Bassigny, France",
+      "mouth": "North Sea",
+      "imagePath": "/images/rivers/france/meuse-river.jpg",
+      "pathCoordinates": [
+        { "lat": 48.1225, "lng": 5.5578 },
+        { "lat": 51.947, "lng": 4.142 }
+      ]
+    },
+    {
+      "slug": "saone-river",
+      "name": "Saône River",
+      "length": 480,
+      "countries": ["France"],
+      "source": "Vosges Mountains",
+      "mouth": "Rhône River (Lyon)",
+      "imagePath": "/images/rivers/france/saone-river.jpg",
+      "pathCoordinates": [
+        { "lat": 47.95, "lng": 6.05 },
+        { "lat": 45.75, "lng": 4.85 }
+      ]
+    },
+    {
+      "slug": "charente-river",
+      "name": "Charente River",
+      "length": 381,
+      "countries": ["France"],
+      "source": "Haute-Vienne",
+      "mouth": "Atlantic Ocean",
+      "imagePath": "/images/rivers/france/charente-river.jpg",
+      "pathCoordinates": [
+        { "lat": 45.6, "lng": 1.1 },
+        { "lat": 45.65, "lng": -1.0 }
+      ]
+    },
+    {
+      "slug": "lot-river",
+      "name": "Lot River",
+      "length": 485,
+      "countries": ["France"],
+      "source": "Cévennes",
+      "mouth": "Garonne River",
+      "imagePath": "/images/rivers/france/lot-river.jpg",
+      "pathCoordinates": [
+        { "lat": 44.65, "lng": 3.35 },
+        { "lat": 44.2, "lng": 0.616 }
+      ]
+    },
+    {
+      "slug": "tarn-river",
+      "name": "Tarn River",
+      "length": 380,
+      "countries": ["France"],
+      "source": "Cévennes",
+      "mouth": "Garonne River",
+      "imagePath": "/images/rivers/france/tarn-river.jpg",
+      "pathCoordinates": [
+        { "lat": 44.5, "lng": 3.7 },
+        { "lat": 43.833, "lng": 1.266 }
+      ]
+    },
+    {
+      "slug": "marne-river",
+      "name": "Marne River",
+      "length": 514,
+      "countries": ["France"],
+      "source": "Langres Plateau",
+      "mouth": "Seine River (near Paris)",
+      "imagePath": "/images/rivers/france/marne-river.jpg",
+      "pathCoordinates": [
+        { "lat": 48.05, "lng": 5.233 },
+        { "lat": 48.833, "lng": 2.383 }
+      ]
+    },
+    {
+      "slug": "vienne-river",
+      "name": "Vienne River",
+      "length": 363,
+      "countries": ["France"],
+      "source": "Massif Central",
+      "mouth": "Loire River",
+      "imagePath": "/images/rivers/france/vienne-river.jpg",
+      "pathCoordinates": [
+        { "lat": 45.566, "lng": 2.283 },
+        { "lat": 47.283, "lng": 0.6 }
+      ]
+    }
+  ],
+  "institutions": [
+    {
+      "slug": "sorbonne-university",
+      "name": "Sorbonne University",
+      "city": "Paris",
+      "founded": 1150,
+      "globalRank": 44,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/france/sorbonne-university.jpg"
+    },
+    {
+      "slug": "ecole-normale-superieure",
+      "name": "École Normale Supérieure",
+      "city": "Paris",
+      "founded": 1794,
+      "globalRank": 45,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/france/ecole-normale-superieure.jpg"
+    },
+    {
+      "slug": "ecole-polytechnique",
+      "name": "École Polytechnique",
+      "city": "Palaiseau",
+      "founded": 1794,
+      "globalRank": 61,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/france/ecole-polytechnique.jpg"
+    },
+    {
+      "slug": "sciences-po",
+      "name": "Sciences Po",
+      "city": "Paris",
+      "founded": 1872,
+      "globalRank": 242,
+      "type": "Public Research University (Political Science & Social Studies)",
+      "imagePath": "/images/institutions/france/sciences-po.jpg"
+    },
+    {
+      "slug": "hec-paris",
+      "name": "HEC Paris",
+      "city": "Jouy-en-Josas",
+      "founded": 1881,
+      "globalRank": 321,
+      "type": "Business School",
+      "imagePath": "/images/institutions/france/hec-paris.jpg"
+    },
+    {
+      "slug": "universite-psl",
+      "name": "Université PSL (Paris Sciences et Lettres)",
+      "city": "Paris",
+      "founded": 2010,
+      "globalRank": 41,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/france/universite-psl.jpg"
+    },
+    {
+      "slug": "universite-de-paris-saclay",
+      "name": "Université Paris-Saclay",
+      "city": "Paris (Saclay)",
+      "founded": 2015,
+      "globalRank": 15,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/france/universite-de-paris-saclay.jpg"
+    },
+    {
+      "slug": "insead",
+      "name": "INSEAD",
+      "city": "Fontainebleau",
+      "founded": 1957,
+      "globalRank": 364,
+      "type": "Business School",
+      "imagePath": "/images/institutions/france/insead.jpg"
+    },
+    {
+      "slug": "universite-de-strasbourg",
+      "name": "Université de Strasbourg",
+      "city": "Strasbourg",
+      "founded": 1538,
+      "globalRank": 421,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/france/universite-de-strasbourg.jpg"
+    },
+    {
+      "slug": "universite-grenoble-alpes",
+      "name": "Université Grenoble Alpes",
+      "city": "Grenoble",
+      "founded": 1339,
+      "globalRank": 317,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/france/universite-grenoble-alpes.jpg"
+    }
+  ]
 }
