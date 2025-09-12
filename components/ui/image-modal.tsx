@@ -38,6 +38,7 @@ export function ImageModal({
           <div className="image-modal-overlay"></div>
         </div>
       </DialogTrigger>
+      {/*
       <DialogContent className="image-modal-content">
         <OptimizedImage
           src={src}
@@ -47,6 +48,7 @@ export function ImageModal({
           className="image-modal-full"
         />
       </DialogContent>
+      */}
     </Dialog>
   );
 }
