@@ -458,31 +458,267 @@
       "description": "Annexation of Crimea from Ukraine"
     }
   ],
-  "federalSubjects": [
+  "states": [
+    { "name": "Adygea", "capital": "Maykop", "slug": "adygea" },
     {
-      "name": "Moscow",
-      "capital": "Moscow",
-      "slug": "moscow"
+      "name": "Altai Republic",
+      "capital": "Gorno-Altaysk",
+      "slug": "altai-republic"
+    },
+    { "name": "Altai Krai", "capital": "Barnaul", "slug": "altai-krai" },
+    {
+      "name": "Amur Oblast",
+      "capital": "Blagoveshchensk",
+      "slug": "amur-oblast"
     },
     {
-      "name": "St. Petersburg",
+      "name": "Arkhangelsk Oblast",
+      "capital": "Arkhangelsk",
+      "slug": "arkhangelsk-oblast"
+    },
+    {
+      "name": "Astrakhan Oblast",
+      "capital": "Astrakhan",
+      "slug": "astrakhan-oblast"
+    },
+    { "name": "Bashkortostan", "capital": "Ufa", "slug": "bashkortostan" },
+    {
+      "name": "Belgorod Oblast",
+      "capital": "Belgorod",
+      "slug": "belgorod-oblast"
+    },
+    {
+      "name": "Bryansk Oblast",
+      "capital": "Bryansk",
+      "slug": "bryansk-oblast"
+    },
+    { "name": "Buryatia", "capital": "Ulan-Ude", "slug": "buryatia" },
+    {
+      "name": "Chechen Republic",
+      "capital": "Grozny",
+      "slug": "chechen-republic"
+    },
+    {
+      "name": "Chelyabinsk Oblast",
+      "capital": "Chelyabinsk",
+      "slug": "chelyabinsk-oblast"
+    },
+    {
+      "name": "Chukotka Autonomous Okrug",
+      "capital": "Anadyr",
+      "slug": "chukotka"
+    },
+    {
+      "name": "Chuvash Republic",
+      "capital": "Cheboksary",
+      "slug": "chuvash-republic"
+    },
+    { "name": "Dagestan", "capital": "Makhachkala", "slug": "dagestan" },
+    { "name": "Ingushetia", "capital": "Magas", "slug": "ingushetia" },
+    {
+      "name": "Irkutsk Oblast",
+      "capital": "Irkutsk",
+      "slug": "irkutsk-oblast"
+    },
+    {
+      "name": "Ivanovo Oblast",
+      "capital": "Ivanovo",
+      "slug": "ivanovo-oblast"
+    },
+    {
+      "name": "Jewish Autonomous Oblast",
+      "capital": "Birobidzhan",
+      "slug": "jewish-autonomous-oblast"
+    },
+    {
+      "name": "Kabardino-Balkaria",
+      "capital": "Nalchik",
+      "slug": "kabardino-balkaria"
+    },
+    {
+      "name": "Kaliningrad Oblast",
+      "capital": "Kaliningrad",
+      "slug": "kaliningrad-oblast"
+    },
+    { "name": "Kalmykia", "capital": "Elista", "slug": "kalmykia" },
+    { "name": "Kaluga Oblast", "capital": "Kaluga", "slug": "kaluga-oblast" },
+    {
+      "name": "Kamchatka Krai",
+      "capital": "Petropavlovsk-Kamchatsky",
+      "slug": "kamchatka-krai"
+    },
+    {
+      "name": "Karachay-Cherkess Republic",
+      "capital": "Cherkessk",
+      "slug": "karachay-cherkess"
+    },
+    { "name": "Karelia", "capital": "Petrozavodsk", "slug": "karelia" },
+    {
+      "name": "Kemerovo Oblast",
+      "capital": "Kemerovo",
+      "slug": "kemerovo-oblast"
+    },
+    {
+      "name": "Khabarovsk Krai",
+      "capital": "Khabarovsk",
+      "slug": "khabarovsk-krai"
+    },
+    { "name": "Khakassia", "capital": "Abakan", "slug": "khakassia" },
+    {
+      "name": "Khanty-Mansi Autonomous Okrug",
+      "capital": "Khanty-Mansiysk",
+      "slug": "khanty-mansi"
+    },
+    { "name": "Kirov Oblast", "capital": "Kirov", "slug": "kirov-oblast" },
+    {
+      "name": "Komi Republic",
+      "capital": "Syktyvkar",
+      "slug": "komi-republic"
+    },
+    {
+      "name": "Kostroma Oblast",
+      "capital": "Kostroma",
+      "slug": "kostroma-oblast"
+    },
+    {
+      "name": "Krasnodar Krai",
+      "capital": "Krasnodar",
+      "slug": "krasnodar-krai"
+    },
+    {
+      "name": "Krasnoyarsk Krai",
+      "capital": "Krasnoyarsk",
+      "slug": "krasnoyarsk-krai"
+    },
+    { "name": "Kurgan Oblast", "capital": "Kurgan", "slug": "kurgan-oblast" },
+    { "name": "Kursk Oblast", "capital": "Kursk", "slug": "kursk-oblast" },
+    {
+      "name": "Leningrad Oblast",
       "capital": "St. Petersburg",
+      "slug": "leningrad-oblast"
+    },
+    {
+      "name": "Lipetsk Oblast",
+      "capital": "Lipetsk",
+      "slug": "lipetsk-oblast"
+    },
+    {
+      "name": "Magadan Oblast",
+      "capital": "Magadan",
+      "slug": "magadan-oblast"
+    },
+    { "name": "Mari El Republic", "capital": "Yoshkar-Ola", "slug": "mari-el" },
+    { "name": "Mordovia", "capital": "Saransk", "slug": "mordovia" },
+    { "name": "Moscow", "capital": "Moscow", "slug": "moscow" },
+    { "name": "Moscow Oblast", "capital": "Moscow", "slug": "moscow-oblast" },
+    {
+      "name": "Murmansk Oblast",
+      "capital": "Murmansk",
+      "slug": "murmansk-oblast"
+    },
+    {
+      "name": "Nizhny Novgorod Oblast",
+      "capital": "Nizhny Novgorod",
+      "slug": "nizhny-novgorod-oblast"
+    },
+    {
+      "name": "North Ossetia–Alania",
+      "capital": "Vladikavkaz",
+      "slug": "north-ossetia"
+    },
+    {
+      "name": "Novgorod Oblast",
+      "capital": "Veliky Novgorod",
+      "slug": "novgorod-oblast"
+    },
+    {
+      "name": "Novosibirsk Oblast",
+      "capital": "Novosibirsk",
+      "slug": "novosibirsk-oblast"
+    },
+    { "name": "Omsk Oblast", "capital": "Omsk", "slug": "omsk-oblast" },
+    {
+      "name": "Orenburg Oblast",
+      "capital": "Orenburg",
+      "slug": "orenburg-oblast"
+    },
+    { "name": "Oral Oblast", "capital": "Orel", "slug": "orel-oblast" },
+    { "name": "Penza Oblast", "capital": "Penza", "slug": "penza-oblast" },
+    { "name": "Perm Krai", "capital": "Perm", "slug": "perm-krai" },
+    {
+      "name": "Primorsky Krai",
+      "capital": "Vladivostok",
+      "slug": "primorsky-krai"
+    },
+    { "name": "Pskov Oblast", "capital": "Pskov", "slug": "pskov-oblast" },
+    {
+      "name": "Rostov Oblast",
+      "capital": "Rostov-on-Don",
+      "slug": "rostov-oblast"
+    },
+    { "name": "Ryazan Oblast", "capital": "Ryazan", "slug": "ryazan-oblast" },
+    {
+      "name": "Saint Petersburg",
+      "capital": "Saint Petersburg",
       "slug": "st-petersburg"
-    },
-    {
-      "name": "Tatarstan",
-      "capital": "Kazan",
-      "slug": "tatarstan"
-    },
-    {
-      "name": "Bashkortostan",
-      "capital": "Ufa",
-      "slug": "bashkortostan"
     },
     {
       "name": "Sakha Republic",
       "capital": "Yakutsk",
       "slug": "sakha-republic"
+    },
+    {
+      "name": "Sakhalin Oblast",
+      "capital": "Yuzhno-Sakhalinsk",
+      "slug": "sakhalin-oblast"
+    },
+    { "name": "Samara Oblast", "capital": "Samara", "slug": "samara-oblast" },
+    {
+      "name": "Saratov Oblast",
+      "capital": "Saratov",
+      "slug": "saratov-oblast"
+    },
+    {
+      "name": "Smolensk Oblast",
+      "capital": "Smolensk",
+      "slug": "smolensk-oblast"
+    },
+    {
+      "name": "Stavropol Krai",
+      "capital": "Stavropol",
+      "slug": "stavropol-krai"
+    },
+    {
+      "name": "Sverdlovsk Oblast",
+      "capital": "Yekaterinburg",
+      "slug": "sverdlovsk-oblast"
+    },
+    { "name": "Tambov Oblast", "capital": "Tambov", "slug": "tambov-oblast" },
+    { "name": "Tatarstan", "capital": "Kazan", "slug": "tatarstan" },
+    { "name": "Tomsk Oblast", "capital": "Tomsk", "slug": "tomsk-oblast" },
+    { "name": "Tuva", "capital": "Kyzyl", "slug": "tuva" },
+    { "name": "Tula Oblast", "capital": "Tula", "slug": "tula-oblast" },
+    { "name": "Tver Oblast", "capital": "Tver", "slug": "tver-oblast" },
+    { "name": "Tyumen Oblast", "capital": "Tyumen", "slug": "tyumen-oblast" },
+    {
+      "name": "Udmurt Republic",
+      "capital": "Izhevsk",
+      "slug": "udmurt-republic"
+    },
+    {
+      "name": "Ulyanovsk Oblast",
+      "capital": "Ulyanovsk",
+      "slug": "ulyanovsk-oblast"
+    },
+    {
+      "name": "Vladimir Oblast",
+      "capital": "Vladimir",
+      "slug": "vladimir-oblast"
+    },
+    {
+      "name": "Volgograd Oblast",
+      "capital": "Volgograd",
+      "slug": "volgograd-oblast"
     }
   ],
   "famousCities": [
@@ -515,6 +751,36 @@
       "whyFamous": "Capital of Tatarstan, multicultural city with Kremlin",
       "slug": "kazan",
       "image": "/images/cities/russia/kazan.jpg"
+    },
+    {
+      "name": "Novosibirsk",
+      "whyFamous": "Largest city in Siberia, major scientific and industrial center",
+      "slug": "novosibirsk",
+      "image": "/images/cities/russia/novosibirsk.jpg"
+    },
+    {
+      "name": "Yekaterinburg",
+      "whyFamous": "Ural Mountains gateway, industrial and cultural hub",
+      "slug": "yekaterinburg",
+      "image": "/images/cities/russia/yekaterinburg.jpg"
+    },
+    {
+      "name": "Nizhny Novgorod",
+      "whyFamous": "Historic trade city, kremlin and Volga River port",
+      "slug": "nizhny-novgorod",
+      "image": "/images/cities/russia/nizhny-novgorod.jpg"
+    },
+    {
+      "name": "Samara",
+      "whyFamous": "Volga River city, aerospace and space industry center",
+      "slug": "samara",
+      "image": "/images/cities/russia/samara.jpg"
+    },
+    {
+      "name": "Vladimir",
+      "whyFamous": "Historic city on the Golden Ring, medieval cathedrals",
+      "slug": "vladimir",
+      "image": "/images/cities/russia/vladimir.jpg"
     }
   ],
   "landmarks": [
@@ -561,6 +827,72 @@
       },
       "whyFamous": "Longest railway line in the world",
       "imagePath": "/images/landmarks/russia/trans-siberian-railway.jpg"
+    },
+    {
+      "slug": "kazan-kremlin",
+      "name": "Kazan Kremlin",
+      "city": "Kazan",
+      "coordinates": {
+        "lat": 55.7979,
+        "lng": 49.1056
+      },
+      "whyFamous": "UNESCO World Heritage site and historic fortress in Tatarstan",
+      "imagePath": "/images/landmarks/russia/kazan-kremlin.jpg"
+    },
+    {
+      "slug": "sochi-olympic-park",
+      "name": "Sochi Olympic Park",
+      "city": "Sochi",
+      "coordinates": {
+        "lat": 43.4025,
+        "lng": 39.9556
+      },
+      "whyFamous": "Main venue for 2014 Winter Olympics",
+      "imagePath": "/images/landmarks/russia/sochi-olympic-park.jpg"
+    },
+    {
+      "slug": "saint-basil-cathedral",
+      "name": "Saint Basil's Cathedral",
+      "city": "Moscow",
+      "coordinates": {
+        "lat": 55.7525,
+        "lng": 37.6231
+      },
+      "whyFamous": "Iconic cathedral with colorful onion domes on Red Square",
+      "imagePath": "/images/landmarks/russia/saint-basil-cathedral.jpg"
+    },
+    {
+      "slug": "catherine-palace",
+      "name": "Catherine Palace",
+      "city": "Pushkin",
+      "coordinates": {
+        "lat": 59.7169,
+        "lng": 30.3956
+      },
+      "whyFamous": "Opulent rococo palace, famous for the Amber Room",
+      "imagePath": "/images/landmarks/russia/catherine-palace.jpg"
+    },
+    {
+      "slug": "mount-elbrus",
+      "name": "Mount Elbrus",
+      "city": "Caucasus",
+      "coordinates": {
+        "lat": 43.355,
+        "lng": 42.445
+      },
+      "whyFamous": "Highest mountain in Russia and Europe",
+      "imagePath": "/images/landmarks/russia/mount-elbrus.jpg"
+    },
+    {
+      "slug": "vladimir-suzdal",
+      "name": "Vladimir-Suzdal Kremlin",
+      "city": "Vladimir",
+      "coordinates": {
+        "lat": 56.1292,
+        "lng": 40.4074
+      },
+      "whyFamous": "Historic cities on the Golden Ring with medieval cathedrals",
+      "imagePath": "/images/landmarks/russia/vladimir-suzdal.jpg"
     }
   ],
   "rivers": [
@@ -602,6 +934,45 @@
         { "lat": 52.3667, "lng": 85.0333 },
         { "lat": 66.6333, "lng": 66.5333 }
       ]
+    },
+    {
+      "slug": "amur-river",
+      "name": "Amur River",
+      "length": 2824,
+      "countries": ["Russia", "China"],
+      "source": "Hanka Mountains",
+      "mouth": "Sea of Okhotsk",
+      "imagePath": "/images/rivers/russia/amur-river.jpg",
+      "pathCoordinates": [
+        { "lat": 50.2, "lng": 136.7 },
+        { "lat": 53.3, "lng": 140.3 }
+      ]
+    },
+    {
+      "slug": "dnieper-river",
+      "name": "Dnieper River",
+      "length": 2201,
+      "countries": ["Russia", "Belarus", "Ukraine"],
+      "source": "Smolensk Heights, Russia",
+      "mouth": "Black Sea",
+      "imagePath": "/images/rivers/russia/dnieper-river.jpg",
+      "pathCoordinates": [
+        { "lat": 54.0, "lng": 32.0 },
+        { "lat": 46.0, "lng": 31.5 }
+      ]
+    },
+    {
+      "slug": "lakhta-river",
+      "name": "Lena River",
+      "length": 4400,
+      "countries": ["Russia"],
+      "source": "Baikal Mountains",
+      "mouth": "Laptev Sea",
+      "imagePath": "/images/rivers/russia/lena-river.jpg",
+      "pathCoordinates": [
+        { "lat": 55.5, "lng": 109.0 },
+        { "lat": 72.0, "lng": 126.0 }
+      ]
     }
   ],
   "institutions": [
@@ -640,6 +1011,33 @@
       "globalRank": 290,
       "type": "Public Technical University",
       "imagePath": "/images/institutions/russia/moscow-institute-physics-technology.jpg"
+    },
+    {
+      "slug": "bauman-moscow-state-technical-university",
+      "name": "Bauman Moscow State Technical University",
+      "city": "Moscow",
+      "founded": 1830,
+      "globalRank": 350,
+      "type": "Public Technical University",
+      "imagePath": "/images/institutions/russia/bauman-moscow-state-technical-university.jpg"
+    },
+    {
+      "slug": "tomsk-state-university",
+      "name": "Tomsk State University",
+      "city": "Tomsk",
+      "founded": 1878,
+      "globalRank": 400,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/russia/tomsk-state-university.jpg"
+    },
+    {
+      "slug": "peoples-friendship-university",
+      "name": "Peoples' Friendship University of Russia",
+      "city": "Moscow",
+      "founded": 1960,
+      "globalRank": 420,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/russia/peoples-friendship-university.jpg"
     }
   ]
 }

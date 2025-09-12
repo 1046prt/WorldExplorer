@@ -462,6 +462,21 @@
       "name": "South Australia",
       "capital": "Adelaide",
       "slug": "south-australia"
+    },
+    {
+      "name": "Tasmania",
+      "capital": "Hobart",
+      "slug": "tasmania"
+    },
+    {
+      "name": "Northern Territory",
+      "capital": "Darwin",
+      "slug": "northern-territory"
+    },
+    {
+      "name": "Australian Capital Territory",
+      "capital": "Canberra",
+      "slug": "australian-capital-territory"
     }
   ],
   "famousCities": [
@@ -494,6 +509,24 @@
       "whyFamous": "Wine regions, festivals, planned city layout",
       "slug": "adelaide",
       "image": "/images/cities/aus/adelaide.webp"
+    },
+    {
+      "name": "Canberra",
+      "whyFamous": "Capital city, political and administrative center",
+      "slug": "canberra",
+      "image": "/images/cities/aus/canberra.jpg"
+    },
+    {
+      "name": "Hobart",
+      "whyFamous": "Historic port city, gateway to Tasmania, MONA museum",
+      "slug": "hobart",
+      "image": "/images/cities/aus/hobart.jpg"
+    },
+    {
+      "name": "Darwin",
+      "whyFamous": "Tropical climate, gateway to Northern Territory and Kakadu National Park",
+      "slug": "darwin",
+      "image": "/images/cities/aus/darwin.jpg"
     }
   ],
   "landmarks": [
@@ -501,10 +534,7 @@
       "slug": "sydney-opera-house",
       "name": "Sydney Opera House",
       "city": "Sydney",
-      "coordinates": {
-        "lat": -33.8568,
-        "lng": 151.2153
-      },
+      "coordinates": { "lat": -33.8568, "lng": 151.2153 },
       "whyFamous": "Iconic architectural masterpiece and UNESCO World Heritage site",
       "imagePath": "/images/landmarks/aus/sydney-opera-house.jpg"
     },
@@ -512,10 +542,7 @@
       "slug": "uluru",
       "name": "Uluru (Ayers Rock)",
       "city": "Northern Territory",
-      "coordinates": {
-        "lat": -25.3444,
-        "lng": 131.0369
-      },
+      "coordinates": { "lat": -25.3444, "lng": 131.0369 },
       "whyFamous": "Sacred Aboriginal site and massive monolith in the desert",
       "imagePath": "/images/landmarks/aus/uluru.jpg"
     },
@@ -523,10 +550,7 @@
       "slug": "great-barrier-reef",
       "name": "Great Barrier Reef",
       "city": "Queensland",
-      "coordinates": {
-        "lat": -18.2871,
-        "lng": 147.6992
-      },
+      "coordinates": { "lat": -18.2871, "lng": 147.6992 },
       "whyFamous": "World's largest coral reef system, natural wonder of Australia",
       "imagePath": "/images/landmarks/aus/great-barrier-reef.jpg"
     },
@@ -534,12 +558,33 @@
       "slug": "twelve-apostles",
       "name": "Twelve Apostles",
       "city": "Victoria",
-      "coordinates": {
-        "lat": -38.6656,
-        "lng": 143.1048
-      },
+      "coordinates": { "lat": -38.6656, "lng": 143.1048 },
       "whyFamous": "Limestone stacks along the Great Ocean Road",
       "imagePath": "/images/landmarks/aus/twelve-apostles.jpg"
+    },
+    {
+      "slug": "kakadu-national-park",
+      "name": "Kakadu National Park",
+      "city": "Northern Territory",
+      "coordinates": { "lat": -12.425, "lng": 132.53 },
+      "whyFamous": "Largest national park in Australia, rich in Aboriginal culture and wildlife",
+      "imagePath": "/images/landmarks/aus/kakadu-national-park.jpg"
+    },
+    {
+      "slug": "bondi-beach",
+      "name": "Bondi Beach",
+      "city": "Sydney",
+      "coordinates": { "lat": -33.8915, "lng": 151.2767 },
+      "whyFamous": "Famous surfing beach and iconic Australian coastal destination",
+      "imagePath": "/images/landmarks/aus/bondi-beach.jpg"
+    },
+    {
+      "slug": "mount-kosciuszko",
+      "name": "Mount Kosciuszko",
+      "city": "New South Wales",
+      "coordinates": { "lat": -36.4556, "lng": 148.2633 },
+      "whyFamous": "Highest mountain in mainland Australia",
+      "imagePath": "/images/landmarks/aus/mount-kosciuszko.jpg"
     }
   ],
   "rivers": [
@@ -567,6 +612,45 @@
       "pathCoordinates": [
         { "lat": -28.1667, "lng": 150.2833 },
         { "lat": -34.1833, "lng": 142.0167 }
+      ]
+    },
+    {
+      "slug": "murrumbidgee-river",
+      "name": "Murrumbidgee River",
+      "length": 1400,
+      "countries": ["Australia"],
+      "source": "Australian Alps",
+      "mouth": "Murray River",
+      "imagePath": "/images/rivers/aus/murrumbidgee-river.jpg",
+      "pathCoordinates": [
+        { "lat": -35.5, "lng": 148.5 },
+        { "lat": -35.05, "lng": 145.55 }
+      ]
+    },
+    {
+      "slug": "macquarie-river",
+      "name": "Macquarie River",
+      "length": 960,
+      "countries": ["Australia"],
+      "source": "Great Dividing Range",
+      "mouth": "Macquarie Marshes",
+      "imagePath": "/images/rivers/aus/macquarie-river.jpg",
+      "pathCoordinates": [
+        { "lat": -32.25, "lng": 149.75 },
+        { "lat": -31.6, "lng": 147.0 }
+      ]
+    },
+    {
+      "slug": "swan-river",
+      "name": "Swan River",
+      "length": 72,
+      "countries": ["Australia"],
+      "source": "Perth Hills",
+      "mouth": "Indian Ocean",
+      "imagePath": "/images/rivers/aus/swan-river.jpg",
+      "pathCoordinates": [
+        { "lat": -31.85, "lng": 116.0 },
+        { "lat": -32.0, "lng": 115.75 }
       ]
     }
   ],
