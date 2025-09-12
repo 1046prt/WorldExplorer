@@ -428,7 +428,7 @@
       "description": "Founding member of European Economic Community"
     }
   ],
-  "regions": [
+  "states": [
     {
       "name": "Lombardy",
       "capital": "Milan",
@@ -453,6 +453,81 @@
       "name": "Sicily",
       "capital": "Palermo",
       "slug": "sicily"
+    },
+    {
+      "name": "Piedmont",
+      "capital": "Turin",
+      "slug": "piedmont"
+    },
+    {
+      "name": "Emilia-Romagna",
+      "capital": "Bologna",
+      "slug": "emilia-romagna"
+    },
+    {
+      "name": "Campania",
+      "capital": "Naples",
+      "slug": "campania"
+    },
+    {
+      "name": "Apulia",
+      "capital": "Bari",
+      "slug": "apulia"
+    },
+    {
+      "name": "Calabria",
+      "capital": "Catanzaro",
+      "slug": "calabria"
+    },
+    {
+      "name": "Sardinia",
+      "capital": "Cagliari",
+      "slug": "sardinia"
+    },
+    {
+      "name": "Liguria",
+      "capital": "Genoa",
+      "slug": "liguria"
+    },
+    {
+      "name": "Marche",
+      "capital": "Ancona",
+      "slug": "marche"
+    },
+    {
+      "name": "Abruzzo",
+      "capital": "L'Aquila",
+      "slug": "abruzzo"
+    },
+    {
+      "name": "Friuli Venezia Giulia",
+      "capital": "Trieste",
+      "slug": "friuli-venezia-giulia"
+    },
+    {
+      "name": "Umbria",
+      "capital": "Perugia",
+      "slug": "umbria"
+    },
+    {
+      "name": "Trentino-Alto Adige/Südtirol",
+      "capital": "Trento",
+      "slug": "trentino-alto-adige"
+    },
+    {
+      "name": "Molise",
+      "capital": "Campobasso",
+      "slug": "molise"
+    },
+    {
+      "name": "Basilicata",
+      "capital": "Potenza",
+      "slug": "basilicata"
+    },
+    {
+      "name": "Aosta Valley",
+      "capital": "Aosta",
+      "slug": "aosta-valley"
     }
   ],
   "famousCities": [
@@ -485,6 +560,48 @@
       "whyFamous": "Birthplace of pizza, gateway to Pompeii and Mount Vesuvius",
       "slug": "naples",
       "image": "/images/cities/italy/naples.png"
+    },
+    {
+      "name": "Turin",
+      "whyFamous": "Industrial hub, famous for Shroud of Turin and Fiat headquarters",
+      "slug": "turin",
+      "image": "/images/cities/italy/turin.jpg"
+    },
+    {
+      "name": "Bologna",
+      "whyFamous": "Home to the oldest university in the world, rich cuisine",
+      "slug": "bologna",
+      "image": "/images/cities/italy/bologna.jpg"
+    },
+    {
+      "name": "Genoa",
+      "whyFamous": "Historic port city, birthplace of Christopher Columbus",
+      "slug": "genoa",
+      "image": "/images/cities/italy/genoa.jpg"
+    },
+    {
+      "name": "Verona",
+      "whyFamous": "City of Romeo and Juliet, Roman Arena amphitheater",
+      "slug": "verona",
+      "image": "/images/cities/italy/verona.jpg"
+    },
+    {
+      "name": "Palermo",
+      "whyFamous": "Capital of Sicily, mix of Arab-Norman-Byzantine heritage",
+      "slug": "palermo",
+      "image": "/images/cities/italy/palermo.jpg"
+    },
+    {
+      "name": "Pisa",
+      "whyFamous": "Famous for the Leaning Tower of Pisa",
+      "slug": "pisa",
+      "image": "/images/cities/italy/pisa.jpg"
+    },
+    {
+      "name": "Siena",
+      "whyFamous": "Medieval city, famous for the Palio horse race",
+      "slug": "siena",
+      "image": "/images/cities/italy/siena.jpg"
     }
   ],
   "landmarks": [
@@ -492,10 +609,7 @@
       "slug": "colosseum",
       "name": "Colosseum",
       "city": "Rome",
-      "coordinates": {
-        "lat": 41.8902,
-        "lng": 12.4922
-      },
+      "coordinates": { "lat": 41.8902, "lng": 12.4922 },
       "whyFamous": "Ancient Roman amphitheater, iconic symbol of Imperial Rome",
       "imagePath": "/images/landmarks/italy/colosseum.jpg"
     },
@@ -503,10 +617,7 @@
       "slug": "leaning-tower-of-pisa",
       "name": "Leaning Tower of Pisa",
       "city": "Pisa",
-      "coordinates": {
-        "lat": 43.723,
-        "lng": 10.3966
-      },
+      "coordinates": { "lat": 43.723, "lng": 10.3966 },
       "whyFamous": "Famous tilted bell tower, architectural marvel of Pisa",
       "imagePath": "/images/landmarks/italy/leaning-tower-pisa.jpg"
     },
@@ -514,10 +625,7 @@
       "slug": "trevi-fountain",
       "name": "Trevi Fountain",
       "city": "Rome",
-      "coordinates": {
-        "lat": 41.9009,
-        "lng": 12.4833
-      },
+      "coordinates": { "lat": 41.9009, "lng": 12.4833 },
       "whyFamous": "Baroque fountain, famous for coin-throwing tradition",
       "imagePath": "/images/landmarks/italy/trevi-fountain.jpg"
     },
@@ -525,12 +633,73 @@
       "slug": "duomo-florence",
       "name": "Florence Cathedral",
       "city": "Florence",
-      "coordinates": {
-        "lat": 43.7731,
-        "lng": 11.256
-      },
+      "coordinates": { "lat": 43.7731, "lng": 11.256 },
       "whyFamous": "Gothic cathedral with iconic Renaissance dome",
       "imagePath": "/images/landmarks/italy/duomo-florence.jpg"
+    },
+    {
+      "slug": "vatican-st-peters-basilica",
+      "name": "St. Peter's Basilica",
+      "city": "Vatican City (Rome)",
+      "coordinates": { "lat": 41.9022, "lng": 12.4539 },
+      "whyFamous": "Largest church in the world, heart of Catholicism",
+      "imagePath": "/images/landmarks/italy/st-peters-basilica.jpg"
+    },
+    {
+      "slug": "roman-forum",
+      "name": "Roman Forum",
+      "city": "Rome",
+      "coordinates": { "lat": 41.8925, "lng": 12.4853 },
+      "whyFamous": "Ancient political, religious, and social center of Rome",
+      "imagePath": "/images/landmarks/italy/roman-forum.jpg"
+    },
+    {
+      "slug": "pantheon",
+      "name": "Pantheon",
+      "city": "Rome",
+      "coordinates": { "lat": 41.8986, "lng": 12.4769 },
+      "whyFamous": "Ancient Roman temple with largest unreinforced concrete dome",
+      "imagePath": "/images/landmarks/italy/pantheon.jpg"
+    },
+    {
+      "slug": "amalfi-coast",
+      "name": "Amalfi Coast",
+      "city": "Campania",
+      "coordinates": { "lat": 40.6333, "lng": 14.6 },
+      "whyFamous": "UNESCO coastal region, picturesque towns and cliffs",
+      "imagePath": "/images/landmarks/italy/amalfi-coast.jpg"
+    },
+    {
+      "slug": "pompeii",
+      "name": "Pompeii",
+      "city": "Naples",
+      "coordinates": { "lat": 40.7497, "lng": 14.5 },
+      "whyFamous": "Ancient Roman city preserved by eruption of Mount Vesuvius",
+      "imagePath": "/images/landmarks/italy/pompeii.jpg"
+    },
+    {
+      "slug": "milan-duomo",
+      "name": "Milan Cathedral (Duomo di Milano)",
+      "city": "Milan",
+      "coordinates": { "lat": 45.4642, "lng": 9.1916 },
+      "whyFamous": "Largest Gothic cathedral in Italy",
+      "imagePath": "/images/landmarks/italy/milan-duomo.jpg"
+    },
+    {
+      "slug": "siena-piazza-del-campo",
+      "name": "Piazza del Campo",
+      "city": "Siena",
+      "coordinates": { "lat": 43.3187, "lng": 11.3316 },
+      "whyFamous": "Famous medieval square, site of Palio horse race",
+      "imagePath": "/images/landmarks/italy/piazza-del-campo.jpg"
+    },
+    {
+      "slug": "venice-grand-canal",
+      "name": "Grand Canal",
+      "city": "Venice",
+      "coordinates": { "lat": 45.4375, "lng": 12.3358 },
+      "whyFamous": "Main waterway of Venice, lined with palaces and gondolas",
+      "imagePath": "/images/landmarks/italy/grand-canal.jpg"
     }
   ],
   "rivers": [
@@ -572,6 +741,45 @@
         { "lat": 43.7833, "lng": 11.8667 },
         { "lat": 43.6833, "lng": 10.3 }
       ]
+    },
+    {
+      "slug": "adige-river",
+      "name": "Adige River",
+      "length": 410,
+      "countries": ["Italy"],
+      "source": "Resia Pass, Alps",
+      "mouth": "Adriatic Sea",
+      "imagePath": "/images/rivers/italy/adige-river.jpg",
+      "pathCoordinates": [
+        { "lat": 46.8167, "lng": 10.5167 },
+        { "lat": 45.2167, "lng": 12.2833 }
+      ]
+    },
+    {
+      "slug": "piave-river",
+      "name": "Piave River",
+      "length": 220,
+      "countries": ["Italy"],
+      "source": "Alps (Monte Peralba)",
+      "mouth": "Adriatic Sea",
+      "imagePath": "/images/rivers/italy/piave-river.jpg",
+      "pathCoordinates": [
+        { "lat": 46.5667, "lng": 12.7 },
+        { "lat": 45.6333, "lng": 12.8667 }
+      ]
+    },
+    {
+      "slug": "ticino-river",
+      "name": "Ticino River",
+      "length": 248,
+      "countries": ["Switzerland", "Italy"],
+      "source": "Swiss Alps (St. Gotthard Pass)",
+      "mouth": "Po River",
+      "imagePath": "/images/rivers/italy/ticino-river.jpg",
+      "pathCoordinates": [
+        { "lat": 46.55, "lng": 8.5667 },
+        { "lat": 45.1833, "lng": 9.1167 }
+      ]
     }
   ],
   "institutions": [
@@ -610,6 +818,24 @@
       "globalRank": 201,
       "type": "Public Graduate School",
       "imagePath": "/images/institutions/italy/scuola-normale-superiore.jpg"
+    },
+    {
+      "slug": "politecnico-di-milano",
+      "name": "Politecnico di Milano",
+      "city": "Milan, Lombardy",
+      "founded": 1863,
+      "globalRank": 123,
+      "type": "Public Technical University",
+      "imagePath": "/images/institutions/italy/politecnico-di-milano.jpg"
+    },
+    {
+      "slug": "university-of-padua",
+      "name": "University of Padua",
+      "city": "Padua, Veneto",
+      "founded": 1222,
+      "globalRank": 242,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/italy/university-of-padua.jpg"
     }
   ]
 }
