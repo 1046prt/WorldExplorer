@@ -422,32 +422,36 @@
       "description": "Return to democracy after military dictatorship"
     }
   ],
-  "provinces": [
-    {
-      "name": "Buenos Aires",
-      "capital": "La Plata",
-      "slug": "buenos-aires"
-    },
-    {
-      "name": "Córdoba",
-      "capital": "Córdoba",
-      "slug": "cordoba"
-    },
-    {
-      "name": "Santa Fe",
-      "capital": "Santa Fe",
-      "slug": "santa-fe"
-    },
-    {
-      "name": "Mendoza",
-      "capital": "Mendoza",
-      "slug": "mendoza"
-    },
+  "states": [
+    { "name": "Buenos Aires", "capital": "La Plata", "slug": "buenos-aires" },
+    { "name": "Córdoba", "capital": "Córdoba", "slug": "cordoba" },
+    { "name": "Santa Fe", "capital": "Santa Fe", "slug": "santa-fe" },
+    { "name": "Mendoza", "capital": "Mendoza", "slug": "mendoza" },
     {
       "name": "Tucumán",
       "capital": "San Miguel de Tucumán",
       "slug": "tucuman"
-    }
+    },
+    { "name": "Salta", "capital": "Salta", "slug": "salta" },
+    { "name": "Chaco", "capital": "Resistencia", "slug": "chaco" },
+    { "name": "Misiones", "capital": "Posadas", "slug": "misiones" },
+    { "name": "Formosa", "capital": "Formosa", "slug": "formosa" },
+    { "name": "San Juan", "capital": "San Juan", "slug": "san-juan" },
+    { "name": "Río Negro", "capital": "Viedma", "slug": "rio-negro" },
+    { "name": "Neuquén", "capital": "Neuquén", "slug": "neuquen" },
+    { "name": "La Pampa", "capital": "Santa Rosa", "slug": "la-pampa" },
+    { "name": "Jujuy", "capital": "San Salvador de Jujuy", "slug": "jujuy" },
+    { "name": "Entre Ríos", "capital": "Paraná", "slug": "entre-rios" },
+    { "name": "Chubut", "capital": "Rawson", "slug": "chubut" },
+    { "name": "Corrientes", "capital": "Corrientes", "slug": "corrientes" },
+    { "name": "Santa Cruz", "capital": "Río Gallegos", "slug": "santa-cruz" },
+    {
+      "name": "Tierra del Fuego",
+      "capital": "Ushuaia",
+      "slug": "tierra-del-fuego"
+    },
+    { "name": "La Rioja", "capital": "La Rioja", "slug": "la-rioja" },
+    { "name": "San Luis", "capital": "San Luis", "slug": "san-luis" }
   ],
   "famousCities": [
     {
@@ -479,6 +483,36 @@
       "whyFamous": "Colonial architecture, gateway to northwest, indigenous culture",
       "slug": "salta",
       "image": "/images/cities/argentina/salta.jpg"
+    },
+    {
+      "name": "Rosario",
+      "whyFamous": "Birthplace of the Argentine flag, important port city",
+      "slug": "rosario",
+      "image": "/images/cities/argentina/rosario.jpg"
+    },
+    {
+      "name": "Ushuaia",
+      "whyFamous": "Southernmost city in the world, gateway to Antarctica",
+      "slug": "ushuaia",
+      "image": "/images/cities/argentina/ushuaia.jpg"
+    },
+    {
+      "name": "La Plata",
+      "whyFamous": "Planned city, capital of Buenos Aires province, cultural institutions",
+      "slug": "la-plata",
+      "image": "/images/cities/argentina/la-plata.jpg"
+    },
+    {
+      "name": "Mar del Plata",
+      "whyFamous": "Major beach resort city on the Atlantic coast",
+      "slug": "mar-del-plata",
+      "image": "/images/cities/argentina/mar-del-plata.jpg"
+    },
+    {
+      "name": "Puerto Madryn",
+      "whyFamous": "Gateway to wildlife tourism, including penguins and whales",
+      "slug": "puerto-madryn",
+      "image": "/images/cities/argentina/puerto-madryn.jpg"
     }
   ],
   "landmarks": [
@@ -525,6 +559,50 @@
       },
       "whyFamous": "Historic cemetery with elaborate mausoleums, Eva Perón's tomb",
       "imagePath": "/images/landmarks/argentina/recoleta-cemetery.jpg"
+    },
+    {
+      "slug": "obelisk-of-buenos-aires",
+      "name": "Obelisk of Buenos Aires",
+      "city": "Buenos Aires",
+      "coordinates": {
+        "lat": -34.6037,
+        "lng": -58.3816
+      },
+      "whyFamous": "Iconic monument in Plaza de la República",
+      "imagePath": "/images/landmarks/argentina/obelisk.jpg"
+    },
+    {
+      "slug": "casa-rosada",
+      "name": "Casa Rosada",
+      "city": "Buenos Aires",
+      "coordinates": {
+        "lat": -34.6083,
+        "lng": -58.3702
+      },
+      "whyFamous": "Presidential palace, symbol of Argentine politics",
+      "imagePath": "/images/landmarks/argentina/casa-rosada.jpg"
+    },
+    {
+      "slug": "talampaya-national-park",
+      "name": "Talampaya National Park",
+      "city": "La Rioja",
+      "coordinates": {
+        "lat": -29.7875,
+        "lng": -67.8519
+      },
+      "whyFamous": "UNESCO site with red canyons and ancient petroglyphs",
+      "imagePath": "/images/landmarks/argentina/talampaya.jpg"
+    },
+    {
+      "slug": "que-brada-de-humahuaca",
+      "name": "Quebrada de Humahuaca",
+      "city": "Jujuy",
+      "coordinates": {
+        "lat": -23.2,
+        "lng": -65.35
+      },
+      "whyFamous": "Colorful mountain valley with indigenous heritage",
+      "imagePath": "/images/landmarks/argentina/quebrada-humahuaca.jpg"
     }
   ],
   "rivers": [
@@ -566,6 +644,97 @@
         { "lat": -37.0, "lng": -70.0 },
         { "lat": -39.5833, "lng": -62.25 }
       ]
+    },
+    {
+      "slug": "negro-river-argentina",
+      "name": "Río Negro",
+      "length": 635,
+      "countries": ["Argentina"],
+      "source": "Confluence of Limay and Neuquén Rivers",
+      "mouth": "Atlantic Ocean",
+      "imagePath": "/images/rivers/argentina/negro-river.jpg",
+      "pathCoordinates": [
+        { "lat": -38.95, "lng": -68.0667 },
+        { "lat": -41.0333, "lng": -62.8167 }
+      ]
+    },
+    {
+      "slug": "salado-river",
+      "name": "Salado River",
+      "length": 1500,
+      "countries": ["Argentina"],
+      "source": "Santa Fe Province",
+      "mouth": "Paraná River",
+      "imagePath": "/images/rivers/argentina/salado-river.jpg",
+      "pathCoordinates": [
+        { "lat": -28.0, "lng": -61.0 },
+        { "lat": -31.6, "lng": -60.7 }
+      ]
+    },
+    {
+      "slug": "pilcomayo-river",
+      "name": "Pilcomayo River",
+      "length": 1100,
+      "countries": ["Argentina", "Bolivia", "Paraguay"],
+      "source": "Bolivian Andes",
+      "mouth": "Paraguay River",
+      "imagePath": "/images/rivers/argentina/pilcomayo-river.jpg",
+      "pathCoordinates": [
+        { "lat": -22.0, "lng": -66.0 },
+        { "lat": -25.3, "lng": -57.6 }
+      ]
+    },
+    {
+      "slug": "bermejo-river",
+      "name": "Bermejo River",
+      "length": 1060,
+      "countries": ["Argentina", "Bolivia"],
+      "source": "Bolivian Andes",
+      "mouth": "Paraguay River",
+      "imagePath": "/images/rivers/argentina/bermejo-river.jpg",
+      "pathCoordinates": [
+        { "lat": -22.1, "lng": -64.6 },
+        { "lat": -26.0, "lng": -58.0 }
+      ]
+    },
+    {
+      "slug": "deseado-river",
+      "name": "Deseado River",
+      "length": 615,
+      "countries": ["Argentina"],
+      "source": "Lake Buenos Aires",
+      "mouth": "Atlantic Ocean",
+      "imagePath": "/images/rivers/argentina/deseado-river.jpg",
+      "pathCoordinates": [
+        { "lat": -47.6, "lng": -71.6 },
+        { "lat": -47.75, "lng": -65.9 }
+      ]
+    },
+    {
+      "slug": "chubut-river",
+      "name": "Chubut River",
+      "length": 810,
+      "countries": ["Argentina"],
+      "source": "Andes Mountains",
+      "mouth": "Atlantic Ocean",
+      "imagePath": "/images/rivers/argentina/chubut-river.jpg",
+      "pathCoordinates": [
+        { "lat": -43.3, "lng": -71.4 },
+        { "lat": -43.45, "lng": -65.0 }
+      ]
+    },
+    {
+      "slug": "gallegos-river",
+      "name": "Gallegos River",
+      "length": 190,
+      "countries": ["Argentina"],
+      "source": "Confluence of Rubens and Penitente Rivers",
+      "mouth": "Atlantic Ocean",
+      "imagePath": "/images/rivers/argentina/gallegos-river.jpg",
+      "pathCoordinates": [
+        { "lat": -51.6, "lng": -72.3 },
+        { "lat": -51.6333, "lng": -69.2167 }
+      ]
     }
   ],
   "institutions": [
@@ -604,6 +773,51 @@
       "globalRank": 400,
       "type": "Private Research University",
       "imagePath": "/images/institutions/argentina/austral-university.jpg"
+    },
+    {
+      "slug": "torcuato-di-tella-university",
+      "name": "Torcuato di Tella University",
+      "city": "Buenos Aires",
+      "founded": 1991,
+      "globalRank": 601,
+      "type": "Private University",
+      "imagePath": "/images/institutions/argentina/torcuato-di-tella-university.jpg"
+    },
+    {
+      "slug": "national-university-of-rosario",
+      "name": "National University of Rosario",
+      "city": "Rosario, Santa Fe",
+      "founded": 1968,
+      "globalRank": 701,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/argentina/national-university-of-rosario.jpg"
+    },
+    {
+      "slug": "cema-university",
+      "name": "University of CEMA",
+      "city": "Buenos Aires",
+      "founded": 1978,
+      "globalRank": 801,
+      "type": "Private University (Economics & Business Focus)",
+      "imagePath": "/images/institutions/argentina/cema-university.jpg"
+    },
+    {
+      "slug": "national-university-of-san-martin",
+      "name": "National University of San Martín",
+      "city": "Buenos Aires Province",
+      "founded": 1992,
+      "globalRank": 751,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/argentina/national-university-of-san-martin.jpg"
+    },
+    {
+      "slug": "catholic-university-of-argentina",
+      "name": "Pontifical Catholic University of Argentina (UCA)",
+      "city": "Buenos Aires",
+      "founded": 1958,
+      "globalRank": 801,
+      "type": "Private Catholic University",
+      "imagePath": "/images/institutions/argentina/catholic-university-of-argentina.jpg"
     }
   ]
 }
