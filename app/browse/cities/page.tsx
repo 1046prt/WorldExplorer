@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { GlobalNavigation } from "@/components/global-navigation";
 import { BrowseFilters } from "@/components/browse-filters";
@@ -15,196 +15,35 @@ interface City {
   countryCode: string;
   population: string;
   region: string;
-
   description: string;
 }
 
-const cities: City[] = [
-  {
-    id: "tokyo",
-    name: "Tokyo",
-    country: "Japan",
-    countryCode: "JP",
-    population: "37.4M",
-    region: "Asia",
-    description: "World's largest metropolitan area",
-  },
-  {
-    id: "delhi",
-    name: "Delhi",
-    country: "India",
-    countryCode: "IN",
-    population: "32.9M",
-    region: "Asia",
-    description: "Historic capital of India",
-  },
-  {
-    id: "shanghai",
-    name: "Shanghai",
-    country: "China",
-    countryCode: "CN",
-    population: "28.5M",
-    region: "Asia",
-    description: "China's financial hub",
-  },
-  {
-    id: "dhaka",
-    name: "Dhaka",
-    country: "Bangladesh",
-    countryCode: "BD",
-    population: "22.5M",
-    region: "Asia",
-    description: "Capital of Bangladesh",
-  },
-  {
-    id: "sao-paulo",
-    name: "São Paulo",
-    country: "Brazil",
-    countryCode: "BR",
-    population: "22.4M",
-    region: "South America",
-    description: "Brazil's economic powerhouse",
-  },
-  {
-    id: "cairo",
-    name: "Cairo",
-    country: "Egypt",
-    countryCode: "EG",
-    population: "21.3M",
-    region: "Africa",
-    description: "City of a thousand minarets",
-  },
-  {
-    id: "mexico-city",
-    name: "Mexico City",
-    country: "Mexico",
-    countryCode: "MX",
-    population: "21.9M",
-    region: "North America",
-    description: "Historic Aztec capital",
-  },
-  {
-    id: "beijing",
-    name: "Beijing",
-    country: "China",
-    countryCode: "CN",
-    population: "21.5M",
-    region: "Asia",
-    description: "China's political center",
-  },
-  {
-    id: "mumbai",
-    name: "Mumbai",
-    country: "India",
-    countryCode: "IN",
-    population: "20.4M",
-    region: "Asia",
-    description: "Bollywood capital",
-  },
-  {
-    id: "osaka",
-    name: "Osaka",
-    country: "Japan",
-    countryCode: "JP",
-    population: "18.9M",
-    region: "Asia",
-    description: "Japan's kitchen",
-  },
-  {
-    id: "new-york",
-    name: "New York",
-    country: "United States",
-    countryCode: "US",
-    population: "18.8M",
-    region: "North America",
-    description: "The Big Apple",
-  },
-  {
-    id: "karachi",
-    name: "Karachi",
-    country: "Pakistan",
-    countryCode: "PK",
-    population: "16.1M",
-    region: "Asia",
-    description: "Pakistan's largest city",
-  },
-  {
-    id: "chongqing",
-    name: "Chongqing",
-    country: "China",
-    countryCode: "CN",
-    population: "15.9M",
-    region: "Asia",
-    description: "Mountain city",
-  },
-  {
-    id: "istanbul",
-    name: "Istanbul",
-    country: "Turkey",
-    countryCode: "TR",
-    population: "15.5M",
-    region: "Europe",
-    description: "Bridge between continents",
-  },
-  {
-    id: "buenos-aires",
-    name: "Buenos Aires",
-    country: "Argentina",
-    countryCode: "AR",
-    population: "15.2M",
-    region: "South America",
-    description: "Paris of South America",
-  },
-  {
-    id: "kolkata",
-    name: "Kolkata",
-    country: "India",
-    countryCode: "IN",
-    population: "14.9M",
-    region: "Asia",
-    description: "Cultural capital of India",
-  },
-  {
-    id: "lagos",
-    name: "Lagos",
-    country: "Nigeria",
-    countryCode: "NG",
-    population: "14.8M",
-    region: "Africa",
-    description: "Nigeria's commercial hub",
-  },
-  {
-    id: "kinshasa",
-    name: "Kinshasa",
-    country: "DR Congo",
-    countryCode: "CD",
-    population: "14.3M",
-    region: "Africa",
-    description: "Heart of Africa",
-  },
-  {
-    id: "manila",
-    name: "Manila",
-    country: "Philippines",
-    countryCode: "PH",
-    population: "13.9M",
-    region: "Asia",
-    description: "Pearl of the Orient",
-  },
-  {
-    id: "rio-de-janeiro",
-    name: "Rio de Janeiro",
-    country: "Brazil",
-    countryCode: "BR",
-    population: "13.3M",
-    region: "South America",
-    description: "Marvelous city",
-  },
-];
-
 export default function CitiesPage() {
+  const [cities, setCities] = useState<City[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedRegion, setSelectedRegion] = useState("All");
+
+  useEffect(() => {
+    const fetchCities = async () => {
+      try {
+        const response = await fetch("/data/browse/cities.json");
+        if (!response.ok) {
+          throw new Error("Failed to fetch cities data");
+        }
+        const data = await response.json();
+        setCities(data);
+        setLoading(false);
+      } catch (err) {
+        setError("Failed to load cities data");
+        setLoading(false);
+        console.error(err);
+      }
+    };
+
+    fetchCities();
+  }, []);
 
   const regions = [
     "All",
@@ -224,6 +63,78 @@ export default function CitiesPage() {
       selectedRegion === "All" || city.region === selectedRegion;
     return matchesSearch && matchesRegion;
   });
+
+  if (loading) {
+    return (
+      <div className="page-wrapper page-background">
+        <GlobalNavigation
+          showBackButton={true}
+          backHref="/"
+          currentPage="cities"
+        />
+        <div className="page-content">
+          <main className="main">
+            <div className="sections-container">
+              <section className="section">
+                <div className="page-header">
+                  <h1 className="page-title">
+                    <Building2 className="page-title-icon" />
+                    Major Cities of the World
+                  </h1>
+                  <p className="page-description">
+                    Discover the world&apos;s most populous and influential
+                    cities
+                  </p>
+                </div>
+              </section>
+              <section className="section">
+                <div className="loading-state">
+                  <p>Loading cities data...</p>
+                </div>
+              </section>
+            </div>
+          </main>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="page-wrapper page-background">
+        <GlobalNavigation
+          showBackButton={true}
+          backHref="/"
+          currentPage="cities"
+        />
+        <div className="page-content">
+          <main className="main">
+            <div className="sections-container">
+              <section className="section">
+                <div className="page-header">
+                  <h1 className="page-title">
+                    <Building2 className="page-title-icon" />
+                    Major Cities of the World
+                  </h1>
+                  <p className="page-description">
+                    Discover the world&apos;s most populous and influential
+                    cities
+                  </p>
+                </div>
+              </section>
+              <section className="section">
+                <div className="error-state">
+                  <p>{error}</p>
+                </div>
+              </section>
+            </div>
+          </main>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
 
   return (
     <div className="page-wrapper page-background">

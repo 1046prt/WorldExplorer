@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Globe, Users, MapPin } from "lucide-react";
 import { GlobalNavigation } from "@/components/global-navigation";
@@ -18,129 +18,6 @@ interface Country {
   population: number;
   region: string;
 }
-
-const availableCountries: Country[] = [
-  {
-    iso2: "US",
-    iso3: "USA",
-    name: "United States",
-    capital: "Washington, D.C.",
-    population: 331900000,
-    region: "North America",
-  },
-  {
-    iso2: "FR",
-    iso3: "FRA",
-    name: "France",
-    capital: "Paris",
-    population: 67700000,
-    region: "Europe",
-  },
-  {
-    iso2: "CN",
-    iso3: "CHN",
-    name: "China",
-    capital: "Beijing",
-    population: 1412000000,
-    region: "Asia",
-  },
-  {
-    iso2: "GB",
-    iso3: "GBR",
-    name: "United Kingdom",
-    capital: "London",
-    population: 67330000,
-    region: "Europe",
-  },
-  {
-    iso2: "JP",
-    iso3: "JPN",
-    name: "Japan",
-    capital: "Tokyo",
-    population: 125800000,
-    region: "Asia",
-  },
-  {
-    iso2: "CA",
-    iso3: "CAN",
-    name: "Canada",
-    capital: "Ottawa",
-    population: 38200000,
-    region: "North America",
-  },
-  {
-    iso2: "DE",
-    iso3: "DEU",
-    name: "Germany",
-    capital: "Berlin",
-    population: 83200000,
-    region: "Europe",
-  },
-  {
-    iso2: "IT",
-    iso3: "ITA",
-    name: "Italy",
-    capital: "Rome",
-    population: 59100000,
-    region: "Europe",
-  },
-  {
-    iso2: "BR",
-    iso3: "BRA",
-    name: "Brazil",
-    capital: "Brasília",
-    population: 215300000,
-    region: "South America",
-  },
-  {
-    iso2: "IN",
-    iso3: "IND",
-    name: "India",
-    capital: "New Delhi",
-    population: 1380000000,
-    region: "Asia",
-  },
-  {
-    iso2: "AU",
-    iso3: "AUS",
-    name: "Australia",
-    capital: "Canberra",
-    population: 25700000,
-    region: "Oceania",
-  },
-  {
-    iso2: "RU",
-    iso3: "RUS",
-    name: "Russia",
-    capital: "Moscow",
-    population: 146200000,
-    region: "Europe/Asia",
-  },
-  {
-    iso2: "MX",
-    iso3: "MEX",
-    name: "Mexico",
-    capital: "Mexico City",
-    population: 128900000,
-    region: "North America",
-  },
-  {
-    iso2: "ES",
-    iso3: "ESP",
-    name: "Spain",
-    capital: "Madrid",
-    population: 47400000,
-    region: "Europe",
-  },
-  {
-    iso2: "AR",
-    iso3: "ARG",
-    name: "Argentina",
-    capital: "Buenos Aires",
-    population: 45400000,
-    region: "South America",
-  },
-];
 
 function getCountryFlagEmoji(countryCode: string): string {
   const countryFlagEmojiMap: Record<string, string> = {
@@ -175,8 +52,31 @@ function formatPopulation(population: number): string {
 }
 
 export default function CountriesPage() {
+  const [countries, setCountries] = useState<Country[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedRegion, setSelectedRegion] = useState("All");
+
+  useEffect(() => {
+    const fetchCountries = async () => {
+      try {
+        const response = await fetch("/data/browse/countries.json");
+        if (!response.ok) {
+          throw new Error("Failed to fetch countries data");
+        }
+        const data = await response.json();
+        setCountries(data);
+        setLoading(false);
+      } catch (err) {
+        setError("Failed to load countries data");
+        setLoading(false);
+        console.error(err);
+      }
+    };
+
+    fetchCountries();
+  }, []);
 
   const debouncedSearchTerm = useDebounce(searchTerm, 300);
 
@@ -191,7 +91,7 @@ export default function CountriesPage() {
     "Oceania",
   ];
 
-  const filteredCountries = availableCountries.filter((country) => {
+  const filteredCountries = countries.filter((country) => {
     const matchesSearch =
       country.name.toLowerCase().includes(debouncedSearchTerm.toLowerCase()) ||
       country.capital.toLowerCase().includes(debouncedSearchTerm.toLowerCase());
@@ -199,6 +99,78 @@ export default function CountriesPage() {
       selectedRegion === "All" || country.region === selectedRegion;
     return matchesSearch && matchesRegion;
   });
+
+  if (loading) {
+    return (
+      <div className="page-wrapper page-background">
+        <GlobalNavigation
+          showBackButton={true}
+          backHref="/"
+          currentPage="countries"
+        />
+        <div className="page-content">
+          <main className="main">
+            <div className="sections-container">
+              <section className="section">
+                <div className="page-header">
+                  <h1 className="page-title">
+                    <Globe className="page-title-icon" />
+                    Countries of the World
+                  </h1>
+                  <p className="page-description">
+                    Explore detailed information about countries around the
+                    globe
+                  </p>
+                </div>
+              </section>
+              <section className="section">
+                <div className="loading-state">
+                  <p>Loading countries data...</p>
+                </div>
+              </section>
+            </div>
+          </main>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="page-wrapper page-background">
+        <GlobalNavigation
+          showBackButton={true}
+          backHref="/"
+          currentPage="countries"
+        />
+        <div className="page-content">
+          <main className="main">
+            <div className="sections-container">
+              <section className="section">
+                <div className="page-header">
+                  <h1 className="page-title">
+                    <Globe className="page-title-icon" />
+                    Countries of the World
+                  </h1>
+                  <p className="page-description">
+                    Explore detailed information about countries around the
+                    globe
+                  </p>
+                </div>
+              </section>
+              <section className="section">
+                <div className="error-state">
+                  <p>{error}</p>
+                </div>
+              </section>
+            </div>
+          </main>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
 
   return (
     <div className="page-wrapper page-background">
