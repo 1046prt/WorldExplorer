@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import { GlobalNavigation } from "@/components/global-navigation";
-import { StatsOverview } from "@/components/stats-overview";
 import { QuickNavigation } from "@/components/quick-navigation";
 import { QuizSystem } from "@/components/quiz-system";
 import { CurrencyConverter } from "@/components/currency-converter";
@@ -52,8 +51,6 @@ export default function HomePage() {
                 and more
               </p>
             </div>
-
-            <StatsOverview />
 
             <div className="sections-container">
               <section className="section">
