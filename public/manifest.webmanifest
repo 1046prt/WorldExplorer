@@ -42,7 +42,7 @@
       "src": "/images/logo/WORLD.svg",
       "sizes": "1280x720",
       "type": "image/svg+xml",
-      "platform": "wide",
+      "platform": "web",
       "label": "WorldExplorer Homepage"
     }
   ],
