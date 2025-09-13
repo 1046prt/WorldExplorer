@@ -187,6 +187,12 @@ button:hover {
   text-decoration: none;
 }
 
+/* Remove focus styles that might cause unwanted highlights on the brand link */
+.header-brand-link:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 a:visited {
   color: inherit;
 }
@@ -236,6 +242,12 @@ body {
 
 *:focus:not(:focus-visible) {
   outline: none;
+}
+
+/* Specifically target the header brand link to prevent focus highlights */
+.header-brand-link:focus:not(:focus-visible) {
+  outline: none;
+  box-shadow: none;
 }
 
 ::selection {

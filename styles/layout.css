@@ -140,20 +140,11 @@
   gap: var(--spacing-md);
   text-decoration: none;
   color: inherit;
-  transition: opacity var(--transition-fast);
 }
 
 .header-brand-link:visited,
 .header-brand-link:active {
   color: inherit;
-}
-
-.header-brand-link:hover {
-  opacity: 0.8;
-}
-
-.header-brand-link:hover .header-title {
-  color: var(--color-primary);
 }
 
 .header-logo {
@@ -169,11 +160,6 @@
   width: 8rem;
   height: 8rem;
   object-fit: contain;
-  transition: transform var(--transition-fast);
-}
-
-.header-brand-link:hover .header-logo-image {
-  transform: scale(1.05);
 }
 
 .header-brand-text {
@@ -277,6 +263,7 @@
     min-width: 0;
     align-items: center;
     display: flex;
+    /* No hover effects to prevent unwanted highlights */
   }
 
   .header-logo {
@@ -330,6 +317,7 @@
     min-width: 0;
     align-items: center;
     flex: 1;
+    /* No hover effects to prevent unwanted highlights */
   }
 
   .header-right {
