@@ -31,7 +31,7 @@ export function QuickNavigation() {
     {
       icon: <MapPin className="w-5 h-5" />,
       label: "Landmarks",
-      count: "100+",
+      count: "80+",
       href: "/browse/landmarks",
       color: "text-red-600",
     },
