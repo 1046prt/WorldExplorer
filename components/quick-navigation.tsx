@@ -52,7 +52,7 @@ export function QuickNavigation() {
     {
       icon: <Waves className="w-5 h-5" />,
       label: "Rivers",
-      count: "150+",
+      count: "60+",
       href: "/browse/rivers",
       color: "text-cyan-600",
     },

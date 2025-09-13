@@ -110,8 +110,8 @@
 
 .river-country-link {
   font-size: var(--font-size-xs);
-  color: #0891b2;
-  background-color: #ecfeff;
+  color: var(--color-primary-foreground);
+  background-color: var(--color-primary);
   padding: var(--spacing-xs) var(--spacing-sm);
   border-radius: var(--radius-sm);
   text-decoration: none;
@@ -120,26 +120,12 @@
 
 .river-country-link:visited,
 .river-country-link:active {
-  color: #0891b2;
+  color: var(--color-primary-foreground);
 }
 
 .river-country-link:hover {
   text-decoration: underline;
   background-color: #cffafe;
-}
-
-[data-theme="dark"] .river-country-link {
-  color: #67e8f9;
-  background-color: rgba(6, 182, 212, 0.1);
-}
-
-[data-theme="dark"] .river-country-link:visited,
-[data-theme="dark"] .river-country-link:active {
-  color: #67e8f9;
-}
-
-[data-theme="dark"] .river-country-link:hover {
-  background-color: rgba(6, 182, 212, 0.2);
 }
 
 @media (max-width: 768px) {
