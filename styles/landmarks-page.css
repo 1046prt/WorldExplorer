@@ -40,15 +40,11 @@
 .landmark-type-badge {
   font-size: var(--font-size-xs);
   padding: var(--spacing-xs) var(--spacing-sm);
-  background-color: #fef2f2;
-  color: #991b1b;
+  background-color: var(--color-primary);
+  color: var(--color-primary-foreground);
   border-radius: var(--radius-full);
-  font-weight: 500;
-}
-
-[data-theme="dark"] .landmark-type-badge {
-  background-color: #7f1d1d;
-  color: #fca5a5;
+  border: 1px solid var(--color-primary);
+  font-weight: 600;
 }
 
 .landmark-name {
@@ -93,7 +89,7 @@
 }
 
 .landmark-link {
-  color: #dc2626;
+  color: var(--color-primary);
   text-decoration: none;
   font-weight: 500;
   font-size: var(--font-size-sm);
@@ -103,24 +99,24 @@
 
 .landmark-link:visited,
 .landmark-link:active {
-  color: #dc2626;
+  color: var(--color-primary);
 }
 
 .landmark-link:hover {
-  color: #b91c1c;
+  color: var(--color-primary);
 }
 
 [data-theme="dark"] .landmark-link {
-  color: #f87171;
+  color: var(--color-primary);
 }
 
 [data-theme="dark"] .landmark-link:visited,
 [data-theme="dark"] .landmark-link:active {
-  color: #f87171;
+  color: var(--color-primary);
 }
 
 [data-theme="dark"] .landmark-link:hover {
-  color: #fca5a5;
+  color: var(--color-primary);
 }
 
 @media (max-width: 768px) {

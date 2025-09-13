@@ -38,7 +38,7 @@ export function QuickNavigation() {
     {
       icon: <Building2 className="w-5 h-5" />,
       label: "Cities",
-      count: "150+",
+      count: "50+",
       href: "/browse/cities",
       color: "text-green-600",
     },

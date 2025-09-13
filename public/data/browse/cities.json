@@ -1,48 +1,30 @@
 [
   {
-    "id": "tokyo",
-    "name": "Tokyo",
-    "country": "Japan",
-    "countryCode": "JP",
-    "population": "37.4M",
-    "region": "Asia",
-    "description": "World's largest metropolitan area"
-  },
-  {
-    "id": "delhi",
-    "name": "Delhi",
-    "country": "India",
-    "countryCode": "IN",
-    "population": "32.9M",
-    "region": "Asia",
-    "description": "Historic capital of India"
-  },
-  {
-    "id": "shanghai",
-    "name": "Shanghai",
+    "id": "beijing",
+    "name": "Beijing",
     "country": "China",
     "countryCode": "CN",
-    "population": "28.5M",
+    "population": "21.5M",
     "region": "Asia",
-    "description": "China's financial hub"
+    "description": "China's political center"
   },
   {
-    "id": "dhaka",
-    "name": "Dhaka",
-    "country": "Bangladesh",
-    "countryCode": "BD",
-    "population": "22.5M",
-    "region": "Asia",
-    "description": "Capital of Bangladesh"
+    "id": "berlin",
+    "name": "Berlin",
+    "country": "Germany",
+    "countryCode": "DE",
+    "population": "3.8M",
+    "region": "Europe",
+    "description": "Germany's capital and creative hub"
   },
   {
-    "id": "sao-paulo",
-    "name": "São Paulo",
-    "country": "Brazil",
-    "countryCode": "BR",
-    "population": "22.4M",
+    "id": "buenos-aires",
+    "name": "Buenos Aires",
+    "country": "Argentina",
+    "countryCode": "AR",
+    "population": "15.2M",
     "region": "South America",
-    "description": "Brazil's economic powerhouse"
+    "description": "Paris of South America"
   },
   {
     "id": "cairo",
@@ -54,58 +36,22 @@
     "description": "City of a thousand minarets"
   },
   {
-    "id": "mexico-city",
-    "name": "Mexico City",
-    "country": "Mexico",
-    "countryCode": "MX",
-    "population": "21.9M",
-    "region": "North America",
-    "description": "Historic Aztec capital"
+    "id": "cape-town",
+    "name": "Cape Town",
+    "country": "South Africa",
+    "countryCode": "ZA",
+    "population": "4.6M",
+    "region": "Africa",
+    "description": "Scenic coastal city"
   },
   {
-    "id": "beijing",
-    "name": "Beijing",
-    "country": "China",
-    "countryCode": "CN",
-    "population": "21.5M",
-    "region": "Asia",
-    "description": "China's political center"
-  },
-  {
-    "id": "mumbai",
-    "name": "Mumbai",
+    "id": "chennai",
+    "name": "Chennai",
     "country": "India",
     "countryCode": "IN",
-    "population": "20.4M",
+    "population": "11.5M",
     "region": "Asia",
-    "description": "Bollywood capital"
-  },
-  {
-    "id": "osaka",
-    "name": "Osaka",
-    "country": "Japan",
-    "countryCode": "JP",
-    "population": "18.9M",
-    "region": "Asia",
-    "description": "Japan's kitchen"
-  },
-  {
-    "id": "new-york",
-    "name": "New York",
-    "country": "United States",
-    "countryCode": "US",
-    "population": "18.8M",
-    "region": "North America",
-    "description": "The Big Apple"
-  },
-  {
-    "id": "karachi",
-    "name": "Karachi",
-    "country": "Pakistan",
-    "countryCode": "PK",
-    "population": "16.1M",
-    "region": "Asia",
-    "description": "Pakistan's largest city"
+    "description": "Gateway to South India"
   },
   {
     "id": "chongqing",
@@ -117,6 +63,51 @@
     "description": "Mountain city"
   },
   {
+    "id": "dhaka",
+    "name": "Dhaka",
+    "country": "Bangladesh",
+    "countryCode": "BD",
+    "population": "22.5M",
+    "region": "Asia",
+    "description": "Capital of Bangladesh"
+  },
+  {
+    "id": "delhi",
+    "name": "Delhi",
+    "country": "India",
+    "countryCode": "IN",
+    "population": "32.9M",
+    "region": "Asia",
+    "description": "Historic capital of India"
+  },
+  {
+    "id": "dubai",
+    "name": "Dubai",
+    "country": "United Arab Emirates",
+    "countryCode": "AE",
+    "population": "3.6M",
+    "region": "Asia",
+    "description": "City of skyscrapers and luxury"
+  },
+  {
+    "id": "havana",
+    "name": "Havana",
+    "country": "Cuba",
+    "countryCode": "CU",
+    "population": "2.1M",
+    "region": "North America",
+    "description": "Cuba's colorful capital"
+  },
+  {
+    "id": "hong-kong",
+    "name": "Hong Kong",
+    "country": "China",
+    "countryCode": "HK",
+    "population": "7.5M",
+    "region": "Asia",
+    "description": "Global financial hub"
+  },
+  {
     "id": "istanbul",
     "name": "Istanbul",
     "country": "Turkey",
@@ -126,13 +117,31 @@
     "description": "Bridge between continents"
   },
   {
-    "id": "buenos-aires",
-    "name": "Buenos Aires",
-    "country": "Argentina",
-    "countryCode": "AR",
-    "population": "15.2M",
-    "region": "South America",
-    "description": "Paris of South America"
+    "id": "jakarta",
+    "name": "Jakarta",
+    "country": "Indonesia",
+    "countryCode": "ID",
+    "population": "10.6M",
+    "region": "Asia",
+    "description": "Capital of Indonesia"
+  },
+  {
+    "id": "karachi",
+    "name": "Karachi",
+    "country": "Pakistan",
+    "countryCode": "PK",
+    "population": "16.1M",
+    "region": "Asia",
+    "description": "Pakistan's largest city"
+  },
+  {
+    "id": "kinshasa",
+    "name": "Kinshasa",
+    "country": "DR Congo",
+    "countryCode": "CD",
+    "population": "14.3M",
+    "region": "Africa",
+    "description": "Heart of Africa"
   },
   {
     "id": "kolkata",
@@ -153,13 +162,31 @@
     "description": "Nigeria's commercial hub"
   },
   {
-    "id": "kinshasa",
-    "name": "Kinshasa",
-    "country": "DR Congo",
-    "countryCode": "CD",
-    "population": "14.3M",
-    "region": "Africa",
-    "description": "Heart of Africa"
+    "id": "lisbon",
+    "name": "Lisbon",
+    "country": "Portugal",
+    "countryCode": "PT",
+    "population": "2.9M",
+    "region": "Europe",
+    "description": "City of seven hills"
+  },
+  {
+    "id": "london",
+    "name": "London",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "population": "10.8M",
+    "region": "Europe",
+    "description": "UK's historic and financial hub"
+  },
+  {
+    "id": "los-angeles",
+    "name": "Los Angeles",
+    "country": "United States",
+    "countryCode": "US",
+    "population": "12.5M",
+    "region": "North America",
+    "description": "Hollywood entertainment capital"
   },
   {
     "id": "manila",
@@ -171,6 +198,78 @@
     "description": "Pearl of the Orient"
   },
   {
+    "id": "mexico-city",
+    "name": "Mexico City",
+    "country": "Mexico",
+    "countryCode": "MX",
+    "population": "21.9M",
+    "region": "North America",
+    "description": "Historic Aztec capital"
+  },
+  {
+    "id": "moscow",
+    "name": "Moscow",
+    "country": "Russia",
+    "countryCode": "RU",
+    "population": "12.6M",
+    "region": "Europe",
+    "description": "Russia's capital and cultural hub"
+  },
+  {
+    "id": "mumbai",
+    "name": "Mumbai",
+    "country": "India",
+    "countryCode": "IN",
+    "population": "20.4M",
+    "region": "Asia",
+    "description": "Bollywood capital"
+  },
+  {
+    "id": "nairobi",
+    "name": "Nairobi",
+    "country": "Kenya",
+    "countryCode": "KE",
+    "population": "4.4M",
+    "region": "Africa",
+    "description": "Safari capital of Africa"
+  },
+  {
+    "id": "new-york",
+    "name": "New York",
+    "country": "United States",
+    "countryCode": "US",
+    "population": "18.8M",
+    "region": "North America",
+    "description": "The Big Apple"
+  },
+  {
+    "id": "osaka",
+    "name": "Osaka",
+    "country": "Japan",
+    "countryCode": "JP",
+    "population": "18.9M",
+    "region": "Asia",
+    "description": "Japan's kitchen"
+  },
+  {
+    "id": "paris",
+    "name": "Paris",
+    "country": "France",
+    "countryCode": "FR",
+    "population": "11.1M",
+    "region": "Europe",
+    "description": "City of Light"
+  },
+  {
+    "id": "riyadh",
+    "name": "Riyadh",
+    "country": "Saudi Arabia",
+    "countryCode": "SA",
+    "population": "7.7M",
+    "region": "Asia",
+    "description": "Modern desert capital"
+  },
+  {
     "id": "rio-de-janeiro",
     "name": "Rio de Janeiro",
     "country": "Brazil",
@@ -178,5 +277,176 @@
     "population": "13.3M",
     "region": "South America",
     "description": "Marvelous city"
+  },
+  {
+    "id": "rome",
+    "name": "Rome",
+    "country": "Italy",
+    "countryCode": "IT",
+    "population": "4.3M",
+    "region": "Europe",
+    "description": "The Eternal City"
+  },
+  {
+    "id": "santiago",
+    "name": "Santiago",
+    "country": "Chile",
+    "countryCode": "CL",
+    "population": "6.9M",
+    "region": "South America",
+    "description": "Chile's modern capital"
+  },
+  {
+    "id": "sao-paulo",
+    "name": "São Paulo",
+    "country": "Brazil",
+    "countryCode": "BR",
+    "population": "22.4M",
+    "region": "South America",
+    "description": "Brazil's economic powerhouse"
+  },
+  {
+    "id": "seoul",
+    "name": "Seoul",
+    "country": "South Korea",
+    "countryCode": "KR",
+    "population": "9.9M",
+    "region": "Asia",
+    "description": "High-tech and K-pop hub"
+  },
+  {
+    "id": "shanghai",
+    "name": "Shanghai",
+    "country": "China",
+    "countryCode": "CN",
+    "population": "28.5M",
+    "region": "Asia",
+    "description": "China's financial hub"
+  },
+  {
+    "id": "sydney",
+    "name": "Sydney",
+    "country": "Australia",
+    "countryCode": "AU",
+    "population": "5.3M",
+    "region": "Oceania",
+    "description": "Harbour city with Opera House"
+  },
+  {
+    "id": "tehran",
+    "name": "Tehran",
+    "country": "Iran",
+    "countryCode": "IR",
+    "population": "9.5M",
+    "region": "Asia",
+    "description": "Capital of Iran"
+  },
+  {
+    "id": "tokyo",
+    "name": "Tokyo",
+    "country": "Japan",
+    "countryCode": "JP",
+    "population": "37.4M",
+    "region": "Asia",
+    "description": "World's largest metropolitan area"
+  },
+  {
+    "id": "toronto",
+    "name": "Toronto",
+    "country": "Canada",
+    "countryCode": "CA",
+    "population": "6.4M",
+    "region": "North America",
+    "description": "Canada's largest city"
+  },
+  {
+    "id": "athens",
+    "name": "Athens",
+    "country": "Greece",
+    "countryCode": "GR",
+    "population": "3.2M",
+    "region": "Europe",
+    "description": "Birthplace of democracy"
+  },
+  {
+    "id": "bangkok",
+    "name": "Bangkok",
+    "country": "Thailand",
+    "countryCode": "TH",
+    "population": "10.7M",
+    "region": "Asia",
+    "description": "Thailand's bustling capital"
+  },
+  {
+    "id": "barcelona",
+    "name": "Barcelona",
+    "country": "Spain",
+    "countryCode": "ES",
+    "population": "5.6M",
+    "region": "Europe",
+    "description": "Famous for Gaudí architecture"
+  },
+  {
+    "id": "boston",
+    "name": "Boston",
+    "country": "United States",
+    "countryCode": "US",
+    "population": "4.9M",
+    "region": "North America",
+    "description": "Historic US city and academic hub"
+  },
+  {
+    "id": "brussels",
+    "name": "Brussels",
+    "country": "Belgium",
+    "countryCode": "BE",
+    "population": "2.1M",
+    "region": "Europe",
+    "description": "EU capital city"
+  },
+  {
+    "id": "casablanca",
+    "name": "Casablanca",
+    "country": "Morocco",
+    "countryCode": "MA",
+    "population": "3.8M",
+    "region": "Africa",
+    "description": "Morocco's economic hub"
+  },
+  {
+    "id": "doha",
+    "name": "Doha",
+    "country": "Qatar",
+    "countryCode": "QA",
+    "population": "2.4M",
+    "region": "Asia",
+    "description": "Modern Gulf capital"
+  },
+  {
+    "id": "geneva",
+    "name": "Geneva",
+    "country": "Switzerland",
+    "countryCode": "CH",
+    "population": "1.4M",
+    "region": "Europe",
+    "description": "Global diplomacy center"
+  },
+  {
+    "id": "jerusalem",
+    "name": "Jerusalem",
+    "country": "Israel",
+    "countryCode": "IL",
+    "population": "0.9M",
+    "region": "Asia",
+    "description": "Holy city for three religions"
+  },
+  {
+    "id": "melbourne",
+    "name": "Melbourne",
+    "country": "Australia",
+    "countryCode": "AU",
+    "population": "5.2M",
+    "region": "Oceania",
+    "description": "Cultural capital of Australia"
   }
 ]

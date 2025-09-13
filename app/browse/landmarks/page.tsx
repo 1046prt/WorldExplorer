@@ -229,7 +229,7 @@ export default function LandmarksPage() {
                       href={`/country/${landmark.countryCode.toLowerCase()}`}
                       className="landmark-link"
                     >
-                      View Country →
+                      Visit Country
                     </Link>
                   </div>
                 ))}
