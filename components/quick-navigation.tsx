@@ -45,7 +45,7 @@ export function QuickNavigation() {
     {
       icon: <GraduationCap className="w-5 h-5" />,
       label: "Universities",
-      count: "100+",
+      count: "50+",
       href: "/browse/universities",
       color: "text-purple-600",
     },

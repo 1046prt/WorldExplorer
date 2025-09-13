@@ -219,7 +219,7 @@ export default function UniversitiesPage() {
                       href={`/country/${university.countryCode.toLowerCase()}`}
                       className="university-link"
                     >
-                      View Country →
+                      View Country
                     </Link>
                   </div>
                 ))}
