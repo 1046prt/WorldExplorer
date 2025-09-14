@@ -22,7 +22,7 @@ const defaultImage = `${baseUrl}/images/logo/WORLD.svg`;
 export function generateSEOMetadata({
   title,
   description,
-  keywords = "world explorer, countries, geography, education, travel, culture, landmarks, cities, history, interactive learning",
+  keywords = "world explorer, countries, geography, education, travel, culture, landmarks, cities, history, interactive learning, global knowledge, educational platform",
   image = defaultImage,
   canonical,
   type = "website",

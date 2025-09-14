@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.0] - 2025-09-14
+
+### 📚 Documentation Improvements
+
+- **README Enhancement**: Comprehensive update to project documentation with detailed feature descriptions
+- **Component Documentation**: Added detailed explanations of all interactive components
+- **Tech Stack Clarification**: Improved description of technologies and frameworks used
+- **Getting Started Guide**: Enhanced installation and setup instructions
+- **Feature Showcase**: Better organization and presentation of key features
+
+### 🎨 UI/UX Improvements
+
+- **Nature Explorer**: Enhanced component with improved category navigation
+- **Culture & Lifestyle Explorer**: Expanded cultural data for more countries
+- **Language Explorer**: Improved script preview functionality
+- **Environment Dashboard**: Added more environmental metrics and insights
+- **Global Rankings**: Expanded ranking categories with more data points
+
+### 🛠️ Technical Improvements
+
+- **SEO Optimization**: Enhanced metadata and structured data implementation
+- **Performance**: Improved data loading and caching strategies
+- **Accessibility**: Better ARIA labels and keyboard navigation support
+- **Responsive Design**: Enhanced mobile and tablet layouts
+
+---
+
 ## [1.1.0] - 2025-08-31
 
 ### 🎉 Major Release with 155+ Commits
@@ -64,7 +91,7 @@ This release includes significant improvements and new features across the entir
 - Improved error handling for missing assets
 - Enhanced responsive design across components
 
-### 🎨 UI/UX Improvements
+### 🎨UI/UX Improvements
 
 - Enhanced image display with modal functionality
 - Improved country flag and image CSS styling
