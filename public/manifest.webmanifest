@@ -1,11 +1,11 @@
 {
   "name": "WorldExplorer - Discover the World's Knowledge",
   "short_name": "WorldExplorer",
-  "description": "Interactive platform for exploring countries, cultures, landmarks, and educational content worldwide",
+  "description": "Interactive platform for exploring countries, cultures, landmarks, and educational content worldwide. Learn geography, history, and cultures through engaging tools and comprehensive data.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#ffffff",
+  "theme_color": "#3B82F6",
   "orientation": "portrait-primary",
   "scope": "/",
   "lang": "en",
@@ -42,7 +42,7 @@
       "src": "/images/logo/WORLD.svg",
       "sizes": "1280x720",
       "type": "image/svg+xml",
-      "platform": "wide",
+      "platform": "web",
       "label": "WorldExplorer Homepage"
     }
   ],
@@ -76,6 +76,18 @@
       "short_name": "Quiz",
       "description": "Test your knowledge",
       "url": "/#quiz",
+      "icons": [
+        {
+          "src": "/images/logo/WORLD.svg",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Nature Explorer",
+      "short_name": "Nature",
+      "description": "Discover natural wonders",
+      "url": "/#nature",
       "icons": [
         {
           "src": "/images/logo/WORLD.svg",

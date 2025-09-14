@@ -23,19 +23,20 @@ A comprehensive educational platform for exploring countries, cultures, and land
 
 ### 🎮 Interactive Features
 
-- **Quiz System**: Educational quizzes about countries and cultures
+- **Quiz System**: Educational quizzes about countries and cultures with timed challenges
 - **Interactive Games**: Engaging learning activities and challenges
 - **Random Facts**: Discover interesting facts about different countries
-- **Historical Timeline**: Explore historical events and periods
+- **Historical Timeline**: Explore historical events and periods with interactive map slider
 - **Nature Explorer**: Discover wildlife, national parks, and natural wonders
+- **Culture & Lifestyle Explorer**: Deep dive into social norms, cuisine, festivals, and values of different cultures
 
 ### 🌟 Advanced Tools
 
-- **Currency Converter**: Real-time currency exchange rates
+- **Currency Converter**: Real-time currency exchange rates with visual currency representations
 - **Weather Widget**: Current weather information for different locations
-- **Language Explorer**: Learn about different languages and their origins
-- **Environment Dashboard**: Climate data and environmental statistics
-- **Global Rankings**: Compare countries by various metrics
+- **Language Explorer**: Learn about different languages, phrases, and writing systems
+- **Environment Dashboard**: Climate data and environmental statistics with global rankings
+- **Global Rankings**: Compare countries by various metrics including tallest buildings, population, and more
 
 ### 🎨 User Experience
 
@@ -43,6 +44,7 @@ A comprehensive educational platform for exploring countries, cultures, and land
 - **Responsive Design**: Optimized for desktop, tablet, and mobile devices
 - **Smooth Animations**: Engaging transitions and interactive elements
 - **Accessibility**: Built with accessibility best practices
+- **Progressive Web App**: Installable on devices with offline capabilities
 
 ---
 
@@ -175,15 +177,69 @@ Comprehensive country information including population, currency, languages, tim
 
 ### Interactive Games & Quizzes
 
-Educational tools to make learning about geography and cultures engaging and fun.
+Educational tools to make learning about geography and cultures engaging and fun:
+
+- **Quiz System**: Timed geography quizzes with multiple question types (flags, capitals, landmarks)
+- **Score Tracking**: Performance metrics with completion badges
+- **Pause/Resume**: Control quiz timing with pause functionality
 
 ### Currency Converter
 
-Real-time currency conversion with visual currency representations.
+Real-time currency conversion with visual currency representations and swap functionality.
 
 ### Theme System
 
 Dark and light theme support with smooth transitions and user preference persistence.
+
+### Nature Explorer
+
+Explore natural wonders, volcanoes, migrations, rivers, climate zones, and ecosystems with:
+
+- Category-based filtering
+- Search functionality
+- Map integration for locations
+- Detailed information cards
+
+### Culture & Lifestyle Explorer
+
+Deep dive into cultural aspects of countries including:
+
+- Social norms and etiquette
+- Music and literature
+- Cuisine and ingredients
+- Festivals and celebrations
+- Architecture and landmarks
+- Core values and concepts
+
+### Language Explorer
+
+Learn about languages from around the world:
+
+- Common phrases with translations
+- Writing systems and scripts
+- Interactive previews of scripts
+- Country-specific language information
+
+### Environment Dashboard
+
+View environmental metrics and sustainability indicators:
+
+- Carbon emissions data
+- Renewable energy statistics
+- Forest coverage information
+- Water quality metrics
+- Waste management data
+- Climate change indicators
+
+### Global Rankings
+
+Compare countries across various metrics:
+
+- Tallest buildings
+- Largest populations
+- Highest GDP
+- Most spoken languages
+- And many more categories
 
 ---
 
@@ -208,9 +264,17 @@ Dark and light theme support with smooth transitions and user preference persist
 ### Interactive Elements
 
 - **Clickable Maps**: Interactive world map with country selection
-- **Image Galleries**: High-quality photos of landmarks and culture
+- **Image Galleries**: High-quality photos of landmarks and culture with modal viewing
 - **Data Visualizations**: Charts and graphs for statistics
 - **Modal Dialogs**: Detailed information in overlay windows
+- **Timed Quizzes**: Interactive educational challenges
+
+### Educational Tools
+
+- **Quiz System**: Test knowledge with geography questions
+- **Random Facts**: Discover interesting tidbits about countries
+- **Historical Timeline**: Explore how the world has changed over time
+- **Comparative Data**: Rank countries by various metrics
 
 ---
 
@@ -227,6 +291,10 @@ Built with Radix UI components for accessibility and customization. Components a
 ### TypeScript Configuration
 
 Strict TypeScript configuration for type safety and better development experience.
+
+### Progressive Web App
+
+The application is configured as a PWA with a web manifest for installation on devices.
 
 ---
 
@@ -258,11 +326,11 @@ Please use the [GitHub Issues](https://github.com/1046prt/WorldExplorer/issues) 
 
 ## 📄 License
 
-This project is licensed under the MIT License,see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License, see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 👨‍💻Credit and Author
+## 👨‍💻 Credit and Author
 
 ### 🎨 Logo Design
 
@@ -271,5 +339,3 @@ This project is licensed under the MIT License,see the [LICENSE](LICENSE) file f
 ### ✍️ Author
 
 > **[Prakash Raj](https://github.com/1046prt)**
-
----
