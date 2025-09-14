@@ -70,7 +70,6 @@
     rgba(255, 255, 255, 0.1),
     transparent
   );
-  transition: left var(--transition-normal);
 }
 
 .navigation-category-button:visited,
@@ -79,7 +78,6 @@
 }
 
 .navigation-category-button:hover {
-  transform: translateY(-4px) scale(1.02);
   box-shadow: var(--shadow-lg);
   background: var(--color-card);
   border-color: var(--color-primary-light);
@@ -90,7 +88,6 @@
 }
 
 .navigation-category-button:hover .navigation-category-icon {
-  transform: scale(1.1);
   color: var(--color-primary);
 }
 
@@ -188,11 +185,11 @@
 
   .navigation-categories {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: var(--spacing-xs);
+    gap: var(--spacing-sm);
   }
 
   .navigation-category-button {
-    padding: var(--spacing-sm);
+    padding: var(--spacing-md);
   }
 
   .navigation-category-icon {
@@ -226,7 +223,7 @@
 
   .navigation-categories {
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-xs);
+    gap: var(--spacing-sm);
   }
 
   .navigation-category-icon {

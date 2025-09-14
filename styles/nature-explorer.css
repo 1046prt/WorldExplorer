@@ -275,7 +275,7 @@
   }
 
   .nature-card {
-    padding: var(--spacing-sm);
+    padding: var(--spacing-md);
   }
 
   .nature-card-title {
