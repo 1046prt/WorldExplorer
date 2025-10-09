@@ -19,7 +19,7 @@
       {
         "language": "Portuguese",
         "country": "Brazil",
-        "phrase": "Olá, como você está?",
+        "phrase": "Olá, como vai?",
         "translation": "Hello, how are you?",
         "flag": "🇧🇷"
       },
@@ -47,7 +47,7 @@
       {
         "language": "French",
         "country": "France",
-        "phrase": "Bonjour, comment allez-vous?",
+        "phrase": "Bonjour comment allez-vous?",
         "translation": "Hello, how are you?",
         "flag": "🇫🇷"
       },
@@ -75,7 +75,7 @@
       {
         "language": "Japanese",
         "country": "Japan",
-        "phrase": "こんにちは、元気ですか？",
+        "phrase": "こんにちは お元気ですか？",
         "translation": "Hello, how are you?",
         "flag": "🇯🇵"
       },
@@ -106,35 +106,35 @@
         "image": "/images/writting/arabic.png"
       },
       {
-        "name": "Latin",
+        "name": "English",
         "example": "Hello World",
         "countries": "Australia, Brazil, Canada, Germany, Spain, France, UK, Italy, US",
         "type": "Alphabet",
-        "image": "/images/writting/latin.png"
+        "image": "/images/writting/english.png"
       },
       {
-        "name": "Devanagari",
-        "example": "नमस्ते संसार",
+        "name": "Maithili",
+        "example": "नमस्कार दुनिया",
         "countries": "India, Nepal",
         "type": "Abugida",
-        "image": "/images/writting/devanagari.png"
+        "image": "/images/writting/maithili.png"
       },
       {
-        "name": "Kanji & Kana",
+        "name": "Japanese",
         "example": "こんにちは世界",
         "countries": "Japan",
         "type": "Syllabary + Logographic",
         "image": "/images/writting/japanese.png"
       },
       {
-        "name": "Cyrillic",
-        "example": "Привет мир",
+        "name": "Russian",
+        "example": "Привет, мир!",
         "countries": "Russia, Eastern Europe",
         "type": "Alphabet",
         "image": "/images/writting/russian.png"
       },
       {
-        "name": "Chinese Characters",
+        "name": "Chinese",
         "example": "你好世界",
         "countries": "China, Taiwan, Singapore",
         "type": "Logographic",
