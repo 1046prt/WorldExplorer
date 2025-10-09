@@ -22,7 +22,7 @@ const defaultImage = `${baseUrl}/images/logo/WORLD.svg`;
 export function generateSEOMetadata({
   title,
   description,
-  keywords = "world explorer, countries, geography, education, travel, culture, landmarks, cities, history, interactive learning, global knowledge, educational platform",
+  keywords = "world explorer, countries, geography, education, travel, culture, landmarks, cities, history, interactive learning, global knowledge, educational platform, prakash raj,1046prt,prakash raj info,nextjs,framework,seo,front end template, template,open source",
   image = defaultImage,
   canonical,
   type = "website",
