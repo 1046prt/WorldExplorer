@@ -1,0 +1,10 @@
+{
+  "env": {
+    "NEXT_PUBLIC_EXCHANGE_RATE_API_KEY": "@next_public_exchange_rate_api_key"
+  },
+  "build": {
+    "env": {
+      "NEXT_PUBLIC_EXCHANGE_RATE_API_KEY": "@next_public_exchange_rate_api_key"
+    }
+  }
+}

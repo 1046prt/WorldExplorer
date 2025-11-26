@@ -134,7 +134,7 @@ export async function generateMetadata({ params }: CountryPageProps) {
       .map((l) => l.name)
       .join(", ") || "various landmarks";
   const cities =
-    country.cities
+    country.famousCities
       ?.slice(0, 3)
       .map((c) => c.name)
       .join(", ") || "major cities";
