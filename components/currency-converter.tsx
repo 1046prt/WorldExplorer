@@ -17,14 +17,12 @@ interface CurrencyData {
 
 interface ExchangeRateResponse {
   result: string;
-  documentation: string;
-  terms_of_use: string;
+  base_code: string;
   time_last_update_unix: number;
   time_last_update_utc: string;
-  time_next_update_unix: number;
-  time_next_update_utc: string;
-  base_code: string;
   conversion_rates: Record<string, number>;
+  error?: string;
+  message?: string;
 }
 
 export function CurrencyConverter() {
@@ -48,8 +46,6 @@ export function CurrencyConverter() {
 
   const fromDropdownRef = useRef<HTMLDivElement>(null);
   const toDropdownRef = useRef<HTMLDivElement>(null);
-
-  const API_KEY = process.env.NEXT_PUBLIC_EXCHANGE_RATE_API_KEY;
 
   // Close dropdowns when clicking outside
   useEffect(() => {
@@ -100,20 +96,18 @@ export function CurrencyConverter() {
     try {
       setRefreshing(true);
 
-      // Check if API key is available
-      if (!API_KEY) {
-        throw new Error("Exchange Rate API key not configured");
-      }
-
-      const response = await fetch(
-        `https://v6.exchangerate-api.com/v6/${API_KEY}/latest/${baseCurrency}`
-      );
+      const response = await fetch(`/api/exchange-rates?base=${baseCurrency}`);
 
       if (!response.ok) {
         throw new Error(`Failed to fetch exchange rates: ${response.status}`);
       }
 
       const data: ExchangeRateResponse = await response.json();
+
+      // Check for API errors
+      if (data.error) {
+        throw new Error(data.message || data.error);
+      }
 
       if (data.result === "success") {
         setExchangeRates(data.conversion_rates);
