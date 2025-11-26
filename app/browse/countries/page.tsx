@@ -2,13 +2,11 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { Globe, Users, MapPin, Loader2 } from "lucide-react";
+import { Globe, Users, MapPin } from "lucide-react";
 import { GlobalNavigation } from "@/components/global-navigation";
 import { BrowseFilters } from "@/components/browse-filters";
 import Footer from "@/components/footer";
 import { useDebounce } from "@/hooks/useDebounce";
-import { getAllAPICountries } from "@/lib/data-utils";
-import type { Country as APICountry } from "@/lib/country-api-service";
 import "@/styles/countries-page.css";
 import "@/styles/search-bar.css";
 
@@ -19,13 +17,6 @@ interface Country {
   capital: string;
   population: number;
   region: string;
-  subregion: string;
-  currency: string;
-  currency_name: string;
-  currency_symbol: string;
-  emoji: string;
-  latitude: string;
-  longitude: string;
 }
 
 function getCountryFlagEmoji(countryCode: string): string {
@@ -70,41 +61,12 @@ export default function CountriesPage() {
   useEffect(() => {
     const fetchCountries = async () => {
       try {
-        setLoading(true);
-        setError(null);
-
-        // Try API first, fallback to static data
-        try {
-          const apiCountries = await getAllAPICountries();
-          const transformedCountries = apiCountries.map(
-            (country: APICountry) => ({
-              iso2: country.iso2,
-              iso3: country.iso3,
-              name: country.name,
-              capital: country.capital || "N/A",
-              population: parseInt(country.numeric_code) * 100000, // Estimate population
-              region: country.region,
-              subregion: country.subregion,
-              currency: country.currency,
-              currency_name: country.currency_name,
-              currency_symbol: country.currency_symbol,
-              emoji: country.emoji,
-              latitude: country.latitude,
-              longitude: country.longitude,
-            })
-          );
-          setCountries(transformedCountries);
-        } catch (apiError) {
-          console.warn("API failed, trying static data:", apiError);
-          // Fallback to static data
-          const response = await fetch("/data/browse/countries.json");
-          if (!response.ok) {
-            throw new Error("Failed to fetch countries data");
-          }
-          const data = await response.json();
-          setCountries(data);
+        const response = await fetch("/data/browse/countries.json");
+        if (!response.ok) {
+          throw new Error("Failed to fetch countries data");
         }
-
+        const data = await response.json();
+        setCountries(data);
         setLoading(false);
       } catch (err) {
         setError("Failed to load countries data");
@@ -118,24 +80,21 @@ export default function CountriesPage() {
 
   const debouncedSearchTerm = useDebounce(searchTerm, 300);
 
-  // Get unique regions from API data
   const regions = [
     "All",
-    ...Array.from(new Set(countries.map((c) => c.region))).sort(),
+    "Asia",
+    "Europe",
+    "Europe/Asia",
+    "North America",
+    "South America",
+    "Africa",
+    "Oceania",
   ];
 
   const filteredCountries = countries.filter((country) => {
     const matchesSearch =
       country.name.toLowerCase().includes(debouncedSearchTerm.toLowerCase()) ||
-      country.capital
-        .toLowerCase()
-        .includes(debouncedSearchTerm.toLowerCase()) ||
-      country.region
-        .toLowerCase()
-        .includes(debouncedSearchTerm.toLowerCase()) ||
-      country.currency_name
-        ?.toLowerCase()
-        .includes(debouncedSearchTerm.toLowerCase());
+      country.capital.toLowerCase().includes(debouncedSearchTerm.toLowerCase());
     const matchesRegion =
       selectedRegion === "All" || country.region === selectedRegion;
     return matchesSearch && matchesRegion;
@@ -159,14 +118,13 @@ export default function CountriesPage() {
                     Countries of the World
                   </h1>
                   <p className="page-description">
-                    Explore detailed information about {countries.length}+
-                    countries around the globe
+                    Explore detailed information about countries around the
+                    globe
                   </p>
                 </div>
               </section>
               <section className="section">
                 <div className="loading-state">
-                  <Loader2 className="animate-spin w-6 h-6" />
                   <p>Loading countries data...</p>
                 </div>
               </section>
@@ -257,7 +215,7 @@ export default function CountriesPage() {
                     <div className="country-card-header">
                       <div className="country-flag-section">
                         <span className="country-flag-emoji">
-                          {country.emoji || getCountryFlagEmoji(country.iso2)}
+                          {getCountryFlagEmoji(country.iso2)}
                         </span>
                         {/*}
                       <OptimizedImage
@@ -286,11 +244,6 @@ export default function CountriesPage() {
                         <Users className="country-detail-icon" />
                         <span className="country-detail-text">
                           {formatPopulation(country.population)}
-                        </span>
-                      </div>
-                      <div className="country-detail-item">
-                        <span className="country-detail-text">
-                          💰 {country.currency_symbol || country.currency}
                         </span>
                       </div>
                       <div className="country-region">{country.region}</div>

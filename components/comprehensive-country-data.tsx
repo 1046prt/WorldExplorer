@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-// import { OptimizedImage } from "@/components/ui/optimized-image"; // Temporarily disabled
+import { OptimizedImage } from "@/components/ui/optimized-image";
 import type {
   Country,
   GeologicalFormation,

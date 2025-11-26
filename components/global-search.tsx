@@ -34,14 +34,9 @@ export function GlobalSearch({
       if (debouncedQuery && debouncedQuery.length >= 2) {
         setIsLoading(true);
         try {
-          // Use enhanced search that includes API data
-          const searchResults = await SearchService.searchEnhanced(
-            debouncedQuery,
-            "all",
-            true
-          );
+          const searchResults = await SearchService.search(debouncedQuery);
           setResults(
-            showFullResults ? searchResults : searchResults.slice(0, 8)
+            showFullResults ? searchResults : searchResults.slice(0, 6)
           );
         } catch (error) {
           console.error("Search error:", error);
@@ -142,8 +137,6 @@ export function GlobalSearch({
         return "🌊";
       case "city":
         return "🏙️";
-      case "state":
-        return "🗺️";
       default:
         return "📍";
     }
