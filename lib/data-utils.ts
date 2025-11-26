@@ -1,4 +1,8 @@
 import type { Country } from "./types";
+import {
+  CountryAPIService,
+  type Country as APICountry,
+} from "./country-api-service";
 
 export async function getCountryData(
   countryCode: string
@@ -52,24 +56,65 @@ export async function getCountryData(
 }
 
 export async function getAllCountries(): Promise<string[]> {
-  // Available country data files - only include countries we actually have data for
-  return [
-    "us", // United States
-    "fr", // France
-    "cn", // China
-    "gb", // United Kingdom
-    "jp", // Japan
-    "ca", // Canada
-    "de", // Germany
-    "it", // Italy
-    "br", // Brazil
-    "in", // India
-    "au", // Australia
-    "ru", // Russia
-    "mx", // Mexico
-    "es", // Spain
-    "ar", // Argentina
-  ];
+  try {
+    // Try to get countries from API first
+    const apiCountries = await CountryAPIService.getAllCountries();
+    return apiCountries.map((country) => country.iso2.toLowerCase());
+  } catch (error) {
+    console.warn(
+      "API unavailable, falling back to static country list:",
+      error
+    );
+    // Fallback to static list if API fails
+    return [
+      "us",
+      "fr",
+      "cn",
+      "gb",
+      "jp",
+      "ca",
+      "de",
+      "it",
+      "br",
+      "in",
+      "au",
+      "ru",
+      "mx",
+      "es",
+      "ar",
+    ];
+  }
+}
+
+// New function to get all API countries
+export async function getAllAPICountries(): Promise<APICountry[]> {
+  try {
+    return await CountryAPIService.getAllCountries();
+  } catch (error) {
+    console.error("Failed to fetch countries from API:", error);
+    return [];
+  }
+}
+
+// Enhanced function to get country data with API support
+export async function getEnhancedCountryData(countryCode: string): Promise<{
+  staticData: Country | null;
+  apiData: APICountry | null;
+}> {
+  try {
+    const [staticData, apiData] = await Promise.allSettled([
+      getCountryData(countryCode),
+      CountryAPIService.getCountryDetails(countryCode),
+    ]);
+
+    return {
+      staticData: staticData.status === "fulfilled" ? staticData.value : null,
+      apiData: apiData.status === "fulfilled" ? apiData.value : null,
+    };
+  } catch (error) {
+    console.error("Error fetching enhanced country data:", error);
+    return { staticData: null, apiData: null };
+  }
 }
 
 export function searchCountries(
@@ -214,4 +259,99 @@ export function formatPopulation(population: number): string {
     return `${(population / 1000).toFixed(1)}K`;
   }
   return population.toString();
+}
+
+// New API-powered functions
+export async function getCountriesByRegion(
+  region: string
+): Promise<APICountry[]> {
+  try {
+    return await CountryAPIService.getCountriesByRegion(region);
+  } catch (error) {
+    console.error("Error fetching countries by region:", error);
+    return [];
+  }
+}
+
+export async function getStatesForCountry(countryCode: string) {
+  try {
+    return await CountryAPIService.getStatesByCountry(countryCode);
+  } catch (error) {
+    console.error(`Error fetching states for ${countryCode}:`, error);
+    return [];
+  }
+}
+
+export async function getCitiesForCountry(countryCode: string) {
+  try {
+    return await CountryAPIService.getCitiesByCountry(countryCode);
+  } catch (error) {
+    console.error(`Error fetching cities for ${countryCode}:`, error);
+    return [];
+  }
+}
+
+export async function getCitiesForState(
+  countryCode: string,
+  stateCode: string
+) {
+  try {
+    return await CountryAPIService.getCitiesByState(countryCode, stateCode);
+  } catch (error) {
+    console.error(
+      `Error fetching cities for ${stateCode}, ${countryCode}:`,
+      error
+    );
+    return [];
+  }
+}
+
+// Enhanced stats function with API data
+export async function getEnhancedCountryStats() {
+  try {
+    const [staticCountries, apiCountries] = await Promise.allSettled([
+      getAllCountries()
+        .then((codes) => Promise.all(codes.map((code) => getCountryData(code))))
+        .then((countries) => countries.filter((c) => c !== null) as Country[]),
+      CountryAPIService.getAllCountries(),
+    ]);
+
+    const staticData =
+      staticCountries.status === "fulfilled" ? staticCountries.value : [];
+    const apiData =
+      apiCountries.status === "fulfilled" ? apiCountries.value : [];
+
+    const staticStats = getCountryStats(staticData);
+
+    return {
+      static: staticStats,
+      api: {
+        countries: apiData.length,
+        regions: new Set(apiData.map((c) => c.region)).size,
+        subregions: new Set(apiData.map((c) => c.subregion)).size,
+        currencies: new Set(apiData.map((c) => c.currency)).size,
+      },
+      combined: {
+        totalCountries: apiData.length,
+        detailedCountries: staticData.length,
+        coverage:
+          staticData.length > 0
+            ? ((staticData.length / apiData.length) * 100).toFixed(1)
+            : "0",
+      },
+    };
+  } catch (error) {
+    console.error("Error calculating enhanced stats:", error);
+    return {
+      static: {
+        countries: 0,
+        population: 0,
+        landmarks: 0,
+        institutions: 0,
+        rivers: 0,
+      },
+      api: { countries: 0, regions: 0, subregions: 0, currencies: 0 },
+      combined: { totalCountries: 0, detailedCountries: 0, coverage: "0" },
+    };
+  }
 }

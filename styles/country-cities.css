@@ -10,6 +10,132 @@
   box-sizing: border-box;
 }
 
+/* API Cities and States */
+.api-cities-section,
+.api-states-section,
+.famous-cities-section {
+  margin-top: var(--spacing-lg);
+}
+
+.api-cities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.api-city-item {
+  padding: var(--spacing-md);
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  transition: all 0.2s ease;
+}
+
+.api-city-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.api-city-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-xs);
+}
+
+.city-icon {
+  width: 16px;
+  height: 16px;
+  color: var(--color-primary);
+}
+
+.api-city-name {
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.api-city-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.api-city-state {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+.api-city-coords {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+}
+
+.states-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.state-item.api-state {
+  padding: var(--spacing-sm);
+  background: var(--color-surface);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.state-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.state-icon {
+  width: 14px;
+  height: 14px;
+  color: var(--color-primary);
+}
+
+.state-code {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.state-type {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+.more-indicator {
+  text-align: center;
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  font-style: italic;
+  margin-top: var(--spacing-sm);
+}
+
+.error-message {
+  padding: var(--spacing-sm);
+  background: var(--color-error-bg);
+  border: 1px solid var(--color-error-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-error);
+  margin-bottom: var(--spacing-md);
+}
+
+.no-data {
+  text-align: center;
+  padding: var(--spacing-xl);
+  color: var(--color-text-secondary);
+}
+
 @media (max-width: 768px) {
   .city-card {
     padding: var(--spacing-md);

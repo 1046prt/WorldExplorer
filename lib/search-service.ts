@@ -1,8 +1,12 @@
 import type { Country } from "./types";
 import { getAllCountries, getCountryData } from "./data-utils";
+import {
+  CountryAPIService,
+  type Country as APICountry,
+} from "./country-api-service";
 
 export interface SearchResult {
-  type: "country" | "landmark" | "institution" | "river" | "city";
+  type: "country" | "landmark" | "institution" | "river" | "city" | "state";
   title: string;
   subtitle: string;
   description: string;
@@ -12,11 +16,18 @@ export interface SearchResult {
   metadata?: Record<string, string>;
   countryCode?: string;
   countryName?: string;
+  coordinates?: { lat: string; lng: string };
+}
+
+interface EnhancedSearchResult extends SearchResult {
+  relevanceScore: number;
 }
 
 export class SearchService {
   private static countries: Country[] = [];
+  private static apiCountries: APICountry[] = [];
   private static initialized = false;
+  private static apiInitialized = false;
 
   static async initialize() {
     if (this.initialized) return;
@@ -32,9 +43,171 @@ export class SearchService {
       this.initialized = true;
     } catch (error) {
       console.error("Failed to initialize search service:", error);
-      // Set initialized to true even on error to prevent infinite retries
       this.initialized = true;
     }
+  }
+
+  static async initializeAPI() {
+    if (this.apiInitialized) return;
+
+    try {
+      this.apiCountries = await CountryAPIService.getAllCountries();
+      this.apiInitialized = true;
+    } catch (error) {
+      console.error("Failed to initialize API search service:", error);
+      this.apiInitialized = true;
+    }
+  }
+
+  static async searchAPI(query: string, limit = 20): Promise<SearchResult[]> {
+    if (!query || query.length < 2) return [];
+
+    await this.initializeAPI();
+
+    const results: EnhancedSearchResult[] = [];
+    const searchTerm = query.toLowerCase().trim();
+
+    try {
+      // Search countries from API
+      const matchingCountries = this.apiCountries
+        .filter(
+          (country) =>
+            country.name.toLowerCase().includes(searchTerm) ||
+            country.iso2.toLowerCase().includes(searchTerm) ||
+            country.iso3.toLowerCase().includes(searchTerm) ||
+            country.capital?.toLowerCase().includes(searchTerm) ||
+            country.region.toLowerCase().includes(searchTerm)
+        )
+        .slice(0, 10);
+
+      // Add country results
+      for (const country of matchingCountries) {
+        const relevanceScore = this.calculateRelevanceScore(
+          country.name,
+          searchTerm
+        );
+        results.push({
+          type: "country",
+          title: country.name,
+          subtitle: `${country.capital} • ${country.region}`,
+          description: `Population: ${this.formatPopulation(
+            parseInt(country.numeric_code) * 1000000
+          )} • Currency: ${country.currency_name}`,
+          url: `/country/${country.iso2.toLowerCase()}`,
+          badge: country.iso2,
+          image: country.emoji,
+          metadata: {
+            capital: country.capital,
+            region: country.region,
+            currency: country.currency_name,
+            iso2: country.iso2,
+            iso3: country.iso3,
+          },
+          countryCode: country.iso2,
+          countryName: country.name,
+          coordinates: { lat: country.latitude, lng: country.longitude },
+          relevanceScore,
+        });
+      }
+
+      // Search states and cities for top matching countries
+      if (results.length < limit && matchingCountries.length > 0) {
+        for (const country of matchingCountries.slice(0, 3)) {
+          try {
+            // Search states
+            const states = await CountryAPIService.getStatesByCountry(
+              country.iso2
+            );
+            const matchingStates = states
+              .filter((state) => state.name.toLowerCase().includes(searchTerm))
+              .slice(0, 5);
+
+            for (const state of matchingStates) {
+              const relevanceScore = this.calculateRelevanceScore(
+                state.name,
+                searchTerm
+              );
+              results.push({
+                type: "state",
+                title: state.name,
+                subtitle: `State in ${state.country_name}`,
+                description: `Administrative division • ${state.type}`,
+                url: `/country/${state.country_code.toLowerCase()}#states`,
+                badge: "State",
+                metadata: {
+                  country: state.country_name,
+                  type: state.type,
+                  stateCode: state.state_code,
+                },
+                countryCode: state.country_code,
+                countryName: state.country_name,
+                coordinates: { lat: state.latitude, lng: state.longitude },
+                relevanceScore,
+              });
+            }
+
+            // Search cities
+            const cities = await CountryAPIService.getCitiesByCountry(
+              country.iso2
+            );
+            const matchingCities = cities
+              .filter((city) => city.name.toLowerCase().includes(searchTerm))
+              .slice(0, 8);
+
+            for (const city of matchingCities) {
+              const relevanceScore = this.calculateRelevanceScore(
+                city.name,
+                searchTerm
+              );
+              results.push({
+                type: "city",
+                title: city.name,
+                subtitle: `${city.state_name}, ${city.country_name}`,
+                description: `City in ${city.state_name} state`,
+                url: `/country/${city.country_code.toLowerCase()}#cities`,
+                badge: "City",
+                metadata: {
+                  state: city.state_name,
+                  country: city.country_name,
+                  stateCode: city.state_code,
+                },
+                countryCode: city.country_code,
+                countryName: city.country_name,
+                coordinates: { lat: city.latitude, lng: city.longitude },
+                relevanceScore,
+              });
+            }
+          } catch (error) {
+            console.warn(`Error searching in ${country.name}:`, error);
+          }
+        }
+      }
+
+      // Sort by relevance score and limit results
+      // Sort by relevance score and limit results
+      return (
+        results
+          .sort((a, b) => b.relevanceScore - a.relevanceScore)
+          .slice(0, limit)
+          // eslint-disable-next-line @typescript-eslint/no-unused-vars
+          .map(({ relevanceScore, ...result }) => result)
+      );
+    } catch (error) {
+      console.error("API Search error:", error);
+      return [];
+    }
+  }
+
+  private static calculateRelevanceScore(text: string, query: string): number {
+    const textLower = text.toLowerCase();
+    const queryLower = query.toLowerCase();
+
+    if (textLower === queryLower) return 100;
+    if (textLower.startsWith(queryLower)) return 80;
+    if (textLower.includes(` ${queryLower}`)) return 60;
+    if (textLower.includes(queryLower)) return 40;
+
+    return 0;
   }
 
   static async search(
@@ -239,45 +412,110 @@ export class SearchService {
   static getSearchSuggestions(query: string): string[] {
     if (!query || query.length < 2) return [];
 
-    // If not initialized, return empty suggestions
-    if (!this.initialized || this.countries.length === 0) return [];
-
     const suggestions = new Set<string>();
     const lowercaseQuery = query.toLowerCase();
 
-    for (const country of this.countries) {
-      // Country names
-      if (country.name.toLowerCase().includes(lowercaseQuery)) {
-        suggestions.add(country.name);
-      }
-
-      // Capital cities
-      if (
-        country.capital &&
-        country.capital.toLowerCase().includes(lowercaseQuery)
-      ) {
-        suggestions.add(country.capital);
-      }
-
-      // Famous cities
-      if (country.famousCities && country.famousCities.length > 0) {
-        for (const city of country.famousCities) {
-          if (city.name.toLowerCase().includes(lowercaseQuery)) {
-            suggestions.add(city.name);
-          }
+    // API-based suggestions
+    if (this.apiInitialized && this.apiCountries.length > 0) {
+      for (const country of this.apiCountries) {
+        if (country.name.toLowerCase().includes(lowercaseQuery)) {
+          suggestions.add(country.name);
+        }
+        if (
+          country.capital &&
+          country.capital.toLowerCase().includes(lowercaseQuery)
+        ) {
+          suggestions.add(country.capital);
+        }
+        if (country.region.toLowerCase().includes(lowercaseQuery)) {
+          suggestions.add(country.region);
         }
       }
+    }
 
-      // Landmarks
-      if (country.landmarks && country.landmarks.length > 0) {
-        for (const landmark of country.landmarks) {
-          if (landmark.name.toLowerCase().includes(lowercaseQuery)) {
-            suggestions.add(landmark.name);
+    // Fallback to static data if API not available
+    if (
+      suggestions.size === 0 &&
+      this.initialized &&
+      this.countries.length > 0
+    ) {
+      for (const country of this.countries) {
+        if (country.name.toLowerCase().includes(lowercaseQuery)) {
+          suggestions.add(country.name);
+        }
+        if (
+          country.capital &&
+          country.capital.toLowerCase().includes(lowercaseQuery)
+        ) {
+          suggestions.add(country.capital);
+        }
+        if (country.famousCities && country.famousCities.length > 0) {
+          for (const city of country.famousCities) {
+            if (city.name.toLowerCase().includes(lowercaseQuery)) {
+              suggestions.add(city.name);
+            }
+          }
+        }
+        if (country.landmarks && country.landmarks.length > 0) {
+          for (const landmark of country.landmarks) {
+            if (landmark.name.toLowerCase().includes(lowercaseQuery)) {
+              suggestions.add(landmark.name);
+            }
           }
         }
       }
     }
 
     return Array.from(suggestions).slice(0, 8);
+  }
+
+  // Enhanced search that combines API and static data
+  static async searchEnhanced(
+    query: string,
+    type: string = "all",
+    useAPI: boolean = true
+  ): Promise<SearchResult[]> {
+    if (!query || query.length < 2) return [];
+
+    const results: SearchResult[] = [];
+
+    // Try API search first if enabled
+    if (useAPI) {
+      try {
+        const apiResults = await this.searchAPI(query, 15);
+        results.push(...apiResults);
+      } catch (error) {
+        console.warn(
+          "API search failed, falling back to static search:",
+          error
+        );
+      }
+    }
+
+    // Add static search results if we need more or if API failed
+    if (results.length < 20) {
+      const staticResults = await this.search(query, type);
+
+      // Filter out duplicates based on title and type
+      const existingKeys = new Set(results.map((r) => `${r.type}-${r.title}`));
+      const uniqueStaticResults = staticResults.filter(
+        (r) => !existingKeys.has(`${r.type}-${r.title}`)
+      );
+
+      results.push(...uniqueStaticResults);
+    }
+
+    return results.slice(0, 50);
+  }
+
+  private static formatPopulation(population: number): string {
+    if (population >= 1000000000) {
+      return `${(population / 1000000000).toFixed(1)}B`;
+    } else if (population >= 1000000) {
+      return `${(population / 1000000).toFixed(1)}M`;
+    } else if (population >= 1000) {
+      return `${(population / 1000).toFixed(1)}K`;
+    }
+    return population.toString();
   }
 }
