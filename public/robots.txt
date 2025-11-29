@@ -1,11 +1,17 @@
+# WorldExplorer - Global Educational Platform
+# Visit https://theworldexplorer.vercel.app
+
 User-agent: *
 Allow: /
 
-# Disallow admin or private areas (if any)
+# Disallow admin or private areas
 Disallow: /admin/
 Disallow: /private/
 Disallow: /_next/
 Disallow: /api/
+Disallow: /_vercel/
+Disallow: /.*\?
+Disallow: /*?*
 
 # Allow all static assets
 Allow: /images/
@@ -14,9 +20,47 @@ Allow: /styles/
 Allow: /*.css
 Allow: /*.js
 Allow: /*.json
+Allow: /manifest.webmanifest
+Allow: /favicon.ico
+Allow: /apple-touch-icon.png
+Allow: /android-chrome-*
 
-# Sitemap
-Sitemap: https://theworldexplorer.vercel.app/sitemap.xml
+# Allow important pages
+Allow: /about
+Allow: /browse/
+Allow: /country/
+Allow: /search
 
-# Crawl-delay (optional, helps prevent overwhelming the server)
+# Specific crawl directives for different bots
+User-agent: Googlebot
+Allow: /
 Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+# Block problematic bots
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+# Sitemaps
+Sitemap: https://theworldexplorer.vercel.app/sitemap.xml
+Sitemap: https://theworldexplorer.vercel.app/sitemap-countries.xml
+Sitemap: https://theworldexplorer.vercel.app/sitemap-static.xml
+
+# Host directive
+Host: https://theworldexplorer.vercel.app
+
+# Clean Param directive for better indexing
+Clean-param: utm_source&utm_medium&utm_campaign&utm_term&utm_content

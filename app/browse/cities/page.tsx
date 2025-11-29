@@ -137,86 +137,99 @@ export default function CitiesPage() {
   }
 
   return (
-    <div className="page-wrapper page-background">
-      <GlobalNavigation
-        showBackButton={true}
-        backHref="/"
-        currentPage="cities"
+    <div>
+      {/* SEO Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(citiesStructuredData),
+        }}
       />
-      <div className="page-content">
-        <main className="main">
-          <div className="sections-container">
-            <section className="section">
-              <div className="page-header">
-                <h1 className="page-title">
-                  <Building2 className="page-title-icon" />
-                  Major Cities of the World
-                </h1>
-                <p className="page-description">
-                  Discover the world&apos;s most populous and influential cities
-                </p>
-              </div>
-            </section>
 
-            <BrowseFilters
-              searchTerm={searchTerm}
-              onSearchChange={setSearchTerm}
-              searchPlaceholder="Search cities or countries..."
-              filterValue={selectedRegion}
-              onFilterChange={setSelectedRegion}
-              filterOptions={regions}
-              filterLabel="Filter by region"
-            />
-
-            <section className="section">
-              <div className="cities-grid">
-                {filteredCities.map((city) => (
-                  <div key={city.id} className="city-card">
-                    <div className="city-card-header">
-                      <div className="city-country">{city.country}</div>
-                      <span className="city-code">{city.countryCode}</span>
-                    </div>
-                    <h3 className="city-name">{city.name}</h3>
-                    <p className="city-description">{city.description}</p>
-                    <div className="city-details">
-                      <div className="city-detail-item">
-                        <Users className="city-detail-icon" />
-                        <span className="city-detail-text">
-                          {city.population}
-                        </span>
-                      </div>
-                      <div className="city-detail-item">
-                        <Globe className="city-detail-icon" />
-                        <span className="city-detail-text">{city.region}</span>
-                      </div>
-                    </div>
-                    <Link
-                      href={`/country/${city.countryCode.toLowerCase()}`}
-                      className="city-link"
-                    >
-                      View Country →
-                    </Link>
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            {filteredCities.length === 0 && (
+      <div className="page-wrapper page-background">
+        <GlobalNavigation
+          showBackButton={true}
+          backHref="/"
+          currentPage="cities"
+        />
+        <div className="page-content">
+          <main className="main">
+            <div className="sections-container">
               <section className="section">
-                <div className="empty-state">
-                  <Building2 className="empty-state-icon" />
-                  <h3 className="empty-state-title">No cities found</h3>
-                  <p className="empty-state-description">
-                    Try adjusting your search or filter criteria
+                <div className="page-header">
+                  <h1 className="page-title">
+                    <Building2 className="page-title-icon" />
+                    Major Cities of the World
+                  </h1>
+                  <p className="page-description">
+                    Discover the world&apos;s most populous and influential
+                    cities
                   </p>
                 </div>
               </section>
-            )}
-          </div>
-        </main>
-      </div>
 
-      <Footer />
+              <BrowseFilters
+                searchTerm={searchTerm}
+                onSearchChange={setSearchTerm}
+                searchPlaceholder="Search cities or countries..."
+                filterValue={selectedRegion}
+                onFilterChange={setSelectedRegion}
+                filterOptions={regions}
+                filterLabel="Filter by region"
+              />
+
+              <section className="section">
+                <div className="cities-grid">
+                  {filteredCities.map((city) => (
+                    <div key={city.id} className="city-card">
+                      <div className="city-card-header">
+                        <div className="city-country">{city.country}</div>
+                        <span className="city-code">{city.countryCode}</span>
+                      </div>
+                      <h3 className="city-name">{city.name}</h3>
+                      <p className="city-description">{city.description}</p>
+                      <div className="city-details">
+                        <div className="city-detail-item">
+                          <Users className="city-detail-icon" />
+                          <span className="city-detail-text">
+                            {city.population}
+                          </span>
+                        </div>
+                        <div className="city-detail-item">
+                          <Globe className="city-detail-icon" />
+                          <span className="city-detail-text">
+                            {city.region}
+                          </span>
+                        </div>
+                      </div>
+                      <Link
+                        href={`/country/${city.countryCode.toLowerCase()}`}
+                        className="city-link"
+                      >
+                        View Country →
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+              </section>
+
+              {filteredCities.length === 0 && (
+                <section className="section">
+                  <div className="empty-state">
+                    <Building2 className="empty-state-icon" />
+                    <h3 className="empty-state-title">No cities found</h3>
+                    <p className="empty-state-description">
+                      Try adjusting your search or filter criteria
+                    </p>
+                  </div>
+                </section>
+              )}
+            </div>
+          </main>
+        </div>
+
+        <Footer />
+      </div>
     </div>
   );
 }

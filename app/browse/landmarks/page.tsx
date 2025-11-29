@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
@@ -226,7 +226,7 @@ export default function LandmarksPage() {
                     </div>
 
                     <Link
-                      href={`/country/${landmark.countryCode.toLowerCase()}`}
+                      href={/country/}
                       className="landmark-link"
                     >
                       Visit Country

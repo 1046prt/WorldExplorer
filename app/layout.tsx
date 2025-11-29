@@ -27,6 +27,19 @@ export const metadata: Metadata = {
     canonical: "https://theworldexplorer.vercel.app",
   }),
   manifest: "/manifest.webmanifest",
+  metadataBase: new URL("https://theworldexplorer.vercel.app"),
+  alternates: {
+    canonical: "https://theworldexplorer.vercel.app",
+    languages: {
+      "en-US": "/en-US",
+      "x-default": "/",
+    },
+  },
+  category: "education",
+  classification: "Educational Platform",
+  referrer: "origin-when-cross-origin",
+  generator: "Next.js",
+  applicationName: "WorldExplorer",
   icons: {
     icon: [
       {
@@ -62,15 +75,24 @@ export const metadata: Metadata = {
     capable: true,
     statusBarStyle: "black-translucent",
     title: "WorldExplorer",
+    startupImage: [
+      {
+        url: "/apple-touch-icon.png",
+        media: "(device-width: 768px) and (device-height: 1024px)",
+      },
+    ],
   },
   formatDetection: {
     telephone: false,
+    date: false,
+    address: false,
+    email: false,
+    url: false,
   },
   verification: {
-    google: "your-google-verification-code", // Add your Google Search Console verification code
-    // yandex: "your-yandex-verification-code", // Add if needed
-    // bing: "your-bing-verification-code", // Add if needed
+    google: "your-google-verification-code",
   },
+  bookmarks: ["https://theworldexplorer.vercel.app"],
 };
 
 export const viewport: Viewport = {

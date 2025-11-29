@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { useState } from "react";
+import { Dialog, DialogTrigger } from "@/components/ui/dialog";
 import { OptimizedImage } from "@/components/ui/optimized-image";
 import "@/styles/image-modal.css";
 
