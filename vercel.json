@@ -1,10 +1,10 @@
 {
   "env": {
-    "EXCHANGE_RATE_API_KEY": "@exchange_rate_api_key"
+    "EXCHANGE_RATE_API_KEY": "@exchange-rate-api-key"
   },
   "build": {
     "env": {
-      "EXCHANGE_RATE_API_KEY": "@exchange_rate_api_key"
+      "EXCHANGE_RATE_API_KEY": "@exchange-rate-api-key"
     }
   }
 }
