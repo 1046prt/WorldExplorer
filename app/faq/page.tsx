@@ -1,6 +1,5 @@
 "use client";
 
-import { Metadata } from "next";
 import { GlobalNavigation } from "@/components/global-navigation";
 import Footer from "@/components/footer";
 import {
@@ -11,7 +10,7 @@ import {
   Monitor,
   Database,
 } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "@/styles/faq.css";
 
 interface FAQItem {
@@ -27,6 +26,11 @@ interface FAQCategory {
 
 export default function FAQPage() {
   const [openItems, setOpenItems] = useState<Record<string, boolean>>({});
+
+  // Set document title
+  useEffect(() => {
+    document.title = "Frequently Asked Questions - WorldExplorer";
+  }, []);
 
   const toggleItem = (categoryIndex: number, itemIndex: number) => {
     const key = `${categoryIndex}-${itemIndex}`;
