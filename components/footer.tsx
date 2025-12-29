@@ -40,6 +40,9 @@ const Footer: FC = () => {
             <li>
               <Link href="/about">About</Link>
             </li>
+            <li>
+              <Link href="/faq">FAQ</Link>
+            </li>
           </ul>
         </div>
 
