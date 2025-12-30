@@ -9,6 +9,7 @@ import {
   BookOpen,
   Monitor,
   Database,
+  Mail,
 } from "lucide-react";
 import { useState, useEffect } from "react";
 import "@/styles/faq.css";
@@ -243,6 +244,7 @@ export default function FAQPage() {
                 reach out to us.
               </p>
               <a href="mailto:1046prt@gmail.com" className="faq-contact-button">
+                <Mail className="faq-contact-icon" />
                 Contact Support
               </a>
             </section>
