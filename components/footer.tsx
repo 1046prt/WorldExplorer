@@ -40,6 +40,9 @@ const Footer: FC = () => {
             <li>
               <Link href="/about">About</Link>
             </li>
+            <li>
+              <Link href="/faq">FAQ</Link>
+            </li>
           </ul>
         </div>
 
@@ -54,7 +57,7 @@ const Footer: FC = () => {
               <Github size={20} />
             </a>
             <a
-              href="https://twitter.com/1046prt"
+              href="https://x.com/1046prt"
               target="_blank"
               aria-label="Twitter"
             >
