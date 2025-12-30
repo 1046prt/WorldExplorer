@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { Globe } from "lucide-react";
-import "/styles/not-found.css";
+import "../styles/not-found.css";
 import Footer from "@/components/footer";
 import { GlobalNavigation } from "@/components/global-navigation";
 export default function NotFoundPage() {
