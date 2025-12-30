@@ -11,7 +11,7 @@ import { CountryInstitutions } from "@/components/country-institutions";
 import { CountryMap } from "@/components/country-map";
 import { NavigationBreadcrumb } from "@/components/navigation-breadcrumb";
 import { ComprehensiveCountryData } from "@/components/comprehensive-country-data";
-import "/app/globals.css";
+import "../../globals.css";
 import Footer from "@/components/footer";
 import {
   generateSEOMetadata,
