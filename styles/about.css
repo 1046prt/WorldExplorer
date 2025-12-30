@@ -1,6 +1,7 @@
 .about-page {
   min-height: 100vh;
-  background: var(--color-background);
+  background: var(--gradient-background);
+  transition: background var(--transition-normal);
   position: relative;
 }
 
