@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { getCountryData, getAllCountries } from "@/lib/data-utils";
+import { SITE_URL } from "@/lib/site";
 import { GlobalNavigation } from "@/components/global-navigation";
 import { CountryHeader } from "@/components/country-header";
 import { CountryOverview } from "@/components/country-overview";
@@ -145,9 +146,9 @@ export async function generateMetadata({ params }: CountryPageProps) {
       country.capital
     }, population of ${country.population?.toLocaleString()}, famous landmarks including ${landmarks}, major cities like ${cities}, rich history, culture, and geography. Comprehensive country guide with interactive maps and detailed information.`,
     keywords: `${country.name}, ${country.capital}, ${country.name} tourism, ${country.name} travel, ${country.name} landmarks, ${country.name} cities, ${country.name} history, ${country.name} culture, ${country.name} geography, country information, travel guide`,
-    canonical: `https://theworldexplorer.vercel.app/country/${slug}`,
+    canonical: `${SITE_URL}/country/${slug}`,
     image: country.flag
-      ? `https://theworldexplorer.vercel.app${country.flag}`
+      ? `${SITE_URL}${country.flag}`
       : undefined,
     type: "article",
     section: "Geography",

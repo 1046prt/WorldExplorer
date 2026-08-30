@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { Country } from "@/lib/types";
+import { SITE_URL } from "@/lib/site";
 
 interface SEOConfigOptions {
   title: string;
@@ -16,7 +17,7 @@ interface SEOConfigOptions {
   noindex?: boolean;
 }
 
-const baseUrl = "https://theworldexplorer.vercel.app";
+const baseUrl = SITE_URL;
 const defaultImage = `${baseUrl}/images/logo/WORLD.svg`;
 
 export function generateSEOMetadata({

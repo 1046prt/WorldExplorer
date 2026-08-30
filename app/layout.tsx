@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from "next";
 import "@/styles/globals.css";
 import "@/app/globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { SITE_URL } from "@/lib/site";
 import {
   generateSEOMetadata,
   generateWebsiteStructuredData,
@@ -24,12 +25,12 @@ export const metadata: Metadata = {
       "Interactive educational platform for exploring countries, cultures, landmarks, and global knowledge. Learn about geography, history, and cultures worldwide through engaging tools and comprehensive data.",
     keywords:
       "world explorer, countries, geography, education, travel, culture, landmarks, cities, history, interactive learning, global knowledge, educational platform",
-    canonical: "https://theworldexplorer.vercel.app",
+    canonical: SITE_URL,
   }),
   manifest: "/manifest.webmanifest",
-  metadataBase: new URL("https://theworldexplorer.vercel.app"),
+  metadataBase: new URL(SITE_URL),
   alternates: {
-    canonical: "https://theworldexplorer.vercel.app",
+    canonical: SITE_URL,
     languages: {
       "en-US": "/en-US",
       "x-default": "/",
@@ -92,7 +93,7 @@ export const metadata: Metadata = {
   verification: {
     google: "your-google-verification-code",
   },
-  bookmarks: ["https://theworldexplorer.vercel.app"],
+  bookmarks: [SITE_URL],
 };
 
 export const viewport: Viewport = {

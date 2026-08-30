@@ -1,23 +1,21 @@
-const baseUrl = "https://theworldexplorer.vercel.app";
+import { SITE_URLS } from "@/lib/site";
+
+const sitemapFiles = ["/sitemap-static.xml", "/sitemap-countries.xml"];
 
 export async function GET() {
-  const sitemaps = [
-    {
-      url: "/sitemap-static.xml",
+  const entries = SITE_URLS.flatMap((baseUrl) =>
+    sitemapFiles.map((url) => ({
+      url: `${baseUrl}${url}`,
       lastModified: new Date(),
-    },
-    {
-      url: "/sitemap-countries.xml",
-      lastModified: new Date(),
-    },
-  ];
+    }))
+  );
 
   const sitemapIndex = `<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${sitemaps
+${entries
   .map((sitemap) => {
     return `  <sitemap>
-    <loc>${baseUrl}${sitemap.url}</loc>
+    <loc>${sitemap.url}</loc>
     <lastmod>${sitemap.lastModified.toISOString()}</lastmod>
   </sitemap>`;
   })

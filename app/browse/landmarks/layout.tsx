@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { generateSEOMetadata } from "@/components/seo/seo-config";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   ...generateSEOMetadata({
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
       "Discover famous landmarks and monuments from around the world. Explore historical sites, architectural wonders, and cultural treasures with detailed information and stunning visuals.",
     keywords:
       "browse landmarks, world landmarks, famous monuments, historical sites, architectural wonders, cultural treasures, tourist attractions, world heritage sites",
-    canonical: "https://theworldexplorer.vercel.app/browse/landmarks",
+    canonical: `${SITE_URL}/browse/landmarks`,
   }),
 };
 

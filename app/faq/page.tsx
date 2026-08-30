@@ -2,6 +2,7 @@
 
 import { GlobalNavigation } from "@/components/global-navigation";
 import Footer from "@/components/footer";
+import { SITE_URL } from "@/lib/site";
 import {
   ChevronDown,
   ChevronUp,
@@ -80,7 +81,7 @@ export default function FAQPage() {
         {
           question: "How do I cite WorldExplorer content in my research?",
           answer:
-            "When citing WorldExplorer, please use the following format: 'WorldExplorer. [Page Title]. Retrieved [Date], from https://theworldexplorer.vercel.app/[page-url]'. For academic papers, treat it as a web resource with the current date of access.",
+            `When citing WorldExplorer, please use the following format: 'WorldExplorer. [Page Title]. Retrieved [Date], from ${SITE_URL}/[page-url]'. For academic papers, treat it as a web resource with the current date of access.`,
         },
         {
           question: "Are there lesson plans or teaching resources available?",
@@ -240,8 +241,8 @@ export default function FAQPage() {
             <section className="faq-contact">
               <h2 className="faq-contact-title">Still have questions?</h2>
               <p className="faq-contact-text">
-                If you couldn't find the answer you're looking for, feel free to
-                reach out to us.
+                If you couldn&apos;t find the answer you&apos;re looking for, feel free
+                to reach out to us.
               </p>
               <a href="mailto:1046prt@gmail.com" className="faq-contact-button">
                 <Mail className="faq-contact-icon" />

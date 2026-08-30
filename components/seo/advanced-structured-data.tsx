@@ -1,6 +1,7 @@
 import { Country } from "@/lib/types";
+import { SITE_URL } from "@/lib/site";
 
-const baseUrl = "https://theworldexplorer.vercel.app";
+const baseUrl = SITE_URL;
 
 // FAQ Schema for common questions
 export function generateFAQStructuredData() {

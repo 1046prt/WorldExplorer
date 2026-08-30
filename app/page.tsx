@@ -15,6 +15,7 @@ import {
   generateSEOMetadata,
   generateEducationalStructuredData,
 } from "@/components/seo/seo-config";
+import { SITE_URL } from "@/lib/site";
 
 const educationalStructuredData = generateEducationalStructuredData();
 
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
       "Interactive educational platform for exploring countries, cultures, landmarks, and global knowledge. Learn about geography, history, and cultures worldwide through engaging tools, quizzes, and comprehensive country data.",
     keywords:
       "world explorer, countries, geography, education, travel, culture, landmarks, cities, history, interactive learning, global knowledge, educational platform, country information, cultural studies",
-    canonical: "https://theworldexplorer.vercel.app",
+    canonical: SITE_URL,
   }),
 };
 

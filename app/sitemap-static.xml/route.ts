@@ -1,4 +1,4 @@
-const baseUrl = "https://theworldexplorer.vercel.app";
+import { SITE_URLS } from "@/lib/site";
 
 export async function GET() {
   const staticPages = [
@@ -59,8 +59,8 @@ export async function GET() {
         xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-${staticPages
-  .map((page) => {
+${SITE_URLS.flatMap((baseUrl) =>
+  staticPages.map((page) => {
     return `  <url>
     <loc>${baseUrl}${page.url}</loc>
     <lastmod>${page.lastModified.toISOString()}</lastmod>
@@ -69,7 +69,7 @@ ${staticPages
     <mobile:mobile/>
   </url>`;
   })
-  .join("\n")}
+).join("\n")}
 </urlset>`;
 
   return new Response(sitemap, {

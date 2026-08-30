@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ChevronRight, Home } from "lucide-react";
+import { SITE_URL } from "@/lib/site";
 
 interface BreadcrumbItem {
   label: string;
@@ -21,14 +22,14 @@ export function SEOBreadcrumbs({ items, className = "" }: SEOBreadcrumbsProps) {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://theworldexplorer.vercel.app",
+        item: SITE_URL,
       },
       ...items.map((item, index) => ({
         "@type": "ListItem",
         position: index + 2,
         name: item.label,
         ...(item.href && {
-          item: `https://theworldexplorer.vercel.app${item.href}`,
+          item: `${SITE_URL}${item.href}`,
         }),
       })),
     ],

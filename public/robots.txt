@@ -1,5 +1,5 @@
 # WorldExplorer - Global Educational Platform
-# Visit https://theworldexplorer.vercel.app
+# Visit https://worldexplorer.prakashraj.me
 
 User-agent: *
 Allow: /
@@ -54,13 +54,16 @@ Disallow: /
 User-agent: MJ12bot
 Disallow: /
 
-# Sitemaps
+# Sitemaps (both live domains)
+Sitemap: https://worldexplorer.prakashraj.me/sitemap.xml
+Sitemap: https://worldexplorer.prakashraj.me/sitemap-countries.xml
+Sitemap: https://worldexplorer.prakashraj.me/sitemap-static.xml
 Sitemap: https://theworldexplorer.vercel.app/sitemap.xml
 Sitemap: https://theworldexplorer.vercel.app/sitemap-countries.xml
 Sitemap: https://theworldexplorer.vercel.app/sitemap-static.xml
 
 # Host directive
-Host: https://theworldexplorer.vercel.app
+Host: https://worldexplorer.prakashraj.me
 
 # Clean Param directive for better indexing
 Clean-param: utm_source&utm_medium&utm_campaign&utm_term&utm_content

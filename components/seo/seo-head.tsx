@@ -2,6 +2,7 @@
 
 import Head from "next/head";
 import { usePathname } from "next/navigation";
+import { SITE_URL } from "@/lib/site";
 
 interface SEOHeadProps {
   title: string;
@@ -23,7 +24,7 @@ export function SEOHead({
   title,
   description,
   keywords = "world explorer, countries, geography, education, travel, culture, landmarks, cities, history",
-  image = "https://theworldexplorer.vercel.app/images/logo/WORLD.svg",
+  image = `${SITE_URL}/images/logo/WORLD.svg`,
   canonical,
   type = "website",
   publishedTime,
@@ -35,7 +36,7 @@ export function SEOHead({
   structuredData,
 }: SEOHeadProps) {
   const pathname = usePathname();
-  const baseUrl = "https://theworldexplorer.vercel.app";
+  const baseUrl = SITE_URL;
   const fullUrl = canonical || `${baseUrl}${pathname}`;
   const fullTitle = title.includes("WorldExplorer")
     ? title

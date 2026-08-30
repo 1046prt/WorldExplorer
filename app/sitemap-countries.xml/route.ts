@@ -1,7 +1,6 @@
 import { getAllCountries, getCountryData } from "@/lib/data-utils";
 import type { Country } from "@/lib/types";
-
-const baseUrl = "https://theworldexplorer.vercel.app";
+import { SITE_URLS } from "@/lib/site";
 
 export async function GET() {
   try {
@@ -26,20 +25,23 @@ ${validCountries
   .map((country: Country | null) => {
     if (!country) return "";
 
-    const imageTag = country.flag
-      ? `    <image:image>
+    const imageTag = (baseUrl: string) =>
+      country.flag
+        ? `    <image:image>
       <image:loc>${baseUrl}${country.flag}</image:loc>
       <image:caption>${country.name} Flag</image:caption>
     </image:image>`
-      : "";
+        : "";
 
-    return `  <url>
+    return SITE_URLS.map(
+      (baseUrl) => `  <url>
     <loc>${baseUrl}/country/${country.iso2?.toLowerCase()}</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-${imageTag}
-  </url>`;
+${imageTag(baseUrl)}
+  </url>`
+    ).join("\n");
   })
   .filter(Boolean)
   .join("\n")}

@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { generateSEOMetadata } from "@/components/seo/seo-config";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   ...generateSEOMetadata({
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
       "Explore major rivers and waterways around the world. Discover the geography, ecology, and cultural significance of Earth's most important rivers and their impact on civilizations.",
     keywords:
       "browse rivers, world rivers, major rivers, waterways, river systems, geography, ecology, river explorer, freshwater, world geography",
-    canonical: "https://theworldexplorer.vercel.app/browse/rivers",
+    canonical: `${SITE_URL}/browse/rivers`,
   }),
 };
 

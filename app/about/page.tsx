@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import { GlobalNavigation } from "@/components/global-navigation";
 import Footer from "@/components/footer";
+import { SITE_URL } from "@/lib/site";
 import "@/styles/about.css";
 
 const AboutPage = () => {
@@ -27,7 +28,7 @@ const AboutPage = () => {
     name: "About WorldExplorer",
     description:
       "Learn about WorldExplorer, our mission to make world exploration accessible and engaging through interactive educational tools.",
-    url: "https://theworldexplorer.vercel.app/about",
+    url: `${SITE_URL}/about`,
     mainEntity: {
       "@type": "Organization",
       name: "WorldExplorer",
@@ -61,7 +62,7 @@ const AboutPage = () => {
         name="keywords"
         content="about worldexplorer, mission, team, educational platform, world exploration, interactive learning, geography education"
       />
-      <link rel="canonical" href="https://theworldexplorer.vercel.app/about" />
+      <link rel="canonical" href={`${SITE_URL}/about`} />
 
       {/* Structured Data */}
       <script
